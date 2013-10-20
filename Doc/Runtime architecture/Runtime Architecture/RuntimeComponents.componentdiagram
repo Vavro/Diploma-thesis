@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="052f1e5d-ad81-4c30-a85d-503db95be971" name="RuntimeComponents" linkedPackageId="01fca425-d9b7-4699-bb56-b981cb081784" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d2006f79-6f38-4784-bdd3-07c0e39d9c94">
+      <profileInstance Id="2c2ada14-5306-424f-91fe-8916e3a7f189" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="52ff2b37-96f6-4a09-8af1-dd4e02976b09">
+      <profileInstance Id="daf2d62a-3120-4a5a-99db-0b462f9202a4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="a7549d7b-6459-482d-98e4-f5c5e8b25e1f" name="DataLoading" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e82c7d79-ad31-4c34-a590-2daaac49933b" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="01fca425-d9b7-4699-bb56-b981cb081784" name="Runtime Architecture">
+    <elementDefinition Id="cb6dc275-58d2-4171-9a79-cef5a5a84dd5" />
+  </package>
+</componentModel>
