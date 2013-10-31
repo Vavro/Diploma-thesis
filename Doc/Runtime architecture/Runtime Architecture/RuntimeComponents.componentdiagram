@@ -1,27 +1,250 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="052f1e5d-ad81-4c30-a85d-503db95be971" name="RuntimeComponents" linkedPackageId="01fca425-d9b7-4699-bb56-b981cb081784" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="d2006f79-6f38-4784-bdd3-07c0e39d9c94">
-      <profileInstance Id="2c2ada14-5306-424f-91fe-8916e3a7f189" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="52ff2b37-96f6-4a09-8af1-dd4e02976b09">
-      <profileInstance Id="daf2d62a-3120-4a5a-99db-0b462f9202a4" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <ownedCommentsInternal>
+    <comment Id="5ac75d6b-52ff-4a81-a1f0-8775de1bce17">
+      <elementDefinition Id="dc4926c8-8d23-4d42-891f-d871b6d677be" />
+      <body>Stores queries that are administered in the system</body>
+      <annotatedElements>
+        <componentMoniker Id="278c8643-f8d9-413b-bcf6-50a537fdd370" LastKnownName="Query Storage" />
+      </annotatedElements>
+    </comment>
+    <comment Id="357f2ebe-494f-4188-8dbb-c4fd38f208be">
+      <elementDefinition Id="f6d5f359-94ca-4918-961e-eb13968744cb" />
+      <body>Handles storage of construct query results, uses a Document Database as backend</body>
+      <annotatedElements>
+        <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+      </annotatedElements>
+    </comment>
+    <comment Id="842dc4fb-2c28-498f-9021-dbef197e5a28">
+      <elementDefinition Id="9f07cffc-7a57-4c8e-8833-df8354b6bdba" />
+      <body>Remote primary 
+data datastore, outside of system scope</body>
+      <annotatedElements>
+        <componentMoniker Id="697e7b50-70bc-4549-a68d-7911920a88f2" LastKnownName="Remote SPARQL Endpoint" />
+      </annotatedElements>
+    </comment>
+    <comment Id="87dd5a7d-3077-4e4a-94a4-0bf062a6da19">
+      <elementDefinition Id="4ad29c74-44fa-492f-a073-1c92018244b7" />
+      <body>Entry point for query processing</body>
+      <annotatedElements>
+        <componentMoniker Id="a7549d7b-6459-482d-98e4-f5c5e8b25e1f" LastKnownName="DataLoading" />
+      </annotatedElements>
+    </comment>
+    <comment Id="6d82ed49-20cd-42d2-b64e-3c311e65a662">
+      <elementDefinition Id="c51e8a9c-38d1-46f9-9066-1b05af848aed" />
+      <body>Queries for detail for result of Construct query by object URI</body>
+      <annotatedElements>
+        <componentMoniker Id="1db44221-3b80-468e-856c-96b5ba98c164" LastKnownName="Detail query answerer" />
+      </annotatedElements>
+    </comment>
+    <comment Id="db62e45d-9eb4-4022-93f9-80c0882ff178">
+      <elementDefinition Id="962185bc-dd75-4683-a0d8-e107e4d803a3" />
+      <body>Queries for document (object) properties</body>
+      <annotatedElements>
+        <componentMoniker Id="08f84393-af2a-487c-a149-cb26e0d378b1" LastKnownName="Property query answerer" />
+      </annotatedElements>
+    </comment>
+    <comment Id="2c1b6288-4166-4982-8a0a-e8725586e2b5">
+      <elementDefinition Id="756088bf-72e1-499d-ba60-826e1039afa5" />
+      <body>Analyzes stored data and possible queries
+for automatic index creation, possible queryable properties
+Works over construct query or returned data
+Normalization of data might be needed for indexing, querying
+</body>
+      <annotatedElements>
+        <componentMoniker Id="0e2cedde-8646-4f16-852f-79a1f803fdc9" LastKnownName="Construct Analyzer" />
+        <componentMoniker Id="69563023-30f3-481b-bebe-1c44a4b19fcf" LastKnownName="Query Analyzer" />
+      </annotatedElements>
+    </comment>
+    <comment Id="db7884be-824c-416f-877e-508ac9628850">
+      <elementDefinition Id="cf3f3b3e-21c6-403f-9b18-409bd00c5606" />
+      <body>Select query for URIs
+Construct query
+(Property queries to be optimized for)</body>
+    </comment>
+    <comment Id="80d1258e-f19f-4fda-a2f3-8eaaf0e04b4a">
+      <elementDefinition Id="4fe4ae69-22dc-4237-89f9-ec2dea940746" />
+      <body>When using data normalization needs to return denormalized data complying JSON format specs</body>
+    </comment>
+    <comment Id="5e29335c-b1f5-4113-8474-509eb629388c">
+      <elementDefinition Id="b6ea2d3a-f7b1-4f46-9125-6b73d05a7926" />
+      <body>Responsible for data updates
+By rerun of queries, or by listening to notifications</body>
+      <annotatedElements>
+        <componentMoniker Id="a8750f94-7bb8-4001-b75d-9edc0d1cf32d" LastKnownName="Data Updater" />
+      </annotatedElements>
+    </comment>
+    <comment Id="341e6325-f805-4d0d-ab0d-264758d004de">
+      <elementDefinition Id="51526c6d-f676-47c0-8cec-98c3966b6da6" />
+      <body>Statistics for updates - how often viable, possible to update data</body>
+      <annotatedElements>
+        <componentMoniker Id="c1bd701f-39f9-4583-8ff3-1b4bc3a4ccd9" LastKnownName="Performance profiler" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7f983fb6-3ec3-4acc-83a4-fda02c80213e">
+      <elementDefinition Id="df280a98-ae2b-468a-a7b1-d632c91cbcdd" />
+      <body>System client, issuing orders 
+(or component, that determines wether query to be run against SPARQL endpoint or this system)
+- better to be programmer determined</body>
+      <annotatedElements>
+        <componentMoniker Id="602dbd76-05b3-484f-b044-8eb509027bbb" LastKnownName="Client system" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <componentModelHasComponents>
       <component Id="a7549d7b-6459-482d-98e4-f5c5e8b25e1f" name="DataLoading" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e82c7d79-ad31-4c34-a590-2daaac49933b" />
+        <suppliersInternal>
+          <dependency Id="328f5dcd-e7d8-40c8-a3f2-2fb4561195da" name="Store query details">
+            <componentMoniker Id="278c8643-f8d9-413b-bcf6-50a537fdd370" LastKnownName="Query Storage" />
+            <elementDefinition Id="600195c2-d59d-4efc-9c41-b629b6280f41" />
+          </dependency>
+          <dependency Id="ea65972b-8310-4db7-a13d-62f7326edbd9" name="Execute Select query">
+            <componentMoniker Id="697e7b50-70bc-4549-a68d-7911920a88f2" LastKnownName="Remote SPARQL Endpoint" />
+            <elementDefinition Id="46bc4903-e7ee-424c-9cdd-ed0713ec2dda" />
+          </dependency>
+          <dependency Id="24d9f3e9-f4d9-400e-9979-24e05d6b6ce2" name="Execute Construct queries">
+            <componentMoniker Id="697e7b50-70bc-4549-a68d-7911920a88f2" LastKnownName="Remote SPARQL Endpoint" />
+            <elementDefinition Id="2519f1b3-3620-46ee-b80e-abb7426cfa6d" />
+          </dependency>
+          <dependency Id="df6360bc-5d86-4c25-9037-d2b4048aaa93" name="Get Construct and Select Query for loading">
+            <componentMoniker Id="278c8643-f8d9-413b-bcf6-50a537fdd370" LastKnownName="Query Storage" />
+            <elementDefinition Id="f30708cd-26f7-466e-b845-e8a846f8b8ae" />
+          </dependency>
+          <dependency Id="1fab6243-31e2-4ac5-b241-04b727cc9a5d" name="Store Construct results">
+            <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+            <elementDefinition Id="82a3270d-be46-4c60-8bbe-c65af04646c3" />
+          </dependency>
+          <dependency Id="81b90720-f4e3-41ad-b837-8e183a38bb8f" name="Analyze property queries for storage optimizations">
+            <componentMoniker Id="69563023-30f3-481b-bebe-1c44a4b19fcf" LastKnownName="Query Analyzer" />
+            <elementDefinition Id="3493dfde-ae8c-4346-8a49-74ff8cf8e614" />
+          </dependency>
+          <dependency Id="d4f84903-663a-49d8-aa0d-b1099de33079" name="Analyze construct query/results for storage optimizations">
+            <componentMoniker Id="0e2cedde-8646-4f16-852f-79a1f803fdc9" LastKnownName="Construct Analyzer" />
+            <elementDefinition Id="9009b006-229b-4620-80db-b009d877edf7" />
+          </dependency>
+          <dependency Id="309a75bd-ea42-461b-b8fa-71522ef816ab">
+            <componentMoniker Id="c1bd701f-39f9-4583-8ff3-1b4bc3a4ccd9" LastKnownName="Performance profiler" />
+            <elementDefinition Id="444f9814-7b53-4218-bb9e-06df110ab1fc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="278c8643-f8d9-413b-bcf6-50a537fdd370" name="Query Storage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ef304537-54a1-4694-98d8-b710522b4d3e" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" name="Data Store" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="697e7b50-70bc-4549-a68d-7911920a88f2" name="Remote SPARQL Endpoint" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="766a874b-ca30-4fdd-b711-880de3cd79d3" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1db44221-3b80-468e-856c-96b5ba98c164" name="Detail query answerer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7f87f46a-ce31-48a9-981d-467327255101" />
+        <suppliersInternal>
+          <dependency Id="9e6bc4e8-26b5-4156-b9c4-2e522afa62ef" name="Retrieve detail for query id and object URI">
+            <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+            <elementDefinition Id="300a9ab6-ba58-490f-a931-54ca01ba4318" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="602dbd76-05b3-484f-b044-8eb509027bbb" name="Client system" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2525e21b-a0a4-4c96-8f80-61b13abb1662" />
+        <suppliersInternal>
+          <dependency Id="d191f2a0-c77f-4540-b53d-20ac862dc3cc" name="Query for URI Detail">
+            <componentMoniker Id="1db44221-3b80-468e-856c-96b5ba98c164" LastKnownName="Detail query answerer" />
+            <elementDefinition Id="94d76dfb-8128-4fc9-8771-03e3222fcf1f" />
+          </dependency>
+          <dependency Id="2884ecee-e900-496b-9b35-3334bf08e329" name="Query for Object properties">
+            <componentMoniker Id="08f84393-af2a-487c-a149-cb26e0d378b1" LastKnownName="Property query answerer" />
+            <elementDefinition Id="0da63daa-6e9c-4428-b241-3bfcc9b6e705" />
+          </dependency>
+          <dependency Id="a4b2e62b-e6c7-45b5-9a74-4b0a1688a65f" name="Request prepare query">
+            <componentMoniker Id="a7549d7b-6459-482d-98e4-f5c5e8b25e1f" LastKnownName="DataLoading" />
+            <elementDefinition Id="5b0cb231-3b03-4cce-a65b-d7469f7d94c3" />
+          </dependency>
+          <dependency Id="db94e669-f8de-4b6b-b569-c9a29efed630" name="Request update/Setup updates">
+            <componentMoniker Id="a8750f94-7bb8-4001-b75d-9edc0d1cf32d" LastKnownName="Data Updater" />
+            <elementDefinition Id="4dfe3c27-4508-4b80-9bee-238af5a4a291" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="08f84393-af2a-487c-a149-cb26e0d378b1" name="Property query answerer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6727fe50-6577-4d9b-a16d-9ed213176d06" />
+        <suppliersInternal>
+          <dependency Id="0eb66a1b-4f32-4971-9d05-ddc58fe9d7b2" name="Run query over object properties">
+            <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+            <elementDefinition Id="67badcd8-8a03-4072-91e9-ac776e62b15a" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="0e2cedde-8646-4f16-852f-79a1f803fdc9" name="Construct Analyzer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6d564c6d-7310-4723-ae9a-6d2e3f374f12" />
+        <suppliersInternal>
+          <dependency Id="2b752171-84b9-47bd-bb29-b571ee92abd4" name="Hints for indexes, data normalization">
+            <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+            <elementDefinition Id="2ea2d7ef-fb9d-4d42-b4b0-956e8072684d" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="69563023-30f3-481b-bebe-1c44a4b19fcf" name="Query Analyzer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2bdb0ef4-be59-4566-b012-9164417e8c49" />
+        <suppliersInternal>
+          <dependency Id="ccac5696-297d-4ca2-84eb-55f25d7fe80c" name="Hints for indexes, data normalization">
+            <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
+            <elementDefinition Id="6e065227-28ef-48c1-9dea-104d6c7add61" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a8750f94-7bb8-4001-b75d-9edc0d1cf32d" name="Data Updater" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad6ce916-956a-4918-bb6e-97e8aaf306ae" />
+        <suppliersInternal>
+          <dependency Id="d4b90d56-82fe-4726-95eb-d6ec789a183e" name="Run update">
+            <componentMoniker Id="a7549d7b-6459-482d-98e4-f5c5e8b25e1f" LastKnownName="DataLoading" />
+            <elementDefinition Id="949fb478-3289-4f14-b97c-02f94eff73df" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="c1bd701f-39f9-4583-8ff3-1b4bc3a4ccd9" name="Performance profiler" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6aa58d6d-f109-485a-a667-b41a39f14183" />
       </component>
     </componentModelHasComponents>
   </packagedElements>
   <package Id="01fca425-d9b7-4699-bb56-b981cb081784" name="Runtime Architecture">
     <elementDefinition Id="cb6dc275-58d2-4171-9a79-cef5a5a84dd5" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d2006f79-6f38-4784-bdd3-07c0e39d9c94">
+        <profileInstance Id="2c2ada14-5306-424f-91fe-8916e3a7f189" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="52ff2b37-96f6-4a09-8af1-dd4e02976b09">
+        <profileInstance Id="daf2d62a-3120-4a5a-99db-0b462f9202a4" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </componentModel>

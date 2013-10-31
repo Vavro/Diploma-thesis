@@ -3,6 +3,130 @@
   dslVersion="1.0.0.0"
   Id="cb6dc275-58d2-4171-9a79-cef5a5a84dd5"
   name="Runtime Architecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="dc4926c8-8d23-4d42-891f-d871b6d677be">
+      <body>Stores queries that are administered in the system</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="ef304537-54a1-4694-98d8-b710522b4d3e"
+          LastKnownName="Query Storage"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="f6d5f359-94ca-4918-961e-eb13968744cb">
+      <body>Handles storage of construct query results, uses a Document Database as backend</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+          LastKnownName="Data Store"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="9f07cffc-7a57-4c8e-8833-df8354b6bdba">
+      <body>Remote primary 
+data datastore, outside of system scope</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="766a874b-ca30-4fdd-b711-880de3cd79d3"
+          LastKnownName="Remote SPARQL Endpoint"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="4ad29c74-44fa-492f-a073-1c92018244b7">
+      <body>Entry point for query processing</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="e82c7d79-ad31-4c34-a590-2daaac49933b"
+          LastKnownName="DataLoading"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="c51e8a9c-38d1-46f9-9066-1b05af848aed">
+      <body>Queries for detail for result of Construct query by object URI</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="7f87f46a-ce31-48a9-981d-467327255101"
+          LastKnownName="Detail query answerer"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="962185bc-dd75-4683-a0d8-e107e4d803a3">
+      <body>Queries for document (object) properties</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="6727fe50-6577-4d9b-a16d-9ed213176d06"
+          LastKnownName="Property query answerer"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="756088bf-72e1-499d-ba60-826e1039afa5">
+      <body>Analyzes stored data and possible queries
+for automatic index creation, possible queryable properties
+Works over construct query or returned data
+Normalization of data might be needed for indexing, querying
+</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="6d564c6d-7310-4723-ae9a-6d2e3f374f12"
+          LastKnownName="Construct Analyzer"
+          LastKnownLocation="Runtime Architecture.uml" />
+        <componentMoniker
+          Id="2bdb0ef4-be59-4566-b012-9164417e8c49"
+          LastKnownName="Query Analyzer"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="cf3f3b3e-21c6-403f-9b18-409bd00c5606">
+      <body>Select query for URIs
+Construct query
+(Property queries to be optimized for)</body>
+    </comment>
+    <comment
+      Id="4fe4ae69-22dc-4237-89f9-ec2dea940746">
+      <body>When using data normalization needs to return denormalized data complying JSON format specs</body>
+    </comment>
+    <comment
+      Id="b6ea2d3a-f7b1-4f46-9125-6b73d05a7926">
+      <body>Responsible for data updates
+By rerun of queries, or by listening to notifications</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="ad6ce916-956a-4918-bb6e-97e8aaf306ae"
+          LastKnownName="Data Updater"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="51526c6d-f676-47c0-8cec-98c3966b6da6">
+      <body>Statistics for updates - how often viable, possible to update data</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="6aa58d6d-f109-485a-a667-b41a39f14183"
+          LastKnownName="Performance profiler"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="df280a98-ae2b-468a-a7b1-d632c91cbcdd">
+      <body>System client, issuing orders 
+(or component, that determines wether query to be run against SPARQL endpoint or this system)
+- better to be programmer determined</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="2525e21b-a0a4-4c96-8f80-61b13abb1662"
+          LastKnownName="Client system"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -22,6 +146,257 @@
       <component
         Id="e82c7d79-ad31-4c34-a590-2daaac49933b"
         name="DataLoading"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="600195c2-d59d-4efc-9c41-b629b6280f41"
+            name="Store query details">
+            <componentMoniker
+              Id="ef304537-54a1-4694-98d8-b710522b4d3e"
+              LastKnownName="Query Storage"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="46bc4903-e7ee-424c-9cdd-ed0713ec2dda"
+            name="Execute Select query">
+            <componentMoniker
+              Id="766a874b-ca30-4fdd-b711-880de3cd79d3"
+              LastKnownName="Remote SPARQL Endpoint"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="2519f1b3-3620-46ee-b80e-abb7426cfa6d"
+            name="Execute Construct queries">
+            <componentMoniker
+              Id="766a874b-ca30-4fdd-b711-880de3cd79d3"
+              LastKnownName="Remote SPARQL Endpoint"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="f30708cd-26f7-466e-b845-e8a846f8b8ae"
+            name="Get Construct and Select Query for loading">
+            <componentMoniker
+              Id="ef304537-54a1-4694-98d8-b710522b4d3e"
+              LastKnownName="Query Storage"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="82a3270d-be46-4c60-8bbe-c65af04646c3"
+            name="Store Construct results">
+            <componentMoniker
+              Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+              LastKnownName="Data Store"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="3493dfde-ae8c-4346-8a49-74ff8cf8e614"
+            name="Analyze property queries for storage optimizations">
+            <componentMoniker
+              Id="2bdb0ef4-be59-4566-b012-9164417e8c49"
+              LastKnownName="Query Analyzer"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="9009b006-229b-4620-80db-b009d877edf7"
+            name="Analyze construct query/results for storage optimizations">
+            <componentMoniker
+              Id="6d564c6d-7310-4723-ae9a-6d2e3f374f12"
+              LastKnownName="Construct Analyzer"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="444f9814-7b53-4218-bb9e-06df110ab1fc">
+            <componentMoniker
+              Id="6aa58d6d-f109-485a-a667-b41a39f14183"
+              LastKnownName="Performance profiler"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="45fada38-f10a-460f-93fd-a27bf8eac960"
+        name="IDataLoad"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ef304537-54a1-4694-98d8-b710522b4d3e"
+        name="Query Storage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+        name="Data Store"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="766a874b-ca30-4fdd-b711-880de3cd79d3"
+        name="Remote SPARQL Endpoint"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="7f87f46a-ce31-48a9-981d-467327255101"
+        name="Detail query answerer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="300a9ab6-ba58-490f-a931-54ca01ba4318"
+            name="Retrieve detail for query id and object URI">
+            <componentMoniker
+              Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+              LastKnownName="Data Store"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2525e21b-a0a4-4c96-8f80-61b13abb1662"
+        name="Client system"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="94d76dfb-8128-4fc9-8771-03e3222fcf1f"
+            name="Query for URI Detail">
+            <componentMoniker
+              Id="7f87f46a-ce31-48a9-981d-467327255101"
+              LastKnownName="Detail query answerer"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="0da63daa-6e9c-4428-b241-3bfcc9b6e705"
+            name="Query for Object properties">
+            <componentMoniker
+              Id="6727fe50-6577-4d9b-a16d-9ed213176d06"
+              LastKnownName="Property query answerer"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="5b0cb231-3b03-4cce-a65b-d7469f7d94c3"
+            name="Request prepare query">
+            <componentMoniker
+              Id="e82c7d79-ad31-4c34-a590-2daaac49933b"
+              LastKnownName="DataLoading"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+          <dependency
+            Id="4dfe3c27-4508-4b80-9bee-238af5a4a291"
+            name="Request update/Setup updates">
+            <componentMoniker
+              Id="ad6ce916-956a-4918-bb6e-97e8aaf306ae"
+              LastKnownName="Data Updater"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6727fe50-6577-4d9b-a16d-9ed213176d06"
+        name="Property query answerer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="67badcd8-8a03-4072-91e9-ac776e62b15a"
+            name="Run query over object properties">
+            <componentMoniker
+              Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+              LastKnownName="Data Store"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="7f82facc-05ed-4049-97f4-c2afedbdacd6"
+        name="Property query answerer1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6d564c6d-7310-4723-ae9a-6d2e3f374f12"
+        name="Construct Analyzer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="2ea2d7ef-fb9d-4d42-b4b0-956e8072684d"
+            name="Hints for indexes, data normalization">
+            <componentMoniker
+              Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+              LastKnownName="Data Store"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2bdb0ef4-be59-4566-b012-9164417e8c49"
+        name="Query Analyzer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="6e065227-28ef-48c1-9dea-104d6c7add61"
+            name="Hints for indexes, data normalization">
+            <componentMoniker
+              Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+              LastKnownName="Data Store"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ad6ce916-956a-4918-bb6e-97e8aaf306ae"
+        name="Data Updater"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="949fb478-3289-4f14-b97c-02f94eff73df"
+            name="Run update">
+            <componentMoniker
+              Id="e82c7d79-ad31-4c34-a590-2daaac49933b"
+              LastKnownName="DataLoading"
+              LastKnownLocation="Runtime Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6aa58d6d-f109-485a-a667-b41a39f14183"
+        name="Performance profiler"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
