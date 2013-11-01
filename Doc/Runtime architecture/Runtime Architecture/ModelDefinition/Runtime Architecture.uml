@@ -70,7 +70,7 @@ data datastore, outside of system scope</body>
       <body>Analyzes stored data and possible queries
 for automatic index creation, possible queryable properties
 Works over construct query or returned data
-Normalization of data might be needed for indexing, querying
+Normalization of data might be needed for indexing, querying (complex subobject)
 </body>
       <annotatedElements>
         <componentMoniker
@@ -123,6 +123,16 @@ By rerun of queries, or by listening to notifications</body>
         <componentMoniker
           Id="2525e21b-a0a4-4c96-8f80-61b13abb1662"
           LastKnownName="Client system"
+          LastKnownLocation="Runtime Architecture.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="239e0563-270d-4f89-b9cf-22ea46273ffb">
+      <body>Construct result is Graph-like -&gt; need to reformat result to a more document format, might process data normalization for querying and denormalization for returning whole document</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="4fb7ac47-b99f-4209-81bd-db7e358f7e51"
+          LastKnownName="Data Store"
           LastKnownLocation="Runtime Architecture.uml" />
       </annotatedElements>
     </comment>
@@ -215,13 +225,6 @@ By rerun of queries, or by listening to notifications</body>
           </dependency>
         </suppliersInternal>
       </component>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="45fada38-f10a-460f-93fd-a27bf8eac960"
-        name="IDataLoad"
-        isAbstract="false"
-        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <component

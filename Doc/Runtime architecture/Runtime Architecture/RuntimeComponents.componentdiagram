@@ -49,7 +49,7 @@ data datastore, outside of system scope</body>
       <body>Analyzes stored data and possible queries
 for automatic index creation, possible queryable properties
 Works over construct query or returned data
-Normalization of data might be needed for indexing, querying
+Normalization of data might be needed for indexing, querying (complex subobject)
 </body>
       <annotatedElements>
         <componentMoniker Id="0e2cedde-8646-4f16-852f-79a1f803fdc9" LastKnownName="Construct Analyzer" />
@@ -88,6 +88,13 @@ By rerun of queries, or by listening to notifications</body>
 - better to be programmer determined</body>
       <annotatedElements>
         <componentMoniker Id="602dbd76-05b3-484f-b044-8eb509027bbb" LastKnownName="Client system" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9b074555-90a0-40e4-b8a0-901b95ad3658">
+      <elementDefinition Id="239e0563-270d-4f89-b9cf-22ea46273ffb" />
+      <body>Construct result is Graph-like -&gt; need to reformat result to a more document format, might process data normalization for querying and denormalization for returning whole document</body>
+      <annotatedElements>
+        <componentMoniker Id="fbd4e448-d186-4a05-9f84-100dfcaecf39" LastKnownName="Data Store" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
