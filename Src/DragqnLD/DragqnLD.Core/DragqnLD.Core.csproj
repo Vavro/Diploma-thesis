@@ -51,11 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDataLoader.cs" />
+    <Compile Include="Interfaces\IDataStore.cs" />
+    <Compile Include="Interfaces\IQueryAnswerer.cs" />
+    <Compile Include="Interfaces\IQueryStore.cs" />
+    <Compile Include="Interfaces\Query\IQueryDefinition.cs" />
+    <Compile Include="Interfaces\Query\IQueryDetail.cs" />
+    <Compile Include="Interfaces\Query\IQueryKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
