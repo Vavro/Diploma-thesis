@@ -17,10 +17,10 @@ namespace DragqnLD.Core.Implementations
             _queryStore = queryStore;
         }
 
-        public IQueryKey Load(IQueryDefinition definition)
+        public async Task<IQueryKey> Load(IQueryDefinition definition)
         {
             //todo: query sparql endpoint for data and process results
-            return _queryStore.Add(definition);
+            return await _queryStore.Add(definition);
         }
     }
 }

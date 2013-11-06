@@ -17,20 +17,20 @@ namespace DragqnLD.Core.Interfaces
         /// </summary>
         /// <param name="definition">The definition.</param>
         /// <returns>The key for this query.</returns>
-        IQueryKey Add(IQueryDefinition definition);
+        Task<IQueryKey> Add(IQueryDefinition definition);
 
         /// <summary>
         /// Gets the query definition for the specified key.
         /// </summary>
         /// <param name="key">The key.</param>
         /// <returns>The query definition.</returns>
-        IQueryDefinition Get(IQueryKey key);
+        Task<IQueryDefinition> Get(IQueryKey key);
 
         /// <summary>
         /// Gets all query definitions.
         /// </summary>
         /// <returns>An enumerable list of query definitions</returns>
-        IEnumerable<IQueryDetail> GetAllDefinitions();
+        Task<IEnumerable<IQueryDetail>> GetAllDefinitions();
 
     }
 }

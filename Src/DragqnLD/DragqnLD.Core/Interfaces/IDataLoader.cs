@@ -16,6 +16,6 @@ namespace DragqnLD.Core.Interfaces
         /// Loads the specified definition for indexing.
         /// </summary>
         /// <param name="definition">The definition of queries to be indexed.</param>
-        IQueryKey Load(IQueryDefinition definition);
+        Task<IQueryKey> Load(IQueryDefinition definition);
     }
 }

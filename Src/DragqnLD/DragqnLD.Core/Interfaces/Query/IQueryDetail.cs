@@ -1,6 +1,6 @@
 ﻿namespace DragqnLD.Core.Interfaces.Query
 {
-    internal interface IQueryDetail
+    public interface IQueryDetail
     {
         /// <summary>
         /// Gets the key.
