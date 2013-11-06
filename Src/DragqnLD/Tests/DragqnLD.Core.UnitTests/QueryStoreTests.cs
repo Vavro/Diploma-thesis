@@ -35,8 +35,6 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanStoreQuery()
         {
-            var sparqlQueryParser = new SparqlQueryParser();
-
             var queryDefinition = new QueryDefinition()
             {
                 Name = "test query",
@@ -51,6 +49,10 @@ namespace DragqnLD.Core.UnitTests
             var retrievedQueryDefinition = await queryStore.Get(id);
 
             Assert.Equal(queryDefinition.Name, retrievedQueryDefinition.Name);
+            Assert.Equal(queryDefinition.Description, retrievedQueryDefinition.Description);
+            Assert.Equal(queryDefinition.ConstructQuery, retrievedQueryDefinition.ConstructQuery);
+            Assert.Equal(queryDefinition.ConstructQueryUriParameterName, retrievedQueryDefinition.ConstructQueryUriParameterName);
+            Assert.Equal(queryDefinition.SelectQuery, retrievedQueryDefinition.SelectQuery);
         }
     }
 }
