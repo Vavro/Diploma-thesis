@@ -1,3 +1,4 @@
+using System;
 using VDS.RDF.Query;
 
 namespace DragqnLD.Core.Abstraction.Query
@@ -37,7 +38,7 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// The construct query.
         /// </value>
-        public string ConstructQuery { get; set; }
+        public SparqlQueryInfo ConstructQuery { get; set; }
 
         /// <summary>
         /// Gets the name of the construct query parameter.
@@ -53,6 +54,13 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// The select query.
         /// </value>
-        public string SelectQuery { get; set; }
+        public SparqlQueryInfo SelectQuery { get; set; }
+    }
+
+    public class SparqlQueryInfo
+    {
+        public string Query { get; set; }
+        public Uri SparqlEnpoint { get; set; }
+        public Uri DefaultDataSet { get; set; }
     }
 }
