@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core", "DragqnLD.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FCDFCDAE-EEC1-421C-B0CA-7419F6E32DE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core.Tests", "Tests\DragqnLD.Core.Tests\DragqnLD.Core.Tests.csproj", "{94819897-1C47-42C5-8A8A-913EFD4D519B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core.UnitTests", "Tests\DragqnLD.Core.Tests\DragqnLD.Core.UnitTests.csproj", "{94819897-1C47-42C5-8A8A-913EFD4D519B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -37,7 +37,7 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// The construct query.
         /// </value>
-        public SparqlParameterizedString ConstructQuery { get; set; }
+        public string ConstructQuery { get; set; }
 
         /// <summary>
         /// Gets the name of the construct query parameter.
@@ -53,6 +53,6 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// The select query.
         /// </value>
-        public SparqlQuery SelectQuery { get; set; }
+        public string SelectQuery { get; set; }
     }
 }
