@@ -3,7 +3,7 @@
     /// <summary>
     /// Query identifier
     /// </summary>
-    interface IQueryKey
+    public interface IQueryKey
     {
         /// <summary>
         /// Gets the key.

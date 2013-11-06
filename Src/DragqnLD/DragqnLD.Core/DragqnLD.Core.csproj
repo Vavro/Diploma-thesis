@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\Query\QueryDetail.cs" />
+    <Compile Include="Implementations\DataLoader.cs" />
+    <Compile Include="Implementations\Query\QueryDefinition.cs" />
+    <Compile Include="Implementations\Query\QueryKey.cs" />
     <Compile Include="Interfaces\IDataLoader.cs" />
     <Compile Include="Interfaces\IDataStore.cs" />
     <Compile Include="Interfaces\IQueryAnswerer.cs" />

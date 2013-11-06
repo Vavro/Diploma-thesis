@@ -5,7 +5,7 @@ namespace DragqnLD.Core.Interfaces.Query
     /// <summary>
     /// Defines the a query that can be indexed by the system
     /// </summary>
-    interface IQueryDefinition
+    public interface IQueryDefinition
     {
 
         /// <summary>
