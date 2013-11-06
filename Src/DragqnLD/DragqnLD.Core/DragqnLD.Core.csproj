@@ -59,17 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementations\QueryStore.cs" />
-    <Compile Include="Implementations\Query\QueryDetail.cs" />
     <Compile Include="Implementations\DataLoader.cs" />
-    <Compile Include="Implementations\Query\QueryDefinition.cs" />
-    <Compile Include="Implementations\Query\QueryKey.cs" />
-    <Compile Include="Interfaces\IDataLoader.cs" />
-    <Compile Include="Interfaces\IDataStore.cs" />
-    <Compile Include="Interfaces\IQueryAnswerer.cs" />
-    <Compile Include="Interfaces\IQueryStore.cs" />
-    <Compile Include="Interfaces\Query\IQueryDefinition.cs" />
-    <Compile Include="Interfaces\Query\IQueryDetail.cs" />
-    <Compile Include="Interfaces\Query\IQueryKey.cs" />
+    <Compile Include="Abstraction\Query\QueryDefinition.cs" />
+    <Compile Include="Abstraction\IDataLoader.cs" />
+    <Compile Include="Abstraction\IDataStore.cs" />
+    <Compile Include="Abstraction\IQueryAnswerer.cs" />
+    <Compile Include="Abstraction\IQueryStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

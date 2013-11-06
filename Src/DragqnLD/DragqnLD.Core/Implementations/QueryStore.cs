@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DragqnLD.Core.Interfaces;
-using DragqnLD.Core.Interfaces.Query;
+using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.Query;
 using Raven.Client;
 using VDS.RDF.Query.Algebra;
 
 namespace DragqnLD.Core.Implementations
 {
-    class StoredQuery
-    {
-        public string Id { get; set; }
-        public IQueryDefinition QueryDefinition { get; set; }
-    }
-
     public class QueryStore : IQueryStore
     {
         //todo: Inject session from current call
@@ -27,35 +21,30 @@ namespace DragqnLD.Core.Implementations
             Store = store;
         }
 
-        public async Task<IQueryKey> Add(IQueryDefinition definition)
+        public async Task<string> Add(QueryDefinition definition)
         {
             using (var session = Store.OpenAsyncSession())
             {
-                var storedQuery = new StoredQuery() {QueryDefinition = definition};
-                await session.StoreAsync(storedQuery);
+                await session.StoreAsync(definition);
                 await session.SaveChangesAsync();
-                return new QueryKey(storedQuery.Id);
+                return definition.Id;
             }
         }
 
-        public async Task<IQueryDefinition> Get(IQueryKey key)
+        public async Task<QueryDefinition> Get(string key)
         {
             using (var session = Store.OpenAsyncSession())
             {
-                var storedQuery = await session.LoadAsync<StoredQuery>(key.Key);
-                return storedQuery.QueryDefinition;
+                var queryDefinition = await session.LoadAsync<QueryDefinition>(key);
+                return queryDefinition;
             }
         }
 
-        public async Task<IEnumerable<IQueryDetail>> GetAllDefinitions()
+        public async Task<IEnumerable<QueryDefinition>> GetAllDefinitions()
         {
             using (var session = Store.OpenAsyncSession())
             {
-                var allQueries = await session.Query<StoredQuery>().ToListAsync();
-                return 
-                    allQueries.Select(
-                        storedQuery => 
-                            new QueryDetail(new QueryKey(storedQuery.Id), storedQuery.QueryDefinition));
+                return await session.Query<QueryDefinition>().ToListAsync();
             }
         }
     }

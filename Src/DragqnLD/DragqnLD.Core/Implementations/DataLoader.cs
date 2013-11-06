@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DragqnLD.Core.Interfaces;
-using DragqnLD.Core.Interfaces.Query;
+using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.Query;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -17,7 +17,7 @@ namespace DragqnLD.Core.Implementations
             _queryStore = queryStore;
         }
 
-        public async Task<IQueryKey> Load(IQueryDefinition definition)
+        public async Task<string> Load(QueryDefinition definition)
         {
             //todo: query sparql endpoint for data and process results
             return await _queryStore.Add(definition);

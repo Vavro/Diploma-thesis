@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DragqnLD.Core.Interfaces.Query;
+using DragqnLD.Core.Abstraction.Query;
 
-namespace DragqnLD.Core.Interfaces
+namespace DragqnLD.Core.Abstraction
 {
     /// <summary>
     /// The query store, contains all indexed queries
@@ -17,20 +17,20 @@ namespace DragqnLD.Core.Interfaces
         /// </summary>
         /// <param name="definition">The definition.</param>
         /// <returns>The key for this query.</returns>
-        Task<IQueryKey> Add(IQueryDefinition definition);
+        Task<string> Add(QueryDefinition definition);
 
         /// <summary>
         /// Gets the query definition for the specified key.
         /// </summary>
         /// <param name="key">The key.</param>
         /// <returns>The query definition.</returns>
-        Task<IQueryDefinition> Get(IQueryKey key);
+        Task<QueryDefinition> Get(string id);
 
         /// <summary>
         /// Gets all query definitions.
         /// </summary>
         /// <returns>An enumerable list of query definitions</returns>
-        Task<IEnumerable<IQueryDetail>> GetAllDefinitions();
+        Task<IEnumerable<QueryDefinition>> GetAllDefinitions();
 
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DragqnLD.Core.Interfaces.Query;
+using DragqnLD.Core.Abstraction.Query;
 
-namespace DragqnLD.Core.Interfaces
+namespace DragqnLD.Core.Abstraction
 {
     /// <summary>
     /// The data loading inteface
@@ -16,6 +16,6 @@ namespace DragqnLD.Core.Interfaces
         /// Loads the specified definition for indexing.
         /// </summary>
         /// <param name="definition">The definition of queries to be indexed.</param>
-        Task<IQueryKey> Load(IQueryDefinition definition);
+        Task<string> Load(QueryDefinition definition);
     }
 }

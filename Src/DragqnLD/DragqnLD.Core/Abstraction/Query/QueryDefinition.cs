@@ -1,12 +1,19 @@
-﻿using VDS.RDF.Query;
+using VDS.RDF.Query;
 
-namespace DragqnLD.Core.Interfaces.Query
+namespace DragqnLD.Core.Abstraction.Query
 {
     /// <summary>
     /// Defines the a query that can be indexed by the system
     /// </summary>
-    public interface IQueryDefinition
+    public class QueryDefinition
     {
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>
+        /// The identifier.
+        /// </value>
+        public string Id { get; set; }
 
         /// <summary>
         /// Gets the name.
@@ -14,7 +21,7 @@ namespace DragqnLD.Core.Interfaces.Query
         /// <value>
         /// The name.
         /// </value>
-        string Name { get; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets the description.
@@ -22,7 +29,7 @@ namespace DragqnLD.Core.Interfaces.Query
         /// <value>
         /// The description.
         /// </value>
-        string Description { get; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Gets the construct query.
@@ -30,7 +37,7 @@ namespace DragqnLD.Core.Interfaces.Query
         /// <value>
         /// The construct query.
         /// </value>
-        SparqlParameterizedString ConstructQuery { get; }
+        public SparqlParameterizedString ConstructQuery { get; set; }
 
         /// <summary>
         /// Gets the name of the construct query parameter.
@@ -38,7 +45,7 @@ namespace DragqnLD.Core.Interfaces.Query
         /// <value>
         /// The name of the construct query parameter.
         /// </value>
-        string ConstructQueryUriParameterName { get; }
+        public string ConstructQueryUriParameterName { get; set; }
 
         /// <summary>
         /// Gets the select query.
@@ -46,6 +53,6 @@ namespace DragqnLD.Core.Interfaces.Query
         /// <value>
         /// The select query.
         /// </value>
-        SparqlQuery SelectQuery { get; }
+        public SparqlQuery SelectQuery { get; set; }
     }
 }
