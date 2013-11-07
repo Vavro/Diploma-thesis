@@ -27,7 +27,6 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<Stream> GetContructResultFor(SparqlQueryInfo constructSparqlQuery, string parameterName, Uri objectUri)
         {
-            //todo: substitute parameter name for object Uri
             return await Task.Run(() =>
             {
                 var parametrizedQuery = new SparqlParameterizedString(constructSparqlQuery.Query);

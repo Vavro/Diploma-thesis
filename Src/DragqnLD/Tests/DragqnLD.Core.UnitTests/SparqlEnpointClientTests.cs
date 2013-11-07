@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
@@ -27,8 +28,6 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanGetConstructResult()
         {
-            var expectedResult = "";
-            
             //todo: substitution of parameter in implementation
             var constructQuery = new SparqlQueryInfo()
             {
@@ -46,6 +45,23 @@ namespace DragqnLD.Core.UnitTests
             Console.WriteLine(result);
             //todo: maybe a better check?
             Assert.True(!String.IsNullOrWhiteSpace(result));
+
+            var expectedHash = "0C-FF-1D-9F-7D-3E-37-48-83-BB-C3-7F-B5-A6-42-5F";
+            
+            using (var md5 = MD5.Create())
+            {
+                var resultForHash = GetBytes(result);
+                var downloadedFileHash = md5.ComputeHash(resultForHash);
+                var hashString = BitConverter.ToString(downloadedFileHash);
+                Console.WriteLine(hashString);
+                Assert.Equal(hashString, expectedHash);
+            }
+        }
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
         }
     }
 }
