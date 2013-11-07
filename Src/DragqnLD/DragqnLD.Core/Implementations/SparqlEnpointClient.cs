@@ -10,7 +10,7 @@ using VDS.RDF.Query;
 
 namespace DragqnLD.Core.Implementations
 {
-    class SparqlEnpointClient : ISparqlEnpointClient
+    public class SparqlEnpointClient : ISparqlEnpointClient
     {
         public async Task<IEnumerable<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery)
         {
@@ -27,7 +27,7 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<Stream> GetContructResultFor(SparqlQueryInfo constructSparqlQuery, string parameterName, Uri objectUri)
         {
-            
+            //todo: substitute parameter name for object Uri
             return await Task.Run(() =>
                 {
                     var endpoint = new SparqlRemoteEndpoint(constructSparqlQuery.SparqlEnpoint,
