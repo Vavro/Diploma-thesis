@@ -27,6 +27,7 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<Stream> GetContructResultFor(SparqlQueryInfo constructSparqlQuery, string parameterName, Uri objectUri)
         {
+            //todo: make mime type of donwloaded data configurable? 
             return await Task.Run(() =>
             {
                 var parametrizedQuery = new SparqlParameterizedString(constructSparqlQuery.Query);

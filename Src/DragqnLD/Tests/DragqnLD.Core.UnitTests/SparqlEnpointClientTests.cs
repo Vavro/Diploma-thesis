@@ -43,9 +43,9 @@ namespace DragqnLD.Core.UnitTests
             var result = await reader.ReadToEndAsync();
 
             Console.WriteLine(result);
-            //todo: maybe a better check?
             Assert.True(!String.IsNullOrWhiteSpace(result));
 
+            //from downloaded data on 7.11.2013 23:37 - not really reliable..
             var expectedHash = "0C-FF-1D-9F-7D-3E-37-48-83-BB-C3-7F-B5-A6-42-5F";
             
             using (var md5 = MD5.Create())
