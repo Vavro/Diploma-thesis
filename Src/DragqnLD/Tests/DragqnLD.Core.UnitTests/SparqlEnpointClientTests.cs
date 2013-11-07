@@ -20,16 +20,20 @@ namespace DragqnLD.Core.UnitTests
             _sparqlEnpointClient = new SparqlEnpointClient();
         }
 
+        /// <summary>
+        /// Unfortunately not really reliable, as it depends on the state of the remote endpoint and its data
+        /// </summary>
+        /// <returns></returns>
         [Fact]
         public async Task CanGetConstructResult()
         {
             var expectedResult = "";
-
-
+            
             //todo: substitution of parameter in implementation
             var constructQuery = new SparqlQueryInfo()
             {
-                Query = @"DESCRIBE <http://linked.opendata.cz/resource/ATC/M01AE01>",
+                //parameters that can be substituted have to be marked as @ not just ?
+                Query = @"DESCRIBE @u",
                 DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
                 SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
             };
@@ -40,6 +44,7 @@ namespace DragqnLD.Core.UnitTests
             var result = await reader.ReadToEndAsync();
 
             Console.WriteLine(result);
+            //todo: maybe a better check?
             Assert.True(!String.IsNullOrWhiteSpace(result));
         }
     }

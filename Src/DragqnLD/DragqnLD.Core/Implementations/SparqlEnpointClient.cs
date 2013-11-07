@@ -29,13 +29,17 @@ namespace DragqnLD.Core.Implementations
         {
             //todo: substitute parameter name for object Uri
             return await Task.Run(() =>
-                {
-                    var endpoint = new SparqlRemoteEndpoint(constructSparqlQuery.SparqlEnpoint,
-                    constructSparqlQuery.DefaultDataSet);
+            {
+                var parametrizedQuery = new SparqlParameterizedString(constructSparqlQuery.Query);
+                parametrizedQuery.SetUri(parameterName, objectUri);
+                var substitutedQuery = parametrizedQuery.ToString();
 
-                    var result = endpoint.QueryRaw(constructSparqlQuery.Query, new[] { "application/ld+json" });
-                    return result.GetResponseStream();
-                });
+                var endpoint = new SparqlRemoteEndpoint(constructSparqlQuery.SparqlEnpoint,
+                constructSparqlQuery.DefaultDataSet);
+
+                var result = endpoint.QueryRaw(substitutedQuery, new[] { "application/ld+json" });
+                return result.GetResponseStream();
+            });
         }
     }
 }
