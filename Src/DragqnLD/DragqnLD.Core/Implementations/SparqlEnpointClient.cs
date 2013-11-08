@@ -21,7 +21,7 @@ namespace DragqnLD.Core.Implementations
                     var results = endpoint.QueryWithResultSet(selectSparqlQuery.Query);
 
                     //todo: check only URIs are returned
-                    return new[] { new Uri("test") };
+                    return (IEnumerable<Uri>)null;
                 });
         }
 

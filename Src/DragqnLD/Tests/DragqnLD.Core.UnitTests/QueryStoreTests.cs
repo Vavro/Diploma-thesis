@@ -31,7 +31,7 @@ namespace DragqnLD.Core.UnitTests
 
         private readonly EmbeddableDocumentStore documentStore;
         private readonly QueryStore queryStore;
-
+        
         [Fact]
         public async Task CanStoreQuery()
         {

@@ -21,6 +21,21 @@ namespace DragqnLD.Core.UnitTests
             _sparqlEnpointClient = new SparqlEnpointClient();
         }
 
+        [Fact]
+        public async Task CanRunSelectQuery()
+        {
+            var selectQuery = new SparqlQueryInfo()
+            {
+                Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o }",
+                DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+            };
+
+            var result = await _sparqlEnpointClient.QueryForUris(selectQuery);
+
+            Assert.NotNull(result);
+        }
+
         /// <summary>
         /// Unfortunately not really reliable, as it depends on the state of the remote endpoint and its data
         /// </summary>
