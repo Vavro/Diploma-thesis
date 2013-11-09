@@ -34,6 +34,7 @@ namespace DragqnLD.Core.UnitTests
             var result = await _sparqlEnpointClient.QueryForUris(selectQuery);
 
             Assert.NotNull(result);
+            Assert.Equal(result.Count(), 100);
         }
 
         /// <summary>
