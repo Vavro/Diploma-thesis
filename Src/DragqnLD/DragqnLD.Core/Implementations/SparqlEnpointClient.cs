@@ -32,20 +32,17 @@ namespace DragqnLD.Core.Implementations
                         throw new NotSupportedException("Select query result doesn't contain exactly one variable", ex);
                     }
 
-                    var resultUris = new List<Uri>();
-                    foreach (var result in sparqlResultSet.Results)
-                    {
-                        var node = result[variableName];
-                        var uriNode = node as UriNode;
-                        if (uriNode == null)
-                        {
-                            throw new NotSupportedException(String.Format("Node {0} is not of type UriNode and cannot be parsed to uri", node));
-                        }
-                        var uri = uriNode.Uri;
-                        resultUris.Add(uri);
-                    }
-
-                    //sparqlResultSet.Results.Select(result => new Uri(result[variableName].));
+                    var resultUris = sparqlResultSet.Results.Select(result =>
+                                        {
+                                            var node = result[variableName];
+                                            var uriNode = node as UriNode;
+                                            if (uriNode == null)
+                                            {
+                                                throw new NotSupportedException(
+                                                    String.Format("Node {0} is not of type UriNode and cannot be parsed to uri", node));
+                                            }
+                                            return uriNode.Uri;
+                                        });
 
                     return resultUris;
                 });
