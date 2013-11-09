@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
+using Raven.Client.Linq;
+using VDS.RDF;
 using VDS.RDF.Query;
 
 namespace DragqnLD.Core.Implementations
@@ -18,10 +20,34 @@ namespace DragqnLD.Core.Implementations
             //todo: run in taks and await
             return await Task.Run(() =>
                 {
-                    var results = endpoint.QueryWithResultSet(selectSparqlQuery.Query);
+                    var sparqlResultSet = endpoint.QueryWithResultSet(selectSparqlQuery.Query);
 
-                    //todo: check only URIs are returned
-                    return (IEnumerable<Uri>)null;
+                    string variableName = null;
+                    try
+                    {
+                        variableName = sparqlResultSet.Variables.Single();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new NotSupportedException("Select query result doesn't contain exactly one variable", ex);
+                    }
+
+                    var resultUris = new List<Uri>();
+                    foreach (var result in sparqlResultSet.Results)
+                    {
+                        var node = result[variableName];
+                        var uriNode = node as UriNode;
+                        if (uriNode == null)
+                        {
+                            throw new NotSupportedException(String.Format("Node {0} is not of type UriNode and cannot be parsed to uri", node));
+                        }
+                        var uri = uriNode.Uri;
+                        resultUris.Add(uri);
+                    }
+
+                    //sparqlResultSet.Results.Select(result => new Uri(result[variableName].));
+
+                    return resultUris;
                 });
         }
 

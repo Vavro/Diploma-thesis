@@ -26,7 +26,7 @@ namespace DragqnLD.Core.UnitTests
         {
             var selectQuery = new SparqlQueryInfo()
             {
-                Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o }",
+                Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                 DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
                 SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
             };
