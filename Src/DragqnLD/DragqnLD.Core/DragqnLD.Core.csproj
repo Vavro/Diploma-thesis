@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstraction\Data\ConstructResult.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
     <Compile Include="Implementations\QueryStore.cs" />
     <Compile Include="Implementations\DataLoader.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Abstraction\IDataStore.cs" />
     <Compile Include="Abstraction\IQueryAnswerer.cs" />
     <Compile Include="Abstraction\IQueryStore.cs" />
+    <Compile Include="Implementations\RavenDataStore.cs" />
     <Compile Include="Implementations\SparqlEnpointClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

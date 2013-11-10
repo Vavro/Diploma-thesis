@@ -55,6 +55,7 @@ namespace DragqnLD.Core.UnitTests
             };
 
             var id = await queryStore.Add(queryDefinition);
+            Console.WriteLine(id);
 
             var retrievedQueryDefinition = await queryStore.Get(id);
 
