@@ -14,6 +14,7 @@ namespace DragqnLD.Core.Abstraction
     public interface IDataStore
     {
         Task StoreDocument(ConstructResult dataToStore);
+        Task<dynamic> GetDocument(string queryId, Uri documentId);
     }
 
 }

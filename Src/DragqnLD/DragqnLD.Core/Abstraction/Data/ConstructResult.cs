@@ -16,7 +16,6 @@ namespace DragqnLD.Core.Abstraction.Data
 
     public class Document
     {
-        public string Id { get; set; }
         public dynamic Content { get; set; }
     }
 }
