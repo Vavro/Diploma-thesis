@@ -21,8 +21,7 @@ namespace DragqnLD.Core.Implementations
             {
                 await session.StoreAsync(dataToStore.Document, dataToStore.DocumentId.AbsoluteUri);
                 var metadata = session.Advanced.GetMetadataFor(dataToStore.Document);
-                metadata.Remove("Raven-Entity-Name");
-                metadata.Add("Raven-Entity-Name", dataToStore.QueryId);
+                metadata["Raven-Entity-Name"] = dataToStore.QueryId;
 
                 await session.SaveChangesAsync();
             }
