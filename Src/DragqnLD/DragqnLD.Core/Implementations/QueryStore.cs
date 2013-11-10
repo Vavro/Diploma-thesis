@@ -12,7 +12,7 @@ namespace DragqnLD.Core.Implementations
 {
     public class QueryStore : IQueryStore
     {
-        //todo: Inject session from current call - Raven session will be tied to one REST call
+        //todo: Inject session from current call - Raven session will be tied to one REST call?
 
         private readonly IDocumentStore Store;
         

@@ -10,7 +10,13 @@ namespace DragqnLD.Core.Abstraction.Data
     {
         //todo: query id as URI
         public string QueryId { get; set; }
-        public dynamic Document { get; set; }
+        public Document Document { get; set; }
         public Uri DocumentId { get; set; }
+    }
+
+    public class Document
+    {
+        public string Id { get; set; }
+        public dynamic Content { get; set; }
     }
 }

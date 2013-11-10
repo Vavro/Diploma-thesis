@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
+using Raven.Client;
+using Raven.Client.Embedded;
+using Raven.Tests.Helpers;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests
@@ -13,25 +16,40 @@ namespace DragqnLD.Core.UnitTests
     public class RavenDataStoreTests
     {
         private readonly IDataStore _ravenDataStore;
+        private readonly EmbeddableDocumentStore documentStore;
+
+        private const int RavenWebUiPort = 8081;
 
         public RavenDataStoreTests()
         {
-             _ravenDataStore = new RavenDataStore();
+            var docStore = new EmbeddableDocumentStore()
+            {
+                RunInMemory = true,
+                Configuration = { Port = RavenWebUiPort }
+            };
+            Raven.Database.Server.NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
+
+            docStore.Initialize();
+
+            documentStore = docStore;
+             _ravenDataStore = new RavenDataStore(docStore);
         }
 
         [Fact]
         public async Task CanStoreAndGetPlainJSONData()
         {
-            var document = "{ \"name\" : \"Petr\"}";
+            var content = "{ \"name\" : \"Petr\"}";
 
             var dataToStore = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = document
+                Document = new Document() { Content = content }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
+
+            RavenTestBase.WaitForUserToContinueTheTest(documentStore);
         }
     }
 }
