@@ -28,11 +28,11 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public async Task<dynamic> GetDocument(string queryId, Uri documentId)
+        public async Task<Document> GetDocument(string queryId, Uri documentId)
         {
             using (var session = Store.OpenAsyncSession())
             {
-                var storedDocument = await session.LoadAsync<dynamic>(documentId.AbsoluteUri);
+                var storedDocument = await session.LoadAsync<Document>(documentId.AbsoluteUri);
                 return storedDocument;
             }
         }
