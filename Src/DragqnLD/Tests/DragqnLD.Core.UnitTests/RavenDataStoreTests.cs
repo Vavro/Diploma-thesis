@@ -62,5 +62,35 @@ namespace DragqnLD.Core.UnitTests
         {
             
         }
+
+        [Fact]
+        public async Task CanQuerySimpleJSONData()
+        {
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+            
+            var dataToStore2 = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore2);
+
+            //todo: shouldn't have to specify Content in the query
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, "Content.name:Petr");
+
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+            Assert.Equal(results.Count(), 1);
+
+        }
     }
 }
