@@ -15,6 +15,8 @@ namespace DragqnLD.Core.Abstraction
     {
         Task StoreDocument(ConstructResult dataToStore);
         Task<dynamic> GetDocument(string queryId, Uri documentId);
+
+        Task<IEnumerable<Uri>> QueryDocumentProperty(string queryId, string luceneQuery);
     }
 
 }

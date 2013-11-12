@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using Raven.Client;
+using System.Collections.Generic;
+using System.Linq;
+using Raven.Abstractions.Data;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -34,6 +37,23 @@ namespace DragqnLD.Core.Implementations
             {
                 var storedDocument = await session.LoadAsync<dynamic>(documentId.AbsoluteUri);
                 return storedDocument;
+            }
+        }
+
+
+        public async Task<IEnumerable<Uri>> QueryDocumentProperty(string queryId, string luceneQuery)
+        {
+            using (var session = Store.OpenAsyncSession())
+            {
+                //todo: add metadata specification
+                var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
+                    .UsingDefaultOperator(QueryOperator.And)
+                    .Where(luceneQuery);
+
+                //todo: returns whole documents.. probably not necessary
+                var queryResults = await ravenLuceneQuery.ToListAsync();
+
+                return queryResults.Cast<Document>().Select(doc => new Uri(doc.Id));
             }
         }
     }
