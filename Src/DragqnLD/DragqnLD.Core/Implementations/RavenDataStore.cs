@@ -49,6 +49,7 @@ namespace DragqnLD.Core.Implementations
                 //todo: add metadata specification
                 var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
                     .UsingDefaultOperator(QueryOperator.And)
+                    .WhereEquals("@metadata.Raven-Entity-Name",queryId)
                     .Where(luceneQuery);
 
                 //todo: returns whole documents.. probably not necessary

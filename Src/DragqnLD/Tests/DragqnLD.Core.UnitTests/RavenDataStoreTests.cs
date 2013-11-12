@@ -115,5 +115,11 @@ namespace DragqnLD.Core.UnitTests
             Assert.Equal(results.Count(), 1);
 
         }
+
+        [Fact]
+        public async Task CanQueryComplexJSONData()
+        {
+            
+        }
     }
 }
