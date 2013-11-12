@@ -78,6 +78,7 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore2);
 
+            //todo: shouldn't have to specify Content in the query
             var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, "Content.name:Petr");
 
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
