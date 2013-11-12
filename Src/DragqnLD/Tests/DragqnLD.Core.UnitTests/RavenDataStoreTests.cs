@@ -40,7 +40,6 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanStoreAndGetPlainJSONData()
         {
-
             var content = RavenJObject.Parse("{ \"name\" : \"Petr\"}");
 
             var dataToStore = new ConstructResult()
@@ -52,9 +51,16 @@ namespace DragqnLD.Core.UnitTests
             
             await _ravenDataStore.StoreDocument(dataToStore);
 
-            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
             var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
+
+            Assert.Equal(storedDocument.Content.ToString(), content.ToString());
+        }
+
+        public async Task CanStoreAndGetComplexJSONData()
+        {
+            
         }
     }
 }

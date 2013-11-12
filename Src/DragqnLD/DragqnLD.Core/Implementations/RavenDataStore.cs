@@ -22,6 +22,7 @@ namespace DragqnLD.Core.Implementations
             {
                 await session.StoreAsync(dataToStore.Document, dataToStore.DocumentId.AbsoluteUri);
 
+                //edit the entity name, so all indexed documents for the same query are together
                 var metadata = session.Advanced.GetMetadataFor(dataToStore.Document);
                 metadata["Raven-Entity-Name"] = dataToStore.QueryId;
                 await session.SaveChangesAsync();
