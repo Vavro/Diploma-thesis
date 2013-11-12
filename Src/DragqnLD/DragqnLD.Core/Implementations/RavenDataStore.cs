@@ -46,7 +46,6 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = Store.OpenAsyncSession())
             {
-                //todo: add metadata specification
                 var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
                     .UsingDefaultOperator(QueryOperator.And)
                     .WhereEquals("@metadata.Raven-Entity-Name",queryId)
