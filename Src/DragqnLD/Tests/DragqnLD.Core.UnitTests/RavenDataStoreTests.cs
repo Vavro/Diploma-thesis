@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,9 +59,31 @@ namespace DragqnLD.Core.UnitTests
             Assert.Equal(storedDocument.Content.ToString(), content.ToString());
         }
 
+        [Fact]
         public async Task CanStoreAndGetComplexJSONData()
         {
-            
+            var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() {Content = parsed }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+
+            var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
+
+            Assert.NotNull(storedDocument);
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Original data:");
+            Console.WriteLine(dataToStore.Document.Content.ToString());
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Stored data:");
+            Console.WriteLine(storedDocument.Content.ToString());
+
+            Assert.Equal(dataToStore.Document.Content.ToString(), storedDocument.Content.ToString());
         }
 
         [Fact]
