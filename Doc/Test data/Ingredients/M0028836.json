@@ -1,0 +1,173 @@
+{
+  "@graph": [
+    {
+      "@id": "http://linked.opendata.cz/resource/ATC/H05AA02",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/ATCConcept"
+      ],
+      "http://www.w3.org/2004/02/skos/core#prefLabel": [
+        {
+          "@value": "Teriparatid",
+          "@language": "cs"
+        },
+        {
+          "@value": "Teriparatide",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "H05AA02"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/DiseaseOrFinding"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "L\u00e9kov\u00e1 alergie",
+          "@language": "cs"
+        },
+        {
+          "@value": "Drug hypersensitivity",
+          "@language": "en"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/description": [
+        {
+          "@value": "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ndfrt/disease/N0000003303",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/DiseaseOrFinding"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Osteopor\u00f3za postmenopauz\u00e1ln\u00ed",
+          "@language": "cs"
+        },
+        {
+          "@value": "Osteoporosis, postmenopausal",
+          "@language": "en"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/description": [
+        {
+          "@value": "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/PhysiologicEffect"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Bone Formation Stimulation",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/MechanismOfAction"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Hormone Receptor Agonists",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028836",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/Ingredient"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Teriparatid",
+          "@language": "cs"
+        },
+        {
+          "@value": "Teriparatide",
+          "@language": "en"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPharmacologicalAction": [
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasMedicinalProduct": [
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORSTEO"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/description": [
+        {
+          "@value": "A polypeptide that consists of the 1-34 amino-acid fragment of human PARATHYROID HORMONE, the biologically active N-terminal region. The acetate form is given by intravenous infusion in the differential diagnosis of HYPOPARATHYROIDISM and PSEUDOHYPOPARATHYROIDISM. (Reynolds JEF(Ed): Martindale: The Extra Pharmacopoeia (electronic version). Micromedex, Inc, Englewood, CO, 1995)     ",
+          "@language": "en"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasMechanismOfAction": [
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory": [
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat": [
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003303"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/contraindicatedWith": [
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPhysiologicEffect": [
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311"
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/PharmacologicalAction"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Bone density conservation agents",
+          "@language": "en"
+        },
+        {
+          "@value": "Inhibitory kostn\u00ed resorpce",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/description": [
+        {
+          "@value": "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     ",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/sukl/medicinal-product/FORSTEO",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/MedicinalProduct"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "FORSTEO",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept": [
+        "http://linked.opendata.cz/resource/ATC/H05AA02"
+      ]
+    }
+  ]
+}

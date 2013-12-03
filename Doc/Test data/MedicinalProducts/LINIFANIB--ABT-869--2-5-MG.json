@@ -1,0 +1,174 @@
+{
+  "@graph": [
+    {
+      "@id": "http://linked.opendata.cz/resource/ATC/L",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/ATCConcept"
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Cytostatika a imunomodula\u010dn\u00ed l\u00e9\u010diva",
+          "@language": "cs"
+        },
+        {
+          "@value": "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "L"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ATC/L01",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/ATCConcept"
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Cytostatika",
+          "@language": "cs"
+        },
+        {
+          "@value": "ANTINEOPLASTIC AGENTS",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "L01"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ATC/L01X",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/ATCConcept"
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Jin\u00e1 cytostatika",
+          "@language": "cs"
+        },
+        {
+          "@value": "OTHER ANTINEOPLASTIC AGENTS",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "L01X"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/ATC/L01XE",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/ATCConcept"
+      ],
+      "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+        "http://linked.opendata.cz/resource/ATC/L01X",
+        "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01"
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Inhibitory protein kin\u00e1zy",
+          "@language": "cs"
+        },
+        {
+          "@value": "Protein kinase inhibitors",
+          "@language": "en"
+        }
+      ],
+      "http://www.w3.org/2004/02/skos/core#notation": [
+        {
+          "@value": "L01XE"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0562363",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/Ingredient"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Linifanib",
+          "@language": "en"
+        }
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/sukl/medicinal-product/LINIFANIB--ABT-869--2-5-MG",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/MedicinalProduct"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasActiveIngredient": [
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0562363"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "LINIFANIB (ABT-869) 2,5 MG",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept": [
+        "http://linked.opendata.cz/resource/ATC/L01XE"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasMedicinalProductPackaging": [
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185257"
+      ]
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185257",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/MedicinalProductPackaging"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "LINIFANIB (ABT-869) 2,5 MG",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept": [
+        "http://linked.opendata.cz/resource/ATC/L01XE"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasIndicationGroup": [
+        {
+          "@value": "CYTOSTATICA",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPackagingSize": [
+        {
+          "@value": "25",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasRouteOfAdministration": [
+        {
+          "@value": "Peror\u00e1ln\u00ed pod\u00e1n\u00ed",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasStrength": [
+        {
+          "@value": "2.5MG",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasRegistrationState": [
+        "http://linked.opendata.cz/resource/sukl/registration-state/F"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasTitleSupplement": [
+        {
+          "@value": "POR TBL NOB 25X2,5MG",
+          "@language": "cs"
+        }
+      ]
+    }
+  ]
+}
