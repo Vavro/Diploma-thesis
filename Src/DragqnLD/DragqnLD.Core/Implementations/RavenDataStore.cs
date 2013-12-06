@@ -2,10 +2,13 @@
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
+using Raven.Abstractions.Linq;
 using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
 using Raven.Abstractions.Data;
+using Raven.Json.Linq;
+using VDS.RDF.Query.Expressions.Primary;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -23,20 +26,32 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = Store.OpenAsyncSession())
             {
-                await session.StoreAsync(dataToStore.Document, dataToStore.DocumentId.AbsoluteUri);
+                var content = dataToStore.Document.Content;
+
+                string id = GetDocumentId(dataToStore.QueryId, dataToStore.DocumentId.AbsoluteUri);
+                await session.StoreAsync(content, id);
 
                 //edit the entity name, so all indexed documents for the same query are together
-                var metadata = session.Advanced.GetMetadataFor(dataToStore.Document);
+                var metadata = session.Advanced.GetMetadataFor(content);
                 metadata["Raven-Entity-Name"] = dataToStore.QueryId;
                 await session.SaveChangesAsync();
             }
         }
 
+        private static string GetDocumentId(string queryId, string documentUri)
+        {
+            return String.Format("{0}/{1}", queryId, documentUri);
+        }
+
+
         public async Task<Document> GetDocument(string queryId, Uri documentId)
         {
             using (var session = Store.OpenAsyncSession())
             {
-                var storedDocument = await session.LoadAsync<Document>(documentId.AbsoluteUri);
+                string id = GetDocumentId(queryId, documentId.AbsoluteUri);
+                var storedContent = await session.LoadAsync<RavenJObject>(id);
+                var storedDocument = new Document() {Id = documentId.AbsoluteUri, Content = storedContent};
+
                 return storedDocument;
             }
         }
@@ -46,15 +61,24 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = Store.OpenAsyncSession())
             {
+
                 var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
                     .UsingDefaultOperator(QueryOperator.And)
                     .WhereEquals("@metadata.Raven-Entity-Name",queryId)
                     .Where(luceneQuery);
 
-                //todo: returns whole documents.. probably not necessary
-                var queryResults = await ravenLuceneQuery.ToListAsync();
+                //todo: paging - raven returns max 1024 documents or something like that
+                //todo: returns whole documents with metadata.. probably not necessary
+                var queryResults = await ravenLuceneQuery.QueryResultAsync;
 
-                return queryResults.Cast<Document>().Select(doc => new Uri(doc.Id));
+                var ids = new List<string>(queryResults.Results.Count);
+                foreach (var queryResult in queryResults.Results)
+                {
+                    var id = queryResult["@metadata"].Value<string>("@id").Substring(queryId.Length + 1);
+                    ids.Add(id);
+                }
+
+                return ids.Select(id => new Uri(id));
             }
         }
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction.Data
 {
@@ -17,6 +19,6 @@ namespace DragqnLD.Core.Abstraction.Data
     public class Document
     {
         public string Id { get; set; }
-        public dynamic Content { get; set; }
+        public RavenJObject Content { get; set; }
     }
 }

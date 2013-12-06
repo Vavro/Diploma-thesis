@@ -16,6 +16,8 @@ using Xunit;
 
 namespace DragqnLD.Core.UnitTests
 {
+    //todo: get rid of Content property
+    //todo: make all simple test data work with a contained @id property
     public class RavenDataStoreTests
     {
         private readonly IDataStore _ravenDataStore;
@@ -73,6 +75,8 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore);
 
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
             var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
 
             Assert.NotNull(storedDocument);
@@ -93,7 +97,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+                Document = new Document() { Content = RavenJObject.Parse("{ \"@id\" : \""+@"http://linked.opendata.cz/resource/ATC/M01AE02"+ "\", \"name\" : \"Petr\"}") }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
@@ -102,17 +106,53 @@ namespace DragqnLD.Core.UnitTests
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"@id\" : \""+@"http://linked.opendata.cz/resource/ATC/M01AE02"+ "\", \"name\" : \"Jan\"}") }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore2);
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, "name:Petr");
+
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+            Assert.Equal(results.Count(), 1);
+
+        }
+
+        [Fact]
+        public async Task CanInsertDuplicateIdsToDifferencQueries()
+        {
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+
+            var dataToStore2 = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/2",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
                 Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore2);
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
 
-            //todo: shouldn't have to specify Content in the query
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, "Content.name:Petr");
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
-            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            Assert.NotNull(storedDocument);
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Original data:");
+            Console.WriteLine(dataToStore.Document.Content.ToString());
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Stored data:");
+            Console.WriteLine(storedDocument.Content.ToString());
 
-            Assert.Equal(results.Count(), 1);
+            Assert.Equal(dataToStore.Document.Content.ToString(), storedDocument.Content.ToString());
 
         }
 
