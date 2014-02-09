@@ -68,10 +68,10 @@ namespace DragqnLD.Core.Implementations
                                 JObject objectFromGraph;
                                 if (_graphObjectsById.TryGetValue(searchedId, out objectFromGraph))
                                 {
-                                    asJArray[i] = objectFromGraph;
-                                    
                                     //todo: optimize this!!! - not needed to go through all objects again and again if they are present multiple times in the graph
                                     ReplaceReferencePropertiesInJObject(objectFromGraph);
+
+                                    asJArray[i] = objectFromGraph;
                                 }
                             }
                             else if ((valueAsJObject = value as JObject) != null)
@@ -89,10 +89,10 @@ namespace DragqnLD.Core.Implementations
                         JObject objectFromGraph;
                         if (_graphObjectsById.TryGetValue(searchedId, out objectFromGraph))
                         {
-                            property.Value = objectFromGraph;
-                            
                             //todo: optimize this!!! - not needed to go through all objects again and again if they are present multiple times in the graph
                             ReplaceReferencePropertiesInJObject(objectFromGraph);
+
+                            property.Value = objectFromGraph;
                         }
                         else
                         {
