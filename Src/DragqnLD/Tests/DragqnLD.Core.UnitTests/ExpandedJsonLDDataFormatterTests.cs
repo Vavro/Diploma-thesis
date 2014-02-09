@@ -23,7 +23,7 @@ namespace DragqnLD.Core.UnitTests
 
             formatter.Format(reader, writer, id1);
 
-
+            var output = writer.ToString();
         }
 
 
