@@ -20,6 +20,7 @@ namespace DragqnLD.Core.Implementations
             private readonly JEnumerable<JToken> _graphObjects;
             private readonly string _rootObjectId;
             private JObject _rootJObject;
+            private Stack<string> _recursiveIds; 
 
             public JObject RootJObject { get { return _rootJObject; } }
 
@@ -29,6 +30,7 @@ namespace DragqnLD.Core.Implementations
                 _rootObjectId = rootObjectId;
                 _rootJObject = null;
                 _graphObjectsById = null;
+                _recursiveIds = new Stack<string>();
             }
 
             public void NestEverythingIntoRootObject()
@@ -38,6 +40,19 @@ namespace DragqnLD.Core.Implementations
             
             private void ReplaceReferencePropertiesInJObject(JObject obj)
             {
+                //check recursive path
+                var objId = (string)obj["@id"];
+                if (objId != null)
+                {
+                    if (_recursiveIds.Contains(objId))
+                    {
+                        //todo: add own exception
+                        throw new NotSupportedException(String.Format("item id: {0} creates a recursion, whole previous id path: {1}", objId, String.Join(" ,", _recursiveIds.Reverse())));
+                    }
+
+                    _recursiveIds.Push(objId);
+                }
+
                 foreach (var property in obj.Properties())
                 {
                     if (property.Name.Length > 1
@@ -99,6 +114,11 @@ namespace DragqnLD.Core.Implementations
                             //log not found?
                         }
                     }
+                }
+
+                if (objId != null)
+                {
+                    _recursiveIds.Pop();
                 }
             }
 

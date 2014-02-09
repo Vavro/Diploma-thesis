@@ -12,40 +12,60 @@ namespace DragqnLD.Core.UnitTests
 {
     public class ExpandedJsonLDDataFormatterTests
     {
-        private const string id1 = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
-        private const string id2 = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
-
         [Fact]
-        void SimpleFormatTest()
+        void CanFormatSimpleDataTest()
+        {
+            string inputJson = @"ExpanderTestsData\json1-simple.json";
+            string expectedOutputJson = @"ExpandertestsData\json1out.json";
+            string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+
+            TestFormat(inputJson, expectedOutputJson, id);
+        }
+
+        private static void TestFormat(string inputJson, string expectedOutputJson, string id)
         {
             var formatter = new ExpandedJsonLDDataFormatter();
-            var reader = new StreamReader(@"ExpanderTestsData\json1.json");
+            var reader = new StreamReader(inputJson);
             var writer = new StringWriter();
 
-            formatter.Format(reader, writer, id1);
+            formatter.Format(reader, writer, id);
             var output = writer.ToString();
 
-            var expectedOutputReader = new StreamReader(@"ExpandertestsData\json1out.json");
+            var expectedOutputReader = new StreamReader(expectedOutputJson);
             var expectedOutput = expectedOutputReader.ReadToEnd();
 
             Assert.Equal(output, expectedOutput);
         }
+        
+        [Fact]
+        void CanFormatComplexDataTest()
+        {
+            string inputJson = @"ExpanderTestsData\json2-whole.json";
+            string expectedOutputJson = @"ExpandertestsData\json2out.json";
+            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
+            TestFormat(inputJson, expectedOutputJson, id);
+        }
 
         [Fact]
-        void ComplexFormatTest()
+        void CanFormatHeavilyNestedJSON()
         {
-            var formatter = new ExpandedJsonLDDataFormatter();
-            var reader = new StreamReader(@"ExpanderTestsData\json2.json");
-            var writer = new StringWriter();
+            string inputJson = @"ExpanderTestsData\json3-nested.json";
+            string expectedOutputJson = @"ExpanderTestsData\json3out.json";
+            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
-            formatter.Format(reader, writer, id2);
-            var output = writer.ToString();
+            TestFormat(inputJson, expectedOutputJson, id);
+        }
 
-            var expectedOutputReader = new StreamReader(@"ExpandertestsData\json2out.json");
-            var expectedOutput = expectedOutputReader.ReadToEnd();
+        [Fact]
+        void WillThrowOnNestedData()
+        {
+            string inputJson = @"ExpanderTestsData\json4-recursive.json";
+            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
-            Assert.Equal(output, expectedOutput);
+            //todo: add more specific exception
+            var ex = Assert.Throws<NotSupportedException>(() => { TestFormat(inputJson, null, id); });
+            Console.WriteLine(ex.ToString());
         }
     }
 }

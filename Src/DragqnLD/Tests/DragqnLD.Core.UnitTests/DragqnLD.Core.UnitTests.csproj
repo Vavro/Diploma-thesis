@@ -100,13 +100,19 @@
     <Compile Include="SparqlEnpointClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExpanderTestsData\json1.json">
+    <None Include="ExpanderTestsData\json1-simple.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ExpanderTestsData\json1out.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ExpanderTestsData\json2out.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExpanderTestsData\json3-nested.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ExpanderTestsData\json3out.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="JSON\berners-lee.jsonld">
@@ -124,7 +130,12 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExpanderTestsData\json2.json">
+    <None Include="ExpanderTestsData\json2-whole.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExpanderTestsData\json4-recursive.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

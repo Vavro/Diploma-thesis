@@ -1,0 +1,39 @@
+﻿{
+  "@graph": [
+    {
+      "@id": "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/Ingredient"
+      ],      
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPharmacologicalAction": [
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037"
+      ],
+    },
+    {
+      "@id": "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037",
+      "@type": [
+        "http://linked.opendata.cz/ontology/drug-encyclopedia/PharmacologicalAction"
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/title": [
+        {
+          "@value": "Antipyretics",
+          "@language": "en"
+        },
+        {
+          "@value": "Antipyretika",
+          "@language": "cs"
+        }
+      ],
+      "http://linked.opendata.cz/ontology/drug-encyclopedia/description": [
+        {
+          "@value": "Drugs that are used to reduce body temperature in fever.     ",
+          "@language": "en"
+        }
+      ],
+      "recursive" : [
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037"
+      ]
+    }
+  ]
+}
