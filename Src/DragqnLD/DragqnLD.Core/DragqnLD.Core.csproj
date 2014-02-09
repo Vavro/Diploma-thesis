@@ -59,8 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\Data\ConstructResult.cs" />
-    <Compile Include="Abstraction\IDataReformatter.cs" />
+    <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
+    <Compile Include="Implementations\ExpandedJsonLDDataFormatter.cs" />
     <Compile Include="Implementations\QueryStore.cs" />
     <Compile Include="Implementations\DataLoader.cs" />
     <Compile Include="Abstraction\Query\QueryDefinition.cs" />
