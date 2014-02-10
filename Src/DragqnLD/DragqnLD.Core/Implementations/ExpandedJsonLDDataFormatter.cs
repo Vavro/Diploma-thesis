@@ -171,8 +171,6 @@ namespace DragqnLD.Core.Implementations
 
             flatGraphNester.NestEverythingIntoRootObject();
 
-            var test = JsonConvert.SerializeObject(flatGraphNester.RootJObject, Formatting.Indented);
-
             var jsonWriter = new JsonTextWriter(output);
             flatGraphNester.RootJObject.WriteTo(jsonWriter);
         }

@@ -67,5 +67,7 @@ namespace DragqnLD.Core.UnitTests
             var ex = Assert.Throws<NotSupportedException>(() => { TestFormat(inputJson, null, id); });
             Console.WriteLine(ex.ToString());
         }
+
+
     }
 }
