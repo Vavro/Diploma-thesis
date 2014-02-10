@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Implementations;
 using Xunit;
+using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests
 {
@@ -22,21 +23,28 @@ namespace DragqnLD.Core.UnitTests
             TestFormat(inputJson, expectedOutputJson, id);
         }
 
-        private static void TestFormat(string inputJson, string expectedOutputJson, string id)
+        private static void TestFormat(string inputJsonFileName, string expectedOutputJsonFileName, string id)
         {
-            var formatter = new ExpandedJsonLDDataFormatter();
-            var reader = new StreamReader(inputJson);
             var writer = new StringWriter();
 
-            formatter.Format(reader, writer, id);
-            var output = writer.ToString();
+            var output = GetFormatted(inputJsonFileName, id, writer);
 
-            var expectedOutputReader = new StreamReader(expectedOutputJson);
+            var expectedOutputReader = new StreamReader(expectedOutputJsonFileName);
             var expectedOutput = expectedOutputReader.ReadToEnd();
 
             Assert.Equal(output, expectedOutput);
         }
-        
+
+        private static string GetFormatted(string inputJsonFileName, string id, TextWriter writer)
+        {
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var reader = new StreamReader(inputJsonFileName);
+
+            formatter.Format(reader, writer, id);
+            var output = writer.ToString();
+            return output;
+        }
+
         [Fact]
         void CanFormatComplexDataTest()
         {
@@ -66,6 +74,37 @@ namespace DragqnLD.Core.UnitTests
             //todo: add more specific exception
             var ex = Assert.Throws<NotSupportedException>(() => { TestFormat(inputJson, null, id); });
             Console.WriteLine(ex.ToString());
+        }
+
+        [Theory]
+        [InlineData(@"..\..\..\..\..\..\Doc\Test data\Ingredients", @"Output\Ingedients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
+        [InlineData(@"..\..\..\..\..\..\Doc\Test data\MedicinalProducts", @"Output\MedicinalProducts\", @"http://linked.opendata.cz/resource/sukl/medicinal-product/")]
+        void CanConvertAllTestData(string inputFolder, string outputFolder, string idprefix)
+        {
+            var inputDirectoryInfo = new DirectoryInfo(inputFolder);
+            var inputFiles = inputDirectoryInfo.GetFiles();
+            
+            Directory.CreateDirectory(outputFolder);
+
+            foreach (var inputFile in inputFiles)
+            {
+                var inputFileName = inputFile.FullName;
+                var idWithoutNamespace = inputFile.Name.Substring(0, inputFile.Name.Length - ".json".Length);
+                var id = idprefix + idWithoutNamespace;
+
+                var outputFileName = outputFolder + idWithoutNamespace + ".out.json";
+                
+                using( var o = new FileStream(outputFileName, FileMode.Create))
+                using(var outputFile = new StreamWriter(o))
+                { 
+                
+                    GetFormatted(inputFileName, id, outputFile);
+
+                    outputFile.Flush();
+                    outputFile.Close();
+                }
+            }
+
         }
 
 
