@@ -8,8 +8,10 @@ using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using Newtonsoft.Json.Linq;
+using Raven.Abstractions.Data;
 using Raven.Client;
 using Raven.Client.Embedded;
+using Raven.Client.Listeners;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
@@ -20,6 +22,66 @@ namespace DragqnLD.Core.UnitTests
     //todo: make all simple test data work with a contained @id property
     public class RavenDataStoreTests
     {
+        private class DocumentQueryListener : IDocumentQueryListener
+        {
+            public void BeforeQueryExecuted(IDocumentQueryCustomization queryCustomization)
+            {
+            }
+
+            private void Action(IndexQuery indexQuery)
+            {
+            }
+        }
+
+        private class DocumentConversionListener : IDocumentConversionListener
+        {
+            public void EntityToDocument(string key, object entity, RavenJObject document, RavenJObject metadata)
+            {
+                return;
+            }
+
+            public void DocumentToEntity(string key, object entity, RavenJObject document, RavenJObject metadata)
+            {
+                return;
+            }
+        }
+
+        private class ExtendedDocumentConversionListener : IExtendedDocumentConversionListener
+        {
+            public void BeforeConversionToDocument(string key, object entity, RavenJObject metadata)
+            {
+                return;
+            }
+
+            public void AfterConversionToDocument(string key, object entity, RavenJObject document, RavenJObject metadata)
+            {
+                return;
+            }
+
+            public void BeforeConversionToEntity(string key, RavenJObject document, RavenJObject metadata)
+            {
+                return;
+            }
+
+            public void AfterConversionToEntity(string key, RavenJObject document, RavenJObject metadata, object entity)
+            {
+                return;
+            }
+        }
+
+        private class MyStoreListener : IDocumentStoreListener
+        {
+            public bool BeforeStore(string key, object entityInstance, RavenJObject metadata, RavenJObject original)
+            {
+                return true;
+            }
+
+            public void AfterStore(string key, object entityInstance, RavenJObject metadata)
+            {
+                
+            }
+        }
+
         private readonly IDataStore _ravenDataStore;
         private readonly EmbeddableDocumentStore _documentStore;
 
@@ -36,6 +98,10 @@ namespace DragqnLD.Core.UnitTests
 
             docStore.Initialize();
 
+            docStore.RegisterListener(new DocumentConversionListener())
+                .RegisterListener(new ExtendedDocumentConversionListener())
+                .RegisterListener(new MyStoreListener());
+
             _documentStore = docStore;
              _ravenDataStore = new RavenDataStore(docStore);
         }
@@ -43,7 +109,7 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanStoreAndGetPlainJSONData()
         {
-            var content = RavenJObject.Parse("{ \"name\" : \"Petr\"}");
+            var content = RavenJObject.Parse(@"{ ""name"" : ""Petr""}");
 
             var dataToStore = new ConstructResult()
             {
@@ -64,6 +130,8 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanStoreAndGetComplexJSONData()
         {
+            //todo: RavenDB hates the @ as starting character in property name - need to come around this!
+
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
             var parsed = RavenJObject.Parse(reader.ReadToEnd());
             var dataToStore = new ConstructResult()
@@ -97,7 +165,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"@id\" : \""+@"http://linked.opendata.cz/resource/ATC/M01AE02"+ "\", \"name\" : \"Petr\"}") }
+                Document = new Document() { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Petr""}") }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
@@ -106,7 +174,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"@id\" : \""+@"http://linked.opendata.cz/resource/ATC/M01AE02"+ "\", \"name\" : \"Jan\"}") }
+                Document = new Document() { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Jan""}") }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore2);

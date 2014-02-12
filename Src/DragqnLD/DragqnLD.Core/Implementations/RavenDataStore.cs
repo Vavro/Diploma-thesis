@@ -29,6 +29,9 @@ namespace DragqnLD.Core.Implementations
                 var content = dataToStore.Document.Content;
 
                 string id = GetDocumentId(dataToStore.QueryId, dataToStore.DocumentId.AbsoluteUri);
+
+                //Store.AsyncDatabaseCommands.PutAsync(id, new Etag(UuidType.Documents, ), content, );
+
                 await session.StoreAsync(content, id);
 
                 //edit the entity name, so all indexed documents for the same query are together
