@@ -227,7 +227,22 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanQueryComplexJSONData()
         {
-            
+            var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() { Content = parsed }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_@type:http\://www.w3.org/2000/10/swap/pim/contact#Male");
+
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+            Assert.Equal(results.Count(), 1);
         }
     }
 }
