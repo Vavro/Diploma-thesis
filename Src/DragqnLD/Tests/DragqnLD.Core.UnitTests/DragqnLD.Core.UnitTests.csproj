@@ -106,7 +106,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryStoreTests.cs" />
     <Compile Include="RavenDataStoreTests.cs" />
-    <Compile Include="RavenTests\CanCallLastOnArray.cs" />
     <Compile Include="SparqlEnpointClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
