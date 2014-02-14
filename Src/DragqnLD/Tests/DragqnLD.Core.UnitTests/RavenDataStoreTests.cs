@@ -238,6 +238,7 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore);
 
+            //todo: autoescape colons in values .. 
             var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_@type:http\://www.w3.org/2000/10/swap/pim/contact#Male");
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);

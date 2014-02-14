@@ -11,6 +11,17 @@ using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests
 {
+    //todo: batch import of documents
+    //todo: logging
+    //todo: handle special characters in lucene queries (i.e. collon in value)
+    //todo: handle inserted document for reserved properties
+        //possible solutions: 
+            //wrap into another property
+            //exchange the @ character on start of property
+        //change queries accordingly   
+    //todo: batch update of documents
+    //todo: metrics of querying
+
     public class ExpandedJsonLDDataFormatterTests
     {
         [Fact]
