@@ -9,6 +9,7 @@ using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using Newtonsoft.Json.Linq;
 using Raven.Abstractions.Data;
+using Raven.Abstractions.Indexing;
 using Raven.Client;
 using Raven.Client.Embedded;
 using Raven.Client.Listeners;
@@ -238,10 +239,56 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore);
 
-            //todo: autoescape colons in values .. 
+            //todo: autoescape colons in values, dots in property names .. 
             var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_@type:http\://www.w3.org/2000/10/swap/pim/contact#Male");
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+            Assert.Equal(results.Count(), 1);
+        }
+
+        [Fact]
+        public async Task CanQueryByNestedPropertyItemsSimpleJSONData()
+        {
+            var parsed = RavenJObject.Parse(@"{ ""name"" : ""Petr"", ""parents"" : [ { ""age"" : ""45"" } ] }");
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() { Content = parsed }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"parents,age : 45");
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+
+            Assert.Equal(results.Count(), 1);
+        }
+
+        [Fact]
+        public async Task CanQueryByNestedPropertyItemsComplexJSONData()
+        {
+            var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() {Content = parsed}
+            };
+
+            var indexDefinition = @"from doc in docs
+                from doclabel in ((IEnumerable<dynamic>)doc.http\://www\.w3\.org/2000/01/rdf-schema#label).DefaultIfEmpty()
+                select new { _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""], parents_age = doclabel.@value }";
+
+            _documentStore.DocumentDatabase.PutIndex("test", new IndexDefinition() {Map = indexDefinition});
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"http\://www\.w3\.org/2000/01/rdf-schema#label,@value : Tim Berners-Lee");
+
 
             Assert.Equal(results.Count(), 1);
         }
