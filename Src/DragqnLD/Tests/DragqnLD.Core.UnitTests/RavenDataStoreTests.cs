@@ -279,16 +279,9 @@ namespace DragqnLD.Core.UnitTests
                 Document = new Document() {Content = parsed}
             };
 
-            var indexDefinition = @"from doc in docs
-                from doclabel in ((IEnumerable<dynamic>)doc.http\://www\.w3\.org/2000/01/rdf-schema#label).DefaultIfEmpty()
-                select new { _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""], parents_age = doclabel.@value }";
-
-            _documentStore.DocumentDatabase.PutIndex("test", new IndexDefinition() {Map = indexDefinition});
-
             await _ravenDataStore.StoreDocument(dataToStore);
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"http\://www\.w3\.org/2000/01/rdf-schema#label,@value : Tim Berners-Lee");
-
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
 
             Assert.Equal(results.Count(), 1);
         }

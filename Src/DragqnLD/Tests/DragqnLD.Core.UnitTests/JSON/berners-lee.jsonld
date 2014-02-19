@@ -1,7 +1,7 @@
 { "_@id": "http://www.w3.org/People/Berners-Lee/card#i",
   "_@type" : [ "http://www.w3.org/2000/10/swap/pim/contact#Male" ,
     "http://xmlns.com/foaf/0.1/Person" ] ,
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ { "@value" : "Tim Berners-Lee" } ] ,
+  "http___www_w3_org_2000_01_rdf_schema_label" : [ { "_value" : "Tim Berners-Lee" } ] ,
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ "http://dig.csail.mit.edu/2008/webdav/timbl/foaf.rdf" ,
     "http://www.w3.org/2007/11/Talks/search/query?date=All+past+and+future+talks&event=None&activity=None&name=Tim+Berners-Lee&country=None&language=None&office=None&rdfOnly=yes&submit=Submit" ] ,
   "http://www.w3.org/2002/07/owl#sameAs" : [ "http://identi.ca/user/45563" ,
