@@ -129,7 +129,7 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanStoreAndGetComplexJSONData()
+        public async Task CanStoreAndGetComplexJSONLDData()
         {
             //todo: RavenDB hates the @ as starting character in property name - need to come around this!
 
@@ -226,7 +226,7 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanQueryComplexJSONData()
+        public async Task CanQueryComplexJSONLSData()
         {
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
             var parsed = RavenJObject.Parse(reader.ReadToEnd());
@@ -268,7 +268,7 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanQueryByNestedPropertyItemsComplexJSONData()
+        public async Task CanQueryByNestedPropertyItemsComplexJSONLDData()
         {
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
             var parsed = RavenJObject.Parse(reader.ReadToEnd());
