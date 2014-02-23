@@ -7,6 +7,7 @@ using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
 using Raven.Abstractions.Data;
+using Raven.Client.Connection;
 using Raven.Json.Linq;
 using VDS.RDF.Query.Expressions.Primary;
 
@@ -16,21 +17,23 @@ namespace DragqnLD.Core.Implementations
     {
         //todo: Inject session from current call - Raven session will be tied to one REST call?
 
-        private readonly IDocumentStore Store;
+        private readonly IDocumentStore _store;
+
+        private readonly IDocumentPropertyEscaper _escaper;
 
         public RavenDataStore(IDocumentStore store)
         {
-            Store = store;
+            _store = store;
         }
         public async Task StoreDocument(ConstructResult dataToStore)
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
                 var content = dataToStore.Document.Content;
 
                 string id = GetDocumentId(dataToStore.QueryId, dataToStore.DocumentId.AbsoluteUri);
 
-                //Store.AsyncDatabaseCommands.PutAsync(id, new Etag(UuidType.Documents, ), content, );
+                //_store.AsyncDatabaseCommands.PutAsync(id, new Etag(UuidType.Documents, ), content, );
 
                 await session.StoreAsync(content, id);
 
@@ -49,11 +52,11 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<Document> GetDocument(string queryId, Uri documentId)
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id);
-                var storedDocument = new Document() {Id = documentId.AbsoluteUri, Content = storedContent};
+                var storedDocument = new Document() { Id = documentId.AbsoluteUri, Content = storedContent };
 
                 return storedDocument;
             }
@@ -62,12 +65,11 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<IEnumerable<Uri>> QueryDocumentProperty(string queryId, string luceneQuery)
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
-
                 var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
                     .UsingDefaultOperator(QueryOperator.And)
-                    .WhereEquals("@metadata.Raven-Entity-Name",queryId)
+                    .WhereEquals("@metadata.Raven-Entity-Name", queryId)
                     .Where(luceneQuery);
 
                 //todo: paging - raven returns max 1024 documents or something like that

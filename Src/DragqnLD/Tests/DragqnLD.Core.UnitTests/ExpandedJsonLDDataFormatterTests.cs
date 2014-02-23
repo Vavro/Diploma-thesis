@@ -51,7 +51,9 @@ namespace DragqnLD.Core.UnitTests
             var formatter = new ExpandedJsonLDDataFormatter();
             var reader = new StreamReader(inputJsonFileName);
 
-            formatter.Format(reader, writer, id);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, id, out mappings);
+
             var output = writer.ToString();
             return output;
         }

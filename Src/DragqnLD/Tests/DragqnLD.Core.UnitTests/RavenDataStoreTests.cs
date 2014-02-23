@@ -79,7 +79,7 @@ namespace DragqnLD.Core.UnitTests
 
             public void AfterStore(string key, object entityInstance, RavenJObject metadata)
             {
-                
+
             }
         }
 
@@ -104,7 +104,7 @@ namespace DragqnLD.Core.UnitTests
                 .RegisterListener(new MyStoreListener());
 
             _documentStore = docStore;
-             _ravenDataStore = new RavenDataStore(docStore);
+            _ravenDataStore = new RavenDataStore(docStore);
         }
 
         [Fact]
@@ -118,7 +118,7 @@ namespace DragqnLD.Core.UnitTests
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
                 Document = new Document() { Content = content }
             };
-            
+
             await _ravenDataStore.StoreDocument(dataToStore);
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
@@ -139,7 +139,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() {Content = parsed }
+                Document = new Document() { Content = parsed }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
@@ -170,7 +170,7 @@ namespace DragqnLD.Core.UnitTests
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
-            
+
             var dataToStore2 = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
@@ -271,16 +271,22 @@ namespace DragqnLD.Core.UnitTests
         public async Task CanQueryByNestedPropertyItemsComplexJSONLDData()
         {
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+
+            //var jobject = JObject.Parse(reader.ReadToEnd());
+
+            //var parsed = RavenJObject.FromObject(jobject);
+
+
             var parsed = RavenJObject.Parse(reader.ReadToEnd());
             var dataToStore = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() {Content = parsed}
+                Document = new Document() { Content = parsed }
             };
 
             await _ravenDataStore.StoreDocument(dataToStore);
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
             var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
 
             Assert.Equal(results.Count(), 1);

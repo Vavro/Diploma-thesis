@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Raven.Abstractions.Data;
 using Raven.Abstractions.Extensions;
+using VDS.RDF.Query.Expressions.Functions.XPath.String;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -155,7 +157,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public void Format(TextReader input, TextWriter output, string rootObjectId)
+        public void Format(TextReader input, TextWriter output, string rootObjectId, out PropertyMappings mappings)
         {
             //might be faster by using the strings via JsonTextReader, instead of Deserializing to JObject
 
@@ -171,10 +173,144 @@ namespace DragqnLD.Core.Implementations
 
             flatGraphNester.NestEverythingIntoRootObject();
 
+            var rootJObject = flatGraphNester.RootJObject;
+
+            //todo: escape property names before reformat (better perf), but will need to handle keywords (@type, @id, @context etc.) to not be reformatted
+            var propertyEscaper = new DocumentPropertyEscaper();
+            propertyEscaper.EscapeDocumentProperies(rootJObject);
+            mappings = propertyEscaper.PropertyMappings;
+
+            var o = rootJObject.ToString(Formatting.Indented);
+
             var jsonWriter = new JsonTextWriter(output);
-            flatGraphNester.RootJObject.WriteTo(jsonWriter);
+            rootJObject.WriteTo(jsonWriter);
         }
 
 
+    }
+
+    //todo: should be parametrized by settings from construct query analysis
+    internal interface IDocumentPropertyEscaper
+    {
+        void EscapeDocumentProperies(JObject document);
+    }
+
+    //todo: should be parametrized by settings from construct query analysis
+    internal class DocumentPropertyEscaper : IDocumentPropertyEscaper
+    {
+        private PropertyMappings propertyMappings = new PropertyMappings();
+        public PropertyMappings PropertyMappings { get { return propertyMappings; } }
+
+        public void EscapeDocumentProperies(JObject document)
+        {
+            EscapePropertiesInJObject(document);
+        }
+
+        private void EscapePropertiesInJObject(JObject document)
+        {
+            var propertyNamesToReplace = new Dictionary<string, string>();
+
+            foreach (var property in document.Properties())
+            {
+                string replacedPropertyName;
+                var replacedAnything = property.Name.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar, out replacedPropertyName);
+                if (replacedAnything)
+                {
+                    propertyNamesToReplace.Add(property.Name, replacedPropertyName);
+                }
+
+                JObject asJObject;
+                JArray asJArray;
+                if ((asJObject = property.Value as JObject) != null)
+                {
+                    EscapePropertiesInJObject(asJObject);
+                }
+                //go throught and detect whether it contains more objects
+                else if ((asJArray = property.Value as JArray) != null)
+                {
+                    for (int i = 0; i < asJArray.Count; i++)
+                    {
+                        var value = asJArray[i];
+                        JObject valueAsJObject;
+                        if ((valueAsJObject = value as JObject) != null)
+                        {
+                            EscapePropertiesInJObject(valueAsJObject);
+                        }
+                    }
+                }
+                //else value, not escaping anything
+            }
+
+            foreach (KeyValuePair<string, string> keyValuePair in propertyNamesToReplace)
+            {
+                var oldPropertyName = keyValuePair.Key;
+                var newPropertyName = keyValuePair.Value;
+                propertyMappings.AddMapping(oldPropertyName, newPropertyName);
+
+                var property = document.Property(oldPropertyName);
+                object[] children = property.Children().ToArray();
+                JProperty newJProperty;
+                if (children.Length == 1)
+                {
+                    newJProperty = new JProperty(newPropertyName, children[0]);   
+                }
+                else
+                {
+                    newJProperty = new JProperty(newPropertyName, children);
+                }
+                property.Replace(newJProperty);
+            }
+        }
+    }
+
+    public static class SpecialCharacters
+    {
+        public const char EscapeChar = '_';
+        public static HashSet<char> ProblematicCharacterSet = new HashSet<char>() {':', '/', '-', '#', '@', '.'};
+    }
+
+    public static class StringExtensions
+    {
+        public static bool ReplaceChars(this string s, HashSet<char> oldCharacters, char newCharacter, out string replacedString)
+        {
+            var replacedAnything = false;
+            var sb = new StringBuilder(s);
+
+            for (int index = 0; index < sb.Length; index++)
+            {
+                char c = sb[index];
+
+                if (oldCharacters.Contains(c))
+                {
+                    sb[index] = newCharacter;
+                    replacedAnything = true;
+                }
+            }
+
+            replacedString = sb.ToString();
+            return replacedAnything;
+        }
+    }
+
+    public class PropertyMappings
+    {
+        private Dictionary<string,string> _mappings = new Dictionary<string, string>();
+
+        public void AddMapping(string oldPropertyName, string newPropertyName)
+        {
+            string containedMapping;
+            var contained = _mappings.TryGetValue(oldPropertyName, out containedMapping);
+            if (!contained)
+            {
+                _mappings.Add(oldPropertyName, newPropertyName);
+            }
+            else
+            {
+                if (containedMapping != newPropertyName)
+                {
+                    throw new NotSupportedException(String.Format("Can't add mapping {0} to {1}, because already mapped to {2}", oldPropertyName, newPropertyName, containedMapping));
+                }
+            }
+        }
     }
 }
