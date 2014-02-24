@@ -132,9 +132,17 @@ namespace DragqnLD.Core.UnitTests
         public async Task CanStoreAndGetComplexJSONLDData()
         {
             //todo: RavenDB hates the @ as starting character in property name - need to come around this!
-
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
-            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var formattedStream = new MemoryStream();
+            var writer = new StreamWriter(formattedStream);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, @"http://www.w3.org/People/Berners-Lee/card#i", out mappings);
+            writer.Flush();
+            formattedStream.Position = 0;
+            var formattedReader = new StreamReader(formattedStream);
+
+            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
             var dataToStore = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
@@ -229,7 +237,16 @@ namespace DragqnLD.Core.UnitTests
         public async Task CanQueryComplexJSONLSData()
         {
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
-            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var formattedStream = new MemoryStream();
+            var writer = new StreamWriter(formattedStream);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, @"http://www.w3.org/People/Berners-Lee/card#i", out mappings);
+            writer.Flush();
+            formattedStream.Position = 0;
+            var formattedReader = new StreamReader(formattedStream);
+
+            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
             var dataToStore = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
@@ -240,7 +257,7 @@ namespace DragqnLD.Core.UnitTests
             await _ravenDataStore.StoreDocument(dataToStore);
 
             //todo: autoescape colons in values, dots in property names .. 
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_@type:http\://www.w3.org/2000/10/swap/pim/contact#Male");
+            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_type:""http://www.w3.org/2000/10/swap/pim/contact#Male""");
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
@@ -271,17 +288,20 @@ namespace DragqnLD.Core.UnitTests
         public async Task CanQueryByNestedPropertyItemsComplexJSONLDData()
         {
             var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var formattedStream = new MemoryStream();
+            var writer = new StreamWriter(formattedStream);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, @"http://www.w3.org/People/Berners-Lee/card#i", out mappings);
+            writer.Flush();
+            formattedStream.Position = 0;
+            var formattedReader = new StreamReader(formattedStream);
 
-            //var jobject = JObject.Parse(reader.ReadToEnd());
-
-            //var parsed = RavenJObject.FromObject(jobject);
-
-
-            var parsed = RavenJObject.Parse(reader.ReadToEnd());
+            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
             var dataToStore = new ConstructResult()
             {
                 QueryId = "QueryDefinitions/1",
-                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                DocumentId = new Uri(@"http://www.w3.org/People/Berners-Lee/card#i"),
                 Document = new Document() { Content = parsed }
             };
 

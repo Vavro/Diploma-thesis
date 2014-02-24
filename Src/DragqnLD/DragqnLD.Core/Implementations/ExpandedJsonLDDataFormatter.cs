@@ -164,7 +164,7 @@ namespace DragqnLD.Core.Implementations
             var inputString = input.ReadToEnd(); //TODO: to async
 
             var originalObject = JObject.Parse(inputString);
-
+            
             var graphObjects = originalObject["@graph"].Children();
 
             var flatGraphNester = new FlatGraphNester(graphObjects, rootObjectId);
