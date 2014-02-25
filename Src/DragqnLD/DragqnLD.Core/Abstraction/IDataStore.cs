@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Implementations;
 using VDS.RDF.Parsing.Handlers;
 
 namespace DragqnLD.Core.Abstraction
@@ -16,7 +17,10 @@ namespace DragqnLD.Core.Abstraction
         Task StoreDocument(ConstructResult dataToStore);
         Task<Document> GetDocument(string queryId, Uri documentId);
 
-        Task<IEnumerable<Uri>> QueryDocumentProperty(string queryId, string luceneQuery);
+        Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery);
+
+        Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
+            params PropertyCondition[] conditions);
     }
 
 }

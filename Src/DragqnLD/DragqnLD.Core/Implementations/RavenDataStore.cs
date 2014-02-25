@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
@@ -62,8 +63,22 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
+        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
+            params PropertyCondition[] conditions)
+        {
+            var luceneQuery = new StringBuilder();
+            foreach (PropertyCondition propertyCondition in conditions)
+            {
+                var escapedPropertyName = propertyCondition.PropertyName.EscapePropertyName();
+                
+                //todo: add support for multiple values - @in<Property>:(value1, value2) 
+                luceneQuery.Append(" ").Append(escapedPropertyName).Append(" : ").Append(propertyCondition.Value);
+            }
+            return await QueryDocumentEscapedLuceneQuery(queryId, luceneQuery.ToString());
+        }
 
-        public async Task<IEnumerable<Uri>> QueryDocumentProperty(string queryId, string luceneQuery)
+
+        public async Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery)
         {
             using (var session = _store.OpenAsyncSession())
             {
@@ -87,4 +102,22 @@ namespace DragqnLD.Core.Implementations
             }
         }
     }
+
+    public class PropertyCondition
+    {
+        public string PropertyName { get; set; }
+        public string Value { get; set; }
+    }
+
+    public static class LuceneQueryStringEscape
+    {
+        public static string EscapePropertyName(this string propertyName)
+        {
+            string output;
+            propertyName.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar,
+                out output);
+            return output;
+        }
+    }
+
 }

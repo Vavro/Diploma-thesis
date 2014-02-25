@@ -188,7 +188,7 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore2);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, "name:Petr");
+            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
@@ -257,7 +257,7 @@ namespace DragqnLD.Core.UnitTests
             await _ravenDataStore.StoreDocument(dataToStore);
 
             //todo: autoescape colons in values, dots in property names .. 
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"_type:""http://www.w3.org/2000/10/swap/pim/contact#Male""");
+            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"_type:""http://www.w3.org/2000/10/swap/pim/contact#Male""");
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
@@ -277,7 +277,7 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"parents,age : 45");
+            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"parents,age : ""45""");
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
 
@@ -307,7 +307,36 @@ namespace DragqnLD.Core.UnitTests
 
             await _ravenDataStore.StoreDocument(dataToStore);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperty(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
+            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
+
+            Assert.Equal(results.Count(), 1);
+        }
+
+        [Fact]
+        public async Task CanQueryByUnescapedPropertyComplexJSONLDData()
+        {
+            var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var formattedStream = new MemoryStream();
+            var writer = new StreamWriter(formattedStream);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, @"http://www.w3.org/People/Berners-Lee/card#i", out mappings);
+            writer.Flush();
+            formattedStream.Position = 0;
+            var formattedReader = new StreamReader(formattedStream);
+
+            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://www.w3.org/People/Berners-Lee/card#i"),
+                Document = new Document() {Content = parsed}
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await _ravenDataStore.QueryDocumentProperties(dataToStore.QueryId, 
+                new PropertyCondition() {PropertyName = @"http://www.w3.org/2000/01/rdf-schema#label,@value", Value = @"""Tim Berners-Lee"""});
 
             Assert.Equal(results.Count(), 1);
         }
