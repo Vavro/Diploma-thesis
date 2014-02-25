@@ -72,7 +72,15 @@ namespace DragqnLD.Core.Implementations
                 var escapedPropertyName = propertyCondition.PropertyName.EscapePropertyName();
                 
                 //todo: add support for multiple values - @in<Property>:(value1, value2) 
-                luceneQuery.Append(" ").Append(escapedPropertyName).Append(" : ").Append(propertyCondition.Value);
+                if (luceneQuery.Length > 0)
+                {
+                    luceneQuery.Append(" AND ");
+                }
+                luceneQuery.Append("(")
+                    .Append(escapedPropertyName)
+                    .Append(" : ")
+                    .Append(propertyCondition.Value)
+                    .Append(")");
             }
             return await QueryDocumentEscapedLuceneQuery(queryId, luceneQuery.ToString());
         }
@@ -117,6 +125,11 @@ namespace DragqnLD.Core.Implementations
             propertyName.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar,
                 out output);
             return output;
+        }
+
+        public static PropertyCondition AsCondition(this string propertyName, string propertyValue)
+        {
+            return new PropertyCondition() {PropertyName = propertyName, Value = propertyValue};
         }
     }
 

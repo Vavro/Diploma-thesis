@@ -336,8 +336,38 @@ namespace DragqnLD.Core.UnitTests
             await _ravenDataStore.StoreDocument(dataToStore);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
             var results = await _ravenDataStore.QueryDocumentProperties(dataToStore.QueryId, 
-                new PropertyCondition() {PropertyName = @"http://www.w3.org/2000/01/rdf-schema#label,@value", Value = @"""Tim Berners-Lee"""});
+                @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""));
 
+            Assert.Equal(results.Count(), 1);
+        }
+
+        [Fact]
+        public async Task CanQueryByMultipleUnescaepdPropertiesComplexJSONLDData()
+        {
+            var reader = new StreamReader(@"JSON\berners-lee.jsonld");
+            var formatter = new ExpandedJsonLDDataFormatter();
+            var formattedStream = new MemoryStream();
+            var writer = new StreamWriter(formattedStream);
+            PropertyMappings mappings;
+            formatter.Format(reader, writer, @"http://www.w3.org/People/Berners-Lee/card#i", out mappings);
+            writer.Flush();
+            formattedStream.Position = 0;
+            var formattedReader = new StreamReader(formattedStream);
+
+            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://www.w3.org/People/Berners-Lee/card#i"),
+                Document = new Document() { Content = parsed }
+            };
+
+            await _ravenDataStore.StoreDocument(dataToStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await _ravenDataStore.QueryDocumentProperties(dataToStore.QueryId,
+                @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""),
+                @"@type".AsCondition(@"""http://www.w3.org/2000/10/swap/pim/contact#Male"""));
+            
             Assert.Equal(results.Count(), 1);
         }
     }
