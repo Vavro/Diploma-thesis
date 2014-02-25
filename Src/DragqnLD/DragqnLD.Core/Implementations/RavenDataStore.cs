@@ -45,6 +45,28 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
+        public async Task BulkStoreDocuments(IEnumerable<ConstructResult> results)
+        {
+            using(var bulkInsert = _store.BulkInsert())
+            { 
+                foreach (ConstructResult constructResult in results)
+                {
+                    var document = constructResult.Document.Content;
+                    string id = GetDocumentId(constructResult.QueryId, constructResult.DocumentId.AbsoluteUri);
+                    var metadata = RavenJObject.Parse(String.Format(@"{{""Raven-Entity-Name"" : ""{0}""}}", constructResult.QueryId));
+                    bulkInsert.Store(document, metadata, id);
+                }
+
+                await bulkInsert.DisposeAsync();
+            }
+
+        }
+
+        public Task BulkStoreDocuments(params ConstructResult[] results)
+        {
+            return BulkStoreDocuments(results.AsEnumerable());
+        }
+
         private static string GetDocumentId(string queryId, string documentUri)
         {
             return String.Format("{0}/{1}", queryId, documentUri);
@@ -70,7 +92,7 @@ namespace DragqnLD.Core.Implementations
             foreach (PropertyCondition propertyCondition in conditions)
             {
                 var escapedPropertyName = propertyCondition.PropertyName.EscapePropertyName();
-                
+
                 //todo: add support for multiple values - @in<Property>:(value1, value2) 
                 if (luceneQuery.Length > 0)
                 {
@@ -129,7 +151,7 @@ namespace DragqnLD.Core.Implementations
 
         public static PropertyCondition AsCondition(this string propertyName, string propertyValue)
         {
-            return new PropertyCondition() {PropertyName = propertyName, Value = propertyValue};
+            return new PropertyCondition() { PropertyName = propertyName, Value = propertyValue };
         }
     }
 

@@ -15,12 +15,19 @@ namespace DragqnLD.Core.Abstraction
     public interface IDataStore
     {
         Task StoreDocument(ConstructResult dataToStore);
+
         Task<Document> GetDocument(string queryId, Uri documentId);
 
         Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery);
 
         Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
             params PropertyCondition[] conditions);
+
+        Task BulkStoreDocuments(IEnumerable<ConstructResult> results);
+        
+        //todo: maybe not necessary, delete?
+        Task BulkStoreDocuments(params ConstructResult[] results);
     }
 
 }
+

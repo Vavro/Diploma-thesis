@@ -328,5 +328,31 @@ namespace DragqnLD.Core.UnitTests
             
             Assert.Equal(results.Count(), 1);
         }
+
+        [Fact]
+        public async Task CanBulkInsertData()
+        {
+            var dataToStore = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+            };
+            
+            var dataToStore2 = new ConstructResult()
+            {
+                QueryId = "QueryDefinitions/1",
+                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
+                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
+            };
+
+            await _ravenDataStore.BulkStoreDocuments(dataToStore, dataToStore2);
+
+            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
+
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+
+            Assert.Equal(results.Count(), 1);
+        }
     }
 }
