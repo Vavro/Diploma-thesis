@@ -116,18 +116,19 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
-                    .UsingDefaultOperator(QueryOperator.And)
                     .WhereEquals("@metadata.Raven-Entity-Name", queryId)
-                    .Where(luceneQuery);
+                    .AndAlso()
+                    .Where(luceneQuery)
+                    .SelectFields<dynamic>("@metadata.@id")
+                    ;
 
                 //todo: paging - raven returns max 1024 documents or something like that
-                //todo: returns whole documents with metadata.. probably not necessary
                 var queryResults = await ravenLuceneQuery.QueryResultAsync;
 
                 var ids = new List<string>(queryResults.Results.Count);
                 foreach (var queryResult in queryResults.Results)
                 {
-                    var id = queryResult["@metadata"].Value<string>("@id").Substring(queryId.Length + 1);
+                    var id = queryResult.Value<string>("__document_id").Substring(queryId.Length + 1);
                     ids.Add(id);
                 }
 

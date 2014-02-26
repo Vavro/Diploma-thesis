@@ -28,13 +28,21 @@ namespace DragqnLD.Core.UnitTests
             TestDataFolders.Ingredients, 
             @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/",
             @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value",
-            @"""Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     """)]
+            @"""Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     """,
+            1)]
         [InlineData("QueryDefinitions/2",
             TestDataFolders.MedicinalProducts,
             @"http://linked.opendata.cz/resource/sukl/medicinal-product/",
             @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value",
-            @"""ABILIFY 7,5 MG/ML""")]
-        public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue)
+            @"""ABILIFY 7,5 MG/ML""",
+            1)]
+        [InlineData("QueryDefinition/1",
+            TestDataFolders.Ingredients,
+            @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/",
+            @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,",
+            @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
+            110)]
+        public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
             var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
 
@@ -42,13 +50,14 @@ namespace DragqnLD.Core.UnitTests
 
             _documentStore.Conventions.ShouldCacheRequest = should => false;
             TestUtilities.Profile(
-                String.Format("Query exact property value \n in {0} \n property {1} \n value {2}", idPrefix, searchedProperty, searchedValue), 
+                String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount), 
                 100, 
-                async () =>
+                () =>
                     {
-                        await _ravenDataStore.QueryDocumentProperties(queryId,
+                        var task = _ravenDataStore.QueryDocumentProperties(queryId,
                                 searchedProperty.AsCondition(searchedValue));
-                      //  task.Wait();
+                        var result = task.Result;
+                        Assert.Equal(expectedResultCount, result.Count());
                     });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
