@@ -42,6 +42,7 @@ namespace DragqnLD.Core.UnitTests
             @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,",
             @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
             110)]
+        //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
         public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
             var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
@@ -61,6 +62,10 @@ namespace DragqnLD.Core.UnitTests
                     });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
+        //todo: add starts with test - i.e. title - IBU*
+        //todo: add test for has these two ingrediets or these two Pharmacological actions, MayTreat
+        //todo: add test for has this action and this product
+        //todo: test for has action but not pregnancy C
         
         private IEnumerable<ConstructResult> ConstructResultsForFolder(string inputFolder, string queryId, string idPrefix)
         {
