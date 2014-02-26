@@ -3,7 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
-using DragqnLD.Core.Utils;
+using DragqnLD.Core.Implementations.Utils;
 using Raven.Abstractions.Linq;
 using Raven.Client;
 using System.Collections.Generic;
@@ -133,27 +133,4 @@ namespace DragqnLD.Core.Implementations
             }
         }
     }
-
-    public class PropertyCondition
-    {
-        public string PropertyName { get; set; }
-        public string Value { get; set; }
-    }
-
-    public static class LuceneQueryStringEscape
-    {
-        public static string EscapePropertyName(this string propertyName)
-        {
-            string output;
-            propertyName.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar,
-                out output);
-            return output;
-        }
-
-        public static PropertyCondition AsCondition(this string propertyName, string propertyValue)
-        {
-            return new PropertyCondition() { PropertyName = propertyName, Value = propertyValue };
-        }
-    }
-
 }

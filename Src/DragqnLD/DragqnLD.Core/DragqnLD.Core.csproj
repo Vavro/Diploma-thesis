@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\Data\ConstructResult.cs" />
+    <Compile Include="Abstraction\Data\PropertyCondition.cs" />
     <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
@@ -77,8 +78,9 @@
     <Compile Include="Abstraction\IQueryStore.cs" />
     <Compile Include="Implementations\RavenDataStore.cs" />
     <Compile Include="Implementations\SparqlEnpointClient.cs" />
-    <Compile Include="Implementations\SpecialCharacters.cs" />
-    <Compile Include="Implementations\StringExtensions.cs" />
+    <Compile Include="Implementations\Utils\LuceneQueryStringEscape.cs" />
+    <Compile Include="Implementations\Utils\SpecialCharacters.cs" />
+    <Compile Include="Implementations\Utils\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
