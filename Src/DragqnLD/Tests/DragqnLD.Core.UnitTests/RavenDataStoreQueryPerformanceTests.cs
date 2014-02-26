@@ -14,11 +14,11 @@ using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public class RavenDtaaStoreQueryPerformanceTests : DataStoreTestsBase
+    public class RavenDataStoreQueryPerformanceTests : DataStoreTestsBase
     {
         private readonly ExpandedJsonLDDataFormatter _formatter;
 
-        public RavenDtaaStoreQueryPerformanceTests()
+        public RavenDataStoreQueryPerformanceTests()
         {
             _formatter = new ExpandedJsonLDDataFormatter();
         }
@@ -44,11 +44,11 @@ namespace DragqnLD.Core.UnitTests
             TestUtilities.Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2}", idPrefix, searchedProperty, searchedValue), 
                 100, 
-                () =>
+                async () =>
                     {
-                        var task =  _ravenDataStore.QueryDocumentProperties(queryId,
+                        await _ravenDataStore.QueryDocumentProperties(queryId,
                                 searchedProperty.AsCondition(searchedValue));
-                        task.Wait();
+                      //  task.Wait();
                     });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
