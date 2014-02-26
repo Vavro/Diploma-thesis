@@ -122,8 +122,7 @@ namespace DragqnLD.Core.Implementations
                     _recursiveIds.Pop();
                 }
             }
-
-
+            
             public void ReadObjectsFromGraph()
             {
                 var _objects = new Dictionary<string, JObject>();
@@ -160,7 +159,7 @@ namespace DragqnLD.Core.Implementations
         {
             //might be faster by using the strings via JsonTextReader, instead of Deserializing to JObject
 
-            var inputString = input.ReadToEnd(); //TODO: to async
+            var inputString = input.ReadToEnd(); //TODO: to async input reader might come from web? 
 
             var originalObject = JObject.Parse(inputString);
             

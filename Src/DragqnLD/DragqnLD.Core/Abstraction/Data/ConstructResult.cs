@@ -18,7 +18,6 @@ namespace DragqnLD.Core.Abstraction.Data
 
     public class Document
     {
-        public string Id { get; set; }
         public RavenJObject Content { get; set; }
     }
 }

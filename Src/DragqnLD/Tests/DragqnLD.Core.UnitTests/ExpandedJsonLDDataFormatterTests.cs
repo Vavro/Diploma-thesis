@@ -92,7 +92,7 @@ namespace DragqnLD.Core.UnitTests
         [Theory]
         [InlineData(TestDataFolders.Ingredients, @"Output\Ingedients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
         [InlineData(TestDataFolders.MedicinalProducts, @"Output\MedicinalProducts\", @"http://linked.opendata.cz/resource/sukl/medicinal-product/")]
-        void CanConvertAllTestData(string inputFolder, string outputFolder, string idprefix)
+        void CanConvertAllTestData(string inputFolder, string outputFolder, string idPrefix)
         {
             var inputDirectoryInfo = new DirectoryInfo(inputFolder);
             var inputFiles = inputDirectoryInfo.GetFiles();
@@ -103,7 +103,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 var inputFileName = inputFile.FullName;
                 var idWithoutNamespace = inputFile.Name.Substring(0, inputFile.Name.Length - ".json".Length);
-                var id = idprefix + idWithoutNamespace;
+                var id = idPrefix + idWithoutNamespace;
 
                 var outputFileName = outputFolder + idWithoutNamespace + ".out.json";
                 

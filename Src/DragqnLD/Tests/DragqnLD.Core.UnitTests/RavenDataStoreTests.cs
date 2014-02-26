@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
@@ -12,7 +11,6 @@ using Newtonsoft.Json.Linq;
 using Raven.Abstractions.Data;
 using Raven.Abstractions.Indexing;
 using Raven.Client;
-using Raven.Client.Embedded;
 using Raven.Client.Listeners;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
@@ -22,28 +20,12 @@ namespace DragqnLD.Core.UnitTests
 {
     //todo: get rid of Content property
     //todo: make all simple test data work with a contained @id property
-    public class RavenDataStoreTests
+    public class RavenDataStoreTests : DataStoreTestsBase
     {
-        private readonly IDataStore _ravenDataStore;
-        private readonly EmbeddableDocumentStore _documentStore;
-        private const string JsonBernersLeeFileName = @"JSON\berners-lee.jsonld";
-
-        private const int RavenWebUiPort = 8081;
-        private const string JsonBersersLeeId = @"http://www.w3.org/People/Berners-Lee/card#i";
-
+        
         public RavenDataStoreTests()
         {
-            var docStore = new EmbeddableDocumentStore()
-            {
-                RunInMemory = true,
-                Configuration = { Port = RavenWebUiPort }
-            };
-            Raven.Database.Server.NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
-
-            docStore.Initialize();
-
-            _documentStore = docStore;
-            _ravenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
+            
         }
 
         [Fact]
@@ -70,40 +52,22 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanStoreAndGetComplexJSONLDData()
         {
-            //todo: RavenDB hates the @ as starting character in property name - need to come around this!
-            var reader = new StreamReader(JsonBernersLeeFileName);
-            var formatter = new ExpandedJsonLDDataFormatter();
-            var formattedStream = new MemoryStream();
-            var writer = new StreamWriter(formattedStream);
-            PropertyMappings mappings;
-            formatter.Format(reader, writer, JsonBersersLeeId, out mappings);
-            writer.Flush();
-            formattedStream.Position = 0;
-            var formattedReader = new StreamReader(formattedStream);
-
-            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
-            var dataToStore = new ConstructResult()
-            {
-                QueryId = "QueryDefinitions/1",
-                DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = parsed }
-            };
-
-            await _ravenDataStore.StoreDocument(dataToStore);
+            var queryId = "QueryDefinitions/1";
+            var storedData = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 
-            var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
+            var storedDocument = await _ravenDataStore.GetDocument(storedData.QueryId, storedData.DocumentId);
 
             Assert.NotNull(storedDocument);
             Console.WriteLine("=========================================");
             Console.WriteLine("Original data:");
-            Console.WriteLine(dataToStore.Document.Content.ToString());
+            Console.WriteLine(storedData.Document.Content.ToString());
             Console.WriteLine("=========================================");
             Console.WriteLine("Stored data:");
             Console.WriteLine(storedDocument.Content.ToString());
 
-            Assert.Equal(dataToStore.Document.Content.ToString(), storedDocument.Content.ToString());
+            Assert.Equal(storedData.Document.Content.ToString(), storedDocument.Content.ToString());
         }
 
         [Fact]
@@ -233,15 +197,11 @@ namespace DragqnLD.Core.UnitTests
         {
             var reader = new StreamReader(fileName);
             var formatter = new ExpandedJsonLDDataFormatter();
-            var formattedStream = new MemoryStream();
-            var writer = new StreamWriter(formattedStream);
+            var writer = new StringWriter();
             PropertyMappings mappings;
             formatter.Format(reader, writer, rootId, out mappings);
-            writer.Flush();
-            formattedStream.Position = 0;
-            var formattedReader = new StreamReader(formattedStream);
 
-            var parsed = RavenJObject.Parse(formattedReader.ReadToEnd());
+            var parsed = RavenJObject.Parse(writer.ToString());
             var dataToStore = new ConstructResult()
             {
                 QueryId = queryId,

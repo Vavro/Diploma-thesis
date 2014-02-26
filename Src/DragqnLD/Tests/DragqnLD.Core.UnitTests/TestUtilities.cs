@@ -9,7 +9,7 @@ namespace DragqnLD.Core.UnitTests
 {
     public static class TestUtilities
     {
-        static void Profile(string description, int iterations, Action func)
+        public static void Profile(string description, int iterations, Action func)
         {
             // clean up
             GC.Collect();
@@ -31,7 +31,7 @@ namespace DragqnLD.Core.UnitTests
             var oneRunAverage = allRunTotal / iterations;
 
             Console.WriteLine("======================");
-            Console.Write(description);
+            Console.WriteLine(description);
             Console.WriteLine("First run: {0} ms", firstrunTotal);
             Console.WriteLine("Iterations {0}, Total time {1} ms", iterations, allRunTotal);
             Console.WriteLine("Average one run time: {0} ms", oneRunAverage);

@@ -81,7 +81,7 @@ namespace DragqnLD.Core.Implementations
             {
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id);
-                var storedDocument = new Document() { Id = documentId.AbsoluteUri, Content = storedContent };
+                var storedDocument = new Document() { Content = storedContent };
 
                 return storedDocument;
             }
