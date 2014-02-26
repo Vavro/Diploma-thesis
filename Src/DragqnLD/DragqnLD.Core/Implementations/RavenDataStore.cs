@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Utils;
 using Raven.Abstractions.Linq;
 using Raven.Client;
 using System.Collections.Generic;

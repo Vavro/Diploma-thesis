@@ -63,8 +63,11 @@
   <ItemGroup>
     <Compile Include="Abstraction\Data\ConstructResult.cs" />
     <Compile Include="Abstraction\IDataFormatter.cs" />
+    <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
+    <Compile Include="Implementations\DocumentPropertyEscaper.cs" />
     <Compile Include="Implementations\ExpandedJsonLDDataFormatter.cs" />
+    <Compile Include="Implementations\PropertyMappings.cs" />
     <Compile Include="Implementations\QueryStore.cs" />
     <Compile Include="Implementations\DataLoader.cs" />
     <Compile Include="Abstraction\Query\QueryDefinition.cs" />
@@ -74,6 +77,8 @@
     <Compile Include="Abstraction\IQueryStore.cs" />
     <Compile Include="Implementations\RavenDataStore.cs" />
     <Compile Include="Implementations\SparqlEnpointClient.cs" />
+    <Compile Include="Implementations\SpecialCharacters.cs" />
+    <Compile Include="Implementations\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
