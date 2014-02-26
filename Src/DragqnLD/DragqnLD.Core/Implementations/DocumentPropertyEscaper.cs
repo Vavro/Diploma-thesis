@@ -8,7 +8,7 @@ namespace DragqnLD.Core.Implementations
 {
     //todo: should be parametrized by settings from construct query analysis
     //query analysis should give out the replacement strings
-    internal class DocumentPropertyEscaper : IDocumentPropertyEscaper
+    public class DocumentPropertyEscaper : IDocumentPropertyEscaper
     {
         private PropertyMappings propertyMappings = new PropertyMappings();
         public PropertyMappings PropertyMappings { get { return propertyMappings; } }
@@ -16,6 +16,16 @@ namespace DragqnLD.Core.Implementations
         public void EscapeDocumentProperies(JObject document)
         {
             EscapePropertiesInJObject(document);
+        }
+
+        public string EscapePropertyPath(string propertyPath)
+        {
+            //might in future consider the property mappings
+
+            string output;
+            propertyPath.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar,
+                out output);
+            return output;
         }
 
         private void EscapePropertiesInJObject(JObject document)
@@ -37,7 +47,7 @@ namespace DragqnLD.Core.Implementations
                 {
                     EscapePropertiesInJObject(asJObject);
                 }
-                    //go throught and detect whether it contains more objects
+                //go throught and detect whether it contains more objects
                 else if ((asJArray = property.Value as JArray) != null)
                 {
                     for (int i = 0; i < asJArray.Count; i++)

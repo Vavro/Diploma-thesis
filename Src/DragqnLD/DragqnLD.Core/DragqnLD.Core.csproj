@@ -78,7 +78,7 @@
     <Compile Include="Abstraction\IQueryStore.cs" />
     <Compile Include="Implementations\RavenDataStore.cs" />
     <Compile Include="Implementations\SparqlEnpointClient.cs" />
-    <Compile Include="Implementations\Utils\LuceneQueryStringEscape.cs" />
+    <Compile Include="Implementations\Utils\LuceneQueryStringExtensions.cs" />
     <Compile Include="Implementations\Utils\SpecialCharacters.cs" />
     <Compile Include="Implementations\Utils\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

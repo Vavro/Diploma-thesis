@@ -24,66 +24,6 @@ namespace DragqnLD.Core.UnitTests
     //todo: make all simple test data work with a contained @id property
     public class RavenDataStoreTests
     {
-        private class DocumentQueryListener : IDocumentQueryListener
-        {
-            public void BeforeQueryExecuted(IDocumentQueryCustomization queryCustomization)
-            {
-            }
-
-            private void Action(IndexQuery indexQuery)
-            {
-            }
-        }
-
-        private class DocumentConversionListener : IDocumentConversionListener
-        {
-            public void EntityToDocument(string key, object entity, RavenJObject document, RavenJObject metadata)
-            {
-                return;
-            }
-
-            public void DocumentToEntity(string key, object entity, RavenJObject document, RavenJObject metadata)
-            {
-                return;
-            }
-        }
-
-        private class ExtendedDocumentConversionListener : IExtendedDocumentConversionListener
-        {
-            public void BeforeConversionToDocument(string key, object entity, RavenJObject metadata)
-            {
-                return;
-            }
-
-            public void AfterConversionToDocument(string key, object entity, RavenJObject document, RavenJObject metadata)
-            {
-                return;
-            }
-
-            public void BeforeConversionToEntity(string key, RavenJObject document, RavenJObject metadata)
-            {
-                return;
-            }
-
-            public void AfterConversionToEntity(string key, RavenJObject document, RavenJObject metadata, object entity)
-            {
-                return;
-            }
-        }
-
-        private class MyStoreListener : IDocumentStoreListener
-        {
-            public bool BeforeStore(string key, object entityInstance, RavenJObject metadata, RavenJObject original)
-            {
-                return true;
-            }
-
-            public void AfterStore(string key, object entityInstance, RavenJObject metadata)
-            {
-
-            }
-        }
-
         private readonly IDataStore _ravenDataStore;
         private readonly EmbeddableDocumentStore _documentStore;
         private const string JsonBernersLeeFileName = @"JSON\berners-lee.jsonld";
@@ -102,12 +42,8 @@ namespace DragqnLD.Core.UnitTests
 
             docStore.Initialize();
 
-            docStore.RegisterListener(new DocumentConversionListener())
-                .RegisterListener(new ExtendedDocumentConversionListener())
-                .RegisterListener(new MyStoreListener());
-
             _documentStore = docStore;
-            _ravenDataStore = new RavenDataStore(docStore);
+            _ravenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
         }
 
         [Fact]

@@ -23,9 +23,10 @@ namespace DragqnLD.Core.Implementations
 
         private readonly IDocumentPropertyEscaper _escaper;
 
-        public RavenDataStore(IDocumentStore store)
+        public RavenDataStore(IDocumentStore store, IDocumentPropertyEscaper escaper)
         {
             _store = store;
+            _escaper = escaper;
         }
         public async Task StoreDocument(ConstructResult dataToStore)
         {
@@ -92,7 +93,7 @@ namespace DragqnLD.Core.Implementations
             var luceneQuery = new StringBuilder();
             foreach (PropertyCondition propertyCondition in conditions)
             {
-                var escapedPropertyName = propertyCondition.PropertyName.EscapePropertyName();
+                var escapedPropertyPath = _escaper.EscapePropertyPath(propertyCondition.PropertyPath);
 
                 //todo: add support for multiple values - @in<Property>:(value1, value2) 
                 if (luceneQuery.Length > 0)
@@ -100,7 +101,7 @@ namespace DragqnLD.Core.Implementations
                     luceneQuery.Append(" AND ");
                 }
                 luceneQuery.Append("(")
-                    .Append(escapedPropertyName)
+                    .Append(escapedPropertyPath)
                     .Append(" : ")
                     .Append(propertyCondition.Value)
                     .Append(")");

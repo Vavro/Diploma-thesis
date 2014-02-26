@@ -2,7 +2,7 @@
 {
     public class PropertyCondition
     {
-        public string PropertyName { get; set; }
+        public string PropertyPath { get; set; }
         public string Value { get; set; }
     }
 }
