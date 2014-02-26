@@ -87,6 +87,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
+        //todo: consider extracting path escaping interface, breaks SRP a bit, reformat of documents isn't in the DataStore either
         public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
             params PropertyCondition[] conditions)
         {
