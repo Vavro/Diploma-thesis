@@ -133,6 +133,7 @@ namespace DragqnLD.Core.Implementations
                 }
                 else
                 {
+                    //todo: perf test version .AsyncLuceneQuery<dynamic>(String.Format("dynamic/{0}", queryId)); hates "/" in queryId but could be faster when more collections are in db
                     ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>().WhereEquals("@metadata.Raven-Entity-Name", queryId);
                 }
 
