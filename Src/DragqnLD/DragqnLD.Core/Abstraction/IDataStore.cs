@@ -18,9 +18,14 @@ namespace DragqnLD.Core.Abstraction
 
         Task<Document> GetDocument(string queryId, Uri documentId);
 
+        Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string indexName,
+            string luceneQuery);
+
         Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery);
 
-        Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
+        Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, 
+            params PropertyCondition[] conditions);
+        Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, string indexName = null,
             params PropertyCondition[] conditions);
 
         Task BulkStoreDocuments(IEnumerable<ConstructResult> results);

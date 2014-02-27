@@ -87,8 +87,14 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
+        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, 
+            params PropertyCondition[] conditions)
+        {
+            return await QueryDocumentProperties(queryId, null, conditions);
+        }
+
         //todo: consider extracting path escaping interface, breaks SRP a bit, reformat of documents isn't in the DataStore either
-        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
+        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, string indexName,
             params PropertyCondition[] conditions)
         {
             var luceneQuery = new StringBuilder();
@@ -107,16 +113,30 @@ namespace DragqnLD.Core.Implementations
                     .Append(propertyCondition.Value)
                     .Append(")");
             }
-            return await QueryDocumentEscapedLuceneQuery(queryId, luceneQuery.ToString());
+            return await QueryDocumentEscapedLuceneQuery(queryId, indexName, luceneQuery.ToString());
         }
 
 
         public async Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery)
         {
+            return await QueryDocumentEscapedLuceneQuery(queryId, null, luceneQuery);
+        }
+
+        public async Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string indexName, string luceneQuery)
+        {
             using (var session = _store.OpenAsyncSession())
             {
-                var ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>()
-                    .WhereEquals("@metadata.Raven-Entity-Name", queryId)
+                IAsyncDocumentQuery<dynamic> ravenLuceneQuery;
+                if (indexName != null)
+                {
+                    ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>(indexName).WhereEquals("_metadata_Raven_Entity_Name", queryId);
+                }
+                else
+                {
+                    ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>().WhereEquals("@metadata.Raven-Entity-Name", queryId);
+                }
+
+                ravenLuceneQuery = ravenLuceneQuery
                     .AndAlso()
                     .Where(luceneQuery)
                     .SelectFields<dynamic>("@metadata.@id")
@@ -128,12 +148,13 @@ namespace DragqnLD.Core.Implementations
                 var ids = new List<string>(queryResults.Results.Count);
                 foreach (var queryResult in queryResults.Results)
                 {
-                    var id = queryResult.Value<string>("__document_id").Substring(queryId.Length + 1);
+                    string id = queryResult.Value<string>("__document_id").Substring(queryId.Length + 1);
                     ids.Add(id);
                 }
 
                 return ids.Select(id => new Uri(id));
             }
         }
+
     }
 }
