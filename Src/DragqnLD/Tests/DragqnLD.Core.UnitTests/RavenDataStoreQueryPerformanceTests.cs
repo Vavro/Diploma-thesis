@@ -67,9 +67,11 @@ namespace DragqnLD.Core.UnitTests
                     });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
-        //todo: add starts with test - i.e. title - IBU*
         //todo: add test for has this action and this product
         //todo: test for has action but not pregnancy C
+        //todo: test fuzzy search title
+        //todo: fulltext search on description fields?
+        //todo: all ingrediences of medicinal product have pregnancy category C or better --- i.e. cannot be D or X
         
         private IEnumerable<ConstructResult> ConstructResultsForFolder(string inputFolder, string queryId, string idPrefix)
         {
@@ -129,6 +131,29 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 Assert.Equal(@"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115",
                     result.First().ToString());
             });
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+        }
+
+        //todo: add starts with test - i.e. title - APO*
+        [Fact]
+        public async Task QueryStartingWith()
+        {
+            var queryId = "QueryDefinition/2";
+            var inputFolder = TestDataFolders.MedicinalProducts;
+            var idPrefix = @"http://linked.opendata.cz/resource/sukl/medicinal-product/";
+            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
+
+            await _ravenDataStore.BulkStoreDocuments(documents);
+
+            var propertyName = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+            var searchedValue = "APO*";
+            TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
+            {
+                var result =
+                    await _ravenDataStore.QueryDocumentProperties(queryId, propertyName.AsCondition(searchedValue));
+                Assert.Equal(12, result.Count());
+            });
+
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
     }
