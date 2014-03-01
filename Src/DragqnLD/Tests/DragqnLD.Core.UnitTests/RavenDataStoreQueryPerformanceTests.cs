@@ -19,31 +19,34 @@ namespace DragqnLD.Core.UnitTests
 {
     public class RavenDataStoreQueryPerformanceTests : DataStoreTestsBase
     {
+        private const string PropertyNameIngredientsDescription = @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value";
+        private const string PropertyNameMedicinalProductsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+        private const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         private readonly ExpandedJsonLDDataFormatter _formatter;
 
         public RavenDataStoreQueryPerformanceTests()
         {
             _formatter = new ExpandedJsonLDDataFormatter();
-            _documentStore.RegisterListener(new NoStaleQueriesListener());
+            _documentStore.RegisterListener(new NoStaleQueriesListener()).RegisterListener(new NoTrackingQueriesListener());
         }
 
         [Theory]
-        [InlineData("QueryDefinitions/1", 
-            TestDataFolders.Ingredients, 
-            @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/",
-            @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value",
+        [InlineData(TestDataConstants.IngredientsQueryDefinitionId, 
+            TestDataConstants.IngredientsFolder, 
+            TestDataConstants.IngredientsNamespacePrefix,
+            PropertyNameIngredientsDescription,
             @"""Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     """,
             1)]
-        [InlineData("QueryDefinitions/2",
-            TestDataFolders.MedicinalProducts,
-            @"http://linked.opendata.cz/resource/sukl/medicinal-product/",
-            @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value",
+        [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId,
+            TestDataConstants.MedicinalProductsFolder,
+            TestDataConstants.MedicinalProductNamespacePrefix,
+            PropertyNameMedicinalProductsTitle,
             @"""ABILIFY 7,5 MG/ML""",
             1)]
-        [InlineData("QueryDefinition/1",
-            TestDataFolders.Ingredients,
-            @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/",
-            @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,",
+        [InlineData(TestDataConstants.IngredientsQueryDefinitionId,
+            TestDataConstants.IngredientsFolder,
+            TestDataConstants.IngredientsNamespacePrefix,
+            PropertyNameIngredientsPregnancyCategory,
             @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
             110)]
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
@@ -99,9 +102,9 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task QueryTwoSpecificPropertyValuesInChildrenCollections()
         {
-            var queryId = "QueryDefinition/1";
-            var inputFolder = TestDataFolders.Ingredients;
-            var idPrefix = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/";
+            var queryId = TestDataConstants.IngredientsQueryDefinitionId;
+            var inputFolder = TestDataConstants.IngredientsFolder;
+            var idPrefix = TestDataConstants.IngredientsNamespacePrefix;
             var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
 
             await _ravenDataStore.BulkStoreDocuments(documents);
@@ -111,7 +114,7 @@ namespace DragqnLD.Core.UnitTests
             var indexForValuesFromMultipleChildren =
                 @"from doc in docs
 let entityName = doc[""@metadata""][""Raven-Entity-Name""]
-where entityName == ""QueryDefinition/1""
+where entityName == ""QueryDefinitions/1""
 select new { http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacologicalAction_http___linked_opendata_cz_ontology_drug_encyclopedia_title__value = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacologicalAction).DefaultIfEmpty().Select( c => ((IEnumerable<dynamic>)c.http___linked_opendata_cz_ontology_drug_encyclopedia_title).DefaultIfEmpty().Select( d => d._value)),
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
@@ -137,14 +140,14 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
         [Fact]
         public async Task QueryStartingWith()
         {
-            var queryId = "QueryDefinition/2";
-            var inputFolder = TestDataFolders.MedicinalProducts;
-            var idPrefix = @"http://linked.opendata.cz/resource/sukl/medicinal-product/";
+            var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
+            var inputFolder = TestDataConstants.MedicinalProductsFolder;
+            var idPrefix = TestDataConstants.MedicinalProductNamespacePrefix;
             var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
 
             await _ravenDataStore.BulkStoreDocuments(documents);
 
-            var propertyName = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+            var propertyName = PropertyNameMedicinalProductsTitle;
             var searchedValue = "APO*";
             TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
             {

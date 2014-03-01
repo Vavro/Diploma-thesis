@@ -110,7 +110,8 @@
     <Compile Include="RavenDataStoreTests.cs" />
     <Compile Include="SparqlEnpointClientTests.cs" />
     <Compile Include="Utils\NoStaleQueriesListener.cs" />
-    <Compile Include="Utils\TestDataFolders.cs" />
+    <Compile Include="Utils\NoTrackingQueriesListener.cs" />
+    <Compile Include="Utils\TestDataConstants.cs" />
     <Compile Include="Utils\TestUtilities.cs" />
   </ItemGroup>
   <ItemGroup>

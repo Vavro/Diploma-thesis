@@ -91,8 +91,8 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Theory]
-        [InlineData(TestDataFolders.Ingredients, @"Output\Ingedients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
-        [InlineData(TestDataFolders.MedicinalProducts, @"Output\MedicinalProducts\", @"http://linked.opendata.cz/resource/sukl/medicinal-product/")]
+        [InlineData(TestDataConstants.IngredientsFolder, @"Output\Ingedients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
+        [InlineData(TestDataConstants.MedicinalProductsFolder, @"Output\MedicinalProducts\", @"http://linked.opendata.cz/resource/sukl/medicinal-product/")]
         void CanConvertAllTestData(string inputFolder, string outputFolder, string idPrefix)
         {
             var inputDirectoryInfo = new DirectoryInfo(inputFolder);
