@@ -1,4 +1,4 @@
-namespace DragqnLD.Core.UnitTests
+namespace DragqnLD.Core.UnitTests.Utils
 {
     static internal class TestDataFolders
     {

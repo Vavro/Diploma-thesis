@@ -109,8 +109,9 @@
     <Compile Include="QueryStoreTests.cs" />
     <Compile Include="RavenDataStoreTests.cs" />
     <Compile Include="SparqlEnpointClientTests.cs" />
-    <Compile Include="TestDataFolders.cs" />
-    <Compile Include="TestUtilities.cs" />
+    <Compile Include="Utils\NoStaleQueriesListener.cs" />
+    <Compile Include="Utils\TestDataFolders.cs" />
+    <Compile Include="Utils\TestUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ExpanderTestsData\json1-simple.json">

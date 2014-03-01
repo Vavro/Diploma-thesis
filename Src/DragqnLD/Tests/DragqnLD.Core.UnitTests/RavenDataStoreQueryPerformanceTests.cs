@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
+using DragqnLD.Core.UnitTests.Utils;
 using Raven.Abstractions.Indexing;
-using Raven.Client;
-using Raven.Client.Listeners;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
@@ -155,14 +154,6 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             });
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-        }
-    }
-
-    public class NoStaleQueriesListener : IDocumentQueryListener
-    {
-        public void BeforeQueryExecuted(IDocumentQueryCustomization queryCustomization)
-        {
-            queryCustomization.WaitForNonStaleResults();
         }
     }
 }

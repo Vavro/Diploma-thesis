@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DragqnLD.Core.UnitTests
+namespace DragqnLD.Core.UnitTests.Utils
 {
     public static class TestUtilities
     {
