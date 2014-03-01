@@ -28,6 +28,11 @@ namespace DragqnLD.Core.UnitTests
         {
             _formatter = new ExpandedJsonLDDataFormatter();
             _documentStore.RegisterListener(new NoStaleQueriesListener()).RegisterListener(new NoTrackingQueriesListener());
+
+            var ingredientsTask = StoreTestData(TestDataConstants.IngredientsFolder, TestDataConstants.IngredientsQueryDefinitionId, TestDataConstants.IngredientsNamespacePrefix);
+            var medicinalProductsTask = StoreTestData(TestDataConstants.MedicinalProductsFolder, TestDataConstants.MedicinalProductQueryDefinitionId, TestDataConstants.MedicinalProductNamespacePrefix);
+
+            Task.WaitAll(ingredientsTask, medicinalProductsTask);
         }
 
         [Theory]
@@ -52,9 +57,7 @@ namespace DragqnLD.Core.UnitTests
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
         public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
-            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
-
-            await _ravenDataStore.BulkStoreDocuments(documents);
+            //await StoreTestData(inputFolder, queryId, idPrefix);
 
             _documentStore.Conventions.ShouldCacheRequest = should => false;
             TestUtilities.Profile(
@@ -69,6 +72,14 @@ namespace DragqnLD.Core.UnitTests
                     });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
+
+        private async Task StoreTestData(string inputFolder, string queryId, string idPrefix)
+        {
+            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
+
+            await _ravenDataStore.BulkStoreDocuments(documents);
+        }
+
         //todo: add test for has this action and this product
         //todo: test for has action but not pregnancy C
         //todo: test fuzzy search title
@@ -105,9 +116,8 @@ namespace DragqnLD.Core.UnitTests
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
             var inputFolder = TestDataConstants.IngredientsFolder;
             var idPrefix = TestDataConstants.IngredientsNamespacePrefix;
-            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
 
-            await _ravenDataStore.BulkStoreDocuments(documents);
+            //await StoreTestData(inputFolder, queryId, idPrefix);
 
             //default dynamic index assumes that each object in hierarchy is one target for query, so it doesn't support multiple Values from two different objects, have to write index manually
             var indexName = "HasPharmalogicalActionIndex";
@@ -143,9 +153,8 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
             var inputFolder = TestDataConstants.MedicinalProductsFolder;
             var idPrefix = TestDataConstants.MedicinalProductNamespacePrefix;
-            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
-
-            await _ravenDataStore.BulkStoreDocuments(documents);
+            
+            //await StoreTestData(inputFolder, queryId, idPrefix);
 
             var propertyName = PropertyNameMedicinalProductsTitle;
             var searchedValue = "APO*";
