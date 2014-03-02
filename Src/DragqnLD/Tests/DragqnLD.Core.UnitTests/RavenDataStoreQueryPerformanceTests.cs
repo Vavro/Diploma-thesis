@@ -48,7 +48,7 @@ namespace DragqnLD.Core.UnitTests
             var id = new Uri(documentId);
             TestUtilities.Profile(
                 String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId), 
-                10000, 
+                1000, 
                 async () =>
                 {
                     var document = await _ravenDataStore.GetDocument(queryId, id); 
