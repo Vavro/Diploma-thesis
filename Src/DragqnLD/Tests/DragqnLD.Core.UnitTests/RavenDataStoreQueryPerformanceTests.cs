@@ -99,12 +99,6 @@ namespace DragqnLD.Core.UnitTests
             await _ravenDataStore.BulkStoreDocuments(documents);
         }
 
-        //todo: add test for has this action and this product
-        //todo: test for has action but not pregnancy C
-        //todo: test fuzzy search title
-        //todo: fulltext search on description fields?
-        //todo: all ingrediences of medicinal product have pregnancy category C or better --- i.e. cannot be D or X
-        
         private IEnumerable<ConstructResult> ConstructResultsForFolder(string inputFolder, string queryId, string idPrefix)
         {
             var inputDirectoryInfo = new DirectoryInfo(inputFolder);
@@ -178,5 +172,37 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
+
+        //todo: test for ingredient with maytreat and specific pregnancy category
+        [Fact]
+        public void IngredientWithMayTreatAndPregnancyCategory()
+        {
+            var queryId = TestDataConstants.IngredientsQueryDefinitionId;
+
+            var propertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+            var propertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
+
+            var searchedPregnancyCategory = @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""";
+            var searchedMayTreatTitle = @"Pelagra";
+            
+            var expectedId = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014807".ToLower();
+
+            TestUtilities.Profile(
+                String.Format("Searching for ingredient with \n MayTreat : {0}, \n PregnancyCategory : {1}", searchedMayTreatTitle, searchedPregnancyCategory),
+                100,
+                async () =>
+                {
+                    var result = await _ravenDataStore.QueryDocumentProperties(queryId,
+                        propertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
+                        propertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
+
+                    Assert.Equal(1, result.Count());
+                    Assert.Equal(expectedId, result.First().AbsoluteUri);
+                });
+        }
+        
+        //todo: test fuzzy search title
+        //todo: fulltext search on description fields?
+        //todo: Medicinal Product with atc concept and not having ingredience with contraindication
     }
 }
