@@ -36,6 +36,21 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Theory]
+        [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115")]
+        [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]
+        [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/ABSEAMED-3000-IU-0-3-ML")]
+        [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/BUPAINX-0-4-MG")]
+        public async Task GetById(string queryId, string documentId)
+        {
+            var id = new Uri(documentId);
+            TestUtilities.Profile(
+                String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId), 
+                100, 
+                async () => await _ravenDataStore.GetDocument(queryId, id)
+            );
+        }
+
+        [Theory]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, 
             TestDataConstants.IngredientsFolder, 
             TestDataConstants.IngredientsNamespacePrefix,
@@ -59,7 +74,6 @@ namespace DragqnLD.Core.UnitTests
         {
             //await StoreTestData(inputFolder, queryId, idPrefix);
 
-            _documentStore.Conventions.ShouldCacheRequest = should => false;
             TestUtilities.Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount), 
                 100, 
