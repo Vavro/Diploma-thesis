@@ -43,7 +43,7 @@ namespace DragqnLD.Core.UnitTests
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]
         [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/ABSEAMED-3000-IU-0-3-ML")]
         [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/BUPAINX-0-4-MG")]
-        public async Task GetById(string queryId, string documentId)
+        public void GetById(string queryId, string documentId)
         {
             var id = new Uri(documentId);
             TestUtilities.Profile(
@@ -77,10 +77,8 @@ namespace DragqnLD.Core.UnitTests
             @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
             110)]
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
-        public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
+        public void QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
-            //await StoreTestData(inputFolder, queryId, idPrefix);
-
             TestUtilities.Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount), 
                 100, 
@@ -125,7 +123,7 @@ namespace DragqnLD.Core.UnitTests
                     _formatter.Format(input, writer, id, out mappings);
                     document = RavenJObject.Parse(writer.ToString());
                 }
-                yield return new ConstructResult() {QueryId = queryId, DocumentId = uriId, Document = new Document() {Content = document}};
+                yield return new ConstructResult {QueryId = queryId, DocumentId = uriId, Document = new Document {Content = document}};
             }
 
         }
@@ -135,11 +133,7 @@ namespace DragqnLD.Core.UnitTests
         public async Task QueryTwoSpecificPropertyValuesInChildrenCollections()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
-            var inputFolder = TestDataConstants.IngredientsFolder;
-            var idPrefix = TestDataConstants.IngredientsNamespacePrefix;
-
-            //await StoreTestData(inputFolder, queryId, idPrefix);
-
+            
             //default dynamic index assumes that each object in hierarchy is one target for query, so it doesn't support multiple Values from two different objects, have to write index manually
             var indexName = "HasPharmalogicalActionIndex";
             var indexForValuesFromMultipleChildren =
@@ -150,7 +144,7 @@ select new { http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacolog
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition() {Map = indexForValuesFromMultipleChildren}, true);
+                new IndexDefinition {Map = indexForValuesFromMultipleChildren}, true);
 
             //had to escape "," for "_" as this is defined by the index
             var property =
@@ -169,13 +163,9 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: add starts with test - i.e. title - APO*
         [Fact]
-        public async Task QueryStartingWith()
+        public void QueryStartingWith()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
-            var inputFolder = TestDataConstants.MedicinalProductsFolder;
-            var idPrefix = TestDataConstants.MedicinalProductNamespacePrefix;
-            
-            //await StoreTestData(inputFolder, queryId, idPrefix);
 
             var propertyName = PropertyNameMedicinalProductsTitle;
             var searchedValue = "APO*";
