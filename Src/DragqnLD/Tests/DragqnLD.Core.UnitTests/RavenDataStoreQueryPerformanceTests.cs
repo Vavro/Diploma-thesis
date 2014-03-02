@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
@@ -27,7 +28,9 @@ namespace DragqnLD.Core.UnitTests
         public RavenDataStoreQueryPerformanceTests()
         {
             _formatter = new ExpandedJsonLDDataFormatter();
-            _documentStore.RegisterListener(new NoStaleQueriesListener()).RegisterListener(new NoTrackingQueriesListener());
+            _documentStore.RegisterListener(new NoStaleQueriesListener())
+                .RegisterListener(new NoTrackingQueriesListener())
+                .RegisterListener(new NoCachingQueriesListener());
 
             var ingredientsTask = StoreTestData(TestDataConstants.IngredientsFolder, TestDataConstants.IngredientsQueryDefinitionId, TestDataConstants.IngredientsNamespacePrefix);
             var medicinalProductsTask = StoreTestData(TestDataConstants.MedicinalProductsFolder, TestDataConstants.MedicinalProductQueryDefinitionId, TestDataConstants.MedicinalProductNamespacePrefix);
@@ -45,8 +48,12 @@ namespace DragqnLD.Core.UnitTests
             var id = new Uri(documentId);
             TestUtilities.Profile(
                 String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId), 
-                100, 
-                async () => await _ravenDataStore.GetDocument(queryId, id)
+                10000, 
+                async () =>
+                {
+                    var document = await _ravenDataStore.GetDocument(queryId, id); 
+                    Assert.NotNull(document.Content);
+                }
             );
         }
 
