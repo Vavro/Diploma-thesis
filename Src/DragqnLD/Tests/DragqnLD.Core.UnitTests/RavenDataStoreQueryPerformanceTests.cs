@@ -10,6 +10,7 @@ using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
+using Raven.Abstractions.Extensions;
 using Raven.Abstractions.Indexing;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
@@ -23,6 +24,8 @@ namespace DragqnLD.Core.UnitTests
         private const string PropertyNameIngredientsDescription = @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value";
         private const string PropertyNameMedicinalProductsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
         private const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
+        private const string PropertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+        private const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         private readonly ExpandedJsonLDDataFormatter _formatter;
 
         public RavenDataStoreQueryPerformanceTests()
@@ -177,11 +180,6 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
         [Fact]
         public void IngredientWithMayTreatAndPregnancyCategory()
         {
-            var queryId = TestDataConstants.IngredientsQueryDefinitionId;
-
-            var propertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
-            var propertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
-
             var searchedPregnancyCategory = @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""";
             var searchedMayTreatTitle = @"Pelagra";
             
@@ -192,16 +190,54 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 100,
                 async () =>
                 {
-                    var result = await _ravenDataStore.QueryDocumentProperties(queryId,
-                        propertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
-                        propertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
+                    var result = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                        PropertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
+                        PropertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
 
                     Assert.Equal(1, result.Count());
                     Assert.Equal(expectedId, result.First().AbsoluteUri);
                 });
         }
-        
+
         //todo: test fuzzy search title
+        [Fact]
+        public async Task FuzzySearchTitle()
+        {
+            var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
+
+            //todo: create index with standart analyzer so that just name works for fuzzy search
+
+            var propertyNameMedicalProductsTitleEscaped =
+                "http___linked_opendata_cz_ontology_drug_encyclopedia_title__value";
+
+            var indexName = "FuzzyMedicalProductTitle";
+            var indexDefinition =
+                @"from doc in docs
+let entityName = doc[""@metadata""][""Raven-Entity-Name""]
+where entityName == ""QueryDefinitions/2""
+select new { http___linked_opendata_cz_ontology_drug_encyclopedia_title__value = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_title).DefaultIfEmpty().Select( d => d._value),
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
+
+            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
+                new IndexDefinition { Map = indexDefinition, Analyzers = new Dictionary<string, string>() { { propertyNameMedicalProductsTitleEscaped, "Lucene.Net.Analysis.Standard.StandardAnalyzer" } } }, true);
+
+            var searchedTitle = "ARXTRA~";
+            var expectedResultCount = 6;
+
+            TestUtilities.Profile(
+                String.Format("Fuzzy search for {0}, expected results {1}", searchedTitle, expectedResultCount),
+                100,
+                async () =>
+                {
+                    var result = await _ravenDataStore.QueryDocumentProperties(queryId, indexName,
+                        propertyNameMedicalProductsTitleEscaped.AsCondition(searchedTitle));
+
+                    Assert.Equal(expectedResultCount, result.Count());
+                });
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+        }
+        
         //todo: fulltext search on description fields?
         //todo: Medicinal Product with atc concept and not having ingredience with contraindication
     }
