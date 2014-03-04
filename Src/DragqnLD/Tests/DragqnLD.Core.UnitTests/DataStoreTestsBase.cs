@@ -1,10 +1,11 @@
-﻿using DragqnLD.Core.Abstraction;
+﻿using System;
+using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Implementations;
 using Raven.Client.Embedded;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public abstract class DataStoreTestsBase
+    public abstract class DataStoreTestsBase : IDisposable
     {
         protected readonly IDataStore _ravenDataStore;
         protected readonly EmbeddableDocumentStore _documentStore;
@@ -26,6 +27,14 @@ namespace DragqnLD.Core.UnitTests
 
             _documentStore = docStore;
             _ravenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
+        }
+
+        public void Dispose()
+        {
+            _documentStore.Dispose();
+
+            GC.Collect(2);
+            GC.WaitForPendingFinalizers();
         }
     }
 }

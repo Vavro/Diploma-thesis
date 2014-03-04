@@ -86,11 +86,10 @@ namespace DragqnLD.Core.UnitTests
             TestUtilities.Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount),
                 100,
-                () =>
+                async () =>
                 {
-                    var task = _ravenDataStore.QueryDocumentProperties(queryId,
+                    var result = await _ravenDataStore.QueryDocumentProperties(queryId,
                             searchedProperty.AsCondition(searchedValue));
-                    var result = task.Result;
                     Assert.Equal(expectedResultCount, result.Count());
                 });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
