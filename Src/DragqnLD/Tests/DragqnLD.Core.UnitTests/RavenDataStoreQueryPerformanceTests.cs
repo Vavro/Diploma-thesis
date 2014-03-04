@@ -26,6 +26,7 @@ namespace DragqnLD.Core.UnitTests
         private const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         private const string PropertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
         private const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
+        private const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
         private readonly ExpandedJsonLDDataFormatter _formatter;
 
         public RavenDataStoreQueryPerformanceTests()
@@ -50,19 +51,19 @@ namespace DragqnLD.Core.UnitTests
         {
             var id = new Uri(documentId);
             TestUtilities.Profile(
-                String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId), 
-                1000, 
+                String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId),
+                1000,
                 async () =>
                 {
-                    var document = await _ravenDataStore.GetDocument(queryId, id); 
+                    var document = await _ravenDataStore.GetDocument(queryId, id);
                     Assert.NotNull(document.Content);
                 }
             );
         }
 
         [Theory]
-        [InlineData(TestDataConstants.IngredientsQueryDefinitionId, 
-            TestDataConstants.IngredientsFolder, 
+        [InlineData(TestDataConstants.IngredientsQueryDefinitionId,
+            TestDataConstants.IngredientsFolder,
             TestDataConstants.IngredientsNamespacePrefix,
             PropertyNameIngredientsDescription,
             @"""Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     """,
@@ -83,15 +84,15 @@ namespace DragqnLD.Core.UnitTests
         public void QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
             TestUtilities.Profile(
-                String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount), 
-                100, 
+                String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount),
+                100,
                 () =>
-                    {
-                        var task = _ravenDataStore.QueryDocumentProperties(queryId,
-                                searchedProperty.AsCondition(searchedValue));
-                        var result = task.Result;
-                        Assert.Equal(expectedResultCount, result.Count());
-                    });
+                {
+                    var task = _ravenDataStore.QueryDocumentProperties(queryId,
+                            searchedProperty.AsCondition(searchedValue));
+                    var result = task.Result;
+                    Assert.Equal(expectedResultCount, result.Count());
+                });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
 
@@ -115,12 +116,12 @@ namespace DragqnLD.Core.UnitTests
                 RavenJObject document;
                 using (var input = new StreamReader(inputFile.FullName))
                 using (var writer = new StringWriter())
-                { 
+                {
                     PropertyMappings mappings;
                     _formatter.Format(input, writer, id, out mappings);
                     document = RavenJObject.Parse(writer.ToString());
                 }
-                yield return new ConstructResult {QueryId = queryId, DocumentId = uriId, Document = new Document {Content = document}};
+                yield return new ConstructResult { QueryId = queryId, DocumentId = uriId, Document = new Document { Content = document } };
             }
 
         }
@@ -130,7 +131,7 @@ namespace DragqnLD.Core.UnitTests
         public async Task QueryTwoSpecificPropertyValuesInChildrenCollections()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
-            
+
             //default dynamic index assumes that each object in hierarchy is one target for query, so it doesn't support multiple Values from two different objects, have to write index manually
             var indexName = "HasPharmalogicalActionIndex";
             var indexForValuesFromMultipleChildren =
@@ -141,7 +142,7 @@ select new { http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacolog
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition {Map = indexForValuesFromMultipleChildren}, true);
+                new IndexDefinition { Map = indexForValuesFromMultipleChildren }, true);
 
             //had to escape "," for "_" as this is defined by the index
             var property =
@@ -182,7 +183,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
         {
             var searchedPregnancyCategory = @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""";
             var searchedMayTreatTitle = @"Pelagra";
-            
+
             var expectedId = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014807".ToLower();
 
             TestUtilities.Profile(
@@ -220,7 +221,15 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
             await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition { Map = indexDefinition, Analyzers = new Dictionary<string, string>() { { propertyNameMedicalProductsTitleEscaped, "Lucene.Net.Analysis.Standard.StandardAnalyzer" } } }, true);
+                new IndexDefinition
+                {
+                    Map = indexDefinition,
+                    Analyzers =
+                        new Dictionary<string, string>()
+                        {
+                            {propertyNameMedicalProductsTitleEscaped, AnalyzerLuceneStandard}
+                        }
+                }, true);
 
             var searchedTitle = "ARXTRA~";
             var expectedResultCount = 6;
@@ -237,8 +246,50 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
-        
+
         //todo: fulltext search on description fields?
+        [Fact]
+        public async Task FullTextSearchDescription()
+        {
+            var queryId = TestDataConstants.IngredientsQueryDefinitionId;
+
+            var propertyNameMedicalProductsDescriptionEscaped = @"http___linked_opendata_cz_ontology_drug_encyclopedia_description__value";
+
+            var indexName = "FullTextMedicalProductDescription";
+            var indexDefinition =
+                @"from doc in docs
+let entityName = doc[""@metadata""][""Raven-Entity-Name""]
+where entityName == ""QueryDefinitions/1""
+select new { http___linked_opendata_cz_ontology_drug_encyclopedia_description__value = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_description).DefaultIfEmpty().Select( d => d._value),
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
+
+            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
+                new IndexDefinition()
+                {
+                    Map = indexDefinition,
+                    Analyzers =
+                        new Dictionary<string, string>()
+                        {
+                            {propertyNameMedicalProductsDescriptionEscaped, AnalyzerLuceneStandard}
+                        }
+                }, true);
+
+            var searchedText = "(semisynthetic ergotamine alkaloid)";
+            var expectedResultCount = 13;
+
+            TestUtilities.Profile("Fullsearch on description of ingredients", 100, async () =>
+            {
+                var result =
+                    await
+                        _ravenDataStore.QueryDocumentProperties(queryId, indexName,
+                            propertyNameMedicalProductsDescriptionEscaped.AsCondition(searchedText));
+
+                Assert.Equal(expectedResultCount, result.Count());
+            });
+
+            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+        }
+
         //todo: Medicinal Product with atc concept and not having ingredience with contraindication
     }
 }
