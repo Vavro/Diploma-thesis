@@ -1,0 +1,207 @@
+Test Name:	FullTextSearchDescription
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.FullTextSearchDescription
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 252
+Test Outcome:	Passed
+Test Duration:	0:00:36.104
+
+Result StandardOutput:	
+======================
+Fullsearch on description of ingredients
+First run: 10.3605 ms
+Iterations 100, Total time 23689.385 ms
+Average one run time: 236.89385 ms
+======================
+
+Test Name:	FuzzySearchTitle
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.FuzzySearchTitle
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 205
+Test Outcome:	Passed
+Test Duration:	0:00:18.222
+
+Result StandardOutput:	
+======================
+Fuzzy search for ARXTRA~, expected results 6
+First run: 352.3623 ms
+Iterations 100, Total time 1194.4465 ms
+Average one run time: 11.944465 ms
+======================
+
+Test Name:	GetById
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.GetById
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 51
+Test Outcome:	Passed
+Test Duration:	0:00:54.94
+
+Result1 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.GetById(queryId: "QueryDefinitions/1", documentId: "http://linked.opendata.cz/resource/drug-encycloped"...)
+Result1 Outcome:	Passed
+Result1 Duration:	0:00:12.886
+Result1 Message:
+Result1 StackTrace:
+Result1 StandardOutput:	
+======================
+GetById, queryId: QueryDefinitions/1, id: http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115
+First run: 6.8009 ms
+Iterations 1000, Total time 284.509 ms
+Average one run time: 0.284509 ms
+======================
+Result1 StandardError:
+
+Result2 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.GetById(queryId: "QueryDefinitions/1", documentId: "http://linked.opendata.cz/resource/drug-encycloped"...)
+Result2 Outcome:	Passed
+Result2 Duration:	0:00:15.119
+Result2 Message:
+Result2 StackTrace:
+Result2 StandardOutput:	
+======================
+GetById, queryId: QueryDefinitions/1, id: http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099
+First run: 4.1844 ms
+Iterations 1000, Total time 120.6404 ms
+Average one run time: 0.1206404 ms
+======================
+Result2 StandardError:
+
+Result3 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.GetById(queryId: "QueryDefinitions/2", documentId: "http://linked.opendata.cz/resource/sukl/medicinal-"...)
+Result3 Outcome:	Passed
+Result3 Duration:	0:00:12.33
+Result3 Message:
+Result3 StackTrace:
+Result3 StandardOutput:	
+======================
+GetById, queryId: QueryDefinitions/2, id: http://linked.opendata.cz/resource/sukl/medicinal-product/ABSEAMED-3000-IU-0-3-ML
+First run: 12.9594 ms
+Iterations 1000, Total time 119.5323 ms
+Average one run time: 0.1195323 ms
+======================
+Result3 StandardError:
+
+Result4 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.GetById(queryId: "QueryDefinitions/2", documentId: "http://linked.opendata.cz/resource/sukl/medicinal-"...)
+Result4 Outcome:	Passed
+Result4 Duration:	0:00:14.605
+Result4 Message:
+Result4 StackTrace:
+Result4 StandardOutput:	
+======================
+GetById, queryId: QueryDefinitions/2, id: http://linked.opendata.cz/resource/sukl/medicinal-product/BUPAINX-0-4-MG
+First run: 3.3305 ms
+Iterations 1000, Total time 373.1784 ms
+Average one run time: 0.3731784 ms
+======================
+Result4 StandardError:
+
+Test Name:	IngredientWithMayTreatAndPregnancyCategory
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.IngredientWithMayTreatAndPregnancyCategory
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 182
+Test Outcome:	Passed
+Test Duration:	0:00:20.796
+
+Result StandardOutput:	
+======================
+Searching for ingredient with 
+ MayTreat : Pelagra, 
+ PregnancyCategory : "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A"
+First run: 5078.4728 ms
+Iterations 100, Total time 3167.6496 ms
+Average one run time: 31.676496 ms
+======================
+
+Test Name:	MedicinalProductWithAtcNotContraindication
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.MedicinalProductWithAtcNotContraindication
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 295
+Test Outcome:	Passed
+Test Duration:	0:00:32.993
+
+Result StandardOutput:	
+======================
+Medicinal product, with broader atc concept "Antianemic preparations" but not having contraindicated with "hypertension" in active ingredients
+First run: 70.1556 ms
+Iterations 100, Total time 19772.1503 ms
+Average one run time: 197.721503 ms
+======================
+
+Test Name:	QueryExactPropertyValueProperty
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryExactPropertyValueProperty
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 85
+Test Outcome:	Passed
+Test Duration:	0:01:37.661
+
+Result1 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryExactPropertyValueProperty(queryId: "QueryDefinitions/1", inputFolder: "..\..\..\..\..\..\Doc\Test data\Ingredients", idPrefix: "http://linked.opendata.cz/resource/drug-encycloped"..., searchedProperty: "http://linked.opendata.cz/ontology/drug-encycloped"..., searchedValue: ""Analgesic antipyretic derivative of acetanilide. "..., expectedResultCount: 1)
+Result1 Outcome:	Passed
+Result1 Duration:	0:00:21.233
+Result1 Message:
+Result1 StackTrace:
+Result1 StandardOutput:	
+======================
+Query exact property value 
+ in http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/ 
+ property http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value 
+ value "Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     " 
+ expected result count 1
+First run: 5679.4491 ms
+Iterations 100, Total time 2318.714 ms
+Average one run time: 23.18714 ms
+======================
+Result1 StandardError:
+
+Result2 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryExactPropertyValueProperty(queryId: "QueryDefinitions/1", inputFolder: "..\..\..\..\..\..\Doc\Test data\Ingredients", idPrefix: "http://linked.opendata.cz/resource/drug-encycloped"..., searchedProperty: "http://linked.opendata.cz/ontology/drug-encycloped"..., searchedValue: ""http://linked.opendata.cz/resource/fda-spl/pregna"..., expectedResultCount: 110)
+Result2 Outcome:	Passed
+Result2 Duration:	0:00:57.507
+Result2 Message:
+Result2 StackTrace:
+Result2 StandardOutput:	
+======================
+Query exact property value 
+ in http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/ 
+ property http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory, 
+ value "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" 
+ expected result count 110
+First run: 8119.3939 ms
+Iterations 100, Total time 36916.5035 ms
+Average one run time: 369.165035 ms
+======================
+Result2 StandardError:
+
+Result3 Name:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryExactPropertyValueProperty(queryId: "QueryDefinitions/2", inputFolder: "..\..\..\..\..\..\Doc\Test data\MedicinalProducts", idPrefix: "http://linked.opendata.cz/resource/sukl/medicinal-"..., searchedProperty: "http://linked.opendata.cz/ontology/drug-encycloped"..., searchedValue: ""ABILIFY 7,5 MG/ML"", expectedResultCount: 1)
+Result3 Outcome:	Passed
+Result3 Duration:	0:00:18.921
+Result3 Message:
+Result3 StackTrace:
+Result3 StandardOutput:	
+======================
+Query exact property value 
+ in http://linked.opendata.cz/resource/sukl/medicinal-product/ 
+ property http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value 
+ value "ABILIFY 7,5 MG/ML" 
+ expected result count 1
+First run: 5133.7247 ms
+Iterations 100, Total time 1052.6051 ms
+Average one run time: 10.526051 ms
+======================
+Result3 StandardError:
+
+Test Name:	QueryStartingWith
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryStartingWith
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 164
+Test Outcome:	Passed
+Test Duration:	0:00:22.706
+
+Result StandardOutput:	
+======================
+Medicinal product Starts with 'APO' 
+First run: 5667.4538 ms
+Iterations 100, Total time 4968.9208 ms
+Average one run time: 49.689208 ms
+======================
+
+Test Name:	QueryTwoSpecificPropertyValuesInChildrenCollections
+Test FullName:	DragqnLD.Core.UnitTests.RavenDataStoreQueryPerformanceTests.QueryTwoSpecificPropertyValuesInChildrenCollections
+Test Source:	f:\GitHub\Diploma-thesis\Src\DragqnLD\Tests\DragqnLD.Core.UnitTests\RavenDataStoreQueryPerformanceTests.cs : line 131
+Test Outcome:	Passed
+Test Duration:	0:00:24.218
+
+Result StandardOutput:	
+======================
+HasPharmalogical action Analgesics, non-narcotic and Antipyretics
+First run: 20.0965 ms
+Iterations 100, Total time 11739.5938 ms
+Average one run time: 117.395938 ms
+======================
