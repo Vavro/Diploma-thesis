@@ -5,7 +5,7 @@ namespace DragqnLD.Core.UnitTests.Utils
 {
     public static class TestUtilities
     {
-        public static void Profile(string description, int iterations, Action func)
+        public static void Profile(string description, int iterations, Action func, Action withFirstRun = null )
         {
             // clean up
             GC.Collect();
@@ -14,6 +14,10 @@ namespace DragqnLD.Core.UnitTests.Utils
 
             var watch = Stopwatch.StartNew();
             // warm up 
+            if (withFirstRun != null)
+            {
+                withFirstRun();
+            }
             func();
             var firstrunTotal = watch.Elapsed.TotalMilliseconds;
 

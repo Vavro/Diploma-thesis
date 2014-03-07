@@ -139,9 +139,7 @@ let entityName = doc[""@metadata""][""Raven-Entity-Name""]
 where entityName == ""QueryDefinitions/1""
 select new { http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacologicalAction_http___linked_opendata_cz_ontology_drug_encyclopedia_title__value = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_hasPharmacologicalAction).DefaultIfEmpty().Select( c => ((IEnumerable<dynamic>)c.http___linked_opendata_cz_ontology_drug_encyclopedia_title).DefaultIfEmpty().Select( d => d._value)),
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
-
-            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition { Map = indexForValuesFromMultipleChildren }, true);
+            
 
             //had to escape "," for "_" as this is defined by the index
             var property =
@@ -154,6 +152,10 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 Assert.Equal(1, result.Count());
                 Assert.Equal(@"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115",
                     result.First().ToString());
+            }, async () =>
+            {
+                await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
+                    new IndexDefinition { Map = indexForValuesFromMultipleChildren }, true);
             });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
@@ -219,17 +221,7 @@ select new { http___linked_opendata_cz_ontology_drug_encyclopedia_title__value =
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition
-                {
-                    Map = indexDefinition,
-                    Analyzers =
-                        new Dictionary<string, string>()
-                        {
-                            {propertyNameMedicalProductsTitleEscaped, AnalyzerLuceneStandard}
-                        }
-                }, true);
-
+            
             var searchedTitle = "ARXTRA~";
             var expectedResultCount = 6;
 
@@ -242,6 +234,18 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                         propertyNameMedicalProductsTitleEscaped.AsCondition(searchedTitle));
 
                     Assert.Equal(expectedResultCount, result.Count());
+                }, async () =>
+                {
+                    await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
+                        new IndexDefinition
+                        {
+                            Map = indexDefinition,
+                            Analyzers =
+                                new Dictionary<string, string>()
+                        {
+                            {propertyNameMedicalProductsTitleEscaped, AnalyzerLuceneStandard}
+                        }
+                        }, true);
                 });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
         }
@@ -262,17 +266,6 @@ where entityName == ""QueryDefinitions/1""
 select new { http___linked_opendata_cz_ontology_drug_encyclopedia_description__value = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_description).DefaultIfEmpty().Select( d => d._value),
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
-            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
-                new IndexDefinition()
-                {
-                    Map = indexDefinition,
-                    Analyzers =
-                        new Dictionary<string, string>()
-                        {
-                            {propertyNameMedicalProductsDescriptionEscaped, AnalyzerLuceneStandard}
-                        }
-                }, true);
-
             var searchedText = "(semisynthetic ergotamine alkaloid)";
             var expectedResultCount = 13;
 
@@ -284,6 +277,18 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                             propertyNameMedicalProductsDescriptionEscaped.AsCondition(searchedText));
 
                 Assert.Equal(expectedResultCount, result.Count());
+            }, async () =>
+            {
+                await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
+                    new IndexDefinition()
+                    {
+                        Map = indexDefinition,
+                        Analyzers =
+                            new Dictionary<string, string>()
+                        {
+                            {propertyNameMedicalProductsDescriptionEscaped, AnalyzerLuceneStandard}
+                        }
+                    }, true);
             });
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
@@ -294,14 +299,14 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
         public async Task MedicinalProductWithAtcNotContraindication()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
-            
-            var escapedLuceneQuery = 
+
+            var escapedLuceneQuery =
 @"http___linked_opendata_cz_ontology_drug_encyclopedia_hasATCConcept_http___www_w3_org_2004_02_skos_core_broaderTransitive_http___purl_org_dc_terms_title__value: ""ANTIANEMIC PREPARATIONS""
 AND
 -http___linked_opendata_cz_ontology_drug_encyclopedia_hasActiveIngredient_http___linked_opendata_cz_ontology_drug_encyclopedia_contraindicatedWith_http___linked_opendata_cz_ontology_drug_encyclopedia_title__value: ""Hypertension""";
 
             var indexName = "MPWithAtcAndContraindication";
-            var indexDefinition = 
+            var indexDefinition =
 @"from doc in docs
 where doc[""@metadata""][""Raven-Entity-Name""] == ""QueryDefinitions/2""
 select new { 
@@ -311,15 +316,18 @@ http___linked_opendata_cz_ontology_drug_encyclopedia_hasATCConcept_http___www_w3
 = ((IEnumerable<dynamic>)doc.http___linked_opendata_cz_ontology_drug_encyclopedia_hasATCConcept).DefaultIfEmpty().Select(x => ((IEnumerable<dynamic>)x.http___www_w3_org_2004_02_skos_core_broaderTransitive).DefaultIfEmpty().Select(y => ((IEnumerable<dynamic>)y.http___purl_org_dc_terms_title).DefaultIfEmpty().Select(z => z._value))),
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
-            await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName, new IndexDefinition() { Map = indexDefinition}, true);
+            
             TestUtilities.Profile(
-                "Medicinal product, with broader atc concept \"Antianemic preparations\" but not having contraindicated with \"hypertension\" in active ingredients", 
+                "Medicinal product, with broader atc concept \"Antianemic preparations\" but not having contraindicated with \"hypertension\" in active ingredients",
                 100,
                 async () =>
                 {
                     var results =
                         await _ravenDataStore.QueryDocumentEscapedLuceneQuery(queryId, indexName, escapedLuceneQuery);
                     Assert.Equal(27, results.Count());
+                }, async () =>
+                {
+                    await _documentStore.AsyncDatabaseCommands.PutIndexAsync(indexName, new IndexDefinition() { Map = indexDefinition }, true);
                 });
 
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
