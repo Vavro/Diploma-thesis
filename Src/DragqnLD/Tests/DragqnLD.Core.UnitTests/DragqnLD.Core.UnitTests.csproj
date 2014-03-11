@@ -104,8 +104,10 @@
   <ItemGroup>
     <Compile Include="DataStoreTestsBase.cs" />
     <Compile Include="ExpandedJsonLDDataFormatterTests.cs" />
+    <Compile Include="PerfTests\DataStorePerfTestsBase.cs" />
+    <Compile Include="PerfTests\RandomizedIdQueryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RavenDataStoreQueryPerformanceTests.cs" />
+    <Compile Include="PerfTests\RavenDataStoreQueryPerformanceTests.cs" />
     <Compile Include="QueryStoreTests.cs" />
     <Compile Include="RavenDataStoreTests.cs" />
     <Compile Include="SparqlEnpointClientTests.cs" />

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
+using DragqnLD.Core.UnitTests.PerfTests;
 using DragqnLD.Core.UnitTests.Utils;
 using Raven.Abstractions.Extensions;
 using Raven.Abstractions.Indexing;
@@ -19,7 +20,7 @@ using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public class RavenDataStoreQueryPerformanceTests : DataStoreTestsBase
+    public class RavenDataStoreQueryPerformanceTests : DataStorePerfTestsBase
     {
         private const string PropertyNameIngredientsDescription = @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value";
         private const string PropertyNameMedicinalProductsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
@@ -27,19 +28,9 @@ namespace DragqnLD.Core.UnitTests
         private const string PropertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
         private const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         private const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
-        private readonly ExpandedJsonLDDataFormatter _formatter;
 
         public RavenDataStoreQueryPerformanceTests()
         {
-            _formatter = new ExpandedJsonLDDataFormatter();
-            _documentStore.RegisterListener(new NoStaleQueriesListener())
-                .RegisterListener(new NoTrackingQueriesListener())
-                .RegisterListener(new NoCachingQueriesListener());
-
-            var ingredientsTask = StoreTestData(TestDataConstants.IngredientsFolder, TestDataConstants.IngredientsQueryDefinitionId, TestDataConstants.IngredientsNamespacePrefix);
-            var medicinalProductsTask = StoreTestData(TestDataConstants.MedicinalProductsFolder, TestDataConstants.MedicinalProductQueryDefinitionId, TestDataConstants.MedicinalProductNamespacePrefix);
-
-            Task.WaitAll(ingredientsTask, medicinalProductsTask);
         }
 
         [Theory]
@@ -93,36 +84,6 @@ namespace DragqnLD.Core.UnitTests
                     Assert.Equal(expectedResultCount, result.Count());
                 });
             RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-        }
-
-        private async Task StoreTestData(string inputFolder, string queryId, string idPrefix)
-        {
-            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
-
-            await _ravenDataStore.BulkStoreDocuments(documents);
-        }
-
-        private IEnumerable<ConstructResult> ConstructResultsForFolder(string inputFolder, string queryId, string idPrefix)
-        {
-            var inputDirectoryInfo = new DirectoryInfo(inputFolder);
-            var inputFiles = inputDirectoryInfo.GetFiles();
-
-            foreach (FileInfo inputFile in inputFiles)
-            {
-                var idWithoutNamespace = inputFile.Name.Substring(0, inputFile.Name.Length - ".json".Length);
-                var id = idPrefix + idWithoutNamespace;
-                var uriId = new Uri(id);
-                RavenJObject document;
-                using (var input = new StreamReader(inputFile.FullName))
-                using (var writer = new StringWriter())
-                {
-                    PropertyMappings mappings;
-                    _formatter.Format(input, writer, id, out mappings);
-                    document = RavenJObject.Parse(writer.ToString());
-                }
-                yield return new ConstructResult { QueryId = queryId, DocumentId = uriId, Document = new Document { Content = document } };
-            }
-
         }
 
         //todo: add test for has these two ingrediets or these two Pharmacological actions, MayTreat - test more variants
