@@ -11,18 +11,18 @@ namespace DragqnLD.Core.UnitTests.PerfTests
     public class RandomizedIdQueryTests : DataStorePerfTestsBase
     {
         [Fact]
-        public async Task GetRandomIdIngredients()
+        public void GetRandomIdIngredients()
         {
-            await GetRandomIdTest(IngredientsIds);
+            GetRandomIdTest(IngredientsIds);
         }
 
         [Fact]
-        public async Task GetRandomIdMedicinalProducts()
+        public void GetRandomIdMedicinalProducts()
         {
-            await GetRandomIdTest(MedicinalProductsIds);
+            GetRandomIdTest(MedicinalProductsIds);
         }
 
-        private async Task GetRandomIdTest(List<Uri> idsList)
+        private void GetRandomIdTest(List<Uri> idsList)
         {
             var rnd = new Random(1234);
 

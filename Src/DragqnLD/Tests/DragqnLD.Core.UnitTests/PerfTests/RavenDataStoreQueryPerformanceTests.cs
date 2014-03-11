@@ -88,7 +88,7 @@ namespace DragqnLD.Core.UnitTests
 
         //todo: add test for has these two ingrediets or these two Pharmacological actions, MayTreat - test more variants
         [Fact]
-        public async Task QueryTwoSpecificPropertyValuesInChildrenCollections()
+        public void QueryTwoSpecificPropertyValuesInChildrenCollections()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
 
@@ -164,7 +164,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: test fuzzy search title
         [Fact]
-        public async Task FuzzySearchTitle()
+        public void FuzzySearchTitle()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
@@ -213,7 +213,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: fulltext search on description fields?
         [Fact]
-        public async Task FullTextSearchDescription()
+        public void FullTextSearchDescription()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
 
@@ -257,7 +257,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: Medicinal Product with atc concept and not having ingredience with contraindication
         [Fact]
-        public async Task MedicinalProductWithAtcNotContraindication()
+        public void MedicinalProductWithAtcNotContraindication()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
