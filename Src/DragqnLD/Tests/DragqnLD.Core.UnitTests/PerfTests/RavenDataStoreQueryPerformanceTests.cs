@@ -29,10 +29,6 @@ namespace DragqnLD.Core.UnitTests
         private const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         private const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
 
-        public RavenDataStoreQueryPerformanceTests()
-        {
-        }
-
         [Theory]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115")]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]

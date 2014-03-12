@@ -13,22 +13,22 @@ namespace DragqnLD.Core.UnitTests.PerfTests
         [Fact]
         public void GetRandomIdIngredients()
         {
-            GetRandomIdTest(IngredientsIds);
+            GetRandomIdTest(IngredientsIds, "Random Get Id Ingredients");
         }
 
         [Fact]
         public void GetRandomIdMedicinalProducts()
         {
-            GetRandomIdTest(MedicinalProductsIds);
+            GetRandomIdTest(MedicinalProductsIds, "Random Get Id Medicinal Products");
         }
 
-        private void GetRandomIdTest(List<Uri> idsList)
+        private void GetRandomIdTest(List<Uri> idsList, string description)
         {
-            var rnd = new Random(1234);
+            var rnd = new Random(TestDataConstants.RandomSeed);
 
             var ingredientsCount = idsList.Count;
 
-            TestUtilities.Profile("RandomGetIdIngredients",
+            TestUtilities.Profile(description,
                 1000,
                 async () =>
                 {
