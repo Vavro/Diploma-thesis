@@ -14,40 +14,59 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
     public class RandomizedPropertyValueTests : DataStorePerfTestsBase
     {
-        private const string PropertyNameIngredientsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
+        private readonly Random _rnd;
+
+        public RandomizedPropertyValueTests()
+        {
+            _rnd = new Random(TestDataConstants.RandomSeed);
+        }
 
         [Fact]
         public void RandomIngredientTitle()
         {
-            var titles = ReadAllTitles();
-            
-            var rnd = new Random(TestDataConstants.RandomSeed);
+            var titles = ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
 
             TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
-                var randomTitle = titles[rnd.Next(titles.Count)];
+                var randomTitle = titles[_rnd.Next(titles.Count)];
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
-                    PropertyNameIngredientsTitle.AsCondition(randomTitle));
+                    TestDataConstants.PropertyNameIngredientsTitle.AsCondition(randomTitle));
 
-                Assert.NotEqual(0, uris.Count());
+                Assert.NotEmpty(uris);
             });
-            
         }
 
-        private static List<string> ReadAllTitles()
+        [Fact]
+        public void RandomIngredientDescription()
         {
-            var titles = new List<string>();
-            using (var fileReader = new StreamReader(TestDataConstants.IngredientsTitlesFile))
+            var descriptions = ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
+
+            TestUtilities.Profile("Random ingredients description", 100, async () =>
+            {
+                var randomDescription = descriptions[_rnd.Next(descriptions.Count)];
+
+                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                    TestDataConstants.PropertyNameIngredientsDescription.AsCondition(randomDescription));
+
+                Assert.NotEmpty(uris);
+            });
+        }
+
+
+        private static List<string> ReadValuesFromFile(string valuesFile)
+        {
+            var values = new List<string>();
+            using (var fileReader = new StreamReader(valuesFile))
             {
                 string line;
                 while ((line = fileReader.ReadLine()) != null)
                 {
-                    titles.Add(line);
+                    values.Add(line);
                 }
             }
 
-            return titles;
+            return values;
         }
     }
 }

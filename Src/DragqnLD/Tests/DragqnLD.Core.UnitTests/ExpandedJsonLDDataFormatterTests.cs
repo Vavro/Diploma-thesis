@@ -91,7 +91,7 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Theory]
-        [InlineData(TestDataConstants.IngredientsFolder, @"Output\Ingedients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
+        [InlineData(TestDataConstants.IngredientsFolder, @"Output\Ingredients\", @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/")]
         [InlineData(TestDataConstants.MedicinalProductsFolder, @"Output\MedicinalProducts\", @"http://linked.opendata.cz/resource/sukl/medicinal-product/")]
         void CanConvertAllTestData(string inputFolder, string outputFolder, string idPrefix)
         {

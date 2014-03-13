@@ -22,13 +22,6 @@ namespace DragqnLD.Core.UnitTests
 {
     public class RavenDataStoreQueryPerformanceTests : DataStorePerfTestsBase
     {
-        private const string PropertyNameIngredientsDescription = @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value";
-        private const string PropertyNameMedicinalProductsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
-        private const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
-        private const string PropertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
-        private const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
-        private const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
-
         [Theory]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115")]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]
@@ -52,19 +45,19 @@ namespace DragqnLD.Core.UnitTests
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId,
             TestDataConstants.IngredientsFolder,
             TestDataConstants.IngredientsNamespacePrefix,
-            PropertyNameIngredientsDescription,
+            TestDataConstants.PropertyNameIngredientsDescription,
             @"""Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     """,
             1)]
         [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId,
             TestDataConstants.MedicinalProductsFolder,
             TestDataConstants.MedicinalProductNamespacePrefix,
-            PropertyNameMedicinalProductsTitle,
+            TestDataConstants.PropertyNameMedicinalProductsTitle,
             @"""ABILIFY 7,5 MG/ML""",
             1)]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId,
             TestDataConstants.IngredientsFolder,
             TestDataConstants.IngredientsNamespacePrefix,
-            PropertyNameIngredientsPregnancyCategory,
+            TestDataConstants.PropertyNameIngredientsPregnancyCategory,
             @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
             110)]
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
@@ -123,7 +116,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
-            var propertyName = PropertyNameMedicinalProductsTitle;
+            var propertyName = TestDataConstants.PropertyNameMedicinalProductsTitle;
             var searchedValue = "APO*";
             TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
             {
@@ -150,8 +143,8 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 async () =>
                 {
                     var result = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
-                        PropertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
-                        PropertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
+                        TestDataConstants.PropertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
+                        TestDataConstants.PropertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
 
                     Assert.Equal(1, result.Count());
                     Assert.Equal(expectedId, result.First().AbsoluteUri);
@@ -200,7 +193,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                             Analyzers =
                                 new Dictionary<string, string>()
                         {
-                            {propertyNameMedicalProductsTitleEscaped, AnalyzerLuceneStandard}
+                            {propertyNameMedicalProductsTitleEscaped, TestDataConstants.AnalyzerLuceneStandard}
                         }
                         }, true);
                 });
@@ -243,7 +236,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                         Analyzers =
                             new Dictionary<string, string>()
                         {
-                            {propertyNameMedicalProductsDescriptionEscaped, AnalyzerLuceneStandard}
+                            {propertyNameMedicalProductsDescriptionEscaped, TestDataConstants.AnalyzerLuceneStandard}
                         }
                     }, true);
             });
