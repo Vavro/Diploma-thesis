@@ -53,6 +53,28 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             });
         }
 
+        [Fact]
+        public void RandomMedicinalProductPregnancyCategory()
+        {
+            var categories = new List<string>()
+            {
+                @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""",     
+                @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B""", 
+                @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""", 
+                @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D""",
+                @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X"""
+            };
+
+            TestUtilities.Profile("Random ingredients description", 100, async () =>
+            {
+                var randomDescription = categories[_rnd.Next(categories.Count)];
+
+                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                    TestDataConstants.PropertyNameIngredientsPregnancyCategory.AsCondition(randomDescription));
+
+                Assert.NotEmpty(uris);
+            });
+        }
 
         private static List<string> ReadValuesFromFile(string valuesFile)
         {
