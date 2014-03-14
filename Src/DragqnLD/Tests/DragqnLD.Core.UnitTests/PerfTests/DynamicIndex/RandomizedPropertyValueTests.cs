@@ -76,6 +76,22 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             });
         }
 
+        [Fact]
+        public void RandomMedicinalProductTitle()
+        {
+            var titles = ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
+
+            TestUtilities.Profile("Random ingredients title", 100, async () =>
+            {
+                var randomTitle = titles[_rnd.Next(titles.Count)];
+
+                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
+                    TestDataConstants.PropertyNameMedicinalProductsTitle.AsCondition(randomTitle));
+
+                Assert.NotEmpty(uris);
+            });
+        }
+
         private static List<string> ReadValuesFromFile(string valuesFile)
         {
             var values = new List<string>();

@@ -8,6 +8,7 @@ namespace DragqnLD.Core.UnitTests.Utils
         public const string IngredientsTitlesFile = @"..\..\..\..\..\..\Doc\Test data\IngredientTitles.txt";
         public const string IngredientsDescriptionsFile = @"..\..\..\..\..\..\Doc\Test data\IngredientDescriptions.txt";
         public const string MedicinalProductsFolder = @"..\..\..\..\..\..\Doc\Test data\MedicinalProducts";
+        public const string MedicinalProductsTitlesFile = @"..\..\..\..\..\..\Doc\Test data\MedicinalProductsTitles.txt";
         internal const string IngredientsNamespacePrefix = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/";
         internal const string IngredientsQueryDefinitionId = "QueryDefinitions/1";
         internal const string MedicinalProductNamespacePrefix = @"http://linked.opendata.cz/resource/sukl/medicinal-product/";
