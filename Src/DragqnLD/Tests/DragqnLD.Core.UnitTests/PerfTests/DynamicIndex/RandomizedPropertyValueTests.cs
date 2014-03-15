@@ -28,7 +28,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
-                var randomTitle = titles[_rnd.Next(titles.Count)];
+                var randomTitle = String.Format("\"{0}\"",titles[_rnd.Next(titles.Count)]);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(randomTitle));
@@ -44,8 +44,8 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
-                var randomDescription = descriptions[_rnd.Next(descriptions.Count)];
-
+                var randomDescription = String.Format("\"{0}\"",descriptions[_rnd.Next(descriptions.Count)]);
+                
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsDescription.AsCondition(randomDescription));
 
@@ -83,7 +83,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
-                var randomTitle = titles[_rnd.Next(titles.Count)];
+                var randomTitle = String.Format("\"{0}\"",titles[_rnd.Next(titles.Count)]);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
                     TestDataConstants.PropertyNameMedicinalProductsTitle.AsCondition(randomTitle));

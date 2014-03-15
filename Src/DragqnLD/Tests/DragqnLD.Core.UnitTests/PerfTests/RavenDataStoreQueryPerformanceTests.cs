@@ -100,7 +100,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             {
                 var result = await _ravenDataStore.QueryDocumentProperties(queryId, indexName, property.AsCondition(searchedValue));
                 Assert.Equal(1, result.Count());
-                Assert.Equal(@"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115",
+                Assert.Equal(@"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/m0000115",
                     result.First().ToString());
             }, async () =>
             {
