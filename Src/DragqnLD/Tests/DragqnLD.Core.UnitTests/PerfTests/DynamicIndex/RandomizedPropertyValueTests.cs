@@ -24,7 +24,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         [Fact]
         public void RandomIngredientTitle()
         {
-            var titles = ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
+            var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
 
             TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
@@ -40,7 +40,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         [Fact]
         public void RandomIngredientDescription()
         {
-            var descriptions = ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
+            var descriptions = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
 
             TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
@@ -79,7 +79,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         [Fact]
         public void RandomMedicinalProductTitle()
         {
-            var titles = ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
+            var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
 
             TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
@@ -90,21 +90,6 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
                 Assert.NotEmpty(uris);
             });
-        }
-
-        private static List<string> ReadValuesFromFile(string valuesFile)
-        {
-            var values = new List<string>();
-            using (var fileReader = new StreamReader(valuesFile))
-            {
-                string line;
-                while ((line = fileReader.ReadLine()) != null)
-                {
-                    values.Add(line);
-                }
-            }
-
-            return values;
         }
     }
 }
