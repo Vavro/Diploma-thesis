@@ -22,11 +22,11 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         }
 
         [Fact]
-        public void RandomIngredientTitle()
+        public async Task RandomIngredientTitle()
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
 
-            TestUtilities.Profile("Random ingredients title", 100, async () =>
+            await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
                 var randomTitle = titles[_rnd.Next(titles.Count)];
 
@@ -38,11 +38,11 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         }
 
         [Fact]
-        public void RandomIngredientDescription()
+        public async Task RandomIngredientDescription() 
         {
             var descriptions = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
 
-            TestUtilities.Profile("Random ingredients description", 100, async () =>
+            await TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
                 var randomDescription = descriptions[_rnd.Next(descriptions.Count)];
 
@@ -54,7 +54,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         }
 
         [Fact]
-        public void RandomMedicinalProductPregnancyCategory()
+        public async Task RandomMedicinalProductPregnancyCategory()
         {
             var categories = new List<string>()
             {
@@ -65,7 +65,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
                 @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X"""
             };
 
-            TestUtilities.Profile("Random ingredients description", 100, async () =>
+            await TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
                 var randomDescription = categories[_rnd.Next(categories.Count)];
 
@@ -77,11 +77,11 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         }
 
         [Fact]
-        public void RandomMedicinalProductTitle()
+        public async Task RandomMedicinalProductTitle()
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
 
-            TestUtilities.Profile("Random ingredients title", 100, async () =>
+            await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
                 var randomTitle = titles[_rnd.Next(titles.Count)];
 

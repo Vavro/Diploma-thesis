@@ -27,10 +27,10 @@ namespace DragqnLD.Core.UnitTests
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]
         [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/ABSEAMED-3000-IU-0-3-ML")]
         [InlineData(TestDataConstants.MedicinalProductQueryDefinitionId, @"http://linked.opendata.cz/resource/sukl/medicinal-product/BUPAINX-0-4-MG")]
-        public void GetById(string queryId, string documentId)
+        public async Task GetById(string queryId, string documentId)
         {
             var id = new Uri(documentId);
-            TestUtilities.Profile(
+            await TestUtilities.Profile(
                 String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId),
                 1000,
                 async () =>
@@ -61,9 +61,9 @@ namespace DragqnLD.Core.UnitTests
             @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C""",
             110)]
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
-        public void QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
+        public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
-            TestUtilities.Profile(
+            await TestUtilities.Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount),
                 100,
                 async () =>
@@ -77,7 +77,7 @@ namespace DragqnLD.Core.UnitTests
 
         //todo: add test for has these two ingrediets or these two Pharmacological actions, MayTreat - test more variants
         [Fact]
-        public void QueryTwoSpecificPropertyValuesInChildrenCollections()
+        public async Task QueryTwoSpecificPropertyValuesInChildrenCollections()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
 
@@ -96,7 +96,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPharmacologicalAction_http://linked.opendata.cz/ontology/drug-encyclopedia/title_@value";
             var searchedValue = @"(+""Analgesics, non-narcotic"" +""Antipyretics"")";
 
-            TestUtilities.Profile("HasPharmalogical action Analgesics, non-narcotic and Antipyretics", 100, async () =>
+            await TestUtilities.Profile("HasPharmalogical action Analgesics, non-narcotic and Antipyretics", 100, async () =>
             {
                 var result = await _ravenDataStore.QueryDocumentProperties(queryId, indexName, property.AsCondition(searchedValue));
                 Assert.Equal(1, result.Count());
@@ -112,13 +112,13 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: add starts with test - i.e. title - APO*
         [Fact]
-        public void QueryStartingWith()
+        public async Task QueryStartingWith()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
             var propertyName = TestDataConstants.PropertyNameMedicinalProductsTitle;
             var searchedValue = "APO*";
-            TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
+            await TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
             {
                 var result =
                     await _ravenDataStore.QueryDocumentProperties(queryId, propertyName.AsCondition(searchedValue));
@@ -130,14 +130,14 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: test for ingredient with maytreat and specific pregnancy category
         [Fact]
-        public void IngredientWithMayTreatAndPregnancyCategory()
+        public async Task IngredientWithMayTreatAndPregnancyCategory()
         {
             var searchedPregnancyCategory = @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""";
             var searchedMayTreatTitle = @"Pelagra";
 
             var expectedId = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014807".ToLower();
 
-            TestUtilities.Profile(
+            await TestUtilities.Profile(
                 String.Format("Searching for ingredient with \n MayTreat : {0}, \n PregnancyCategory : {1}", searchedMayTreatTitle, searchedPregnancyCategory),
                 100,
                 async () =>
@@ -153,7 +153,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: test fuzzy search title
         [Fact]
-        public void FuzzySearchTitle()
+        public async Task FuzzySearchTitle()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
@@ -175,7 +175,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             var searchedTitle = "ARXTRA~";
             var expectedResultCount = 6;
 
-            TestUtilities.Profile(
+            await TestUtilities.Profile(
                 String.Format("Fuzzy search for {0}, expected results {1}", searchedTitle, expectedResultCount),
                 100,
                 async () =>
@@ -202,7 +202,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: fulltext search on description fields?
         [Fact]
-        public void FullTextSearchDescription()
+        public async Task FullTextSearchDescription()
         {
             var queryId = TestDataConstants.IngredientsQueryDefinitionId;
 
@@ -219,7 +219,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             var searchedText = "(semisynthetic ergotamine alkaloid)";
             var expectedResultCount = 13;
 
-            TestUtilities.Profile("Fullsearch on description of ingredients", 100, async () =>
+            await TestUtilities.Profile("Fullsearch on description of ingredients", 100, async () =>
             {
                 var result =
                     await
@@ -246,7 +246,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
         //todo: Medicinal Product with atc concept and not having ingredience with contraindication
         [Fact]
-        public void MedicinalProductWithAtcNotContraindication()
+        public async Task MedicinalProductWithAtcNotContraindication()
         {
             var queryId = TestDataConstants.MedicinalProductQueryDefinitionId;
 
@@ -267,7 +267,7 @@ http___linked_opendata_cz_ontology_drug_encyclopedia_hasATCConcept_http___www_w3
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             
-            TestUtilities.Profile(
+            await TestUtilities.Profile(
                 "Medicinal product, with broader atc concept \"Antianemic preparations\" but not having contraindicated with \"hypertension\" in active ingredients",
                 100,
                 async () =>
