@@ -107,6 +107,7 @@
     <Compile Include="PerfTests\DataStorePerfTestsBase.cs" />
     <Compile Include="PerfTests\DynamicIndex\RandomizedPropertyValueTests.cs" />
     <Compile Include="PerfTests\DynamicIndex\RandomizedStartingWithTests.cs" />
+    <Compile Include="PerfTests\DynamicIndex\RandomizedTwoPropertyValuesTests.cs" />
     <Compile Include="PerfTests\RandomizedIdQueryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PerfTests\RavenDataStoreQueryPerformanceTests.cs" />

@@ -27,17 +27,11 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients title starts with", 100, async () =>
             {
-                var randomTitle = titles[_rnd.Next(titles.Count)];
-                var startWithTitle = randomTitle.Substring(0, _rnd.Next(1,randomTitle.Length)) + "*";
-                if (startWithTitle.Contains(" "))
-                {
-                    startWithTitle = "\"" + startWithTitle + "\"";
-                }
+                var startWithTitle = NextRandomStartsWithValue(titles);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(startWithTitle));
                 
-                var isEmpty = !uris.Any();
                 Assert.NotEmpty(uris);
             });
         }
@@ -49,18 +43,24 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random medicinal products title starts with", 100, async () =>
             {
-                var randomTitle = titles[_rnd.Next(titles.Count)];
-                var startWithTitle = randomTitle.Substring(0, _rnd.Next(1, randomTitle.Length)) + "*";
-                if (startWithTitle.Contains(" "))
-                {
-                    startWithTitle = "\"" + startWithTitle + "\"";
-                }
+                var startWithTitle = NextRandomStartsWithValue(titles);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(startWithTitle));
 
                 Assert.NotEmpty(uris);
             });
+        }
+
+        private string NextRandomStartsWithValue(List<string> list)
+        {
+            var randomTitle = list[_rnd.Next(list.Count)];
+            var startWithTitle = randomTitle.Substring(0, _rnd.Next(1, randomTitle.Length)) + "*";
+            if (startWithTitle.Contains(" "))
+            {
+                startWithTitle = "\"" + startWithTitle + "\"";
+            }
+            return startWithTitle;
         }
     }
 

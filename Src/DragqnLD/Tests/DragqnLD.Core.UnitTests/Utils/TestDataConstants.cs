@@ -2,11 +2,13 @@ namespace DragqnLD.Core.UnitTests.Utils
 {
     static internal class TestDataConstants
     {
-        
+        private const string RelTestDataDir = @"..\..\..\..\..\..\Doc\Test data\";
+
         public const int RandomSeed = 12345;
-        public const string IngredientsFolder = @"..\..\..\..\..\..\Doc\Test data\Ingredients";
-        public const string IngredientsTitlesFile = @"..\..\..\..\..\..\Doc\Test data\IngredientTitles.txt";
-        public const string IngredientsDescriptionsFile = @"..\..\..\..\..\..\Doc\Test data\IngredientDescriptions.txt";
+        public const string IngredientsFolder = RelTestDataDir + "Ingredients";
+        public const string IngredientsTitlesFile = RelTestDataDir + "IngredientTitles.txt";
+        public const string IngredientsMayTreatPregnancyFile = RelTestDataDir + "IngredientsMayTreatPregnancy.txt";
+        public const string IngredientsDescriptionsFile = RelTestDataDir + "IngredientDescriptions.txt";
         public const string MedicinalProductsFolder = @"..\..\..\..\..\..\Doc\Test data\MedicinalProducts";
         public const string MedicinalProductsTitlesFile = @"..\..\..\..\..\..\Doc\Test data\MedicinalProductsTitles.txt";
         internal const string IngredientsNamespacePrefix = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/";

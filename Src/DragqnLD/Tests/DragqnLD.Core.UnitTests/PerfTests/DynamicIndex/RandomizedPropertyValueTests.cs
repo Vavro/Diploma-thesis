@@ -28,7 +28,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
-                var randomTitle = String.Format("\"{0}\"",titles[_rnd.Next(titles.Count)]);
+                var randomTitle = NextRandomValue(titles);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(randomTitle));
@@ -44,7 +44,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
-                var randomDescription = String.Format("\"{0}\"",descriptions[_rnd.Next(descriptions.Count)]);
+                var randomDescription = NextRandomValue(descriptions);
                 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsDescription.AsCondition(randomDescription));
@@ -67,7 +67,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients description", 100, async () =>
             {
-                var randomDescription = categories[_rnd.Next(categories.Count)];
+                var randomDescription = RandomItem(categories);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsPregnancyCategory.AsCondition(randomDescription));
@@ -83,13 +83,23 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 
             await TestUtilities.Profile("Random ingredients title", 100, async () =>
             {
-                var randomTitle = String.Format("\"{0}\"",titles[_rnd.Next(titles.Count)]);
+                var randomTitle = NextRandomValue(titles);
 
                 var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
                     TestDataConstants.PropertyNameMedicinalProductsTitle.AsCondition(randomTitle));
 
                 Assert.NotEmpty(uris);
             });
+        }
+
+        private string NextRandomValue(List<string> titles)
+        {
+            return String.Format("\"{0}\"",RandomItem(titles));
+        }
+
+        private string RandomItem(List<string> titles)
+        {
+            return titles[_rnd.Next(titles.Count)];
         }
     }
 }
