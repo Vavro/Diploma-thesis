@@ -1,0 +1,113 @@
+INGREDIENT:
+
+CONSTRUCT
+{
+  <@thingURI> a enc:MasterIngredient ;
+    enc:title ?title ;
+    enc:description ?description ;
+    enc:hasPharmacologicalAction ?pa ;
+    enc:hasMechanismOfAction ?moa ;
+    enc:hasPhysiologicEffect ?pe ;
+    enc:hasPharmacokinetics ?pk ;
+    enc:hasPregnancyCategory ?pc ;
+    enc:mayTreat ?mt ;
+    enc:mayPrevent ?mp ;
+    enc:contraindicatedWith ?ci ;
+    enc:hasMedicinalProduct ?mpg .
+  ?pa a enc:PharmacologicalAction ;
+    enc:title ?paTitle ;
+    enc:description ?paDescription .
+  ?moa a enc:MechanismOfAction ;
+    enc:title ?moaTitle .
+  ?pe a enc:PhysiologicEffect ;
+    enc:title ?peTitle .
+  ?pk a enc:Pharmacokinetics ;
+    enc:title ?pkTitle .
+  ?mt a enc:DiseaseOrFinding ;
+    enc:title ?mtTitle ;
+    enc:description ?mtDescription .
+  ?mp a enc:DiseaseOrFinding ;
+    enc:title ?mpTitle ;
+    enc:description ?mpDescription .
+  ?ci a enc:DiseaseOrFinding ;
+    enc:title ?ciTitle ;
+    enc:description ?ciDescription .
+  ?mpg a enc:MedicinalProduct ;
+    enc:title ?mpgTitle ;
+    enc:description ?mpgDescription ;
+    enc:hasATCConcept ?mpgATC .
+  ?mpgATC a enc:ATCConcept ;
+    skos:prefLabel ?mpgATCLabel ;
+    skos:notation ?mpgATCNotation .
+}
+WHERE
+{
+  {
+    <@thingURI>
+      enc:title ?title .
+    OPTIONAL {
+      <@thingURI>
+        enc:description ?description .
+    }
+    OPTIONAL {
+      <@thingURI>
+        enc:indication ?indication .
+    }
+  } UNION {
+      <@thingURI>
+        enc:hasPharmacologicalAction ?pa .
+      ?pa enc:title ?paTitle .
+      OPTIONAL {
+	      ?pa enc:description ?paDescription .
+      }
+  } UNION {
+      <@thingURI>
+        enc:hasMechanismOfAction ?moa .
+      ?moa enc:title ?moaTitle .
+  } UNION {
+      <@thingURI>
+        enc:hasPhysiologicEffect ?pe .
+      ?pe enc:title ?peTitle .
+  } UNION {
+      <@thingURI>
+        enc:hasPharmacokinetics ?pk .
+      ?pk enc:title ?pkTitle .
+  } UNION {
+      <@thingURI>
+        enc:hasPregnancyCategory ?pc .
+  } UNION {
+    <@thingURI>
+      enc:hasMedicinalProduct ?mpg .
+    ?mpg enc:title ?mpgTitle ;
+         enc:hasMedicinalProductPackaging/sukl:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> .
+    OPTIONAL {
+      ?mpg enc:description ?mpgDescription .
+    }
+    OPTIONAL {
+      ?mpg enc:hasATCConcept ?mpgATC .
+      ?mpgATC skos:prefLabel ?mpgATCLabel ;
+              skos:notation ?mpgATCNotation .
+    }
+  } UNION {
+      <@thingURI>
+        enc:mayTreat ?mt .
+      ?mt enc:title ?mtTitle .
+      OPTIONAL {
+        ?mt enc:description ?mtDescription .
+      }
+  } UNION {
+      <@thingURI>
+        enc:mayPrevent ?mp .
+      ?mp enc:title ?mpTitle .
+      OPTIONAL {
+        ?mp enc:description ?mpDescription .
+      }
+  } UNION {
+      <@thingURI>
+        enc:contraindicatedWith ?ci .
+      ?ci enc:title ?ciTitle .
+      OPTIONAL {
+        ?ci enc:description ?ciDescription .
+      }
+  }
+}

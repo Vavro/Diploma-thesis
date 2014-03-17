@@ -1,0 +1,254 @@
+INGREDIENT:
+
+"CONSTRUCT\n" +
+					"{\n" +
+//					"  <" + thingURI + "> a enc:Ingredient ;\n" +
+					"  <" + thingURI + "> a enc:MasterIngredient ;\n" +
+					"    enc:title ?title ;\n" +
+					"    enc:description ?description ;\n" +
+					"    enc:hasPharmacologicalAction ?pa ;\n" +
+					"    enc:hasMechanismOfAction ?moa ;\n" +
+					"    enc:hasPhysiologicEffect ?pe ;\n" +
+					"    enc:hasPharmacokinetics ?pk ;\n" +
+					"    enc:hasPregnancyCategory ?pc ;\n" +
+					"    enc:mayTreat ?mt ;\n" +
+					"    enc:mayPrevent ?mp ;\n" +
+					"    enc:contraindicatedWith ?ci ;\n" +
+					"    enc:hasMedicinalProduct ?mpg .\n" +
+					"  ?pa a enc:PharmacologicalAction ;\n" +
+					"    enc:title ?paTitle ;\n" +
+					"    enc:description ?paDescription .\n" +
+					"  ?moa a enc:MechanismOfAction ;\n" +
+					"    enc:title ?moaTitle .\n" +
+					"  ?pe a enc:PhysiologicEffect ;\n" +
+					"    enc:title ?peTitle .\n" +
+					"  ?pk a enc:Pharmacokinetics ;\n" +
+					"    enc:title ?pkTitle .\n" +
+					"  ?mt a enc:DiseaseOrFinding ;\n" +
+					"    enc:title ?mtTitle ;\n" +
+					"    enc:description ?mtDescription .\n" +
+					"  ?mp a enc:DiseaseOrFinding ;\n" +
+					"    enc:title ?mpTitle ;\n" +
+					"    enc:description ?mpDescription .\n" +
+					"  ?ci a enc:DiseaseOrFinding ;\n" +
+					"    enc:title ?ciTitle ;\n" +
+					"    enc:description ?ciDescription .\n" +
+					"  ?mpg a enc:MedicinalProduct ;\n" +
+					"    enc:title ?mpgTitle ;\n" +
+					"    enc:description ?mpgDescription ;\n" +
+					"    enc:hasATCConcept ?mpgATC .\n" +
+					"  ?mpgATC a enc:ATCConcept ;\n" +
+					"    skos:prefLabel ?mpgATCLabel ;\n" +
+					"    skos:notation ?mpgATCNotation .\n" +
+					"}\n" +
+					"WHERE\n" +
+					"{\n" +
+					"  {\n" +
+					"    <" + thingURI + ">\n" +
+					"      enc:title ?title .\n" +
+					"    OPTIONAL {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:description ?description .\n" +
+					"    }\n" +
+					"    OPTIONAL {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:indication ?indication .\n" +
+					"    }\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:hasPharmacologicalAction ?pa .\n" +
+					"      ?pa enc:title ?paTitle .\n" +
+					"      OPTIONAL {\n" +
+					"	      ?pa enc:description ?paDescription .\n" +
+					"      }\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:hasMechanismOfAction ?moa .\n" +
+					"      ?moa enc:title ?moaTitle .\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:hasPhysiologicEffect ?pe .\n" +
+					"      ?pe enc:title ?peTitle .\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:hasPharmacokinetics ?pk .\n" +
+					"      ?pk enc:title ?pkTitle .\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:hasPregnancyCategory ?pc .\n" +
+					"  } UNION {\n" +
+					"    <" + thingURI + ">\n" +
+					"      enc:hasMedicinalProduct ?mpg .\n" +
+					"    ?mpg enc:title ?mpgTitle ;\n" +
+					"         enc:hasMedicinalProductPackaging/sukl:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R>. " +
+					"    OPTIONAL {\n" +
+					"      ?mpg enc:description ?mpgDescription .\n" +
+					"    }\n" +
+					"    OPTIONAL {\n" +
+					"      ?mpg enc:hasATCConcept ?mpgATC .\n" +
+					"      ?mpgATC skos:prefLabel ?mpgATCLabel ;\n" +
+					"              skos:notation ?mpgATCNotation .\n" +
+					"    }\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:mayTreat ?mt .\n" +
+					"      ?mt enc:title ?mtTitle .\n" +
+					"      OPTIONAL {\n" +
+					"        ?mt enc:description ?mtDescription .\n" +
+					"      }\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:mayPrevent ?mp .\n" +
+					"      ?mp enc:title ?mpTitle .\n" +
+					"      OPTIONAL {\n" +
+					"        ?mp enc:description ?mpDescription .\n" +
+					"      }\n" +
+					"  } UNION {\n" +
+					"      <" + thingURI + ">\n" +
+					"        enc:contraindicatedWith ?ci .\n" +
+					"      ?ci enc:title ?ciTitle .\n" +
+					"      OPTIONAL {\n" +
+					"        ?ci enc:description ?ciDescription .\n" +
+					"      }\n" +
+					"  }\n" +
+					"}";
+          
+
+MEDICINAL PRODUCT:
+
+"CONSTRUCT\n" +
+    				"{\n" +
+    				"  <" + thingURI + "> a enc:MedicinalProduct ;\n" +
+    				"    enc:title ?title ;\n" +
+    				"    enc:hasActiveIngredient ?ai ;\n" +
+    				"    enc:hasATCConcept ?atc ;\n" +
+    				"    enc:hasMedicinalProductPackaging ?mpp ;\n" +
+    				"    enc:hasPregnancyCategory ?aiPregnancyCategory .\n" +
+    				"  ?mpp a enc:MedicinalProductPackaging ;\n" +
+    				"    enc:title ?mppTitle ;\n" +
+    				"    enc:hasTitleSupplement ?mppTitleSupplementWithLanguage ;\n" +
+    				"    enc:hasStrength ?mppStrength ;\n" +
+    				"    enc:hasPackagingSize ?mppPackagingSize ;\n" +
+    				"    enc:hasRouteOfAdministration ?mppRouteOfAdministrationLabel ;\n" +
+    				"    enc:hasRegistrationState ?mppState ;\n" +
+    				"    enc:hasATCConcept ?mppAtc ;\n" +
+    				"    enc:hasReimbursementAmount ?mppReimbursementAmount ;\n" +
+    				"    enc:hasMaximalPrice ?mppMaximalPrice ;\n" +
+    				"    enc:hasAveragePrice ?mppAveragePrice ;\n" +
+    				"    enc:isOnMarket ?mppIsOnMarket ;\n" +
+    				"    enc:hasResumedMarketingDate ?mppResumedMarketingDate ;\n" +
+    				"    enc:hasBreakMarketingDate ?mppBreakMarketingDate ;\n" +
+    				"    enc:hasSPCDocument ?spcDocument ;\n" +
+    			    "	 enc:hasIndication ?indicationText ;\n" +
+    			    "	 enc:hasIndicationGroup ?indicationGroup .\n" +
+    				"  ?mppAtc a enc:ATCConcept ;\n" +
+    				"    dcterms:title ?atcTitle ;\n" +
+    				"    skos:notation ?atcNotation .\n" +
+//    				"  ?ai a enc:Ingredient ;\n" +
+					"  ?ai a enc:MasterIngredient ;\n" +
+    				"    enc:title ?aiTitle ;\n" +
+    				"    enc:description ?aiDescription ;\n" +
+    				"    enc:hasPregnancyCategory ?aiPregnancyCategory ;\n" +
+    				"    enc:hasPharmacologicalAction ?aiPa ;\n" +
+    				"    enc:contraindicatedWith ?ciWith .\n" +
+	    			"  ?ciWith a enc:DiseaseOrFinding ;\n" +
+	    			"    enc:title ?ciWithTitle .\n" +
+    				"  ?aiPa a enc:PharmacologicalAction ;\n" +
+    				"    enc:title ?aiPaTitle ;\n" +
+    				"    enc:description ?aiPaDescription .\n" +
+    				"  ?atc a enc:ATCConcept ;\n" +
+    				"    dcterms:title ?atcTitle ;\n" +
+    				"    skos:notation ?atcNotation ;\n" +
+    				"    skos:broaderTransitive ?atc1 .\n" +
+    				"  ?atc1 a enc:ATCConcept ;\n" +
+    				"    dcterms:title ?atc1Title ;\n" +
+    				"    skos:notation ?atc1Notation .\n" +
+    				"}\n" +
+    				"WHERE\n" +
+    				"{\n" +
+    				"  {\n" +
+    				"    <" + thingURI + ">\n" +
+    				"      enc:title ?title ;\n" +
+    				"      enc:hasMedicinalProductPackaging ?mpp .\n" +
+    				"    ?mpp\n" +
+    				"      dcterms:title ?mppTitle ;\n" +
+    				"      sukl:hasTitleSupplement ?mppTitleSupplement .\n" +
+//    				"      ?mpp sukl:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> .\n" +
+    				"    BIND (STRLANG(?mppTitleSupplement, 'cs') AS ?mppTitleSupplementWithLanguage)\n" +
+    				"	 {\n" +
+    		    	"      ?mpp sukl:hasStrength ?mppStrength .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasPackagingSize ?mppPackagingSize .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasRouteOfAdministration/skos:prefLabel ?mppRouteOfAdministrationLabel .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasRegistrationState ?mppState .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasATCCode ?mppAtc .\n" +
+    		    	"      ?mppAtc\n" +
+    		    	"        dcterms:title ?mppAtcTitle ;\n" +
+    		    	"        skos:notation ?mppAtcNotation .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp spc:hasSPC/spc:hasDocument ?spcDocument .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasResumedMarketingDate ?mppResumedMarketingDate .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasBreakMarketingDate ?mppBreakMarketingDate .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasMaximalPrice ?mppMaximalPrice .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasAveragePrice ?mppAveragePrice .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:isOnMarket ?mppIsOnMarket .\n" +
+    		    	"    } UNION {\n" +
+    		    	"      ?mpp sukl:hasReimbursement/sukl:hasAmount ?mppReimbursementAmount .\n" +
+    		    	"	 } UNION {\n" +
+					"	    ?mpp sukl:hasIndicationGroup/skos:prefLabel ?indicationGroup .\n" +
+					"	 } UNION {\n" +
+					"	    ?mpp spc:hasSPC/spc:hasDocument ?spcDocument .\n" +
+					"	    ?spcDocument sdo:hasSection ?indicationSection .\n" +
+					"	    ?indicationSection sdo:hasOrderNumber ?indicationOrderNumber .\n" +
+					"	     FILTER (?indicationOrderNumber = \"004.001\")\n" +
+					"	    ?indicationSection sdo:hasText ?indicationText .\n" +
+					"	 }\n" +
+    				"  } UNION {\n" +
+    				"    <" + thingURI + ">\n" +
+    				"      enc:hasATCConcept ?atc .\n" +
+    				"    ?atc\n" +
+    				"      dcterms:title ?atcTitle ;\n" +
+    				"      skos:notation ?atcNotation ;\n" +
+    				"      skos:broaderTransitive+ ?atc1 .\n" +
+    				"    ?atc1\n" +
+    				"      dcterms:title ?atc1Title ;\n" +
+    				"      skos:notation ?atc1Notation .\n" +
+    				"  } UNION {\n" +
+//    				"    ?ai a enc:Ingredient ;\n" +
+    				"    ?ai a enc:MasterIngredient ;\n" +
+    				"      enc:hasMedicinalProduct <" + thingURI + "> ;\n" +
+    				"      enc:title ?aiTitle .\n" +
+    				"    OPTIONAL {\n" +
+    				"      ?ai\n" +
+    				"        enc:description ?aiDescription .\n" +
+    				"    }\n" +
+    				"    OPTIONAL {\n" +
+    				"      ?ai\n" +
+    				"        enc:hasPregnancyCategory ?aiPregnancyCategory .\n" +
+    				"    }\n" +
+    				"	OPTIONAL {\n" +
+    				"      ?ai\n" +
+    				"        enc:contraindicatedWith ?ciWith .\n" +
+    				"      ?ciWith\n" +
+    				"        enc:title ?ciWithTitle .\n" +
+    				"    }\n" +
+    				"    OPTIONAL {\n" +
+    				"      ?ai\n" +
+    				"        enc:hasPharmacologicalAction ?aiPa .\n" +
+    				"      ?aiPa\n" +
+    				"        enc:title ?aiPaTitle .\n" +
+    				"      OPTIONAL {\n" +
+    				"        ?aiPa\n" +
+    				"          enc:description ?aiPaDescription .\n" +
+    				"      }\n" +
+    				"    }\n" +
+    				"  }\n" +
+    				"}\n";
