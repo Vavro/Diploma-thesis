@@ -11,7 +11,7 @@ using Xunit;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
-    public class RandomizedStartingWithTests : RavenDataStoreQueryPerformanceTests
+    public class RandomizedStartingWithTests : DataStorePerfTestsBase
     {
         private readonly Random _rnd;
 

@@ -10,7 +10,7 @@ using Xunit;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
-    public class RandomizedTwoPropertyValuesTests : RavenDataStoreQueryPerformanceTests
+    public class RandomizedTwoPropertyValuesTests : DataStorePerfTestsBase
     {
         private Random _rnd;
 
