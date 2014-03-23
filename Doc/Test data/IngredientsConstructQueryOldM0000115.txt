@@ -1,0 +1,137 @@
+PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core>
+
+CONSTRUCT
+{
+  <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115> a enc:Ingredient ;
+    enc:title ?title ;
+    enc:description ?description ;
+    enc:indication ?indication ;
+    enc:hasPharmacologicalAction ?pa ;
+    enc:hasMechanismOfAction ?moa ;
+    enc:hasPhysiologicEffect ?pe ;
+    enc:hasPharmacokinetics ?pk ;
+    enc:hasPregnancyCategory ?pc ;
+    enc:mayTreat ?mt ;
+    enc:mayPrevent ?mp ;
+    enc:contraindicatedWith ?ci ;
+    enc:hasMedicinalProductGroup ?mpg .
+  ?pa a enc:PharmacologicalAction ;
+    enc:title ?paTitle ;
+    enc:description ?paDescription .
+  ?moa a enc:MechanismOfAction ;
+    enc:title ?moaTitle .
+  ?pe a enc:PhysiologicEffect ;
+    enc:title ?peTitle .
+  ?pk a enc:Pharmacokinetics ;
+    enc:title ?pkTitle .
+  ?mt a enc:DiseaseOrFinding ;
+    enc:title ?mtTitle ;
+    enc:description ?mtDescription .
+  ?mp a enc:DiseaseOrFinding ;
+    enc:title ?mpTitle ;
+    enc:description ?mpDescription .
+  ?ci a enc:DiseaseOrFinding ;
+    enc:title ?ciTitle ;
+    enc:description ?ciDescription .
+  ?mpg a enc:MedicinalProductGroup ;
+    enc:title ?mpgTitle ;
+    enc:description ?mpgDescription ;
+    enc:hasRouteOfAdministration ?mpgRoALabel ;
+    enc:hasDosageForm ?mpgDFLabel ;
+    enc:hasATCConcept ?mpgATC .
+  ?mpgATC a enc:ATCConcept ;
+    skos:prefLabel ?mpgATCLabel ;
+    skos:notation ?mpgATCNotation .
+}
+WHERE
+{
+  {
+    <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+      enc:title ?title .
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:description ?description .
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:indication ?indication .
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:hasPharmacologicalAction ?pa .
+      ?pa enc:title ?paTitle .
+      OPTIONAL {
+        ?pa enc:description ?paDescription .
+      }
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:hasMechanismOfAction ?moa .
+      ?moa enc:title ?moaTitle .
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:hasPhysiologicEffect ?pe .
+      ?pe enc:title ?peTitle .
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:hasPharmacokinetics ?pk .
+      ?pk enc:title ?pkTitle .
+    }
+    OPTIONAL {
+      <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+        enc:hasPregnancyCategory ?pc .
+    }
+  }
+  UNION
+  {
+    <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+      enc:hasMedicinalProductGroup ?mpg .
+    ?mpg enc:title ?mpgTitle .
+    OPTIONAL {
+      ?mpg enc:description ?mpgDescription .
+    }
+    OPTIONAL {
+      ?mpg enc:hasRouteOfAdministration ?mpgRoA .
+      ?mpgRoA skos:prefLabel ?mpgRoALabel .
+    }
+    OPTIONAL {
+      ?mpg enc:hasDosageForm ?mpgDF .
+      ?mpgDF skos:prefLabel ?mpgDFLabel .
+    }
+    OPTIONAL {
+      ?mpg enc:hasATCConcept ?mpgATC .
+      ?mpgATC skos:prefLabel ?mpgATCLabel ;
+              skos:notation ?mpgATCNotation .
+    }
+  }
+  UNION
+  {
+    <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+      enc:mayTreat ?mt .
+    ?mt enc:title ?mtTitle .
+    OPTIONAL {
+      ?mt enc:description ?mtDescription .
+    }
+  }
+  UNION
+  {
+    <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+      enc:mayPrevent ?mp .
+    ?mp enc:title ?mpTitle .
+    OPTIONAL {
+      ?mp enc:description ?mpDescription .
+    }
+  }
+  UNION
+  {
+    <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
+      enc:contraindicatedWith ?ci .
+    ?ci enc:title ?ciTitle .
+    OPTIONAL {
+      ?ci enc:description ?ciDescription .
+    }
+  }
+}
