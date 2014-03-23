@@ -12,41 +12,56 @@ namespace JsonLdToRdf
 {
     class Program
     {
+        private const string medicinalProductsDirName = @"..\..\..\..\MedicinalProducts";
+        private const string ingredientsDirName = @"..\..\..\..\Ingredients";
+
         static void Main(string[] args)
         {
-            var source = "json-ld";
-            var target = "n3";
-            var convertUrl = String.Format(@"http://rdf-translator.appspot.com/convert/{0}/{1}/content", source,
-                target);
-
-            var ingredientsDirName = @"..\..\..\..\Ingredients";
-
             using (var client = new HttpClient())
             {
                 //client.BaseAddress = new Uri(convertUrl);
 
-                var ingredientsDir = new DirectoryInfo(ingredientsDirName);
-                var ingredientsFiles = ingredientsDir.GetFiles("*.json");
-                var outputFileDir = ingredientsDirName + ".n3";
-                if (Directory.Exists(outputFileDir))
-                {
-                    Directory.Delete(outputFileDir, true);
-                }
-                Directory.CreateDirectory(outputFileDir);
-
-                foreach (var inputFile in ingredientsFiles)
-                {
-                    var outputFileName = inputFile.Name + ".n3";
-                    var fullOutputFileName = Path.Combine(outputFileDir, outputFileName);
-
-                    CreateConvertedFile(inputFile, client, convertUrl, fullOutputFileName);
-                }
+                ConvertDir(ingredientsDirName, client);
+                ConvertDir(medicinalProductsDirName, client);
             }
 
             Console.ReadLine();
         }
 
-        private static void CreateConvertedFile(FileInfo inputFile, HttpClient client, string convertUrl,
+        private static void ConvertDir(string ingredientsDirName, HttpClient client)
+        {
+            var inputFilesDir = new DirectoryInfo(ingredientsDirName);
+            var inputFiles = inputFilesDir.GetFiles("*.json");
+            var outputFileDir = ingredientsDirName + ".n3";
+            if (Directory.Exists(outputFileDir))
+            {
+                Directory.Delete(outputFileDir, true);
+            }
+            Directory.CreateDirectory(outputFileDir);
+
+            int inputFileCount = inputFiles.Length;
+            Console.WriteLine("Converting directory {0} with {1} files ", ingredientsDirName, inputFileCount);
+            Console.WriteLine("Writing files to directory {0}", outputFileDir);
+
+            for (var i = 0; i < inputFiles.Length; i++)
+            {
+                var inputFile = inputFiles[i];
+                var outputFileName = inputFile.Name + ".n3";
+                var fullOutputFileName = Path.Combine(outputFileDir, outputFileName);
+
+                CreateConvertedFile(inputFile, client, fullOutputFileName);
+
+                Console.WriteLine("Converted file {0}/{1} : {2}", i+1, inputFileCount, outputFileName);
+            }
+
+            Console.WriteLine("Converting directory {0} Complete", ingredientsDirName);
+        }
+
+        private const string source = "json-ld";
+        private const string target = "n3";
+        private const string convertUrl = @"http://rdf-translator.appspot.com/convert/" + source + "/" + target + "/content";
+
+        private static void CreateConvertedFile(FileInfo inputFile, HttpClient client,
             string outputFileName)
         {
             using (var reader = new StreamReader(inputFile.FullName))
