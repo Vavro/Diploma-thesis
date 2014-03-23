@@ -46,7 +46,7 @@ namespace JsonLdToRdf
             for (var i = 0; i < inputFiles.Length; i++)
             {
                 var inputFile = inputFiles[i];
-                var outputFileName = inputFile.Name + ".n3";
+                var outputFileName = Path.GetFileNameWithoutExtension(inputFile.Name) + ".n3";
                 var fullOutputFileName = Path.Combine(outputFileDir, outputFileName);
 
                 CreateConvertedFile(inputFile, client, fullOutputFileName);
