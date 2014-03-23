@@ -1,0 +1,188 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A02> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii onemocnění spojených s poruchou acidity"@cs,
+        "DRUGS FOR ACID RELATED DISORDERS"@en ;
+    skos:notation "A02" .
+
+<http://linked.opendata.cz/resource/ATC/A02B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii peptického vředu a refluxní choroby jícnu"@cs,
+        "DRUGS FOR PEPTIC ULCER AND GASTRO-OESOPHAGEAL REFLUX"@en ;
+    skos:notation "A02B" .
+
+<http://linked.opendata.cz/resource/ATC/A02BC> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory protonové pumpy"@cs,
+        "Proton pump inhibitors"@en ;
+    skos:notation "A02BC" .
+
+<http://linked.opendata.cz/resource/ATC/A02BC01> a ns1:ATCConcept ;
+    dcterms:title "Omeprazol"@cs,
+        "Omeprazole"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A02",
+        "http://linked.opendata.cz/resource/ATC/A02B",
+        "http://linked.opendata.cz/resource/ATC/A02BC" ;
+    skos:notation "A02BC01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015293> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A highly effective inhibitor of gastric acid secretion used in the therapy of STOMACH ULCERS and ZOLLINGER-ELLISON SYNDROME. The drug inhibits the H(+)-K(+)-ATPase (H(+)-K(+)-EXCHANGING ATPASE) in the proton pump of GASTRIC PARIETAL CELLS.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Omeprazol"@cs,
+        "Omeprazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0427109> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Esomeprazole"@cs,
+        "Esomeprazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340> a ns1:PharmacologicalAction ;
+    ns1:description "Various agents with different action mechanisms used to treat or ameliorate PEPTIC ULCER or irritation of the gastrointestinal tract. This has included ANTIBIOTICS to treat HELICOBACTER INFECTIONS; HISTAMINE H2 ANTAGONISTS to reduce GASTRIC ACID secretion; and ANTACIDS for symptomatic relief.     "@en ;
+    ns1:title "Protivředové látky"@cs,
+        "Anti-ulcer agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024001> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:hasBreakMarketingDate "2013-03-12"^^xsd:date ;
+    ns1:hasIndication """Ortanol pro intravenózní použití je indikován v následujících indikacích jako alternativa k perorální
+léčbě:
+Dospělí:
+Léčba duodenálních vředů
+Prevence relapsu duodenálních vředů
+Léčba žaludečních vředů
+Prevence relapsu žaludečních vředů
+Eradikace Helicobacter pylori ( H. pylori ) u vředové choroby v kombinaci s vhodnými antibiotiky
+Léčba žaludečních a duodenálních vředů v souvislosti s podáváním NSAID
+Prevence žaludečních a duodenálních vředů v souvislosti s podáváním NSAID u rizikových pacientů
+Léčba refluxní ezofagitidy
+Dlouhodobá léčba pacientů se zhojenou refluxní ezofagitidou
+Léčba symptomatické refluxní choroby jícnu
+Léčba Zollinger-Ellisonova syndromu
+"""@cs ;
+    ns1:hasIndicationGroup "ANTACIDA (VČETNĚ ANTIULCEROSNÍCH LÉČIV)"@cs ;
+    ns1:hasMaximalPrice "161.580001831"^^xsd:float ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "139.479995728"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-02-05"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156424_doc" ;
+    ns1:hasStrength "40MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 1X40MG"@cs ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024002> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:hasIndication """Ortanol pro intravenózní použití je indikován v následujících indikacích jako alternativa k perorální
+léčbě:
+Dospělí:
+Léčba duodenálních vředů
+Prevence relapsu duodenálních vředů
+Léčba žaludečních vředů
+Prevence relapsu žaludečních vředů
+Eradikace Helicobacter pylori ( H. pylori ) u vředové choroby v kombinaci s vhodnými antibiotiky
+Léčba žaludečních a duodenálních vředů v souvislosti s podáváním NSAID
+Prevence žaludečních a duodenálních vředů v souvislosti s podáváním NSAID u rizikových pacientů
+Léčba refluxní ezofagitidy
+Dlouhodobá léčba pacientů se zhojenou refluxní ezofagitidou
+Léčba symptomatické refluxní choroby jícnu
+Léčba Zollinger-Ellisonova syndromu
+"""@cs ;
+    ns1:hasIndicationGroup "ANTACIDA (VČETNĚ ANTIULCEROSNÍCH LÉČIV)"@cs ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156424_doc" ;
+    ns1:hasStrength "40MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 5X40MG"@cs ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024003> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:hasIndication """Ortanol pro intravenózní použití je indikován v následujících indikacích jako alternativa k perorální
+léčbě:
+Dospělí:
+Léčba duodenálních vředů
+Prevence relapsu duodenálních vředů
+Léčba žaludečních vředů
+Prevence relapsu žaludečních vředů
+Eradikace Helicobacter pylori ( H. pylori ) u vředové choroby v kombinaci s vhodnými antibiotiky
+Léčba žaludečních a duodenálních vředů v souvislosti s podáváním NSAID
+Prevence žaludečních a duodenálních vředů v souvislosti s podáváním NSAID u rizikových pacientů
+Léčba refluxní ezofagitidy
+Dlouhodobá léčba pacientů se zhojenou refluxní ezofagitidou
+Léčba symptomatické refluxní choroby jícnu
+Léčba Zollinger-Ellisonova syndromu
+"""@cs ;
+    ns1:hasIndicationGroup "ANTACIDA (VČETNĚ ANTIULCEROSNÍCH LÉČIV)"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156424_doc" ;
+    ns1:hasStrength "40MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 10X40MG"@cs ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024004> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:hasIndication """Ortanol pro intravenózní použití je indikován v následujících indikacích jako alternativa k perorální
+léčbě:
+Dospělí:
+Léčba duodenálních vředů
+Prevence relapsu duodenálních vředů
+Léčba žaludečních vředů
+Prevence relapsu žaludečních vředů
+Eradikace Helicobacter pylori ( H. pylori ) u vředové choroby v kombinaci s vhodnými antibiotiky
+Léčba žaludečních a duodenálních vředů v souvislosti s podáváním NSAID
+Prevence žaludečních a duodenálních vředů v souvislosti s podáváním NSAID u rizikových pacientů
+Léčba refluxní ezofagitidy
+Dlouhodobá léčba pacientů se zhojenou refluxní ezofagitidou
+Léčba symptomatické refluxní choroby jícnu
+Léčba Zollinger-Ellisonova syndromu
+"""@cs ;
+    ns1:hasIndicationGroup "ANTACIDA (VČETNĚ ANTIULCEROSNÍCH LÉČIV)"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156424_doc" ;
+    ns1:hasStrength "40MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 20X40MG"@cs ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL--PRASEK-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU-40-MG-LAHVICKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015293",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0427109" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024001",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024002",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024003",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024004" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+

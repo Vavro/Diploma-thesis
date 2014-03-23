@@ -1,0 +1,140 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C05BB04> a ns1:ATCConcept ;
+    skos:notation "C05BB04" ;
+    skos:prefLabel "Natrium-tetradecyl-sulfát"@cs,
+        "Sodium tetradecyl sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020118> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000707",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000950",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001443",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001459",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002128",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002948",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003030",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003861" ;
+    ns1:description "An anionic surface-active agent used for its wetting properties in industry and used in medicine as an irritant and sclerosing agent for hemorrhoids and varicose veins.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020024" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-10-MG-ML-SOLUTION-FOR-INJECTION",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-2-MG-ML-SOLUTION-FOR-INJECTION",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-30-MG-ML-SOLUTION-FOR-INJECTION",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-5-MG-ML-SOLUTION-FOR-INJECTION" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019546",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020858" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009521",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009905" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001156",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003110" ;
+    ns1:title "Tetradekansulfát sodný"@cs,
+        "Sodium tetradecyl sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019546> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical agents injected into blood vessels and lymphatic sinuses to shrink or cause localized THROMBOSIS; FIBROSIS, and obliteration of the vessels. This treatment is applied in a number of conditions such as VARICOSE VEINS; HEMORRHOIDS; GASTRIC VARICES; ESOPHAGEAL VARICES; PEPTIC ULCER HEMORRHAGE.     "@en ;
+    ns1:title "Sklerotizující roztoky"@cs,
+        "Sclerosing solutions"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020858> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that modify interfacial tension of water; usually substances that have one lipophilic and one hydrophilic group in the molecule; includes soaps, detergents, emulsifiers, dispersing and wetting agents, and several groups of antiseptics.     "@en ;
+    ns1:title "Povrchově aktivní látky"@cs,
+        "Surface-active agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000707> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute, diffuse, and suppurative inflammation of loose connective tissue, particularly the deep subcutaneous tissues, and sometimes muscle, which is most commonly seen as a result of infection of a wound, ulcer, or other skin lesions.     "@en ;
+    ns1:title "Celulitis"@cs,
+        "Cellulitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.     "@en ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001156> a ns1:DiseaseOrFinding ;
+    ns1:description "Dilated blood vessels in the ESOPHAGUS or GASTRIC FUNDUS that shunt blood from the portal circulation (PORTAL SYSTEM) to the systemic venous circulation. Often they are observed in individuals with portal hypertension (HYPERTENSION, PORTAL).     "@en ;
+    ns1:title "Ezofágus a žaludek - varixy"@cs,
+        "Esophageal and gastric varices"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001443> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological conditions involving any of the various HEART VALVES and the associated structures (PAPILLARY MUSCLES and CHORDAE TENDINEAE).     "@en ;
+    ns1:title "Nemoci srdečních chlopní"@cs,
+        "Heart valve diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001459> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of the blood and blood forming tissues.     "@en ;
+    ns1:title "Krevní nemoci"@cs,
+        "Hematologic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002128> a ns1:DiseaseOrFinding ;
+    ns1:description "New abnormal growth of tissue. Malignant neoplasms show a greater degree of anaplasia and have the properties of invasion and metastasis, compared to benign neoplasms.     "@en ;
+    ns1:title "Nádory"@cs,
+        "Neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002948> a ns1:DiseaseOrFinding ;
+    ns1:description "A hypermetabolic syndrome caused by excess THYROID HORMONES which may come from endogenous or exogenous sources. The endogenous source of hormone may be thyroid HYPERPLASIA; THYROID NEOPLASMS; or hormone-producing extrathyroidal tissue. Thyrotoxicosis is characterized by NERVOUSNESS; TACHYCARDIA; FATIGUE; WEIGHT LOSS; heat intolerance; and excessive SWEATING.     "@en ;
+    ns1:title "Tyreotoxikóza"@cs,
+        "Thyrotoxicosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003110> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlarged and tortuous VEINS.     "@en ;
+    ns1:title "Varixy"@cs,
+        "Varicose veins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.     "@en ;
+    ns1:title "Sepse"@cs,
+        "Sepsis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020024> a ns1:MechanismOfAction ;
+    ns1:title "Sclerosing Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009521> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Platelet Activating Factor Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009905> a ns1:PhysiologicEffect ;
+    ns1:title "Vascular Sclerosing Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-10-MG-ML-SOLUTION-FOR-INJECTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05BB04" ;
+    ns1:title "FIBROVEIN 10 MG/ML SOLUTION FOR INJECTION"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-2-MG-ML-SOLUTION-FOR-INJECTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05BB04" ;
+    ns1:title "FIBROVEIN 2 MG/ML SOLUTION FOR INJECTION"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-30-MG-ML-SOLUTION-FOR-INJECTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05BB04" ;
+    ns1:title "FIBROVEIN 30 MG/ML SOLUTION FOR INJECTION"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FIBROVEIN-5-MG-ML-SOLUTION-FOR-INJECTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05BB04" ;
+    ns1:title "FIBROVEIN 5 MG/ML SOLUTION FOR INJECTION"@cs .
+
+

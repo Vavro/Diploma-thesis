@@ -1,0 +1,117 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A06AD11> a ns1:ATCConcept ;
+    skos:notation "A06AD11" ;
+    skos:prefLabel "Laktulóza"@cs,
+        "Lactulose"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012186> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001303" ;
+    ns1:description "A synthetic disaccharide used in the treatment of constipation and hepatic encephalopathy. It has also been used in the diagnosis of gastrointestinal disorders. (From Martindale, The Extra Pharmacopoeia, 30th ed, p887)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000065",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DUPHALAC",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DUPHALAC-SE-SVESTKOVOU-PRICHUTI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LACTULOSA-BIOMEDICA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LACTULOSE-AL-SIRUP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LAKTULOSA-SANDOZ-670-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LAKTULOSA-SANDOZ-SACKY-10-G-15-ML" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009371",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009871",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009875" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000841",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001496",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001618",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001862" ;
+    ns1:title "Laktulosa"@cs,
+        "Lactulose"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their effects on the gastrointestinal system, as to control gastric acidity, regulate gastrointestinal motility and water flow, and improve digestion.     "@en ;
+    ns1:title "Gastrointestinální látky"@cs,
+        "Gastrointestinal agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000841> a ns1:DiseaseOrFinding ;
+    ns1:description "Infrequent or difficult evacuation of FECES. These symptoms are associated with a variety of causes, including low DIETARY FIBER intake, emotional or nervous disturbances, systemic and structural disorders, drug-induced aggravation, and infections.     "@en ;
+    ns1:title "Zácpa"@cs,
+        "Constipation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001303> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of inherited enzyme deficiencies which feature elevations of GALACTOSE in the blood. This condition may be associated with deficiencies of GALACTOKINASE; UDPGLUCOSE-HEXOSE-1-PHOSPHATE URIDYLYLTRANSFERASE; or UDPGLUCOSE 4-EPIMERASE. The classic form is caused by UDPglucose-Hexose-1-Phosphate Uridylyltransferase deficiency, and presents in infancy with FAILURE TO THRIVE; VOMITING; and INTRACRANIAL HYPERTENSION. Affected individuals also may develop MENTAL RETARDATION; JAUNDICE; hepatosplenomegaly; ovarian failure (PRIMARY OVARIAN INSUFFICIENCY); and cataracts. (From Menkes, Textbook of Child Neurology, 5th ed, pp61-3)     "@en ;
+    ns1:title "Galaktosémie"@cs,
+        "Galactosemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001496> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by central nervous system dysfunction in association with LIVER FAILURE, including portal-systemic shunts. Clinical features include lethargy and CONFUSION (frequently progressing to COMA); ASTERIXIS; NYSTAGMUS, PATHOLOGIC; brisk oculovestibular reflexes; decorticate and decerebrate posturing; MUSCLE SPASTICITY; and bilateral extensor plantar reflexes (see REFLEX, BABINSKI). ELECTROENCEPHALOGRAPHY may demonstrate triphasic waves. (From Adams et al., Principles of Neurology, 6th ed, pp1117-20; Plum & Posner, Diagnosis of Stupor and Coma, 3rd ed, p222-5)     "@en ;
+    ns1:title "Jaterní encefalopatie"@cs,
+        "Hepatic encephalopathy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001618> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal increase of resistance to blood flow within the hepatic PORTAL SYSTEM, frequently seen in LIVER CIRRHOSIS and conditions with obstruction of the PORTAL VEIN.     "@en ;
+    ns1:title "Portální hypertenze"@cs,
+        "Hypertension, portal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000065> a ns1:MechanismOfAction ;
+    ns1:title "Physiochemical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009371> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Large Intestinal Motility"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009871> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulation Large Intestine Fluid/Electrolyte Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009875> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulation Small Intestine Fluid/Electrolyte Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUPHALAC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "DUPHALAC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUPHALAC-SE-SVESTKOVOU-PRICHUTI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "DUPHALAC SE ŠVESTKOVOU PŘÍCHUTÍ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LACTULOSA-BIOMEDICA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "LACTULOSA BIOMEDICA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LACTULOSE-AL-SIRUP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "LACTULOSE AL SIRUP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAKTULOSA-SANDOZ-670-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "LAKTULOSA SANDOZ 670 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAKTULOSA-SANDOZ-SACKY-10-G-15-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD11" ;
+    ns1:title "LAKTULOSA SANDOZ SÁČKY 10 G/15 ML"@cs .
+
+

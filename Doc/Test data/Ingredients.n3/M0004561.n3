@@ -1,0 +1,226 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D10AF01> a ns1:ATCConcept ;
+    skos:notation "D10AF01" ;
+    skos:prefLabel "Klindamycin"@cs,
+        "Clindamycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/D10AF51> a ns1:ATCConcept ;
+    skos:notation "D10AF51" ;
+    skos:prefLabel "Klindamycin, kombinace"@cs,
+        "Clindamycin, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AA10> a ns1:ATCConcept ;
+    skos:notation "G01AA10" ;
+    skos:prefLabel "Klindamycin"@cs,
+        "Clindamycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/J01FF01> a ns1:ATCConcept ;
+    skos:notation "J01FF01" ;
+    skos:prefLabel "Klindamycin"@cs,
+        "Clindamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004561> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001110",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003527" ;
+    ns1:description "An antibacterial agent that is a semisynthetic analog of LINCOMYCIN.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CLINDAMYCIN-KABI-150-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-C",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-T",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-VAGINALNI-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DUAC-GEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KLIMICIN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001097" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000276",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000288",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000299",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001103",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001878",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002256",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002379",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002433",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002437",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002716",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002756",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002989",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003107",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003443" ;
+    ns1:title "Klindamycin"@cs,
+        "Clindamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000276> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation of purulent material in tissues, organs, or circumscribed spaces, usually associated with signs of infection.     "@en ;
+    ns1:title "Absces"@cs,
+        "Abscess"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000288> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disorder of the pilosebaceous apparatus associated with an increase in sebum secretion. It is characterized by open comedones (blackheads), closed comedones (whiteheads), and pustular nodules. The cause is unknown, but heredity and age are predisposing factors.     "@en ;
+    ns1:title "Acne vulgaris"@cs,
+        "Acne vulgaris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000299> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the order ACTINOMYCETALES.     "@en ;
+    ns1:title "Actinomycetales - infekce"@cs,
+        "Actinomycetales infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000526> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus BACTEROIDES.     "@en ;
+    ns1:title "Bacteroides - infekce"@cs,
+        "Bacteroides infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001097> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOCARDIUM caused by BACTERIA that entered the bloodstream. The strains of bacteria vary with predisposing factors, such as CONGENITAL HEART DEFECTS; HEART VALVE DISEASES; HEART VALVE PROSTHESIS IMPLANTATION; or intravenous drug use.     "@en ;
+    ns1:title "Bakteriální endokarditida"@cs,
+        "Endocarditis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001103> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOMETRIUM, usually caused by intrauterine infections. Endometritis is the most common cause of postpartum fever.     "@en ;
+    ns1:title "Endometritida"@cs,
+        "Endometritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001110> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute inflammation of the INTESTINAL MUCOSA that is characterized by the presence of pseudomembranes or plaques in the SMALL INTESTINE (pseudomembranous enteritis) and the LARGE INTESTINE (pseudomembranous colitis). It is commonly associated with antibiotic therapy and CLOSTRIDIUM DIFFICILE colonization.     "@en ;
+    ns1:title "Pseudomembranózní enterokolitida"@cs,
+        "Enterocolitis, pseudomembranous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001878> a ns1:DiseaseOrFinding ;
+    ns1:description "Solitary or multiple collections of PUS within the lung parenchyma as a result of infection by bacteria, protozoa, or other agents.     "@en ;
+    ns1:title "Plicní absces"@cs,
+        "Lung abscess"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002256> a ns1:DiseaseOrFinding ;
+    ns1:title "Osteomyelitida"@cs,
+        "Osteomyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002379> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PERITONEUM lining the ABDOMINAL CAVITY as the result of infectious, autoimmune, or chemical processes. Primary peritonitis is due to infection of the PERITONEAL CAVITY via hematogenous or lymphatic spread and without intra-abdominal source. Secondary peritonitis arises from the ABDOMINAL CAVITY itself through RUPTURE or ABSCESS of intra-abdominal organs.     "@en ;
+    ns1:title "Peritonitida"@cs,
+        "Peritonitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002433> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of lung inflammation resulting from the aspiration of food, liquid, or gastric contents into the upper RESPIRATORY TRACT.     "@en ;
+    ns1:title "Aspirační pneumonie"@cs,
+        "Pneumonia, aspiration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002437> a ns1:DiseaseOrFinding ;
+    ns1:description "A pulmonary disease in humans occurring in immunodeficient or malnourished patients or infants, characterized by DYSPNEA, tachypnea, and HYPOXEMIA. Pneumocystis pneumonia is a frequently seen opportunistic infection in AIDS. It is caused by the fungus PNEUMOCYSTIS JIROVECII. The disease is also found in other MAMMALS where it is caused by related species of Pneumocystis.     "@en ;
+    ns1:title "Pneumocystová pneumonie"@cs,
+        "Pneumonia, pneumocystis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002716> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic disease associated with the presence of pathogenic microorganisms or their toxins in the blood.     "@en ;
+    ns1:title "Septikémie"@cs,
+        "Septicemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002989> a ns1:DiseaseOrFinding ;
+    ns1:description "The acquired form of infection by Toxoplasma gondii in animals and man.     "@en ;
+    ns1:title "Toxoplazmóza"@cs,
+        "Toxoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003107> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the vagina characterized by pain and a purulent discharge.     "@en ;
+    ns1:title "Vaginitida"@cs,
+        "Vaginitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003443> a ns1:DiseaseOrFinding ;
+    ns1:description "Polymicrobial, nonspecific vaginitis associated with positive cultures of Gardnerella vaginalis and other anaerobic organisms and a decrease in lactobacilli. It remains unclear whether the initial pathogenic event is caused by the growth of anaerobes or a primary decrease in lactobacilli.     "@en ;
+    ns1:title "Bakteriální vaginóza"@cs,
+        "Vaginosis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLINDAMYCIN-KABI-150-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01FF01" ;
+    ns1:title "CLINDAMYCIN KABI 150 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01FF01" ;
+    ns1:title "DALACIN C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-T> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D10AF01" ;
+    ns1:title "DALACIN T"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALACIN-VAGINALNI-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AA10" ;
+    ns1:title "DALACIN VAGINÁLNÍ KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUAC-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D10AF51" ;
+    ns1:title "DUAC GEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLIMICIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01FF01" ;
+    ns1:title "KLIMICIN"@cs .
+
+

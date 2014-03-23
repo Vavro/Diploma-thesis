@@ -1,0 +1,149 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A01AB03> a ns1:ATCConcept ;
+    skos:notation "A01AB03" ;
+    skos:prefLabel "Chlorhexidin"@cs,
+        "Chlorhexidine"@en .
+
+<http://linked.opendata.cz/resource/ATC/D08AC52> a ns1:ATCConcept ;
+    skos:notation "D08AC52" ;
+    skos:prefLabel "Chlorhexidin, kombinace"@cs,
+        "Chlorhexidine, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/R02AA05> a ns1:ATCConcept ;
+    skos:notation "R02AA05" ;
+    skos:prefLabel "Chlorhexidin"@cs,
+        "Chlorhexidine"@en .
+
+<http://linked.opendata.cz/resource/ATC/V07AY> a ns1:ATCConcept ;
+    skos:notation "V07AY" ;
+    skos:prefLabel "Jiné neterapeutické pomocné přípravky"@cs,
+        "Other non-therapeutic auxiliary products"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004138> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A disinfectant and topical anti-infective agent used also as mouthwash to prevent oral plaque.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000065" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CORSODYL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CORSODYL-1--GEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CYTEAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INSTILLAGEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTOFORT-2-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006572",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014138" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000653",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000919",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000926",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002370",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002764",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002832",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003506",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003507" ;
+    ns1:title "Chlorhexidin"@cs,
+        "Chlorhexidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006572> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on inanimate objects that destroy harmful microorganisms or inhibit their activity. Disinfectants are classed as complete, destroying SPORES as well as vegetative forms of microorganisms, or incomplete, destroying only vegetative forms of the organisms. They are distinguished from ANTISEPTICS, which are local anti-infective agents used on humans and other animals. (From Hawley's Condensed Chemical Dictionary, 11th ed)     "@en ;
+    ns1:title "Dezinficiencia"@cs,
+        "Disinfectants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014138> a ns1:PharmacologicalAction ;
+    ns1:description "Solutions for rinsing the mouth, possessing cleansing, germicidal, or palliative properties. (From Boucher's Clinical Dental Terminology, 4th ed)     "@en ;
+    ns1:title "Ústní vody"@cs,
+        "Mouthwashes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the mucous membranes of the mouth by a fungus of the genus CANDIDA. (Dorland, 27th ed)     "@en ;
+    ns1:title "Orální kandidóza"@cs,
+        "Candidiasis, oral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000919> a ns1:DiseaseOrFinding ;
+    ns1:description "Localized destruction of the tooth surface initiated by decalcification of the enamel followed by enzymatic lysis of organic structures and leading to cavity formation. If left unchecked, the cavity may penetrate the enamel and dentin and reach the pulp. The three most prominent theories used to explain the etiology of the disease are that acids produced by bacteria lead to decalcification; that micro-organisms destroy the enamel protein; or that keratolytic micro-organisms produce chelates that lead to decalcification.     "@en ;
+    ns1:title "Zubní kaz"@cs,
+        "Dental caries"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000926> a ns1:DiseaseOrFinding ;
+    ns1:description "A film that attaches to teeth, often causing DENTAL CARIES and GINGIVITIS. It is composed of MUCINS, secreted from salivary glands, and microorganisms.     "@en ;
+    ns1:title "Zubní plak"@cs,
+        "Dental plaque"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002370> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving the PERIODONTIUM including the gum (GINGIVA), the alveolar bone (ALVEOLAR PROCESS), the DENTAL CEMENTUM, and the PERIODONTAL LIGAMENT.     "@en ;
+    ns1:title "Parodont - nemoci"@cs,
+        "Periodontal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002764> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria, fungi, parasites, or viruses.     "@en ;
+    ns1:title "Kůže - nemoci infekční"@cs,
+        "Skin diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002832> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the soft tissues of the MOUTH, such as MUCOSA; PALATE; GINGIVA; and LIP.     "@en ;
+    ns1:title "Stomatitida"@cs,
+        "Stomatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003506> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that show up as pink (negative) when treated by the gram-staining method.     "@en ;
+    ns1:title "Gramnegativní bakteriální infekce"@cs,
+        "Gram-negative bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that retain the crystal violet stain (positive) when treated by the gram-staining method.     "@en ;
+    ns1:title "Grampozitivní bakteriální infekce"@cs,
+        "Gram-positive bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000065> a ns1:MechanismOfAction ;
+    ns1:title "Physiochemical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORSODYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AB03" ;
+    ns1:title "CORSODYL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORSODYL-1--GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AB03" ;
+    ns1:title "CORSODYL 1% GEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYTEAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D08AC52" ;
+    ns1:title "CYTEAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INSTILLAGEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V07AY" ;
+    ns1:title "INSTILLAGEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTOFORT-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AA05" ;
+    ns1:title "SEPTOFORT 2 MG"@cs .
+
+

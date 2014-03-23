@@ -1,0 +1,77 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01EB02> a ns1:ATCConcept ;
+    skos:notation "S01EB02" ;
+    skos:prefLabel "Karbachol"@cs,
+        "Carbachol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003323> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A slowly hydrolyzed cholinergic agonist that acts at both muscarinic and nicotinic receptors.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000104" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/MIOSTAT-INTRAOCULAR-SOLUTION" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0013919",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027989",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009819",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009943" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001345",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003350" ;
+    ns1:title "Karbachol"@cs,
+        "Carbachol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that have a strengthening effect on the heart or that can increase cardiac output. They may be CARDIAC GLYCOSIDES; SYMPATHOMIMETICS; or other drugs. They are used after MYOCARDIAL INFARCT; CARDIAC SURGICAL PROCEDURES; in SHOCK; or in congestive heart failure (HEART FAILURE).     "@en ;
+    ns1:title "Kardiotonika"@cs,
+        "Cardiotonic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0013919> a ns1:PharmacologicalAction ;
+    ns1:description "Agents causing contraction of the pupil of the eye. Some sources use the term miotics only for the parasympathomimetics but any drug used to induce miosis is included here.     "@en ;
+    ns1:title "Miotika"@cs,
+        "Miotics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027989> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and activate cholinergic receptors.     "@en ;
+    ns1:title "Cholinergní agonisté"@cs,
+        "Cholinergic agonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001345> a ns1:DiseaseOrFinding ;
+    ns1:description "An ocular disease, occurring in many forms, having as its primary characteristics an unstable or a sustained increase in the intraocular pressure which the eye cannot withstand without damage to its structure or impairment of its function. The consequences of the increased pressure may be manifested in a variety of symptoms, depending upon type and severity, such as excavation of the optic disk, hardness of the eyeball, corneal anesthesia, reduced visual acuity, seeing of colored halos around lights, disturbed dark adaptation, visual field defects, and headaches. (Dictionary of Visual Science, 4th ed)     "@en ;
+    ns1:title "Glaukom"@cs,
+        "Glaucoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003350> a ns1:DiseaseOrFinding ;
+    ns1:description "Pupillary constriction. This may result from congenital absence of the dilatator pupillary muscle, defective sympathetic innervation, or irritation of the CONJUNCTIVA or CORNEA.     "@en ;
+    ns1:title "Mióza"@cs,
+        "Miosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000104> a ns1:MechanismOfAction ;
+    ns1:title "Cholinergic Muscarinic Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009819> a ns1:PhysiologicEffect ;
+    ns1:title "Pupillary Constriction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009943> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intraocular Fluid Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIOSTAT-INTRAOCULAR-SOLUTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EB02" ;
+    ns1:title "MIOSTAT INTRAOCULAR SOLUTION"@cs .
+
+

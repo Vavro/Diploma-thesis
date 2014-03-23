@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R05> a ns1:ATCConcept ;
+    dcterms:title "Léčiva proti nachlazení a kašli"@cs,
+        "COUGH AND COLD PREPARATIONS"@en ;
+    skos:notation "R05" .
+
+<http://linked.opendata.cz/resource/ATC/R05C> a ns1:ATCConcept ;
+    dcterms:title "Expektorancia, kromě kombinací s antitusiky"@cs,
+        "EXPECTORANTS, EXCL. COMBINATIONS WITH COUGH SUPPRESSANTS"@en ;
+    skos:notation "R05C" .
+
+<http://linked.opendata.cz/resource/ATC/R05CB> a ns1:ATCConcept ;
+    dcterms:title "Mukolytika"@cs,
+        "Mucolytics"@en ;
+    skos:notation "R05CB" .
+
+<http://linked.opendata.cz/resource/ATC/R05CB06> a ns1:ATCConcept ;
+    dcterms:title "Ambroxol"@cs,
+        "Ambroxol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R05",
+        "http://linked.opendata.cz/resource/ATC/R05C",
+        "http://linked.opendata.cz/resource/ATC/R05CB" ;
+    skos:notation "R05CB06" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004925> a ns1:Ingredient ;
+    ns1:title "Ambroxol-hydrochlorid"@cs,
+        "Ambroxol hydrochloride"@en,
+        "Ambroxoli hydrochloridum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0094919> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB06" ;
+    ns1:hasIndication """Sekretolytická léčba akutních a chronických bronchopulmonálních onemocnění, která souvisejí s poruchou tvorby hlenu a jeho transportu, jako jsou akutní a chronická bronchitida, bronchiální astma, bronchiolitida, bronchiektázie, pneumonie, plicní TBC, pneumokoniózy, tracheitida, laryngitida, sinusitida, rhinitis sicca, mukoviscidóza.
+"""@cs ;
+    ns1:hasIndicationGroup "EXPECTORANTIA, MUCOLYTICA"@cs ;
+    ns1:hasPackagingSize "40ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147866_doc" ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X40ML"@cs ;
+    ns1:title "AMBROBENE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0094920> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB06" ;
+    ns1:hasIndication """Sekretolytická léčba akutních a chronických bronchopulmonálních onemocnění, která souvisejí s poruchou tvorby hlenu a jeho transportu, jako jsou akutní a chronická bronchitida, bronchiální astma, bronchiolitida, bronchiektázie, pneumonie, plicní TBC, pneumokoniózy, tracheitida, laryngitida, sinusitida, rhinitis sicca, mukoviscidóza.
+"""@cs ;
+    ns1:hasIndicationGroup "EXPECTORANTIA, MUCOLYTICA"@cs ;
+    ns1:hasPackagingSize "100ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147866_doc" ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML"@cs ;
+    ns1:title "AMBROBENE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMBROBENE-7-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB06" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004925" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0094919",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0094920" ;
+    ns1:title "AMBROBENE 7,5 MG/ML"@cs .
+
+

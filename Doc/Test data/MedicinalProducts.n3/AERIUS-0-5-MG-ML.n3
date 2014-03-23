@@ -1,0 +1,184 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R06> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06" .
+
+<http://linked.opendata.cz/resource/ATC/R06A> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06A" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antihistaminika pro systémovou aplikaci"@cs,
+        "Other antihistamines for systemic use"@en ;
+    skos:notation "R06AX" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    dcterms:title "Desloratadin"@cs,
+        "Desloratadine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R06",
+        "http://linked.opendata.cz/resource/ATC/R06A",
+        "http://linked.opendata.cz/resource/ATC/R06AX" ;
+    skos:notation "R06AX27" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028836> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X50ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028837> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "111.5"^^xsd:float ;
+    ns1:hasPackagingSize "60ML LŽČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "27.5499992371"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-11-07"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028838> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028839> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "223"^^xsd:float ;
+    ns1:hasPackagingSize "120ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "55.0999984741"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-10-23"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028840> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028841> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "225ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X225ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028842> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "300ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X300ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028843> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "30ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X30ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028844> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML STŘÍKAČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185330> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "223"^^xsd:float ;
+    ns1:hasPackagingSize "120ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "55.0999984741"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185331> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "111.5"^^xsd:float ;
+    ns1:hasPackagingSize "60ML LŽČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "27.5499992371"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML LŽIČKA"@cs ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AERIUS-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028836",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028837",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028838",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028839",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028840",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028841",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028842",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028843",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028844",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185330",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185331" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "AERIUS 0,5 MG/ML"@cs .
+
+

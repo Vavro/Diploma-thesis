@@ -1,0 +1,246 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C09AA03> a ns1:ATCConcept ;
+    skos:notation "C09AA03" ;
+    skos:prefLabel "Lisinopril"@cs,
+        "Lisinopril"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA03> a ns1:ATCConcept ;
+    skos:notation "C09BA03" ;
+    skos:prefLabel "Lisinopril a diuretika"@cs,
+        "Lisinopril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BB03> a ns1:ATCConcept ;
+    skos:notation "C09BB03" ;
+    skos:prefLabel "Lisinopril a amlodipin"@cs,
+        "lisinopril and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/R01BA52> a ns1:ATCConcept ;
+    skos:notation "R01BA52" ;
+    skos:prefLabel "Pseudoefedrin, kombinace"@cs,
+        "Pseudoephedrine, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/R06AX13> a ns1:ATCConcept ;
+    skos:notation "R06AX13" ;
+    skos:prefLabel "Loratadin"@cs,
+        "Loratadine"@en .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    skos:notation "R06AX27" ;
+    skos:prefLabel "Desloratadin"@cs,
+        "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026329> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A second-generation histamine H1 receptor antagonist used in the treatment of allergic rhinitis and urticaria. Unlike most classical antihistamines (HISTAMINE H1 ANTAGONISTS) it lacks central nervous system depressing effects such as drowsiness.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-10-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLARINASE-REPETABS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITINE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-5",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-2-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-10-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-20-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EROLIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-10-MG-DISTAB",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-5-MG-5-ML-SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-5",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORATADIN-RATIOPHARM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORDESTIN-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SKOPRYL-PLUS-H-20-MG-12-5-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0419330" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002512",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002634",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002635",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002778",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003088" ;
+    ns1:title "Loratadin"@cs,
+        "Loratadine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> a ns1:PharmacologicalAction ;
+    ns1:description "Agents, usually topical, that relieve itching (pruritus).     "@en ;
+    ns1:title "Antipruritika"@cs,
+        "Antipruritics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat allergic reactions. Most of these drugs act by preventing the release of inflammatory mediators or inhibiting the actions of released mediators on their target cells. (From AMA Drug Evaluations Annual, 1994, p475)     "@en ;
+    ns1:title "Antialergika"@cs,
+        "Anti-allergic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0419330> a ns1:PharmacologicalAction ;
+    ns1:description "A class of non-sedating drugs that bind to but do not activate histamine receptors (DRUG INVERSE AGONISM), thereby blocking the actions of histamine or histamine agonists. These antihistamines represent a heterogenous group of compounds with differing chemical structures, adverse effects, distribution, and metabolism. Compared to the early (first generation) antihistamines, these non-sedating antihistamines have greater receptor specificity, lower penetration of BLOOD-BRAIN BARRIER, and are less likely to cause drowsiness or psychomotor impairment.     "@en ;
+    ns1:title "Histamin h1 - antagonisté nesedativní"@cs,
+        "Histamine h1 antagonists, non-sedating"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002512> a ns1:DiseaseOrFinding ;
+    ns1:description "An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.     "@en ;
+    ns1:title "Pruritus"@cs,
+        "Pruritus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002634> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA, the mucous membrane lining the NASAL CAVITIES.     "@en ;
+    ns1:title "Rinitida"@cs,
+        "Rhinitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002635> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the mucous membrane of the nose similar to that found in hay fever except that symptoms persist throughout the year. The causes are usually air-borne allergens, particularly dusts, feathers, molds, animal fur, etc.     "@en ;
+    ns1:title "Celoroční alergická rýma"@cs,
+        "Rhinitis, allergic, perennial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002778> a ns1:DiseaseOrFinding ;
+    ns1:description "The sudden, forceful, involuntary expulsion of air from the NOSE and MOUTH caused by irritation to the MUCOUS MEMBRANES of the upper RESPIRATORY TRACT.     "@en ;
+    ns1:title "Kýchání"@cs,
+        "Sneezing"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003088> a ns1:DiseaseOrFinding ;
+    ns1:description "A vascular reaction of the skin characterized by erythema and wheal formation due to localized increase of vascular permeability. The causative mechanism may be allergy, infection, or stress.     "@en ;
+    ns1:title "Urtikarie"@cs,
+        "Urticaria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190> a ns1:MechanismOfAction ;
+    ns1:title "Histamine H1 Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Histamine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-10-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 10 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 20 MG/10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 20 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARINASE-REPETABS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:title "CLARINASE REPETABS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITINE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "CLARITINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DAPRIL 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DAPRIL 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAPRIL-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DAPRIL 5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DIROTON 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DIROTON 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DIROTON 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "DIROTON 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-10-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "DIROTON PLUS H 10 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-20-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "DIROTON PLUS H 20 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EROLIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "EROLIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-10-MG-DISTAB> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "FLONIDAN 10 MG DISTAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "FLONIDAN 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLONIDAN-5-MG-5-ML-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "FLONIDAN 5 MG/5 ML SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISINOPRIL-RATIOPHARM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISINOPRIL-RATIOPHARM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISINOPRIL-RATIOPHARM-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISINOPRIL-RATIOPHARM 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISIPRIL 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISIPRIL 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISIPRIL-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA03" ;
+    ns1:title "LISIPRIL 5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORATADIN-RATIOPHARM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX13" ;
+    ns1:title "LORATADIN-RATIOPHARM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORDESTIN-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:title "LORDESTIN 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SKOPRYL-PLUS-H-20-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "SKOPRYL PLUS H 20 MG/12,5 MG"@cs .
+
+

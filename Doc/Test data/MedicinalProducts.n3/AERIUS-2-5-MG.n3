@@ -1,0 +1,194 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R06> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06" .
+
+<http://linked.opendata.cz/resource/ATC/R06A> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06A" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antihistaminika pro systémovou aplikaci"@cs,
+        "Other antihistamines for systemic use"@en ;
+    skos:notation "R06AX" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    dcterms:title "Desloratadin"@cs,
+        "Desloratadine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R06",
+        "http://linked.opendata.cz/resource/ATC/R06A",
+        "http://linked.opendata.cz/resource/ATC/R06AX" ;
+    skos:notation "R06AX27" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028824> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 5X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028825> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 6X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028826> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 10X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028827> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "12"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 12X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028828> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "15"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 15X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028829> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "18"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 18X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028830> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 20X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028831> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "308.5"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "103.300003052"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-07-11"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028832> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 50X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028833> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "795.460021973"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "206.61000061"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-07-11"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 60X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028834> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "1004.23999023"^^xsd:float ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "309.910003662"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-07-11"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 90X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028835> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 100X2.5MG"@cs ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AERIUS-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028824",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028825",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028826",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028827",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028828",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028829",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028830",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028831",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028832",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028833",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028834",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028835" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "AERIUS 2,5 MG"@cs .
+
+

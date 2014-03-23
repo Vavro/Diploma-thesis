@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná antibakteriální léčiva"@cs,
+        "OTHER ANTIBACTERIALS"@en ;
+    skos:notation "J01X" .
+
+<http://linked.opendata.cz/resource/ATC/J01XA> a ns1:ATCConcept ;
+    dcterms:title "Glykopeptidová antibiotika"@cs,
+        "Glycopeptide antibacterials"@en ;
+    skos:notation "J01XA" .
+
+<http://linked.opendata.cz/resource/ATC/J01XA01> a ns1:ATCConcept ;
+    dcterms:title "Vankomycin"@cs,
+        "Vancomycin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/J",
+        "http://linked.opendata.cz/resource/ATC/J01",
+        "http://linked.opendata.cz/resource/ATC/J01X",
+        "http://linked.opendata.cz/resource/ATC/J01XA" ;
+    skos:notation "J01XA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022518> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Vancomycin hydrochloride"@cs,
+        "Vancomycin hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0092289> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01XA01" ;
+    ns1:hasIndication """Intravenózní infuze:
+Intravenózní podání roztoku vankomycinu je indikováno při léčbě těžkých, potenciálně život ohrožujících infekcích, které jsou vyvolány citlivými grampozitivními mikroorganismy a které nelze léčit jinými účinnými, méně toxickými antibiotiky, např. penicilinem nebo cefalosporiny.
+Vankomycin je antibiotikum, vůči kterému jsou téměř všechny kmeny stafylokoků dosud citlivé; aby se minimalizovala možnost vzniku rezistence, je proto třeba jej rezervovat pro ty případy, u nichž existuje specifická indikace.
+Vankomycin je jeden z léků volby při léčbě infekcí vyvolaných stafylokoky rezistentními na methicilin.
+Stafylokokové infekce:
+Vankomycin je užitečný při léčbě těžkých stafylokokových infekcí u pacientů, kterým nelze podat peniciliny nebo cefalosporiny anebo kteří na tato antibiotika nereagovali, nebo kteří trpí infekcí stafylokoky rezistentními na jiná antibiotoka včetně methicilinu.
+Účinnost vankomycinu byla dokumentována u infekcí vyvolaných stafylokoky, včetně:
+endokarditidy,
+kostních infekcí (osteomyelitidy),
+pneumonie,
+septikemie, sepse,
+infekcí měkkých tkání.
+Vankomycin byl úspěšně použit také jako profylaxe endokarditidy u vysoce rizikových pacientů při stomatologických a chirurgických výkonech.
+Perorální podání:
+Protože se vankomycin z trávicího ústrojí neabsorbuje, může se prášek vankomycinu pro přípravu infuzního roztoku použít po rozpuštění perorálně (viz bod 6.6) k léčbě určitých střevních infekcí:
+pseudomembranózní kolitidy navozené antibiotiky (obvykle vyvolané Clostridium difficile)
+stafylokokové enterokolitidy.
+Parenterální podávání vankomycinu samotné je v těchto indikacích neúčinné, může se však použít současně s perorální aplikací, pokud je to nutné.
+Protože se vankomycin z trávicího ústrojí neabsorbuje, je po perorálním podání při systémových infekcích neúčinný. 
+Je třeba vzít v úvahu oficiální směrnice pro přiměřené užívání antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "419.179992676"^^xsd:float ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "293.079986572"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-03-28"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC108987_doc" ;
+    ns1:hasStrength "500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 1X500MG"@cs ;
+    ns1:title "EDICIN 0,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EDICIN-0-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01XA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022518" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0092289" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "EDICIN 0,5 G"@cs .
+
+

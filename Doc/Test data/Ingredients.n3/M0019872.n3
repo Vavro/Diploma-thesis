@@ -1,0 +1,72 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06BA51> a ns1:ATCConcept ;
+    skos:notation "D06BA51" ;
+    skos:prefLabel "Sulfadiazin, stříbrná sůl, kombinace"@cs,
+        "Silver sulfadiazine, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0019872> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010203" ;
+    ns1:description "Antibacterial used topically in burn therapy.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/IALUGEN-PLUS" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008334",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008336" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000635",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546" ;
+    ns1:title "Stříbrný sulfadiazin"@cs,
+        "Silver sulfadiazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000635> a ns1:DiseaseOrFinding ;
+    ns1:description "Injuries to tissues caused by contact with heat, steam, chemicals (BURNS, CHEMICAL), electricity (BURNS, ELECTRIC), or the like.     "@en ;
+    ns1:title "Popálení"@cs,
+        "Burns"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> a ns1:DiseaseOrFinding ;
+    ns1:description "A child between 1 and 23 months of age.     "@en ;
+    ns1:title "Kojenec"@cs,
+        "Infant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008334> a ns1:PhysiologicEffect ;
+    ns1:title "Cell Membrane Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008336> a ns1:PhysiologicEffect ;
+    ns1:title "Cell Wall Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IALUGEN-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BA51" ;
+    ns1:title "IALUGEN PLUS"@cs .
+
+

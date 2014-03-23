@@ -1,0 +1,141 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L03> a ns1:ATCConcept ;
+    dcterms:title "Imunostimulancia"@cs,
+        "Immunomodulators/-stimulants "@en ;
+    skos:notation "L03" .
+
+<http://linked.opendata.cz/resource/ATC/L03A> a ns1:ATCConcept ;
+    dcterms:title "Imunostimulancia"@cs,
+        "Immunostimulants "@en ;
+    skos:notation "L03A" .
+
+<http://linked.opendata.cz/resource/ATC/L03AA> a ns1:ATCConcept ;
+    dcterms:title "Faktory stimulující kolonie hematopoetických buněk (CSF)"@cs,
+        "Colony stimulating factors"@en ;
+    skos:notation "L03AA" .
+
+<http://linked.opendata.cz/resource/ATC/L03AA02> a ns1:ATCConcept ;
+    dcterms:title "Filgrastim"@cs,
+        "Filgrastim"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L03",
+        "http://linked.opendata.cz/resource/ATC/L03A",
+        "http://linked.opendata.cz/resource/ATC/L03AA" ;
+    skos:notation "L03AA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028831> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Filgrastim"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167621> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 1X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167622> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "3X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 3X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167623> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 5X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167624> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 10X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500556> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 1X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500557> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "3X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 3X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500558> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 5X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500559> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "0.6MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF SOL 10X0.5ML"@cs ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FILGRASTIM-HEXAL-30-MU-0-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L03AA02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028831" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167621",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167622",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167623",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167624",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500556",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500557",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500558",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500559" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FILGRASTIM HEXAL 30 MU/0,5 ML"@cs .
+
+

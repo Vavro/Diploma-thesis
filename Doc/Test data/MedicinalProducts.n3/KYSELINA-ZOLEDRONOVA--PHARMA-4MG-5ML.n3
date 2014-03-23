@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M> a ns1:ATCConcept ;
+    dcterms:title "Muskuloskeletární systém"@cs,
+        "MUSCULO-SKELETAL SYSTEM"@en ;
+    skos:notation "M" .
+
+<http://linked.opendata.cz/resource/ATC/M05> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii nemocí kostí"@cs,
+        "DRUGS FOR TREATMENT OF BONE DISEASES"@en ;
+    skos:notation "M05" .
+
+<http://linked.opendata.cz/resource/ATC/M05B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující stavbu a mineralizaci kosti"@cs,
+        "DRUGS AFFECTING BONE STRUCTURE AND MINERALIZATION"@en ;
+    skos:notation "M05B" .
+
+<http://linked.opendata.cz/resource/ATC/M05BA> a ns1:ATCConcept ;
+    dcterms:title "Bisfosfonáty"@cs,
+        "Bisphosphonates"@en ;
+    skos:notation "M05BA" .
+
+<http://linked.opendata.cz/resource/ATC/M05BA08> a ns1:ATCConcept ;
+    dcterms:title "Kyselina zoledronová"@cs,
+        "Zoledronic acid"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/M",
+        "http://linked.opendata.cz/resource/ATC/M05",
+        "http://linked.opendata.cz/resource/ATC/M05B",
+        "http://linked.opendata.cz/resource/ATC/M05BA" ;
+    skos:notation "M05BA08" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0234599> a ns1:Ingredient ;
+    ns1:title "Zoledronate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179972> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA08" ;
+    ns1:hasIndication """Prevence kostních příhod (patologických zlomenin, kompresivních zlomenin obratlů, radiační nebo chirurgická léčba kostí nebo nádorem indukovaná hyperkalcemie) u dospělých pacientů s pokročilým maligním onemocněním postihujícím kosti. 
+Léčba dospělých pacientů s hyperkalcemií vyvolanou nádorovým onemocněním (TIH).
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasMaximalPrice "8992.12011719"^^xsd:float ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2152.68994141"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157933_doc" ;
+    ns1:hasStrength "0.8MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X5ML/4MG"@cs ;
+    ns1:title "KYSELINA ZOLEDRONOVÁ +PHARMA 4MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179973> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA08" ;
+    ns1:hasIndication """Prevence kostních příhod (patologických zlomenin, kompresivních zlomenin obratlů, radiační nebo chirurgická léčba kostí nebo nádorem indukovaná hyperkalcemie) u dospělých pacientů s pokročilým maligním onemocněním postihujícím kosti. 
+Léčba dospělých pacientů s hyperkalcemií vyvolanou nádorovým onemocněním (TIH).
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157933_doc" ;
+    ns1:hasStrength "0.8MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 4X5ML/4MG"@cs ;
+    ns1:title "KYSELINA ZOLEDRONOVÁ +PHARMA 4MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179974> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA08" ;
+    ns1:hasIndication """Prevence kostních příhod (patologických zlomenin, kompresivních zlomenin obratlů, radiační nebo chirurgická léčba kostí nebo nádorem indukovaná hyperkalcemie) u dospělých pacientů s pokročilým maligním onemocněním postihujícím kosti. 
+Léčba dospělých pacientů s hyperkalcemií vyvolanou nádorovým onemocněním (TIH).
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157933_doc" ;
+    ns1:hasStrength "0.8MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 5X5ML/4MG"@cs ;
+    ns1:title "KYSELINA ZOLEDRONOVÁ +PHARMA 4MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179975> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA08" ;
+    ns1:hasIndication """Prevence kostních příhod (patologických zlomenin, kompresivních zlomenin obratlů, radiační nebo chirurgická léčba kostí nebo nádorem indukovaná hyperkalcemie) u dospělých pacientů s pokročilým maligním onemocněním postihujícím kosti. 
+Léčba dospělých pacientů s hyperkalcemií vyvolanou nádorovým onemocněním (TIH).
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "10X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157933_doc" ;
+    ns1:hasStrength "0.8MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 10X5ML/4MG"@cs ;
+    ns1:title "KYSELINA ZOLEDRONOVÁ +PHARMA 4MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KYSELINA-ZOLEDRONOVA--PHARMA-4MG-5ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA08" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0234599" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179972",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179973",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179974",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179975" ;
+    ns1:title "KYSELINA ZOLEDRONOVÁ +PHARMA 4MG/5ML"@cs .
+
+

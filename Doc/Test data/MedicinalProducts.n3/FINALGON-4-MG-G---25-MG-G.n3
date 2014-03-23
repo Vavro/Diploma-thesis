@@ -1,0 +1,72 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M> a ns1:ATCConcept ;
+    dcterms:title "Muskuloskeletární systém"@cs,
+        "MUSCULO-SKELETAL SYSTEM"@en ;
+    skos:notation "M" .
+
+<http://linked.opendata.cz/resource/ATC/M02> a ns1:ATCConcept ;
+    dcterms:title "Lokální léčiva k terapii bolestí svalů a kloubů"@cs,
+        "TOPICAL PRODUCTS FOR JOINT AND MUSCULAR PAIN"@en ;
+    skos:notation "M02" .
+
+<http://linked.opendata.cz/resource/ATC/M02A> a ns1:ATCConcept ;
+    dcterms:title "Lokální léčiva k terapii bolestí svalů a kloubů"@cs,
+        "TOPICAL PRODUCTS FOR JOINT AND MUSCULAR PAIN"@en ;
+    skos:notation "M02A" .
+
+<http://linked.opendata.cz/resource/ATC/M02AB> a ns1:ATCConcept ;
+    dcterms:title "Kapsaicin a podobné látky"@cs,
+        "Capsaicin and similar agents"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/M",
+        "http://linked.opendata.cz/resource/ATC/M02",
+        "http://linked.opendata.cz/resource/ATC/M02A" ;
+    skos:notation "M02AB" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0121593> a ns1:Ingredient ;
+    ns1:title "Nonivamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0448607> a ns1:Ingredient ;
+    ns1:title "Nicoboxil"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179821> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AB" ;
+    ns1:hasIndication """Ke stimulaci průtoku krve kůží před odběrem vzorku kapilární krve, například z ušního lalůčku nebo bříška prstu.
+Přípravek Finalgon je indikován pro dospělé a děti od 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "DERIVANTIA"@cs ;
+    ns1:hasPackagingSize "20GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160036_doc" ;
+    ns1:hasTitleSupplement "DRM UNG 1X20GM"@cs ;
+    ns1:title "FINALGON 4 MG/G + 25 MG/G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179822> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AB" ;
+    ns1:hasIndication """Ke stimulaci průtoku krve kůží před odběrem vzorku kapilární krve, například z ušního lalůčku nebo bříška prstu.
+Přípravek Finalgon je indikován pro dospělé a děti od 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "DERIVANTIA"@cs ;
+    ns1:hasPackagingSize "50GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160036_doc" ;
+    ns1:hasTitleSupplement "DRM UNG 1X50GM"@cs ;
+    ns1:title "FINALGON 4 MG/G + 25 MG/G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINALGON-4-MG-G---25-MG-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AB" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0121593",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0448607" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179821",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179822" ;
+    ns1:title "FINALGON 4 MG/G + 25 MG/G"@cs .
+
+

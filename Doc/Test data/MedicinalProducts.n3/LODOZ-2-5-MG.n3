@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C07> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory"@cs,
+        "BETA BLOCKING AGENTS"@en ;
+    skos:notation "C07" .
+
+<http://linked.opendata.cz/resource/ATC/C07B> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory a thiazidy"@cs,
+        "BETA BLOCKING AGENTS AND THIAZIDES"@en ;
+    skos:notation "C07B" .
+
+<http://linked.opendata.cz/resource/ATC/C07BB> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory selektivní a thiazidy"@cs,
+        "Beta blocking agents, selective, and thiazides"@en ;
+    skos:notation "C07BB" .
+
+<http://linked.opendata.cz/resource/ATC/C07BB07> a ns1:ATCConcept ;
+    dcterms:title "Bisoprolol a thiazidy"@cs,
+        "Bisoprolol and thiazides"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C07",
+        "http://linked.opendata.cz/resource/ATC/C07B",
+        "http://linked.opendata.cz/resource/ATC/C07BB" ;
+    skos:notation "C07BB07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026258> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544001" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Bisoprolol fumarate"@cs,
+        "Bisoprolol fumarate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit the actions of the sympathetic nervous system by any mechanism. The most common of these are the ADRENERGIC ANTAGONISTS and drugs that deplete norepinephrine or reduce the release of transmitters from adrenergic postganglionic terminals (see ADRENERGIC AGENTS). Drugs that act in the central nervous system to reduce sympathetic activity (e.g., centrally acting alpha-2 adrenergic agonists, see ADRENERGIC ALPHA-AGONISTS) are included here.     "@en ;
+    ns1:title "Sympatolytika"@cs,
+        "Sympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544001> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and block the activation of ADRENERGIC BETA-1 RECEPTORS.     "@en ;
+    ns1:title "Beta-1-adrenergní receptory - antagonisté"@cs,
+        "Adrenergic beta-1 receptor antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013601> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:hasIndication """Mírná až středně závažná hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "153.220001221"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "59.25"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154196_doc" ;
+    ns1:hasStrength "2.5+6.25MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "LODOZ 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026258" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013601" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "LODOZ 2,5 MG"@cs .
+
+

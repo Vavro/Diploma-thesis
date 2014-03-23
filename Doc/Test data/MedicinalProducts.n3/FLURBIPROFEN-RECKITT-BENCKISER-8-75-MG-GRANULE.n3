@@ -1,0 +1,563 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R02> a ns1:ATCConcept ;
+    dcterms:title "Krční léčiva"@cs,
+        "THROAT PREPARATIONS"@en ;
+    skos:notation "R02" .
+
+<http://linked.opendata.cz/resource/ATC/R02A> a ns1:ATCConcept ;
+    dcterms:title "Krční léčiva"@cs,
+        "THROAT PREPARATIONS"@en ;
+    skos:notation "R02A" .
+
+<http://linked.opendata.cz/resource/ATC/R02AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná krční léčiva"@cs,
+        "Other throut preparations"@en ;
+    skos:notation "R02AX" .
+
+<http://linked.opendata.cz/resource/ATC/R02AX01> a ns1:ATCConcept ;
+    dcterms:title "Flurbiprofen"@cs,
+        "Flurbiprofen"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R02",
+        "http://linked.opendata.cz/resource/ATC/R02A",
+        "http://linked.opendata.cz/resource/ATC/R02AX" ;
+    skos:notation "R02AX01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008647> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001735",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010245" ;
+    ns1:description "An anti-inflammatory analgesic and antipyretic of the phenylalkynoic acid series. It has been shown to reduce bone resorption in periodontal disease by inhibiting CARBONIC ANHYDRASE.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Flurbiprofen"@cs,
+        "Flurbiprofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds capable of relieving pain without the loss of CONSCIOUSNESS.     "@en ;
+    ns1:title "Analgetika"@cs,
+        "Analgesics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001735> a ns1:DiseaseOrFinding ;
+    ns1:title "Keratitida dendritická"@cs,
+        "Keratitis, dendritic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství - třetí trimestr"@cs,
+        "Pregnancy trimester, third"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166397> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "1 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 1X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166398> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "2 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 2X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166399> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "3 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 3X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166400> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "4 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 4X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166401> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "5 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 5X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198418> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "6 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 6X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198419> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "7 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 7X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198420> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "8 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 8X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198421> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "9 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 9X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198422> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "10 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 10X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198423> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "11 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 11X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198424> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "12 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 12X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198425> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "13 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 13X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198426> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "14 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 14X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198427> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "15 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 15X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198428> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "16 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 16X8.75MG I"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198429> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "1 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 1X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198430> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "2 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 2X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198431> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "3 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 3X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198432> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "4 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 4X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198433> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "5 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 5X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198434> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "6 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 6X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198435> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "7 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 7X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198436> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "8 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 8X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198437> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "9 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 9X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198438> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "10 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 10X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198439> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "11 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 11X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198440> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "12 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 12X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198441> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "13 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 13X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198442> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "14 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 14X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198443> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "15 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 15X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198444> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasIndication """Flurbiprofen Reckitt Benckiser 8,75 mg Granule je indikován pro krátkodobé symptomatické zmírnění bolesti v krku.
+Flurbiprofen Reckitt Benckiser 8,75 mg Granule je určen pro dospělé a děti starší než 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "16 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153579_doc" ;
+    ns1:hasStrength "8.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GRA 16X8.75MG II"@cs ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLURBIPROFEN-RECKITT-BENCKISER-8-75-MG-GRANULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008647" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166397",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166398",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166399",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166401",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198418",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198419",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198420",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198421",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198422",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198423",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198424",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198425",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198426",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198427",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198428",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198429",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198430",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198431",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198432",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198433",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198434",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198435",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198436",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198437",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198438",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198439",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198440",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198441",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198442",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198443",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198444" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+

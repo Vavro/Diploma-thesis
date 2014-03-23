@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S02> a ns1:ATCConcept ;
+    dcterms:title "Otologika"@cs,
+        "OTOLOGICALS"@en ;
+    skos:notation "S02" .
+
+<http://linked.opendata.cz/resource/ATC/S02C> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy a antiinfektiva v kombinaci"@cs,
+        "CORTICOSTEROIDS AND ANTIINFECTIVES IN COMBINATION"@en ;
+    skos:notation "S02C" .
+
+<http://linked.opendata.cz/resource/ATC/S02CA> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy a antiinfektiva v kombinaci"@cs,
+        "Corticosteroids and antiinfectives in combination"@en ;
+    skos:notation "S02CA" .
+
+<http://linked.opendata.cz/resource/ATC/S02CA05> a ns1:ATCConcept ;
+    dcterms:title "Fluocinolon-acetonid a antiinfektiva"@cs,
+        "Fluocinolone acetonide and antiinfectives"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S02",
+        "http://linked.opendata.cz/resource/ATC/S02C",
+        "http://linked.opendata.cz/resource/ATC/S02CA" ;
+    skos:notation "S02CA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004498> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A broad-spectrum antimicrobial carboxyfluoroquinoline.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Ciprofloxacin"@cs,
+        "Ciprofloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008592> a ns1:Ingredient ;
+    ns1:description "A glucocorticoid derivative used topically in the treatment of various skin disorders. It is usually employed as a cream, gel, lotion, or ointment. It has also been used topically in the treatment of inflammatory eye, ear, and nose disorders. (From Martindale, The Extra Pharmacopoeia, 30th ed, p732)     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Fluocinolonacetonid"@cs,
+        "Fluocinolone acetonide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that prevent infectious agents or organisms from spreading or kill infectious agents in order to prevent the spread of infection.     "@en ;
+    ns1:title "Antiinfekční látky"@cs,
+        "Anti-infective agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0189423> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S02CA05" ;
+    ns1:hasIndication """Infalin duo 3 mg/ml + 0,25 mg/ml ušní kapky, roztok je indikován u dospělých a dětí k místní léčbě akutní otitis externa s intaktním bubínkem, vyvolané mikroorganismy citlivými na ciprofloxacin  (viz body 4.2, 4.4 a 5.1). 
+Je třeba brát zřetel na oficiální pokyny pro patřičné použití antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Ušní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158821_doc" ;
+    ns1:hasStrength "3/0.25 MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "AUR GTT SOL 1X10ML"@cs ;
+    ns1:title "INFALIN DUO 3 MG/ML + 0,25 MG/ML UŠNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFALIN-DUO-3-MG-ML---0-25-MG-ML-USNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S02CA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004498",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008592" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0189423" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "INFALIN DUO 3 MG/ML + 0,25 MG/ML UŠNÍ KAPKY, ROZTOK"@cs .
+
+

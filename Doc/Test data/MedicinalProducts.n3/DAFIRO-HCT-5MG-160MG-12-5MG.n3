@@ -1,0 +1,249 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09D> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, kombinace"@cs,
+        "ANGIOTENSIN II ANTAGONISTS, COMBINATIONS"@en ;
+    skos:notation "C09D" .
+
+<http://linked.opendata.cz/resource/ATC/C09DX> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, jiné kombinace"@cs,
+        "Angiotensin II antagonists, other combinations"@en ;
+    skos:notation "C09DX" .
+
+<http://linked.opendata.cz/resource/ATC/C09DX01> a ns1:ATCConcept ;
+    dcterms:title "Valsartan, amlodipin a hydrochorothiazid"@cs,
+        "Amlodipine besylate, valsartan, hydrochlorothiazide"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C09",
+        "http://linked.opendata.cz/resource/ATC/C09D",
+        "http://linked.opendata.cz/resource/ATC/C09DX" ;
+    skos:notation "C09DX01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649" ;
+    ns1:description "A long-acting dihydropyridine calcium channel blocker. It is effective in the treatment of ANGINA PECTORIS and HYPERTENSION.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Amlodipin"@cs,
+        "Amlodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0217346> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001573",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Valsartan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167137> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM14X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167138> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM28X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167139> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM30X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167140> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM56X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167141> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM90X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167142> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM98X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167143> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBLFLM280X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167144> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "PORTBLFLM56X1X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167145> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "PORTBLFLM98X1X5MG/160MG/12.5MG"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167146> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "PORTBLFLM280X1X5MG/160MG/12.5M"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167147> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280X1(4X70)"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "PORTBLFLM280X1X5MG/160MG/12.5M"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167148> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280X1(20X14)"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "PORTBLFLM280X1X5MG/160MG/12.5M"@cs ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0217346" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167137",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167138",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167139",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167140",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167141",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167142",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167143",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167144",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167145",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167146",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167147",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167148" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+

@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B03> a ns1:ATCConcept ;
+    dcterms:title "Antianemika"@cs,
+        "ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03" .
+
+<http://linked.opendata.cz/resource/ATC/B03X> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "OTHER ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03X" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "Other antianemic preparations"@en ;
+    skos:notation "B03XA" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA01> a ns1:ATCConcept ;
+    dcterms:title "Erytropoetin"@cs,
+        "Erythropoietin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B03",
+        "http://linked.opendata.cz/resource/ATC/B03X",
+        "http://linked.opendata.cz/resource/ATC/B03XA" ;
+    skos:notation "B03XA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028770> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616" ;
+    ns1:title "Epoetin alfa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014968> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasIndication """Léčba symptomatické anemie spojené s chronickým renálním selháním (CRF) u dospělých a pediatrických pacientů
+Léčba anemie spojené s chronickým renálním selháním u pediatrických a dospělých hemodialyzovaných pacientů a dospělých pacientů dialyzovaných peritoneálně.
+Léčba těžké anemie renálního původu s vyjádřenými klinickými příznaky u dospělých pacientů s renální insuficiencí, kteří nejsou dosud dialyzováni.
+Léčba anemie a snížení potřeby transfuze dospělých pacientů podstupujících chemoterapii solidních tumorů, maligního lymfomu nebo mnohočetného myelomu, a v případě rizika transfuze vyplývající z celkového stavu pacienta (např. stavu kardiovaskulárního systému, anemie již přítomné před zahájením chemoterapie).
+Zvýšení výtěžku autologní krve u dospělých pacientů v programu předoperačního autologního odběru a ke snížení rizika alogenních krevních transfuzí. 
+Použití v této indikaci musí být posouzeno s ohledem na popisovaná rizika tromboembolických příhod. Léčba je vhodná pouze u středně závažné anemie (Hb 10‑13 g/dl �[6,2-8,1 mmol/l], bez deficitu železa) v případě, že nelze využít postupů pro úsporu krve nebo tyto postupy nepostačují při plánovaném velkém chirurgickém výkonu náročném na potřebu velkého objemu krve (4 nebo více krevních jednotek u žen a 5 nebo více u mužů).
+Snížení počtu alogenních krevních transfuzí u dospělých pacientů bez deficitu železa, především u plánovaných velkých ortopedických operací s vysokým rizikem komplikací spojených s transfuzí. Použití by mělo být vymezeno pro pacienty se středně závažnou anemií (Hb 10‑13 g/dl), kteří nejsou zařazeni do programu předoperačního autologního odběru a při očekávané krevní ztrátě středního rozsahu (900-1800 ml).
+Při použití v perichirurgii je zapotřebí vždy dodržovat zásady správného postupu zacházení s krví a krevními deriváty.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasMaximalPrice "1944.56994629"^^xsd:float ;
+    ns1:hasPackagingSize "6X0.5ML ST"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1229.93005371"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132237_doc" ;
+    ns1:hasStrength "2KU/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 6X0.5ML/1KU"@cs ;
+    ns1:title "EPREX 200 IU/0,1ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPREX-200-IU-0-1ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028770" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014968" ;
+    ns1:title "EPREX 200 IU/0,1ML"@cs .
+
+

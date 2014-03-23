@@ -1,0 +1,328 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A01AD11> a ns1:ATCConcept ;
+    skos:notation "A01AD11" ;
+    skos:prefLabel "Různá jiná léčiva pro lokální léčbu v dutině ústní"@cs,
+        "Various"@en .
+
+<http://linked.opendata.cz/resource/ATC/C01BB01> a ns1:ATCConcept ;
+    skos:notation "C01BB01" ;
+    skos:prefLabel "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C05AA09> a ns1:ATCConcept ;
+    skos:notation "C05AA09" ;
+    skos:prefLabel "Dexamethason"@cs,
+        "Dexamethasone"@en .
+
+<http://linked.opendata.cz/resource/ATC/C05AD01> a ns1:ATCConcept ;
+    skos:notation "C05AD01" ;
+    skos:prefLabel "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/ATC/D04AB01> a ns1:ATCConcept ;
+    skos:notation "D04AB01" ;
+    skos:prefLabel "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/ATC/M01AB05> a ns1:ATCConcept ;
+    skos:notation "M01AB05" ;
+    skos:prefLabel "Diklofenak"@cs,
+        "Diclofenac"@en .
+
+<http://linked.opendata.cz/resource/ATC/N01BB02> a ns1:ATCConcept ;
+    skos:notation "N01BB02" ;
+    skos:prefLabel "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/ATC/N01BB20> a ns1:ATCConcept ;
+    skos:notation "N01BB20" ;
+    skos:prefLabel "Amidy, kombinace"@cs,
+        "Amides, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/N01BB52> a ns1:ATCConcept ;
+    skos:notation "N01BB52" ;
+    skos:prefLabel "Lidokain, kombinace"@cs,
+        "Lidocaine, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/R02AA20> a ns1:ATCConcept ;
+    skos:notation "R02AA20" ;
+    skos:prefLabel "Různá jiná krční antiseptika"@cs,
+        "Various"@en .
+
+<http://linked.opendata.cz/resource/ATC/R02AD02> a ns1:ATCConcept ;
+    skos:notation "R02AD02" ;
+    skos:prefLabel "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/ATC/S02DA30> a ns1:ATCConcept ;
+    skos:notation "S02DA30" ;
+    skos:prefLabel "Analgetika a anestetika, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/V07AY> a ns1:ATCConcept ;
+    skos:notation "V07AY" ;
+    skos:prefLabel "Jiné neterapeutické pomocné přípravky"@cs,
+        "Other non-therapeutic auxiliary products"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012483> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000304",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A local anesthetic and cardiac depressant used as an antiarrhythmia agent. Its actions are more intense and its effects more prolonged than those of PROCAINE but its duration of action is shorter than that of BUPIVACAINE or PRILOCAINE.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOGYL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CALGEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOBEXIL-H-SUP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOBEXIL-H-UNG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOXIPROCT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOXIPROCT-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EMLA-KREM-5-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INSTILLAGEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KAMISTAD-SENZITIV",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIDOCAIN-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIDOCAIN-2-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLFEN-75",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OROFAR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OTIPAX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROCTO-GLYVENOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RAPYDEN-70-MG-70-MG--LECIVA-NAPLAST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STREPSILS-PLUS-SPRAY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRACHISAN-8-MG-PROTI-BOLESTI-V-KRKU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VERSATIS-5--LECIVA-NAPLAST" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0559316" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008330",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008472",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000635",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001159",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001177",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001531",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002036",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002162",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002888",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002892",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003118",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003550",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003849",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003869" ;
+    ns1:title "Lidokain"@cs,
+        "Lidocaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0559316> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that inhibit the activation of VOLTAGE-GATED SODIUM CHANNELS.     "@en ;
+    ns1:title "Blokátory sodíkových kanálů řízených napětím"@cs,
+        "Voltage-gated sodium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000304> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of fainting spells caused by heart block, often an atrioventricular block, that leads to BRADYCARDIA and drop in CARDIAC OUTPUT. When the cardiac output becomes too low, the patient faints (SYNCOPE). In some cases, the syncope attacks are transient and in others cases repetitive and persistent.     "@en ;
+    ns1:title "Adamsův-stokesův syndrom"@cs,
+        "Adams-stokes syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000635> a ns1:DiseaseOrFinding ;
+    ns1:description "Injuries to tissues caused by contact with heat, steam, chemicals (BURNS, CHEMICAL), electricity (BURNS, ELECTRIC), or the like.     "@en ;
+    ns1:title "Popálení"@cs,
+        "Burns"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001159> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes in the ESOPHAGUS.     "@en ;
+    ns1:title "Ezofágus - nemoci"@cs,
+        "Esophageal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001177> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of cardiac arrhythmias in which the cardiac contractions are not initiated at the SINOATRIAL NODE. They include both atrial and ventricular premature beats, and are also known as extra or ectopic heartbeats. Their frequency is increased in heart diseases.     "@en ;
+    ns1:title "Extrasystoly"@cs,
+        "Cardiac complexes, premature"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001531> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious, usually self-limited, disease believed to represent activation of latent varicella-zoster virus (HERPESVIRUS 3, HUMAN) in those who have been rendered partially immune after a previous attack of CHICKENPOX. It involves the SENSORY GANGLIA and their areas of innervation and is characterized by severe neuralgic pain along the distribution of the affected nerve and crops of clustered vesicles over the area. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Herpes zoster"@cs,
+        "Herpes zoster"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002036> a ns1:DiseaseOrFinding ;
+    ns1:title "Ústa - nemoci"@cs,
+        "Mouth diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002888> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally rapid heartbeat, usually with a HEART RATE above 100 beats per minute for adults. Tachycardia accompanied by disturbance in the cardiac depolarization (cardiac arrhythmia) is called tachyarrhythmia.     "@en ;
+    ns1:title "Tachykardie"@cs,
+        "Tachycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002892> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally rapid heartbeats with sudden onset and cessation.     "@en ;
+    ns1:title "Paroxysmální tachykardie"@cs,
+        "Tachycardia, paroxysmal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003118> a ns1:DiseaseOrFinding ;
+    ns1:description "A potentially lethal cardiac arrhythmia that is characterized by uncoordinated extremely rapid firing of electrical impulses (400-600/min) in HEART VENTRICLES. Such asynchronous ventricular quivering or fibrillation prevents any effective cardiac output and results in unconsciousness (SYNCOPE). It is one of the major electrocardiographic patterns seen with CARDIAC ARREST.     "@en ;
+    ns1:title "Fibrilace komor"@cs,
+        "Ventricular fibrillation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003541> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormally rapid ventricular rhythm usually in excess of 150 beats per minute. It is generated within the ventricle below the BUNDLE OF HIS, either as autonomic impulse formation or reentrant impulse conduction. Depending on the etiology, onset of ventricular tachycardia can be paroxysmal (sudden) or nonparoxysmal, its wide QRS complexes can be uniform or polymorphic, and the ventricular beating may be independent of the atrial beating (AV dissociation).     "@en ;
+    ns1:title "Komorová tachykardie"@cs,
+        "Tachycardia, ventricular"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003849> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which HEART VENTRICLES exhibit impaired function.     "@en ;
+    ns1:title "Komorová dysfunkce"@cs,
+        "Ventricular dysfunction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003869> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of cardiac arrhythmia with premature contractions of the HEART VENTRICLES. It is characterized by the premature QRS complex on ECG that is of abnormal shape and great duration (generally >129 msec). It is the most common form of all cardiac arrhythmias. Premature ventricular complexes have no clinical significance except in concurrence with heart diseases.     "@en ;
+    ns1:title "Komorové extrasystoly"@cs,
+        "Ventricular premature complexes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008330> a ns1:PhysiologicEffect ;
+    ns1:title "Cardiac Rhythm Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008472> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cardiac Muscle Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sensory-Somatic Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOGYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AD11" ;
+    ns1:title "ALVOGYL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALGEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AD11" ;
+    ns1:title "CALGEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOBEXIL-H-SUP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05AD01" ;
+    ns1:title "DOBEXIL H SUP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOBEXIL-H-UNG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05AD01" ;
+    ns1:title "DOBEXIL H UNG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOXIPROCT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05AD01" ;
+    ns1:title "DOXIPROCT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOXIPROCT-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05AA09" ;
+    ns1:title "DOXIPROCT PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMLA-KREM-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB20" ;
+    ns1:title "EMLA KRÉM 5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INSTILLAGEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V07AY" ;
+    ns1:title "INSTILLAGEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KAMISTAD-SENZITIV> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AD11" ;
+    ns1:title "KAMISTAD SENZITIV"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIDOCAIN-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D04AB01" ;
+    ns1:title "LIDOCAIN 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIDOCAIN-2-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01BB01" ;
+    ns1:title "LIDOCAIN 2%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLFEN-75> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AB05" ;
+    ns1:title "OLFEN-75"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OROFAR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AA20" ;
+    ns1:title "OROFAR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OTIPAX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S02DA30" ;
+    ns1:title "OTIPAX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROCTO-GLYVENOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05AD01" ;
+    ns1:title "PROCTO-GLYVENOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RAPYDEN-70-MG-70-MG--LECIVA-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB52" ;
+    ns1:title "RAPYDEN 70 MG/70 MG, LÉČIVÁ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPSILS-PLUS-SPRAY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AA20" ;
+    ns1:title "STREPSILS PLUS SPRAY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRACHISAN-8-MG-PROTI-BOLESTI-V-KRKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AD02" ;
+    ns1:title "TRACHISAN 8 MG PROTI BOLESTI V KRKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VERSATIS-5--LECIVA-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB02" ;
+    ns1:title "VERSATIS 5% LÉČIVÁ NÁPLAST"@cs .
+
+

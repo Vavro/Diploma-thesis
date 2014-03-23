@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01B> a ns1:ATCConcept ;
+    dcterms:title "Protizánětlivá léčiva"@cs,
+        "ANTIINFLAMMATORY AGENTS"@en ;
+    skos:notation "S01B" .
+
+<http://linked.opendata.cz/resource/ATC/S01BA> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, samotné"@cs,
+        "Corticosteroids, plain"@en ;
+    skos:notation "S01BA" .
+
+<http://linked.opendata.cz/resource/ATC/S01BA07> a ns1:ATCConcept ;
+    dcterms:title "Fluorometholon"@cs,
+        "Fluorometholone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S01",
+        "http://linked.opendata.cz/resource/ATC/S01B",
+        "http://linked.opendata.cz/resource/ATC/S01BA" ;
+    skos:notation "S01BA07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008628> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000838",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000851",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003326" ;
+    ns1:description "A glucocorticoid employed, usually as eye drops, in the treatment of allergic and inflammatory conditions of the eye. It has also been used topically in the treatment of various skin disorders. (From Martindale, The Extra Pharmacopoeia, 30th ed, p732)     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Fluorometholon"@cs,
+        "Fluorometholone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat allergic reactions. Most of these drugs act by preventing the release of inflammatory mediators or inhibiting the actions of released mediators on their target cells. (From AMA Drug Evaluations Annual, 1994, p475)     "@en ;
+    ns1:title "Antialergika"@cs,
+        "Anti-allergic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000838> a ns1:DiseaseOrFinding ;
+    ns1:title "Konjunktivitida virová"@cs,
+        "Conjunctivitis, viral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000851> a ns1:DiseaseOrFinding ;
+    ns1:title "Rohovka - nemoci"@cs,
+        "Corneal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003326> a ns1:DiseaseOrFinding ;
+    ns1:title "Oční infekce mykotické"@cs,
+        "Eye infections, fungal"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055426> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:hasIndication """Léčba neinfekčních zánětů rohovky, palpebrální a bulbární spojivky a předního segmentu oka, které jsou citlivé na kortikosteroidy.
+Přípravek je určen pro léčbu dospělých pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "131.660003662"^^xsd:float ;
+    ns1:hasPackagingSize "5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "35.9900016785"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2001-07-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC150918_doc" ;
+    ns1:hasStrength "1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SUS 1X5ML 0.1%"@cs ;
+    ns1:title "FLAREX 1 MG/ML OČNÍ KAPKY, SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLAREX-1-MG-ML-OCNI-KAPKY--SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008628" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055426" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FLAREX 1 MG/ML OČNÍ KAPKY, SUSPENZE"@cs .
+
+

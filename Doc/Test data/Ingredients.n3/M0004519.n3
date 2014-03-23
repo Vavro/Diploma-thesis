@@ -1,0 +1,114 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V03AF03> a ns1:ATCConcept ;
+    skos:notation "V03AF03" ;
+    skos:prefLabel "Kalcium-folinát"@cs,
+        "Calcium folinate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004519> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000396",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "The active metabolite of FOLIC ACID. Leucovorin is used principally as its calcium salt as an antidote to folic acid antagonists which block the conversion of folic acid to folinic acid.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-FOLINATE-TEVA-150-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-FOLINATE-TEVA-450-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUMFOLINAT-EBEWE-10-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUMFOLINAT-EBEWE-15-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001267" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000384",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000393",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000664",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001267",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001416",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001815",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001905" ;
+    ns1:title "Leukovorin"@cs,
+        "Leucovorin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000393> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by the presence of ANEMIA, abnormally large red blood cells (megalocytes or macrocytes), and MEGALOBLASTS.     "@en ;
+    ns1:title "Megaloblastová anémie"@cs,
+        "Anemia, megaloblastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000396> a ns1:DiseaseOrFinding ;
+    ns1:description "A megaloblastic anemia occurring in children but more commonly in later life, characterized by histamine-fast achlorhydria, in which the laboratory and clinical manifestations are based on malabsorption of vitamin B 12 due to a failure of the gastric mucosa to secrete adequate and potent intrinsic factor. (Dorland, 27th ed)     "@en ;
+    ns1:title "Perniciózní anémie"@cs,
+        "Anemia, pernicious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001267> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of FOLIC ACID in the diet. Many plant and animal tissues contain folic acid, abundant in green leafy vegetables, yeast, liver, and mushrooms but destroyed by long-term cooking. Alcohol interferes with its intermediate metabolism and absorption. Folic acid deficiency may develop in long-term anticonvulsant therapy or with use of oral contraceptives. This deficiency causes anemia, macrocytic anemia, and megaloblastic anemia. It is indistinguishable from vitamin B 12 deficiency in peripheral blood and bone marrow findings, but the neurologic lesions seen in B 12 deficiency do not occur. (Merck Manual, 16th ed)     "@en ;
+    ns1:title "Nedostatek kyseliny listové"@cs,
+        "Folic acid deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001416> a ns1:DiseaseOrFinding ;
+    ns1:description "Soft tissue tumors or cancer arising from the mucosal surfaces of the LIP; oral cavity; PHARYNX; LARYNX; and cervical esophagus. Other sites included are the NOSE and PARANASAL SINUSES; SALIVARY GLANDS; THYROID GLAND and PARATHYROID GLANDS; and MELANOMA and non-melanoma skin cancers of the head and neck. (from Holland et al., Cancer Medicine, 4th ed, p1651)     "@en ;
+    ns1:title "Nádory hlavy a krku"@cs,
+        "Head and neck neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-FOLINATE-TEVA-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF03" ;
+    ns1:title "CALCIUM FOLINATE TEVA 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-FOLINATE-TEVA-450-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF03" ;
+    ns1:title "CALCIUM FOLINATE TEVA 450 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUMFOLINAT-EBEWE-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF03" ;
+    ns1:title "CALCIUMFOLINAT \"EBEWE\" 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUMFOLINAT-EBEWE-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF03" ;
+    ns1:title "CALCIUMFOLINAT \"EBEWE\" 15 MG"@cs .
+
+

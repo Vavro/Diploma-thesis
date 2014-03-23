@@ -1,0 +1,125 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R01> a ns1:ATCConcept ;
+    dcterms:title "Nosní léčiva"@cs,
+        "NASAL PREPARATIONS"@en ;
+    skos:notation "R01" .
+
+<http://linked.opendata.cz/resource/ATC/R01B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k dekongesci nosní sliznice pro systémovou aplikaci"@cs,
+        "NASAL DECONGESTANTS FOR SYSTEMIC USE"@en ;
+    skos:notation "R01B" .
+
+<http://linked.opendata.cz/resource/ATC/R01BA> a ns1:ATCConcept ;
+    dcterms:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en ;
+    skos:notation "R01BA" .
+
+<http://linked.opendata.cz/resource/ATC/R01BA52> a ns1:ATCConcept ;
+    dcterms:title "Pseudoefedrin, kombinace"@cs,
+        "Pseudoephedrine, combinations"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R01",
+        "http://linked.opendata.cz/resource/ATC/R01B",
+        "http://linked.opendata.cz/resource/ATC/R01BA" ;
+    skos:notation "R01BA52" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0001228> a ns1:Ingredient ;
+    ns1:title "Pseudoefedrin-sulfát"@cs,
+        "Pseudoephedrine sulfate"@en,
+        "Pseudoephedrini sulfas"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029047> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 2"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029048> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 4"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029049> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 7"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029050> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 10"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029051> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 14"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029052> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG/120MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 20"@cs ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AERINAZE-2-5-MG-120-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01BA52" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0001228",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029047",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029048",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029049",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029050",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029051",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029052" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "AERINAZE 2,5 MG/120 MG"@cs .
+
+

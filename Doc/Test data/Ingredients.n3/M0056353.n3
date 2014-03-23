@@ -1,0 +1,73 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/P03AC04> a ns1:ATCConcept ;
+    skos:notation "P03AC04" ;
+    skos:prefLabel "Permethrin"@cs,
+        "Permethrin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0056353> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010204" ;
+    ns1:description "A pyrethroid insecticide commonly used in the treatment of LICE INFESTATIONS and SCABIES.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000224" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/INFECTOSCAB-5--KREM" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011389" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008969" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002339" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002339",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002681" ;
+    ns1:title "Permethrin"@cs,
+        "Permethrin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011389> a ns1:PharmacologicalAction ;
+    ns1:description "Pesticides designed to control insects that are harmful to man. The insects may be directly harmful, as those acting as disease vectors, or indirectly harmful, as destroyers of crops, food products, or textile fabrics.     "@en ;
+    ns1:title "Insekticidy"@cs,
+        "Insecticides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002339> a ns1:DiseaseOrFinding ;
+    ns1:description "Parasitic attack or subsistence on the skin by members of the order Phthiraptera, especially on humans by Pediculus humanus of the family Pediculidae. The hair of the head, eyelashes, and pubis is a frequent site of infestation. (From Dorland, 28th ed; Stedman, 26th ed)     "@en ;
+    ns1:title "Zavšivení"@cs,
+        "Lice infestations"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002681> a ns1:DiseaseOrFinding ;
+    ns1:description "A contagious cutaneous inflammation caused by the bite of the mite SARCOPTES SCABIEI. It is characterized by pruritic papular eruptions and burrows and affects primarily the axillae, elbows, wrists, and genitalia, although it can spread to cover the entire body.     "@en ;
+    ns1:title "Svrab"@cs,
+        "Scabies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010204> a ns1:DiseaseOrFinding ;
+    ns1:description "An infant during the first month after birth.     "@en ;
+    ns1:title "Novorozenec"@cs,
+        "Infant, newborn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000224> a ns1:MechanismOfAction ;
+    ns1:title "Chloride Channel Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008969> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Striated Muscle Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFECTOSCAB-5--KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/P03AC04" ;
+    ns1:title "INFECTOSCAB 5% KRÉM"@cs .
+
+

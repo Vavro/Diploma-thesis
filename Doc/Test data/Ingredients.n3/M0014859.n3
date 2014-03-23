@@ -1,0 +1,76 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C08CA06> a ns1:ATCConcept ;
+    skos:notation "C08CA06" ;
+    skos:prefLabel "Nimodipin"@cs,
+        "Nimodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014859> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649" ;
+    ns1:description "A calcium channel blockader with preferential cerebrovascular activity. It has marked cerebrovascular dilating effects and lowers blood pressure.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020065" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DILCEREN-PRO-INFUSIONE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIMOTOP-S" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008352",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008375" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002846" ;
+    ns1:title "Nimodipin"@cs,
+        "Nimodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002846> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding into the intracranial or spinal SUBARACHNOID SPACE, most resulting from INTRACRANIAL ANEURYSM rupture. It can occur after traumatic injuries (SUBARACHNOID HEMORRHAGE, TRAUMATIC). Clinical features include HEADACHE; NAUSEA; VOMITING, nuchal rigidity, variable neurological deficits and reduced mental status.     "@en ;
+    ns1:title "Subarachnoidální hemoragie"@cs,
+        "Subarachnoid hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020065> a ns1:MechanismOfAction ;
+    ns1:title "L-Calcium Channel Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008352> a ns1:PhysiologicEffect ;
+    ns1:title "Cerebral Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008375> a ns1:PhysiologicEffect ;
+    ns1:title "Coronary Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DILCEREN-PRO-INFUSIONE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA06" ;
+    ns1:title "DILCEREN PRO INFUSIONE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIMOTOP-S> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA06" ;
+    ns1:title "NIMOTOP S"@cs .
+
+

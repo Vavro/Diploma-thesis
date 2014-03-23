@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B01> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01" .
+
+<http://linked.opendata.cz/resource/ATC/B01A> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01A" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC> a ns1:ATCConcept ;
+    dcterms:title "Antiagregancia kromě heparinu"@cs,
+        "Platelet aggregation inhibitors excl. heparin"@en ;
+    skos:notation "B01AC" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC16> a ns1:ATCConcept ;
+    dcterms:title "Eptifibatid"@cs,
+        "Eptifibatide"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B01",
+        "http://linked.opendata.cz/resource/ATC/B01A",
+        "http://linked.opendata.cz/resource/ATC/B01AC" ;
+    skos:notation "B01AC16" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0229697> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000722",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001750",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Eptifibatide"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000722> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebrální infarkt"@cs,
+        "Cerebral infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001485> a ns1:DiseaseOrFinding ;
+    ns1:title "Hemoragické poruchy"@cs,
+        "Hemorrhagic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> a ns1:DiseaseOrFinding ;
+    ns1:title "Chronické selhání ledvin"@cs,
+        "Kidney failure, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025744> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC16" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "1X100ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "0.75MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML/75MG"@cs ;
+    ns1:title "INTEGRILIN 0,75 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INTEGRILIN-0-75-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC16" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0229697" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025744" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "INTEGRILIN 0,75 MG/ML"@cs .
+
+

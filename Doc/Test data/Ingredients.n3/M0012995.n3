@@ -1,0 +1,240 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B05BC01> a ns1:ATCConcept ;
+    skos:notation "B05BC01" ;
+    skos:prefLabel "Mannitol"@cs,
+        "Mannitol"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05CB16> a ns1:ATCConcept ;
+    skos:notation "R05CB16" ;
+    skos:prefLabel "mannitol"@cs,
+        "Mannitol"@en .
+
+<http://linked.opendata.cz/resource/ATC/V07AB> a ns1:ATCConcept ;
+    skos:notation "V07AB" ;
+    skos:prefLabel "Rozpouštědla a ředidla, včetně irigačních roztoků"@cs,
+        "Solvents and diluting agents, including irrigating solvents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012995> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000911",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002540",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002545",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004102" ;
+    ns1:description "A diuretic and renal diagnostic aid related to sorbitol. It has little significant energy value as it is largely eliminated from the body before any metabolism can take place. It can be used to treat oliguria associated with kidney failure or other manifestations of inadequate renal function and has been used for determination of glomerular filtration rate. Mannitol is also commonly used as a research tool in cell biological studies, usually to control osmolarity.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/20--MANNITOL-IN-WATER-FOR-INJECTION-FRESENIUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-15",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRONCHITOL-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CELSIOR-ROZTOK-NA-KONZERVOVANI-ORGANU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INFUSIO-MANNITOLI-10-IMUNA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INFUSIO-MANNITOLI-20-IMUNA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MANITOL-15--VIAFLO" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006626",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020928" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009337",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009550",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009556" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002216" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000406",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000490",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000607",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001058",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001417",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002207",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002216",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002447",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002540",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010234" ;
+    ns1:title "Mannitol"@cs,
+        "Mannitol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006626> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that increase urine volume by increasing the amount of osmotically active solute in the urine. Osmotic diuretics also increase the osmolarity of plasma.     "@en ;
+    ns1:title "Diuretika osmotická"@cs,
+        "Diuretics, osmotic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020928> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that sweeten food, beverages, medications, etc., such as sugar, saccharine or other low-calorie synthetic products. (From Random House Unabridged Dictionary, 2d ed)     "@en ;
+    ns1:title "Sladidla"@cs,
+        "Sweetening agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000490> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation or retention of free fluid within the peritoneal cavity.     "@en ;
+    ns1:title "Ascites"@cs,
+        "Ascites"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000607> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased intracellular or extracellular fluid in brain tissue. Cytotoxic brain edema (swelling due to increased intracellular fluid) is indicative of a disturbance in cell metabolism, and is commonly associated with hypoxic or ischemic injuries (see HYPOXIA, BRAIN). An increase in extracellular fluid may be caused by increased brain capillary permeability (vasogenic edema), an osmotic gradient, local blockages in interstitial fluid pathways, or by obstruction of CSF flow (e.g., obstructive HYDROCEPHALUS). (From Childs Nerv Syst 1992 Sep; 8(6):301-6)     "@en ;
+    ns1:title "Edém mozku"@cs,
+        "Brain edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000911> a ns1:DiseaseOrFinding ;
+    ns1:description "The condition that results from excessive loss of water from a living organism.     "@en ;
+    ns1:title "Dehydratace"@cs,
+        "Dehydration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001058> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid retention by the body due to impaired cardiac function or heart failure. It is usually characterized by increase in venous and capillary pressure, and swollen legs when standing. It is different from the generalized edema caused by renal dysfunction (NEPHROTIC SYNDROME).     "@en ;
+    ns1:title "Edém při onemocnění srdce"@cs,
+        "Edema, cardiac"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001417> a ns1:DiseaseOrFinding ;
+    ns1:description "Traumatic injuries involving the cranium and intracranial structures (i.e., BRAIN; CRANIAL NERVES; MENINGES; and other structures). Injuries may be classified by whether or not the skull is penetrated (i.e., penetrating vs. nonpenetrating) or whether there is an associated hemorrhage.     "@en ;
+    ns1:title "Kraniocerebrální poranění"@cs,
+        "Craniocerebral trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001749> a ns1:DiseaseOrFinding ;
+    ns1:title "Akutní selhání ledvin"@cs,
+        "Kidney failure, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002207> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which the intraocular pressure is elevated above normal and which may lead to glaucoma.     "@en ;
+    ns1:title "Oční hypertenze"@cs,
+        "Ocular hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002216> a ns1:DiseaseOrFinding ;
+    ns1:description "Decreased URINE output that is below the normal range. Oliguria can be defined as urine output of less than or equal to 0.5 or 1 ml/kg/hr depending on the age.     "@en ;
+    ns1:title "Oligurie"@cs,
+        "Oliguria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002447> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition or physical state produced by the ingestion, injection, inhalation of or exposure to a deleterious agent.     "@en ;
+    ns1:title "Otrava"@cs,
+        "Poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002498> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving the PROSTATE or its component tissues.     "@en ;
+    ns1:title "Prostata - nemoci"@cs,
+        "Prostatic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive accumulation of extravascular fluid in the lung, an indication of a serious underlying disease or disorder. Pulmonary edema prevents efficient PULMONARY GAS EXCHANGE in the PULMONARY ALVEOLI, and can be life-threatening.     "@en ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002545> a ns1:DiseaseOrFinding ;
+    ns1:description "Hypertrophy and dilation of the RIGHT VENTRICLE of the heart that is caused by PULMONARY HYPERTENSION. This condition is often associated with pulmonary parenchymal or vascular diseases, such as CHRONIC OBSTRUCTIVE PULMONARY DISEASE and PULMONARY EMBOLISM.     "@en ;
+    ns1:title "Cor pulmonale"@cs,
+        "Pulmonary heart disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004102> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding within the SKULL, including hemorrhages in the brain and the three membranes of MENINGES. The escape of blood often leads to the formation of HEMATOMA in the cranial epidural, subdural, and subarachnoid spaces.     "@en ;
+    ns1:title "Intrakraniální hemoragie"@cs,
+        "Intracranial hemorrhages"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010234> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive URIC ACID or urate in blood as defined by its solubility in plasma at 37 degrees C; greater than 0.42mmol per liter (7.0mg/dL) in men or 0.36mmol per liter (6.0mg/dL) in women. This condition is caused by overproduction of uric acid or impaired renal clearance. Hyperuricemia can be acquired, drug-induced or genetically determined (LESCH-NYHAN SYNDROME). It is associated with HYPERTENSION and GOUT.     "@en ;
+    ns1:title "Hyperurikémie"@cs,
+        "Hyperuricemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009337> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glomerular Filtration Pressure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009550> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal Ion Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009556> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal Organic Ion Excretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/20--MANNITOL-IN-WATER-FOR-INJECTION-FRESENIUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "20% MANNITOL IN WATER FOR INJECTION FRESENIUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "ARDEAOSMOSOL MA 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-15> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "ARDEAOSMOSOL MA 15"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARDEAOSMOSOL-MA-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "ARDEAOSMOSOL MA 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRONCHITOL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB16" ;
+    ns1:title "BRONCHITOL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELSIOR-ROZTOK-NA-KONZERVOVANI-ORGANU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V07AB" ;
+    ns1:title "CELSIOR ROZTOK NA KONZERVOVÁNÍ ORGÁNŮ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFUSIO-MANNITOLI-10-IMUNA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "INFUSIO MANNITOLI 10 IMUNA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFUSIO-MANNITOLI-20-IMUNA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "INFUSIO MANNITOLI 20 IMUNA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MANITOL-15--VIAFLO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BC01" ;
+    ns1:title "MANITOL 15% VIAFLO"@cs .
+
+

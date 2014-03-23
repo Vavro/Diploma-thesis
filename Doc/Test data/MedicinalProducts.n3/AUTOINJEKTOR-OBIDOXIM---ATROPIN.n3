@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB> a ns1:ATCConcept ;
+    dcterms:title "Antidota"@cs,
+        "Antidotes"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V",
+        "http://linked.opendata.cz/resource/ATC/V03",
+        "http://linked.opendata.cz/resource/ATC/V03A" ;
+    skos:notation "V03AB" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001935> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Atropine sulfate"@cs,
+        "Atropine sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015162> a ns1:Ingredient ;
+    ns1:description "Cholinesterase reactivator occurring in two interchangeable isomeric forms, syn and anti.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004298" ;
+    ns1:title "Obidoxim"@cs,
+        "Obidoxime chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004298> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to reverse the inactivation of cholinesterase caused by organophosphates or sulfonates. They are an important component of therapy in agricultural, industrial, and military poisonings by organophosphates and sulfonates.     "@en ;
+    ns1:title "Cholinesterasové reaktivátory"@cs,
+        "Cholinesterase reactivators"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that dilate the pupil. They may be either sympathomimetics or parasympatholytics.     "@en ;
+    ns1:title "Mydriatika"@cs,
+        "Mydriatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit the actions of the parasympathetic nervous system. The major group of drugs used therapeutically for this purpose is the MUSCARINIC ANTAGONISTS.     "@en ;
+    ns1:title "Parasympatolytika"@cs,
+        "Parasympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate MUSCARINIC RECEPTORS, thereby blocking the actions of endogenous ACETYLCHOLINE or exogenous agonists. Muscarinic antagonists have widespread effects including actions on the iris and ciliary muscle of the eye, the heart and blood vessels, secretions of the respiratory tract, GI system, and salivary glands, GI motility, urinary bladder tone, and the central nervous system.     "@en ;
+    ns1:title "Muskarin - antagonisté"@cs,
+        "Muscarinic antagonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154747> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB" ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "1X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/F" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasTitleSupplement "INJ SOL 1X2ML"@cs ;
+    ns1:title "AUTOINJEKTOR OBIDOXIM + ATROPIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AUTOINJEKTOR-OBIDOXIM---ATROPIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001935",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015162" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154747" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "AUTOINJEKTOR OBIDOXIM + ATROPIN"@cs .
+
+

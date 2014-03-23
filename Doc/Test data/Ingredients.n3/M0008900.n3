@@ -1,0 +1,227 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C03CA01> a ns1:ATCConcept ;
+    skos:notation "C03CA01" ;
+    skos:prefLabel "Furosemid"@cs,
+        "Furosemide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008900> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000819",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000911",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A benzoic-sulfonamide-furan. It is a diuretic with fast onset and short duration that is used for EDEMA and chronic RENAL INSUFFICIENCY.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/FURON-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-125",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-20-INJEKT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-40",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID---SLOVAKOFARMA-FORTE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-BIOTIKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-BIOTIKA-FORTE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-KABI-20-MG-2-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-SLOVAKOFARMA" ;
+    ns1:hasPharmacokinetics "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471884" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009381",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009382",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009385",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009386",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009387",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000490",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000607",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001750",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001862",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002155",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002216",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002540",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171642" ;
+    ns1:title "Furosemid"@cs,
+        "Furosemide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471884> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM-POTASSIUM-CHLORIDE SYMPORTERS which are concentrated in the thick ascending limb at the junction of the LOOP OF HENLE and KIDNEY TUBULES, DISTAL. They act as DIURETICS. Excess use is associated with HYPOKALEMIA and HYPERGLYCEMIA.     "@en ;
+    ns1:title "Sodík-draslík-chloridové symportéry - inhibitory"@cs,
+        "Sodium potassium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000490> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation or retention of free fluid within the peritoneal cavity.     "@en ;
+    ns1:title "Ascites"@cs,
+        "Ascites"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000607> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased intracellular or extracellular fluid in brain tissue. Cytotoxic brain edema (swelling due to increased intracellular fluid) is indicative of a disturbance in cell metabolism, and is commonly associated with hypoxic or ischemic injuries (see HYPOXIA, BRAIN). An increase in extracellular fluid may be caused by increased brain capillary permeability (vasogenic edema), an osmotic gradient, local blockages in interstitial fluid pathways, or by obstruction of CSF flow (e.g., obstructive HYDROCEPHALUS). (From Childs Nerv Syst 1992 Sep; 8(6):301-6)     "@en ;
+    ns1:title "Edém mozku"@cs,
+        "Brain edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000819> a ns1:DiseaseOrFinding ;
+    ns1:description "A profound state of unconsciousness associated with depressed cerebral activity from which the individual cannot be aroused. Coma generally occurs when there is dysfunction or injury involving both cerebral hemispheres or the brain stem RETICULAR FORMATION.     "@en ;
+    ns1:title "Kóma"@cs,
+        "Coma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000911> a ns1:DiseaseOrFinding ;
+    ns1:description "The condition that results from excessive loss of water from a living organism.     "@en ;
+    ns1:title "Dehydratace"@cs,
+        "Dehydration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001749> a ns1:DiseaseOrFinding ;
+    ns1:title "Akutní selhání ledvin"@cs,
+        "Kidney failure, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> a ns1:DiseaseOrFinding ;
+    ns1:description "The end-stage of CHRONIC RENAL INSUFFICIENCY. It is characterized by the severe irreversible kidney damage (as measured by the level of PROTEINURIA) and the reduction in GLOMERULAR FILTRATION RATE to less than 15 ml per min (Kidney Foundation: Kidney Disease Outcome Quality Initiative, 2002). These patients generally require HEMODIALYSIS or KIDNEY TRANSPLANTATION.     "@en ;
+    ns1:title "Chronické selhání ledvin"@cs,
+        "Kidney failure, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002155> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by severe PROTEINURIA, greater than 3.5 g/day in an average adult. The substantial loss of protein in the urine results in complications such as HYPOPROTEINEMIA; generalized EDEMA; HYPERTENSION; and HYPERLIPIDEMIAS. Diseases associated with nephrotic syndrome generally cause chronic kidney dysfunction.     "@en ;
+    ns1:title "Nefrotický syndrom"@cs,
+        "Nephrotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002216> a ns1:DiseaseOrFinding ;
+    ns1:description "Decreased URINE output that is below the normal range. Oliguria can be defined as urine output of less than or equal to 0.5 or 1 ml/kg/hr depending on the age.     "@en ;
+    ns1:title "Oligurie"@cs,
+        "Oliguria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive accumulation of extravascular fluid in the lung, an indication of a serious underlying disease or disorder. Pulmonary edema prevents efficient PULMONARY GAS EXCHANGE in the PULMONARY ALVEOLI, and can be life-threatening.     "@en ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171642> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions in which the KIDNEYS perform below the normal level in the ability to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism. Renal insufficiency can be classified by the degree of kidney damage (as measured by the level of PROTEINURIA) and reduction in GLOMERULAR FILTRATION RATE.     "@en ;
+    ns1:title "Renální insuficience"@cs,
+        "Renal insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066> a ns1:MechanismOfAction ;
+    ns1:title "Small Ion Transport Pump Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009381> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Loop of Henle Ca++ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009382> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Loop of Henle Cl- Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009385> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Loop of Henle K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009386> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Loop of Henle Mg++ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009387> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Loop of Henle Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURON-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURON 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-125> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURORESE 125"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-20-INJEKT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURORESE 20 INJEKT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURORESE 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURORESE 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FURORESE-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FURORESE 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID---SLOVAKOFARMA-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FUROSEMID - SLOVAKOFARMA FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FUROSEMID BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-BIOTIKA-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FUROSEMID BIOTIKA FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-KABI-20-MG-2-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FUROSEMID KABI 20 MG/2 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUROSEMID-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03CA01" ;
+    ns1:title "FUROSEMID-SLOVAKOFARMA"@cs .
+
+

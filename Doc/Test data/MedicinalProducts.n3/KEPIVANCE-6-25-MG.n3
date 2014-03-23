@@ -1,0 +1,71 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AF> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ke snížení toxicity protinádorové léčby"@cs,
+        "Detoxifying agents for antineoplastic treatment"@en ;
+    skos:notation "V03AF" .
+
+<http://linked.opendata.cz/resource/ATC/V03AF08> a ns1:ATCConcept ;
+    dcterms:title "Palifermin"@cs,
+        "Palifermin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V",
+        "http://linked.opendata.cz/resource/ATC/V03",
+        "http://linked.opendata.cz/resource/ATC/V03A",
+        "http://linked.opendata.cz/resource/ATC/V03AF" ;
+    skos:notation "V03AF08" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0521761> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Palifermin"@cs,
+        "Palifermin"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025448> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF08" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "6.25MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 6X6.25MG"@cs ;
+    ns1:title "KEPIVANCE 6,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500824> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF08" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "6.25MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 6X6.25MG"@cs ;
+    ns1:title "KEPIVANCE 6,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KEPIVANCE-6-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AF08" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0521761" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025448",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500824" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "KEPIVANCE 6,25 MG"@cs .
+
+

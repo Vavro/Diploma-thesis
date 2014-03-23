@@ -1,0 +1,328 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06A> a ns1:ATCConcept ;
+    dcterms:title "Antidepresiva"@cs,
+        "ANTIDEPRESSANTS"@en ;
+    skos:notation "N06A" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidepresiva"@cs,
+        "Other antidepressants"@en ;
+    skos:notation "N06AX" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX11> a ns1:ATCConcept ;
+    dcterms:title "Mirtazapin"@cs,
+        "Mirtazapine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N06",
+        "http://linked.opendata.cz/resource/ATC/N06A",
+        "http://linked.opendata.cz/resource/ATC/N06AX" ;
+    skos:notation "N06AX11" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0107850> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Mirtazapine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162522> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "96"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 96X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162523> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "18X10 BLI H"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 180X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162524> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50 PP"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 50X30MG PP"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162525> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100 PP"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 100X30MG PP"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162526> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "6X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 6X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162527> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "18X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 18X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162528> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasMaximalPrice "185.88999939"^^xsd:float ;
+    ns1:hasPackagingSize "30X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "185.899993896"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-03-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162529> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "48X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 48X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162530> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "90X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 90X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162531> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "96X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 96X1X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162532> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "18X10 X1 H"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 180X1X30MG  H"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162533> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50 HDPE"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 50X30MG HDPE"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162534> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100 HDPE"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 100X30MG HDPE"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162535> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 6X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162536> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "18"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 18X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162537> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasMaximalPrice "185.88999939"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "185.899993896"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162538> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "48"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 48X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162539> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasIndication """Léčba epizod depresivní poruchy.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156771_doc" ;
+    ns1:hasStrength "30MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 90X30MG"@cs ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRTAZAPIN--PHARMA-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX11" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0107850" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162522",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162523",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162524",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162525",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162526",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162527",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162528",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162529",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162530",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162531",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162532",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162533",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162534",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162535",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162536",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162537",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162538",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162539" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "MIRTAZAPIN +PHARMA 30 MG"@cs .
+
+

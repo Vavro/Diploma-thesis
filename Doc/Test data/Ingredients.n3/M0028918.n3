@@ -1,0 +1,71 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J05AE03> a ns1:ATCConcept ;
+    skos:notation "J05AE03" ;
+    skos:prefLabel "Ritonavir"@cs,
+        "Ritonavir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028918> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An HIV protease inhibitor that works by interfering with the reproductive cycle of HIV.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000246" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-133-3-MG-33-3MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-200-MG-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-80-MG-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORVIR-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORVIR-80-MG-ML" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026300" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000291" ;
+    ns1:title "Ritonavir"@cs,
+        "Ritonavir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026300> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of HIV PROTEASE, an enzyme required for production of proteins needed for viral assembly.     "@en ;
+    ns1:title "Hiv-proteasa - inhibitory"@cs,
+        "Hiv protease inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000246> a ns1:MechanismOfAction ;
+    ns1:title "HIV Protease Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:title "KALETRA 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-133-3-MG-33-3MG> a ns1:MedicinalProduct ;
+    ns1:title "KALETRA 133,3 MG/33,3MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-200-MG-50-MG> a ns1:MedicinalProduct ;
+    ns1:title "KALETRA 200 MG/50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KALETRA-80-MG-20-MG> a ns1:MedicinalProduct ;
+    ns1:title "KALETRA 80 MG/20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORVIR-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AE03" ;
+    ns1:title "NORVIR 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORVIR-80-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AE03" ;
+    ns1:title "NORVIR 80 MG/ML"@cs .
+
+

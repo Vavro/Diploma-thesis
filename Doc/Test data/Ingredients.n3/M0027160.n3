@@ -1,0 +1,144 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AB05> a ns1:ATCConcept ;
+    skos:notation "B01AB05" ;
+    skos:prefLabel "Enoxaparin"@cs,
+        "Enoxaparin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027160> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932" ;
+    ns1:description "Low-molecular-weight fragment of heparin, having a 4-enopyranosuronate sodium structure at the non-reducing end of the chain. It is prepared by depolymerization of the benzylic ester of porcine mucosal heparin. Therapeutically, it is used as an antithrombotic agent. (From Merck Index, 11th ed)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000107",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000169",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000231" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE-FORTE" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003550",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004074" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000406",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000408",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002936",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004074" ;
+    ns1:title "Enoxaparin"@cs,
+        "Enoxaparin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that prevent clotting.     "@en ;
+    ns1:title "Antikoagulancia"@cs,
+        "Anticoagulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> a ns1:PharmacologicalAction ;
+    ns1:description "Fibrinolysin or agents that convert plasminogen to FIBRINOLYSIN.     "@en ;
+    ns1:title "Fibrinolytika"@cs,
+        "Fibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000408> a ns1:DiseaseOrFinding ;
+    ns1:description "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Nestabilní angina pectoris"@cs,
+        "Angina, unstable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001485> a ns1:DiseaseOrFinding ;
+    ns1:description "Spontaneous or near spontaneous bleeding caused by a defect in clotting mechanisms (BLOOD COAGULATION DISORDERS) or another abnormality causing a structural flaw in the blood vessels (HEMOSTATIC DISORDERS).     "@en ;
+    ns1:title "Hemoragické poruchy"@cs,
+        "Hemorrhagic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002541> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.     "@en ;
+    ns1:title "Plicní embolie"@cs,
+        "Pulmonary embolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002936> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation and development of a thrombus or blood clot in the blood vessel.     "@en ;
+    ns1:title "Trombóza"@cs,
+        "Thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004074> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation or presence of a blood clot (THROMBUS) within a vein.     "@en ;
+    ns1:title "Žilní trombóza"@cs,
+        "Venous thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000107> a ns1:MechanismOfAction ;
+    ns1:title "Antithrombins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000169> a ns1:MechanismOfAction ;
+    ns1:title "Serine Proteinase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000231> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Activators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Coagulation Factor Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AB05" ;
+    ns1:title "CLEXANE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AB05" ;
+    ns1:title "CLEXANE FORTE"@cs .
+
+

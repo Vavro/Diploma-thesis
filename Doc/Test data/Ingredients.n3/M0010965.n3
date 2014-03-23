@@ -1,0 +1,581 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C01EB16> a ns1:ATCConcept ;
+    skos:notation "C01EB16" ;
+    skos:prefLabel "Ibuprofen"@cs,
+        "Ibuprofen"@en .
+
+<http://linked.opendata.cz/resource/ATC/M01AE01> a ns1:ATCConcept ;
+    skos:notation "M01AE01" ;
+    skos:prefLabel "Ibuprofen"@cs,
+        "Ibuprofen"@en .
+
+<http://linked.opendata.cz/resource/ATC/M01AE51> a ns1:ATCConcept ;
+    skos:notation "M01AE51" ;
+    skos:prefLabel "Ibuprofen, kombinace"@cs,
+        "Ibuprofen, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/M02AA13> a ns1:ATCConcept ;
+    skos:notation "M02AA13" ;
+    skos:prefLabel "Ibuprofen"@cs,
+        "Ibuprofen"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05X> a ns1:ATCConcept ;
+    skos:notation "R05X" ;
+    skos:prefLabel "Jiná kombinovaná léčiva proti nachlazení"@cs,
+        "OTHER COLD PREPARATIONS"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010965> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002634",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010245" ;
+    ns1:description "A nonsteroidal anti-inflammatory agent with analgesic properties used in the therapy of rheumatism and arthritis.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ADVIL-RAPID",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-IBUPROFEN-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-IBUPROFEN-RAPID-400-MG-SOFT-CAPSULES",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-600-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-JUNIOR-200-MG-5-ML-PERORALNI-SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-SIRUP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUSCOFEM-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-800",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-GEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-600",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-BABY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-DUO-EFFECT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-GEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-RAPID",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUBERL-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUBERL-PRO-DETI-100MG-5ML-PERORALNI-SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-600-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-400-MG-GALMED",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-AL-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-FARMALIDER-100-MG-5-ML-PERORALNI-SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-PERRIGO-200-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-SANDOZ-20-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-600-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-800-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MODAFEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MUCOGRIP-200-MG-30-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-200-MG-MEKKE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-INSTANT-400-MG-ROZPUSTNY-PRASEK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-4--JAHODA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-4--POMERANC",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-ACTIVE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-CIPKY-125-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-CIPKY-60-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-JAHODA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRONTO-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRONTO-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-RAPID-200-MG-CAPSULES",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-RAPID-400-MG-CAPSULES",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-STOPGRIP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANAFEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PEDEA-5-MG-ML" ;
+    ns1:hasPharmacokinetics "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000522",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000639",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000824",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000844",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001025",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001038",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001382",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001418",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001993",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002162",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002244",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002280",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002489",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002809",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002810",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002910",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002984",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003204",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003287",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000011073",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000011076",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171630",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171633" ;
+    ns1:title "Ibuprofen"@cs,
+        "Ibuprofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000522> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute or chronic pain located in the posterior regions of the THORAX; LUMBOSACRAL REGION; or the adjacent regions.     "@en ;
+    ns1:title "Bolesti zad"@cs,
+        "Back pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000639> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation or irritation of a bursa, the fibrous sac that acts as a cushion between moving structures of bones, muscles, tendons or skin.     "@en ;
+    ns1:title "Bursitida"@cs,
+        "Bursitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000844> a ns1:DiseaseOrFinding ;
+    ns1:description "Injuries resulting in hemorrhage, usually manifested in the skin.     "@en ;
+    ns1:title "Zhmoždění"@cs,
+        "Contusions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001025> a ns1:DiseaseOrFinding ;
+    ns1:description "Painful menstruation.     "@en ;
+    ns1:title "Dysmenorea"@cs,
+        "Dysmenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001038> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the ear.     "@en ;
+    ns1:title "Bolest ucha"@cs,
+        "Earache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001382> a ns1:DiseaseOrFinding ;
+    ns1:description "Hereditary metabolic disorder characterized by recurrent acute arthritis, hyperuricemia and deposition of sodium urate in and around the joints, sometimes with formation of uric acid calculi.     "@en ;
+    ns1:title "Dna (nemoc)"@cs,
+        "Gout"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001418> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.     "@en ;
+    ns1:title "Bolesti hlavy"@cs,
+        "Headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001993> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive uterine bleeding during MENSTRUATION.     "@en ;
+    ns1:title "Menoragie"@cs,
+        "Menorrhagia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002280> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain during the period after surgery.     "@en ;
+    ns1:title "Pooperační bolest"@cs,
+        "Pain, postoperative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002485> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of ectopic pregnancy in which the EMBRYO, MAMMALIAN implants in the ABDOMINAL CAVITY instead of in the ENDOMETRIUM of the UTERUS.     "@en ;
+    ns1:title "Těhotenství abdominální"@cs,
+        "Pregnancy, abdominal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002489> a ns1:DiseaseOrFinding ;
+    ns1:description "A combination of distressing physical, psychologic, or behavioral changes that occur during the luteal phase of the menstrual cycle. Symptoms of PMS are diverse (such as pain, water-retention, anxiety, cravings, and depression) and they diminish markedly 2 or 3 days after the initiation of menses.     "@en ;
+    ns1:title "Premenstruační syndrom"@cs,
+        "Premenstrual syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002634> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA, the mucous membrane lining the NASAL CAVITIES.     "@en ;
+    ns1:title "Rinitida"@cs,
+        "Rhinitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002809> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the SPINE. This includes both arthritic and non-arthritic conditions.     "@en ;
+    ns1:title "Spondylitida"@cs,
+        "Spondylitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002810> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory condition affecting the axial joints, such as the SACROILIAC JOINT and other intervertebral or costovertebral joints. It occurs predominantly in young males and is characterized by pain and stiffness of joints (ANKYLOSIS) with inflammation at tendon insertions.     "@en ;
+    ns1:title "Ankylózující spondylitida"@cs,
+        "Spondylitis, ankylosing"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002910> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the synovial lining of a tendon sheath. Causes include trauma, tendon stress, bacterial disease (gonorrhea, tuberculosis), rheumatic disease, and gout. Common sites are the hand, wrist, shoulder capsule, hip capsule, hamstring muscles, and Achilles tendon. The tendon sheaths become inflamed and painful, and accumulate fluid. Joint mobility is usually reduced.     "@en ;
+    ns1:title "Tenosynovitida"@cs,
+        "Tenosynovitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003204> a ns1:DiseaseOrFinding ;
+    ns1:description "Arthritis, especially of the great toe, as a result of gout. Acute gouty arthritis often is precipitated by trauma, infection, surgery, etc. The initial attacks are usually monoarticular but later attacks are often polyarticular.     "@en ;
+    ns1:title "Dnavá artritida"@cs,
+        "Arthritis, gouty"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003287> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of inflammatory arthritis associated with PSORIASIS, often involving the axial joints and the peripheral terminal interphalangeal joints. It is characterized by the presence of HLA-B27-associated SPONDYLARTHROPATHY, and the absence of rheumatoid factor.     "@en ;
+    ns1:title "Psoriatická artritida"@cs,
+        "Arthritis, psoriatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003431> a ns1:DiseaseOrFinding ;
+    ns1:description "Tendency of the smooth muscle of the tracheobronchial tree to contract more intensely in response to a given stimulus than it does in the response seen in normal individuals. This condition is present in virtually all symptomatic patients with asthma. The most prominent manifestation of this smooth muscle contraction is a decrease in airway caliber that can be readily measured in the pulmonary function laboratory.     "@en ;
+    ns1:title "Bronchy - hyperreaktivita"@cs,
+        "Bronchial hyperreactivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> a ns1:DiseaseOrFinding ;
+    ns1:description "The last third of a human PREGNANCY, from the beginning of the 29th through the 42nd completed week (197 to 294 days) of gestation.     "@en ;
+    ns1:title "Těhotenství - třetí trimestr"@cs,
+        "Pregnancy trimester, third"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011073> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the joints of the SPINE, the intervertebral articulations.     "@en ;
+    ns1:title "Spondylartritida"@cs,
+        "Spondylarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> a ns1:DiseaseOrFinding ;
+    ns1:description "The mass or quantity of heaviness of an individual. It is expressed by units of pounds or kilograms.     "@en ;
+    ns1:title "Tělesná hmotnost"@cs,
+        "Body weight"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of disabling primary headache disorders, characterized by recurrent unilateral pulsatile headaches. The two major subtypes are common migraine (without aura) and classic migraine (with aura or neurological symptoms). (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Migréna"@cs,
+        "Migraine disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171633> a ns1:DiseaseOrFinding ;
+    ns1:description "A common primary headache disorder, characterized by a dull, non-pulsatile, diffuse, band-like (or vice-like) PAIN of mild to moderate intensity in the HEAD; SCALP; or NECK. The subtypes are classified by frequency and severity of symptoms. There is no clear cause even though it has been associated with MUSCLE CONTRACTION and stress. (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Tenzní bolesti hlavy"@cs,
+        "Tension-type headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Activating Factor Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADVIL-RAPID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "ADVIL RAPID"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-IBUPROFEN-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "APO-IBUPROFEN 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-IBUPROFEN-RAPID-400-MG-SOFT-CAPSULES> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "APO-IBUPROFEN RAPID 400 MG SOFT CAPSULES"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "BRUFEN 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-600-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "BRUFEN 600 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-JUNIOR-200-MG-5-ML-PERORALNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "BRUFEN JUNIOR 200 MG/5 ML PERORÁLNÍ SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRUFEN-SIRUP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "BRUFEN SIRUP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUSCOFEM-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "BUSCOFEM 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-800> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "DOLGIT 800"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AA13" ;
+    ns1:title "DOLGIT GEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLGIT-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AA13" ;
+    ns1:title "DOLGIT KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBALGIN 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBALGIN 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-600> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBALGIN 600"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-BABY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBALGIN BABY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-DUO-EFFECT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AA13" ;
+    ns1:title "IBALGIN DUO EFFECT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AA13" ;
+    ns1:title "IBALGIN GEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M02AA13" ;
+    ns1:title "IBALGIN KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBALGIN-RAPID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBALGIN RAPID"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUBERL-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUBERL 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUBERL-PRO-DETI-100MG-5ML-PERORALNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUBERL PRO DĚTI 100MG/5ML PERORÁLNÍ SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUMAX 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUMAX 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUMAX-600-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUMAX 600 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-400-MG-GALMED> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUPROFEN 400 MG GALMED"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-AL-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUPROFEN AL 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-FARMALIDER-100-MG-5-ML-PERORALNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUPROFEN FARMALIDER 100 MG/5 ML PERORÁLNÍ SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-PERRIGO-200-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUPROFEN PERRIGO 200 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBUPROFEN-SANDOZ-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBUPROFEN SANDOZ 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBURION 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBURION 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-600-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBURION 600 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IBURION-800-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "IBURION 800 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MODAFEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE51" ;
+    ns1:title "MODAFEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MUCOGRIP-200-MG-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05X" ;
+    ns1:title "MUCOGRIP 200 MG/30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-200-MG-MEKKE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN 200 MG MĚKKÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-INSTANT-400-MG-ROZPUSTNY-PRASEK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN INSTANT 400 MG ROZPUSTNÝ PRÁŠEK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-4--JAHODA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI 4% JAHODA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-4--POMERANC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI 4% POMERANČ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-ACTIVE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI ACTIVE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-CIPKY-125-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI ČÍPKY 125 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-CIPKY-60-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI ČÍPKY 60 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRO-DETI-JAHODA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRO DĚTI JAHODA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRONTO-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRONTO 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-PRONTO-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN PRONTO 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-RAPID-200-MG-CAPSULES> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN RAPID 200 MG CAPSULES"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-RAPID-400-MG-CAPSULES> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "NUROFEN RAPID 400 MG CAPSULES"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUROFEN-STOPGRIP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE51" ;
+    ns1:title "NUROFEN STOPGRIP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANAFEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M01AE01" ;
+    ns1:title "PANAFEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PEDEA-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB16" ;
+    ns1:title "PEDEA 5 MG/ML"@cs .
+
+

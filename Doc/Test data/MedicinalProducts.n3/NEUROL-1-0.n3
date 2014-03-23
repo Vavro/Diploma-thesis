@@ -1,0 +1,92 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N05> a ns1:ATCConcept ;
+    dcterms:title "Psycholeptika"@cs,
+        "PSYCHOLEPTICS"@en ;
+    skos:notation "N05" .
+
+<http://linked.opendata.cz/resource/ATC/N05B> a ns1:ATCConcept ;
+    dcterms:title "Anxiolytika"@cs,
+        "ANXIOLYTICS"@en ;
+    skos:notation "N05B" .
+
+<http://linked.opendata.cz/resource/ATC/N05BA> a ns1:ATCConcept ;
+    dcterms:title "Benzodiazepinové deriváty"@cs,
+        "Benzodiazepine derivatives"@en ;
+    skos:notation "N05BA" .
+
+<http://linked.opendata.cz/resource/ATC/N05BA12> a ns1:ATCConcept ;
+    dcterms:title "Alprazolam"@cs,
+        "Alprazolam"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N05",
+        "http://linked.opendata.cz/resource/ATC/N05B",
+        "http://linked.opendata.cz/resource/ATC/N05BA" ;
+    skos:notation "N05BA12" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000806> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "A triazolobenzodiazepine compound with antianxiety and sedative-hypnotic actions, that is efficacious in the treatment of PANIC DISORDERS, with or without AGORAPHOBIA, and in generalized ANXIETY DISORDERS. (From AMA Drug Evaluations Annual, 1994, p238)     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093" ;
+    ns1:title "Alprazolam"@cs,
+        "Alprazolam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that alleviate ANXIETY, tension, and ANXIETY DISORDERS, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions. ADRENERGIC BETA-ANTAGONISTS are commonly used in the symptomatic treatment of anxiety but are not included here.     "@en ;
+    ns1:title "Trankvilizéry malé"@cs,
+        "Anti-anxiety agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086656> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05BA12" ;
+    ns1:hasIndication """Úzkostné neurózy, doplněk terapie úzkostných stavů provázejících mentální depresi, úzkostné stavy při jiných onemocněních, panické stavy a záchvaty paniky, též ve spojení s fobiemi, krátkodobá terapie nespavosti způsobená úzkostí.
+"""@cs ;
+    ns1:hasIndicationGroup "ANXIOLYTICA"@cs ;
+    ns1:hasMaximalPrice "135.229995728"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "17.6900005341"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC103624_doc" ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X1MG"@cs ;
+    ns1:title "NEUROL 1,0"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROL-1-0> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05BA12" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000806" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086656" ;
+    ns1:title "NEUROL 1,0"@cs .
+
+

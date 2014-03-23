@@ -1,0 +1,92 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02C> a ns1:ATCConcept ;
+    dcterms:title "Antimigrenika"@cs,
+        "ANTIMIGRAINE PREPARATIONS"@en ;
+    skos:notation "N02C" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC> a ns1:ATCConcept ;
+    dcterms:title "Selektivní agonisté serotoninu na 5HT1 receptorech"@cs,
+        "Selective serotonin (5-HT1) agonists"@en ;
+    skos:notation "N02CC" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC02> a ns1:ATCConcept ;
+    dcterms:title "Naratriptan"@cs,
+        "Naratriptan"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N02",
+        "http://linked.opendata.cz/resource/ATC/N02C",
+        "http://linked.opendata.cz/resource/ATC/N02CC" ;
+    skos:notation "N02CC02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0327812> a ns1:Ingredient ;
+    ns1:title "Naratriptan hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053135> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Tablety naratriptanu jsou indikovány k akutní léčbě záchvatů migrény ve fázi bolesti hlavy s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasMaximalPrice "268.059997559"^^xsd:float ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "31.5699996948"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161355_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X2.5MG"@cs ;
+    ns1:title "NARAMIG 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053136> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Tablety naratriptanu jsou indikovány k akutní léčbě záchvatů migrény ve fázi bolesti hlavy s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161355_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 4X2.5MG"@cs ;
+    ns1:title "NARAMIG 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053137> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Tablety naratriptanu jsou indikovány k akutní léčbě záchvatů migrény ve fázi bolesti hlavy s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasMaximalPrice "757.530029297"^^xsd:float ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "94.7200012207"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161355_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X2.5MG"@cs ;
+    ns1:title "NARAMIG 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NARAMIG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0327812" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053135",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053136",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053137" ;
+    ns1:title "NARAMIG 2,5 MG"@cs .
+
+

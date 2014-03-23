@@ -1,0 +1,97 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01C> a ns1:ATCConcept ;
+    dcterms:title "Beta-laktamová antibiotika, peniciliny"@cs,
+        "BETA-LACTAM ANTIBACTERIALS, PENICILLINS"@en ;
+    skos:notation "J01C" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR> a ns1:ATCConcept ;
+    dcterms:title "Kombinace penicilinů, včetně inhibitorů beta-laktamáz"@cs,
+        "Combinations of penicillins, incl. beta-lactamase"@en ;
+    skos:notation "J01CR" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR02> a ns1:ATCConcept ;
+    dcterms:title "Amoxicilin a enzymový inhibitor"@cs,
+        "Amoxicillin and enzyme inhibitor"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/J",
+        "http://linked.opendata.cz/resource/ATC/J01",
+        "http://linked.opendata.cz/resource/ATC/J01C",
+        "http://linked.opendata.cz/resource/ATC/J01CR" ;
+    skos:notation "J01CR02" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0011679> a ns1:Ingredient ;
+    ns1:title "Sodná sůl amoxicilinu"@cs,
+        "Amoxicillin sodium"@en,
+        "Amoxicillinum natricum"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329136> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:title "Clavulanate potassium"@cs,
+        "Clavulanate potassium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0072972> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CR02" ;
+    ns1:hasIndication """Přípravek Amoksiklav je indikován k léčbě následujících infekcí u dospělých a dětí (viz body 4.2, 4.4 a 5.1): 
+závažné infekce ušní, nosní nebo krční (jako je mastoiditida, tonzilární a peritonzilární infekce, epiglotitida a sinusitida, doprovázené těžkými systémovými znaky a symptomy) 
+akutní exacerbace chronické bronchitidy (odpovídajícím způsobem diagnostikovaná) 
+komunitní pneumonie 
+cystitida 
+pyelonefritida 
+infekce kůže a měkkých tkání, zejména celulitida, pokousání zvířetem, těžký dentální absces s postupující celulitidou 
+infekce kostí a kloubů, zejména osteomyelitida
+nitrobřišní infekce
+infekce ženských pohlavních orgánů.
+Proxylaxe infekcí spojených s rozsáhlými chirurgickými zákroky u dospělých pacientů, jako jsou zákroky v oblastech:
+gastrointestinálního traktu
+pánve
+hlavy a krku
+žlučových cest.
+Je nutno vzít v potaz úřední místní pokyny ke správnému používání antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "555.590026855"^^xsd:float ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "379.760009766"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-07-30"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129384_doc" ;
+    ns1:hasStrength "1.2GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 5X1.2GM"@cs ;
+    ns1:title "AMOKSIKLAV 1,2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMOKSIKLAV-1-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CR02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0011679",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329136" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0072972" ;
+    ns1:title "AMOKSIKLAV 1,2 G"@cs .
+
+

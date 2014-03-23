@@ -1,0 +1,94 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii onemocnění spojených s obstrukcí dýchacích cest"@cs,
+        "DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03" .
+
+<http://linked.opendata.cz/resource/ATC/R03C> a ns1:ATCConcept ;
+    dcterms:title "Sympatomimetika pro systémovou aplikaci"@cs,
+        "ADRENERGICS FOR SYSTEMIC USE"@en ;
+    skos:notation "R03C" .
+
+<http://linked.opendata.cz/resource/ATC/R03CC> a ns1:ATCConcept ;
+    dcterms:title "Selektivní agonisté beta2 adrenergních receptorů"@cs,
+        "Selective beta-2-adrenoreceptor agonists"@en ;
+    skos:notation "R03CC" .
+
+<http://linked.opendata.cz/resource/ATC/R03CC03> a ns1:ATCConcept ;
+    dcterms:title "Terbutalin"@cs,
+        "Terbutaline"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R03",
+        "http://linked.opendata.cz/resource/ATC/R03C",
+        "http://linked.opendata.cz/resource/ATC/R03CC" ;
+    skos:notation "R03CC03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021177> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A selective beta-2 adrenergic agonist used as a bronchodilator and tocolytic.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982" ;
+    ns1:title "Terbutalin"@cs,
+        "Terbutaline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that prevent preterm labor and immature birth by suppressing uterine contractions (TOCOLYSIS). Agents used to delay premature uterine activity include magnesium sulfate, beta-mimetics, oxytocin antagonists, calcium channel inhibitors, and adrenergic beta-receptor agonists. The use of intravenous alcohol as a tocolytic is now obsolete.     "@en ;
+    ns1:title "Tokolytika"@cs,
+        "Tocolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds bind to and activate ADRENERGIC BETA-2 RECEPTORS.     "@en ;
+    ns1:title "Beta-2-adrenergní receptory - agonisté"@cs,
+        "Adrenergic beta-2 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008651> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03CC03" ;
+    ns1:hasIndication """Bronchiální astma. Chronická bronchitida, emfyzém plic a jiná onemocnění plic, kde je komplikujícím faktorem bronchokonstrikce.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "263.260009766"^^xsd:float ;
+    ns1:hasPackagingSize "10X1ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "263.260009766"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-06-14"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134531_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1ML/0.5MG"@cs ;
+    ns1:title "BRICANYL 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRICANYL-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03CC03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021177" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008651" ;
+    ns1:title "BRICANYL 0,5 MG/ML"@cs .
+
+

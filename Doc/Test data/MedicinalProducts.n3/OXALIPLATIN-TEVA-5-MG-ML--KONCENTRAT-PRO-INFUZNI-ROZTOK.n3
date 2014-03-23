@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "OTHER ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01X" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA> a ns1:ATCConcept ;
+    dcterms:title "Platinová cytostatika"@cs,
+        "Platinum compounds"@en ;
+    skos:notation "L01XA" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA03> a ns1:ATCConcept ;
+    dcterms:title "Oxaliplatin"@cs,
+        "Oxaliplatin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01",
+        "http://linked.opendata.cz/resource/ATC/L01X",
+        "http://linked.opendata.cz/resource/ATC/L01XA" ;
+    skos:notation "L01XA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0095550> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Oxaliplatin"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104236> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaplatina v kombinaci s 5-fluorouracilem (5-FU) a kyselinou folinovou (FA) je indikována k:  
+- adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru.  
+- léčbě metastazujícího kolorektálního karcinomu. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2309.07006836"^^xsd:float ;
+    ns1:hasPackagingSize "1X4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1345.70996094"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160120_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X4ML"@cs ;
+    ns1:title "OXALIPLATIN-TEVA 5 MG/ML, KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104237> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaplatina v kombinaci s 5-fluorouracilem (5-FU) a kyselinou folinovou (FA) je indikována k:  
+- adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru.  
+- léčbě metastazujícího kolorektálního karcinomu. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "4003.70996094"^^xsd:float ;
+    ns1:hasPackagingSize "1X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "3364.27001953"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160120_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X10ML"@cs ;
+    ns1:title "OXALIPLATIN-TEVA 5 MG/ML, KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104238> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaplatina v kombinaci s 5-fluorouracilem (5-FU) a kyselinou folinovou (FA) je indikována k:  
+- adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru.  
+- léčbě metastazujícího kolorektálního karcinomu. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "7944.66992188"^^xsd:float ;
+    ns1:hasPackagingSize "1X20ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "6728.54003906"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160120_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X20ML"@cs ;
+    ns1:title "OXALIPLATIN-TEVA 5 MG/ML, KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162569> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaplatina v kombinaci s 5-fluorouracilem (5-FU) a kyselinou folinovou (FA) je indikována k:  
+- adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru.  
+- léčbě metastazujícího kolorektálního karcinomu. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "1X40ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160120_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X40ML"@cs ;
+    ns1:title "OXALIPLATIN-TEVA 5 MG/ML, KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXALIPLATIN-TEVA-5-MG-ML--KONCENTRAT-PRO-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0095550" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104236",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104237",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104238",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162569" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "OXALIPLATIN-TEVA 5 MG/ML, KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+

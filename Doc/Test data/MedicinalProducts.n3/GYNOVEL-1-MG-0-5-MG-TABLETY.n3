@@ -1,0 +1,220 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03F> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny v kombinaci"@cs,
+        "PROGESTOGENS AND ESTROGENS IN COMBINATION"@en ;
+    skos:notation "G03F" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, combinations"@en ;
+    skos:notation "G03FA" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA01> a ns1:ATCConcept ;
+    dcterms:title "Norethisteron a estrogen"@cs,
+        "Norethisterone and estrogen"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03F",
+        "http://linked.opendata.cz/resource/ATC/G03FA" ;
+    skos:notation "G03FA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065463> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002135",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002464",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:title "Estradiol valerate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0082292> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:title "Norethindrone acetate"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126921> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "152.300003052"^^xsd:float ;
+    ns1:hasPackagingSize "28 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "63.2999992371"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-01-05"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 28 I"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126922> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "30 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 30 I"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126923> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "617.059997559"^^xsd:float ;
+    ns1:hasPackagingSize "84 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "189.919998169"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-01-05"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 84 I"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126924> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "90 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 90 I"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169970> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "28 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 28 II"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169971> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "30 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 30 II"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169972> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "84 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 84 II"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169973> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasIndication """Hormonální substituční terapie (HST) symptomů nedostatku estrogenů u žen, které jsou více než 1 rok po menopauze. 
+Prevence osteoporózy u žen po menopauze, u nichž je vysoké riziko vzniku budoucích fraktur a které netolerují nebo mají kontraindikovánu léčbu jinými přípravky schválenými pro prevenci osteoporózy .
+Zkušenosti s léčbou žen starších 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "90 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC134126_doc" ;
+    ns1:hasTitleSupplement "POR TBL NOB 90 II"@cs ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GYNOVEL-1-MG-0-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065463",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0082292" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126921",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126922",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126923",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126924",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169970",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169971",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169972",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169973" ;
+    ns1:title "GYNOVEL 1 MG/0,5 MG TABLETY"@cs .
+
+

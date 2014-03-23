@@ -1,0 +1,389 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A02BC01> a ns1:ATCConcept ;
+    skos:notation "A02BC01" ;
+    skos:prefLabel "Omeprazol"@cs,
+        "Omeprazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/A02BC05> a ns1:ATCConcept ;
+    skos:notation "A02BC05" ;
+    skos:prefLabel "Esomeprazol"@cs,
+        "Esomeprazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015293> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A highly effective inhibitor of gastric acid secretion used in the therapy of STOMACH ULCERS and ZOLLINGER-ELLISON SYNDROME. The drug inhibits the H(+)-K(+)-ATPase (H(+)-K(+)-EXCHANGING ATPASE) in the proton pump of GASTRIC PARIETAL CELLS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000147" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-OME-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EMANERA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EMANERA-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EMOZUL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EMOZUL-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOGASEC-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOGASEC-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-ACTAVIS-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-ACTAVIS-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-SANDOZ-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-SANDOZ-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GASEC-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-10-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-20-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-40-INF",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-20-MG-ENTEROSOLVENTNI-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-40-MG-ENTEROSOLVENTNI-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOMAC",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSECPRO-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MOPRILIC-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MOPRILIC-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MOPROC-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MOPROC-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-20-GALMED",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-ACTAVIS-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-ACTAVIS-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-AL-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-10-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MEDIS-40-MG-INF",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-STADA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-TEVA-PHARMA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-TEVA-PHARMA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONPRELEN-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONPRELEN-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL--PRASEK-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU-40-MG-LAHVICKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ULTOP-20" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001008",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001028",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001165",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001319",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001444",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002351",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002830",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003062",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003185",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003419",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000185608" ;
+    ns1:title "Omeprazol"@cs,
+        "Omeprazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340> a ns1:PharmacologicalAction ;
+    ns1:description "Various agents with different action mechanisms used to treat or ameliorate PEPTIC ULCER or irritation of the gastrointestinal tract. This has included ANTIBIOTICS to treat HELICOBACTER INFECTIONS; HISTAMINE H2 ANTAGONISTS to reduce GASTRIC ACID secretion; and ANTACIDS for symptomatic relief.     "@en ;
+    ns1:title "Protivředové látky"@cs,
+        "Anti-ulcer agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001008> a ns1:DiseaseOrFinding ;
+    ns1:description "A PEPTIC ULCER located in the DUODENUM.     "@en ;
+    ns1:title "Dvanáctníkové vředy"@cs,
+        "Duodenal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001028> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired digestion, especially after eating.     "@en ;
+    ns1:title "Dyspepsie"@cs,
+        "Dyspepsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001165> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION, acute or chronic, of the ESOPHAGUS caused by BACTERIA, chemicals, or TRAUMA.     "@en ;
+    ns1:title "Ezofagitida"@cs,
+        "Esophagitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001319> a ns1:DiseaseOrFinding ;
+    ns1:description "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.     "@en ;
+    ns1:title "Gastroezofageální reflux"@cs,
+        "Gastroesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001444> a ns1:DiseaseOrFinding ;
+    ns1:description "Substernal pain or burning sensation, usually associated with regurgitation of gastric juice into the esophagus.     "@en ;
+    ns1:title "Pyróza"@cs,
+        "Heartburn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003185> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome that is characterized by the triad of severe PEPTIC ULCER, hypersecretion of GASTRIC ACID, and GASTRIN-producing tumors of the PANCREAS or other tissue (GASTRINOMA). This syndrome may be sporadic or be associated with MULTIPLE ENDOCRINE NEOPLASIA TYPE 1.     "@en ;
+    ns1:title "Zollingerův-ellisonův syndrom"@cs,
+        "Zollinger-ellison syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with organisms of the genus HELICOBACTER, particularly, in humans, HELICOBACTER PYLORI. The clinical manifestations are focused in the stomach, usually the gastric mucosa and antrum, and the upper duodenum. This infection plays a major role in the pathogenesis of type B gastritis and peptic ulcer disease.     "@en ;
+    ns1:title "Helicobacter - infekce"@cs,
+        "Helicobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000185608> a ns1:DiseaseOrFinding ;
+    ns1:description "Inhaling refluxed gastric or duodenal contents.     "@en ;
+    ns1:title "Aspirace žaludečního obsahu"@cs,
+        "Respiratory aspiration of gastric contents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000147> a ns1:MechanismOfAction ;
+    ns1:title "Proton Pump Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibition Gastric Acid Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-OME-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "APO-OME 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMANERA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "EMANERA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMANERA-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "EMANERA 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMOZUL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "EMOZUL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMOZUL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "EMOZUL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOGASEC-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOGASEC 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOGASEC-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOGASEC 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-ACTAVIS-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOMEPRAZOL ACTAVIS 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-ACTAVIS-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOMEPRAZOL ACTAVIS 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-SANDOZ-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOMEPRAZOL SANDOZ 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOMEPRAZOL-SANDOZ-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "ESOMEPRAZOL SANDOZ 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GASEC-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "GASEC-20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "HELICID 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-10-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "HELICID 10 ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "HELICID 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-20-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "HELICID 20 ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELICID-40-INF> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "HELICID 40 INF"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-20-MG-ENTEROSOLVENTNI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "HELIDES 20 MG ENTEROSOLVENTNÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "HELIDES 20 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-40-MG-ENTEROSOLVENTNI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "HELIDES 40 MG ENTEROSOLVENTNÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HELIDES-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "HELIDES 40 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOMAC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "LOMAC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSECPRO-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "LOSECPRO 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "LOSEPRAZOL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "LOSEPRAZOL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSEPRAZOL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "LOSEPRAZOL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOPRILIC-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "MOPRILIC 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOPRILIC-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "MOPRILIC 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOPROC-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "MOPROC 20 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOPROC-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC05" ;
+    ns1:title "MOPROC 40 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-20-GALMED> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL 20 GALMED"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-ACTAVIS-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL ACTAVIS 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-ACTAVIS-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL ACTAVIS 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-AL-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL AL 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-10-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL DR.MAX 10 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-20-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL DR.MAX 20 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-DR-MAX-40-MG-ENTEROSOLVENTNI-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL DR.MAX 40 MG ENTEROSOLVENTNÍ TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MEDIS-40-MG-INF> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL MEDIS 40 MG INF"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL MYLAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL MYLAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-MYLAN-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL MYLAN 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-STADA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL STADA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-TEVA-PHARMA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL TEVA PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMEPRAZOL-TEVA-PHARMA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "OMEPRAZOL TEVA PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONPRELEN-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ONPRELEN 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONPRELEN-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ONPRELEN 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL--PRASEK-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU-40-MG-LAHVICKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ORTANOL, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU 40 MG/LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ORTANOL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ORTANOL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORTANOL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ORTANOL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULTOP-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BC01" ;
+    ns1:title "ULTOP 20"@cs .
+
+

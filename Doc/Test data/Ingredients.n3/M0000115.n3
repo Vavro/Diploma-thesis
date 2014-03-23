@@ -1,0 +1,622 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A03EA> a ns1:ATCConcept ;
+    skos:notation "A03EA" ;
+    skos:prefLabel "Spazmolytika, psycholeptika a analgetika v kombinaci"@cs,
+        "Antispasmodics, psycholeptics and analgesics in combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02AA59> a ns1:ATCConcept ;
+    skos:notation "N02AA59" ;
+    skos:prefLabel "Kodein, kombinace kromě psycholeptik"@cs,
+        "Codeine, combinations excl. psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02AX52> a ns1:ATCConcept ;
+    skos:notation "N02AX52" ;
+    skos:prefLabel "Tramadol, kombinace"@cs,
+        "Tramadol, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA51> a ns1:ATCConcept ;
+    skos:notation "N02BA51" ;
+    skos:prefLabel "Kyselina acetylsalicylová, kombinace kromě psycholeptik"@cs,
+        "Acetylsalicylic acid, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE01> a ns1:ATCConcept ;
+    skos:notation "N02BE01" ;
+    skos:prefLabel "Paracetamol"@cs,
+        "Paracetamol"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05X> a ns1:ATCConcept ;
+    skos:notation "R05X" ;
+    skos:prefLabel "Jiná kombinovaná léčiva proti nachlazení"@cs,
+        "OTHER COLD PREPARATIONS"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001360" ;
+    ns1:description "Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000108" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-TRAMADOL-PARACETAMOL-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ATARALGIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CERNY-RYBIZ",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CITRON-S-MEDEM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-JUNIOR-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-LESNI-OVOCE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-NOCNI-LECBA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COLUDA-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALERON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALERON-PROTI-CHRIPCE-A-NACHLAZENI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIALGON-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DORETA-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DORETA-75-MG-650-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FEBRISAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUFIX-HOT-DRINK-1000-MG-12-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUFIX-HOT-DRINK-500-MG-12-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOXIS-37-5MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HUMEX-COLD",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KORYLAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MEDRACET-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MEXALEN-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRANERTON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-BABY-CIPKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA-RAPIDE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-JUNIOR-CIPKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-NOVUM-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-PRO-DETI-24-MG-ML-JAHODA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-RAPIDE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACCORD-1000-MG-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACCORD-500-MG-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-10-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-1000-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-250-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-B--BRAUN-10-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-GUAIFENESIN-PHENYLEPHRINE-HYDROCHLORIDE-PERRIGO-500-200-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-IONFARMA-100-MG-ML-PERORALNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-KABI-10-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-125",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-500-SUP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-EXTRA-PROTI-BOLESTI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-BOLEST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-KASEL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-HORKY-NAPOJ",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-SUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALGIL-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARALGIL-FORTE-1000-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-COMBI-500-MG-65-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-250-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMEGAL-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PARTRAMEC-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERFALGAN-10-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SARIDON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SPASMOPAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN-FORTE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRACETA-37-5-MG-325-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRAMADOL-PARACETAMOL-TEVA-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRAMYLPA-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRAPARAC-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TUTUS-37-5-MG-325-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ULTRACOD",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALETOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-COMPLETE-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-FORTE-CERNY-RYBIZ",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-FORTE-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-TRIACTIN-COMPLETE-CITRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR-EFFERVESCENS-37-5-MG-325-MG-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR-RETARD-75-MG-650-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM" ;
+    ns1:hasPharmacokinetics "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000522",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000824",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000863",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001418",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001956",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002055",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002162",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002655",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002683",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002984",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171630" ;
+    ns1:title "Acetaminofen"@cs,
+        "Acetaminophen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to reduce body temperature in fever.     "@en ;
+    ns1:title "Antipyretika"@cs,
+        "Antipyretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000522> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute or chronic pain located in the posterior regions of the THORAX; LUMBOSACRAL REGION; or the adjacent regions.     "@en ;
+    ns1:title "Bolesti zad"@cs,
+        "Back pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.     "@en ;
+    ns1:title "Kašel"@cs,
+        "Cough"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> a ns1:DiseaseOrFinding ;
+    ns1:description "A disease-producing enzyme deficiency subject to many variants, some of which cause a deficiency of GLUCOSE-6-PHOSPHATE DEHYDROGENASE activity in erythrocytes, leading to hemolytic anemia.     "@en ;
+    ns1:title "Glukosafosfátdehydrogenasa - nedostatek"@cs,
+        "Glucosephosphate dehydrogenase deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001418> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.     "@en ;
+    ns1:title "Bolesti hlavy"@cs,
+        "Headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001956> a ns1:DiseaseOrFinding ;
+    ns1:description "A highly contagious infectious disease caused by MORBILLIVIRUS, common among children but also seen in the nonimmune of any age, in which the virus enters the respiratory tract via droplet nuclei and multiplies in the epithelial cells, spreading throughout the MONONUCLEAR PHAGOCYTE SYSTEM.     "@en ;
+    ns1:title "Spalničky"@cs,
+        "Measles"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002055> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious disease caused by RUBULAVIRUS, spread by direct contact, airborne droplet nuclei, fomites contaminated by infectious saliva, and perhaps urine, and usually seen in children under the age of 15, although adults may also be affected. (From Dorland, 28th ed)     "@en ;
+    ns1:title "Příušnice"@cs,
+        "Mumps"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002655> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious disease caused by the RUBELLA VIRUS. The virus enters the respiratory tract via airborne droplet and spreads to the LYMPHATIC SYSTEM.     "@en ;
+    ns1:title "Zarděnky"@cs,
+        "Rubella"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002683> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with group A streptococci that is characterized by tonsillitis and pharyngitis. An erythematous rash is commonly present.     "@en ;
+    ns1:title "Spála"@cs,
+        "Scarlet fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of disabling primary headache disorders, characterized by recurrent unilateral pulsatile headaches. The two major subtypes are common migraine (without aura) and classic migraine (with aura or neurological symptoms). (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Migréna"@cs,
+        "Migraine disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000108> a ns1:MechanismOfAction ;
+    ns1:title "Prostaglandin Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072> a ns1:PhysiologicEffect ;
+    ns1:title "Hypothalamic Endocrine Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "ACIFEIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-TRAMADOL-PARACETAMOL-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "APO-TRAMADOL/PARACETAMOL 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATARALGIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "ATARALGIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CERNY-RYBIZ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX HORKÝ NÁPOJ ČERNÝ RYBÍZ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX HORKÝ NÁPOJ CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-HORKY-NAPOJ-CITRON-S-MEDEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX HORKÝ NÁPOJ CITRON S MEDEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-JUNIOR-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX JUNIOR CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX MAXGRIP CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-LESNI-OVOCE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX MAXGRIP LESNÍ OVOCE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-NOCNI-LECBA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX NOČNÍ LÉČBA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "COLDREX TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLUDA-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALERON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "DALERON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALERON-PROTI-CHRIPCE-A-NACHLAZENI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "DALERON PROTI CHŘIPCE A NACHLAZENÍ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIALGON-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "DIALGON 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DORETA-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "DORETA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DORETA-75-MG-650-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "DORETA 75 MG/650 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "EXCEDRINIL 250 MG/250 MG/65 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEBRISAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "FEBRISAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUFIX-HOT-DRINK-1000-MG-12-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "FLUFIX HOT DRINK 1000 MG/12,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUFIX-HOT-DRINK-500-MG-12-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "FLUFIX HOT DRINK 500 MG/12,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOXIS-37-5MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "FOXIS 37,5MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "GRIPPOSTAD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMEX-COLD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "HUMEX COLD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KORYLAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AA59" ;
+    ns1:title "KORYLAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDRACET-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "MEDRACET 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEXALEN-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "MEXALEN 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BA51" ;
+    ns1:title "MIGRALGIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRANERTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "MIGRANERTON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-BABY-CIPKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL BABY ČÍPKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PANADOL EXTRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PANADOL EXTRA RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-JUNIOR-CIPKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL JUNIOR ČÍPKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-NOVUM-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL NOVUM 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-PRO-DETI-24-MG-ML-JAHODA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL PRO DĚTI 24 MG/ML JAHODA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PANADOL RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PANADOL ULTRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PANADOL ULTRA RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACCORD-1000-MG-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACCORD 1000 MG ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACCORD-500-MG-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACCORD 500 MG ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACTAVIS 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACTAVIS 1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACTAVIS 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-ACTAVIS-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL ACTAVIS 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-B--BRAUN-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL B. BRAUN 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-GUAIFENESIN-PHENYLEPHRINE-HYDROCHLORIDE-PERRIGO-500-200-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05X" ;
+    ns1:title "PARACETAMOL/GUAIFENESIN/PHENYLEPHRINE HYDROCHLORIDE PERRIGO 500/200/10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-IONFARMA-100-MG-ML-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL IONFARMA 100 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARACETAMOL-KABI-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARACETAMOL KABI 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALEN 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-125> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALEN 125"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALEN 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-500-SUP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALEN 500 SUP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-EXTRA-PROTI-BOLESTI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARALEN EXTRA PROTI BOLESTI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-BOLEST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARALEN GRIP CHŘIPKA A BOLEST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-KASEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARALEN GRIP CHŘIPKA A KAŠEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-HORKY-NAPOJ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARALEN GRIP HORKÝ NÁPOJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARALEN PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-SUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALEN SUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALGIL-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALGIL 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALGIL-FORTE-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARALGIL FORTE 1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-COMBI-500-MG-65-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "PARAMAX COMBI 500 MG/65 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARAMAX RAPID 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARAMAX RAPID 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-RAPID-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARAMAX RAPID 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMEGAL-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PARAMEGAL 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARTRAMEC-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "PARTRAMEC 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERFALGAN-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE01" ;
+    ns1:title "PERFALGAN 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARIDON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "SARIDON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPASMOPAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03EA" ;
+    ns1:title "SPASMOPAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AA59" ;
+    ns1:title "TALVOSILEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AA59" ;
+    ns1:title "TALVOSILEN FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "THOMAPYRIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRACETA-37-5-MG-325-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "TRACETA 37,5 MG/325 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRAMADOL-PARACETAMOL-TEVA-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "TRAMADOL/PARACETAMOL TEVA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRAMYLPA-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "TRAMYLPA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRAPARAC-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "TRAPARAC 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TUTUS-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "TUTUS 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULTRACOD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AA59" ;
+    ns1:title "ULTRACOD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALETOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "VALETOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-COMPLETE-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05X" ;
+    ns1:title "VICKS SYMPTOMED COMPLETE CITRÓN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-FORTE-CERNY-RYBIZ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "VICKS SYMPTOMED FORTE ČERNÝ RYBÍZ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-SYMPTOMED-FORTE-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "VICKS SYMPTOMED FORTE CITRÓN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VICKS-TRIACTIN-COMPLETE-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05X" ;
+    ns1:title "VICKS TRIACTIN COMPLETE CITRÓN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "ZALDIAR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR-EFFERVESCENS-37-5-MG-325-MG-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "ZALDIAR EFFERVESCENS 37,5 MG/325 MG ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZALDIAR-RETARD-75-MG-650-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:title "ZALDIAR RETARD 75 MG/650 MG TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+

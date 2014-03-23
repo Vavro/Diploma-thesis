@@ -1,0 +1,478 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J07> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny"@cs,
+        "VACCINES"@en ;
+    skos:notation "J07" .
+
+<http://linked.opendata.cz/resource/ATC/J07C> a ns1:ATCConcept ;
+    dcterms:title "Bakteriální a virové vakcíny, kombinované"@cs,
+        "BACTERIAL AND VIRAL VACCINES, COMBINED"@en ;
+    skos:notation "J07C" .
+
+<http://linked.opendata.cz/resource/ATC/J07CA> a ns1:ATCConcept ;
+    dcterms:title "Bakteriální a virové vakcíny, kombinované"@cs,
+        "Bacterial and viral vaccines, combined"@en ;
+    skos:notation "J07CA" .
+
+<http://linked.opendata.cz/resource/ATC/J07CA06> a ns1:ATCConcept ;
+    dcterms:title "Difterie-Haemophilus influenzae b-pertuse-poliomyelitida-tetanus"@cs,
+        "Diphtheria-haemophilus influenzae B-pertussis-poliomyelitis-tetanus"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/J",
+        "http://linked.opendata.cz/resource/ATC/J07",
+        "http://linked.opendata.cz/resource/ATC/J07C",
+        "http://linked.opendata.cz/resource/ATC/J07CA" ;
+    skos:notation "J07CA06" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014152> a ns1:Ingredient ;
+    ns1:title "Inaktivovaný virus poliomyelitidy typ i"@cs,
+        "Poliomyelitis virus type 1 inactivated"@en,
+        "Virus poliomyelitidis inactivatum typus 1"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014153> a ns1:Ingredient ;
+    ns1:title "Inaktivovaný virus poliomyelitidy typ ii"@cs,
+        "Poliomyelitis virus type 2 inactivated"@en,
+        "Virus poliomyelitidis inactivatum typus 2"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014154> a ns1:Ingredient ;
+    ns1:title "Inaktivovaný virus poliomyelitidy typ iii"@cs,
+        "Poliomyelitis virus type 3 inactivated"@en,
+        "Virus poliomyelitidis inactivatum typus 3"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014655> a ns1:Ingredient ;
+    ns1:title "Filamentozní pertusový hemaglutinin"@cs,
+        "Pertussis filamentous haemagglutinin"@en,
+        "Pertussis haemagglutinum filamentosum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0015163> a ns1:Ingredient ;
+    ns1:title "Hemophilus infl. b s tetanickým anatoxinem"@cs,
+        "Haemophilus influenzae b cum anatox.tetanico"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006521> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An antitoxin produced against the toxin of CORYNEBACTERIUM DIPHTHERIAE that is used for the treatment of DIPHTHERIA.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011157" ;
+    ns1:title "Difterický antitoxin"@cs,
+        "Diphtheria antitoxin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021204> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000" ;
+    ns1:title "Tetanový toxoid"@cs,
+        "Tetanus toxoid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0145571> a ns1:Ingredient ;
+    ns1:title "Pertussis toxoid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0188326> a ns1:Ingredient ;
+    ns1:title "Pertactin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011157> a ns1:PharmacologicalAction ;
+    ns1:description "Biologically active substances whose activities affect or play a role in the functioning of the immune system.     "@en ;
+    ns1:title "Imunologické faktory"@cs,
+        "Immunologic factors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001307> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 1X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001312> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 1X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001338> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 20X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001343> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "25X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 25X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001344> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "40X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 40X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001345> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 50X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001349> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100X0.5ML B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157913_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 100X0.5MLB"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001350> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157901_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 10X0.5ML-B"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001357> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 10X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001363> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 20X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001371> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "25X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 25X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001386> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "40X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 40X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001401> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50X0.5ML-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 50X0.5ML-C"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001405> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100X0.5ML C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SUS 100X0.5MLC"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018193> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 1X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018194> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 10X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018195> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 20X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018196> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "25X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 25X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018197> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "40X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 40X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018198> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50X0.5ML-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157898_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 50X0.5ML-A"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018199> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100X0.5ML A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157907_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 100X0.5MLA"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018200> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 1X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018201> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 10X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018202> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 20X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018203> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "25X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 25X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018204> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "40X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 40X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018205> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50X0.5ML-D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157904_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 50X0.5ML-D"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018206> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasIndication """INFANRIX-IPV+Hib je indikován k aktivní imunizaci dětí od 2 měsíců věku proti difterii, tetanu, pertusi, poliomyelitidě a onemocnění způsobenému Haemophilus influenzae typu b. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100X0.5ML D"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157910_doc" ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLS SUS 100X0.5MLD"@cs ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFANRIX-IPV-HIB> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J07CA06" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014152",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014153",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014154",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0014655",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0015163",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006521",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021204",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0145571",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0188326" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001307",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001312",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001338",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001343",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001344",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001345",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001349",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001350",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001357",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001363",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001371",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001386",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001401",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0001405",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018193",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018194",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018195",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018196",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018197",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018198",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018199",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018201",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018202",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018203",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018204",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018205",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0018206" ;
+    ns1:title "INFANRIX-IPV+HIB"@cs .
+
+

@@ -1,0 +1,75 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J04AB04> a ns1:ATCConcept ;
+    skos:notation "J04AB04" ;
+    skos:prefLabel "Rifabutin"@cs,
+        "Rifabutin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026934> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001838",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932" ;
+    ns1:description "A broad-spectrum antibiotic that is being used as prophylaxis against disseminated Mycobacterium avium complex infection in HIV-positive patients.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOBUTIN-150" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001350",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003049",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003215" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000003049",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003215" ;
+    ns1:title "Rifabutin"@cs,
+        "Rifabutin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001350> a ns1:PharmacologicalAction ;
+    ns1:description "Substances obtained from various species of microorganisms that are, alone or in combination with other agents, of use in treating various forms of tuberculosis; most of these agents are merely bacteriostatic, induce resistance in the organisms, and may be toxic.     "@en ;
+    ns1:title "Antibiotika tuberkulostatická"@cs,
+        "Antibiotics, antitubercular"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001838> a ns1:DiseaseOrFinding ;
+    ns1:title "Leukopenie"@cs,
+        "Leukopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003049> a ns1:DiseaseOrFinding ;
+    ns1:description "MYCOBACTERIUM infections of the lung.     "@en ;
+    ns1:title "Plicní tuberkulóza"@cs,
+        "Tuberculosis, pulmonary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003215> a ns1:DiseaseOrFinding ;
+    ns1:description "A nontuberculous infection when occurring in humans. It is characterized by pulmonary disease, lymphadenitis in children, and systemic disease in AIDS patients. Mycobacterium avium-intracellulare infection of birds and swine results in tuberculosis.     "@en ;
+    ns1:title "Mycobacterium avium - intracelulární infekce"@cs,
+        "Mycobacterium avium-intracellulare infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOBUTIN-150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J04AB04" ;
+    ns1:title "MYCOBUTIN 150"@cs .
+
+

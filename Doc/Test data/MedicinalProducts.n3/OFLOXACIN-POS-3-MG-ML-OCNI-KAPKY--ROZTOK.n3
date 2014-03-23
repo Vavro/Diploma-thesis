@@ -1,0 +1,54 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023430> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A synthetic fluoroquinolone (FLUOROQUINOLONES) antibacterial agent that inhibits the supercoiling activity of bacterial DNA GYRASE, halting DNA REPLICATION.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Ofloxacin"@cs,
+        "Ofloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> a ns1:PharmacologicalAction ;
+    ns1:description "Substances capable of killing agents causing urinary tract infections or of preventing them from spreading.     "@en ;
+    ns1:title "Antiinfekční látky močové"@cs,
+        "Anti-infective agents, urinary"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183668> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndication """Topická léčba zevních očních infekcí, jako je bakteriální konjunktivitida a keratitida u dospělých a dětí způsobených organismy citlivými na ofloxacin. Pozornost má být věnována oficiálním pokynům týkajícím se vhodného použití antibakteriálních léků.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158048_doc" ;
+    ns1:hasStrength "3MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML/15MG"@cs ;
+    ns1:title "OFLOXACIN-POS 3 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXACIN-POS-3-MG-ML-OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023430" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183668" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "OFLOXACIN-POS 3 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+

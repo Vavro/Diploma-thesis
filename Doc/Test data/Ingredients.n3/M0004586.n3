@@ -1,0 +1,115 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G03GB02> a ns1:ATCConcept ;
+    skos:notation "G03GB02" ;
+    skos:prefLabel "Klomifen"@cs,
+        "Clomifene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004586> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002272",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003091",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A triphenyl ethylene stilbene derivative which is an estrogen agonist or antagonist depending on the target tissue.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000168" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CLOSTILBEGYT" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007791",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328354" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009051" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000368",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001685",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001686",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002214",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002215",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875" ;
+    ns1:title "Klomifen"@cs,
+        "Clomiphene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007791> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit or antagonize the action or biosynthesis of estrogenic compounds.     "@en ;
+    ns1:title "Estrogeny - antagonisté"@cs,
+        "Estrogen antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which increase the capacity to conceive in females.     "@en ;
+    ns1:title "Fertilizující látky ženské"@cs,
+        "Fertility agents, female"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328354> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally diverse group of compounds distinguished from ESTROGENS by their ability to bind and activate ESTROGEN RECEPTORS but act as either an agonist or antagonist depending on the tissue type and hormonal milieu. They are classified as either first generation because they demonstrate  estrogen agonist properties in the ENDOMETRIUM or second generation based on their patterns of tissue specificity. (Horm Res 1997;48:155-63)     "@en ;
+    ns1:title "Receptory estrogenů - selektivní modulátory"@cs,
+        "Selective estrogen receptor modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000368> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of menstruation.     "@en ;
+    ns1:title "Amenorea"@cs,
+        "Amenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001685> a ns1:DiseaseOrFinding ;
+    ns1:description "Diminished or absent ability of a female to achieve conception.     "@en ;
+    ns1:title "Ženská infertilita"@cs,
+        "Infertility, female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001686> a ns1:DiseaseOrFinding ;
+    ns1:description "The inability of the male to effect FERTILIZATION of an OVUM after a specified period of unprotected intercourse. Male sterility is permanent infertility.     "@en ;
+    ns1:title "Infertilita mužská"@cs,
+        "Infertility, male"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002214> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally infrequent menstruation.     "@en ;
+    ns1:title "Oligomenorea"@cs,
+        "Oligomenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002215> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of suboptimal concentration of SPERMATOZOA in the ejaculated SEMEN to ensure successful FERTILIZATION of an OVUM. In humans, oligospermia is defined as a sperm count below 20 million per milliliter semen.     "@en ;
+    ns1:title "Oligospermie"@cs,
+        "Oligospermia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002272> a ns1:DiseaseOrFinding ;
+    ns1:description "General term for CYSTS and cystic diseases of the OVARY.     "@en ;
+    ns1:title "Ovarium - cysty"@cs,
+        "Ovarian cysts"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003091> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from blood vessels in the UTERUS, sometimes manifested as vaginal bleeding.     "@en ;
+    ns1:title "Uterus - hemoragie"@cs,
+        "Uterine hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000168> a ns1:MechanismOfAction ;
+    ns1:title "Selective Estrogen Receptor Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009051> a ns1:PhysiologicEffect ;
+    ns1:title "Gonadotropin Releasing Hormone Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOSTILBEGYT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03GB02" ;
+    ns1:title "CLOSTILBEGYT"@cs .
+
+

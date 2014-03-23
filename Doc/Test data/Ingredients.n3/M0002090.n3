@@ -1,0 +1,79 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01DF01> a ns1:ATCConcept ;
+    skos:notation "J01DF01" ;
+    skos:prefLabel "Aztreonam"@cs,
+        "Aztreonam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002090> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A monocyclic beta-lactam antibiotic originally isolated from Chromobacterium violaceum. It is resistant to beta-lactamases and is used in gram-negative infections, especially of the meninges, bladder, and kidneys. It may cause a superinfection with gram-positive organisms.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009949" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CAYSTON-75-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001323",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002519",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002603",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002716",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002764",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081" ;
+    ns1:title "Aztreonam"@cs,
+        "Aztreonam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001323> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving the female reproductive tract (GENITALIA, FEMALE).     "@en ;
+    ns1:title "Gynekologická onemocnění"@cs,
+        "Genital diseases, female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002603> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.     "@en ;
+    ns1:title "Dýchací systém - infekce"@cs,
+        "Respiratory tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002716> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic disease associated with the presence of pathogenic microorganisms or their toxins in the blood.     "@en ;
+    ns1:title "Septikémie"@cs,
+        "Septicemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002764> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria, fungi, parasites, or viruses.     "@en ;
+    ns1:title "Kůže - nemoci infekční"@cs,
+        "Skin diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009949> a ns1:MechanismOfAction ;
+    ns1:title "Antibody-Receptor Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CAYSTON-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DF01" ;
+    ns1:title "CAYSTON 75 MG"@cs .
+
+

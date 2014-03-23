@@ -1,0 +1,178 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A11CC04> a ns1:ATCConcept ;
+    skos:notation "A11CC04" ;
+    skos:prefLabel "Kalcitriol"@cs,
+        "Calcitriol"@en .
+
+<http://linked.opendata.cz/resource/ATC/D05AX03> a ns1:ATCConcept ;
+    skos:notation "D05AX03" ;
+    skos:prefLabel "Kalcitriol"@cs,
+        "Calcitriol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003148> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001577",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001922",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "The physiologically active form of vitamin D. It is formed primarily in the kidney by enzymatic hydroxylation of 25-hydroxycholecalciferol (CALCIFEDIOL). Its production is stimulated by low blood calcium levels and parathyroid hormone. Calcitriol increases intestinal absorption of calcium and phosphorus, and in concert with parathyroid hormone increases bone resorption.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000228" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOD-0-25-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOD-0-5-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ROCALTROL-0-25-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ROCALTROL-0-50-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SILKIS-MAST" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003163",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008313",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008586",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008777",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008849",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008854",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009874" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003134" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001604",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001632",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001750",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002260",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002592",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002643",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003135",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529" ;
+    ns1:title "Kalcitriol"@cs,
+        "Calcitriol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003163> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that increase calcium influx into calcium channels of excitable tissues. This causes vasoconstriction in VASCULAR SMOOTH MUSCLE and/or CARDIAC MUSCLE cells as well as stimulation of insulin release from pancreatic islets. Therefore, tissue-selective calcium agonists have the potential to combat cardiac failure and endocrinological disorders. They have been used primarily in experimental studies in cell and tissue culture.     "@en ;
+    ns1:title "Vápníkové kanály - agonisté"@cs,
+        "Calcium channel agonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> a ns1:PharmacologicalAction ;
+    ns1:description "Organic substances that are required in small amounts for maintenance and growth, but which cannot be manufactured by the human body.     "@en ;
+    ns1:title "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     "@en ;
+    ns1:title "Inhibitory kostní resorpce"@cs,
+        "Bone density conservation agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001577> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high level of calcium in the blood.     "@en ;
+    ns1:title "Hyperkalcémie"@cs,
+        "Hypercalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001604> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of abnormally elevated output of PARATHYROID HORMONE (or PTH) triggering responses that increase blood CALCIUM. It is characterized by HYPERCALCEMIA and BONE RESORPTION, eventually leading to bone diseases. PRIMARY HYPERPARATHYROIDISM is caused by parathyroid HYPERPLASIA or PARATHYROID NEOPLASMS. SECONDARY HYPERPARATHYROIDISM is increased PTH secretion in response to HYPOCALCEMIA, usually caused by chronic KIDNEY DISEASES.     "@en ;
+    ns1:title "Hyperparatyreoidismus"@cs,
+        "Hyperparathyroidism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001632> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of the blood calcium below normal. Manifestations include hyperactive deep tendon reflexes, Chvostek's sign, muscle and abdominal cramps, and carpopedal spasm. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hypokalcémie"@cs,
+        "Hypocalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> a ns1:DiseaseOrFinding ;
+    ns1:description "The end-stage of CHRONIC RENAL INSUFFICIENCY. It is characterized by the severe irreversible kidney damage (as measured by the level of PROTEINURIA) and the reduction in GLOMERULAR FILTRATION RATE to less than 15 ml per min (Kidney Foundation: Kidney Disease Outcome Quality Initiative, 2002). These patients generally require HEMODIALYSIS or KIDNEY TRANSPLANTATION.     "@en ;
+    ns1:title "Chronické selhání ledvin"@cs,
+        "Kidney failure, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001922> a ns1:DiseaseOrFinding ;
+    ns1:description "General term for a group of MALNUTRITION syndromes caused by failure of normal INTESTINAL ABSORPTION of nutrients.     "@en ;
+    ns1:title "Malabsorpční syndromy"@cs,
+        "Malabsorption syndromes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002260> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of bone mass without alteration in the composition of bone, leading to fractures. Primary osteoporosis can be of two major types: postmenopausal osteoporosis (OSTEOPOROSIS, POSTMENOPAUSAL) and age-related or senile osteoporosis.     "@en ;
+    ns1:title "Osteoporóza"@cs,
+        "Osteoporosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002592> a ns1:DiseaseOrFinding ;
+    ns1:description "Decalcification of bone or abnormal bone development due to chronic KIDNEY DISEASES, in which 1,25-DIHYDROXYVITAMIN D3 synthesis by the kidneys is impaired, leading to reduced negative feedback on PARATHYROID HORMONE. The resulting SECONDARY HYPERPARATHYROIDISM eventually leads to bone disorders.     "@en ;
+    ns1:title "Renální osteodystrofie"@cs,
+        "Renal osteodystrophy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002643> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by deficiency of VITAMIN D, especially in infancy and childhood, with disturbance of normal ossification.     "@en ;
+    ns1:title "Rachitida"@cs,
+        "Rickets"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003134> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN D in the diet, insufficient production of vitamin D in the skin, inadequate absorption of vitamin D from the diet, or abnormal conversion of vitamin D to its bioactive metabolites. It is manifested clinically as RICKETS in children and OSTEOMALACIA in adults. (From Cecil Textbook of Medicine, 19th ed, p1406)     "@en ;
+    ns1:title "Nedostatek vitaminu d"@cs,
+        "Vitamin d deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003135> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN E in the diet, characterized by posterior column and spinocerebellar tract abnormalities, areflexia, ophthalmoplegia, and disturbances of gait, proprioception, and vibration. In premature infants vitamin E deficiency is associated with hemolytic anemia, thrombocytosis, edema, intraventricular hemorrhage, and increasing risk of retrolental fibroplasia and bronchopulmonary dysplasia. An apparent inborn error of vitamin E metabolism, named familial isolated vitamin E deficiency, has recently been identified. (Cecil Textbook of Medicine, 19th ed, p1181)     "@en ;
+    ns1:title "Nedostatek vitaminu e"@cs,
+        "Vitamin e deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000228> a ns1:MechanismOfAction ;
+    ns1:title "Structural Macromolecules"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008313> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Resorption Inhibition"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008586> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Distal Tubule PO4-- Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008777> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased PTH Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008849> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Proximal Tubule PO4-- Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008854> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Renal Ca++ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009874> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulation Small Intestine Fluid/Electrolyte Absorption"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOD-0-25-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:title "OSTEOD 0,25 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOD-0-5-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROCALTROL-0-25-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:title "ROCALTROL 0,25 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROCALTROL-0-50-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:title "ROCALTROL 0,50 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SILKIS-MAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D05AX03" ;
+    ns1:title "SILKIS MAST"@cs .
+
+

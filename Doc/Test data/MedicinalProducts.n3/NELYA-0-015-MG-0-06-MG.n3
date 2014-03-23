@@ -1,0 +1,157 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03A> a ns1:ATCConcept ;
+    dcterms:title "Hormonální kontraceptiva k systémové aplikaci"@cs,
+        "HORMONAL CONTRACEPTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "G03A" .
+
+<http://linked.opendata.cz/resource/ATC/G03AA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, fixed combinations"@en ;
+    skos:notation "G03AA" .
+
+<http://linked.opendata.cz/resource/ATC/G03AA10> a ns1:ATCConcept ;
+    dcterms:title "Gestoden a estrogen"@cs,
+        "Gestodene and estrogen"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03A",
+        "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    skos:notation "G03AA10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007862> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002135",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A semisynthetic alkylated ESTRADIOL with a 17-alpha-ethinyl substitution. It has high estrogenic potency when administered orally, and is often used as the estrogenic component in ORAL CONTRACEPTIVES.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795" ;
+    ns1:title "Ethinylestradiol"@cs,
+        "Ethinyl estradiol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0103314> a ns1:Ingredient ;
+    ns1:title "Gestodene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148093> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "1X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148094> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148095> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191926> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "1X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146376_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191927> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146376_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191928> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146376_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X28"@cs ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NELYA-0-015-MG-0-06-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007862",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0103314" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148093",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148094",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148095",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191926",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191927",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191928" ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+

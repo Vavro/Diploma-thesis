@@ -1,0 +1,131 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01E> a ns1:ATCConcept ;
+    dcterms:title "Antiglaukomatika a miotika"@cs,
+        "ANTIGLAUCOMA PREPARATIONS AND MIOTICS"@en ;
+    skos:notation "S01E" .
+
+<http://linked.opendata.cz/resource/ATC/S01EA> a ns1:ATCConcept ;
+    dcterms:title "Sympatomimetika pro léčbu glaukomu"@cs,
+        "Sympathomimetics in glaucoma therapy"@en ;
+    skos:notation "S01EA" .
+
+<http://linked.opendata.cz/resource/ATC/S01EA05> a ns1:ATCConcept ;
+    dcterms:title "Brimonidin"@cs,
+        "Brimonidine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S01",
+        "http://linked.opendata.cz/resource/ATC/S01E",
+        "http://linked.opendata.cz/resource/ATC/S01EA" ;
+    skos:notation "S01EA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065051> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Brimonidine tartrate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128300> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasIndication """Snižování zvýšeného nitroočního tlaku (IOP) u pacientů s glaukomem s otevřeným úhlem nebo s oční hypertenzí. 
+V monoterapii u pacientů, kde je léčba topickými betablokátory kontraindikována;
+Jako přídatná léčba doplňující jiné léčivé přípravky na snižování nitroočního tlaku, jestliže není požadovaného nitroočního tlaku dosaženo podáním léčiva v rámci monoterapie (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "198.179992676"^^xsd:float ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "198.179992676"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152450_doc" ;
+    ns1:hasStrength "2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML"@cs ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128301> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasIndication """Snižování zvýšeného nitroočního tlaku (IOP) u pacientů s glaukomem s otevřeným úhlem nebo s oční hypertenzí. 
+V monoterapii u pacientů, kde je léčba topickými betablokátory kontraindikována;
+Jako přídatná léčba doplňující jiné léčivé přípravky na snižování nitroočního tlaku, jestliže není požadovaného nitroočního tlaku dosaženo podáním léčiva v rámci monoterapie (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "3X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152450_doc" ;
+    ns1:hasStrength "2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 3X5ML"@cs ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128302> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasIndication """Snižování zvýšeného nitroočního tlaku (IOP) u pacientů s glaukomem s otevřeným úhlem nebo s oční hypertenzí. 
+V monoterapii u pacientů, kde je léčba topickými betablokátory kontraindikována;
+Jako přídatná léčba doplňující jiné léčivé přípravky na snižování nitroočního tlaku, jestliže není požadovaného nitroočního tlaku dosaženo podáním léčiva v rámci monoterapie (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "6X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152450_doc" ;
+    ns1:hasStrength "2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 6X5ML"@cs ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128303> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasIndication """Snižování zvýšeného nitroočního tlaku (IOP) u pacientů s glaukomem s otevřeným úhlem nebo s oční hypertenzí. 
+V monoterapii u pacientů, kde je léčba topickými betablokátory kontraindikována;
+Jako přídatná léčba doplňující jiné léčivé přípravky na snižování nitroočního tlaku, jestliže není požadovaného nitroočního tlaku dosaženo podáním léčiva v rámci monoterapie (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152450_doc" ;
+    ns1:hasStrength "2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X10ML"@cs ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128304> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasIndication """Snižování zvýšeného nitroočního tlaku (IOP) u pacientů s glaukomem s otevřeným úhlem nebo s oční hypertenzí. 
+V monoterapii u pacientů, kde je léčba topickými betablokátory kontraindikována;
+Jako přídatná léčba doplňující jiné léčivé přípravky na snižování nitroočního tlaku, jestliže není požadovaného nitroočního tlaku dosaženo podáním léčiva v rámci monoterapie (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "3X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152450_doc" ;
+    ns1:hasStrength "2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 3X10ML"@cs ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LUXFEN--2-MG-ML-OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065051" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128300",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128301",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128302",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128303",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128304" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "LUXFEN, 2 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+

@@ -1,0 +1,340 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A11AA02> a ns1:ATCConcept ;
+    skos:notation "A11AA02" ;
+    skos:prefLabel "Multivitaminy a vápník"@cs,
+        "Multivitamins and calcium"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11AA03> a ns1:ATCConcept ;
+    skos:notation "A11AA03" ;
+    skos:prefLabel "Multivitaminy a jiné minerály, včetně kombinací"@cs,
+        "Multivitamins and other minerals, incl. combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11HA03> a ns1:ATCConcept ;
+    skos:notation "A11HA03" ;
+    skos:prefLabel "Tokoferol alfa (vitamin E)"@cs,
+        "Tocopherol (vit E)"@en .
+
+<http://linked.opendata.cz/resource/ATC/R01AX30> a ns1:ATCConcept ;
+    skos:notation "R01AX30" ;
+    skos:prefLabel "Jiná nosní léčiva, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022802> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A generic descriptor for all TOCOPHEROLS and TOCOTRIENOLS that exhibit ALPHA-TOCOPHEROL activity. By virtue of the phenolic hydrogen on the 2H-1-benzopyran-6-ol nucleus, these compounds exhibit varying degree of antioxidant activity, depending on the site and number of methyl groups and the type of ISOPRENOIDS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/COLDASTOP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EREVIT-30",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EREVIT-300",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MULTI-SANOSTOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PINOSOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-100-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-200-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-400-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-EVIT-600" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009934" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000363",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000387",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000625",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001022",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003135" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000363",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000376",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000387",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000473",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000509",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000519",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000787",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000843",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000914",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000950",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001022",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001047",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001475",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002009",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002065",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002162",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002163",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002215",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002325",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002327",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002449",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002948",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003131",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003135",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003550",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004204",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000011099",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171661",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000171698" ;
+    ns1:title "Vitamin e"@cs,
+        "Vitamin e"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491> a ns1:PharmacologicalAction ;
+    ns1:description "Naturally occurring or synthetic substances that inhibit or retard the oxidation of a substance to which it is added. They counteract the harmful and damaging effects of oxidation in animal tissues.     "@en ;
+    ns1:title "Antioxidancia"@cs,
+        "Antioxidants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> a ns1:PharmacologicalAction ;
+    ns1:description "Organic substances that are required in small amounts for maintenance and growth, but which cannot be manufactured by the human body.     "@en ;
+    ns1:title "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000363> a ns1:DiseaseOrFinding ;
+    ns1:description "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)     "@en ;
+    ns1:title "Alzheimerova nemoc"@cs,
+        "Alzheimer disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000376> a ns1:DiseaseOrFinding ;
+    ns1:description "A degenerative disorder affecting upper MOTOR NEURONS in the brain and lower motor neurons in the brain stem and SPINAL CORD. Disease onset is usually after the age of 50 and the process is usually fatal within 3 to 6 years. Clinical manifestations include progressive weakness, atrophy, FASCICULATION, hyperreflexia, DYSARTHRIA, dysphagia, and eventual paralysis of respiratory function. Pathologic features include the replacement of motor neurons with fibrous ASTROCYTES and atrophy of anterior SPINAL NERVE ROOTS and corticospinal tracts. (From Adams et al., Principles of Neurology, 6th ed, pp1089-94)     "@en ;
+    ns1:title "Amyotrofická laterální skleróza"@cs,
+        "Amyotrophic lateral sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000387> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of inadequate circulating red blood cells (ANEMIA) or insufficient HEMOGLOBIN due to premature destruction of red blood cells (ERYTHROCYTES).     "@en ;
+    ns1:title "Hemolytická anemie"@cs,
+        "Anemia, hemolytic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000473> a ns1:DiseaseOrFinding ;
+    ns1:description "Thickening and loss of elasticity of the walls of ARTERIES of all sizes. There are many forms classified by the types of lesions and arteries involved, such as ATHEROSCLEROSIS with fatty lesions in the ARTERIAL INTIMA of medium and large muscular arteries.     "@en ;
+    ns1:title "Arterioskleróza"@cs,
+        "Arteriosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000509> a ns1:DiseaseOrFinding ;
+    ns1:description "Decrease in the size of a cell, tissue, organ, or multiple organs, associated with a variety of pathological conditions such as abnormal cellular changes, ischemia, malnutrition, or hormonal changes.     "@en ;
+    ns1:title "Atrofie"@cs,
+        "Atrophy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000519> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition due to a deficiency of one or more essential vitamins. (Dorland, 27th ed)     "@en ;
+    ns1:title "Avitaminóza"@cs,
+        "Avitaminosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000625> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic lung disease developed after OXYGEN INHALATION THERAPY or mechanical ventilation (VENTILATION, MECHANICAL) usually occurring in certain premature infants (INFANT, PREMATURE) or newborn infants with respiratory distress syndrome (RESPIRATORY DISTRESS SYNDROME, NEWBORN). Histologically, it is characterized by the unusual abnormalities of the bronchioles, such as METAPLASIA, decrease in alveolar number, and formation of CYSTS.     "@en ;
+    ns1:title "Bronchopulmonální dysplazie"@cs,
+        "Bronchopulmonary dysplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000787> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases which have one or more of the following characteristics: they are permanent, leave residual disability, are caused by nonreversible pathological alteration, require special training of the patient for rehabilitation, or may be expected to require a long period of supervision, observation, or care. (Dictionary of Health Services Management, 2d ed)     "@en ;
+    ns1:title "Chronická nemoc"@cs,
+        "Chronic disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000843> a ns1:DiseaseOrFinding ;
+    ns1:description "Prolonged shortening of the muscle or other soft tissue around a joint, preventing movement of the joint.     "@en ;
+    ns1:title "Kontraktura"@cs,
+        "Contracture"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000914> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.     "@en ;
+    ns1:title "Demence"@cs,
+        "Dementia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.     "@en ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001022> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal movements, including HYPERKINESIS; HYPOKINESIA; TREMOR; and DYSTONIA, associated with the use of certain medications or drugs. Muscles of the face, trunk, neck, and extremities are most commonly affected. Tardive dyskinesia refers to abnormal hyperkinetic movements of the muscles of the face, tongue, and neck associated with the use of neuroleptic agents (see ANTIPSYCHOTIC AGENTS). (Adams et al., Principles of Neurology, 6th ed, p1199)     "@en ;
+    ns1:title "Dyskinéze léková"@cs,
+        "Dyskinesia, drug-induced"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001047> a ns1:DiseaseOrFinding ;
+    ns1:description "Onset of HYPERREFLEXIA; SEIZURES; or COMA in a previously diagnosed pre-eclamptic patient (PRE-ECLAMPSIA).     "@en ;
+    ns1:title "Eklampsie"@cs,
+        "Eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001475> a ns1:DiseaseOrFinding ;
+    ns1:description "The destruction of ERYTHROCYTES by many different causal agents such as antibodies, bacteria, chemicals, temperature, and changes in tonicity.     "@en ;
+    ns1:title "Hemolýza"@cs,
+        "Hemolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding or escape of blood from a vessel.     "@en ;
+    ns1:title "Hemoragie"@cs,
+        "Hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002009> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal uterine bleeding that is not related to MENSTRUATION, usually in females without regular MENSTRUAL CYCLE. The irregular and unpredictable bleeding usually comes from a dysfunctional ENDOMETRIUM.     "@en ;
+    ns1:title "Metroragie"@cs,
+        "Metrorrhagia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002065> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of inherited MYOPATHIES, characterized by wasting and weakness of the SKELETAL MUSCLE. They are categorized by the sites of MUSCLE WEAKNESS; AGE OF ONSET; and INHERITANCE PATTERNS.     "@en ;
+    ns1:title "Svalové dystrofie"@cs,
+        "Muscular dystrophies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002163> a ns1:DiseaseOrFinding ;
+    ns1:description "A mental disorder characterized by chronic fatigue and concomitant physiologic symptoms.     "@en ;
+    ns1:title "Neurastenie"@cs,
+        "Neurasthenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002215> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of suboptimal concentration of SPERMATOZOA in the ejaculated SEMEN to ensure successful FERTILIZATION of an OVUM. In humans, oligospermia is defined as a sperm count below 20 million per milliliter semen.     "@en ;
+    ns1:title "Oligospermie"@cs,
+        "Oligospermia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002325> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term referring to a mild to moderate degree of muscular weakness, occasionally used as a synonym for PARALYSIS (severe or complete loss of motor function). In the older literature, paresis often referred specifically to paretic neurosyphilis (see NEUROSYPHILIS). \"General paresis\" and \"general paralysis\" may still carry that connotation. Bilateral lower extremity paresis is referred to as PARAPARESIS.     "@en ;
+    ns1:title "Paréza"@cs,
+        "Paresis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)     "@en ;
+    ns1:title "Parkinsonova nemoc"@cs,
+        "Parkinson disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002449> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious disease of humans, particularly children, caused by any of three serotypes of human poliovirus (POLIOVIRUS). Usually the infection is limited to the gastrointestinal tract and nasopharynx, and is often asymptomatic. The central nervous system, primarily the spinal cord, may be affected, leading to rapidly progressive paralysis, coarse FASCICULATION and hyporeflexia. Motor neurons are primarily affected. Encephalitis may also occur. The virus replicates in the nervous system, and may cause significant neuronal loss, most notably in the spinal cord. A rare related condition, nonpoliovirus poliomyelitis, may result from infections with nonpoliovirus enteroviruses. (From Adams et al., Principles of Neurology, 6th ed, pp764-5)     "@en ;
+    ns1:title "Poliomyelitida"@cs,
+        "Poliomyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002616> a ns1:DiseaseOrFinding ;
+    ns1:description "A bilateral retinopathy occurring in premature infants treated with excessively high concentrations of oxygen, characterized by vascular dilatation, proliferation, and tortuosity, edema, and retinal detachment, with ultimate conversion of the retina into a fibrous mass that can be seen as a dense retrolental membrane. Usually growth of the eye is arrested and may result in microophthalmia, and blindness may occur. (Dorland, 27th ed)     "@en ;
+    ns1:title "Retinopatie nedonošených"@cs,
+        "Retinopathy of prematurity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002702> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process consisting of hardening or fibrosis of an anatomical structure, often a vessel or a nerve.     "@en ;
+    ns1:title "Skleróza"@cs,
+        "Sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002948> a ns1:DiseaseOrFinding ;
+    ns1:description "A hypermetabolic syndrome caused by excess THYROID HORMONES which may come from endogenous or exogenous sources. The endogenous source of hormone may be thyroid HYPERPLASIA; THYROID NEOPLASMS; or hormone-producing extrathyroidal tissue. Thyrotoxicosis is characterized by NERVOUSNESS; TACHYCARDIA; FATIGUE; WEIGHT LOSS; heat intolerance; and excessive SWEATING.     "@en ;
+    ns1:title "Tyreotoxikóza"@cs,
+        "Thyrotoxicosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003131> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN A in the diet, characterized by NIGHT BLINDNESS and other ocular manifestations such as dryness of the conjunctiva and later of the cornea (XEROPHTHALMIA). Vitamin A deficiency is a very common problem worldwide, particularly in developing countries as a consequence of famine or shortages of vitamin A-rich foods. In the United States it is found among the urban poor, the elderly, alcoholics, and patients with malabsorption. (From Cecil Textbook of Medicine, 19th ed, p1179)     "@en ;
+    ns1:title "Nedostatek vitaminu a"@cs,
+        "Vitamin a deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003135> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN E in the diet, characterized by posterior column and spinocerebellar tract abnormalities, areflexia, ophthalmoplegia, and disturbances of gait, proprioception, and vibration. In premature infants vitamin E deficiency is associated with hemolytic anemia, thrombocytosis, edema, intraventricular hemorrhage, and increasing risk of retrolental fibroplasia and bronchopulmonary dysplasia. An apparent inborn error of vitamin E metabolism, named familial isolated vitamin E deficiency, has recently been identified. (Cecil Textbook of Medicine, 19th ed, p1181)     "@en ;
+    ns1:title "Nedostatek vitaminu e"@cs,
+        "Vitamin e deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004204> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal involuntary movements which primarily affect the extremities, trunk, or jaw that occur as a manifestation of an underlying disease process. Conditions which feature recurrent or persistent episodes of dyskinesia as a primary manifestation of disease may be referred to as dyskinesia syndromes (see MOVEMENT DISORDERS). Dyskinesias are also a relatively common manifestation of BASAL GANGLIA DISEASES.     "@en ;
+    ns1:title "Dyskinézy"@cs,
+        "Dyskinesias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011099> a ns1:DiseaseOrFinding ;
+    ns1:description "An imbalanced nutritional status resulted from insufficient intake of nutrients to meet normal physiological requirement.     "@en ;
+    ns1:title "Podvýživa"@cs,
+        "Malnutrition"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171661> a ns1:DiseaseOrFinding ;
+    ns1:description "A thickening and loss of elasticity of the walls of ARTERIES that occurs with formation of ATHEROSCLEROTIC PLAQUES within the ARTERIAL INTIMA.     "@en ;
+    ns1:title "Ateroskleróza"@cs,
+        "Atherosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171698> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical syndrome describing overuse tendon injuries characterized by a combination of PAIN, diffuse or localized swelling, and impaired performance. Distinguishing tendinosis from tendinitis is clinically difficult and can be made only after histopathological examination.     "@en ;
+    ns1:title "Tendinopatie"@cs,
+        "Tendinopathy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> a ns1:MechanismOfAction ;
+    ns1:title "Free Radical Scavenging Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009934> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Vitamin Uptake and Modification"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDASTOP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AX30" ;
+    ns1:title "COLDASTOP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11AA03" ;
+    ns1:title "DUOVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EREVIT-30> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "EREVIT 30"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EREVIT-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "EREVIT 300"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MULTI-SANOSTOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11AA02" ;
+    ns1:title "MULTI-SANOSTOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PINOSOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AX30" ;
+    ns1:title "PINOSOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-100-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "VITAMIN E 100-ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-200-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "VITAMIN E 200-ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-400-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "VITAMIN E 400-ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-E-EVIT-600> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA03" ;
+    ns1:title "VITAMIN E EVIT 600"@cs .
+
+

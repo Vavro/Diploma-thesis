@@ -1,0 +1,108 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01CF04> a ns1:ATCConcept ;
+    skos:notation "J01CF04" ;
+    skos:prefLabel "Oxacilin"@cs,
+        "Oxacillin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015618> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An antibiotic similar to FLUCLOXACILLIN used in resistant staphylococci infections.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PROSTAPHLIN-1000-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003507" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000707",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001097",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002256",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002603",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002716",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003168",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003512" ;
+    ns1:title "Oxacilin"@cs,
+        "Oxacillin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000707> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute, diffuse, and suppurative inflammation of loose connective tissue, particularly the deep subcutaneous tissues, and sometimes muscle, which is most commonly seen as a result of infection of a wound, ulcer, or other skin lesions.     "@en ;
+    ns1:title "Celulitis"@cs,
+        "Cellulitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001097> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOCARDIUM caused by BACTERIA that entered the bloodstream. The strains of bacteria vary with predisposing factors, such as CONGENITAL HEART DEFECTS; HEART VALVE DISEASES; HEART VALVE PROSTHESIS IMPLANTATION; or intravenous drug use.     "@en ;
+    ns1:title "Bakteriální endokarditida"@cs,
+        "Endocarditis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002256> a ns1:DiseaseOrFinding ;
+    ns1:title "Osteomyelitida"@cs,
+        "Osteomyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002603> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.     "@en ;
+    ns1:title "Dýchací systém - infekce"@cs,
+        "Respiratory tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002716> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic disease associated with the presence of pathogenic microorganisms or their toxins in the blood.     "@en ;
+    ns1:title "Septikémie"@cs,
+        "Septicemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003168> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the site of trauma by pathogenic microorganisms.     "@en ;
+    ns1:title "Rány - infekce"@cs,
+        "Wound infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that retain the crystal violet stain (positive) when treated by the gram-staining method.     "@en ;
+    ns1:title "Grampozitivní bakteriální infekce"@cs,
+        "Gram-positive bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003512> a ns1:DiseaseOrFinding ;
+    ns1:description "Bacterial infections of the leptomeninges and subarachnoid space, frequently involving the cerebral cortex, cranial nerves, cerebral blood vessels, spinal cord, and nerve roots.     "@en ;
+    ns1:title "Meningitida bakteriální"@cs,
+        "Meningitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215> a ns1:MechanismOfAction ;
+    ns1:title "Transpeptidase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROSTAPHLIN-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CF04" ;
+    ns1:title "PROSTAPHLIN 1000 MG"@cs .
+
+

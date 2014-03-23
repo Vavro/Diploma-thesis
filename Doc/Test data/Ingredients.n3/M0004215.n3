@@ -1,0 +1,124 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C03EA06> a ns1:ATCConcept ;
+    skos:notation "C03EA06" ;
+    skos:prefLabel "Chlortalidon a kalium šetřící diuretika"@cs,
+        "Chlortalidone and potassium-sparing agents"@en .
+
+<http://linked.opendata.cz/resource/ATC/C07BB03> a ns1:ATCConcept ;
+    skos:notation "C07BB03" ;
+    skos:prefLabel "Atenolol a thiazidy"@cs,
+        "Atenolol and thiazides"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004215> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A benzenesulfonamide-phthalimidine that tautomerizes to a BENZOPHENONES form. It is considered a thiazide-like diuretic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AMICLOTON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TENORETIC" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009275",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009277",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002155" ;
+    ns1:title "Chlorthalidon"@cs,
+        "Chlorthalidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002155> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by severe PROTEINURIA, greater than 3.5 g/day in an average adult. The substantial loss of protein in the urine results in complications such as HYPOPROTEINEMIA; generalized EDEMA; HYPERTENSION; and HYPERLIPIDEMIAS. Diseases associated with nephrotic syndrome generally cause chronic kidney dysfunction.     "@en ;
+    ns1:title "Nefrotický syndrom"@cs,
+        "Nephrotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066> a ns1:MechanismOfAction ;
+    ns1:title "Small Ion Transport Pump Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009275> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule H+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009277> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMICLOTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA06" ;
+    ns1:title "AMICLOTON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TENORETIC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB03" ;
+    ns1:title "TENORETIC"@cs .
+
+

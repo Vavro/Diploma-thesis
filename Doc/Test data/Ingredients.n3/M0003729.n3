@@ -1,0 +1,263 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01DD02> a ns1:ATCConcept ;
+    skos:notation "J01DD02" ;
+    skos:prefLabel "Ceftazidim"@cs,
+        "Ceftazidime"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003729> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Semisynthetic, broad-spectrum antibacterial derived from CEPHALORIDINE and used especially for Pseudomonas and other gram-negative infections in debilitated patients.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-1-GM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-2-GM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-MYLAN-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-MYLAN-2-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-STRAGEN-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-STRAGEN-2-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-2-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-500-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000287",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000587",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000890",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001249",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001398",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001758",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001981",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002265",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002266",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002379",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002507",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002519",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003416",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003491",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003512",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003812",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003823",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003861" ;
+    ns1:title "Ceftazidim"@cs,
+        "Ceftazidime"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000287> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus ACINETOBACTER.     "@en ;
+    ns1:title "Acinetobacter - infekce"@cs,
+        "Acinetobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000587> a ns1:DiseaseOrFinding ;
+    ns1:description "Bone diseases caused by pathogenic microorganisms.     "@en ;
+    ns1:title "Kosti - nemoci infekční"@cs,
+        "Bone diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000890> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal recessive genetic disease of the EXOCRINE GLANDS. It is caused by mutations in the gene encoding the CYSTIC FIBROSIS TRANSMEMBRANE CONDUCTANCE REGULATOR expressed in several organs including the LUNG, the PANCREAS, the BILIARY SYSTEM, and the SWEAT GLANDS. Cystic fibrosis is characterized by epithelial secretory dysfunction associated with ductal obstruction resulting in AIRWAY OBSTRUCTION; chronic RESPIRATORY INFECTIONS; PANCREATIC INSUFFICIENCY; maldigestion; salt depletion; and HEAT PROSTRATION.     "@en ;
+    ns1:title "Cystická fibróza"@cs,
+        "Cystic fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001758> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus KLEBSIELLA.     "@en ;
+    ns1:title "Klebsiella - infekce"@cs,
+        "Klebsiella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001981> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)     "@en ;
+    ns1:title "Meningitida"@cs,
+        "Meningitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002265> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the OUTER EAR including the external EAR CANAL, cartilages of the auricle (EAR CARTILAGE), and the TYMPANIC MEMBRANE.     "@en ;
+    ns1:title "Otitis externa"@cs,
+        "Otitis externa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002379> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PERITONEUM lining the ABDOMINAL CAVITY as the result of infectious, autoimmune, or chemical processes. Primary peritonitis is due to infection of the PERITONEAL CAVITY via hematogenous or lymphatic spread and without intra-abdominal source. Secondary peritonitis arises from the ABDOMINAL CAVITY itself through RUPTURE or ABSCESS of intra-abdominal organs.     "@en ;
+    ns1:title "Peritonitida"@cs,
+        "Peritonitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003416> a ns1:DiseaseOrFinding ;
+    ns1:description "The presence of viable bacteria circulating in the blood. Fever, chills, tachycardia, and tachypnea are common acute manifestations of bacteremia. The majority of cases are seen in already hospitalized patients, most of whom have underlying diseases or procedures which render their bloodstreams susceptible to invasion.     "@en ;
+    ns1:title "Bakteriémie"@cs,
+        "Bacteremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003491> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus SERRATIA.     "@en ;
+    ns1:title "Serratia - infekce"@cs,
+        "Serratia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003512> a ns1:DiseaseOrFinding ;
+    ns1:description "Bacterial infections of the leptomeninges and subarachnoid space, frequently involving the cerebral cortex, cranial nerves, cerebral blood vessels, spinal cord, and nerve roots.     "@en ;
+    ns1:title "Meningitida bakteriální"@cs,
+        "Meningitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003812> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the lung parenchyma that is caused by bacterial infections.     "@en ;
+    ns1:title "Bakteriální pneumonie"@cs,
+        "Pneumonia, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003823> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of non-skeletal tissue, i.e., exclusive of bone, ligaments, cartilage, and fibrous tissue. The concept is usually referred to as skin and soft tissue infections and usually subcutaneous and muscle tissue are involved. The predisposing factors in anaerobic infections are trauma, ischemia, and surgery. The organisms often derive from the fecal or oral flora, particularly in wounds associated with intestinal surgery, decubitus ulcer, and human bites. (From Cecil Textbook of Medicine, 19th ed, p1688)     "@en ;
+    ns1:title "Měkké tkáně - infekce"@cs,
+        "Soft tissue infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.     "@en ;
+    ns1:title "Sepse"@cs,
+        "Sepsis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-1-GM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM KABI 1 GM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-2-GM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM KABI 2 GM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-KABI-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM KABI 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-MYLAN-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM MYLAN 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-MYLAN-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM MYLAN 2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-STRAGEN-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM STRAGEN 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTAZIDIM-STRAGEN-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "CEFTAZIDIM STRAGEN 2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "FORTUM 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "FORTUM 2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORTUM-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD02" ;
+    ns1:title "FORTUM 500 MG"@cs .
+
+

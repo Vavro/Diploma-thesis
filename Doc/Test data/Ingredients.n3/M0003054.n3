@@ -1,0 +1,112 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02AE01> a ns1:ATCConcept ;
+    skos:notation "N02AE01" ;
+    skos:prefLabel "Buprenorfin"@cs,
+        "Buprenorphine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003054> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A derivative of the opioid alkaloid THEBAINE that is a more potent and longer lasting analgesic than MORPHINE. It appears to act as a partial agonist at mu and kappa opioid receptors and as an antagonist at delta receptors. The lack of delta-agonist activity has been suggested to account for the observation that buprenorphine tolerance may not develop with chronic use.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000154",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-35-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-52-5-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-70-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-10-MCG-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-20-MCG-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-5-MCG-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-35-MCG-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-52-5-MCG-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-70-MCG-H" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001525",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:title "Buprenorfin"@cs,
+        "Buprenorphine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> a ns1:PharmacologicalAction ;
+    ns1:description "Agents inhibiting the effect of narcotics on the central nervous system.     "@en ;
+    ns1:title "Narkotika - antagonisté"@cs,
+        "Narcotic antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001525> a ns1:DiseaseOrFinding ;
+    ns1:description "Strong dependence, both physiological and emotional, upon heroin.     "@en ;
+    ns1:title "Závislost na heroinu"@cs,
+        "Heroin dependence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000154> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-35-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "BUPRENORPHINE ACTAVIS 35 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-52-5-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-70-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "BUPRENORPHINE ACTAVIS 70 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-10-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "NORSPAN 10 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-20-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "NORSPAN 20 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORSPAN-5-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "NORSPAN 5 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-35-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "TRANSTEC 35 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-52-5-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "TRANSTEC 52,5 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRANSTEC-70-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:title "TRANSTEC 70 MCG/H"@cs .
+
+

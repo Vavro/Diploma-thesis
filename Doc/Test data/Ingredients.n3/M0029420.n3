@@ -1,0 +1,263 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A07EA06> a ns1:ATCConcept ;
+    skos:notation "A07EA06" ;
+    skos:prefLabel "Budesonid"@cs,
+        "Budesonide"@en .
+
+<http://linked.opendata.cz/resource/ATC/R01AD05> a ns1:ATCConcept ;
+    skos:notation "R01AD05" ;
+    skos:prefLabel "Budesonid"@cs,
+        "Budesonide"@en .
+
+<http://linked.opendata.cz/resource/ATC/R03AK07> a ns1:ATCConcept ;
+    skos:notation "R03AK07" ;
+    skos:prefLabel "Formoterol a jiná léčiva onem. spojen. s obstrukcí dých. cest"@cs,
+        "Formoterol and other drugs for obstructive airway diseases"@en .
+
+<http://linked.opendata.cz/resource/ATC/R03BA02> a ns1:ATCConcept ;
+    skos:notation "R03BA02" ;
+    skos:prefLabel "Budesonid"@cs,
+        "Budesonide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029420> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002821" ;
+    ns1:description "A glucocorticoid used in the management of ASTHMA, the treatment of various skin disorders, and allergic RHINITIS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK-2-MG-REKTALNI-PENA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK-UNO-9-MG-ENTEROSOLVENTNI-GRANULE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BUDIAIR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ENTOCORT-3-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ENTOCORT-KLYZMA-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIFLONID-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIFLONID-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-0-5-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-100MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-200MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-400MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RHINOCORT-AQUA-64-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-100-MIKROGRAMU-6-MIKROGRAMU-INHALACE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-200-MIKROGRAMU--6-MIKROGRAMU--INHALACE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-400-MIKROGRAMU-12-MIKROGRAMU-INHALACE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TAFEN-NASAL-50-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TINKAIR-100-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TINKAIR-50-MCG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009928" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002110" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000806",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000963",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002110",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002458",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002635",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003952",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010937" ;
+    ns1:title "Budesonid"@cs,
+        "Budesonide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000806> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON section of the large intestine (INTESTINE, LARGE), usually with symptoms such as DIARRHEA (often with blood and mucus), ABDOMINAL PAIN, and FEVER.     "@en ;
+    ns1:title "Kolitida"@cs,
+        "Colitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000963> a ns1:DiseaseOrFinding ;
+    ns1:description "An increased liquidity or decreased consistency of  FECES, such as running stool. Fecal consistency is related to the ratio of water-holding capacity of insoluble solids to total water, rather than the amount of water present. Diarrhea is not hyperdefecation or increased fecal weight.     "@en ;
+    ns1:title "Průjem"@cs,
+        "Diarrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER.     "@en ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002110> a ns1:DiseaseOrFinding ;
+    ns1:description "Focal accumulations of EDEMA fluid in the NASAL MUCOSA accompanied by HYPERPLASIA of the associated submucosal connective tissue. Polyps may be NEOPLASMS, foci of INFLAMMATION, degenerative lesions, or malformations.     "@en ;
+    ns1:title "Nosní polypy"@cs,
+        "Nasal polyps"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002458> a ns1:DiseaseOrFinding ;
+    ns1:description "Discrete abnormal tissue masses that protrude into the lumen of the DIGESTIVE TRACT or the RESPIRATORY TRACT. Polyps can be spheroidal, hemispheroidal, or irregular mound-shaped structures attached to the MUCOUS MEMBRANE of the lumen wall either by a stalk, pedunculus, or by a broad base.     "@en ;
+    ns1:title "Polypy"@cs,
+        "Polyps"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002635> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the mucous membrane of the nose similar to that found in hay fever except that symptoms persist throughout the year. The causes are usually air-borne allergens, particularly dusts, feathers, molds, animal fur, etc.     "@en ;
+    ns1:title "Celoroční alergická rýma"@cs,
+        "Rhinitis, allergic, perennial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003952> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic self-perpetuating hepatocellular INFLAMMATION of unknown cause, usually with HYPERGAMMAGLOBULINEMIA and serum AUTOANTIBODIES.     "@en ;
+    ns1:title "Autoimunitní hepatitida"@cs,
+        "Hepatitis, autoimmune"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010937> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by the lack of intestinal PERISTALSIS or INTESTINAL MOTILITY without any mechanical obstruction. This interference of the flow of INTESTINAL CONTENTS often leads to INTESTINAL OBSTRUCTION. Ileus may be classified into postoperative, inflammatory, metabolic, neurogenic, and drug-induced.     "@en ;
+    ns1:title "Ileus"@cs,
+        "Ileus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lysosomal Function"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009928> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cellular Migration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EA06" ;
+    ns1:title "BUDENOFALK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK-2-MG-REKTALNI-PENA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EA06" ;
+    ns1:title "BUDENOFALK 2 MG REKTÁLNÍ PĚNA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUDENOFALK-UNO-9-MG-ENTEROSOLVENTNI-GRANULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EA06" ;
+    ns1:title "BUDENOFALK UNO 9 MG ENTEROSOLVENTNÍ GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUDIAIR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "BUDIAIR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENTOCORT-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EA06" ;
+    ns1:title "ENTOCORT 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENTOCORT-KLYZMA-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EA06" ;
+    ns1:title "ENTOCORT KLYZMA 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "GIONA EASYHALER 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "GIONA EASYHALER 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GIONA-EASYHALER-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "GIONA EASYHALER 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIFLONID-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "MIFLONID 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIFLONID-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "MIFLONID 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "PULMICORT 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-100MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "PULMICORT TURBUHALER 100MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-200MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "PULMICORT TURBUHALER 200MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PULMICORT-TURBUHALER-400MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BA02" ;
+    ns1:title "PULMICORT TURBUHALER 400MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RHINOCORT-AQUA-64-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD05" ;
+    ns1:title "RHINOCORT AQUA 64 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-100-MIKROGRAMU-6-MIKROGRAMU-INHALACE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03AK07" ;
+    ns1:title "SYMBICORT TURBUHALER 100 MIKROGRAMŮ/6 MIKROGRAMŮ/INHALACE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-200-MIKROGRAMU--6-MIKROGRAMU--INHALACE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03AK07" ;
+    ns1:title "SYMBICORT TURBUHALER 200 MIKROGRAMŮ/ 6 MIKROGRAMŮ/ INHALACE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYMBICORT-TURBUHALER-400-MIKROGRAMU-12-MIKROGRAMU-INHALACE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03AK07" ;
+    ns1:title "SYMBICORT TURBUHALER 400 MIKROGRAMŮ/12 MIKROGRAMŮ/INHALACE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TAFEN-NASAL-50-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD05" ;
+    ns1:title "TAFEN NASAL 50 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TINKAIR-100-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD05" ;
+    ns1:title "TINKAIR 100 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TINKAIR-50-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD05" ;
+    ns1:title "TINKAIR 50 MCG"@cs .
+
+

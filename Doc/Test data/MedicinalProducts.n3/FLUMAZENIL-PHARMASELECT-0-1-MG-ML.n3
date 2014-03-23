@@ -1,0 +1,155 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB> a ns1:ATCConcept ;
+    dcterms:title "Antidota"@cs,
+        "Antidotes"@en ;
+    skos:notation "V03AB" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB25> a ns1:ATCConcept ;
+    dcterms:title "Flumazenil"@cs,
+        "Flumazenil"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V",
+        "http://linked.opendata.cz/resource/ATC/V03",
+        "http://linked.opendata.cz/resource/ATC/V03A",
+        "http://linked.opendata.cz/resource/ATC/V03AB" ;
+    skos:notation "V03AB25" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008585> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A potent benzodiazepine receptor antagonist. Since it reverses the sedative and other actions of benzodiazepines, it has been suggested as an antidote to benzodiazepine overdoses.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Flumazenil"@cs,
+        "Flumazenil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390> a ns1:PharmacologicalAction ;
+    ns1:description "Agents counteracting or neutralizing the action of POISONS.     "@en ;
+    ns1:title "Antidota"@cs,
+        "Antidotes"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126898> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB25" ;
+    ns1:hasIndication """Flumazenil je indikován k úplnému nebo částečnému zrušení centrálně sedativních účinků benzodiazepinů. Je proto používán v anesteziologické praxi a v intenzivní péči 
+v následujících situacích:
+Při anestezii: 
+K ukončení hypnosedativních účinků celkové anestézie navozené a udržované benzodiazepiny u hospitalizovaných pacientů. 
+Ke zrušení benzodiazepinové sedace po krátkých diagnostických a terapeutických výkonech u ambulantních a hospitalizovaných pacientů.
+Ke zrušení bdělé sedace vyvolané benzodiazepiny u dětí ve věku > 1 rok
+Během intenzivní péče: 
+Ke specifickému zrušení centrálních účinků benzodiazepinů za účelem obnovení spontánního dýchání.
+K diagnostice a léčbě intoxikace či předávkování samotnými benzodiazepiny nebo převážně benzodiazepiny. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "5 AMPX5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156343_doc" ;
+    ns1:hasStrength "0.1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X5ML/0.5MG"@cs ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126899> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB25" ;
+    ns1:hasIndication """Flumazenil je indikován k úplnému nebo částečnému zrušení centrálně sedativních účinků benzodiazepinů. Je proto používán v anesteziologické praxi a v intenzivní péči 
+v následujících situacích:
+Při anestezii: 
+K ukončení hypnosedativních účinků celkové anestézie navozené a udržované benzodiazepiny u hospitalizovaných pacientů. 
+Ke zrušení benzodiazepinové sedace po krátkých diagnostických a terapeutických výkonech u ambulantních a hospitalizovaných pacientů.
+Ke zrušení bdělé sedace vyvolané benzodiazepiny u dětí ve věku > 1 rok
+Během intenzivní péče: 
+Ke specifickému zrušení centrálních účinků benzodiazepinů za účelem obnovení spontánního dýchání.
+K diagnostice a léčbě intoxikace či předávkování samotnými benzodiazepiny nebo převážně benzodiazepiny. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "10 X 5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156343_doc" ;
+    ns1:hasStrength "0.1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X5ML/0.5MG"@cs ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126914> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB25" ;
+    ns1:hasIndication """Flumazenil je indikován k úplnému nebo částečnému zrušení centrálně sedativních účinků benzodiazepinů. Je proto používán v anesteziologické praxi a v intenzivní péči 
+v následujících situacích:
+Při anestezii: 
+K ukončení hypnosedativních účinků celkové anestézie navozené a udržované benzodiazepiny u hospitalizovaných pacientů. 
+Ke zrušení benzodiazepinové sedace po krátkých diagnostických a terapeutických výkonech u ambulantních a hospitalizovaných pacientů.
+Ke zrušení bdělé sedace vyvolané benzodiazepiny u dětí ve věku > 1 rok
+Během intenzivní péče: 
+Ke specifickému zrušení centrálních účinků benzodiazepinů za účelem obnovení spontánního dýchání.
+K diagnostice a léčbě intoxikace či předávkování samotnými benzodiazepiny nebo převážně benzodiazepiny. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "5 AMPX10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156343_doc" ;
+    ns1:hasStrength "0.1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML/1MG"@cs ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126915> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB25" ;
+    ns1:hasIndication """Flumazenil je indikován k úplnému nebo částečnému zrušení centrálně sedativních účinků benzodiazepinů. Je proto používán v anesteziologické praxi a v intenzivní péči 
+v následujících situacích:
+Při anestezii: 
+K ukončení hypnosedativních účinků celkové anestézie navozené a udržované benzodiazepiny u hospitalizovaných pacientů. 
+Ke zrušení benzodiazepinové sedace po krátkých diagnostických a terapeutických výkonech u ambulantních a hospitalizovaných pacientů.
+Ke zrušení bdělé sedace vyvolané benzodiazepiny u dětí ve věku > 1 rok
+Během intenzivní péče: 
+Ke specifickému zrušení centrálních účinků benzodiazepinů za účelem obnovení spontánního dýchání.
+K diagnostice a léčbě intoxikace či předávkování samotnými benzodiazepiny nebo převážně benzodiazepiny. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "10 X 10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156343_doc" ;
+    ns1:hasStrength "0.1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML/1MG"@cs ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUMAZENIL-PHARMASELECT-0-1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB25" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008585" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126898",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126899",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126914",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126915" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+

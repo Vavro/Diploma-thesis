@@ -1,0 +1,129 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01DC03> a ns1:ATCConcept ;
+    skos:notation "L01DC03" ;
+    skos:prefLabel "Mitomycin"@cs,
+        "Mitomycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013948> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000575",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An antineoplastic antibiotic produced by Streptomyces caespitosus. It is one of the bi- or tri-functional ALKYLATING AGENTS causing cross-linking of DNA and inhibition of DNA synthesis.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/MITOMYCIN-C-KYOWA" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000721",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001348",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000306",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000564",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001345",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003198" ;
+    ns1:title "Mitomycin"@cs,
+        "Mitomycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000721> a ns1:PharmacologicalAction ;
+    ns1:description "Highly reactive chemicals that introduce alkyl radicals into biologically active molecules and thereby prevent their proper functioning. Many are used as antineoplastic agents, but most are very toxic, with carcinogenic, mutagenic, teratogenic, and immunosuppressant actions. They have also been used as components in poison gases.     "@en ;
+    ns1:title "Alkylační látky"@cs,
+        "Alkylating agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001348> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances, produced by microorganisms, inhibiting or preventing the proliferation of neoplasms.     "@en ;
+    ns1:title "Antibiotika antitumorózní"@cs,
+        "Antibiotics, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349> a ns1:PharmacologicalAction ;
+    ns1:description "Reagents with two reactive groups, usually at opposite ends of the molecule, that are capable of reacting with and thereby forming bridges between side chains of amino acids in proteins; the locations of naturally reactive areas within proteins can thereby be identified; may also be used for other macromolecules, like glycoproteins, nucleic acids, or other.     "@en ;
+    ns1:title "Reagencia zkříženě vázaná"@cs,
+        "Cross-linking reagents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000306> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant epithelial tumor with a glandular organization.     "@en ;
+    ns1:title "Adenokarcinom"@cs,
+        "Adenocarcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000564> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nádory"@cs,
+        "Urinary bladder neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:description "Hemorrhagic and thrombotic disorders that occur as a consequence of abnormalities in blood coagulation due to a variety of factors such as COAGULATION PROTEIN DISORDERS; BLOOD PLATELET DISORDERS; BLOOD PROTEIN DISORDERS or nutritional conditions.     "@en ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001345> a ns1:DiseaseOrFinding ;
+    ns1:description "An ocular disease, occurring in many forms, having as its primary characteristics an unstable or a sustained increase in the intraocular pressure which the eye cannot withstand without damage to its structure or impairment of its function. The consequences of the increased pressure may be manifested in a variety of symptoms, depending upon type and severity, such as excavation of the optic disk, hardness of the eyeball, corneal anesthesia, reduced visual acuity, seeing of colored halos around lights, disturbed dark adaptation, visual field defects, and headaches. (Dictionary of Visual Science, 4th ed)     "@en ;
+    ns1:title "Glaukom"@cs,
+        "Glaucoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001485> a ns1:DiseaseOrFinding ;
+    ns1:description "Spontaneous or near spontaneous bleeding caused by a defect in clotting mechanisms (BLOOD COAGULATION DISORDERS) or another abnormality causing a structural flaw in the blood vessels (HEMOSTATIC DISORDERS).     "@en ;
+    ns1:title "Hemoragické poruchy"@cs,
+        "Hemorrhagic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003198> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the COLON or the RECTUM or both. Risk factors for colorectal cancer include chronic ULCERATIVE COLITIS; FAMILIAL POLYPOSIS COLI; exposure to ASBESTOS; and irradiation of the CERVIX UTERI.     "@en ;
+    ns1:title "Kolorektální nádory"@cs,
+        "Colorectal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MITOMYCIN-C-KYOWA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01DC03" ;
+    ns1:title "MITOMYCIN C KYOWA"@cs .
+
+

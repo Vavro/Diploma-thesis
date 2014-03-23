@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N01> a ns1:ATCConcept ;
+    dcterms:title "Anestetika"@cs,
+        "ANESTHETICS"@en ;
+    skos:notation "N01" .
+
+<http://linked.opendata.cz/resource/ATC/N01B> a ns1:ATCConcept ;
+    dcterms:title "Anestetika lokální"@cs,
+        "ANESTHETICS, LOCAL"@en ;
+    skos:notation "N01B" .
+
+<http://linked.opendata.cz/resource/ATC/N01BB> a ns1:ATCConcept ;
+    dcterms:title "Amidy"@cs,
+        "Amides"@en ;
+    skos:notation "N01BB" .
+
+<http://linked.opendata.cz/resource/ATC/N01BB01> a ns1:ATCConcept ;
+    dcterms:title "Bupivakain"@cs,
+        "Bupivacaine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N01",
+        "http://linked.opendata.cz/resource/ATC/N01B",
+        "http://linked.opendata.cz/resource/ATC/N01BB" ;
+    skos:notation "N01BB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003045> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A widely used local anesthetic agent.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Bupivakain"@cs,
+        "Bupivacaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0090021> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB01" ;
+    ns1:hasIndication """Subarachnoidální anestezie v chirurgii a porodnictví.
+MARCAINE spinal 0,5% je indikován k chirurgickým výkonům na dolních končetinách, včetně kyčelního kloubu, které trvají 1,5-4 hodiny.
+MARCAINE spinal 0,5% heavy je indikován k chirurgickým a urologickým výkonům v dolní části břicha (včetně Sectio caesarea) a k výkonům na dolních končetinách, včetně kyčelního kloubu, které trvají 1,5-3 hodiny. Viz též bod 4.2).
+Přípravky MARCAINE spinal 0,5%, injekční roztok a MARCAINE spinal 0,5% heavy, injekční roztok jsou určeny pro dospělé a děti všech věkových kategorií.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasMaximalPrice "777.270019531"^^xsd:float ;
+    ns1:hasPackagingSize "5X4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "695.409973145"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-08-10"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160674_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X4ML/20MG"@cs ;
+    ns1:title "MARCAINE SPINAL 0,5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MARCAINE-SPINAL-0-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003045" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0090021" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "MARCAINE SPINAL 0,5%"@cs .
+
+

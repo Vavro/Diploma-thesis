@@ -1,0 +1,108 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01BB02> a ns1:ATCConcept ;
+    skos:notation "L01BB02" ;
+    skos:prefLabel "Merkaptopurin"@cs,
+        "Mercaptopurine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023263> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An antimetabolite antineoplastic agent with immunosuppressant properties. It interferes with nucleic acid synthesis by inhibiting purine metabolism and is used, usually in combination with other drugs, in the treatment of or in remission maintenance programs for leukemia.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/XALUPRINE-20-MG-ML-PERORALNI-SUSPENZE" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001910",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003248",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000181267" ;
+    ns1:title "6-merkaptopurin"@cs,
+        "6-mercaptopurine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are chemically similar to naturally occurring metabolites, but differ enough to interfere with normal metabolic pathways. (From AMA Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Antimetabolity"@cs,
+        "Antimetabolites"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001910> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of a group of malignant tumors of lymphoid tissue that differ from HODGKIN DISEASE, being more heterogeneous with respect to malignant cell lineage, clinical course, prognosis, and therapy. The only common feature among these tumors is the absence of giant REED-STERNBERG CELLS, a characteristic of Hodgkin's disease.     "@en ;
+    ns1:title "Lymfom non-hodgkinův"@cs,
+        "Lymphoma, non-hodgkin"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003248> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic leukemia characterized by abnormal B-lymphocytes and often generalized lymphadenopathy. In patients presenting predominately with blood and bone marrow involvement it is called chronic lymphocytic leukemia (CLL); in those predominately with enlarged lymph nodes it is called small lymphocytic lymphoma. These terms represent spectrums of the same disease.     "@en ;
+    ns1:title "Chronická b-lymfatická leukemie"@cs,
+        "Leukemia, lymphocytic, chronic, b-cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181267> a ns1:DiseaseOrFinding ;
+    ns1:description "A neoplasm characterized by abnormalities of the lymphoid cell precursors leading to excessive lymphoblasts in the marrow and other organs. It is the most common cancer in children and accounts for the vast majority of all childhood leukemias.     "@en ;
+    ns1:title "Akutní lymfatická leukemie"@cs,
+        "Precursor cell lymphoblastic leukemia-lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/XALUPRINE-20-MG-ML-PERORALNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01BB02" ;
+    ns1:title "XALUPRINE 20 MG/ML PERORÁLNÍ SUSPENZE"@cs .
+
+

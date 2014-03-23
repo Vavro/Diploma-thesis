@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C01CE02> a ns1:ATCConcept ;
+    skos:notation "C01CE02" ;
+    skos:prefLabel "Milrinon"@cs,
+        "Milrinone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029839> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A positive inotropic cardiotonic agent with vasodilator properties. It inhibits cAMP phosphodiesterase type 3 activity in myocardium and vascular smooth muscle. Milrinone is a derivative of amrinone and has 20-30 times the inotropic potency of amrinone.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000128" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ASICORD-1MG-ML-KONCENTRAT-PRO-INFUZNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COROTROP" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545666" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009909" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434" ;
+    ns1:title "Milrinon"@cs,
+        "Milrinone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that have a strengthening effect on the heart or that can increase cardiac output. They may be CARDIAC GLYCOSIDES; SYMPATHOMIMETICS; or other drugs. They are used after MYOCARDIAL INFARCT; CARDIAC SURGICAL PROCEDURES; in SHOCK; or in congestive heart failure (HEART FAILURE).     "@en ;
+    ns1:title "Kardiotonika"@cs,
+        "Cardiotonic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs or agents which antagonize or impair any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system.     "@en ;
+    ns1:title "Inhibitory agregace trombocytů"@cs,
+        "Platelet aggregation inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545666> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit PHOSPHODIESTERASE 3.     "@en ;
+    ns1:title "Fosfodiesterasa 3 - inhibitory"@cs,
+        "Phosphodiesterase 3 inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000128> a ns1:MechanismOfAction ;
+    ns1:title "Phosphodiesterase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009909> a ns1:PhysiologicEffect ;
+    ns1:title "Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASICORD-1MG-ML-KONCENTRAT-PRO-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01CE02" ;
+    ns1:title "ASICORD 1MG/ML KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COROTROP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01CE02" ;
+    ns1:title "COROTROP"@cs .
+
+

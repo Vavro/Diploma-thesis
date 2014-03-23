@@ -1,0 +1,55 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N01BB20> a ns1:ATCConcept ;
+    skos:notation "N01BB20" ;
+    skos:prefLabel "Amidy, kombinace"@cs,
+        "Amides, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017571> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A local anesthetic that is similar pharmacologically to LIDOCAINE. Currently, it is used most often for infiltration anesthesia in dentistry.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/EMLA-KREM-5-" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002984" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:title "Prilokain"@cs,
+        "Prilocaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMLA-KREM-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01BB20" ;
+    ns1:title "EMLA KRÉM 5%"@cs .
+
+

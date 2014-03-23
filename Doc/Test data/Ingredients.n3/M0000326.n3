@@ -1,0 +1,222 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06BB03> a ns1:ATCConcept ;
+    skos:notation "D06BB03" ;
+    skos:prefLabel "Aciklovir"@cs,
+        "Aciclovir"@en .
+
+<http://linked.opendata.cz/resource/ATC/D06BB53> a ns1:ATCConcept ;
+    skos:notation "D06BB53" ;
+    skos:prefLabel "Aciklovir, kombinace"@cs,
+        "Aciclovir, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/J05AB01> a ns1:ATCConcept ;
+    skos:notation "J05AB01" ;
+    skos:prefLabel "Aciklovir"@cs,
+        "Aciclovir"@en .
+
+<http://linked.opendata.cz/resource/ATC/J05AB11> a ns1:ATCConcept ;
+    skos:notation "J05AB11" ;
+    skos:prefLabel "Valaciklovir"@cs,
+        "Valaciclovir"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01AD03> a ns1:ATCConcept ;
+    skos:notation "S01AD03" ;
+    skos:prefLabel "Aciklovir"@cs,
+        "Aciclovir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000326> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A GUANOSINE analog that acts as an antimetabolite.  Viruses are especially susceptible. Used especially against herpes.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ACICLOVIR-AL-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACYCLOSTAD-GALMED",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROVIRSAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALACICLOVIR--PHARMA-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALACICLOVIR-MYLAN-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALTREX-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-400-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-800-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-DUO-50-MG-G-10-MG-G-KREM" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000897",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001530",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001531" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000291",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001530",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001531",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001532",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003302",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003987",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004193" ;
+    ns1:title "Acyklovir"@cs,
+        "Acyclovir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the prophylaxis or therapy of VIRUS DISEASES. Some of the ways they may act include preventing viral replication by inhibiting viral DNA polymerase; binding to specific cell-surface receptors and inhibiting viral penetration or uncoating; inhibiting viral protein synthesis; or blocking late stages of virus assembly.     "@en ;
+    ns1:title "Antivirové látky"@cs,
+        "Antiviral agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000749> a ns1:DiseaseOrFinding ;
+    ns1:description "A highly contagious infectious disease caused by the varicella-zoster virus (HERPESVIRUS 3, HUMAN). It usually affects children, is spread by direct contact or respiratory route via droplet nuclei, and is characterized by the appearance on the skin and mucous membranes of successive crops of typical pruritic vesicular lesions that are easily broken and become scabbed. Chickenpox is relatively benign in children, but may be complicated by pneumonia and encephalitis in adults. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Varicela"@cs,
+        "Chickenpox"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000897> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.     "@en ;
+    ns1:title "Cytomegalovirus - infekce"@cs,
+        "Cytomegalovirus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001527> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the genitals (GENITALIA) with HERPES SIMPLEX VIRUS in either the males or the females.     "@en ;
+    ns1:title "Herpes genitalis"@cs,
+        "Herpes genitalis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001529> a ns1:DiseaseOrFinding ;
+    ns1:description "Herpes simplex, caused by type 1 virus, primarily spread by oral secretions and usually occurring as a concomitant of fever. It may also develop in the absence of fever or prior illness. It commonly involves the facial region, especially the lips and the nares. (Dorland, 27th ed.)     "@en ;
+    ns1:title "Herpes labialis"@cs,
+        "Herpes labialis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001530> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of acute infections caused by herpes simplex virus type 1 or type 2 that is characterized by the development of one or more small fluid-filled vesicles with a raised erythematous base on the skin or mucous membrane. It occurs as a primary infection or recurs due to a reactivation of a latent infection. (Dorland, 27th ed.)     "@en ;
+    ns1:title "Herpes simplex"@cs,
+        "Herpes simplex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001531> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious, usually self-limited, disease believed to represent activation of latent varicella-zoster virus (HERPESVIRUS 3, HUMAN) in those who have been rendered partially immune after a previous attack of CHICKENPOX. It involves the SENSORY GANGLIA and their areas of innervation and is characterized by severe neuralgic pain along the distribution of the affected nerve and crops of clustered vesicles over the area. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Herpes zoster"@cs,
+        "Herpes zoster"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001532> a ns1:DiseaseOrFinding ;
+    ns1:description "Virus infection of the Gasserian ganglion and its nerve branches characterized by pain and vesicular eruptions with much swelling. Ocular involvement is usually heralded by a vesicle on the tip of the nose. This area is innervated by the nasociliary nerve.     "@en ;
+    ns1:title "Herpes zoster ophthalmicus"@cs,
+        "Herpes zoster ophthalmicus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003302> a ns1:DiseaseOrFinding ;
+    ns1:description "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).     "@en ;
+    ns1:title "Hiv infekce"@cs,
+        "Hiv infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003987> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with human herpesvirus 4 (HERPESVIRUS 4, HUMAN); which may facilitate the development of various lymphoproliferative disorders. These include BURKITT LYMPHOMA (African type), INFECTIOUS MONONUCLEOSIS, and oral hairy leukoplakia (LEUKOPLAKIA, HAIRY).     "@en ;
+    ns1:title "Virus epsteinův-barrové - infekce"@cs,
+        "Epstein-barr virus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004193> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute (or rarely chronic) inflammatory process of the brain caused by SIMPLEXVIRUS infections which may be fatal. The majority of infections are caused by human herpesvirus 1 (HERPESVIRUS 1, HUMAN) and less often by human herpesvirus 2 (HERPESVIRUS 2, HUMAN). Clinical manifestations include FEVER; HEADACHE; SEIZURES; HALLUCINATIONS; behavioral alterations; APHASIA; hemiparesis; and COMA. Pathologically, the condition is marked by a hemorrhagic necrosis involving the medial and inferior TEMPORAL LOBE and orbital regions of the FRONTAL LOBE. (From Adams et al., Principles of Neurology, 6th ed, pp751-4)     "@en ;
+    ns1:title "Encefalitida - herpes simplex"@cs,
+        "Encephalitis, herpes simplex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACICLOVIR-AL-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB03" ;
+    ns1:title "ACICLOVIR AL KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYCLOSTAD-GALMED> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB03" ;
+    ns1:title "ACYCLOSTAD GALMED"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "HERPESIN 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "HERPESIN 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "HERPESIN 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HERPESIN-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB03" ;
+    ns1:title "HERPESIN KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROVIRSAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "PROVIRSAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALACICLOVIR--PHARMA-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB11" ;
+    ns1:title "VALACICLOVIR +PHARMA 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALACICLOVIR-MYLAN-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB11" ;
+    ns1:title "VALACICLOVIR MYLAN 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALTREX-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB11" ;
+    ns1:title "VALTREX 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB03",
+        "http://linked.opendata.cz/resource/ATC/S01AD03" ;
+    ns1:title "ZOVIRAX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "ZOVIRAX 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "ZOVIRAX 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-800-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J05AB01" ;
+    ns1:title "ZOVIRAX 800 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-DUO-50-MG-G-10-MG-G-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB53" ;
+    ns1:title "ZOVIRAX DUO 50 MG/G+10 MG/G KRÉM"@cs .
+
+

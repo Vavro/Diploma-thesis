@@ -1,0 +1,94 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H03BA02> a ns1:ATCConcept ;
+    skos:notation "H03BA02" ;
+    skos:prefLabel "Propylthiouracil"@cs,
+        "Propylthiouracil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017784> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A thiourea antithyroid agent. Propythiouracil inhibits the synthesis of thyroxine and inhibits the peripheral conversion of throxine to tri-iodothyronine. It is used in the treatment of hyperthyroidism. (From Martindale, The Extra Pharmacopeoia, 30th ed, p534)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000132",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000155" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPYCIL-50" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021475" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008670",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008840",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009007" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000310",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001371",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002941" ;
+    ns1:title "Propylthiouracil"@cs,
+        "Propylthiouracil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are chemically similar to naturally occurring metabolites, but differ enough to interfere with normal metabolic pathways. (From AMA Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Antimetabolity"@cs,
+        "Antimetabolites"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021475> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat hyperthyroidism by reducing the excessive production of thyroid hormones.     "@en ;
+    ns1:title "Thyreostatika"@cs,
+        "Antithyroid agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000310> a ns1:DiseaseOrFinding ;
+    ns1:description "A benign epithelial tumor with a glandular organization.     "@en ;
+    ns1:title "Adenom"@cs,
+        "Adenoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001371> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlargement of the THYROID GLAND that may increase from about 20 grams to hundreds of grams in human adults. Goiter is observed in individuals with normal thyroid function (euthyroidism), thyroid deficiency (HYPOTHYROIDISM), or hormone overproduction (HYPERTHYROIDISM). Goiter may be congenital or acquired, sporadic or endemic (GOITER, ENDEMIC).     "@en ;
+    ns1:title "Struma"@cs,
+        "Goiter"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002941> a ns1:DiseaseOrFinding ;
+    ns1:description "A dangerous life-threatening hypermetabolic condition characterized by high FEVER and dysfunction of the cardiovascular, the nervous, and the gastrointestinal systems.     "@en ;
+    ns1:title "Tyreotoxická krize"@cs,
+        "Thyroid crisis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000132> a ns1:MechanismOfAction ;
+    ns1:title "Organic Anion Transporter Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000155> a ns1:MechanismOfAction ;
+    ns1:title "Uncouplers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008670> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Iodine Organification"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008840> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Modification"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009007> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thyroid Hormone Iodination"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPYCIL-50> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H03BA02" ;
+    ns1:title "PROPYCIL 50"@cs .
+
+

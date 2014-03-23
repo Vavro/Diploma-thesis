@@ -1,0 +1,140 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01EC01> a ns1:ATCConcept ;
+    skos:notation "S01EC01" ;
+    skos:prefLabel "Acetazolamid"@cs,
+        "Acetazolamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000127> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000283",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001590",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001640",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001748",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001881",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "One of the CARBONIC ANHYDRASE INHIBITORS that is sometimes effective against absence seizures. It is sometimes useful also as an adjunct in the treatment of tonic-clonic, myoclonic, and atonic seizures, particularly in women whose seizures occur or are exacerbated at specific times in the menstrual cycle. However, its usefulness is transient often because of rapid development of tolerance. Its antiepileptic effect may be due to its inhibitory effect on brain carbonic anhydrase, which leads to an increased transneuronal chloride gradient, increased chloride current, and increased inhibition. (From Smith and Reynard, Textbook of Pharmacology, 1991, p337)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000235" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DILURAN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003396",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008486",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009263",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009549",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009551",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009943" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000361",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001345",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713" ;
+    ns1:title "Acetazolamid"@cs,
+        "Acetazolamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003396> a ns1:PharmacologicalAction ;
+    ns1:description "A class of compounds that reduces the secretion of H+ ions by the proximal kidney tubule through inhibition of CARBONIC ANHYDRASES.     "@en ;
+    ns1:title "Karboanhydrasa - inhibitory"@cs,
+        "Carbonic anhydrase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000283> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathologic condition of acid accumulation or depletion of base in the body. The two main types are RESPIRATORY ACIDOSIS and metabolic acidosis, due to metabolic acid build up.     "@en ;
+    ns1:title "Acidóza"@cs,
+        "Acidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000361> a ns1:DiseaseOrFinding ;
+    ns1:description "A morbid condition of ANOXIA caused by the reduced available oxygen at high altitudes.     "@en ;
+    ns1:title "Výšková nemoc"@cs,
+        "Altitude sickness"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001345> a ns1:DiseaseOrFinding ;
+    ns1:description "An ocular disease, occurring in many forms, having as its primary characteristics an unstable or a sustained increase in the intraocular pressure which the eye cannot withstand without damage to its structure or impairment of its function. The consequences of the increased pressure may be manifested in a variety of symptoms, depending upon type and severity, such as excavation of the optic disk, hardness of the eyeball, corneal anesthesia, reduced visual acuity, seeing of colored halos around lights, disturbed dark adaptation, visual field defects, and headaches. (Dictionary of Visual Science, 4th ed)     "@en ;
+    ns1:title "Glaukom"@cs,
+        "Glaucoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001590> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high potassium concentration in the blood, most often due to defective renal excretion. It is characterized clinically by electrocardiographic abnormalities (elevated T waves and depressed P waves, and eventually by atrial asystole). In severe cases, weakness and flaccid paralysis may occur. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hyperkalemie"@cs,
+        "Hyperkalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001640> a ns1:DiseaseOrFinding ;
+    ns1:description "Deficiency of sodium in the blood; salt depletion. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hyponatrémie"@cs,
+        "Hyponatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001881> a ns1:DiseaseOrFinding ;
+    ns1:description "Any disorder marked by obstruction of conducting airways of the lung. AIRWAY OBSTRUCTION may be acute, chronic, intermittent, or persistent.     "@en ;
+    ns1:title "Obstrukční plicní nemoci"@cs,
+        "Lung diseases, obstructive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000235> a ns1:MechanismOfAction ;
+    ns1:title "Carbonic Anhydrase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008486> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Disorganized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009263> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Collecting Duct Water Permeability"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009549> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal HCO3- Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009551> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009943> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intraocular Fluid Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DILURAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EC01" ;
+    ns1:title "DILURAN"@cs .
+
+

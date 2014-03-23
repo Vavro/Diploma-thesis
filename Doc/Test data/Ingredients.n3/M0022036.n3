@@ -1,0 +1,72 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01FA06> a ns1:ATCConcept ;
+    skos:notation "S01FA06" ;
+    skos:prefLabel "Tropikamid"@cs,
+        "Tropicamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022036> a ns1:Ingredient ;
+    ns1:description "One of the MUSCARINIC ANTAGONISTS with pharmacologic action similar to ATROPINE and used mainly as an ophthalmic parasympatholytic or mydriatic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/UNITROPIC-1-" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009820" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001710",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001734",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003344",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003351" ;
+    ns1:title "Tropikamid"@cs,
+        "Tropicamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that dilate the pupil. They may be either sympathomimetics or parasympatholytics.     "@en ;
+    ns1:title "Mydriatika"@cs,
+        "Mydriatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate MUSCARINIC RECEPTORS, thereby blocking the actions of endogenous ACETYLCHOLINE or exogenous agonists. Muscarinic antagonists have widespread effects including actions on the iris and ciliary muscle of the eye, the heart and blood vessels, secretions of the respiratory tract, GI system, and salivary glands, GI motility, urinary bladder tone, and the central nervous system.     "@en ;
+    ns1:title "Muskarin - antagonisté"@cs,
+        "Muscarinic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001710> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the iris characterized by circumcorneal injection, aqueous flare, keratotic precipitates, and constricted and sluggish pupil along with discoloration of the iris.     "@en ;
+    ns1:title "Iritida"@cs,
+        "Iritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001734> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the cornea.     "@en ;
+    ns1:title "Keratitida"@cs,
+        "Keratitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003344> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute or chronic inflammation of the iris and ciliary body characterized by exudates into the anterior chamber, discoloration of the iris, and constricted, sluggish pupil. Symptoms include radiating pain, photophobia, lacrimation, and interference with vision.     "@en ;
+    ns1:title "Iridocyklitida"@cs,
+        "Iridocyclitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003351> a ns1:DiseaseOrFinding ;
+    ns1:description "Dilation of pupils to greater than 6 mm combined with failure of the pupils to constrict when stimulated with light. This condition may occur due to injury of the pupillary fibers in the oculomotor nerve, in acute angle-closure glaucoma, and in ADIE SYNDROME.     "@en ;
+    ns1:title "Mydriáza"@cs,
+        "Mydriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125> a ns1:MechanismOfAction ;
+    ns1:title "Cholinergic Muscarinic Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Parasympathetic Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009820> a ns1:PhysiologicEffect ;
+    ns1:title "Pupillary Dilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/UNITROPIC-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01FA06" ;
+    ns1:title "UNITROPIC 1%"@cs .
+
+

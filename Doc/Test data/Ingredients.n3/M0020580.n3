@@ -1,0 +1,138 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AD01> a ns1:ATCConcept ;
+    skos:notation "B01AD01" ;
+    skos:prefLabel "Streptokináza"@cs,
+        "Streptokinase"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020580> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000476",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000609",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000722",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000855",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002794",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004051" ;
+    ns1:description "Streptococcal fibrinolysin . An enzyme produced by hemolytic streptococci. It hydrolyzes amide linkages and serves as an activator of plasminogen. It is used in thrombolytic therapy and is used also in mixtures with streptodornase (STREPTODORNASE AND STREPTOKINASE). EC 3.4.-.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000241" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/STREPTASE-1-500-000-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STREPTASE-250-000-IU" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009695" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000471",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001067",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002936",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004074" ;
+    ns1:title "Streptokinasa"@cs,
+        "Streptokinase"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> a ns1:PharmacologicalAction ;
+    ns1:description "Fibrinolysin or agents that convert plasminogen to FIBRINOLYSIN.     "@en ;
+    ns1:title "Fibrinolytika"@cs,
+        "Fibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000471> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes which result in the partial or complete obstruction of ARTERIES. They are characterized by greatly reduced or absence of blood flow through these vessels. They are also known as arterial insufficiency.     "@en ;
+    ns1:title "Arteriální okluzní nemoci"@cs,
+        "Arterial occlusive diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000476> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal formation of blood vessels that shunt arterial blood directly into veins without passing through the CAPILLARIES. They usually are crooked, dilated, and with thick vessel walls. A common type is the congenital arteriovenous fistula. The lack of blood flow and oxygen in the capillaries can lead to tissue damage in the affected areas.     "@en ;
+    ns1:title "Arteriovenózní malformace"@cs,
+        "Arteriovenous malformations"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000609> a ns1:DiseaseOrFinding ;
+    ns1:description "Neoplasms of the intracranial components of the central nervous system, including the cerebral hemispheres, basal ganglia, hypothalamus, thalamus, brain stem, and cerebellum. Brain neoplasms are subdivided into primary (originating from brain tissue) and secondary (i.e., metastatic) forms. Primary neoplasms are subdivided into benign and malignant forms. In general, brain tumors may also be classified by age of onset, histologic type, or presenting location in the brain.     "@en ;
+    ns1:title "Nádory mozku"@cs,
+        "Brain neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000722> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).     "@en ;
+    ns1:title "Cerebrální infarkt"@cs,
+        "Cerebral infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000855> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal balloon- or sac-like dilatation in the wall of CORONARY VESSELS. Most coronary aneurysms are due to CORONARY ATHEROSCLEROSIS, and the rest are due to inflammatory diseases, such as KAWASAKI DISEASE.     "@en ;
+    ns1:title "Koronární aneurysma"@cs,
+        "Coronary aneurysm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001067> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocking of a blood vessel by an embolus which can be a blood clot or other undissolved material in the blood stream.     "@en ;
+    ns1:title "Embolie"@cs,
+        "Embolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding or escape of blood from a vessel.     "@en ;
+    ns1:title "Hemoragie"@cs,
+        "Hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002541> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.     "@en ;
+    ns1:title "Plicní embolie"@cs,
+        "Pulmonary embolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002794> a ns1:DiseaseOrFinding ;
+    ns1:description "Penetrating and non-penetrating injuries to the spinal cord resulting from traumatic external forces (e.g., WOUNDS, GUNSHOT; WHIPLASH INJURIES; etc.).     "@en ;
+    ns1:title "Mícha - poranění"@cs,
+        "Spinal cord injuries"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002936> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation and development of a thrombus or blood clot in the blood vessel.     "@en ;
+    ns1:title "Trombóza"@cs,
+        "Thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004051> a ns1:DiseaseOrFinding ;
+    ns1:description "Penetrating and nonpenetrating traumatic injuries to an extracranial or intracranial blood vessel that supplies the brain. This includes the CAROTID ARTERIES; VERTEBRAL ARTERIES; MENINGEAL ARTERIES; CEREBRAL ARTERIES; veins, and venous sinuses.     "@en ;
+    ns1:title "Cerebrovaskulární poranění"@cs,
+        "Cerebrovascular trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004074> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation or presence of a blood clot (THROMBUS) within a vein.     "@en ;
+    ns1:title "Žilní trombóza"@cs,
+        "Venous thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000241> a ns1:MechanismOfAction ;
+    ns1:title "Tissue Plasminogen Activators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009695> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Thrombolysis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPTASE-1-500-000-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AD01" ;
+    ns1:title "STREPTASE 1 500 000 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPTASE-250-000-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AD01" ;
+    ns1:title "STREPTASE 250 000 IU"@cs .
+
+

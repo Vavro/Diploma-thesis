@@ -1,0 +1,69 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "OTHER ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01X" .
+
+<http://linked.opendata.cz/resource/ATC/L01XX> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "Other antineoplastic agents"@en ;
+    skos:notation "L01XX" .
+
+<http://linked.opendata.cz/resource/ATC/L01XX17> a ns1:ATCConcept ;
+    dcterms:title "Topotekan"@cs,
+        "Topotecan"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01",
+        "http://linked.opendata.cz/resource/ATC/L01X",
+        "http://linked.opendata.cz/resource/ATC/L01XX" ;
+    skos:notation "L01XX17" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329084> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545766" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Topotecan hydrochloride"@cs,
+        "Topotecan hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545766> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit the activity of DNA TOPOISOMERASE I.     "@en ;
+    ns1:title "Topoisomerasa i - inhibitory"@cs,
+        "Topoisomerase i inhibitors"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029337> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XX17" ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2979.95996094"^^xsd:float ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "3302.40991211"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-04-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.25MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 10X0.25MG"@cs ;
+    ns1:title "HYCAMTIN 0,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYCAMTIN-0-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XX17" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329084" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029337" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "HYCAMTIN 0,25 MG"@cs .
+
+

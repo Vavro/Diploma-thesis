@@ -1,0 +1,207 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R06> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06" .
+
+<http://linked.opendata.cz/resource/ATC/R06A> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06A" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antihistaminika pro systémovou aplikaci"@cs,
+        "Other antihistamines for systemic use"@en ;
+    skos:notation "R06AX" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    dcterms:title "Desloratadin"@cs,
+        "Desloratadine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R06",
+        "http://linked.opendata.cz/resource/ATC/R06A",
+        "http://linked.opendata.cz/resource/ATC/R06AX" ;
+    skos:notation "R06AX27" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178707> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "30ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X30ML/15MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178708> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X50ML/25MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178709> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "60ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML/30MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178710> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML/50MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178711> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "120ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML/60MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178712> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML/75MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178713> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "225ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X225ML/112.5MG + LŽIČ"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178714> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "300ML + LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X300ML/150MG + LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192779> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50ML + STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X50ML/25MG +STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192780> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML+ STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML/75MG+STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192781> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "120ML+STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML/60MG+STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192782> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "30ML+STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X30ML/15MG+STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192783> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100ML+STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML/50MG+STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192784> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "60ML+STŘÍKAČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML/30MG+STŘÍKAČKA"@cs ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESLORATADIN-GLENMARK-0-5-MG-ML-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178707",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178708",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178709",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178710",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178711",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178712",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178713",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178714",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192779",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192780",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192781",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192782",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192783",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192784" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "DESLORATADIN GLENMARK 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+

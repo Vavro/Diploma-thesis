@@ -1,0 +1,75 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N01AX07> a ns1:ATCConcept ;
+    skos:notation "N01AX07" ;
+    skos:prefLabel "Etomidat"@cs,
+        "Etomidate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007928> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Imidazole derivative anesthetic and hypnotic with little effect on blood gases, ventilation, or the cardiovascular system. It has been proposed as an induction anesthetic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/HYPNOMIDATE" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000723",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002822",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003421" ;
+    ns1:title "Etomidát"@cs,
+        "Etomidate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000723> a ns1:DiseaseOrFinding ;
+    ns1:description "Localized reduction of blood flow to brain tissue due to arterial obstruction or systemic hypoperfusion. This frequently occurs in conjunction with brain hypoxia (HYPOXIA, BRAIN). Prolonged ischemia is associated with BRAIN INFARCTION.     "@en ;
+    ns1:title "Ischemie mozku"@cs,
+        "Brain ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002822> a ns1:DiseaseOrFinding ;
+    ns1:description "A prolonged seizure or seizures repeated frequently enough to prevent recovery between episodes occurring over a period of 20-30 minutes. The most common subtype is generalized tonic-clonic status epilepticus, a potentially fatal condition associated with neuronal injury and respiratory and metabolic dysfunction. Nonconvulsive forms include petit mal status and complex partial status, which may manifest as behavioral disturbances. Simple partial status epilepticus consists of persistent motor, sensory, or autonomic seizures that do not impair cognition (see also EPILEPSIA PARTIALIS CONTINUA). Subclinical status epilepticus generally refers to seizures occurring in an unresponsive or comatose individual in the absence of overt signs of seizure activity. (From N Engl J Med 1998 Apr 2;338(14):970-6; Neurologia 1997 Dec;12 Suppl 6:25-30)     "@en ;
+    ns1:title "Status epilepticus"@cs,
+        "Status epilepticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003421> a ns1:DiseaseOrFinding ;
+    ns1:description "Traumatic injuries to the cranium where the integrity of the skull is not compromised and no bone fragments or other objects penetrate the skull and dura mater. This frequently results in mechanical injury being transmitted to intracranial structures which may produce traumatic brain injuries, hemorrhage, or cranial nerve injury. (From Rowland, Merritt's Textbook of Neurology, 9th ed, p417)     "@en ;
+    ns1:title "Hlava - poranění bez otevřené rány"@cs,
+        "Head injuries, closed"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYPNOMIDATE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX07" ;
+    ns1:title "HYPNOMIDATE"@cs .
+
+

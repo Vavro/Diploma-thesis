@@ -1,0 +1,139 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L02AE02> a ns1:ATCConcept ;
+    skos:notation "L02AE02" ;
+    skos:prefLabel "Leuprorelin"@cs,
+        "Leuprorelin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025473> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010216" ;
+    ns1:description "A potent synthetic long-acting agonist of GONADOTROPIN-RELEASING HORMONE that regulates the synthesis and release of pituitary gonadotropins, LUTEINIZING HORMONE and FOLLICLE STIMULATING HORMONE.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000255" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-22-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-45-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-7-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LUTRATE-DEPOT-3-75-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008769",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009694" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000664",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001102",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001684",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001802",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002274",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002500",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002535",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003502" ;
+    ns1:title "Leuprolid"@cs,
+        "Leuprolide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which increase the capacity to conceive in females.     "@en ;
+    ns1:title "Fertilizující látky ženské"@cs,
+        "Fertility agents, female"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001102> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which functional endometrial tissue is present outside the UTERUS. It is often confined to the PELVIS involving the OVARY, the ligaments, cul-de-sac, and the uterovesical peritoneum.     "@en ;
+    ns1:title "Endometrióza"@cs,
+        "Endometriosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001684> a ns1:DiseaseOrFinding ;
+    ns1:description "Inability to reproduce after a specified period of unprotected intercourse. Reproductive sterility is permanent infertility.     "@en ;
+    ns1:title "Infertilita"@cs,
+        "Infertility"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001802> a ns1:DiseaseOrFinding ;
+    ns1:description "A benign tumor derived from smooth muscle tissue, also known as a fibroid tumor. They rarely occur outside of the UTERUS and the GASTROINTESTINAL TRACT but can occur in the SKIN and SUBCUTANEOUS TISSUE, probably arising from the smooth muscle of small blood vessels in these tissues.     "@en ;
+    ns1:title "Leiomyom"@cs,
+        "Leiomyoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002499> a ns1:DiseaseOrFinding ;
+    ns1:title "Prostatic hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002535> a ns1:DiseaseOrFinding ;
+    ns1:description "Development of SEXUAL MATURATION in boys and girls at a chronological age that is 2.5 standard deviations below the mean age at onset of PUBERTY in the population. This early maturation of the hypothalamic-pituitary-gonadal axis results in sexual precocity, elevated serum levels of GONADOTROPINS and GONADAL STEROID HORMONES such as ESTRADIOL and TESTOSTERONE.     "@en ;
+    ns1:title "Puberta předčasná"@cs,
+        "Puberty, precocious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of ENDOMETRIUM, the mucous lining of the UTERUS. These neoplasms can be benign or malignant. Their classification and grading are based on the various cell types and the percent of undifferentiated cells.     "@en ;
+    ns1:title "Nádory endometria"@cs,
+        "Endometrial neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000255> a ns1:MechanismOfAction ;
+    ns1:title "Hormone Receptor Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008769> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Ovarian Estrogen Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009694> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Testosterone Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-22-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:title "ELIGARD 22,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-45-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:title "ELIGARD 45 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELIGARD-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:title "ELIGARD 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LUTRATE-DEPOT-3-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:title "LUTRATE DEPOT 3,75 MG"@cs .
+
+

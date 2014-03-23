@@ -1,0 +1,81 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R03AC03> a ns1:ATCConcept ;
+    skos:notation "R03AC03" ;
+    skos:prefLabel "Terbutalin"@cs,
+        "Terbutaline"@en .
+
+<http://linked.opendata.cz/resource/ATC/R03CC03> a ns1:ATCConcept ;
+    skos:notation "R03CC03" ;
+    skos:prefLabel "Terbutalin"@cs,
+        "Terbutaline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021177> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A selective beta-2 adrenergic agonist used as a bronchodilator and tocolytic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009922" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BRICANYL-0-5-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BRICANYL-TURBUHALER-0-5-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009014" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498" ;
+    ns1:title "Terbutalin"@cs,
+        "Terbutaline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that prevent preterm labor and immature birth by suppressing uterine contractions (TOCOLYSIS). Agents used to delay premature uterine activity include magnesium sulfate, beta-mimetics, oxytocin antagonists, calcium channel inhibitors, and adrenergic beta-receptor agonists. The use of intravenous alcohol as a tocolytic is now obsolete.     "@en ;
+    ns1:title "Tokolytika"@cs,
+        "Tocolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds bind to and activate ADRENERGIC BETA-2 RECEPTORS.     "@en ;
+    ns1:title "Beta-2-adrenergní receptory - agonisté"@cs,
+        "Adrenergic beta-2 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009922> a ns1:MechanismOfAction ;
+    ns1:title "Adrenergic beta2-Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322> a ns1:PhysiologicEffect ;
+    ns1:title "Bronchodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009014> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Uterine Smooth Muscle Contraction or Tone"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRICANYL-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03CC03" ;
+    ns1:title "BRICANYL 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRICANYL-TURBUHALER-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03AC03" ;
+    ns1:title "BRICANYL TURBUHALER 0,5 MG"@cs .
+
+

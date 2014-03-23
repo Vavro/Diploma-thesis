@@ -1,0 +1,94 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01AX04> a ns1:ATCConcept ;
+    skos:notation "L01AX04" ;
+    skos:prefLabel "Dakarbazin"@cs,
+        "Dacarbazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0005636> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An antineoplastic agent. It has significant activity against melanomas. (from Martindale, The Extra Pharmacopoeia, 31st ed, p564)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DACARBAZIN-TEVA-200-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001248",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001550",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001969",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002167",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002628",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003738",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003740" ;
+    ns1:title "Dakarbazin"@cs,
+        "Dacarbazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that differs from other alkylating agents used clinically in that they are monofunctional and thus unable to cross-link cellular macromolecules. Among their common properties are a requirement for metabolic activation to intermediates with antitumor efficacy and the presence in their chemical structures of N-methyl groups, that after metabolism, can covalently modify cellular DNA. The precise mechanisms by which each of these drugs acts to kill tumor cells are not completely understood. (From AMA, Drug Evaluations Annual, 1994, p2026)     "@en ;
+    ns1:title "Antitumorózní látky alkylující"@cs,
+        "Antineoplastic agents, alkylating"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001248> a ns1:DiseaseOrFinding ;
+    ns1:description "A sarcoma derived from deep fibrous tissue, characterized by bundles of immature proliferating fibroblasts with variable collagen formation, which tends to invade locally and metastasize by the bloodstream. (Stedman, 25th ed)     "@en ;
+    ns1:title "Fibrosarkom"@cs,
+        "Fibrosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001550> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant disease characterized by progressive enlargement of the lymph nodes, spleen, and general lymphoid tissue. In the classical variant, giant usually multinucleate Hodgkin's and REED-STERNBERG CELLS are present; in the nodular lymphocyte predominant variant, lymphocytic and histiocytic cells are seen.     "@en ;
+    ns1:title "Hodgkinova nemoc"@cs,
+        "Hodgkin disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001969> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm derived from cells that are capable of forming melanin, which may occur in the skin of any part of the body, in the eye, or, rarely, in the mucous membranes of the genitalia, anus, oral cavity, or other sites. It occurs mostly in adults and may originate de novo or from a pigmented nevus or malignant lentigo. Melanomas frequently metastasize widely, and the regional lymph nodes, liver, lungs, and brain are likely to be involved. The incidence of malignant skin melanomas is rising rapidly in all parts of the world. (Stedman, 25th ed; from Rook et al., Textbook of Dermatology, 4th ed, p2445)     "@en ;
+    ns1:title "Melanom"@cs,
+        "Melanoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> a ns1:DiseaseOrFinding ;
+    ns1:description "A common neoplasm of early childhood arising from neural crest cells in the sympathetic nervous system, and characterized by diverse clinical behavior, ranging from spontaneous remission to rapid metastatic progression and death. This tumor is the most common intraabdominal malignancy of childhood, but it may also arise from thorax, neck, or rarely occur in the central nervous system. Histologic features include uniform round cells with hyperchromatic nuclei arranged in nests and separated by fibrovascular septa. Neuroblastomas may be associated with the opsoclonus-myoclonus syndrome. (From DeVita et al., Cancer: Principles and Practice of Oncology, 5th ed, pp2099-2101; Curr Opin Oncol 1998 Jan;10(1):43-51)     "@en ;
+    ns1:title "Neuroblastom"@cs,
+        "Neuroblastoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002628> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant solid tumor arising from mesenchymal tissues which normally differentiate to form striated muscle. It can occur in a wide variety of sites. It is divided into four distinct types: pleomorphic, predominantly in male adults; alveolar (RHABDOMYOSARCOMA, ALVEOLAR), mainly in adolescents and young adults; embryonal (RHABDOMYOSARCOMA, EMBRYONAL), predominantly in infants and children; and botryoidal, also in young children. It is one of the most frequently occurring soft tissue sarcomas and the most common in children under 15. (From Dorland, 27th ed; Holland et al., Cancer Medicine, 3d ed, p2186; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, pp1647-9)     "@en ;
+    ns1:title "Rhabdomyosarkom"@cs,
+        "Rhabdomyosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003738> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary malignant neoplasm of the pancreatic ISLET CELLS. Usually it involves the non-INSULIN-producing cell types, the PANCREATIC ALPHA CELLS and the pancreatic delta cells (SOMATOSTATIN-SECRETING CELLS) in GLUCAGONOMA and SOMATOSTATINOMA, respectively.     "@en ;
+    ns1:title "Karcinom inzulární pankreatu"@cs,
+        "Carcinoma, islet cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003740> a ns1:DiseaseOrFinding ;
+    ns1:description "A carcinoma composed mainly of epithelial elements with little or no stroma. Medullary carcinomas of the breast constitute 5%-7% of all mammary carcinomas; medullary carcinomas of the thyroid comprise 3%-10% of all thyroid malignancies. (From Dorland, 27th ed; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, p1141; Segen, Dictionary of Modern Medicine, 1992)     "@en ;
+    ns1:title "Karcinom medulární"@cs,
+        "Carcinoma, medullary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DACARBAZIN-TEVA-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AX04" ;
+    ns1:title "DACARBAZIN TEVA 200 MG"@cs .
+
+

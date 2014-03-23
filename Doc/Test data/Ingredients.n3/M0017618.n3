@@ -1,0 +1,175 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C10AB05> a ns1:ATCConcept ;
+    skos:notation "C10AB05" ;
+    skos:prefLabel "Fenofibrát"@cs,
+        "Fenofibrate"@en .
+
+<http://linked.opendata.cz/resource/ATC/C10BA03> a ns1:ATCConcept ;
+    skos:notation "C10BA03" ;
+    skos:prefLabel "Pravastatin a fenofibrát"@cs,
+        "Pravastatin and fenofibrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017618> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001304",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001864",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529" ;
+    ns1:description "An antilipemic agent which reduces both CHOLESTEROL and TRIGLYCERIDES in the blood.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FENO",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FEBIRA-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FENOFIX-200-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FENOFIX-267-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORTILIP-267-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-200-M",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-267-M",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-NT-145-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-S-215-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-SUPRA-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPIREX-200MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LIPOHEXAL-250-RETARD",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRAVAFENIX-40-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRELIP" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000856" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000856",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001580",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001592",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001594",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002415",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003210" ;
+    ns1:title "Fenofibrát"@cs,
+        "Fenofibrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that lower the levels of certain LIPIDS in the BLOOD. They are used to treat HYPERLIPIDEMIAS.     "@en ;
+    ns1:title "Hypolipidemika"@cs,
+        "Hypolipidemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of CORONARY ARTERIES that may derive from a congenital abnormality, atherosclerotic, or non-atherosclerotic cause.     "@en ;
+    ns1:title "Koronární artérie - nemoci"@cs,
+        "Coronary artery disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001304> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the GALLBLADDER. They generally involve the impairment of BILE flow, GALLSTONES in the BILIARY TRACT, infections, neoplasms, or other diseases.     "@en ;
+    ns1:title "Žlučník - nemoci"@cs,
+        "Gallbladder diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001580> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.     "@en ;
+    ns1:title "Hypercholesterolémie"@cs,
+        "Hypercholesterolemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001592> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with excess LIPIDS in the blood.     "@en ;
+    ns1:title "Hyperlipidémie"@cs,
+        "Hyperlipidemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001594> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with abnormally elevated levels of LIPOPROTEINS in the blood. They may be inherited, acquired, primary, or secondary. Hyperlipoproteinemias are classified according to the pattern of lipoproteins on electrophoresis or ultracentrifugation.     "@en ;
+    ns1:title "Hyperlipoproteinémie"@cs,
+        "Hyperlipoproteinemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001864> a ns1:DiseaseOrFinding ;
+    ns1:description "FIBROSIS of the hepatic parenchyma due to obstruction of BILE flow (CHOLESTASIS) in the intrahepatic or extrahepatic bile ducts (BILE DUCTS, INTRAHEPATIC; BILE DUCTS, EXTRAHEPATIC). Primary biliary cirrhosis involves the destruction of small intra-hepatic bile ducts and bile secretion. Secondary biliary cirrhosis is produced by prolonged obstruction of large intrahepatic or extrahepatic bile ducts from a variety of causes.     "@en ;
+    ns1:title "Biliární cirhóza"@cs,
+        "Liver cirrhosis, biliary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002415> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infectious disease caused by YERSINIA PESTIS that affects humans, wild rodents, and their ectoparasites. This condition persists due to its firm entrenchment in sylvatic rodent-flea ecosystems throughout the world. Bubonic plague is the most common form.     "@en ;
+    ns1:title "Mor"@cs,
+        "Plague"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003210> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of elevated levels of TRIGLYCERIDES in the blood.     "@en ;
+    ns1:title "Hypertriglyceridémie"@cs,
+        "Hypertriglyceridemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lipolysis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FENO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "APO-FENO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEBIRA-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "FEBIRA 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENOFIX-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "FENOFIX 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENOFIX-267-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "FENOFIX 267 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORTILIP-267-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "FORTILIP 267 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-200-M> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPANTHYL 200 M"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-267-M> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPANTHYL 267 M"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-NT-145-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPANTHYL NT 145 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-S-215-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPANTHYL S 215 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPANTHYL-SUPRA-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPANTHYL SUPRA 160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPIREX-200MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPIREX 200MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPOHEXAL-250-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "LIPOHEXAL 250 RETARD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRAVAFENIX-40-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BA03" ;
+    ns1:title "PRAVAFENIX 40 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRELIP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AB05" ;
+    ns1:title "SUPRELIP"@cs .
+
+

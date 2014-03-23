@@ -1,0 +1,66 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G02> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02" .
+
+<http://linked.opendata.cz/resource/ATC/G02A> a ns1:ATCConcept ;
+    dcterms:title "Uterotonika"@cs,
+        "OXYTOCICS"@en ;
+    skos:notation "G02A" .
+
+<http://linked.opendata.cz/resource/ATC/G02AB> a ns1:ATCConcept ;
+    dcterms:title "Námelové alkaloidy"@cs,
+        "Ergot alkaloids"@en ;
+    skos:notation "G02AB" .
+
+<http://linked.opendata.cz/resource/ATC/G02AB01> a ns1:ATCConcept ;
+    dcterms:title "Methylergometrin"@cs,
+        "Methylergometrine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G02",
+        "http://linked.opendata.cz/resource/ATC/G02A",
+        "http://linked.opendata.cz/resource/ATC/G02AB" ;
+    skos:notation "G02AB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0237343> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015702" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Methylergonovine maleate"@cs,
+        "Methylergonovine maleate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015702> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that stimulate contraction of the myometrium. They are used to induce LABOR, OBSTETRIC at term, to prevent or control postpartum or postabortion hemorrhage, and to assess fetal status in high risk pregnancies. They may also be used alone or with other drugs to induce abortions (ABORTIFACIENTS). Oxytocics used clinically include the neurohypophyseal hormone OXYTOCIN and certain prostaglandins and ergot alkaloids. (From AMA Drug Evaluations, 1994, p1157)     "@en ;
+    ns1:title "Oxytocika"@cs,
+        "Oxytocics"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185343> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G02AB01" ;
+    ns1:hasIndicationGroup "UTEROTONICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/F" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.2MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1ML/0.2MG"@cs ;
+    ns1:title "METHYLERGOMETRINE MALEATE INJECTION 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHYLERGOMETRINE-MALEATE-INJECTION-0-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G02AB01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0237343" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185343" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "METHYLERGOMETRINE MALEATE INJECTION 0,2 MG"@cs .
+
+

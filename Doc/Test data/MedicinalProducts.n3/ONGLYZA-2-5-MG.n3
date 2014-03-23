@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BH> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory dipeptidyl-peptidázy 4 (DPP-4)"@cs,
+        "Dipeptidyl peptidase 4 (DPP-4) inhibitors"@en ;
+    skos:notation "A10BH" .
+
+<http://linked.opendata.cz/resource/ATC/A10BH03> a ns1:ATCConcept ;
+    dcterms:title "Saxagliptin"@cs,
+        "Saxagliptin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A10",
+        "http://linked.opendata.cz/resource/ATC/A10B",
+        "http://linked.opendata.cz/resource/ATC/A10BH" ;
+    skos:notation "A10BH03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0488193> a ns1:Ingredient ;
+    ns1:title "Saxagliptin"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185073> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "14KALBLI"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X2.5MG"@cs ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185074> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "28KALBLI"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X2.5MG"@cs ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185075> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "98KALBLI"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X2.5MG"@cs ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185076> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "30X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X1X2.5MG"@cs ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185077> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "90X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X1X2.5MG"@cs ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONGLYZA-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BH03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0488193" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185073",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185074",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185075",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185076",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185077" ;
+    ns1:title "ONGLYZA 2,5 MG"@cs .
+
+

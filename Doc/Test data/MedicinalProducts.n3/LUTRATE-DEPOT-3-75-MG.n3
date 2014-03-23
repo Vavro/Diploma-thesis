@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02A> a ns1:ATCConcept ;
+    dcterms:title "Hormony a příbuzné látky"@cs,
+        "HORMONES AND RELATED AGENTS"@en ;
+    skos:notation "L02A" .
+
+<http://linked.opendata.cz/resource/ATC/L02AE> a ns1:ATCConcept ;
+    dcterms:title "Analogy gonadotropin-releasing hormonu"@cs,
+        "Gonadotropin releasing hormone analogues"@en ;
+    skos:notation "L02AE" .
+
+<http://linked.opendata.cz/resource/ATC/L02AE02> a ns1:ATCConcept ;
+    dcterms:title "Leuprorelin"@cs,
+        "Leuprorelin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L02",
+        "http://linked.opendata.cz/resource/ATC/L02A",
+        "http://linked.opendata.cz/resource/ATC/L02AE" ;
+    skos:notation "L02AE02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025473> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010216" ;
+    ns1:description "A potent synthetic long-acting agonist of GONADOTROPIN-RELEASING HORMONE that regulates the synthesis and release of pituitary gonadotropins, LUTEINIZING HORMONE and FOLLICLE STIMULATING HORMONE.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "Leuprolid"@cs,
+        "Leuprolide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which increase the capacity to conceive in females.     "@en ;
+    ns1:title "Fertilizující látky ženské"@cs,
+        "Fertility agents, female"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183644> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:hasIndication """Lutrate Depot 3,75 mg je určen k paliativní léčbě lokálně pokročilého nebo metastatického karcinomu prostaty.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "1+1X2ML ISP"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC156384_doc" ;
+    ns1:hasStrength "3.75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLQ SUS PRO 1X3.75+SOLV"@cs ;
+    ns1:title "LUTRATE DEPOT 3,75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LUTRATE-DEPOT-3-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02AE02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025473" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183644" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "LUTRATE DEPOT 3,75 MG"@cs .
+
+

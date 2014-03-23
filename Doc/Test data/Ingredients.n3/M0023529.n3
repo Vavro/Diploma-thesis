@@ -1,0 +1,509 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N06AB04> a ns1:ATCConcept ;
+    skos:notation "N06AB04" ;
+    skos:prefLabel "Citalopram"@cs,
+        "Citalopram"@en .
+
+<http://linked.opendata.cz/resource/ATC/N06AB10> a ns1:ATCConcept ;
+    skos:notation "N06AB10" ;
+    skos:prefLabel "Escitalopram"@cs,
+        "Escitalopram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023529> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A furancarbonitrile that is one of the SEROTONIN UPTAKE INHIBITORS used as an antidepressant. The drug is also effective in reducing ethanol uptake in alcoholics and is used in depressed patients who also suffer from tardive dyskinesia in preference to tricyclic antidepressants, which aggravate this condition.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000109" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-CITAL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BOSITALEX-20-MG-ML-PERORALNI-KAPKY--ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CESOPIL-20-MG-ML-PERORALNI-KAPKY--ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRALEX-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRALEX-20-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALEC-10-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALEC-20-ZENTIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALON-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALON-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-20-BIOTIKA-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-40-BIOTIKA-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-40-MG-ML-BIOTIKA-KAPKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ACTAVIS-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-BLUEFISH-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-BLUEFISH-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-RATIOPHARM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-VITABALANS-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-VITABALANS-40-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-40-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DEPRESINAL-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DEPRESINAL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-15-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCIRDEC-NEO-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCIRDEC-NEO-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-15-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-MYLAN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-MYLAN-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-TEVA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITIL-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITIL-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOPREX-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESOPREX-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ISOZYLORAM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LENUXIN-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRAM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM-40-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZYLORAM-20-MG-POTAHOVANE-TABLETY" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009585" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000340",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000353",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000435",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000914",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000938",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000958",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002203",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002962",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003442" ;
+    ns1:title "Citalopram"@cs,
+        "Citalopram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit the reuptake of serotonin in the brain. This increases the serotonin concentration in the synaptic cleft which then activates serotonin receptors to a greater extent. These agents have been used in treatment of depression, panic disorder, obsessive-compulsive behavior, and alcoholism, as analgesics, and to treat obesity and bulimia. Many of the ADRENERGIC UPTAKE INHIBITORS also inhibit serotonin uptake; they are not included here.     "@en ;
+    ns1:title "Inhibitory vychytávání serotoninu"@cs,
+        "Serotonin uptake inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally and mechanistically diverse group of drugs that are not tricyclics or monoamine oxidase inhibitors. The most clinically important appear to act selectively on serotonergic systems, especially by inhibiting serotonin reuptake.     "@en ;
+    ns1:title "Antidepresiva druhé generace"@cs,
+        "Antidepressive agents, second-generation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000340> a ns1:DiseaseOrFinding ;
+    ns1:description "Obsessive, persistent, intense fear of open places.     "@en ;
+    ns1:title "Agorafobie"@cs,
+        "Agoraphobia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000353> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary, chronic disease with genetic, psychosocial, and environmental factors influencing its development and manifestations. The disease is often progressive and fatal. It is characterized by impaired control over drinking, preoccupation with the drug alcohol, use of alcohol despite adverse consequences, and distortions in thinking, most notably denial. Each of these symptoms may be continuous or periodic. (Morse & Flavin for the Joint Commission of the National Council on Alcoholism and Drug Dependence and the American Society of Addiction Medicine to Study the Definition and Criteria for the Diagnosis of Alcoholism: in JAMA 1992;268:1012-4)     "@en ;
+    ns1:title "Alkoholismus"@cs,
+        "Alcoholism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000435> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent and disabling ANXIETY.     "@en ;
+    ns1:title "Úzkostné poruchy"@cs,
+        "Anxiety disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000914> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.     "@en ;
+    ns1:title "Demence"@cs,
+        "Dementia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000938> a ns1:DiseaseOrFinding ;
+    ns1:description "An affective disorder manifested by either a dysphoric mood or loss of interest or pleasure in usual activities. The mood disturbance is prominent and relatively persistent.     "@en ;
+    ns1:title "Depresivní poruchy"@cs,
+        "Depressive disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000958> a ns1:DiseaseOrFinding ;
+    ns1:description "Peripheral, autonomic, and cranial nerve disorders that are associated with DIABETES MELLITUS. These conditions usually result from diabetic microvascular injury involving small blood vessels that supply nerves (VASA NERVORUM). Relatively common conditions which may be associated with diabetic neuropathy include third nerve palsy (see OCULOMOTOR NERVE DISEASES); MONONEUROPATHY; mononeuropathy multiplex; diabetic amyotrophy; a painful POLYNEUROPATHY; autonomic neuropathy; and thoracoabdominal neuropathy. (From Adams et al., Principles of Neurology, 6th ed, p1325)     "@en ;
+    ns1:title "Diabetické neuropatie"@cs,
+        "Diabetic neuropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002203> a ns1:DiseaseOrFinding ;
+    ns1:description "An anxiety disorder characterized by recurrent, persistent obsessions or compulsions. Obsessions are the intrusive ideas, thoughts, or images that are experienced as senseless or repugnant. Compulsions are repetitive and seemingly purposeful behavior which the individual generally recognizes as senseless and from which the individual does not derive pleasure although it may provide a release from tension.     "@en ;
+    ns1:title "Obsedantně kompulzivní porucha"@cs,
+        "Obsessive-compulsive disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002962> a ns1:DiseaseOrFinding ;
+    ns1:description "Tobacco used to the detriment of a person's health or social functioning. Tobacco dependence is included.     "@en ;
+    ns1:title "Poruchy vyvolané užíváním tabáku"@cs,
+        "Tobacco use disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003442> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of anxiety disorder characterized by unexpected panic attacks that last minutes or, rarely, hours. Panic attacks begin with intense apprehension, fear or terror and, often, a feeling of impending doom. Symptoms experienced during a panic attack include dyspnea or sensations of being smothered; dizziness, loss of balance or faintness; choking sensations; palpitations or accelerated heart rate; shakiness; sweating; nausea or other form of abdominal distress; depersonalization or derealization; paresthesias; hot flashes or chills; chest discomfort or pain; fear of dying and fear of not being in control of oneself or going crazy. Agoraphobia may also develop. Similar to other anxiety disorders, it may be inherited as an autosomal dominant trait.     "@en ;
+    ns1:title "Panická porucha"@cs,
+        "Panic disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000109> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin Uptake Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009585> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ALVOPLEX 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ALVOPLEX 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALVOPLEX-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ALVOPLEX 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ANXILA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ANXILA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANXILA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ANXILA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-CITAL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "APO-CITAL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "APO-ESCITALOPRAM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "APO-ESCITALOPRAM 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "APO-ESCITALOPRAM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-ESCITALOPRAM-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "APO-ESCITALOPRAM 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOSITALEX-20-MG-ML-PERORALNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "BOSITALEX 20 MG/ML PERORÁLNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CESOPIL-20-MG-ML-PERORALNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "CESOPIL 20 MG/ML PERORÁLNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRALEX-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "CIPRALEX 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRALEX-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "CIPRALEX 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALEC-10-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALEC 10 ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALEC-20-ZENTIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALEC 20 ZENTIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALON-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALON 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALON-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALON 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-20-BIOTIKA-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM 20 BIOTIKA POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-40-BIOTIKA-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM 40 BIOTIKA POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-40-MG-ML-BIOTIKA-KAPKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM 40 MG/ML BIOTIKA KAPKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ACTAVIS-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM ACTAVIS 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-BLUEFISH-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM BLUEFISH 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-BLUEFISH-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM BLUEFISH 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM ORION 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM ORION 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-ORION-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM ORION 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-RATIOPHARM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM-RATIOPHARM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM-TEVA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM-TEVA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-TEVA-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM-TEVA 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-VITABALANS-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM VITABALANS 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CITALOPRAM-VITABALANS-40-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "CITALOPRAM VITABALANS 40 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "DALSAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "DALSAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DALSAN-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "DALSAN 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEPRESINAL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "DEPRESINAL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEPRESINAL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "DEPRESINAL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "DESPRA 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-15-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "DESPRA 15 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESPRA-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "DESPRA 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ELICEA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ELICEA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELICEA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ELICEA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCIRDEC-NEO-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCIRDEC NEO 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCIRDEC-NEO-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCIRDEC NEO 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ACCORD 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ACCORD 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ACCORD-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ACCORD 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM FARMAX 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-15-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM FARMAX 15 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM FARMAX 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-FARMAX-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM FARMAX 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-MYLAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM MYLAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-MYLAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM MYLAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ORION 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ORION 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ORION 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-ORION-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM ORION 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITALOPRAM-TEVA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITALOPRAM TEVA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITIL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITIL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCITIL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESCITIL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOPREX-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESOPREX 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESOPREX-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESOPREX 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESPROLAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESPROLAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESPROLAN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ESPROLAN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOZYLORAM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ISOZYLORAM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ITAKEM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ITAKEM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ITAKEM-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "ITAKEM 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LENUXIN-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "LENUXIN 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "MIRAKLIDE 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "MIRAKLIDE 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRAKLIDE-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB10" ;
+    ns1:title "MIRAKLIDE 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRAM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "PRAM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "SEROPRAM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "SEROPRAM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEROPRAM-40-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "SEROPRAM 40 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZYLORAM-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB04" ;
+    ns1:title "ZYLORAM 20 MG POTAHOVANÉ TABLETY"@cs .
+
+

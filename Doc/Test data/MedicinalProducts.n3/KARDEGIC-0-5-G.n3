@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B01> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01" .
+
+<http://linked.opendata.cz/resource/ATC/B01A> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01A" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC> a ns1:ATCConcept ;
+    dcterms:title "Antiagregancia kromě heparinu"@cs,
+        "Platelet aggregation inhibitors excl. heparin"@en ;
+    skos:notation "B01AC" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC06> a ns1:ATCConcept ;
+    dcterms:title "Kyselina acetylsalicylová"@cs,
+        "Acetylsalicylic acid"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B01",
+        "http://linked.opendata.cz/resource/ATC/B01A",
+        "http://linked.opendata.cz/resource/ATC/B01AC" ;
+    skos:notation "B01AC06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0055847> a ns1:Ingredient ;
+    ns1:title "Acetylsalicylic acid lysinate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058746> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC06" ;
+    ns1:hasIndication """Akutní koronární příhoda (akutní  infarkt myokardu a nestabilní angina pectoris): jako počáteční dávka, zvláště v případech, kdy nelze podat perorálně.
+Přípravek je určen pouze pro podání dospělým osobám.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasMaximalPrice "217.470001221"^^xsd:float ;
+    ns1:hasPackagingSize "6+6X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "215.039993286"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147601_doc" ;
+    ns1:hasStrength "100MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PSO LQF 6X500MG"@cs ;
+    ns1:title "KARDEGIC 0,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058747> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC06" ;
+    ns1:hasIndication """Akutní koronární příhoda (akutní  infarkt myokardu a nestabilní angina pectoris): jako počáteční dávka, zvláště v případech, kdy nelze podat perorálně.
+Přípravek je určen pouze pro podání dospělým osobám.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "20+20X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147601_doc" ;
+    ns1:hasStrength "100MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PSO LQF 20X500MG"@cs ;
+    ns1:title "KARDEGIC 0,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KARDEGIC-0-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC06" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0055847" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058746",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058747" ;
+    ns1:title "KARDEGIC 0,5 G"@cs .
+
+

@@ -1,0 +1,97 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01CA01> a ns1:ATCConcept ;
+    skos:notation "S01CA01" ;
+    skos:prefLabel "Dexamethason a antiinfektiva"@cs,
+        "Dexamethasone and antiinfectives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004121> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An antibiotic first isolated from cultures of Streptomyces venequelae in 1947 but now produced synthetically. It has a relatively simple structure and was the first broad-spectrum antibiotic to be discovered. It acts by interfering with bacterial protein synthesis and is mainly bacteriostatic. (From Martindale, The Extra Pharmacopoeia, 29th ed, p106)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/SPERSADEX-COMP-" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001398",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001985",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002265",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002644",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002666",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003324" ;
+    ns1:title "Chloramfenikol"@cs,
+        "Chloramphenicol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000526> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus BACTEROIDES.     "@en ;
+    ns1:title "Bacteroides - infekce"@cs,
+        "Bacteroides infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001985> a ns1:DiseaseOrFinding ;
+    ns1:description "A fulminant infection of the meninges and subarachnoid fluid by the bacterium NEISSERIA MENINGITIDIS, producing diffuse inflammation and peri-meningeal venous thromboses. Clinical manifestations include FEVER, nuchal rigidity, SEIZURES, severe HEADACHE, petechial rash, stupor, focal neurologic deficits, HYDROCEPHALUS, and COMA. The organism is usually transmitted via nasopharyngeal secretions and is a leading cause of meningitis in children and young adults. Organisms from Neisseria meningitidis serogroups A, B, C, Y, and W-135 have been reported to cause meningitis. (From Adams et al., Principles of Neurology, 6th ed, pp689-701; Curr Opin Pediatr 1998 Feb;10(1):13-8)     "@en ;
+    ns1:title "Meningitida meningokoková"@cs,
+        "Meningitis, meningococcal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002265> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the OUTER EAR including the external EAR CANAL, cartilages of the auricle (EAR CARTILAGE), and the TYMPANIC MEMBRANE.     "@en ;
+    ns1:title "Otitis externa"@cs,
+        "Otitis externa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002644> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by the genus RICKETTSIA.     "@en ;
+    ns1:title "Rickettsia - infekce"@cs,
+        "Rickettsia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002666> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus SALMONELLA.     "@en ;
+    ns1:title "Salmonelóza"@cs,
+        "Salmonella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPERSADEX-COMP-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01CA01" ;
+    ns1:title "SPERSADEX COMP."@cs .
+
+

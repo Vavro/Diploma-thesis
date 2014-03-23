@@ -1,0 +1,301 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J02AC01> a ns1:ATCConcept ;
+    skos:notation "J02AC01" ;
+    skos:prefLabel "Flukonazol"@cs,
+        "Fluconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0024111> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Triazole antifungal agent that is used to treat oropharyngeal candidiasis and cryptococcal meningitis in AIDS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FLUCONAZOL-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FLUCONAZOL-150-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-150-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-I-V-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-ARDEZ",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-100-MG-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-150-MG-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-50-MG-TVRDE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-KABI-2-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-TEVA-2-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOLE-B-BRAUN-2-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOLE-IBIGEN-2-MG---ML-INFUZNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUKONAZOL-PMCS-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FORCAN---150",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-150",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-INF",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-SIR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOSYST-150-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000291",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000568",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000650",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000651",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000653",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000654",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000800",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000880",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000945",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001981",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002813",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002955",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002956",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002958",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002959",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002960",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003415",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003511",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524" ;
+    ns1:title "Flukonazol"@cs,
+        "Fluconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit STEROL 14-DEMETHYLASE. A variety of azole-derived ANTIFUNGAL AGENTS act through this mechanism.     "@en ;
+    ns1:title "14-alfa-demethylasa - inhibitory"@cs,
+        "14-alpha demethylase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000527> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the head of the PENIS, glans penis.     "@en ;
+    ns1:title "Balanitida"@cs,
+        "Balanitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000568> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection that may appear in two forms: 1, a primary lesion characterized by the formation of a small cutaneous nodule and small nodules along the lymphatics that may heal within several months; and 2, chronic granulomatous lesions characterized by thick crusts, warty growths, and unusual vascularity and infection in the middle or upper lobes of the lung.     "@en ;
+    ns1:title "Blastomykóza"@cs,
+        "Blastomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000651> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by development, usually in infancy or childhood, of a chronic, often widespread candidiasis of skin, nails, and mucous membranes. It may be secondary to one of the immunodeficiency syndromes, inherited as an autosomal recessive trait, or associated with defects in cell-mediated immunity, endocrine disorders, dental stomatitis, or malignancy.     "@en ;
+    ns1:title "Kandidóza chronická mukokutánní"@cs,
+        "Candidiasis, chronic mucocutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the mucous membranes of the mouth by a fungus of the genus CANDIDA. (Dorland, 27th ed)     "@en ;
+    ns1:title "Orální kandidóza"@cs,
+        "Candidiasis, oral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000654> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the VULVA and VAGINA with a fungus of the genus CANDIDA.     "@en ;
+    ns1:title "Kandidóza vulvovaginální"@cs,
+        "Candidiasis, vulvovaginal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000800> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus COCCIDIOIDES, endemic to the SOUTHWESTERN UNITED STATES. It is sometimes called valley fever but should not be confused with RIFT VALLEY FEVER. Infection is caused by inhalation of airborne, fungal particles known as arthroconidia, a form of FUNGAL SPORES. A primary form is an acute, benign, self-limited respiratory infection. A secondary form is a virulent, severe, chronic, progressive granulomatous disease with systemic involvement. It can be detected by use of COCCIDIOIDIN.     "@en ;
+    ns1:title "Kokcidioidomykóza"@cs,
+        "Coccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000880> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the species CRYPTOCOCCUS NEOFORMANS.     "@en ;
+    ns1:title "Kryptokokóza"@cs,
+        "Cryptococcosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000945> a ns1:DiseaseOrFinding ;
+    ns1:description "Superficial infections of the skin or its appendages by any of various fungi.     "@en ;
+    ns1:title "Dermatomykózy"@cs,
+        "Dermatomycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001546> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection resulting from inhalation or ingestion of spores of the fungus of the genus HISTOPLASMA, species H. capsulatum. It is worldwide in distribution and particularly common in the midwestern United States. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Histoplazmóza"@cs,
+        "Histoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001981> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)     "@en ;
+    ns1:title "Meningitida"@cs,
+        "Meningitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002813> a ns1:DiseaseOrFinding ;
+    ns1:description "The commonest and least serious of the deep mycoses, characterized by nodular lesions of the cutaneous and subcutaneous tissues. It is caused by inhalation of contaminated dust or by infection of a wound.     "@en ;
+    ns1:title "Sporotrichóza"@cs,
+        "Sporotrichosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002955> a ns1:DiseaseOrFinding ;
+    ns1:description "Fungal infection of keratinized tissues such as hair, skin and nails. The main causative fungi include MICROSPORUM; TRICHOPHYTON; and EPIDERMOPHYTON.     "@en ;
+    ns1:title "Tinea"@cs,
+        "Tinea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002956> a ns1:DiseaseOrFinding ;
+    ns1:description "Ringworm of the scalp and associated hair mainly caused by species of MICROSPORUM; TRICHOPHYTON; and EPIDERMOPHYTON, which may occasionally involve the eyebrows and eyelashes.     "@en ;
+    ns1:title "Tinea capitis"@cs,
+        "Tinea capitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002958> a ns1:DiseaseOrFinding ;
+    ns1:description "Dermatological pruritic lesion in the feet, caused by Trichophyton rubrum, T. mentagrophytes, or Epidermophyton floccosum.     "@en ;
+    ns1:title "Tinea pedis"@cs,
+        "Tinea pedis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002959> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection of the nail, usually caused by DERMATOPHYTES; YEASTS; or nondermatophyte MOLDS.     "@en ;
+    ns1:title "Onychomykóza"@cs,
+        "Onychomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002960> a ns1:DiseaseOrFinding ;
+    ns1:description "A common chronic, noninflammatory and usually symptomless disorder, characterized by the occurrence of multiple macular patches of all sizes and shapes, and varying in pigmentation from fawn-colored to brown. It is seen most frequently in hot, humid, tropical regions, and is caused by Pityrosporon orbiculare. (Dorland, 27th ed)     "@en ;
+    ns1:title "Tinea versicolor"@cs,
+        "Tinea versicolor"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003415> a ns1:DiseaseOrFinding ;
+    ns1:description "The presence of fungi circulating in the blood. Opportunistic fungal sepsis is seen most often in immunosuppressed patients with severe neutropenia or in postoperative patients with intravenous catheters and usually follows prolonged antibiotic therapy.     "@en ;
+    ns1:title "Fungémie"@cs,
+        "Fungemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003511> a ns1:DiseaseOrFinding ;
+    ns1:description "Meningeal inflammation produced by CRYPTOCOCCUS NEOFORMANS, an encapsulated yeast that tends to infect individuals with ACQUIRED IMMUNODEFICIENCY SYNDROME and other immunocompromised states. The organism enters the body through the respiratory tract, but symptomatic infections are usually limited to the lungs and nervous system. The organism may also produce parenchymal brain lesions (torulomas). Clinically, the course is subacute and may feature HEADACHE; NAUSEA; PHOTOPHOBIA; focal neurologic deficits; SEIZURES; cranial neuropathies; and HYDROCEPHALUS. (From Adams et al., Principles of Neurology, 6th ed, pp721-2)     "@en ;
+    ns1:title "Kryptokoková meningitida"@cs,
+        "Meningitis, cryptococcal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025> a ns1:MechanismOfAction ;
+    ns1:title "14-alpha Demethylase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FLUCONAZOL-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "APO-FLUCONAZOL 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FLUCONAZOL-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "APO-FLUCONAZOL 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "DIFLUCAN 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "DIFLUCAN 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "DIFLUCAN 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIFLUCAN-I-V-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "DIFLUCAN I.V."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-ARDEZ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL ARDEZ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-100-MG-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL AUROBINDO 100 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-150-MG-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL AUROBINDO 150 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-AUROBINDO-50-MG-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL AUROBINDO 50 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-KABI-2-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL KABI 2 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOL-TEVA-2-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOL-TEVA 2 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOLE-B-BRAUN-2-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOLE B.BRAUN 2 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCONAZOLE-IBIGEN-2-MG---ML-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUCONAZOLE IBIGEN 2 MG / ML INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUKONAZOL-PMCS-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FLUKONAZOL PMCS 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORCAN---150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "FORCAN - 150"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "MYCOMAX 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "MYCOMAX 150"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-INF> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "MYCOMAX INF"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOMAX-SIR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "MYCOMAX SIR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYCOSYST-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AC01" ;
+    ns1:title "MYCOSYST 150 MG"@cs .
+
+

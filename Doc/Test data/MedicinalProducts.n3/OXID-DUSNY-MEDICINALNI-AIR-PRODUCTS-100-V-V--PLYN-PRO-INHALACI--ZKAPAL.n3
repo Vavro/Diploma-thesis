@@ -1,0 +1,935 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N01> a ns1:ATCConcept ;
+    dcterms:title "Anestetika"@cs,
+        "ANESTHETICS"@en ;
+    skos:notation "N01" .
+
+<http://linked.opendata.cz/resource/ATC/N01A> a ns1:ATCConcept ;
+    dcterms:title "Anestetika celková"@cs,
+        "ANESTHETICS, GENERAL"@en ;
+    skos:notation "N01A" .
+
+<http://linked.opendata.cz/resource/ATC/N01AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná celková anestetika"@cs,
+        "Other general anesthetics"@en ;
+    skos:notation "N01AX" .
+
+<http://linked.opendata.cz/resource/ATC/N01AX13> a ns1:ATCConcept ;
+    dcterms:title "Oxid dusný"@cs,
+        "Nitrous oxide"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N01",
+        "http://linked.opendata.cz/resource/ATC/N01A",
+        "http://linked.opendata.cz/resource/ATC/N01AX" ;
+    skos:notation "N01AX13" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014927> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Nitrogen oxide (N2O). A colorless, odorless gas that is used as an anesthetic and analgesic. High concentrations cause a narcotic effect and may replace oxygen, causing death by asphyxia. It is also used as a food aerosol in the preparation of whipping cream.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027998",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038" ;
+    ns1:title "Oxid dusný"@cs,
+        "Nitrous oxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027998> a ns1:PharmacologicalAction ;
+    ns1:description "Gases or volatile liquids that vary in the rate at which they induce anesthesia; potency; the degree of circulation, respiratory, or neuromuscular depression they produce; and analgesic effects. Inhalation anesthetics have advantages over intravenous agents in that the depth of anesthesia can be changed rapidly by altering the inhaled concentration. Because of their rapid elimination, any postoperative respiratory depression is of relatively short duration. (From AMA Drug Evaluations Annual, 1994, p173)     "@en ;
+    ns1:title "Anestetika inhalační"@cs,
+        "Anesthetics, inhalation"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136453> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "0.5L/0.375KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 0.5L/0.375KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136454> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "1L/0.75KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 1L/0.75KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136455> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/1.50KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 2L/1.50KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136456> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "3L/2.25KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 3L/2.25KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136457> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "4L/3.00KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 4L/3.00KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136458> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "4L/3.00KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 4L/3.00KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136459> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "4L/3.00KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 4L/3.00KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136460> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "0.5L/0.375KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 0.5L/0.375KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136462> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "0.5L/0.375KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 0.5L/0.375KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136463> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "1L/0.75KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 1L/0.75KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136464> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "1L/0.75KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 1L/0.75KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136465> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/1.50KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 2L/1.50KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136466> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/1.50KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 2L/1.50KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136467> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "3L/2.25KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 3L/2.25KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136468> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "3L/2.25KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 3L/2.25KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136469> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/3.75KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 5L/3.75KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136470> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/3.75KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 5L/3.75KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136471> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/3.75KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 5L/3.75KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136472> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "7L/5.25KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 7L/5.25KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136473> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "7L/5.25KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 7L/5.25KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136474> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "7L/5.25KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 7L/5.25KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136475> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/7.50KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 10L/7.50KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136476> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/7.50KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 10L/7.50KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136477> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/7.50KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 10L/7.50KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136478> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "13L/9.75KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 13L/9.75KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136479> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "13L/9.75KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 13L/9.75KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136480> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "13L/9.75KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 13L/9.75KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136481> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "15L/11.25KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 15L/11.25KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136482> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "15L/11.25KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 15L/11.25KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136483> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "15L/11.25KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 15L/11.25KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136484> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/15.00KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 20L/15.00KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136485> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/15.00KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 20L/15.00KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136486> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/15.00KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 20L/15.00KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136487> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "25L/18.75KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 25L/18.75KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136488> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "25L/18.75KG III"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 25L/18.75KG III"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136489> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "25L/18.75KG IV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 25L/18.75KG IV"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136490> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "30L/22.50KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 30L/22.50KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136491> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "40L/30.00KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 40L/30.00KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136492> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "50L/37.50KG II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 50L/37.50KG II"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147372> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "0.5L/0.375KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 0.5L/0.375KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147373> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "1L/0.75KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 1L/0.75KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147374> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/1.5KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 2L/1.5KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147375> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "3L/2.25KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 3L/2.25KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147376> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "4L/3KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 4L/3KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147377> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/3.75KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 5L/3.75KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147378> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "7L/5.25KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 7L/5.25KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147379> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/7.5KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 10L/7.5KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147380> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "13L/9.75KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 13L/9.75KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147381> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "15L/11.25KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 15L/11.25KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147382> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/15KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 20L/15KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147383> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "25L/18.75KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 25L/18.75KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147384> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "30L/22.5KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 30L/22.5KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147385> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "40L/30KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 40L/30KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147386> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "50L/37.5KG I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 50L/37.5KG I"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147387> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "450L/337.5KG V"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 450L/337.5KG V"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147388> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "600L/450KG V"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 600L/450KG V"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147389> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "800L/600KG V"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 800L/600KG V"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147390> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasIndication """Oxid dusný v ekvimolární koncentraci s kyslíkem (50% v/v oxidu dusného a 50% v/v kyslíku) je podáván jako analgetikum se slabými anestetickými vlastnostmi pro léčbu bolesti krátkého trvání jako součást akutní léčby v traumatologii a u popálenin, při zubních zákrocích, porodu a chirurgických výkonech v otorinolaryngologii.
+Oxid dusný je používán jako základní anestetikum v kombinaci s inhalačními anestetiky, intravenózními anestetiky (thiopental, propofol), opiáty a/nebo myorelaxanty. Medicinální kyslík je přimíchán v minimální koncentraci 21% v/v. 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "900L/675KG V"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC100909_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS LIQ 900L/675KG V"@cs ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXID-DUSNY-MEDICINALNI-AIR-PRODUCTS-100-V-V--PLYN-PRO-INHALACI--ZKAPAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX13" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014927" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136453",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136454",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136455",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136456",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136457",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136458",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136459",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136460",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136462",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136463",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136464",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136465",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136466",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136467",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136468",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136469",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136470",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136471",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136472",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136473",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136474",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136475",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136476",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136477",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136478",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136479",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136480",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136481",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136482",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136483",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136484",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136485",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136486",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136487",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136488",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136489",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136490",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136491",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136492",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147372",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147373",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147374",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147375",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147376",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147377",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147378",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147379",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147380",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147381",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147382",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147383",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147384",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147385",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147386",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147387",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147388",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147389",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147390" ;
+    ns1:title "OXID DUSNÝ MEDICINÁLNÍ AIR PRODUCTS 100%V/V, PLYN PRO INHALACI, ZKAPAL"@cs .
+
+

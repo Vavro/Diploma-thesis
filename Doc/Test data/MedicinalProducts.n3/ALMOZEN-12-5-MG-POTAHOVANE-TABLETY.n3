@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02C> a ns1:ATCConcept ;
+    dcterms:title "Antimigrenika"@cs,
+        "ANTIMIGRAINE PREPARATIONS"@en ;
+    skos:notation "N02C" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC> a ns1:ATCConcept ;
+    dcterms:title "Selektivní agonisté serotoninu na 5HT1 receptorech"@cs,
+        "Selective serotonin (5-HT1) agonists"@en ;
+    skos:notation "N02CC" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC05> a ns1:ATCConcept ;
+    dcterms:title "Almotriptan"@cs,
+        "Almotriptan"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N02",
+        "http://linked.opendata.cz/resource/ATC/N02C",
+        "http://linked.opendata.cz/resource/ATC/N02CC" ;
+    skos:notation "N02CC05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0397885> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Almotriptan malate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179088> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasIndication """Akutní léčba bolesti hlavy při záchvatu migrény s aurou nebo bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154833_doc" ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X12.5MG"@cs ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179089> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasIndication """Akutní léčba bolesti hlavy při záchvatu migrény s aurou nebo bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "3"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154833_doc" ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X12.5MG"@cs ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179090> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasIndication """Akutní léčba bolesti hlavy při záchvatu migrény s aurou nebo bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154833_doc" ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X12.5MG"@cs ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179091> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasIndication """Akutní léčba bolesti hlavy při záchvatu migrény s aurou nebo bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "9"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154833_doc" ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 9X12.5MG"@cs ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179092> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasIndication """Akutní léčba bolesti hlavy při záchvatu migrény s aurou nebo bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "12"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154833_doc" ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 12X12.5MG"@cs ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALMOZEN-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0397885" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179088",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179089",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179090",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179091",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179092" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "ALMOZEN 12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+

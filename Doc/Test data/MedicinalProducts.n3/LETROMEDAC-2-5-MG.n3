@@ -1,0 +1,223 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02B> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté hormonů a příbuzná léčiva"@cs,
+        "HORMONE ANTAGONISTS AND RELATED AGENTS"@en ;
+    skos:notation "L02B" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG> a ns1:ATCConcept ;
+    dcterms:title "Enzymové inhibitory"@cs,
+        "Enzyme inhibitors"@en ;
+    skos:notation "L02BG" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG04> a ns1:ATCConcept ;
+    dcterms:title "Letrozol"@cs,
+        "Letrozole"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L02",
+        "http://linked.opendata.cz/resource/ATC/L02B",
+        "http://linked.opendata.cz/resource/ATC/L02BG" ;
+    skos:notation "L02BG04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184835> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:title "Letrozole"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164573> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164574> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2426.59008789"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2279.47998047"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-11-09"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164575> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164576> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164577> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164578> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "13174.0898438"^^xsd:float ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "6838.43994141"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164579> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164580> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164581> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasIndication """Adjuvantní léčba postmenopauzálních žen s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba časného stádia  hormon-dependentního  karcinomu prsu u postmenopauzálních žen, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého hormon-dependentního karcinomu prsu u postmenopauzálních žen.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo progresi onemocnění, které již byly léčeny antiestrogeny.
+U pacientek s  hormonálním receptor-negativním nádorem prsu nebyla účinnost prokázána.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC121609_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X2.5MG"@cs ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LETROMEDAC-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L02BG04" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184835" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164573",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164574",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164575",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164576",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164577",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164578",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164579",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164580",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164581" ;
+    ns1:title "LETROMEDAC 2,5 MG"@cs .
+
+

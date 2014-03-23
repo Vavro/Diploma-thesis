@@ -1,0 +1,72 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii funkčních poruch trávicího traktu"@cs,
+        "DRUGS FOR FUNCTIONAL GASTROINTESTINAL DISORDERS"@en ;
+    skos:notation "A03" .
+
+<http://linked.opendata.cz/resource/ATC/A03F> a ns1:ATCConcept ;
+    dcterms:title "Prokinetika"@cs,
+        "PROPULSIVES"@en ;
+    skos:notation "A03F" .
+
+<http://linked.opendata.cz/resource/ATC/A03FA> a ns1:ATCConcept ;
+    dcterms:title "Prokinetika"@cs,
+        "Propulsives"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A03",
+        "http://linked.opendata.cz/resource/ATC/A03F" ;
+    skos:notation "A03FA" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004029> a ns1:Ingredient ;
+    ns1:title "Itoprid-hydrochlorid"@cs,
+        "Itopride hydrochloride"@en,
+        "Itopridi hydrochloridum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166759> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA" ;
+    ns1:hasIndicationGroup "DIGESTIVA, ADSORBENTIA, ACIDA"@cs ;
+    ns1:hasMaximalPrice "550.340026855"^^xsd:float ;
+    ns1:hasPackagingSize "4X10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "56.0099983215"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-07-07"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC126254_doc" ;
+    ns1:hasStrength "50MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 40X50MG"@cs ;
+    ns1:title "KINITO 50 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166760> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA" ;
+    ns1:hasIndicationGroup "DIGESTIVA, ADSORBENTIA, ACIDA"@cs ;
+    ns1:hasMaximalPrice "1300.59997559"^^xsd:float ;
+    ns1:hasPackagingSize "10X10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "140.029998779"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-07-08"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC126254_doc" ;
+    ns1:hasStrength "50MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X50MG"@cs ;
+    ns1:title "KINITO 50 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KINITO-50-MG--POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004029" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166759",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166760" ;
+    ns1:title "KINITO 50 MG, POTAHOVANÉ TABLETY"@cs .
+
+

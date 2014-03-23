@@ -1,0 +1,110 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A12AX> a ns1:ATCConcept ;
+    skos:notation "A12AX" ;
+    skos:prefLabel "Vápník, kombinace s jinými léčivy"@cs,
+        "Calcium, combinations with other drugs"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012888> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000305",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000456",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000988",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001430",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529" ;
+    ns1:description "Magnesium oxide (MgO). An inorganic compound that occurs in nature as the mineral periclase. In aqueous media combines quickly with water to form magnesium hydroxide. It is used as an antacid and mild laxative and has many nonmedicinal uses.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-PLUS" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008295",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001921" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001028",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001921" ;
+    ns1:title "Oxid hořečnatý"@cs,
+        "Magnesium oxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that counteract or neutralize acidity of the GASTROINTESTINAL TRACT.     "@en ;
+    ns1:title "Antacida"@cs,
+        "Antacids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:description "An adrenal disease characterized by the progressive destruction of the ADRENAL CORTEX, resulting in insufficient production of ALDOSTERONE and HYDROCORTISONE. Clinical symptoms include ANOREXIA; NAUSEA; WEIGHT LOSS; MUSCLE WEAKNESS; and HYPERPIGMENTATION of the SKIN due to increase in circulating levels of ACTH precursor hormone which stimulates MELANOCYTES.     "@en ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000456> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute inflammation of the APPENDIX. Acute appendicitis is classified as simple, gangrenous, or perforated.     "@en ;
+    ns1:title "Apendicitida"@cs,
+        "Appendicitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000988> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a DIVERTICULUM or diverticula.     "@en ;
+    ns1:title "Divertikulitida"@cs,
+        "Diverticulitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001028> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired digestion, especially after eating.     "@en ;
+    ns1:title "Dyspepsie"@cs,
+        "Dyspepsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired conduction of cardiac impulse that can occur anywhere along the conduction pathway, such as between the SINOATRIAL NODE and the right atrium (SA block) or between atria and ventricles (AV block). Heart blocks can be classified by the duration, frequency, or completeness of conduction block. Reversibility depends on the degree of structural or functional defects.     "@en ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER.     "@en ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001921> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of magnesium in the diet, characterized by anorexia, nausea, vomiting, lethargy, and weakness. Symptoms are paresthesias, muscle cramps, irritability, decreased attention span, and mental confusion, possibly requiring months to appear. Deficiency of body magnesium can exist even when serum values are normal. In addition, magnesium deficiency may be organ-selective, since certain tissues become deficient before others. (Harrison's Principles of Internal Medicine, 12th ed, p1936)     "@en ;
+    ns1:title "Hořčík - nedostatek"@cs,
+        "Magnesium deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220> a ns1:MechanismOfAction ;
+    ns1:title "Electrolyte Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226> a ns1:MechanismOfAction ;
+    ns1:title "Acid-Base Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008295> a ns1:PhysiologicEffect ;
+    ns1:title "Antacid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A12AX" ;
+    ns1:title "CALTRATE PLUS"@cs .
+
+

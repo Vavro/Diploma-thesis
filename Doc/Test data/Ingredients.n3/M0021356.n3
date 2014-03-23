@@ -1,0 +1,84 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01BB03> a ns1:ATCConcept ;
+    skos:notation "L01BB03" ;
+    skos:prefLabel "Tioguanin"@cs,
+        "Tioguanine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021356> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An antineoplastic compound which also has antimetabolite action. The drug is used in the therapy of acute leukemia.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/LANVIS" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003261",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003264",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003268",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003269" ;
+    ns1:title "Thioguanin"@cs,
+        "Thioguanine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003261> a ns1:DiseaseOrFinding ;
+    ns1:description "Clonal hematopoetic disorder caused by an acquired genetic defect in PLURIPOTENT STEM CELLS. It starts in MYELOID CELLS of the bone marrow, invades the blood and then other organs. The condition progresses from a stable, more indolent, chronic phase (LEUKEMIA, MYELOID, CHRONIC PHASE) lasting up to 7 years, to an advanced phase composed of an accelerated phase (LEUKEMIA, MYELOID, ACCELERATED PHASE) and BLAST CRISIS.     "@en ;
+    ns1:title "Chronická myeloidní leukemie"@cs,
+        "Leukemia, myelogenous, chronic, bcr-abl positive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003264> a ns1:DiseaseOrFinding ;
+    ns1:description "A rare myeloproliferative disorder that is characterized by a sustained, mature neutrophilic leukocytosis. No monocytosis, EOSINOPHILIA, or basophilia is present, nor is there a PHILADELPHIA CHROMOSOME or bcr-abl fusion gene (GENES, ABL).     "@en ;
+    ns1:title "Leukémie neutrofilní chronická"@cs,
+        "Leukemia, neutrophilic, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003268> a ns1:DiseaseOrFinding ;
+    ns1:description "A rare acute myeloid leukemia in which the primary differentiation is to BASOPHILS. It is characterized by an extreme increase of immature basophilic granulated cells in the bone marrow and blood. Mature basophils are usually sparse.     "@en ;
+    ns1:title "Leukémie bazofilní akutní"@cs,
+        "Leukemia, basophilic, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003269> a ns1:DiseaseOrFinding ;
+    ns1:description "A rare acute myeloid leukemia characterized by abnormal EOSINOPHILS in the bone marrow.     "@en ;
+    ns1:title "Leukémie eozinofilní akutní"@cs,
+        "Leukemia, eosinophilic, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LANVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01BB03" ;
+    ns1:title "LANVIS"@cs .
+
+

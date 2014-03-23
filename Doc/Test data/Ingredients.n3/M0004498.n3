@@ -1,0 +1,340 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01MA02> a ns1:ATCConcept ;
+    skos:notation "J01MA02" ;
+    skos:prefLabel "Ciprofloxacin"@cs,
+        "Ciprofloxacin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S02CA05> a ns1:ATCConcept ;
+    skos:notation "S02CA05" ;
+    skos:prefLabel "Fluocinolon-acetonid a antiinfektiva"@cs,
+        "Fluocinolone acetonide and antiinfectives"@en .
+
+<http://linked.opendata.cz/resource/ATC/S03AA07> a ns1:ATCConcept ;
+    skos:notation "S03AA07" ;
+    skos:prefLabel "Ciprofloxacin"@cs,
+        "Ciprofloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004498> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A broad-spectrum antimicrobial carboxyfluoroquinoline.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CIFLOXINAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIFLOXINAL-500-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CILOXAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-PRO-INFUSIONE-200-MG-100-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-100-MG-10-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-200-MG-100-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-250",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-100-MG-50-ML-INFUZNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-200-MG-100-ML-INFUZNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-400-MG-200-ML-INFUZNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INFALIN-DUO-3-MG-ML---0-25-MG-ML-USNI-KAPKY--ROZTOK" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009531" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000429",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000618",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000836",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000890",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000894",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000963",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001016",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001249",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001380",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001398",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001758",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002256",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002265",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002501",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002507",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002519",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002559",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002756",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003059",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003076",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546" ;
+    ns1:title "Ciprofloxacin"@cs,
+        "Ciprofloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that prevent infectious agents or organisms from spreading or kill infectious agents in order to prevent the spread of infection.     "@en ;
+    ns1:title "Antiinfekční látky"@cs,
+        "Anti-infective agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000429> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infection caused by the spore-forming bacteria BACILLUS ANTHRACIS. It commonly affects hoofed animals such as sheep and goats. Infection in humans often involves the skin (cutaneous anthrax), the lungs (inhalation anthrax), or the gastrointestinal tract. Anthrax is not contagious and can be treated with antibiotics.     "@en ;
+    ns1:title "Antrax"@cs,
+        "Anthrax"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000526> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus BACTEROIDES.     "@en ;
+    ns1:title "Bacteroides - infekce"@cs,
+        "Bacteroides infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000618> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent abnormal dilatation of the bronchi.     "@en ;
+    ns1:title "Bronchiektazie"@cs,
+        "Bronchiectasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000649> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus CAMPYLOBACTER.     "@en ;
+    ns1:title "Campylobacter - infekce"@cs,
+        "Campylobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000836> a ns1:DiseaseOrFinding ;
+    ns1:description "Purulent infections of the conjunctiva by several species of gram-negative, gram-positive, or acid-fast organisms. Some of the more commonly found genera causing conjunctival infections are Haemophilus, Streptococcus, Neisseria, and Chlamydia.     "@en ;
+    ns1:title "Konjunktivitida bakteriální"@cs,
+        "Conjunctivitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000890> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal recessive genetic disease of the EXOCRINE GLANDS. It is caused by mutations in the gene encoding the CYSTIC FIBROSIS TRANSMEMBRANE CONDUCTANCE REGULATOR expressed in several organs including the LUNG, the PANCREAS, the BILIARY SYSTEM, and the SWEAT GLANDS. Cystic fibrosis is characterized by epithelial secretory dysfunction associated with ductal obstruction resulting in AIRWAY OBSTRUCTION; chronic RESPIRATORY INFECTIONS; PANCREATIC INSUFFICIENCY; maldigestion; salt depletion; and HEAT PROSTRATION.     "@en ;
+    ns1:title "Cystická fibróza"@cs,
+        "Cystic fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000894> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the URINARY BLADDER, either from bacterial or non-bacterial causes. Cystitis is usually associated with painful urination (dysuria), increased frequency, urgency, and suprapubic pain.     "@en ;
+    ns1:title "Cystitida"@cs,
+        "Cystitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000963> a ns1:DiseaseOrFinding ;
+    ns1:description "An increased liquidity or decreased consistency of  FECES, such as running stool. Fecal consistency is related to the ratio of water-holding capacity of insoluble solids to total water, rather than the amount of water present. Diarrhea is not hyperdefecation or increased fecal weight.     "@en ;
+    ns1:title "Průjem"@cs,
+        "Diarrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001016> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute inflammation of the intestine associated with infectious DIARRHEA of various etiologies, generally acquired by eating contaminated food containing TOXINS, BIOLOGICAL derived from BACTERIA or other microorganisms. Dysentery is characterized initially by watery FECES then by bloody mucoid stools. It is often associated with ABDOMINAL PAIN; FEVER; and DEHYDRATION.     "@en ;
+    ns1:title "Dyzentérie"@cs,
+        "Dysentery"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001758> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus KLEBSIELLA.     "@en ;
+    ns1:title "Klebsiella - infekce"@cs,
+        "Klebsiella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002256> a ns1:DiseaseOrFinding ;
+    ns1:title "Osteomyelitida"@cs,
+        "Osteomyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002265> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the OUTER EAR including the external EAR CANAL, cartilages of the auricle (EAR CARTILAGE), and the TYMPANIC MEMBRANE.     "@en ;
+    ns1:title "Otitis externa"@cs,
+        "Otitis externa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002501> a ns1:DiseaseOrFinding ;
+    ns1:description "Infiltration of inflammatory cells into the parenchyma of PROSTATE. The subtypes are classified by their varied laboratory analysis, clinical presentation and response to treatment.     "@en ;
+    ns1:title "Prostatitida"@cs,
+        "Prostatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002559> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the KIDNEY involving the renal parenchyma (the NEPHRONS); KIDNEY PELVIS; and KIDNEY CALICES. It is characterized by ABDOMINAL PAIN; FEVER; NAUSEA; VOMITING; and occasionally DIARRHEA.     "@en ;
+    ns1:title "Pyelonefritida"@cs,
+        "Pyelonephritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003059> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute systemic febrile infection caused by SALMONELLA TYPHI, a serotype of SALMONELLA ENTERICA.     "@en ;
+    ns1:title "Břišní tyfus"@cs,
+        "Typhoid fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003076> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation involving the URETHRA. Similar to CYSTITIS, clinical symptoms range from vague discomfort to painful urination (DYSURIA), urethral discharge, or both.     "@en ;
+    ns1:title "Uretritida"@cs,
+        "Urethritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176> a ns1:MechanismOfAction ;
+    ns1:title "Topoisomerase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009531> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Protein Breakdown"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIFLOXINAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIFLOXINAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIFLOXINAL-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIFLOXINAL 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CILOXAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S03AA07" ;
+    ns1:title "CILOXAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPHIN 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPHIN 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPHIN-PRO-INFUSIONE-200-MG-100-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPHIN PRO INFUSIONE 200 MG/100 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S03AA07" ;
+    ns1:title "CIPLOX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPLOX 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPLOX-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPLOX 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-100-MG-10-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPRINOL 100 MG/10 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-200-MG-100-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPRINOL 200 MG/100 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPRINOL 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPRINOL-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPRINOL 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROBAY 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROBAY 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROBAY-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROBAY 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-100-MG-50-ML-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROFLOXACIN KABI 100 MG/50 ML INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-200-MG-100-ML-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROFLOXACIN KABI 200 MG/100 ML INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIPROFLOXACIN-KABI-400-MG-200-ML-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA02" ;
+    ns1:title "CIPROFLOXACIN KABI 400 MG/200 ML INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFALIN-DUO-3-MG-ML---0-25-MG-ML-USNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S02CA05" ;
+    ns1:title "INFALIN DUO 3 MG/ML + 0,25 MG/ML UŠNÍ KAPKY, ROZTOK"@cs .
+
+

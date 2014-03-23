@@ -1,0 +1,115 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R02AX01> a ns1:ATCConcept ;
+    skos:notation "R02AX01" ;
+    skos:prefLabel "Flurbiprofen"@cs,
+        "Flurbiprofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008647> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001735",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010245" ;
+    ns1:description "An anti-inflammatory analgesic and antipyretic of the phenylalkynoic acid series. It has been shown to reduce bone resorption in periodontal disease by inhibiting CARBONIC ANHYDRASE.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/FLURBIPROFEN-RECKITT-BENCKISER-8-75-MG-GRANULE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STREPFEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STREPFEN-INSTANT-MINT-8-75-MG-GRANULE" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001919" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001919",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002244",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003350" ;
+    ns1:title "Flurbiprofen"@cs,
+        "Flurbiprofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds capable of relieving pain without the loss of CONSCIOUSNESS.     "@en ;
+    ns1:title "Analgetika"@cs,
+        "Analgesics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001735> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of herpetic keratitis characterized by the formation of small vesicles which break down and coalesce to form recurring dendritic ulcers, characteristically irregular, linear, branching, and ending in knoblike extremities. (Dictionary of Visual Science, 3d ed)     "@en ;
+    ns1:title "Keratitida dendritická"@cs,
+        "Keratitis, dendritic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001919> a ns1:DiseaseOrFinding ;
+    ns1:description "Fluid accumulation in the outer layer of the MACULA LUTEA that results from intraocular or systemic insults. It may develop in a diffuse pattern where the macula appears thickened or it may acquire the characteristic petaloid appearance referred to as cystoid macular edema. Although macular edema may be associated with various underlying conditions, it is most commonly seen following intraocular surgery, venous occlusive disease, DIABETIC RETINOPATHY, and posterior segment inflammatory disease. (From Survey of Ophthalmology 2004; 49(5) 470-90)     "@en ;
+    ns1:title "Makulární edém"@cs,
+        "Macular edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003350> a ns1:DiseaseOrFinding ;
+    ns1:description "Pupillary constriction. This may result from congenital absence of the dilatator pupillary muscle, defective sympathetic innervation, or irritation of the CONJUNCTIVA or CORNEA.     "@en ;
+    ns1:title "Mióza"@cs,
+        "Miosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> a ns1:DiseaseOrFinding ;
+    ns1:description "The last third of a human PREGNANCY, from the beginning of the 29th through the 42nd completed week (197 to 294 days) of gestation.     "@en ;
+    ns1:title "Těhotenství - třetí trimestr"@cs,
+        "Pregnancy trimester, third"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLURBIPROFEN-RECKITT-BENCKISER-8-75-MG-GRANULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:title "FLURBIPROFEN RECKITT BENCKISER 8,75 MG GRANULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPFEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:title "STREPFEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPFEN-INSTANT-MINT-8-75-MG-GRANULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R02AX01" ;
+    ns1:title "STREPFEN INSTANT MINT 8,75 MG GRANULE"@cs .
+
+

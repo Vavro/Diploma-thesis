@@ -1,0 +1,142 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N01AX10> a ns1:ATCConcept ;
+    skos:notation "N01AX10" ;
+    skos:prefLabel "Propofol"@cs,
+        "Propofol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0024130> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010216" ;
+    ns1:description "An intravenous anesthetic agent which has the advantage of a very rapid onset after infusion or bolus injection plus a very short recovery period of a couple of minutes. (From Smith and Reynard, Textbook of Pharmacology, 1992, 1st ed, p206). Propofol has been used as ANTICONVULSANTS and ANTIEMETICS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ANESIA-10-MG-ML-INJEKCNI-INFUZNI-EMULZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ANESIA-20-MG-ML-INJEKCNI-INFUZNI-EMULZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-1--FRESENIUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-1--MCT-LCT-FRESENIUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-2--MCT-LCT-FRESENIUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-0-5---5MG-ML-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-1----10MG-ML-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-2---20MG-ML-" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008486",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008821" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004075" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000912",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002822" ;
+    ns1:title "Propofol"@cs,
+        "Propofol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000912> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by CONFUSION; inattentiveness; disorientation; ILLUSIONS; HALLUCINATIONS; agitation; and in some instances autonomic nervous system overactivity. It may result from toxic/metabolic conditions or structural brain lesions. (From Adams et al., Principles of Neurology, 6th ed, pp411-2)     "@en ;
+    ns1:title "Delirium"@cs,
+        "Delirium"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002485> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of ectopic pregnancy in which the EMBRYO, MAMMALIAN implants in the ABDOMINAL CAVITY instead of in the ENDOMETRIUM of the UTERUS.     "@en ;
+    ns1:title "Těhotenství abdominální"@cs,
+        "Pregnancy, abdominal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002527> a ns1:DiseaseOrFinding ;
+    ns1:description "A feeling of restlessness associated with increased motor activity. This may occur as a manifestation of nervous system drug toxicity or other conditions.     "@en ;
+    ns1:title "Psychomotorický neklid"@cs,
+        "Psychomotor agitation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002822> a ns1:DiseaseOrFinding ;
+    ns1:description "A prolonged seizure or seizures repeated frequently enough to prevent recovery between episodes occurring over a period of 20-30 minutes. The most common subtype is generalized tonic-clonic status epilepticus, a potentially fatal condition associated with neuronal injury and respiratory and metabolic dysfunction. Nonconvulsive forms include petit mal status and complex partial status, which may manifest as behavioral disturbances. Simple partial status epilepticus consists of persistent motor, sensory, or autonomic seizures that do not impair cognition (see also EPILEPSIA PARTIALIS CONTINUA). Subclinical status epilepticus generally refers to seizures occurring in an unresponsive or comatose individual in the absence of overt signs of seizure activity. (From N Engl J Med 1998 Apr 2;338(14):970-6; Neurologia 1997 Dec;12 Suppl 6:25-30)     "@en ;
+    ns1:title "Status epilepticus"@cs,
+        "Status epilepticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004075> a ns1:DiseaseOrFinding ;
+    ns1:description "Emesis and queasiness occurring after anesthesia.     "@en ;
+    ns1:title "Pooperační nevolnost a zvracení"@cs,
+        "Postoperative nausea and vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008486> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Disorganized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008501> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008821> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Peripheral Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANESIA-10-MG-ML-INJEKCNI-INFUZNI-EMULZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "ANESIA 10 MG/ML INJEKČNÍ/INFUZNÍ EMULZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANESIA-20-MG-ML-INJEKCNI-INFUZNI-EMULZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "ANESIA 20 MG/ML INJEKČNÍ/INFUZNÍ EMULZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-1--FRESENIUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL 1% \"FRESENIUS\""@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-1--MCT-LCT-FRESENIUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL 1% MCT/LCT FRESENIUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-2--MCT-LCT-FRESENIUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL 2% MCT/LCT FRESENIUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-0-5---5MG-ML-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL-LIPURO 0,5% (5MG/ML)"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-1----10MG-ML-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL-LIPURO 1 % (10MG/ML)"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPOFOL-LIPURO-2---20MG-ML-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AX10" ;
+    ns1:title "PROPOFOL-LIPURO 2% (20MG/ML)"@cs .
+
+

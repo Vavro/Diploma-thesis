@@ -1,0 +1,279 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V08> a ns1:ATCConcept ;
+    dcterms:title "Kontrastní látky"@cs,
+        "CONTRAST MEDIA"@en ;
+    skos:notation "V08" .
+
+<http://linked.opendata.cz/resource/ATC/V08C> a ns1:ATCConcept ;
+    dcterms:title "Kontrastní látky pro vyšetření magnetickou rezonancí"@cs,
+        "MAGNETIC RESONANCE IMAGING CONTRAST MEDIA"@en ;
+    skos:notation "V08C" .
+
+<http://linked.opendata.cz/resource/ATC/V08CA> a ns1:ATCConcept ;
+    dcterms:title "Paramagnetické kontrastní látky"@cs,
+        "Paramagnetic contrast media"@en ;
+    skos:notation "V08CA" .
+
+<http://linked.opendata.cz/resource/ATC/V08CA09> a ns1:ATCConcept ;
+    dcterms:title "Gadobutrol"@cs,
+        "Gadobutrol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V",
+        "http://linked.opendata.cz/resource/ATC/V08",
+        "http://linked.opendata.cz/resource/ATC/V08C",
+        "http://linked.opendata.cz/resource/ATC/V08CA" ;
+    skos:notation "V08CA09" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0239381> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Gadobutrol"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003131> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X7.5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X7.5ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003132> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "3026.77001953"^^xsd:float ;
+    ns1:hasPackagingSize "1X15ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2671.45996094"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X15ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003133> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "6191.56005859"^^xsd:float ;
+    ns1:hasPackagingSize "1X30ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "5342.91015625"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X30ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003134> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "9137.62988281"^^xsd:float ;
+    ns1:hasPackagingSize "5X7.5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "6678.64013672"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X7.5ML+STŘ"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003135> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "13801.2304688"^^xsd:float ;
+    ns1:hasPackagingSize "5X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "8904.86035156"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML+STŘ"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003136> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "5X15ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X15ML+STŘ"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003137> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "5X20ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X20ML+STŘ"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003138> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X65ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X65ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151047> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "15ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 15ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151048> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "20ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151049> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Použití Gadovistu je indikováno u dospělých, dospívajících a u dětí od 2 let věku k:
+- zesílení kontrastu při kraniální a spinální magnetické rezonanci (MRI),
+- kontrastnímu snímkování MRI dalších částí těla: jater, ledvin,
+- zesílení kontrastu při angiografii pomocí magnetické rezonance (CE-MRA).
+Gadovist může být také použit k MRI snímkování patologických změn v rámci celého těla.
+V případě, že zlepší vizualizaci abnormálních struktur nebo lézí a pomůže rozlišit zdravou a patologickou tkáň.
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "6191.56005859"^^xsd:float ;
+    ns1:hasPackagingSize "30ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "5342.91015625"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-12-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159731_doc" ;
+    ns1:hasStrength "1MP/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30ML"@cs ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GADOVIST-1-0-MMOL-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V08CA09" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0239381" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003131",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003132",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003133",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003134",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003135",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003136",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003137",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003138",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151047",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151048",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0151049" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "GADOVIST 1,0 MMOL/ML"@cs .
+
+

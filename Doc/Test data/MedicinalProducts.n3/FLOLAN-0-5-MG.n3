@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B01> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01" .
+
+<http://linked.opendata.cz/resource/ATC/B01A> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01A" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC> a ns1:ATCConcept ;
+    dcterms:title "Antiagregancia kromě heparinu"@cs,
+        "Platelet aggregation inhibitors excl. heparin"@en ;
+    skos:notation "B01AC" .
+
+<http://linked.opendata.cz/resource/ATC/B01AC09> a ns1:ATCConcept ;
+    dcterms:title "Epoprostenol"@cs,
+        "Epoprostenol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B01",
+        "http://linked.opendata.cz/resource/ATC/B01A",
+        "http://linked.opendata.cz/resource/ATC/B01AC" ;
+    skos:notation "B01AC09" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017819> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Epoprostenol sodium"@cs,
+        "Epoprostenol sodium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs or agents which antagonize or impair any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system.     "@en ;
+    ns1:title "Inhibitory agregace trombocytů"@cs,
+        "Platelet aggregation inhibitors"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0020910> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC09" ;
+    ns1:hasIndication """Flolan je indikován k léčbě:
+Plicní arteriální hypertenze
+Flolan je indikován k léčbě pacientů s plicní arteriální hypertenzí (PAH) (idiopatická nebo dědičná PAH a PAH spojená s onemocněním pojivových tkání) u pacientů se symptomy III-IV funkční třídy podle WHO ke zlepšení zátěžové kapacity (viz bod 5.1).  
+Hemodialýza
+Přípravek Flolan je indikován k užití při hemodialýze v akutních případech, kdy podání heparinu představuje vysoké riziko krvácení nebo jeho exacerbace, nebo pokud je podání heparinu kontraindikováno z jiných důvodů (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasMaximalPrice "2839.65991211"^^xsd:float ;
+    ns1:hasPackagingSize "1+1X50ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2154.79003906"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161943_doc" ;
+    ns1:hasStrength "10RG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PSO LQF 1X0.5MG"@cs ;
+    ns1:title "FLOLAN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0020911> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC09" ;
+    ns1:hasIndication """Flolan je indikován k léčbě:
+Plicní arteriální hypertenze
+Flolan je indikován k léčbě pacientů s plicní arteriální hypertenzí (PAH) (idiopatická nebo dědičná PAH a PAH spojená s onemocněním pojivových tkání) u pacientů se symptomy III-IV funkční třídy podle WHO ke zlepšení zátěžové kapacity (viz bod 5.1).  
+Hemodialýza
+Přípravek Flolan je indikován k užití při hemodialýze v akutních případech, kdy podání heparinu představuje vysoké riziko krvácení nebo jeho exacerbace, nebo pokud je podání heparinu kontraindikováno z jiných důvodů (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasMaximalPrice "3423.85009766"^^xsd:float ;
+    ns1:hasPackagingSize "1+2X50ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2154.79003906"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161943_doc" ;
+    ns1:hasStrength "5RG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PSO LQF 1X0.5MG"@cs ;
+    ns1:title "FLOLAN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLOLAN-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC09" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017819" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0020910",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0020911" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "FLOLAN 0,5 MG"@cs .
+
+

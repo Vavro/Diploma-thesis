@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L04> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04" .
+
+<http://linked.opendata.cz/resource/ATC/L04A> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04A" .
+
+<http://linked.opendata.cz/resource/ATC/L04AA> a ns1:ATCConcept ;
+    dcterms:title "Selektivní imunosupresiva"@cs,
+        "Selective immunosuppressants "@en ;
+    skos:notation "L04AA" .
+
+<http://linked.opendata.cz/resource/ATC/L04AA18> a ns1:ATCConcept ;
+    dcterms:title "Everolimus"@cs,
+        "EVEROLIMUS"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L04",
+        "http://linked.opendata.cz/resource/ATC/L04A",
+        "http://linked.opendata.cz/resource/ATC/L04AA" ;
+    skos:notation "L04AA18" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0278859> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Everolimus"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017003> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AA18" ;
+    ns1:hasIndication """Transplantace ledvin a srdce
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u dospělých pacientů s malým nebo středním imunologickým rizikem přijímajících alogenní transplantát ledvin nebo srdce.
+Při transplantaci ledvin a srdce by měl být Certican  užíván v kombinaci s cyklosporinem pro mikroemulzi a kortikosteroidy.
+Transplantace jater
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u pacientů přijímajících transplantát jater. Při transplantaci jater by měl být Certican užíván v kombinaci s takrolimem a kortikosteroidy.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155992_doc" ;
+    ns1:hasStrength "0.25 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X0.25MG"@cs ;
+    ns1:title "CERTICAN 0,25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017004> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AA18" ;
+    ns1:hasIndication """Transplantace ledvin a srdce
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u dospělých pacientů s malým nebo středním imunologickým rizikem přijímajících alogenní transplantát ledvin nebo srdce.
+Při transplantaci ledvin a srdce by měl být Certican  užíván v kombinaci s cyklosporinem pro mikroemulzi a kortikosteroidy.
+Transplantace jater
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u pacientů přijímajících transplantát jater. Při transplantaci jater by měl být Certican užíván v kombinaci s takrolimem a kortikosteroidy.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasMaximalPrice "3266.42993164"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "5864.68017578"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155992_doc" ;
+    ns1:hasStrength "0.25 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 60X0.25MG"@cs ;
+    ns1:title "CERTICAN 0,25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017005> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AA18" ;
+    ns1:hasIndication """Transplantace ledvin a srdce
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u dospělých pacientů s malým nebo středním imunologickým rizikem přijímajících alogenní transplantát ledvin nebo srdce.
+Při transplantaci ledvin a srdce by měl být Certican  užíván v kombinaci s cyklosporinem pro mikroemulzi a kortikosteroidy.
+Transplantace jater
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u pacientů přijímajících transplantát jater. Při transplantaci jater by měl být Certican užíván v kombinaci s takrolimem a kortikosteroidy.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155992_doc" ;
+    ns1:hasStrength "0.25 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X0.25MG"@cs ;
+    ns1:title "CERTICAN 0,25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017006> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AA18" ;
+    ns1:hasIndication """Transplantace ledvin a srdce
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u dospělých pacientů s malým nebo středním imunologickým rizikem přijímajících alogenní transplantát ledvin nebo srdce.
+Při transplantaci ledvin a srdce by měl být Certican  užíván v kombinaci s cyklosporinem pro mikroemulzi a kortikosteroidy.
+Transplantace jater
+Certican je indikován k profylaxi odmítnutí transplantovaného orgánu u pacientů přijímajících transplantát jater. Při transplantaci jater by měl být Certican užíván v kombinaci s takrolimem a kortikosteroidy.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "250"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155992_doc" ;
+    ns1:hasStrength "0.25 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 250X0.25MG"@cs ;
+    ns1:title "CERTICAN 0,25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CERTICAN-0-25-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AA18" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0278859" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017003",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017004",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017005",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017006" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "CERTICAN 0,25 MG TABLETY"@cs .
+
+

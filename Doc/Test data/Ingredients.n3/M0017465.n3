@@ -1,0 +1,228 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H02AB07> a ns1:ATCConcept ;
+    skos:notation "H02AB07" ;
+    skos:prefLabel "Prednison"@cs,
+        "Prednisone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017465> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000749",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075" ;
+    ns1:description "A synthetic anti-inflammatory glucocorticoid derived from CORTISONE. It is biologically inert and converted to PREDNISOLONE in the liver.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PREDNISON-20-LECIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PREDNISON-5-LECIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RECTODELT-100-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002162" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000326",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000514",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000808",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001181",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001320",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001384",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001459",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001577",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001786",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002128",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002602",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002632",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002761" ;
+    ns1:title "Prednison"@cs,
+        "Prednisone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000326> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions in which the production of adrenal CORTICOSTEROIDS falls below the requirement of the body. Adrenal insufficiency can be caused by defects in the ADRENAL GLANDS, the PITUITARY GLAND, or the HYPOTHALAMUS.     "@en ;
+    ns1:title "Insuficience nadledvin"@cs,
+        "Adrenal insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000514> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders that are characterized by the production of antibodies that react with host tissues or immune effector cells that are autoreactive to endogenous peptides.     "@en ;
+    ns1:title "Autoimunitní nemoci"@cs,
+        "Autoimmune diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000749> a ns1:DiseaseOrFinding ;
+    ns1:description "A highly contagious infectious disease caused by the varicella-zoster virus (HERPESVIRUS 3, HUMAN). It usually affects children, is spread by direct contact or respiratory route via droplet nuclei, and is characterized by the appearance on the skin and mucous membranes of successive crops of typical pruritic vesicular lesions that are easily broken and become scabbed. Chickenpox is relatively benign in children, but may be complicated by pneumonia and encephalitis in adults. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Varicela"@cs,
+        "Chickenpox"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000808> a ns1:DiseaseOrFinding ;
+    ns1:description "Historically, a heterogeneous group of acute and chronic diseases, including rheumatoid arthritis, systemic lupus erythematosus, progressive systemic sclerosis, dermatomyositis, etc. This classification was based on the notion that \"collagen\" was equivalent to \"connective tissue\", but with the present recognition of the different types of collagen and the aggregates derived from them as distinct entities, the term \"collagen diseases\" now pertains exclusively to those inherited conditions in which the primary defect is at the gene level and affects collagen biosynthesis, post-translational modification, or extracellular processing directly. (From Cecil Textbook of Medicine, 19th ed, p1494)     "@en ;
+    ns1:title "Kolagenózy"@cs,
+        "Collagen diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001181> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases affecting the eye.     "@en ;
+    ns1:title "Oční nemoci"@cs,
+        "Eye diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001320> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální nemoci"@cs,
+        "Gastrointestinal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> a ns1:DiseaseOrFinding ;
+    ns1:description "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.     "@en ;
+    ns1:title "Nemoc štěpu proti hostiteli"@cs,
+        "Graft vs host disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001459> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of the blood and blood forming tissues.     "@en ;
+    ns1:title "Krevní nemoci"@cs,
+        "Hematologic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001577> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high level of calcium in the blood.     "@en ;
+    ns1:title "Hyperkalcémie"@cs,
+        "Hypercalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001786> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the LARYNGEAL MUCOSA, including the VOCAL CORDS. Laryngitis is characterized by irritation, edema, and reduced pliability of the mucosa leading to VOICE DISORDERS such as APHONIA and HOARSENESS.     "@en ;
+    ns1:title "Laryngitida"@cs,
+        "Laryngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002128> a ns1:DiseaseOrFinding ;
+    ns1:description "New abnormal growth of tissue. Malignant neoplasms show a greater degree of anaplasia and have the properties of invasion and metastasis, compared to benign neoplasms.     "@en ;
+    ns1:title "Nádory"@cs,
+        "Neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002602> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci dýchacího systému"@cs,
+        "Respiratory tract diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002632> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of connective tissue, especially the joints and related structures, characterized by inflammation, degeneration, or metabolic derangement.     "@en ;
+    ns1:title "Revmatické nemoci"@cs,
+        "Rheumatic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002761> a ns1:DiseaseOrFinding ;
+    ns1:title "Kožní nemoci"@cs,
+        "Skin diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134> a ns1:MechanismOfAction ;
+    ns1:title "Lipoxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327> a ns1:PhysiologicEffect ;
+    ns1:title "Carbohydrate Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lysosomal Function"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739> a ns1:PhysiologicEffect ;
+    ns1:title "Lipid Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Polymorphonuclear Leukocyte Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Fibroblast Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Capillary Permeability"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PREDNISON-20-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB07" ;
+    ns1:title "PREDNISON 20 LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PREDNISON-5-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB07" ;
+    ns1:title "PREDNISON 5 LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RECTODELT-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB07" ;
+    ns1:title "RECTODELT 100 MG"@cs .
+
+

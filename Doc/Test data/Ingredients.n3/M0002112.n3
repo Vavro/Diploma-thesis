@@ -1,0 +1,119 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06AX> a ns1:ATCConcept ;
+    skos:notation "D06AX" ;
+    skos:prefLabel "Jiná antibiotika pro lokální aplikaci"@cs,
+        "Other antibiotics for topical use"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002112> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001748" ;
+    ns1:description "A complex of cyclic peptide antibiotics produced by the Tracy-I strain of Bacillus subtilis. The commercial preparation is a mixture of at least nine bacitracins with bacitracin A as the major constituent. It is used topically to treat open infections such as infected eczema and infected dermal ulcers. (From Goodman and Gilman, The Pharmacological Basis of Therapeutics, 8th ed, p1140)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009954" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PAMYCON-NA-PRIPRAVU-KAPEK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PAMYCON-NA-PRIPRAVU-STERILNEHO-ROZTOKU" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000836",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001110",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002819",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003168",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003324",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003823" ;
+    ns1:title "Bacitracin"@cs,
+        "Bacitracin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000836> a ns1:DiseaseOrFinding ;
+    ns1:description "Purulent infections of the conjunctiva by several species of gram-negative, gram-positive, or acid-fast organisms. Some of the more commonly found genera causing conjunctival infections are Haemophilus, Streptococcus, Neisseria, and Chlamydia.     "@en ;
+    ns1:title "Konjunktivitida bakteriální"@cs,
+        "Conjunctivitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001110> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute inflammation of the INTESTINAL MUCOSA that is characterized by the presence of pseudomembranes or plaques in the SMALL INTESTINE (pseudomembranous enteritis) and the LARGE INTESTINE (pseudomembranous colitis). It is commonly associated with antibiotic therapy and CLOSTRIDIUM DIFFICILE colonization.     "@en ;
+    ns1:title "Pseudomembranózní enterokolitida"@cs,
+        "Enterocolitis, pseudomembranous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002819> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections to the skin caused by bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce kůže"@cs,
+        "Staphylococcal skin infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003168> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the site of trauma by pathogenic microorganisms.     "@en ;
+    ns1:title "Rány - infekce"@cs,
+        "Wound infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003823> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of non-skeletal tissue, i.e., exclusive of bone, ligaments, cartilage, and fibrous tissue. The concept is usually referred to as skin and soft tissue infections and usually subcutaneous and muscle tissue are involved. The predisposing factors in anaerobic infections are trauma, ischemia, and surgery. The organisms often derive from the fecal or oral flora, particularly in wounds associated with intestinal surgery, decubitus ulcer, and human bites. (From Cecil Textbook of Medicine, 19th ed, p1688)     "@en ;
+    ns1:title "Měkké tkáně - infekce"@cs,
+        "Soft tissue infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009954> a ns1:MechanismOfAction ;
+    ns1:title "Cell Membrane Fusion Complex Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PAMYCON-NA-PRIPRAVU-KAPEK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06AX" ;
+    ns1:title "PAMYCON NA PŘÍPRAVU KAPEK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PAMYCON-NA-PRIPRAVU-STERILNEHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06AX" ;
+    ns1:title "PAMYCON NA PRÍPRAVU STERILNÉHO ROZTOKU"@cs .
+
+

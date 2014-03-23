@@ -1,0 +1,106 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G03BA03> a ns1:ATCConcept ;
+    skos:notation "G03BA03" ;
+    skos:prefLabel "Testosteron"@cs,
+        "Testosterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021196> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002500",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003834",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A potent androgenic steroid and major product secreted by the LEYDIG CELLS of the TESTIS. Its production is stimulated by LUTEINIZING HORMONE from the PITUITARY GLAND. In turn, testosterone exerts feedback control of the pituitary LH and FSH secretion. Depending on the tissues, testosterone can be further converted to DIHYDROTESTOSTERONE or ESTRADIOL.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000146" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROGEL-25-MG--GEL-V-SACKU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROGEL-50-MG--GEL-V-SACKU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TESTIM-50-MG-GEL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001106" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009864" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001636",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002534" ;
+    ns1:title "Testosteron"@cs,
+        "Testosterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001106> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ANDROGEN RECEPTORS in target tissues to bring about the effects similar to those of TESTOSTERONE. Depending on the target tissues, androgenic effects can be on SEX DIFFERENTIATION; male reproductive organs, SPERMATOGENESIS; secondary male SEX CHARACTERISTICS; LIBIDO; development of muscle mass, strength, and power.     "@en ;
+    ns1:title "Androgeny"@cs,
+        "Androgens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001636> a ns1:DiseaseOrFinding ;
+    ns1:description "Condition resulting from deficient gonadal functions, such as GAMETOGENESIS and the production of GONADAL STEROID HORMONES. It is characterized by delay in GROWTH, germ cell maturation, and development of secondary sex characteristics. Hypogonadism can be due to a deficiency of GONADOTROPINS (hypogonadotropic hypogonadism) or due to primary gonadal failure (hypergonadotropic hypogonadism).     "@en ;
+    ns1:title "Hypogonadismus"@cs,
+        "Hypogonadism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002499> a ns1:DiseaseOrFinding ;
+    ns1:title "Prostatic hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002534> a ns1:DiseaseOrFinding ;
+    ns1:description "The lack of development of SEXUAL MATURATION in boys and girls at a chronological age that is 2.5 standard deviations above the mean age at onset of PUBERTY in a population. Delayed puberty can be classified by defects in the hypothalamic LHRH pulse generator, the PITUITARY GLAND, or the GONADS. These patients will undergo spontaneous but delayed puberty whereas patients with SEXUAL INFANTILISM will not.     "@en ;
+    ns1:title "Puberta opožděná"@cs,
+        "Puberty, delayed"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003834> a ns1:DiseaseOrFinding ;
+    ns1:description "Any neoplasms of the male breast. These occur infrequently in males in developed countries, the incidence being about 1% of that in females.     "@en ;
+    ns1:title "Prsy - nádory u mužů"@cs,
+        "Breast neoplasms, male"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000146> a ns1:MechanismOfAction ;
+    ns1:title "Androgen Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009864> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulate Penile Development"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROGEL-25-MG--GEL-V-SACKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:title "ANDROGEL 25 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROGEL-50-MG--GEL-V-SACKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TESTIM-50-MG-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:title "TESTIM 50 MG GEL"@cs .
+
+

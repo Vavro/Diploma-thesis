@@ -1,0 +1,246 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii onemocnění spojených s obstrukcí dýchacích cest"@cs,
+        "DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03" .
+
+<http://linked.opendata.cz/resource/ATC/R03D> a ns1:ATCConcept ;
+    dcterms:title "Jiná systémová léčiva onemocnění spojen. s obstrukcí dých. cest"@cs,
+        "OTHER SYSTEMIC DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03D" .
+
+<http://linked.opendata.cz/resource/ATC/R03DC> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté leukotrienových receptorů"@cs,
+        "Leukotriene receptor antagonists"@en ;
+    skos:notation "R03DC" .
+
+<http://linked.opendata.cz/resource/ATC/R03DC03> a ns1:ATCConcept ;
+    dcterms:title "Montelukast"@cs,
+        "Montelukast"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R03",
+        "http://linked.opendata.cz/resource/ATC/R03D",
+        "http://linked.opendata.cz/resource/ATC/R03DC" ;
+    skos:notation "R03DC03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0326949> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Montelukast sodium"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118501> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 7X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118502> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 14X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118503> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "15"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 15X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118504> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 20X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118505> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "533.260009766"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "533.260009766"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-05-15"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 28X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118506> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 30X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118507> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 50X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118508> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 56X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118509> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 60X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118510> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 90X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118511> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "1800.04003906"^^xsd:float ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1866.40002441"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-05-15"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 98X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118512> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasIndication """Montelukast je určen jako přídavná terapie k léčbě pacientů ve věku 6-14 let s lehkým až středně těžkým persistujícím astmatem, kteří jsou nedostatečně kontrolováni inhalačními kortikosteroidy a u nichž krátkodobě působící β-agonisté podaní „podle potřeby“ neposkytují dostatečnou klinickou kontrolu astmatu.
+Montelukast může být též alternativou k léčbě nízko dávkovanými inhalačními kortikosteroidy u pacientů s lehkým persistujícím astmatem, kteří nemají v nedávné anamnéze těžké astmatické záchvaty vyžadující perorální kortikosteroidy, a kteří nejsou schopni užívat inhalační kortikosteroidy (viz bod 4.2).
+Montelukast je rovněž indikován k profylaxi astmatu u pacientů ve věku 6-14 let, pokud je rozhodující složkou bronchokonstrikce indukovaná tělesnou námahou.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC141838_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 100X5MG"@cs ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MONTELUKAST-TEVA-5-MG--ZVYKACI-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DC03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0326949" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118501",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118502",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118503",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118504",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118505",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118506",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118507",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118508",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118509",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118510",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118511",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118512" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "MONTELUKAST TEVA 5 MG, ŽVÝKACÍ TABLETA"@cs .
+
+

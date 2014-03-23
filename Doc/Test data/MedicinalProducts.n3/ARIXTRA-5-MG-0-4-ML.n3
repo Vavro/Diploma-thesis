@@ -1,0 +1,125 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B01> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01" .
+
+<http://linked.opendata.cz/resource/ATC/B01A> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01A" .
+
+<http://linked.opendata.cz/resource/ATC/B01AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antikoagulancia, antitrombotika"@cs,
+        "Other antithrombotic agents"@en ;
+    skos:notation "B01AX" .
+
+<http://linked.opendata.cz/resource/ATC/B01AX05> a ns1:ATCConcept ;
+    dcterms:title "Fondaparinux"@cs,
+        "Fondaparinux"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B01",
+        "http://linked.opendata.cz/resource/ATC/B01A",
+        "http://linked.opendata.cz/resource/ATC/B01AX" ;
+    skos:notation "B01AX05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0407592> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Fondaparinux sodium"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028351> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "2X0.4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 2X0.4ML"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028352> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "7X0.4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 7X0.4ML"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028353> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "10X0.4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.4ML"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029948> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "20X0.4ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X0.4ML"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500235> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "2X0.4ML SAFESYS"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 2X0.4ML SAFESYS"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500236> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "10X0.4ML SAFESYS"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.4ML SAFESYS"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500237> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "20X0.4ML SAFESYS"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasStrength "12.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X0.4ML SAFESYS"@cs ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARIXTRA-5-MG-0-4-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AX05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0407592" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028351",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028352",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028353",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029948",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500235",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500236",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500237" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "ARIXTRA 5 MG/0,4 ML"@cs .
+
+

@@ -1,0 +1,157 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A11AA03> a ns1:ATCConcept ;
+    skos:notation "A11AA03" ;
+    skos:prefLabel "Multivitaminy a jiné minerály, včetně kombinací"@cs,
+        "Multivitamins and other minerals, incl. combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AD03> a ns1:ATCConcept ;
+    skos:notation "B03AD03" ;
+    skos:prefLabel "Síran železnatý a kyselina listová"@cs,
+        "Ferrous sulfate"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AD04> a ns1:ATCConcept ;
+    skos:notation "B03AD04" ;
+    skos:prefLabel "Dextriferron a kyselina listová"@cs,
+        "Ferric oxid polymaltose complexes"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AE01> a ns1:ATCConcept ;
+    skos:notation "B03AE01" ;
+    skos:prefLabel "Železo v kombinaci s kyanokobalaminem a kyselinou listovou"@cs,
+        "Iron, vitamin B12 and folic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AE10> a ns1:ATCConcept ;
+    skos:notation "B03AE10" ;
+    skos:prefLabel "Různé jiné kombinace železa"@cs,
+        "Various combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03BB01> a ns1:ATCConcept ;
+    skos:notation "B03BB01" ;
+    skos:prefLabel "Kyselina listová"@cs,
+        "Folic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05XC> a ns1:ATCConcept ;
+    skos:notation "B05XC" ;
+    skos:prefLabel "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008658> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000385",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000396",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003859" ;
+    ns1:description "A member of the vitamin B family that stimulates the hematopoietic system. It is present in the liver and kidney and is found in mushrooms, spinach, yeast, green leaves, and grasses (POACEAE). Folic acid is used in the treatment and prevention of folate deficiencies and megaloblastic anemia.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ACIDUM-FOLICUM-LECIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AKTIFERRIN-COMPOSITUM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CERNEVIT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FEROGLOBIN-B-12",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FERRO-FOLGAMMA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MALTOFER-FOL-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOLUVIT-N",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON-FOL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001267",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002161" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000393",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001267" ;
+    ns1:title "Kyselina listová"@cs,
+        "Folic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039> a ns1:PharmacologicalAction ;
+    ns1:description "Agents which improve the quality of the blood, increasing the hemoglobin level and the number of erythrocytes. They are used in the treatment of anemias.     "@en ;
+    ns1:title "Hematinika"@cs,
+        "Hematinics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000385> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of anemia in which the bone marrow fails to produce adequate numbers of peripheral blood elements.     "@en ;
+    ns1:title "Aplastická anemie"@cs,
+        "Anemia, aplastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000393> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by the presence of ANEMIA, abnormally large red blood cells (megalocytes or macrocytes), and MEGALOBLASTS.     "@en ;
+    ns1:title "Megaloblastová anémie"@cs,
+        "Anemia, megaloblastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000396> a ns1:DiseaseOrFinding ;
+    ns1:description "A megaloblastic anemia occurring in children but more commonly in later life, characterized by histamine-fast achlorhydria, in which the laboratory and clinical manifestations are based on malabsorption of vitamin B 12 due to a failure of the gastric mucosa to secrete adequate and potent intrinsic factor. (Dorland, 27th ed)     "@en ;
+    ns1:title "Perniciózní anémie"@cs,
+        "Anemia, pernicious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001267> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of FOLIC ACID in the diet. Many plant and animal tissues contain folic acid, abundant in green leafy vegetables, yeast, liver, and mushrooms but destroyed by long-term cooking. Alcohol interferes with its intermediate metabolism and absorption. Folic acid deficiency may develop in long-term anticonvulsant therapy or with use of oral contraceptives. This deficiency causes anemia, macrocytic anemia, and megaloblastic anemia. It is indistinguishable from vitamin B 12 deficiency in peripheral blood and bone marrow findings, but the neurologic lesions seen in B 12 deficiency do not occur. (Merck Manual, 16th ed)     "@en ;
+    ns1:title "Nedostatek kyseliny listové"@cs,
+        "Folic acid deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002161> a ns1:DiseaseOrFinding ;
+    ns1:description "Congenital malformations of the central nervous system and adjacent structures related to defective neural tube closure during the first trimester of pregnancy generally occurring between days 18-29 of gestation. Ectodermal and mesodermal malformations (mainly involving the skull and vertebrae) may occur as a result of defects of neural tube closure. (From Joynt, Clinical Neurology, 1992, Ch55, pp31-41)     "@en ;
+    ns1:title "Neurální trubice - defekty"@cs,
+        "Neural tube defects"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003859> a ns1:DiseaseOrFinding ;
+    ns1:description "Anemia characterized by decreased or absent iron stores, low serum iron concentration, low transferrin saturation, and low hemoglobin concentration or hematocrit value. The erythrocytes are hypochromic and microcytic and the iron binding capacity is increased.     "@en ;
+    ns1:title "Anémie z nedostatku železa"@cs,
+        "Anemia, iron-deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACIDUM-FOLICUM-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03BB01" ;
+    ns1:title "ACIDUM FOLICUM LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKTIFERRIN-COMPOSITUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03AE10" ;
+    ns1:title "AKTIFERRIN COMPOSITUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CERNEVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05XC" ;
+    ns1:title "CERNEVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11AA03" ;
+    ns1:title "DUOVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEROGLOBIN-B-12> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03AE10" ;
+    ns1:title "FEROGLOBIN B 12"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FERRO-FOLGAMMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03AE01" ;
+    ns1:title "FERRO-FOLGAMMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MALTOFER-FOL-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03AD04" ;
+    ns1:title "MALTOFER FOL TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOLUVIT-N> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05XC" ;
+    ns1:title "SOLUVIT N"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON-FOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03AD03" ;
+    ns1:title "TARDYFERON-FOL"@cs .
+
+

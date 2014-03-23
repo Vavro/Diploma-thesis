@@ -1,0 +1,153 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidiabetika, kromě inzulinů"@cs,
+        "Other blood glucose lowering drugs, excl. insulins"@en ;
+    skos:notation "A10BX" .
+
+<http://linked.opendata.cz/resource/ATC/A10BX02> a ns1:ATCConcept ;
+    dcterms:title "Repaglinid"@cs,
+        "Repaglinide"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A10",
+        "http://linked.opendata.cz/resource/ATC/A10B",
+        "http://linked.opendata.cz/resource/ATC/A10BX" ;
+    skos:notation "A10BX02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0196126> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000952",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003499" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Repaglinide"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000952> a ns1:DiseaseOrFinding ;
+    ns1:title "Diabetes mellitus 1. typu"@cs,
+        "Diabetes mellitus, type 1"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> a ns1:DiseaseOrFinding ;
+    ns1:title "Diabetická ketoacidóza"@cs,
+        "Diabetic ketoacidosis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162000> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165001> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165002> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "120"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 120X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165003> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "270"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 270X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165004> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165005> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasIndication """Repaglinid je indikován u pacientů s diabetem 2. typu (non-inzulin-dependentní diabetes mellitus: NIDDM), u nichž dieta, redukce hmotnosti a cvičení nestačí k úpravě hladin krevního cukru. Repaglinid je indikován u pacientů s diabetem 2. typu také v kombinaci s metforminem, pokud samotný metformin hladinu krevního cukru dostatečně neupravil. 
+Léčbu zahajujeme jako doplněk diety a cvičení, aby bylo dosaženo snížení hladin krevního cukru v závislosti na jídle. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "270"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC132178_doc" ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 270X0.5MG"@cs ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADEREGL-0-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0196126" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162000",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165001",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165002",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165003",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165004",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165005" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "ADEREGL 0,5 MG TABLETY"@cs .
+
+

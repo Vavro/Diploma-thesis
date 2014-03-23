@@ -1,0 +1,70 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06AX09> a ns1:ATCConcept ;
+    skos:notation "D06AX09" ;
+    skos:prefLabel "Mupirocin"@cs,
+        "Mupirocin"@en .
+
+<http://linked.opendata.cz/resource/ATC/R01AX06> a ns1:ATCConcept ;
+    skos:notation "R01AX06" ;
+    skos:prefLabel "Mupirocin"@cs,
+        "Mupirocin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025454> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A topically used antibiotic from a strain of Pseudomonas fluorescens. It has shown excellent activity against gram-positive staphylococci and streptococci. The antibiotic is used primarily for the treatment of primary and secondary skin disorders, nasal infections, and wound healing.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BACTROBAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BACTROBAN-NASAL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001671" ;
+    ns1:title "Mupirocin"@cs,
+        "Mupirocin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001671> a ns1:DiseaseOrFinding ;
+    ns1:description "A common superficial bacterial infection caused by STAPHYLOCOCCUS AUREUS or group A beta-hemolytic streptococci. Characteristics include pustular lesions that rupture and discharge a thin, amber-colored fluid that dries and forms a crust. This condition is commonly located on the face, especially about the mouth and nose.     "@en ;
+    ns1:title "Impetigo"@cs,
+        "Impetigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Transcription to RNA"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BACTROBAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06AX09" ;
+    ns1:title "BACTROBAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BACTROBAN-NASAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AX06" ;
+    ns1:title "BACTROBAN NASAL"@cs .
+
+

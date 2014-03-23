@@ -1,0 +1,126 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N07> a ns1:ATCConcept ;
+    dcterms:title "Jiná léčiva nervového systému"@cs,
+        "OTHER NERVOUS SYSTEM DRUGS"@en ;
+    skos:notation "N07" .
+
+<http://linked.opendata.cz/resource/ATC/N07B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislostí"@cs,
+        "DRUGS USED IN ADDICTIVE DISORDERS"@en ;
+    skos:notation "N07B" .
+
+<http://linked.opendata.cz/resource/ATC/N07BA> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislosti na nikotinu"@cs,
+        "Drugs used in nicotine dependence"@en ;
+    skos:notation "N07BA" .
+
+<http://linked.opendata.cz/resource/ATC/N07BA01> a ns1:ATCConcept ;
+    dcterms:title "Nikotin"@cs,
+        "Nicotine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N07",
+        "http://linked.opendata.cz/resource/ATC/N07B",
+        "http://linked.opendata.cz/resource/ATC/N07BA" ;
+    skos:notation "N07BA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014836> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000406",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000469",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002905",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010308" ;
+    ns1:description "Nicotine is highly toxic alkaloid. It is the prototypical agonist at nicotinic cholinergic receptors where it dramatically stimulates neurons and ultimately blocks synaptic transmission. Nicotine is also important medically because of its presence in tobacco smoke.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008986",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028051" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Nikotin"@cs,
+        "Nicotine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008986> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that mimic neural transmission by stimulation of the nicotinic receptors on postganglionic autonomic neurons. Drugs that indirectly augment ganglionic transmission by increasing the release or slowing the breakdown of acetylcholine or by non-nicotinic effects on postganglionic neurons are not included here nor are the nonspecific cholinergic agonists.     "@en ;
+    ns1:title "Gangliová stimulancia"@cs,
+        "Ganglionic stimulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028051> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and activate nicotinic cholinergic receptors (RECEPTORS, NICOTINIC). Nicotinic agonists act at postganglionic nicotinic receptors, at neuroeffector junctions in the peripheral nervous system, and at nicotinic receptors in the central nervous system. Agents that function as neuromuscular depolarizing blocking agents are included here because they activate nicotinic receptors, although they are used clinically to block nicotinic transmission.     "@en ;
+    ns1:title "Receptory nikotinové - agonisté"@cs,
+        "Nicotinic agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000469> a ns1:DiseaseOrFinding ;
+    ns1:title "Arytmie srdeční"@cs,
+        "Arrhythmias, cardiac"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002905> a ns1:DiseaseOrFinding ;
+    ns1:title "Temporomandibulární kloub - nemoci"@cs,
+        "Temporomandibular joint disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010308> a ns1:DiseaseOrFinding ;
+    ns1:title "Current non-smoker"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119096> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:hasIndication """Pastilky NiQuitin Mini jsou indikované k léčení závislosti na kouření úlevou od abstinenčních příznaků a potlačení chuti na kouření po vysazení nikotinu. Cílem léčby je úplné skončení kouření.
+NiQuitin Mini by měl být přednostně používán jako součást behaviorálního programu na odvykání kouření. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "3X20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147259_doc" ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM PAS CMP 60X1.5MG"@cs ;
+    ns1:title "NIQUITIN MINI 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119097> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:hasIndication """Pastilky NiQuitin Mini jsou indikované k léčení závislosti na kouření úlevou od abstinenčních příznaků a potlačení chuti na kouření po vysazení nikotinu. Cílem léčby je úplné skončení kouření.
+NiQuitin Mini by měl být přednostně používán jako součást behaviorálního programu na odvykání kouření. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147259_doc" ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM PAS CMP 20X1.5MG"@cs ;
+    ns1:title "NIQUITIN MINI 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINI-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014836" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119096",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119097" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "NIQUITIN MINI 1,5 MG"@cs .
+
+

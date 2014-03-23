@@ -1,0 +1,256 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "OTHER ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01X" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA> a ns1:ATCConcept ;
+    dcterms:title "Platinová cytostatika"@cs,
+        "Platinum compounds"@en ;
+    skos:notation "L01XA" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA03> a ns1:ATCConcept ;
+    dcterms:title "Oxaliplatin"@cs,
+        "Oxaliplatin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01",
+        "http://linked.opendata.cz/resource/ATC/L01X",
+        "http://linked.opendata.cz/resource/ATC/L01XA" ;
+    skos:notation "L01XA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0095550> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Oxaliplatin"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144406> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "7548.33007812"^^xsd:float ;
+    ns1:hasPackagingSize "1X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "6728.54003906"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-12-10"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 1X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144407> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "3809.7199707"^^xsd:float ;
+    ns1:hasPackagingSize "1X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "3364.27001953"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-12-10"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 1X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144408> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "2X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 2X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144409> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "2X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 2X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144410> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "3X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 3X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144411> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "3X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 3X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144412> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "5X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 5X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144413> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "5X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 5X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144414> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 10X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144415> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 10X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144416> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50X100MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 50X100MG/20ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144417> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasIndication """Oxaliplatina je v kombinaci s 5-fluorouracilem a kyselinou folinovou indikována k: 
+adjuvantní léčbě karcinomu tlustého střeva stupně III (Duke C) po kompletní resekci primárního tumoru; 
+k léčbě metastazujícího karcinomu tlustého střeva. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50X50MG"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC129194_doc" ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 50X50MG/10ML"@cs ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXALIPLATINA-MYLAN-5-MG-ML--PRASEK-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0095550" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144406",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144407",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144408",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144409",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144410",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144411",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144412",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144413",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144414",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144415",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144416",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0144417" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "OXALIPLATINA MYLAN 5 MG/ML, PRÁŠEK PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+

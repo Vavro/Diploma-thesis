@@ -1,0 +1,152 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A10A> a ns1:ATCConcept ;
+    skos:notation "A10A" ;
+    skos:prefLabel "Inzuliny a analogy"@cs,
+        "INSULINS AND ANALOGUES"@en .
+
+<http://linked.opendata.cz/resource/ATC/A10AB05> a ns1:ATCConcept ;
+    skos:notation "A10AB05" ;
+    skos:prefLabel "Inzulin aspart"@cs,
+        "Insulin aspart"@en .
+
+<http://linked.opendata.cz/resource/ATC/A10AD05> a ns1:ATCConcept ;
+    skos:notation "A10AD05" ;
+    skos:prefLabel "Inzulin aspart"@cs,
+        "Insulin aspart"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0556908> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Insulin that has been modified to contain an ASPARTIC ACID instead of a PROLINE at position 38 of the B-chain.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-30-FLEXPEN-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-30-PENFILL-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-50-FLEXPEN-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-50-PENFILL-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-70-FLEXPEN-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-70-PENFILL-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-FLEXPEN-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-FLEXTOUCH-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-INNOLET-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-NOVOLET-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-PENFILL-100-U-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RYZODEG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008651",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009344",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009379",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000952",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000954",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001586" ;
+    ns1:title "Inzulin aspart"@cs,
+        "Insulin aspart"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000952> a ns1:DiseaseOrFinding ;
+    ns1:description "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.     "@en ;
+    ns1:title "Diabetes mellitus 1. typu"@cs,
+        "Diabetes mellitus, type 1"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> a ns1:DiseaseOrFinding ;
+    ns1:description "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.     "@en ;
+    ns1:title "Diabetes mellitus 2. typu"@cs,
+        "Diabetes mellitus, type 2"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001586> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high BLOOD GLUCOSE level.     "@en ;
+    ns1:title "Hyperglykemie"@cs,
+        "Hyperglycemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> a ns1:MechanismOfAction ;
+    ns1:title "Insulin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008651> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glycogenolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lipolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glucose Transport into Cells"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009344> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glycogenesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009379> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Lipogenesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-30-FLEXPEN-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 30 FLEXPEN 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-30-PENFILL-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 30 PENFILL 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-50-FLEXPEN-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 50 FLEXPEN 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-50-PENFILL-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 50 PENFILL 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-70-FLEXPEN-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 70 FLEXPEN 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVOMIX-70-PENFILL-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AD05" ;
+    ns1:title "NOVOMIX 70 PENFILL 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-FLEXPEN-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID FLEXPEN 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-FLEXTOUCH-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID FLEXTOUCH 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-INNOLET-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID INNOLET 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-NOVOLET-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID NOVOLET 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVORAPID-PENFILL-100-U-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10AB05" ;
+    ns1:title "NOVORAPID PENFILL 100 U/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RYZODEG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10A" ;
+    ns1:title "RYZODEG"@cs .
+
+

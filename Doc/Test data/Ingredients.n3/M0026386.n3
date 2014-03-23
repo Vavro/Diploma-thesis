@@ -1,0 +1,118 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N06AB05> a ns1:ATCConcept ;
+    skos:notation "N06AB05" ;
+    skos:prefLabel "Paroxetin"@cs,
+        "Paroxetine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026386> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A serotonin uptake inhibitor that is effective in the treatment of depression.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000109" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PAROXETIN-ORION-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PAROXETIN-TEVA-20-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/REMOOD-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEROXAT-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEROXAT-30-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009142" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000340",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000435",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000457",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000938",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002203",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002394",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002839",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003442" ;
+    ns1:title "Paroxetin"@cs,
+        "Paroxetine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit the reuptake of serotonin in the brain. This increases the serotonin concentration in the synaptic cleft which then activates serotonin receptors to a greater extent. These agents have been used in treatment of depression, panic disorder, obsessive-compulsive behavior, and alcoholism, as analgesics, and to treat obesity and bulimia. Many of the ADRENERGIC UPTAKE INHIBITORS also inhibit serotonin uptake; they are not included here.     "@en ;
+    ns1:title "Inhibitory vychytávání serotoninu"@cs,
+        "Serotonin uptake inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally and mechanistically diverse group of drugs that are not tricyclics or monoamine oxidase inhibitors. The most clinically important appear to act selectively on serotonergic systems, especially by inhibiting serotonin reuptake.     "@en ;
+    ns1:title "Antidepresiva druhé generace"@cs,
+        "Antidepressive agents, second-generation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000340> a ns1:DiseaseOrFinding ;
+    ns1:description "Obsessive, persistent, intense fear of open places.     "@en ;
+    ns1:title "Agorafobie"@cs,
+        "Agoraphobia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000435> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent and disabling ANXIETY.     "@en ;
+    ns1:title "Úzkostné poruchy"@cs,
+        "Anxiety disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000457> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of disorders characterized by physiological and psychological disturbances in appetite or food intake.     "@en ;
+    ns1:title "Poruchy příjmu potravy"@cs,
+        "Eating disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000938> a ns1:DiseaseOrFinding ;
+    ns1:description "An affective disorder manifested by either a dysphoric mood or loss of interest or pleasure in usual activities. The mood disturbance is prominent and relatively persistent.     "@en ;
+    ns1:title "Depresivní poruchy"@cs,
+        "Depressive disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002203> a ns1:DiseaseOrFinding ;
+    ns1:description "An anxiety disorder characterized by recurrent, persistent obsessions or compulsions. Obsessions are the intrusive ideas, thoughts, or images that are experienced as senseless or repugnant. Compulsions are repetitive and seemingly purposeful behavior which the individual generally recognizes as senseless and from which the individual does not derive pleasure although it may provide a release from tension.     "@en ;
+    ns1:title "Obsedantně kompulzivní porucha"@cs,
+        "Obsessive-compulsive disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002394> a ns1:DiseaseOrFinding ;
+    ns1:description "Anxiety disorders in which the essential feature is persistent and irrational fear of a specific object, activity, or situation that the individual feels compelled to avoid. The individual recognizes the fear as excessive or unreasonable.     "@en ;
+    ns1:title "Fobie"@cs,
+        "Phobic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002839> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of traumatic stress disorders with symptoms that last more than one month. There are various forms of post-traumatic stress disorder, depending on the time of onset and the duration of these stress symptoms. In the acute form, the duration of the symptoms is between 1 to 3 months. In the chronic form, symptoms last more than 3 months. With delayed onset, symptoms develop more than 6 months after the traumatic event.     "@en ;
+    ns1:title "Posttraumatická stresová porucha"@cs,
+        "Stress disorders, post-traumatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003442> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of anxiety disorder characterized by unexpected panic attacks that last minutes or, rarely, hours. Panic attacks begin with intense apprehension, fear or terror and, often, a feeling of impending doom. Symptoms experienced during a panic attack include dyspnea or sensations of being smothered; dizziness, loss of balance or faintness; choking sensations; palpitations or accelerated heart rate; shakiness; sweating; nausea or other form of abdominal distress; depersonalization or derealization; paresthesias; hot flashes or chills; chest discomfort or pain; fear of dying and fear of not being in control of oneself or going crazy. Agoraphobia may also develop. Similar to other anxiety disorders, it may be inherited as an autosomal dominant trait.     "@en ;
+    ns1:title "Panická porucha"@cs,
+        "Panic disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000109> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin Uptake Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009142> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Brain Stem Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PAROXETIN-ORION-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB05" ;
+    ns1:title "PAROXETIN ORION 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PAROXETIN-TEVA-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB05" ;
+    ns1:title "PAROXETIN-TEVA 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REMOOD-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB05" ;
+    ns1:title "REMOOD 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEROXAT-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB05" ;
+    ns1:title "SEROXAT 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEROXAT-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AB05" ;
+    ns1:title "SEROXAT 30 MG"@cs .
+
+

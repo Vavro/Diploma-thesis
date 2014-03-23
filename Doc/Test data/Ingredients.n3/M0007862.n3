@@ -1,0 +1,656 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G02BB01> a ns1:ATCConcept ;
+    skos:notation "G02BB01" ;
+    skos:prefLabel "Vaginální kroužek s progestinem a estrogenem"@cs,
+        "Vaginal ring with progestogen and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA> a ns1:ATCConcept ;
+    skos:notation "G03AA" ;
+    skos:prefLabel "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, fixed combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA07> a ns1:ATCConcept ;
+    skos:notation "G03AA07" ;
+    skos:prefLabel "Levonorgestrel a estrogen"@cs,
+        "Levonorgestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA09> a ns1:ATCConcept ;
+    skos:notation "G03AA09" ;
+    skos:prefLabel "Desogestrel a estrogen"@cs,
+        "Desogestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA10> a ns1:ATCConcept ;
+    skos:notation "G03AA10" ;
+    skos:prefLabel "Gestoden a estrogen"@cs,
+        "Gestodene and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA11> a ns1:ATCConcept ;
+    skos:notation "G03AA11" ;
+    skos:prefLabel "Norgestimat a estrogen"@cs,
+        "Norgestimate and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA12> a ns1:ATCConcept ;
+    skos:notation "G03AA12" ;
+    skos:prefLabel "Drospirenon a estrogen"@cs,
+        "Drospirenone and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA13> a ns1:ATCConcept ;
+    skos:notation "G03AA13" ;
+    skos:prefLabel "Norelgestromin a estrogen"@cs,
+        "Norelgestromin and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA15> a ns1:ATCConcept ;
+    skos:notation "G03AA15" ;
+    skos:prefLabel "Chlormadinon a estrogen"@cs,
+        "Chlormadinone and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB> a ns1:ATCConcept ;
+    skos:notation "G03AB" ;
+    skos:prefLabel "Progestiny a estrogeny, sekvenční přípravky"@cs,
+        "Progestogens and estrogens, sequential preparations"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB03> a ns1:ATCConcept ;
+    skos:notation "G03AB03" ;
+    skos:prefLabel "Levonorgestrel a estrogen"@cs,
+        "Levonorgestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB04> a ns1:ATCConcept ;
+    skos:notation "G03AB04" ;
+    skos:prefLabel "Norethisteron a estrogen"@cs,
+        "Norethisterone and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB05> a ns1:ATCConcept ;
+    skos:notation "G03AB05" ;
+    skos:prefLabel "Desogestrel a estrogen"@cs,
+        "Desogestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB06> a ns1:ATCConcept ;
+    skos:notation "G03AB06" ;
+    skos:prefLabel "Gestoden a estrogen"@cs,
+        "Gestodene and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03HB01> a ns1:ATCConcept ;
+    skos:notation "G03HB01" ;
+    skos:prefLabel "Cyproteron a estrogen"@cs,
+        "Cyproterone and estrogen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007862> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002135",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A semisynthetic alkylated ESTRADIOL with a 17-alpha-ethinyl substitution. It has high estrogenic potency when administered orally, and is often used as the estrogenic component in ORAL CONTRACEPTIVES.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000100" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ADELE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AIDEE-2-MG-0-03-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARNETTE-0-15-MG-0-03-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARTIZIA-0-075-MG-0-020-MG-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AYREEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BELARA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BELUSHA-3-MG-0-02-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BONADEA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BONISSA-0-03-MG-2-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CHLOE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CILEST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CIRCLET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLORMETIN-2-MG-0-03-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAYLETTE-3-MG-0-02-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAYLLA-3-MG-0-02-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIANE-35",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIENILLE-POTAHOVANA-TABLETA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DROSETIL-0-02-MG-3-MG-28-POTAHOVANYCH-TABLET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DROSETIL-0-03-MG-3-MG-28-POTAHOVANYCH-TABLET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ESETE-2-MG-0-03-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ETHINYLESTRADIOL-LEVONORGESTREL-MIBE-30-MCG-150-MCG-POTAHOVANE-TBL-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EVRA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FEMODEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLAYA-0-030-MG-2-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOXINETTE-2-MG-0-03-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOXINETTE-NEO",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GAIA-0-15-MG-0-02-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GRACIAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GRAVISTAT-125",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HARMONET-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-02-MG-3-MG-28-POTAHOVANYCH-TABLET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-02-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-03-MG-3-MG-28-POTAHOVANYCH-TABLET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-03-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JEANINE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KATYA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KATYA-POR-TBL-OBD-3X21",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KIRGA-3-MG-0-02-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LAURINA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LINDYNETTE-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOETTE-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOGEST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LUNAFEM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MADINELLE-0-03-MG-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MAITALON-3-MG-0-03-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MARVELON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MERCILON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MICROGYNON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MILLIGEST-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MINERVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MINESSE-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MINISISTON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MINULET-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRELLE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYWY-0-02-MG-3-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NATALYA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NELYA-0-015-MG-0-06-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOVYNETTE-150-MCG-20-MCG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUVARING-0-120-MG-0-015-MG-ZA-24-HODIN--VAGINALNI-INZERT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NYSSIELA-3-MG-0-02-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRAMINO",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRAMINO-28",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/REGISHA-0-150-MG-0-02-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/REGISHA-0-150-MG-0-03-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/REGULON-150-MCG-30-MCG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RHONYA-3-MG-20-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RHONYA-3-MG-30-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SIDRETA-0-03-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SIDRETELLA-0-02-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOFTINE-0-03-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOFTINELLE-0-02-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STODETTE-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SUNYA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SYLVIANE-0-03-MG-3-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-MINULET-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL-21-7",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRINOVUM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRIQUILAR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VELMARI-3-MG-0-02-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VEREZANA-0-03-MG-2-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VEYANNE-0-02-MG-3-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VIOLETTA-60-MIKROGRAMU-15-MIKROGRAMU-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VONILLE-0-060-MG-0-015-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VREYA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/WERRCA-3-MG-0-03-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/YADINE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/YANELA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/YOSEFINNE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZULFIJA-75-MIKROGRAMU--20-MIKROGRAMU-OBALENE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZULFIJA-75-MIKROGRAMU--30-MIKROGRAMU-OBALENE-TABLETY" ;
+    ns1:hasPharmacokinetics "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000045",
+        "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000008289" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009902" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003303" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001636",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001992",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001993",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002500",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003452",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003943" ;
+    ns1:title "Ethinylestradiol"@cs,
+        "Ethinyl estradiol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001636> a ns1:DiseaseOrFinding ;
+    ns1:description "Condition resulting from deficient gonadal functions, such as GAMETOGENESIS and the production of GONADAL STEROID HORMONES. It is characterized by delay in GROWTH, germ cell maturation, and development of secondary sex characteristics. Hypogonadism can be due to a deficiency of GONADOTROPINS (hypogonadotropic hypogonadism) or due to primary gonadal failure (hypergonadotropic hypogonadism).     "@en ;
+    ns1:title "Hypogonadismus"@cs,
+        "Hypogonadism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001992> a ns1:DiseaseOrFinding ;
+    ns1:description "The premature cessation of menses (MENSTRUATION) when the last menstrual period occurs in a woman under the age of 40. It is due to the depletion of OVARIAN FOLLICLES. Premature MENOPAUSE can be caused by diseases; OVARIECTOMY; RADIATION; chemicals; and chromosomal abnormalities.     "@en ;
+    ns1:title "Menopauza předčasná"@cs,
+        "Menopause, premature"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001993> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive uterine bleeding during MENSTRUATION.     "@en ;
+    ns1:title "Menoragie"@cs,
+        "Menorrhagia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:description "Certain tumors that 1, arise in organs that are normally dependent on specific hormones and 2, are stimulated or caused to regress by manipulation of the endocrine environment.     "@en ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> a ns1:DiseaseOrFinding ;
+    ns1:description "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     "@en ;
+    ns1:title "Osteoporóza postmenopauzální"@cs,
+        "Osteoporosis, postmenopausal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003452> a ns1:DiseaseOrFinding ;
+    ns1:description "Cessation of ovarian function after MENARCHE but before the age of 40, without or with OVARIAN FOLLICLE depletion. It is characterized by the presence of OLIGOMENORRHEA or AMENORRHEA, elevated GONADOTROPINS, and low ESTRADIOL levels. It is a state of female HYPERGONADOTROPIC HYPOGONADISM. Etiologies include genetic defects, autoimmune processes, chemotherapy, radiation, and infections.     "@en ;
+    ns1:title "Primární ovariální insuficience"@cs,
+        "Primary ovarian insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003943> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, temporary sensation of heat predominantly experienced by some women during MENOPAUSE. (Random House Unabridged Dictionary, 2d ed)     "@en ;
+    ns1:title "Návaly"@cs,
+        "Hot flashes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000100> a ns1:MechanismOfAction ;
+    ns1:title "Estrogen Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000045> a ns1:Pharmacokinetics ;
+    ns1:title "Fecal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000008289> a ns1:Pharmacokinetics ;
+    ns1:title "Aromatic hydroxylation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Formation Stimulation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009902> a ns1:PhysiologicEffect ;
+    ns1:title "Vaginal Function Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADELE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "ADELE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AIDEE-2-MG-0-03-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "AIDEE 2 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARNETTE-0-15-MG-0-03-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "ARNETTE 0,15 MG/0,03 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARTIZIA-0-075-MG-0-020-MG-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "ARTIZIA 0,075 MG/0,020 MG OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AYREEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "AYREEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BELARA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "BELARA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BELUSHA-3-MG-0-02-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "BELUSHA 3 MG/0,02 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BONADEA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "BONADEA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BONISSA-0-03-MG-2-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "BONISSA 0,03 MG/2 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHLOE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03HB01" ;
+    ns1:title "CHLOE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CILEST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA11" ;
+    ns1:title "CILEST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIRCLET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G02BB01" ;
+    ns1:title "CIRCLET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLORMETIN-2-MG-0-03-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "CLORMETIN 2 MG/0,03 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAYLETTE-3-MG-0-02-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "DAYLETTE 3 MG/0,02 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAYLLA-3-MG-0-02-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "DAYLLA 3 MG/0,02 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIANE-35> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03HB01" ;
+    ns1:title "DIANE-35"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIENILLE-POTAHOVANA-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "DIENILLE POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DROSETIL-0-02-MG-3-MG-28-POTAHOVANYCH-TABLET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "DROSETIL 0,02 MG/3 MG 28 POTAHOVANÝCH TABLET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DROSETIL-0-03-MG-3-MG-28-POTAHOVANYCH-TABLET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "DROSETIL 0,03 MG/3 MG 28 POTAHOVANÝCH TABLET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESETE-2-MG-0-03-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "ESETE 2 MG/0,03 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETHINYLESTRADIOL-LEVONORGESTREL-MIBE-30-MCG-150-MCG-POTAHOVANE-TBL-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "ETHINYLESTRADIOL/LEVONORGESTREL MIBE 30 MCG/150 MCG POTAHOVANÉ TBL."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EVRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA13" ;
+    ns1:title "EVRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEMODEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "FEMODEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLAYA-0-030-MG-2-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "FLAYA 0,030 MG/2 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOXINETTE-2-MG-0-03-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "FOXINETTE 2 MG/0,03 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOXINETTE-NEO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "FOXINETTE NEO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GAIA-0-15-MG-0-02-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "GAIA 0,15 MG/0,02 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRACIAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB05" ;
+    ns1:title "GRACIAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRAVISTAT-125> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "GRAVISTAT 125"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HARMONET-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "HARMONET OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-02-MG-3-MG-28-POTAHOVANYCH-TABLET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "JANGEE 0,02 MG/3 MG 28 POTAHOVANÝCH TABLET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-02-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "JANGEE 0,02 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-03-MG-3-MG-28-POTAHOVANYCH-TABLET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "JANGEE 0,03 MG/3 MG 28 POTAHOVANÝCH TABLET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANGEE-0-03-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "JANGEE 0,03 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JEANINE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "JEANINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KATYA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "KATYA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KATYA-POR-TBL-OBD-3X21> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "KATYA POR TBL OBD 3X21"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KIRGA-3-MG-0-02-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "KIRGA 3 MG/0,02 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAURINA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB05" ;
+    ns1:title "LAURINA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LINDYNETTE-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "LINDYNETTE 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOETTE-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "LOETTE POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOGEST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "LOGEST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LUNAFEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "LUNAFEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MADINELLE-0-03-MG-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA15" ;
+    ns1:title "MADINELLE 0,03 MG/2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAITALON-3-MG-0-03-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "MAITALON 3 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MARVELON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "MARVELON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MERCILON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "MERCILON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MICROGYNON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "MICROGYNON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MILLIGEST-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB06" ;
+    ns1:title "MILLIGEST OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINERVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03HB01" ;
+    ns1:title "MINERVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINESSE-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "MINESSE POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINISISTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "MINISISTON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINULET-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "MINULET OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRELLE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "MIRELLE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYWY-0-02-MG-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "MYWY 0,02 MG/3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NATALYA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "NATALYA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NELYA-0-015-MG-0-06-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "NELYA 0,015 MG/0,06 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVYNETTE-150-MCG-20-MCG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "NOVYNETTE 150 MCG/20 MCG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUVARING-0-120-MG-0-015-MG-ZA-24-HODIN--VAGINALNI-INZERT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G02BB01" ;
+    ns1:title "NUVARING 0,120 MG/0,015 MG ZA 24 HODIN, VAGINÁLNÍ INZERT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NYSSIELA-3-MG-0-02-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "NYSSIELA 3 MG/0,02 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRAMINO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB" ;
+    ns1:title "PRAMINO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRAMINO-28> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB" ;
+    ns1:title "PRAMINO 28"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REGISHA-0-150-MG-0-02-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "REGISHA 0,150 MG/0,02 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REGISHA-0-150-MG-0-03-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "REGISHA 0,150 MG/0,03 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REGULON-150-MCG-30-MCG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA09" ;
+    ns1:title "REGULON 150 MCG/30 MCG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RHONYA-3-MG-20-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "RHONYA 3 MG/20 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RHONYA-3-MG-30-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "RHONYA 3 MG/30 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIDRETA-0-03-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "SIDRETA 0,03 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIDRETELLA-0-02-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "SIDRETELLA 0,02 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOFTINE-0-03-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "SOFTINE 0,03 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOFTINELLE-0-02-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "SOFTINELLE 0,02 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STODETTE-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "STODETTE OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUNYA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "SUNYA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYLVIANE-0-03-MG-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "SYLVIANE 0,03 MG/3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-MINULET-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB06" ;
+    ns1:title "TRI-MINULET OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRI-REGOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL-21-7> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRI-REGOL 21+7"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRINOVUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB04" ;
+    ns1:title "TRINOVUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRIQUILAR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRIQUILAR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VELMARI-3-MG-0-02-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "VELMARI 3 MG/0,02 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VEREZANA-0-03-MG-2-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "VEREZANA 0,03 MG/2 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VEYANNE-0-02-MG-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "VEYANNE 0,02 MG/3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIOLETTA-60-MIKROGRAMU-15-MIKROGRAMU-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "VIOLETTA 60 MIKROGRAMŮ/15 MIKROGRAMŮ POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VONILLE-0-060-MG-0-015-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "VONILLE 0,060 MG/0,015 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VREYA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03HB01" ;
+    ns1:title "VREYA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/WERRCA-3-MG-0-03-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "WERRCA 3 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/YADINE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "YADINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/YANELA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:title "YANELA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/YOSEFINNE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA12" ;
+    ns1:title "YOSEFINNE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZULFIJA-75-MIKROGRAMU--20-MIKROGRAMU-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "ZULFIJA 75 MIKROGRAMŮ/ 20 MIKROGRAMŮ OBALENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZULFIJA-75-MIKROGRAMU--30-MIKROGRAMU-OBALENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA10" ;
+    ns1:title "ZULFIJA 75 MIKROGRAMŮ/ 30 MIKROGRAMŮ OBALENÉ TABLETY"@cs .
+
+

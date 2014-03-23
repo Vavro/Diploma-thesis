@@ -1,0 +1,209 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AN> a ns1:ATCConcept ;
+    dcterms:title "Medicinální plyny"@cs,
+        "Medical gases"@en ;
+    skos:notation "V03AN" .
+
+<http://linked.opendata.cz/resource/ATC/V03AN01> a ns1:ATCConcept ;
+    dcterms:title "Kyslík"@cs,
+        "OXYGEN"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V",
+        "http://linked.opendata.cz/resource/ATC/V03",
+        "http://linked.opendata.cz/resource/ATC/V03A",
+        "http://linked.opendata.cz/resource/ATC/V03AN" ;
+    skos:notation "V03AN01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015671> a ns1:Ingredient ;
+    ns1:description "An element with atomic symbol O, atomic number 8, and atomic weight [15.99903; 15.99977]. It is the most abundant element on earth and essential for respiration.     "@en ;
+    ns1:title "Kyslík"@cs,
+        "Oxygen"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0105922> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "21000L I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 21000L I"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125136> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "1000L I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 1000L I"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125137> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "500L II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 500L II"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125138> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "600L II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 600L II"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125139> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "21L II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 21L II"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125140> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "41L II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 41L II"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125141> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-    K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "46L II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC151356_doc" ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 46L II"@cs ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONOXIA--KAPALNY-MEDICINALNI-PLYN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AN01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015671" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0105922",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125136",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125137",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125138",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125139",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125140",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125141" ;
+    ns1:title "CONOXIA, KAPALNÝ MEDICINÁLNÍ PLYN"@cs .
+
+

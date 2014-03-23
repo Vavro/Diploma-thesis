@@ -1,0 +1,294 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N01> a ns1:ATCConcept ;
+    dcterms:title "Anestetika"@cs,
+        "ANESTHETICS"@en ;
+    skos:notation "N01" .
+
+<http://linked.opendata.cz/resource/ATC/N01A> a ns1:ATCConcept ;
+    dcterms:title "Anestetika celková"@cs,
+        "ANESTHETICS, GENERAL"@en ;
+    skos:notation "N01A" .
+
+<http://linked.opendata.cz/resource/ATC/N01AH> a ns1:ATCConcept ;
+    dcterms:title "Anestetika opioidní"@cs,
+        "Opioid anesthetics"@en ;
+    skos:notation "N01AH" .
+
+<http://linked.opendata.cz/resource/ATC/N01AH01> a ns1:ATCConcept ;
+    dcterms:title "Fentanyl"@cs,
+        "Fentanyl"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N01",
+        "http://linked.opendata.cz/resource/ATC/N01A",
+        "http://linked.opendata.cz/resource/ATC/N01AH" ;
+    skos:notation "N01AH01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330379> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Fentanyl citrate"@cs,
+        "Fentanyl citrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160381> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "1X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160382> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "5X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160383> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "10X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160384> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "20X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160385> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "30X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160386> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "50X2ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 50X2ML/0.1MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160387> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "25X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 25X5ML/0.25MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160388> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "5X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML/0.5MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160389> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "10X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML/0.5MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160390> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "20X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML/0.5MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160391> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "50X10ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 50X10ML/0.5MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180795> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "10X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X5ML/0.25MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180796> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasIndication """Fentanyl Kern Pharma je indikován jako:
+analgetický narkotizující doplněk k celkové nebo místní anestézii,
+kombinace pro podání s neuroleptiky, např. droperidolem, jako premedikace pro analgézii k navození anestézie a jako přídavek při udržování celkové a místní anestézie,
+jako celkové anestetikum spolu s kyslíkem při velkých výkonech u rizikových pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (CELKOVÁ)"@cs ;
+    ns1:hasPackagingSize "50X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC135646_doc" ;
+    ns1:hasStrength "0.05MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 50X5ML/0.25MG"@cs ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-KERN-PHARMA-0-05-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N01AH01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330379" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160381",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160382",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160383",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160384",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160385",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160386",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160387",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160388",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160389",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160390",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160391",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180795",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180796" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FENTANYL KERN PHARMA 0,05 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+

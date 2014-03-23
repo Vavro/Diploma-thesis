@@ -1,0 +1,67 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A04> a ns1:ATCConcept ;
+    dcterms:title "Antiemetika"@cs,
+        "ANTIEMETICS "@en ;
+    skos:notation "A04" .
+
+<http://linked.opendata.cz/resource/ATC/A04A> a ns1:ATCConcept ;
+    dcterms:title "Antiemetika"@cs,
+        "ANTIEMETICS AND ANTINAUSEANTS"@en ;
+    skos:notation "A04A" .
+
+<http://linked.opendata.cz/resource/ATC/A04AD> a ns1:ATCConcept ;
+    dcterms:title "Jiná antiemetika"@cs,
+        "Other antiemetics"@en ;
+    skos:notation "A04AD" .
+
+<http://linked.opendata.cz/resource/ATC/A04AD12> a ns1:ATCConcept ;
+    dcterms:title "Aprepitant"@cs,
+        "Aprepitant"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A04",
+        "http://linked.opendata.cz/resource/ATC/A04A",
+        "http://linked.opendata.cz/resource/ATC/A04AD" ;
+    skos:notation "A04AD12" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0447596> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Aprepitant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026637> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A04AD12" ;
+    ns1:hasIndicationGroup "ANTIEMETICA, ANTIVERTIGINOSA"@cs ;
+    ns1:hasMaximalPrice "1738.81994629"^^xsd:float ;
+    ns1:hasPackagingSize "1+2"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1789.72998047"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2007-07-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "125MG+80MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 1(125MG)+2(80MG)"@cs ;
+    ns1:title "EMEND 125 MG + 80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMEND-125-MG---80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A04AD12" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0447596" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026637" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "EMEND 125 MG + 80 MG"@cs .
+
+

@@ -1,0 +1,290 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06A> a ns1:ATCConcept ;
+    dcterms:title "Antidepresiva"@cs,
+        "ANTIDEPRESSANTS"@en ;
+    skos:notation "N06A" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidepresiva"@cs,
+        "Other antidepressants"@en ;
+    skos:notation "N06AX" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX16> a ns1:ATCConcept ;
+    dcterms:title "Venlafaxin"@cs,
+        "Venlafaxine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N06",
+        "http://linked.opendata.cz/resource/ATC/N06A",
+        "http://linked.opendata.cz/resource/ATC/N06AX" ;
+    skos:notation "N06AX16" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136959> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Venlafaxine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024957> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 10X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024958> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 14X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024959> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 20X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024960> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasBreakMarketingDate "2011-12-22"^^xsd:date ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasMaximalPrice "181.660003662"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "97.6800003052"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-12-20"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 28X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024961> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasBreakMarketingDate "2011-12-22"^^xsd:date ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasMaximalPrice "197.270004272"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "104.660003662"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-12-20"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 30X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024962> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 50X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024963> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 60X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024964> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 98X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024965> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 100X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024967> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 50X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024968> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 100X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024969> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "250"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 250X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119770> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod.
+K prevenci recidivy těžkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154998_doc" ;
+    ns1:hasStrength "37,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS PRO 7X37.5MG"@cs ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLWEXYA-37-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N06AX16" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136959" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024957",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024958",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024959",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024960",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024961",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024962",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024963",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024964",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024965",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024967",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024968",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0024969",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0119770" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "OLWEXYA 37,5 MG"@cs .
+
+

@@ -1,0 +1,105 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B03> a ns1:ATCConcept ;
+    dcterms:title "Antianemika"@cs,
+        "ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03" .
+
+<http://linked.opendata.cz/resource/ATC/B03X> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "OTHER ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03X" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "Other antianemic preparations"@en ;
+    skos:notation "B03XA" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA01> a ns1:ATCConcept ;
+    dcterms:title "Erytropoetin"@cs,
+        "Erythropoietin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B03",
+        "http://linked.opendata.cz/resource/ATC/B03X",
+        "http://linked.opendata.cz/resource/ATC/B03XA" ;
+    skos:notation "B03XA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028770> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616" ;
+    ns1:title "Epoetin alfa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029232> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasMaximalPrice "1373.15002441"^^xsd:float ;
+    ns1:hasPackagingSize "1X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1024.93994141"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "10000UT/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "SDR+IVN INJ SOL 1X0.5ML"@cs ;
+    ns1:title "BINOCRIT 5000 IU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029233> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasMaximalPrice "6277.85009766"^^xsd:float ;
+    ns1:hasPackagingSize "6X0.5ML I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "6149.62988281"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-04-08"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "10000UT/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "SDR+IVN INJ SOL 6X0.5ML"@cs ;
+    ns1:title "BINOCRIT 5000 IU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167994> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "10000UT/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "SDR+IVN INJ SOL 1X0.5ML"@cs ;
+    ns1:title "BINOCRIT 5000 IU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167995> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasPackagingSize "6X0.5ML II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "10000UT/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "SDR+IVN INJ SOL 6X0.5ML"@cs ;
+    ns1:title "BINOCRIT 5000 IU/0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BINOCRIT-5000-IU-0-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028770" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029232",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029233",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167994",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167995" ;
+    ns1:title "BINOCRIT 5000 IU/0,5 ML"@cs .
+
+

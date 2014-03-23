@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03A> a ns1:ATCConcept ;
+    dcterms:title "Hormonální kontraceptiva k systémové aplikaci"@cs,
+        "HORMONAL CONTRACEPTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "G03A" .
+
+<http://linked.opendata.cz/resource/ATC/G03AA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, fixed combinations"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03A" ;
+    skos:notation "G03AA" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019413> a ns1:Ingredient ;
+    ns1:title "Mikronizovaný dienogest"@cs,
+        "Dienogest micronized 100%"@en,
+        "Dienogestum micronisatum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019414> a ns1:Ingredient ;
+    ns1:title "Mikronizovaný ethinylestradiol"@cs,
+        "Ethinylestradiol micronized"@en,
+        "Ethinylestradiolum micronisatum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181188> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:hasIndication """Perorální kontracepce. 
+Středně závažné akné u žen, které nemají kontraindikaci pro užívání perorální kontracepce a u kterých lokální léčba nebyla účinná. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "21"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147746_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 21"@cs ;
+    ns1:title "MISTRA 2 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181189> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:hasIndication """Perorální kontracepce. 
+Středně závažné akné u žen, které nemají kontraindikaci pro užívání perorální kontracepce a u kterých lokální léčba nebyla účinná. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X21"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147746_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 63"@cs ;
+    ns1:title "MISTRA 2 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181190> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:hasIndication """Perorální kontracepce. 
+Středně závažné akné u žen, které nemají kontraindikaci pro užívání perorální kontracepce a u kterých lokální léčba nebyla účinná. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X21"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC147746_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 126"@cs ;
+    ns1:title "MISTRA 2 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MISTRA-2-MG-0-03-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019413",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019414" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181188",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181189",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181190" ;
+    ns1:title "MISTRA 2 MG/0,03 MG POTAHOVANÉ TABLETY"@cs .
+
+

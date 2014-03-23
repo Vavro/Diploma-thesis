@@ -1,0 +1,50 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05CH01> a ns1:ATCConcept ;
+    skos:notation "N05CH01" ;
+    skos:prefLabel "Melatonin"@cs,
+        "Melatonin  "@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013319> a ns1:Ingredient ;
+    ns1:description "A biogenic amine that is found in animals and plants. In mammals, melatonin is produced by the PINEAL GLAND. Its secretion increases in darkness and decreases during exposure to light. Melatonin is implicated in the regulation of SLEEP, mood, and REPRODUCTION. Melatonin is also an effective antioxidant.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CIRCADIN-2-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003804" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009397" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000004020" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000004020" ;
+    ns1:title "Melatonin"@cs,
+        "Melatonin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491> a ns1:PharmacologicalAction ;
+    ns1:description "Naturally occurring or synthetic substances that inhibit or retard the oxidation of a substance to which it is added. They counteract the harmful and damaging effects of oxidation in animal tissues.     "@en ;
+    ns1:title "Antioxidancia"@cs,
+        "Antioxidants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003804> a ns1:PharmacologicalAction ;
+    ns1:description "A very loosely defined group of drugs that tend to reduce the activity of the central nervous system. The major groups included here are ethyl alcohol, anesthetics, hypnotics and sedatives, narcotics, and tranquilizing agents (antipsychotics and antianxiety agents).     "@en ;
+    ns1:title "Centrální nervový systém - látky depresorické"@cs,
+        "Central nervous system depressants"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004020> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronobiologic disorder resulting from rapid travel across a number of time zones, characterized by insomnia or hypersomnolence, fatigue, behavioral symptoms, headaches, and gastrointestinal disturbances. (From Cooper, Sleep, 1994, pp593-8)     "@en ;
+    ns1:title "Jet lag syndrom"@cs,
+        "Jet lag syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149> a ns1:MechanismOfAction ;
+    ns1:title "Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009397> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Melatonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIRCADIN-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05CH01" ;
+    ns1:title "CIRCADIN 2 MG"@cs .
+
+

@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N07BB01> a ns1:ATCConcept ;
+    skos:notation "N07BB01" ;
+    skos:prefLabel "Disulfiram"@cs,
+        "Disulfiram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006600> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000856",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002532" ;
+    ns1:description "A carbamate derivative used as an alcohol deterrent. It is a relatively nontoxic substance when administered alone, but markedly alters the intermediary metabolism of alcohol. When alcohol is ingested after administration of disulfiram, blood acetaldehyde concentrations are increased, followed by flushing, systemic vasodilation, respiratory difficulties, nausea, hypotension, and other symptoms (acetaldehyde syndrome). It acts by inhibiting aldehyde dehydrogenase.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000183" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ANTABUS" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000649",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009033",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000353" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000353" ;
+    ns1:title "Disulfiram"@cs,
+        "Disulfiram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000649> a ns1:PharmacologicalAction ;
+    ns1:description "Substances interfering with the metabolism of ethyl alcohol, causing unpleasant side effects thought to discourage the drinking of alcoholic beverages. Alcohol deterrents are used in the treatment of alcoholism.     "@en ;
+    ns1:title "Alkohol - odvykací prostředky"@cs,
+        "Alcohol deterrents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000353> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary, chronic disease with genetic, psychosocial, and environmental factors influencing its development and manifestations. The disease is often progressive and fatal. It is characterized by impaired control over drinking, preoccupation with the drug alcohol, use of alcohol despite adverse consequences, and distortions in thinking, most notably denial. Each of these symptoms may be continuous or periodic. (Morse & Flavin for the Joint Commission of the National Council on Alcoholism and Drug Dependence and the American Society of Addiction Medicine to Study the Definition and Criteria for the Diagnosis of Alcoholism: in JAMA 1992;268:1012-4)     "@en ;
+    ns1:title "Alkoholismus"@cs,
+        "Alcoholism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of CORONARY ARTERIES that may derive from a congenital abnormality, atherosclerotic, or non-atherosclerotic cause.     "@en ;
+    ns1:title "Koronární artérie - nemoci"@cs,
+        "Coronary artery disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002532> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders in which there is a loss of ego boundaries or a gross impairment in reality testing with delusions or prominent hallucinations. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Psychotické poruchy"@cs,
+        "Psychotic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000183> a ns1:MechanismOfAction ;
+    ns1:title "Acetyl Aldehyde Dehydrogenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009033> a ns1:PhysiologicEffect ;
+    ns1:title "Emesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808> a ns1:PhysiologicEffect ;
+    ns1:title "Positive Chronotropy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANTABUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BB01" ;
+    ns1:title "ANTABUS"@cs .
+
+

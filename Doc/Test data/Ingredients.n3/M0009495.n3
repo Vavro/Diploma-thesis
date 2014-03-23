@@ -1,0 +1,122 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R03BB06> a ns1:ATCConcept ;
+    skos:notation "R03BB06" ;
+    skos:prefLabel "glycopyrronium bromid"@cs,
+        "Glycopyrronium bromide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009495> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001660",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002888",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "A muscarinic antagonist used as an antispasmodic, in some disorders of the gastrointestinal tract, and to reduce salivation with some anesthetics.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ENUREV-BREEZHALER-44-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEEBRI-BREEZHALER-44-MCG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TOVANOR-BREEZHALER-44-MCG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008868",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009842" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000265",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002351",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002602" ;
+    ns1:title "Glykopyrolát"@cs,
+        "Glycopyrrolate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate MUSCARINIC RECEPTORS, thereby blocking the actions of endogenous ACETYLCHOLINE or exogenous agonists. Muscarinic antagonists have widespread effects including actions on the iris and ciliary muscle of the eye, the heart and blood vessels, secretions of the respiratory tract, GI system, and salivary glands, GI motility, urinary bladder tone, and the central nervous system.     "@en ;
+    ns1:title "Muskarin - antagonisté"@cs,
+        "Muscarinic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000265> a ns1:DiseaseOrFinding ;
+    ns1:description "Congenital abnormalities caused by medicinal substances or drugs of abuse given to or taken by the mother, or to which she is inadvertently exposed during the manufacture of such substances. The concept excludes abnormalities resulting from exposure to non-medicinal chemicals in the environment.     "@en ;
+    ns1:title "Abnormality vyvolané léky"@cs,
+        "Abnormalities, drug-induced"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001485> a ns1:DiseaseOrFinding ;
+    ns1:description "Spontaneous or near spontaneous bleeding caused by a defect in clotting mechanisms (BLOOD COAGULATION DISORDERS) or another abnormality causing a structural flaw in the blood vessels (HEMOSTATIC DISORDERS).     "@en ;
+    ns1:title "Hemoragické poruchy"@cs,
+        "Hemorrhagic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001660> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological development in the ILEUM including the ILEOCECAL VALVE.     "@en ;
+    ns1:title "Ileum - nemoci"@cs,
+        "Ileal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002602> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci dýchacího systému"@cs,
+        "Respiratory tract diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002888> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally rapid heartbeat, usually with a HEART RATE above 100 beats per minute for adults. Tachycardia accompanied by disturbance in the cardiac depolarization (cardiac arrhythmia) is called tachyarrhythmia.     "@en ;
+    ns1:title "Tachykardie"@cs,
+        "Tachycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125> a ns1:MechanismOfAction ;
+    ns1:title "Cholinergic Muscarinic Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Parasympathetic Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008868> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Respiratory Secretions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009842> a ns1:PhysiologicEffect ;
+    ns1:title "Salivation Inhibition"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENUREV-BREEZHALER-44-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BB06" ;
+    ns1:title "ENUREV BREEZHALER 44 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEEBRI-BREEZHALER-44-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BB06" ;
+    ns1:title "SEEBRI BREEZHALER 44 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOVANOR-BREEZHALER-44-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03BB06" ;
+    ns1:title "TOVANOR BREEZHALER 44 MCG"@cs .
+
+

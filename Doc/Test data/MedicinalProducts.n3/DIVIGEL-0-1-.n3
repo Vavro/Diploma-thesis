@@ -1,0 +1,121 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03C> a ns1:ATCConcept ;
+    dcterms:title "Estrogeny"@cs,
+        "ESTROGENS"@en ;
+    skos:notation "G03C" .
+
+<http://linked.opendata.cz/resource/ATC/G03CA> a ns1:ATCConcept ;
+    dcterms:title "Přirozené a semisyntetické estrogeny, samotné"@cs,
+        "Natural and semisynthetic estrogens, plain"@en ;
+    skos:notation "G03CA" .
+
+<http://linked.opendata.cz/resource/ATC/G03CA03> a ns1:ATCConcept ;
+    dcterms:title "Estradiol"@cs,
+        "Estradiol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03C",
+        "http://linked.opendata.cz/resource/ATC/G03CA" ;
+    skos:notation "G03CA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330337> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795" ;
+    ns1:title "Estradiol hemihydrate"@cs,
+        "Estradiol hemihydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044709> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03CA03" ;
+    ns1:hasIndication """Léčba klimakterického syndromu spojeného s přirozenou nebo chirurgickou menopauzou (léčba symptomů spojených s deficitem estrogenu: návaly, noční pocení, atrofie urogenitálního systému a depresivní nálady). 
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu.
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené. 
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "157.330001831"^^xsd:float ;
+    ns1:hasPackagingSize "28X1GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "102.970001221"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110849_doc" ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 28X1GM"@cs ;
+    ns1:title "DIVIGEL 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044710> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03CA03" ;
+    ns1:hasIndication """Léčba klimakterického syndromu spojeného s přirozenou nebo chirurgickou menopauzou (léčba symptomů spojených s deficitem estrogenu: návaly, noční pocení, atrofie urogenitálního systému a depresivní nálady). 
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu.
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené. 
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "91X1GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110849_doc" ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 91X1GM"@cs ;
+    ns1:title "DIVIGEL 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044711> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03CA03" ;
+    ns1:hasIndication """Léčba klimakterického syndromu spojeného s přirozenou nebo chirurgickou menopauzou (léčba symptomů spojených s deficitem estrogenu: návaly, noční pocení, atrofie urogenitálního systému a depresivní nálady). 
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu.
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené. 
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "106.5"^^xsd:float ;
+    ns1:hasPackagingSize "28X0.5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "51.4799995422"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110849_doc" ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 28X0.5GM"@cs ;
+    ns1:title "DIVIGEL 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044712> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03CA03" ;
+    ns1:hasIndication """Léčba klimakterického syndromu spojeného s přirozenou nebo chirurgickou menopauzou (léčba symptomů spojených s deficitem estrogenu: návaly, noční pocení, atrofie urogenitálního systému a depresivní nálady). 
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu.
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené. 
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "91X0.5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110849_doc" ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 91X0.5GM"@cs ;
+    ns1:title "DIVIGEL 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIVIGEL-0-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03CA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330337" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044709",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044710",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044711",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044712" ;
+    ns1:title "DIVIGEL 0,1%"@cs .
+
+

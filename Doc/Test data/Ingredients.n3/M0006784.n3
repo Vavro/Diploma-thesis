@@ -1,0 +1,191 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01DB01> a ns1:ATCConcept ;
+    skos:notation "L01DB01" ;
+    skos:prefLabel "Doxorubicin"@cs,
+        "Doxorubicin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006784> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000469",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002291",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "Antineoplastic antibiotic obtained from Streptomyces peucetius. It is a hydroxy derivative of DAUNORUBICIN.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/MYOCET-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001348" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000564",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001321",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001815",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001869",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001883",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001905",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002003",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002050",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002167",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002274",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002288",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002500",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002671",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002676",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002914",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002943",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003093" ;
+    ns1:title "Doxorubicin"@cs,
+        "Doxorubicin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001348> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances, produced by microorganisms, inhibiting or preventing the proliferation of neoplasms.     "@en ;
+    ns1:title "Antibiotika antitumorózní"@cs,
+        "Antibiotics, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000469> a ns1:DiseaseOrFinding ;
+    ns1:description "Any disturbances of the normal rhythmic beating of the heart or MYOCARDIAL CONTRACTION. Cardiac arrhythmias can be classified by the abnormalities in HEART RATE, disorders of electrical impulse generation, or impulse conduction.     "@en ;
+    ns1:title "Arytmie srdeční"@cs,
+        "Arrhythmias, cardiac"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000564> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nádory"@cs,
+        "Urinary bladder neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001321> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the GASTROINTESTINAL TRACT, from the MOUTH to the ANAL CANAL.     "@en ;
+    ns1:title "Gastrointestinální nádory"@cs,
+        "Gastrointestinal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001869> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LIVER.     "@en ;
+    ns1:title "Nádory jater"@cs,
+        "Liver neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001883> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LUNG.     "@en ;
+    ns1:title "Plíce - nádory"@cs,
+        "Lung neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002003> a ns1:DiseaseOrFinding ;
+    ns1:description "A tumor derived from mesothelial tissue (peritoneum, pleura, pericardium). It appears as broad sheets of cells, with some regions containing spindle-shaped, sarcoma-like cells and other regions showing adenomatous patterns. Pleural mesotheliomas have been linked to exposure to asbestos. (Dorland, 27th ed)     "@en ;
+    ns1:title "Mezoteliom"@cs,
+        "Mesothelioma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002050> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignancy of mature PLASMA CELLS engaging in monoclonal immunoglobulin production. It is characterized by hyperglobulinemia, excess Bence-Jones proteins (free monoclonal IMMUNOGLOBULIN LIGHT CHAINS) in the urine, skeletal destruction, bone pain, and fractures. Other features include ANEMIA; HYPERCALCEMIA; and RENAL INSUFFICIENCY.     "@en ;
+    ns1:title "Mnohočetný myelom"@cs,
+        "Multiple myeloma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> a ns1:DiseaseOrFinding ;
+    ns1:description "A common neoplasm of early childhood arising from neural crest cells in the sympathetic nervous system, and characterized by diverse clinical behavior, ranging from spontaneous remission to rapid metastatic progression and death. This tumor is the most common intraabdominal malignancy of childhood, but it may also arise from thorax, neck, or rarely occur in the central nervous system. Histologic features include uniform round cells with hyperchromatic nuclei arranged in nests and separated by fibrovascular septa. Neuroblastomas may be associated with the opsoclonus-myoclonus syndrome. (From DeVita et al., Cancer: Principles and Practice of Oncology, 5th ed, pp2099-2101; Curr Opin Oncol 1998 Jan;10(1):43-51)     "@en ;
+    ns1:title "Neuroblastom"@cs,
+        "Neuroblastoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002288> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PANCREAS. Depending on the types of ISLET CELLS present in the tumors, various hormones can be secreted: GLUCAGON from PANCREATIC ALPHA CELLS; INSULIN from PANCREATIC BETA CELLS; and SOMATOSTATIN from the SOMATOSTATIN-SECRETING CELLS. Most are malignant except the insulin-producing tumors (INSULINOMA).     "@en ;
+    ns1:title "Nádory slinivky břišní"@cs,
+        "Pancreatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002291> a ns1:DiseaseOrFinding ;
+    ns1:description "Deficiency of all three cell elements of the blood, erythrocytes, leukocytes and platelets.     "@en ;
+    ns1:title "Pancytopenie"@cs,
+        "Pancytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002671> a ns1:DiseaseOrFinding ;
+    ns1:description "A connective tissue neoplasm formed by proliferation of mesodermal cells; it is usually highly malignant.     "@en ;
+    ns1:title "Sarkom"@cs,
+        "Sarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002676> a ns1:DiseaseOrFinding ;
+    ns1:description "A multicentric, malignant neoplastic vascular proliferation characterized by the development of bluish-red cutaneous nodules, usually on the lower extremities, most often on the toes or feet, and slowly increasing in size and number and spreading to more proximal areas. The tumors have endothelium-lined channels and vascular spaces admixed with variably sized aggregates of spindle-shaped cells, and often remain confined to the skin and subcutaneous tissue, but widespread visceral involvement may occur. Kaposi's sarcoma occurs spontaneously in Jewish and Italian males in Europe and the United States. An aggressive variant in young children is endemic in some areas of Africa. A third form occurs in about 0.04% of kidney transplant patients. There is also a high incidence in AIDS patients. (From Dorland, 27th ed & Holland et al., Cancer Medicine, 3d ed, pp2105-7) HHV-8 is the suspected cause.     "@en ;
+    ns1:title "Sarkom kaposiho"@cs,
+        "Sarcoma, kaposi"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002914> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the TESTIS. Germ cell tumors (GERMINOMA) of the testis constitute 95% of all testicular neoplasms.     "@en ;
+    ns1:title "Testikulární nádory"@cs,
+        "Testicular neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002943> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the THYROID GLAND.     "@en ;
+    ns1:title "Nádory štítné žlázy"@cs,
+        "Thyroid neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003093> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the UTERUS.     "@en ;
+    ns1:title "Uterus - nádory"@cs,
+        "Uterine neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYOCET-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01DB01" ;
+    ns1:title "MYOCET 50 MG"@cs .
+
+

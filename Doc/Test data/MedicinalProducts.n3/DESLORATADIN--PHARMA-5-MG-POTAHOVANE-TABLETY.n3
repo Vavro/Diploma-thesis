@@ -1,0 +1,519 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R06> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06" .
+
+<http://linked.opendata.cz/resource/ATC/R06A> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06A" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antihistaminika pro systémovou aplikaci"@cs,
+        "Other antihistamines for systemic use"@en ;
+    skos:notation "R06AX" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    dcterms:title "Desloratadin"@cs,
+        "Desloratadine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R06",
+        "http://linked.opendata.cz/resource/ATC/R06A",
+        "http://linked.opendata.cz/resource/ATC/R06AX" ;
+    skos:notation "R06AX27" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178650> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "1 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178651> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "2 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178652> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "3 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178653> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "5 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 5X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178654> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "7 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178655> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "10 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178656> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "14 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178657> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "15 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 15X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178658> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "20 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178659> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "21 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 21X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178660> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "353.880004883"^^xsd:float ;
+    ns1:hasPackagingSize "30 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "137.75"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178661> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "607.380004883"^^xsd:float ;
+    ns1:hasPackagingSize "50 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "229.570007324"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178662> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "1052.86999512"^^xsd:float ;
+    ns1:hasPackagingSize "90 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "413.220001221"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178663> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X5MG I"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192396> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "2 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192397> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "3 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192398> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "5 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 5X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192399> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "7 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192400> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "10 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192401> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "14 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192402> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "15 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 15X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192403> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "20 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192404> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "21 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 21X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192405> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "353.880004883"^^xsd:float ;
+    ns1:hasPackagingSize "30 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "137.75"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192406> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "607.380004883"^^xsd:float ;
+    ns1:hasPackagingSize "50 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "229.570007324"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192407> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "1052.86999512"^^xsd:float ;
+    ns1:hasPackagingSize "90 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "413.220001221"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192408> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192409> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Přípravek Desloratadin +pharma 5 mg je indikován k zmírnění příznaků spojených:
+- s alergickou rýmou (viz bod 5.1)
+- s kopřivkou (viz bod 5.1)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "1 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148919_doc" ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X5MG II"@cs ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESLORATADIN--PHARMA-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178650",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178651",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178652",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178653",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178654",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178655",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178656",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178657",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178658",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178659",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178660",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178661",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178662",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178663",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192396",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192397",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192398",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192399",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192401",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192402",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192403",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192404",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192405",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192406",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192407",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192408",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192409" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "DESLORATADIN +PHARMA 5 MG POTAHOVANÉ TABLETY"@cs .
+
+

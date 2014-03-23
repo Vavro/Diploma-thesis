@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09C> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, samotní"@cs,
+        "ANGIOTENSIN II ANTAGONISTS, PLAIN"@en ;
+    skos:notation "C09C" .
+
+<http://linked.opendata.cz/resource/ATC/C09CA> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, samotní"@cs,
+        "Angiotensin II antagonists, plain"@en ;
+    skos:notation "C09CA" .
+
+<http://linked.opendata.cz/resource/ATC/C09CA04> a ns1:ATCConcept ;
+    dcterms:title "Irbesartan"@cs,
+        "Irbesartan"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C09",
+        "http://linked.opendata.cz/resource/ATC/C09C",
+        "http://linked.opendata.cz/resource/ATC/C09CA" ;
+    skos:notation "C09CA04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0216909> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001573",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002591",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:title "Irbesartan"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002591> a ns1:DiseaseOrFinding ;
+    ns1:title "Arteria renalis - obstrukce"@cs,
+        "Renal artery obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0152178> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09CA04" ;
+    ns1:hasIndication """Léčba esenciální hypertenze.
+Léčba onemocnění ledvin u pacientů s hypertenzí a diabetem mellitem 2. typu jako součást antihypertenzního léčebného režimu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC122493_doc" ;
+    ns1:hasStrength "75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X75MG"@cs ;
+    ns1:title "IRBESARTAN +PHARMA 75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0152179> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09CA04" ;
+    ns1:hasIndication """Léčba esenciální hypertenze.
+Léčba onemocnění ledvin u pacientů s hypertenzí a diabetem mellitem 2. typu jako součást antihypertenzního léčebného režimu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC122493_doc" ;
+    ns1:hasStrength "75MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X75MG"@cs ;
+    ns1:title "IRBESARTAN +PHARMA 75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN--PHARMA-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09CA04" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0216909" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0152178",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0152179" ;
+    ns1:title "IRBESARTAN +PHARMA 75 MG"@cs .
+
+

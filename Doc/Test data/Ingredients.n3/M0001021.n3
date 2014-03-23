@@ -1,0 +1,216 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J02AA01> a ns1:ATCConcept ;
+    skos:notation "J02AA01" ;
+    skos:prefLabel "Amfotericin B"@cs,
+        "Amphotericin B"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Macrolide antifungal antibiotic produced by Streptomyces nodosus obtained from soil of the Orinoco river region of Venezuela.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ABELCET",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMPHOCIL-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMPHOCIL-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000882",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001497",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000492",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000568",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000650",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000651",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000652",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000800",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000880",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000894",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001804",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001806",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001880",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001981",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002298",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002379",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002813",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003415",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003511",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003994" ;
+    ns1:title "Amfotericin b"@cs,
+        "Amphotericin b"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000882> a ns1:PharmacologicalAction ;
+    ns1:description "Agents which are destructive to amebae, especially the parasitic species causing AMEBIASIS in man and animal.     "@en ;
+    ns1:title "Amébicidy"@cs,
+        "Amebicides"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001497> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that are destructive to protozoans.     "@en ;
+    ns1:title "Antiprotozoální látky"@cs,
+        "Antiprotozoal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000492> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with fungi of the genus ASPERGILLUS.     "@en ;
+    ns1:title "Aspergilóza"@cs,
+        "Aspergillosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000568> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection that may appear in two forms: 1, a primary lesion characterized by the formation of a small cutaneous nodule and small nodules along the lymphatics that may heal within several months; and 2, chronic granulomatous lesions characterized by thick crusts, warty growths, and unusual vascularity and infection in the middle or upper lobes of the lung.     "@en ;
+    ns1:title "Blastomykóza"@cs,
+        "Blastomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000651> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by development, usually in infancy or childhood, of a chronic, often widespread candidiasis of skin, nails, and mucous membranes. It may be secondary to one of the immunodeficiency syndromes, inherited as an autosomal recessive trait, or associated with defects in cell-mediated immunity, endocrine disorders, dental stomatitis, or malignancy.     "@en ;
+    ns1:title "Kandidóza chronická mukokutánní"@cs,
+        "Candidiasis, chronic mucocutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000652> a ns1:DiseaseOrFinding ;
+    ns1:description "Candidiasis of the skin manifested as eczema-like lesions of the interdigital spaces, perleche, or chronic paronychia. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza kožní"@cs,
+        "Candidiasis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000800> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus COCCIDIOIDES, endemic to the SOUTHWESTERN UNITED STATES. It is sometimes called valley fever but should not be confused with RIFT VALLEY FEVER. Infection is caused by inhalation of airborne, fungal particles known as arthroconidia, a form of FUNGAL SPORES. A primary form is an acute, benign, self-limited respiratory infection. A secondary form is a virulent, severe, chronic, progressive granulomatous disease with systemic involvement. It can be detected by use of COCCIDIOIDIN.     "@en ;
+    ns1:title "Kokcidioidomykóza"@cs,
+        "Coccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000880> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the species CRYPTOCOCCUS NEOFORMANS.     "@en ;
+    ns1:title "Kryptokokóza"@cs,
+        "Cryptococcosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000894> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the URINARY BLADDER, either from bacterial or non-bacterial causes. Cystitis is usually associated with painful urination (dysuria), increased frequency, urgency, and suprapubic pain.     "@en ;
+    ns1:title "Cystitida"@cs,
+        "Cystitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001546> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection resulting from inhalation or ingestion of spores of the fungus of the genus HISTOPLASMA, species H. capsulatum. It is worldwide in distribution and particularly common in the midwestern United States. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Histoplazmóza"@cs,
+        "Histoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001804> a ns1:DiseaseOrFinding ;
+    ns1:description "A disease caused by any of a number of species of protozoa in the genus LEISHMANIA. There are four major clinical types of this infection: cutaneous (Old and New World) (LEISHMANIASIS, CUTANEOUS), diffuse cutaneous (LEISHMANIASIS, DIFFUSE CUTANEOUS), mucocutaneous (LEISHMANIASIS, MUCOCUTANEOUS), and visceral (LEISHMANIASIS, VISCERAL).     "@en ;
+    ns1:title "Leishmanióza"@cs,
+        "Leishmaniasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001806> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disease caused by LEISHMANIA DONOVANI and transmitted by the bite of several sandflies of the genera Phlebotomus and Lutzomyia. It is commonly characterized by fever, chills, vomiting, anemia, hepatosplenomegaly, leukopenia, hypergammaglobulinemia, emaciation, and an earth-gray color of the skin. The disease is classified into three main types according to geographic distribution: Indian, Mediterranean (or infantile), and African.     "@en ;
+    ns1:title "Leishmanióza viscerální"@cs,
+        "Leishmaniasis, visceral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001880> a ns1:DiseaseOrFinding ;
+    ns1:description "Pulmonary diseases caused by fungal infections, usually through hematogenous spread.     "@en ;
+    ns1:title "Plíce - mykózy"@cs,
+        "Lung diseases, fungal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001981> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)     "@en ;
+    ns1:title "Meningitida"@cs,
+        "Meningitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002298> a ns1:DiseaseOrFinding ;
+    ns1:description "A mycosis affecting the skin, mucous membranes, lymph nodes, and internal organs. It is caused by Paracoccidioides brasiliensis. It is also called paracoccidioidal granuloma. Superficial resemblance of P. brasiliensis to Blastomyces brasiliensis (BLASTOMYCES) may cause misdiagnosis.     "@en ;
+    ns1:title "Parakokcidioidomykóza"@cs,
+        "Paracoccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002379> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PERITONEUM lining the ABDOMINAL CAVITY as the result of infectious, autoimmune, or chemical processes. Primary peritonitis is due to infection of the PERITONEAL CAVITY via hematogenous or lymphatic spread and without intra-abdominal source. Secondary peritonitis arises from the ABDOMINAL CAVITY itself through RUPTURE or ABSCESS of intra-abdominal organs.     "@en ;
+    ns1:title "Peritonitida"@cs,
+        "Peritonitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002813> a ns1:DiseaseOrFinding ;
+    ns1:description "The commonest and least serious of the deep mycoses, characterized by nodular lesions of the cutaneous and subcutaneous tissues. It is caused by inhalation of contaminated dust or by infection of a wound.     "@en ;
+    ns1:title "Sporotrichóza"@cs,
+        "Sporotrichosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003415> a ns1:DiseaseOrFinding ;
+    ns1:description "The presence of fungi circulating in the blood. Opportunistic fungal sepsis is seen most often in immunosuppressed patients with severe neutropenia or in postoperative patients with intravenous catheters and usually follows prolonged antibiotic therapy.     "@en ;
+    ns1:title "Fungémie"@cs,
+        "Fungemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003511> a ns1:DiseaseOrFinding ;
+    ns1:description "Meningeal inflammation produced by CRYPTOCOCCUS NEOFORMANS, an encapsulated yeast that tends to infect individuals with ACQUIRED IMMUNODEFICIENCY SYNDROME and other immunocompromised states. The organism enters the body through the respiratory tract, but symptomatic infections are usually limited to the lungs and nervous system. The organism may also produce parenchymal brain lesions (torulomas). Clinically, the course is subacute and may feature HEADACHE; NAUSEA; PHOTOPHOBIA; focal neurologic deficits; SEIZURES; cranial neuropathies; and HYDROCEPHALUS. (From Adams et al., Principles of Neurology, 6th ed, pp721-2)     "@en ;
+    ns1:title "Kryptokoková meningitida"@cs,
+        "Meningitis, cryptococcal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003994> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection in humans and animals caused by fungi in the class Zygomycetes. It includes MUCORMYCOSIS and entomophthoramycosis. The latter is a tropical infection of subcutaneous tissue or paranasal sinuses caused by fungi in the order Entomophthorales. Phycomycosis, closely related to zygomycosis, describes infection with members of Phycomycetes, an obsolete classification.     "@en ;
+    ns1:title "Zygomykóza"@cs,
+        "Zygomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957> a ns1:MechanismOfAction ;
+    ns1:title "Ergosterol Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ABELCET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AA01" ;
+    ns1:title "ABELCET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPHOCIL-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AA01" ;
+    ns1:title "AMPHOCIL 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPHOCIL-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J02AA01" ;
+    ns1:title "AMPHOCIL 50 MG"@cs .
+
+

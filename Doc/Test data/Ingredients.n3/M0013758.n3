@@ -1,0 +1,80 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A01AB09> a ns1:ATCConcept ;
+    skos:notation "A01AB09" ;
+    skos:prefLabel "Mikonazol"@cs,
+        "Miconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013758> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An imidazole antifungal agent that is used topically and by intravenous infusion.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/LORAMYC-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000492",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000650",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000652",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000654",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002958" ;
+    ns1:title "Mikonazol"@cs,
+        "Miconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit STEROL 14-DEMETHYLASE. A variety of azole-derived ANTIFUNGAL AGENTS act through this mechanism.     "@en ;
+    ns1:title "14-alfa-demethylasa - inhibitory"@cs,
+        "14-alpha demethylase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000492> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with fungi of the genus ASPERGILLUS.     "@en ;
+    ns1:title "Aspergilóza"@cs,
+        "Aspergillosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000652> a ns1:DiseaseOrFinding ;
+    ns1:description "Candidiasis of the skin manifested as eczema-like lesions of the interdigital spaces, perleche, or chronic paronychia. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza kožní"@cs,
+        "Candidiasis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000654> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the VULVA and VAGINA with a fungus of the genus CANDIDA.     "@en ;
+    ns1:title "Kandidóza vulvovaginální"@cs,
+        "Candidiasis, vulvovaginal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002958> a ns1:DiseaseOrFinding ;
+    ns1:description "Dermatological pruritic lesion in the feet, caused by Trichophyton rubrum, T. mentagrophytes, or Epidermophyton floccosum.     "@en ;
+    ns1:title "Tinea pedis"@cs,
+        "Tinea pedis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025> a ns1:MechanismOfAction ;
+    ns1:title "14-alpha Demethylase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORAMYC-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A01AB09" ;
+    ns1:title "LORAMYC 50 MG"@cs .
+
+

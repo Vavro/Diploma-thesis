@@ -1,0 +1,68 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02AB02> a ns1:ATCConcept ;
+    skos:notation "N02AB02" ;
+    skos:prefLabel "Pethidin"@cs,
+        "Pethidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013427> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A narcotic analgesic that can be used for the relief of most types of moderate to severe pain, including postoperative pain and the pain of labor. Prolonged use may lead to dependence of the morphine type; withdrawal symptoms appear more rapidly than with morphine and are of shorter duration.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DOLSIN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002278" ;
+    ns1:title "Meperidin"@cs,
+        "Meperidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLSIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AB02" ;
+    ns1:title "DOLSIN"@cs .
+
+

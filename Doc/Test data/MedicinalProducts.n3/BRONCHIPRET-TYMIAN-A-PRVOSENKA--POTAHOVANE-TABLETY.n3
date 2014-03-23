@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V11> a ns1:ATCConcept ;
+    dcterms:title "Fytofarmaka a živočišné produkty (česká ATC skupina)"@cs,
+        "PHYTOPHARMATIC"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/V" ;
+    skos:notation "V11" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013268> a ns1:Ingredient ;
+    ns1:title "Suchý prvosenkový extrakt"@cs,
+        "Primula dry extract"@en,
+        "Primulae extractum siccum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013540> a ns1:Ingredient ;
+    ns1:title "Suchý tymiánový extrakt"@cs,
+        "Thyme dry extract"@en,
+        "Thymi extractum siccum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058921> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V11" ;
+    ns1:hasIndication """Akutní a chronická bronchitida se zvýšeným zahleněním a kašlem.
+"""@cs ;
+    ns1:hasIndicationGroup "PHYTOPHARMACA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC131331_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 20"@cs ;
+    ns1:title "BRONCHIPRET TYMIÁN A PRVOSENKA, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058922> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V11" ;
+    ns1:hasIndication """Akutní a chronická bronchitida se zvýšeným zahleněním a kašlem.
+"""@cs ;
+    ns1:hasIndicationGroup "PHYTOPHARMACA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC131331_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 50"@cs ;
+    ns1:title "BRONCHIPRET TYMIÁN A PRVOSENKA, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058923> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V11" ;
+    ns1:hasIndication """Akutní a chronická bronchitida se zvýšeným zahleněním a kašlem.
+"""@cs ;
+    ns1:hasIndicationGroup "PHYTOPHARMACA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC131331_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 100"@cs ;
+    ns1:title "BRONCHIPRET TYMIÁN A PRVOSENKA, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058924> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V11" ;
+    ns1:hasIndication """Akutní a chronická bronchitida se zvýšeným zahleněním a kašlem.
+"""@cs ;
+    ns1:hasIndicationGroup "PHYTOPHARMACA"@cs ;
+    ns1:hasPackagingSize "500"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC131331_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 500"@cs ;
+    ns1:title "BRONCHIPRET TYMIÁN A PRVOSENKA, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRONCHIPRET-TYMIAN-A-PRVOSENKA--POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V11" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013268",
+        "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013540" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058921",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058922",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058923",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058924" ;
+    ns1:title "BRONCHIPRET TYMIÁN A PRVOSENKA, POTAHOVANÉ TABLETY"@cs .
+
+

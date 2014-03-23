@@ -1,0 +1,155 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BD> a ns1:ATCConcept ;
+    dcterms:title "Kombinace perorálních antidiabetik"@cs,
+        "Biguanides and sulfonamides in combination"@en ;
+    skos:notation "A10BD" .
+
+<http://linked.opendata.cz/resource/ATC/A10BD10> a ns1:ATCConcept ;
+    dcterms:title "metformin a saxagliptin"@cs,
+        "Metformin and saxagliptin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A10",
+        "http://linked.opendata.cz/resource/ATC/A10B",
+        "http://linked.opendata.cz/resource/ATC/A10BD" ;
+    skos:notation "A10BD10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013535> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529" ;
+    ns1:description "A biguanide hypoglycemic agent used in the treatment of non-insulin-dependent diabetes mellitus not responding to dietary modification. Metformin improves  glycemic control by improving insulin sensitivity and decreasing intestinal absorption of glucose. (From Martindale, The Extra Pharmacopoeia, 30th ed, p289)     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903" ;
+    ns1:title "Metformin"@cs,
+        "Metformin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0488193> a ns1:Ingredient ;
+    ns1:title "Saxagliptin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168883> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168884> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168885> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasMaximalPrice "1470.10998535"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1387.31005859"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-01-29"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168886> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "112"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 112"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168887> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "196"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 196"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168888> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasMaximalPrice "1470.10998535"^^xsd:float ;
+    ns1:hasPackagingSize "60X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1387.31005859"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X1"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193530> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/850MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KOMBOGLYZE-2-5-MG-850-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BD10" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013535",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0488193" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168883",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168884",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168885",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168886",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168887",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168888",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193530" ;
+    ns1:title "KOMBOGLYZE 2,5 MG/850 MG"@cs .
+
+

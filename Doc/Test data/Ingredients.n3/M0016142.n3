@@ -1,0 +1,223 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01CE02> a ns1:ATCConcept ;
+    skos:notation "J01CE02" ;
+    skos:prefLabel "Fenoxymethylpenicilin"@cs,
+        "Phenoxymethylpenicillin"@en .
+
+<http://linked.opendata.cz/resource/ATC/J01CE10> a ns1:ATCConcept ;
+    skos:notation "J01CE10" ;
+    skos:prefLabel "Benzathin-fenoxymethylpenicilin"@cs,
+        "Benzathine phenoxymethylpenicillin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016142> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A broad-spectrum penicillin antibiotic used orally in the treatment of mild to moderate infections by susceptible gram-positive organisms.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1000",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-750-KRKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-000-000",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-500-000",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-0-8-MEGA-BIOTIKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-1-2-MEGA-BIOTIKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-250-MG-SLOVAKOFARMA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-500-MG-SLOVAKOFARMA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-750MG-SLOVAKOFARMA" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002629" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000276",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000772",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001096",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001141",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001298",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001671",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002266",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002629",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002683",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002756",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002764",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002803",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003315",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003506",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003507" ;
+    ns1:title "V-penicilin"@cs,
+        "Penicillin v"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000276> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation of purulent material in tissues, organs, or circumscribed spaces, usually associated with signs of infection.     "@en ;
+    ns1:title "Absces"@cs,
+        "Abscess"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000772> a ns1:DiseaseOrFinding ;
+    ns1:description "Involuntary, forcible, rapid, jerky movements that may be subtle or become confluent, markedly altering normal patterns of movement. Hypotonia and pendular reflexes are often associated. Conditions which feature recurrent or persistent episodes of chorea as a primary manifestation of disease are referred to as CHOREATIC DISORDERS. Chorea is also a frequent manifestation of BASAL GANGLIA DISEASES.     "@en ;
+    ns1:title "Chorea"@cs,
+        "Chorea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001096> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the inner lining of the heart (ENDOCARDIUM), the continuous membrane lining the four chambers and HEART VALVES. It is often caused by microorganisms including bacteria, viruses, fungi, and rickettsiae. Left untreated, endocarditis can damage heart valves and become life-threatening.     "@en ;
+    ns1:title "Endokarditida"@cs,
+        "Endocarditis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001141> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infection of the skin caused by species of STREPTOCOCCUS. This disease most frequently affects infants, young children, and the elderly. Characteristics include pink-to-red lesions that spread rapidly and are warm to the touch. The commonest site of involvement is the face.     "@en ;
+    ns1:title "Erysipel"@cs,
+        "Erysipelas"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001298> a ns1:DiseaseOrFinding ;
+    ns1:description "A persistent skin infection marked by the presence of furuncles, often chronic and recurrent. In humans, the causative agent is various species of STAPHYLOCOCCUS. In salmonid fish (SALMONIDS), the pathogen is AEROMONAS SALMONICIDA.     "@en ;
+    ns1:title "Furunkulóza"@cs,
+        "Furunculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001671> a ns1:DiseaseOrFinding ;
+    ns1:description "A common superficial bacterial infection caused by STAPHYLOCOCCUS AUREUS or group A beta-hemolytic streptococci. Characteristics include pustular lesions that rupture and discharge a thin, amber-colored fluid that dries and forms a crust. This condition is commonly located on the face, especially about the mouth and nose.     "@en ;
+    ns1:title "Impetigo"@cs,
+        "Impetigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002629> a ns1:DiseaseOrFinding ;
+    ns1:description "A febrile disease occurring as a delayed sequela of infections with STREPTOCOCCUS PYOGENES. It is characterized by multiple focal inflammatory lesions of the connective tissue structures, such as the heart, blood vessels, and joints (POLYARTHRITIS) and brain, and by the presence of ASCHOFF BODIES in the myocardium and skin.     "@en ;
+    ns1:title "Revmatická horečka"@cs,
+        "Rheumatic fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002683> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with group A streptococci that is characterized by tonsillitis and pharyngitis. An erythematous rash is commonly present.     "@en ;
+    ns1:title "Spála"@cs,
+        "Scarlet fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002764> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria, fungi, parasites, or viruses.     "@en ;
+    ns1:title "Kůže - nemoci infekční"@cs,
+        "Skin diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002803> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the order SPIROCHAETALES.     "@en ;
+    ns1:title "Spirochaetales - infekce"@cs,
+        "Spirochaetales infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003315> a ns1:DiseaseOrFinding ;
+    ns1:description "A deep type of gyrate erythema that follows a bite by an ixodid tick; it is a stage-1 manifestation of LYME DISEASE. The site of the bite is characterized by a red papule that expands peripherally as a nonscaling, palpable band that clears centrally. This condition is often associated with systemic symptoms such as chills, fever, headache, malaise, nausea, vomiting, fatigue, backache, and stiff neck.     "@en ;
+    ns1:title "Erythema chronicum migrans"@cs,
+        "Erythema chronicum migrans"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003506> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that show up as pink (negative) when treated by the gram-staining method.     "@en ;
+    ns1:title "Gramnegativní bakteriální infekce"@cs,
+        "Gram-negative bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that retain the crystal violet stain (positive) when treated by the gram-staining method.     "@en ;
+    ns1:title "Grampozitivní bakteriální infekce"@cs,
+        "Gram-positive bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215> a ns1:MechanismOfAction ;
+    ns1:title "Transpeptidase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "OSPEN 1000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "OSPEN 1500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE10" ;
+    ns1:title "OSPEN 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "OSPEN 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-750-KRKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE10" ;
+    ns1:title "OSPEN 750 KRKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-000-000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "PENBENE 1 000 000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-500-000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "PENBENE 1 500 000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-0-8-MEGA-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "V-PENICILIN 0,8 MEGA BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-1-2-MEGA-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "V-PENICILIN 1,2 MEGA BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-250-MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "V-PENICILIN 250 MG SLOVAKOFARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-500-MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "V-PENICILIN 500 MG SLOVAKOFARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-750MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01CE02" ;
+    ns1:title "V-PENICILIN 750MG SLOVAKOFARMA"@cs .
+
+

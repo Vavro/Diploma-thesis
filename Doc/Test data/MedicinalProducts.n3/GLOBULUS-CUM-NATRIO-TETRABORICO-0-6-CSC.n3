@@ -1,0 +1,100 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G01> a ns1:ATCConcept ;
+    dcterms:title "Gynekologická antiinfektiva a antiseptika"@cs,
+        "GYNECOLOGICAL ANTIINFECTIVES AND ANTISEPTICS"@en ;
+    skos:notation "G01" .
+
+<http://linked.opendata.cz/resource/ATC/G01A> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva a antiseptika, kromě kombinací s kortikosteroidy"@cs,
+        "ANTIINFECTIVES AND ANTISEPTICS, EXCL. COMBINATIONS"@en ;
+    skos:notation "G01A" .
+
+<http://linked.opendata.cz/resource/ATC/G01AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antiinfektiva a antiseptika"@cs,
+        "Other antiinfectives and antiseptics"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G01",
+        "http://linked.opendata.cz/resource/ATC/G01A" ;
+    skos:notation "G01AX" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0001800> a ns1:Ingredient ;
+    ns1:title "Dekahydrát tetraboritanu sodného"@cs,
+        "Sodium tetraborate decahydrate"@en,
+        "Natrii tetraboras decahydricus"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044315> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AX" ;
+    ns1:hasIndication """      Léčba Fluor vaginalis vyvolaný nejčastěji kvasinkami z  rodu Candida  albicans.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Vaginální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC127329_doc" ;
+    ns1:hasStrength "0.6GM"^^xsd:string ;
+    ns1:hasTitleSupplement "VAG GLB 10X0.6GM"@cs ;
+    ns1:title "GLOBULUS CUM NATRIO TETRABORICO 0,6 CSC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058169> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AX" ;
+    ns1:hasIndication """      Léčba Fluor vaginalis vyvolaný nejčastěji kvasinkami z  rodu Candida  albicans.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasPackagingSize "500"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Vaginální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC127332_doc" ;
+    ns1:hasStrength "0.6GM"^^xsd:string ;
+    ns1:hasTitleSupplement "VAG GLB 500X0.6GM"@cs ;
+    ns1:title "GLOBULUS CUM NATRIO TETRABORICO 0,6 CSC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058170> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AX" ;
+    ns1:hasIndication """      Léčba Fluor vaginalis vyvolaný nejčastěji kvasinkami z  rodu Candida  albicans.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasPackagingSize "1000"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Vaginální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC127332_doc" ;
+    ns1:hasStrength "0.6GM"^^xsd:string ;
+    ns1:hasTitleSupplement "VAG GLB 1000X0.6GM"@cs ;
+    ns1:title "GLOBULUS CUM NATRIO TETRABORICO 0,6 CSC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084475> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AX" ;
+    ns1:hasIndication """      Léčba Fluor vaginalis vyvolaný nejčastěji kvasinkami z  rodu Candida  albicans.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasMaximalPrice "778.549987793"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "822.190002441"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Vaginální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC127332_doc" ;
+    ns1:hasStrength "0.6GM"^^xsd:string ;
+    ns1:hasTitleSupplement "VAG GLB 100X0.6GM"@cs ;
+    ns1:title "GLOBULUS CUM NATRIO TETRABORICO 0,6 CSC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLOBULUS-CUM-NATRIO-TETRABORICO-0-6-CSC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G01AX" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0001800" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0044315",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058169",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0058170",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084475" ;
+    ns1:title "GLOBULUS CUM NATRIO TETRABORICO 0,6 CSC"@cs .
+
+

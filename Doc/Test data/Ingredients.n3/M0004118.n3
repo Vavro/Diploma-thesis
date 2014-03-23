@@ -1,0 +1,108 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01AA02> a ns1:ATCConcept ;
+    skos:notation "L01AA02" ;
+    skos:prefLabel "Chlorambucil"@cs,
+        "Chlorambucil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004118> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A nitrogen mustard alkylating agent used as antineoplastic for chronic lymphocytic leukemia, Hodgkin's disease, and others. Although it is less toxic than most other nitrogen mustards, it has been listed as a known carcinogen in the Fourth Annual Report on Carcinogens (NTP 85-002, 1985). (Merck Index, 11th ed)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/LEUKERAN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000775",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001550",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001910",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001915",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002274",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002914",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002933",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003248" ;
+    ns1:title "Chlorambucil"@cs,
+        "Chlorambucil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that differs from other alkylating agents used clinically in that they are monofunctional and thus unable to cross-link cellular macromolecules. Among their common properties are a requirement for metabolic activation to intermediates with antitumor efficacy and the presence in their chemical structures of N-methyl groups, that after metabolism, can covalently modify cellular DNA. The precise mechanisms by which each of these drugs acts to kill tumor cells are not completely understood. (From AMA, Drug Evaluations Annual, 1994, p2026)     "@en ;
+    ns1:title "Antitumorózní látky alkylující"@cs,
+        "Antineoplastic agents, alkylating"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000775> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant metastatic form of trophoblastic tumors. Unlike the HYDATIDIFORM MOLE, choriocarcinoma contains no CHORIONIC VILLI but rather sheets of undifferentiated cytotrophoblasts and syncytiotrophoblasts (TROPHOBLASTS). It is characterized by the large amounts of CHORIONIC GONADOTROPIN produced. Tissue origins can be determined by DNA analyses: placental (fetal) origin or  non-placental origin (CHORIOCARCINOMA, NON-GESTATIONAL).     "@en ;
+    ns1:title "Choriokarcinom"@cs,
+        "Choriocarcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001550> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant disease characterized by progressive enlargement of the lymph nodes, spleen, and general lymphoid tissue. In the classical variant, giant usually multinucleate Hodgkin's and REED-STERNBERG CELLS are present; in the nodular lymphocyte predominant variant, lymphocytic and histiocytic cells are seen.     "@en ;
+    ns1:title "Hodgkinova nemoc"@cs,
+        "Hodgkin disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001910> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of a group of malignant tumors of lymphoid tissue that differ from HODGKIN DISEASE, being more heterogeneous with respect to malignant cell lineage, clinical course, prognosis, and therapy. The only common feature among these tumors is the absence of giant REED-STERNBERG CELLS, a characteristic of Hodgkin's disease.     "@en ;
+    ns1:title "Lymfom non-hodgkinův"@cs,
+        "Lymphoma, non-hodgkin"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001915> a ns1:DiseaseOrFinding ;
+    ns1:description "A lymphoproliferative disorder characterized by pleomorphic B-LYMPHOCYTES including PLASMA CELLS, with increased levels of monoclonal serum IMMUNOGLOBULIN M. There is lymphoplasmacytic cells infiltration into bone marrow and often other tissues, also known as lymphoplasmacytic lymphoma. Clinical features include ANEMIA; HEMORRHAGES; and hyperviscosity.     "@en ;
+    ns1:title "Waldenströmova makroglobulinémie"@cs,
+        "Waldenstrom macroglobulinemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002914> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the TESTIS. Germ cell tumors (GERMINOMA) of the testis constitute 95% of all testicular neoplasms.     "@en ;
+    ns1:title "Testikulární nádory"@cs,
+        "Testicular neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002933> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased numbers of platelets in the peripheral blood. (Dorland, 27th ed)     "@en ;
+    ns1:title "Trombocytóza"@cs,
+        "Thrombocytosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003248> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic leukemia characterized by abnormal B-lymphocytes and often generalized lymphadenopathy. In patients presenting predominately with blood and bone marrow involvement it is called chronic lymphocytic leukemia (CLL); in those predominately with enlarged lymph nodes it is called small lymphocytic lymphoma. These terms represent spectrums of the same disease.     "@en ;
+    ns1:title "Chronická b-lymfatická leukemie"@cs,
+        "Leukemia, lymphocytic, chronic, b-cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LEUKERAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA02" ;
+    ns1:title "LEUKERAN"@cs .
+
+

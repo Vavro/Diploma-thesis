@@ -1,0 +1,166 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02A> a ns1:ATCConcept ;
+    dcterms:title "Opioidní analgetika (anodyna)"@cs,
+        "OPIOIDS"@en ;
+    skos:notation "N02A" .
+
+<http://linked.opendata.cz/resource/ATC/N02AE> a ns1:ATCConcept ;
+    dcterms:title "Deriváty oripavinu"@cs,
+        "Oripavine derivatives"@en ;
+    skos:notation "N02AE" .
+
+<http://linked.opendata.cz/resource/ATC/N02AE01> a ns1:ATCConcept ;
+    dcterms:title "Buprenorfin"@cs,
+        "Buprenorphine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N02",
+        "http://linked.opendata.cz/resource/ATC/N02A",
+        "http://linked.opendata.cz/resource/ATC/N02AE" ;
+    skos:notation "N02AE01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003054> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A derivative of the opioid alkaloid THEBAINE that is a more potent and longer lasting analgesic than MORPHINE. It appears to act as a partial agonist at mu and kappa opioid receptors and as an antagonist at delta receptors. The lack of delta-agonist activity has been suggested to account for the observation that buprenorphine tolerance may not develop with chronic use.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Buprenorfin"@cs,
+        "Buprenorphine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> a ns1:PharmacologicalAction ;
+    ns1:description "Agents inhibiting the effect of narcotics on the central nervous system.     "@en ;
+    ns1:title "Narkotika - antagonisté"@cs,
+        "Narcotic antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198012> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 4X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198013> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "8"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 8X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198014> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "16"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 16X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198015> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "6X4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 24X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198016> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasMaximalPrice "1056.31994629"^^xsd:float ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1130.19995117"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-12-03"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 5X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198017> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasIndication """Středně silné až silné bolesti při nádorovém onemocnění a silné bolesti, které nereagují na neopioidní analgetika.  
+Buprenorphine Actavis není vhodný k léčbě akutní bolesti.  
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152555_doc" ;
+    ns1:hasStrength "52.5RG/H"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM EMP TDR 10X52.5RG/H"@cs ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ACTAVIS-52-5-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AE01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003054" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198012",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198013",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198014",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198015",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198016",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198017" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "BUPRENORPHINE ACTAVIS 52,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+

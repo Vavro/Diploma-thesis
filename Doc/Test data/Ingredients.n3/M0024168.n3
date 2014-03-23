@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01AD09> a ns1:ATCConcept ;
+    skos:notation "S01AD09" ;
+    skos:prefLabel "Ganciklovir"@cs,
+        "Ganciclovir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0024168> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932" ;
+    ns1:description "An ACYCLOVIR analog that is a potent inhibitor of the Herpesvirus family including cytomegalovirus. Ganciclovir is used to treat complications from AIDS-associated cytomegalovirus infections.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/VIRGAN-1-5MG-G-OCNI-GEL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000000897" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003631" ;
+    ns1:title "Ganciklovir"@cs,
+        "Ganciclovir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the prophylaxis or therapy of VIRUS DISEASES. Some of the ways they may act include preventing viral replication by inhibiting viral DNA polymerase; binding to specific cell-surface receptors and inhibiting viral penetration or uncoating; inhibiting viral protein synthesis; or blocking late stages of virus assembly.     "@en ;
+    ns1:title "Antivirové látky"@cs,
+        "Antiviral agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000897> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with CYTOMEGALOVIRUS, characterized by enlarged cells bearing intranuclear inclusions. Infection may be in almost any organ, but the salivary glands are the most common site in children, as are the lungs in adults.     "@en ;
+    ns1:title "Cytomegalovirus - infekce"@cs,
+        "Cytomegalovirus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003631> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the retina by cytomegalovirus characterized by retinal necrosis, hemorrhage, vessel sheathing, and retinal edema. Cytomegalovirus retinitis is a major opportunistic infection in AIDS patients and can cause blindness.     "@en ;
+    ns1:title "Cytomegalovirová retinitida"@cs,
+        "Cytomegalovirus retinitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIRGAN-1-5MG-G-OCNI-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01AD09" ;
+    ns1:title "VIRGAN 1.5MG/G OČNÍ GEL"@cs .
+
+

@@ -1,0 +1,178 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L04AX01> a ns1:ATCConcept ;
+    skos:notation "L04AX01" ;
+    skos:prefLabel "Azathioprin"@cs,
+        "Azathioprine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002065> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002485",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An immunosuppressive agent used in combination with cyclophosphamide and hydroxychloroquine in the treatment of rheumatoid arthritis. According to the Fourth Annual Report on Carcinogens (NTP 85-002, 1985), this substance has been listed as a known carcinogen. (Merck Index, 11th ed)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AZAPRINE-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AZAPRINE-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008343",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009073",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009766" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001384" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000384",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000387",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001887",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002052",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002347",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002359",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002553",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003436" ;
+    ns1:title "Azathioprin"@cs,
+        "Azathioprine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are chemically similar to naturally occurring metabolites, but differ enough to interfere with normal metabolic pathways. (From AMA Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Antimetabolity"@cs,
+        "Antimetabolites"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000387> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of inadequate circulating red blood cells (ANEMIA) or insufficient HEMOGLOBIN due to premature destruction of red blood cells (ERYTHROCYTES).     "@en ;
+    ns1:title "Hemolytická anemie"@cs,
+        "Anemia, hemolytic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000875> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic transmural inflammation that may involve any part of the DIGESTIVE TRACT from MOUTH to ANUS, mostly found in the ILEUM, the CECUM, and the COLON. In Crohn disease, the inflammation, extending through the intestinal wall from the MUCOSA to the serosa, is characteristically asymmetric and segmental. Epithelioid GRANULOMAS may be seen in some patients.     "@en ;
+    ns1:title "Crohnova nemoc"@cs,
+        "Crohn disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> a ns1:DiseaseOrFinding ;
+    ns1:description "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.     "@en ;
+    ns1:title "Nemoc štěpu proti hostiteli"@cs,
+        "Graft vs host disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001887> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, relapsing, inflammatory, and often febrile multisystemic disorder of connective tissue, characterized principally by involvement of the skin, joints, kidneys, and serosal membranes. It is of unknown etiology, but is thought to represent a failure of the regulatory mechanisms of the autoimmune system. The disease is marked by a wide range of system dysfunctions, an elevated erythrocyte sedimentation rate, and the formation of LE cells in the blood or bone marrow.     "@en ;
+    ns1:title "Systémový lupus erythematodes"@cs,
+        "Lupus erythematosus, systemic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002347> a ns1:DiseaseOrFinding ;
+    ns1:description "Group of chronic blistering diseases characterized histologically by ACANTHOLYSIS and blister formation within the EPIDERMIS.     "@en ;
+    ns1:title "Pemfigus"@cs,
+        "Pemphigus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002359> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of necrotizing non-granulomatous inflammation occurring primarily in medium-sized ARTERIES, often with microaneurysms. It is characterized by muscle, joint, and abdominal pain resulting from arterial infarction and scarring in affected organs. Polyarteritis nodosa with lung involvement is called CHURG-STRAUSS SYNDROME.     "@en ;
+    ns1:title "Polyarteritis nodosa"@cs,
+        "Polyarteritis nodosa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002485> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of ectopic pregnancy in which the EMBRYO, MAMMALIAN implants in the ABDOMINAL CAVITY instead of in the ENDOMETRIUM of the UTERUS.     "@en ;
+    ns1:title "Těhotenství abdominální"@cs,
+        "Pregnancy, abdominal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002553> a ns1:DiseaseOrFinding ;
+    ns1:description "Purplish or brownish red discoloration, easily visible through the epidermis, caused by hemorrhage into the tissues. When the size of the discolorization is >2-3 cm it is generally called Ecchymoses (ECCHYMOSIS).     "@en ;
+    ns1:title "Purpura"@cs,
+        "Purpura"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003436> a ns1:DiseaseOrFinding ;
+    ns1:description "Thrombocytopenia occurring in the absence of toxic exposure or a disease associated with decreased platelets. It is mediated by immune mechanisms, in most cases IMMUNOGLOBULIN G autoantibodies which attach to platelets and subsequently undergo destruction by macrophages. The disease is seen in acute (affecting children) and chronic (adult) forms.     "@en ;
+    ns1:title "Purpura trombocytopenická idiopatická"@cs,
+        "Purpura, thrombocytopenic, idiopathic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008343> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Growth Phase Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Mitosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009073> a ns1:PhysiologicEffect ;
+    ns1:title "Immunologic Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009766> a ns1:PhysiologicEffect ;
+    ns1:title "Nucleic Acid Replication Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AZAPRINE-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AX01" ;
+    ns1:title "AZAPRINE 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AZAPRINE-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AX01" ;
+    ns1:title "AZAPRINE 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AX01" ;
+    ns1:title "IMURAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AX01" ;
+    ns1:title "IMURAN 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMURAN-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AX01" ;
+    ns1:title "IMURAN 50 MG"@cs .
+
+

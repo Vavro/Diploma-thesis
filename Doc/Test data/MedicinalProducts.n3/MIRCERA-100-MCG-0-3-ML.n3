@@ -1,0 +1,62 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B03> a ns1:ATCConcept ;
+    dcterms:title "Antianemika"@cs,
+        "ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03" .
+
+<http://linked.opendata.cz/resource/ATC/B03X> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "OTHER ANTIANEMIC PREPARATIONS"@en ;
+    skos:notation "B03X" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA> a ns1:ATCConcept ;
+    dcterms:title "Jiná antianemika"@cs,
+        "Other antianemic preparations"@en ;
+    skos:notation "B03XA" .
+
+<http://linked.opendata.cz/resource/ATC/B03XA03> a ns1:ATCConcept ;
+    dcterms:title "Pegepoetin beta"@cs,
+        "Methoxy polyethylene glycol-epoetin beta"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B03",
+        "http://linked.opendata.cz/resource/ATC/B03X",
+        "http://linked.opendata.cz/resource/ATC/B03XA" ;
+    skos:notation "B03XA03" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0018009> a ns1:Ingredient ;
+    ns1:title "Pegepoetin beta"@cs,
+        "Pegepoetin beta"@en,
+        "Pegepoetinum beta"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029017> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA03" ;
+    ns1:hasIndicationGroup "ANTIANAEMICA"@cs ;
+    ns1:hasMaximalPrice "5816.75"^^xsd:float ;
+    ns1:hasPackagingSize "1X0.3ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "5124.68994141"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-10-08"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasStrength "333RG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "SDR+IVN INJ SOL 1X0.3ML"@cs ;
+    ns1:title "MIRCERA 100 MCG/0,3 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRCERA-100-MCG-0-3-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0018009" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029017" ;
+    ns1:title "MIRCERA 100 MCG/0,3 ML"@cs .
+
+

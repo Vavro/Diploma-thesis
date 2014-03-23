@@ -1,0 +1,133 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01MA06> a ns1:ATCConcept ;
+    skos:notation "J01MA06" ;
+    skos:prefLabel "Norfloxacin"@cs,
+        "Norfloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014980> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A synthetic fluoroquinolone (FLUOROQUINOLONES) with broad-spectrum antibacterial activity against most gram-negative and gram-positive bacteria. Norfloxacin inhibits bacterial DNA GYRASE.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/GYRABLOCK-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOLICIN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000836",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000894",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001380",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001398",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002501",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002519",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002558",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000181137" ;
+    ns1:title "Norfloxacin"@cs,
+        "Norfloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000836> a ns1:DiseaseOrFinding ;
+    ns1:description "Purulent infections of the conjunctiva by several species of gram-negative, gram-positive, or acid-fast organisms. Some of the more commonly found genera causing conjunctival infections are Haemophilus, Streptococcus, Neisseria, and Chlamydia.     "@en ;
+    ns1:title "Konjunktivitida bakteriální"@cs,
+        "Conjunctivitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000894> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the URINARY BLADDER, either from bacterial or non-bacterial causes. Cystitis is usually associated with painful urination (dysuria), increased frequency, urgency, and suprapubic pain.     "@en ;
+    ns1:title "Cystitida"@cs,
+        "Cystitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002501> a ns1:DiseaseOrFinding ;
+    ns1:description "Infiltration of inflammatory cells into the parenchyma of PROSTATE. The subtypes are classified by their varied laboratory analysis, clinical presentation and response to treatment.     "@en ;
+    ns1:title "Prostatitida"@cs,
+        "Prostatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002558> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the KIDNEY PELVIS and KIDNEY CALICES where urine is collected before discharge, but does not involve the renal parenchyma (the NEPHRONS) where urine is processed.     "@en ;
+    ns1:title "Pyelitida"@cs,
+        "Pyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181137> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation of stones in the KIDNEY.     "@en ;
+    ns1:title "Nefrolitiáza"@cs,
+        "Nephrolithiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176> a ns1:MechanismOfAction ;
+    ns1:title "Topoisomerase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GYRABLOCK-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA06" ;
+    ns1:title "GYRABLOCK 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOLICIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01MA06" ;
+    ns1:title "NOLICIN"@cs .
+
+

@@ -1,0 +1,244 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02A> a ns1:ATCConcept ;
+    dcterms:title "Opioidní analgetika (anodyna)"@cs,
+        "OPIOIDS"@en ;
+    skos:notation "N02A" .
+
+<http://linked.opendata.cz/resource/ATC/N02AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná opioidní analgetika"@cs,
+        "Other opioids"@en ;
+    skos:notation "N02AX" .
+
+<http://linked.opendata.cz/resource/ATC/N02AX52> a ns1:ATCConcept ;
+    dcterms:title "Tramadol, kombinace"@cs,
+        "Tramadol, combinations"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N02",
+        "http://linked.opendata.cz/resource/ATC/N02A",
+        "http://linked.opendata.cz/resource/ATC/N02AX" ;
+    skos:notation "N02AX52" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001360" ;
+    ns1:description "Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Acetaminofen"@cs,
+        "Acetaminophen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0515248> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Tramadol hcl"@cs,
+        "Tramadol hcl"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to reduce body temperature in fever.     "@en ;
+    ns1:title "Antipyretika"@cs,
+        "Antipyretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> a ns1:DiseaseOrFinding ;
+    ns1:title "Glukosafosfátdehydrogenasa - nedostatek"@cs,
+        "Glucosephosphate dehydrogenase deficiency"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182288> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 2"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182289> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 10"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182290> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 20"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182291> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182292> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "40"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 40"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182293> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 50"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182294> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182295> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "70"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 70"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182296> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "80"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 80"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182297> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 90"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182298> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasIndication """Přípravek COLUDA  se indikuje k symptomatické léčbě středně silných až silných bolestí u dospělých pacientů a dospívajících od 12 let. 
+Použití přípravku COLUDA  by mělo být vyhrazeno pro pacienty se středně silnými až silnými bolestmi, které se nezmírňují podáváním periferních analgetik a vyžadují kombinaci tramadol- hydrochloridu a paracetamolu (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA - ANODYNA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146798_doc" ;
+    ns1:hasTitleSupplement "POR TBL FLM 100"@cs ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLUDA-37-5-MG-325-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02AX52" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0515248" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182288",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182289",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182290",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182291",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182292",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182293",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182294",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182295",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182296",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182297",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182298" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "COLUDA 37,5 MG/325 MG"@cs .
+
+

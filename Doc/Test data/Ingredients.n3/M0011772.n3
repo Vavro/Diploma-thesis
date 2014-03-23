@@ -1,0 +1,65 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J04AC01> a ns1:ATCConcept ;
+    skos:notation "J04AC01" ;
+    skos:prefLabel "Isoniazid"@cs,
+        "Isoniazid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011772> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866" ;
+    ns1:description "Antibacterial agent used primarily as a tuberculostatic. It remains the treatment of choice for tuberculosis.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/NIDRAZID" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0508507" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003030" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000003030" ;
+    ns1:title "Isoniazid"@cs,
+        "Isoniazid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of tuberculosis. They are divided into two main classes: \"first-line\" agents, those with the greatest efficacy and acceptable degrees of toxicity used successfully in the great majority of cases; and \"second-line\" drugs used in drug-resistant cases or those in which some other patient-related condition has compromised the effectiveness of primary therapy.     "@en ;
+    ns1:title "Antituberkulotika"@cs,
+        "Antitubercular agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0508507> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interfere with FATTY ACID SYNTHASE resulting in a reduction of FATTY ACIDS. This is a target mechanism in humans of some ANTINEOPLASTIC AGENTS and ANTI-OBESITY AGENTS and of  some ANTI-INFECTIVE AGENTS which interfere with CELL WALL and CELL MEMBRANE formation.     "@en ;
+    ns1:title "Inhibitory syntézy mastných kyselin"@cs,
+        "Fatty acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIDRAZID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J04AC01" ;
+    ns1:title "NIDRAZID"@cs .
+
+

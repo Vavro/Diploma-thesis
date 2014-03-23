@@ -1,0 +1,190 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G02BA03> a ns1:ATCConcept ;
+    skos:notation "G02BA03" ;
+    skos:prefLabel "Nitroděložní tělísko s progestinem"@cs,
+        "Plastic IUD with progestogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AA07> a ns1:ATCConcept ;
+    skos:notation "G03AA07" ;
+    skos:prefLabel "Levonorgestrel a estrogen"@cs,
+        "Levonorgestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AB03> a ns1:ATCConcept ;
+    skos:notation "G03AB03" ;
+    skos:prefLabel "Levonorgestrel a estrogen"@cs,
+        "Levonorgestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03AD01> a ns1:ATCConcept ;
+    skos:notation "G03AD01" ;
+    skos:prefLabel "Levonorgestrel"@cs,
+        "Levonorgestrel"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03FB09> a ns1:ATCConcept ;
+    skos:notation "G03FB09" ;
+    skos:prefLabel "Levonorgestrel a estrogen"@cs,
+        "Levonorgestrel and estrogen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025734> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001748",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001869",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003091",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A synthetic progestational hormone with actions similar to those of PROGESTERONE and about twice as potent as its racemic or (+-)-isomer (NORGESTREL). It is used for contraception, control of menstrual disorders, and treatment of endometriosis.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ESCAPELLE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ETHINYLESTRADIOL-LEVONORGESTREL-MIBE-30-MCG-150-MCG-POTAHOVANE-TBL-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GRAVISTAT-125",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KLIMONORM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOETTE-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MICROGYNON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MINISISTON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRENA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/POSTINOR-2",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RAMONNA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL-21-7",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRIQUILAR" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005103",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001608",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001993" ;
+    ns1:title "Levonorgestrel"@cs,
+        "Levonorgestrel"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005103> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances or agents with contraceptive activity in females. Use for female contraceptive agents in general or for which there is no specific heading.     "@en ;
+    ns1:title "Antikoncepční látky ženské"@cs,
+        "Contraceptive agents, female"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120> a ns1:PharmacologicalAction ;
+    ns1:description "Oral contraceptives which owe their effectiveness to synthetic preparations.     "@en ;
+    ns1:title "Antikoncepční látky orální syntetické"@cs,
+        "Contraceptives, oral, synthetic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001608> a ns1:DiseaseOrFinding ;
+    ns1:description "An increase in the number of cells in a tissue or organ without tumor formation. It differs from HYPERTROPHY, which is an increase in bulk without an increase in the number of cells.     "@en ;
+    ns1:title "Hyperplazie"@cs,
+        "Hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001869> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LIVER.     "@en ;
+    ns1:title "Nádory jater"@cs,
+        "Liver neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001993> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive uterine bleeding during MENSTRUATION.     "@en ;
+    ns1:title "Menoragie"@cs,
+        "Menorrhagia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003091> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from blood vessels in the UTERUS, sometimes manifested as vaginal bleeding.     "@en ;
+    ns1:title "Uterus - hemoragie"@cs,
+        "Uterine hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185> a ns1:MechanismOfAction ;
+    ns1:title "Progestational Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072> a ns1:PhysiologicEffect ;
+    ns1:title "Hypothalamic Endocrine Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ESCAPELLE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AD01" ;
+    ns1:title "ESCAPELLE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETHINYLESTRADIOL-LEVONORGESTREL-MIBE-30-MCG-150-MCG-POTAHOVANE-TBL-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "ETHINYLESTRADIOL/LEVONORGESTREL MIBE 30 MCG/150 MCG POTAHOVANÉ TBL."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRAVISTAT-125> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "GRAVISTAT 125"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLIMONORM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03FB09" ;
+    ns1:title "KLIMONORM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOETTE-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "LOETTE POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MICROGYNON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "MICROGYNON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINISISTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AA07" ;
+    ns1:title "MINISISTON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRENA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G02BA03" ;
+    ns1:title "MIRENA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/POSTINOR-2> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AD01" ;
+    ns1:title "POSTINOR-2"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RAMONNA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AD01" ;
+    ns1:title "RAMONNA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRI-REGOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRI-REGOL-21-7> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRI-REGOL 21+7"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRIQUILAR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AB03" ;
+    ns1:title "TRIQUILAR"@cs .
+
+

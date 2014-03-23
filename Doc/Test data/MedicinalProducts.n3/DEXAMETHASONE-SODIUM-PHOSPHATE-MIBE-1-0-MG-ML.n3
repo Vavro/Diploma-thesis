@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01B> a ns1:ATCConcept ;
+    dcterms:title "Protizánětlivá léčiva"@cs,
+        "ANTIINFLAMMATORY AGENTS"@en ;
+    skos:notation "S01B" .
+
+<http://linked.opendata.cz/resource/ATC/S01BA> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, samotné"@cs,
+        "Corticosteroids, plain"@en ;
+    skos:notation "S01BA" .
+
+<http://linked.opendata.cz/resource/ATC/S01BA01> a ns1:ATCConcept ;
+    dcterms:title "Dexamethason"@cs,
+        "Dexamethasone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S01",
+        "http://linked.opendata.cz/resource/ATC/S01B",
+        "http://linked.opendata.cz/resource/ATC/S01BA" ;
+    skos:notation "S01BA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0045153> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Dexamethasone sodium phosphate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166761> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA01" ;
+    ns1:hasIndication """Steroidní léčba neinfekčního zánětlivého onemocnění spojivky, rohovky a předního segmentu oka.
+Epitel rohovky musí být intaktní.
+Tento přípravek se může používat pouze pod pečlivým dohledem oftalmologa.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC142432_doc" ;
+    ns1:hasStrength "1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML/5MG"@cs ;
+    ns1:title "DEXAMETHASONE SODIUM PHOSPHATE MIBE 1,0 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166762> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA01" ;
+    ns1:hasIndication """Steroidní léčba neinfekčního zánětlivého onemocnění spojivky, rohovky a předního segmentu oka.
+Epitel rohovky musí být intaktní.
+Tento přípravek se může používat pouze pod pečlivým dohledem oftalmologa.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "3X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC142432_doc" ;
+    ns1:hasStrength "1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 3X5ML/5MG"@cs ;
+    ns1:title "DEXAMETHASONE SODIUM PHOSPHATE MIBE 1,0 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166763> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA01" ;
+    ns1:hasIndication """Steroidní léčba neinfekčního zánětlivého onemocnění spojivky, rohovky a předního segmentu oka.
+Epitel rohovky musí být intaktní.
+Tento přípravek se může používat pouze pod pečlivým dohledem oftalmologa.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "6X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC142432_doc" ;
+    ns1:hasStrength "1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 6X5ML/5MG"@cs ;
+    ns1:title "DEXAMETHASONE SODIUM PHOSPHATE MIBE 1,0 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEXAMETHASONE-SODIUM-PHOSPHATE-MIBE-1-0-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0045153" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166761",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166762",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0166763" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "DEXAMETHASONE SODIUM PHOSPHATE MIBE 1,0 MG/ML"@cs .
+
+

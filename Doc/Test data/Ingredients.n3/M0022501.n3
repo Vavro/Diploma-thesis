@@ -1,0 +1,127 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AG01> a ns1:ATCConcept ;
+    skos:notation "N03AG01" ;
+    skos:prefLabel "Kyselina valproová"@cs,
+        "Valproic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022501> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A fatty acid with anticonvulsant properties used in the treatment of epilepsy. The mechanisms of its therapeutic actions are not well understood. It may act by increasing GAMMA-AMINOBUTYRIC ACID levels in the brain or by altering the properties of voltage dependent sodium channels.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000138",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000204" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-150",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-300",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DEPAKINE-CHRONO-500-MG-SECABLE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALPROAT-CHRONO-SANDOZ-300-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALPROAT-CHRONO-SANDOZ-500-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027993",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028007" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009325" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000363",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000553",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001131",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003515" ;
+    ns1:title "Kyselina valproová"@cs,
+        "Valproic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027993> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used for their pharmacological actions on GABAergic systems. GABAergic agents include agonists, antagonists, degradation or uptake inhibitors, depleters, precursors, and modulators of receptor function.     "@en ;
+    ns1:title "Gaba látky"@cs,
+        "Gaba agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028007> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat bipolar disorders or mania associated with other affective disorders.     "@en ;
+    ns1:title "Antimanika"@cs,
+        "Antimanic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000363> a ns1:DiseaseOrFinding ;
+    ns1:description "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)     "@en ;
+    ns1:title "Alzheimerova nemoc"@cs,
+        "Alzheimer disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000553> a ns1:DiseaseOrFinding ;
+    ns1:description "A major affective disorder marked by severe mood swings (manic or major depressive episodes) and a tendency to remission and recurrence.     "@en ;
+    ns1:title "Bipolární poruchy"@cs,
+        "Bipolar disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001131> a ns1:DiseaseOrFinding ;
+    ns1:description "A childhood seizure disorder characterized by rhythmic electrical brain discharges of generalized onset. Clinical features include a sudden cessation of ongoing activity usually without loss of postural tone. Rhythmic blinking of the eyelids or lip smacking frequently accompanies the SEIZURES. The usual duration is 5-10 seconds, and multiple episodes may occur daily. Juvenile absence epilepsy is characterized by the juvenile onset of absence seizures and an increased incidence of myoclonus and tonic-clonic seizures. (Menkes, Textbook of Child Neurology, 5th ed, p736)     "@en ;
+    ns1:title "Epilepsie petit mal"@cs,
+        "Epilepsy, absence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003515> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent partial seizures marked by impairment of cognition. During the seizure the individual may experience a wide variety of psychic phenomenon including formed hallucinations, illusions, deja vu, intense emotional feelings, confusion, and spatial disorientation. Focal motor activity, sensory alterations and AUTOMATISM may also occur. Complex partial seizures often originate from foci in one or both temporal lobes. The etiology may be idiopathic (cryptogenic partial complex epilepsy) or occur as a secondary manifestation of a focal cortical lesion (symptomatic partial complex epilepsy). (From Adams et al., Principles of Neurology, 6th ed, pp317-8)     "@en ;
+    ns1:title "Epilepsie komplexní parciální"@cs,
+        "Epilepsy, complex partial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000138> a ns1:MechanismOfAction ;
+    ns1:title "GABA A Receptor Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000204> a ns1:MechanismOfAction ;
+    ns1:title "GABA B Receptor Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009325> a ns1:PhysiologicEffect ;
+    ns1:title "Increased GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "CONVULEX 150"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "CONVULEX 300"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONVULEX-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "CONVULEX 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEPAKINE-CHRONO-500-MG-SECABLE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "DEPAKINE CHRONO 500 MG SÉCABLE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALPROAT-CHRONO-SANDOZ-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "VALPROAT CHRONO SANDOZ 300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALPROAT-CHRONO-SANDOZ-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AG01" ;
+    ns1:title "VALPROAT CHRONO SANDOZ 500 MG"@cs .
+
+

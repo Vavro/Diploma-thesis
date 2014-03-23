@@ -1,0 +1,50 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidiabetika, kromě inzulinů"@cs,
+        "Other blood glucose lowering drugs, excl. insulins"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A10",
+        "http://linked.opendata.cz/resource/ATC/A10B" ;
+    skos:notation "A10BX" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0549617> a ns1:Ingredient ;
+    ns1:title "Lixisenatide"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193832> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "1X3ML+1X3ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Subkutánní podání"@cs ;
+    ns1:hasTitleSupplement "INJ SOL 1X3ML+1X3ML"@cs ;
+    ns1:title "LYXUMIA 10 MCG + 20 MCG INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LYXUMIA-10-MCG---20-MCG-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BX" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0549617" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193832" ;
+    ns1:title "LYXUMIA 10 MCG + 20 MCG INJEKČNÍ ROZTOK"@cs .
+
+

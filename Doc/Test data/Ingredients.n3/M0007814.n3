@@ -1,0 +1,57 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J04AK02> a ns1:ATCConcept ;
+    skos:notation "J04AK02" ;
+    skos:prefLabel "Ethambutol"@cs,
+        "Ethambutol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007814> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002228" ;
+    ns1:description "An antitubercular agent that inhibits the transfer of mycolic acids into the cell wall of the tubercle bacillus. It may also inhibit the synthesis of spermidine in mycobacteria. The action is usually bactericidal, and the drug can penetrate human cell membranes to exert its lethal effect. (From Smith and Reynard, Textbook of Pharmacology, 1992, p863)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/SURAL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002072",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003030" ;
+    ns1:title "Ethambutol"@cs,
+        "Ethambutol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of tuberculosis. They are divided into two main classes: \"first-line\" agents, those with the greatest efficacy and acceptable degrees of toxicity used successfully in the great majority of cases; and \"second-line\" drugs used in drug-resistant cases or those in which some other patient-related condition has compromised the effectiveness of primary therapy.     "@en ;
+    ns1:title "Antituberkulotika"@cs,
+        "Antitubercular agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002072> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with nontuberculous mycobacteria (atypical mycobacteria): M. kansasii, M. marinum, M. scrofulaceum, M. flavescens, M. gordonae, M. obuense, M. gilvum, M. duvali, M. szulgai, M. intracellulare (see MYCOBACTERIUM AVIUM COMPLEX;), M. xenopi (littorale), M. ulcerans, M. buruli, M. terrae, M. fortuitum (minetti, giae), M. chelonae.     "@en ;
+    ns1:title "Mykobaktérie atypické - infekce"@cs,
+        "Mycobacterium infections, nontuberculous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002228> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the optic nerve. Commonly associated conditions include autoimmune disorders such as MULTIPLE SCLEROSIS, infections, and granulomatous diseases. Clinical features include retro-orbital pain that is aggravated by eye movement, loss of color vision, and contrast sensitivity that may progress to severe visual loss, an afferent pupillary defect (Marcus-Gunn pupil), and in some instances optic disc hyperemia and swelling. Inflammation may occur in the portion of the nerve within the globe (neuropapillitis or anterior optic neuritis) or the portion behind the globe (retrobulbar neuritis or posterior optic neuritis).     "@en ;
+    ns1:title "Nervus opticus - neuritida"@cs,
+        "Optic neuritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SURAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J04AK02" ;
+    ns1:title "SURAL"@cs .
+
+

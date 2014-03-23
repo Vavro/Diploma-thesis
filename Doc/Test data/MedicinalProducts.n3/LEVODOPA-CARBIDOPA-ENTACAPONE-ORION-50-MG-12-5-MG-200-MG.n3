@@ -1,0 +1,159 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N04> a ns1:ATCConcept ;
+    dcterms:title "Antiparkinsonika"@cs,
+        "ANTI-PARKINSON DRUGS"@en ;
+    skos:notation "N04" .
+
+<http://linked.opendata.cz/resource/ATC/N04B> a ns1:ATCConcept ;
+    dcterms:title "Dopaminergní léčiva"@cs,
+        "DOPAMINERGIC AGENTS"@en ;
+    skos:notation "N04B" .
+
+<http://linked.opendata.cz/resource/ATC/N04BA> a ns1:ATCConcept ;
+    dcterms:title "Dopa a její deriváty"@cs,
+        "Dopa and dopa derivatives"@en ;
+    skos:notation "N04BA" .
+
+<http://linked.opendata.cz/resource/ATC/N04BA03> a ns1:ATCConcept ;
+    dcterms:title "Levodopa, inhibitor dekarboxylázy a inhibitor COMT"@cs,
+        "LEVODOPA, DECARBOXYLASE INHIBITOR AND COMT INH."@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N04",
+        "http://linked.opendata.cz/resource/ATC/N04B",
+        "http://linked.opendata.cz/resource/ATC/N04BA" ;
+    skos:notation "N04BA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003345> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001969",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "An inhibitor of DOPA DECARBOXYLASE, preventing conversion of LEVODOPA to dopamine. It is used in PARKINSON DISEASE to reduce peripheral adverse effects of LEVODOPA. It has no antiparkinson actions by itself.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Karbidopa"@cs,
+        "Carbidopa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012434> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001969",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "The naturally occurring form of DIHYDROXYPHENYLALANINE and the immediate precursor of DOPAMINE. Unlike dopamine itself, it can be taken orally and crosses the blood-brain barrier. It is rapidly taken up by dopaminergic neurons and converted to DOPAMINE. It is used for the treatment of PARKINSONIAN DISORDERS and is usually given with agents that inhibit its conversion to dopamine outside of the central nervous system.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499" ;
+    ns1:title "Levodopa"@cs,
+        "Levodopa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0193491> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:title "Entacapone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the treatment of Parkinson's disease. The most commonly used drugs act on the dopaminergic system in the striatum and basal ganglia or are centrally acting muscarinic antagonists.     "@en ;
+    ns1:title "Antiparkinsonika"@cs,
+        "Antiparkinson agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499> a ns1:PharmacologicalAction ;
+    ns1:description "Any drugs that are used for their effects on dopamine receptors, on the life cycle of dopamine, or on the survival of dopaminergic neurons.     "@en ;
+    ns1:title "Dopaminové látky"@cs,
+        "Dopamine agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001969> a ns1:DiseaseOrFinding ;
+    ns1:title "Melanom"@cs,
+        "Melanoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168688> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 10"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168689> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168690> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 100"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168691> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "130"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 130"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168692> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "175"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 175"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168693> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "250"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 250"@cs ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LEVODOPA-CARBIDOPA-ENTACAPONE-ORION-50-MG-12-5-MG-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003345",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012434",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0193491" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168688",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168689",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168690",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168691",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168692",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168693" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "LEVODOPA/CARBIDOPA/ENTACAPONE ORION 50 MG/12,5 MG/200 MG"@cs .
+
+

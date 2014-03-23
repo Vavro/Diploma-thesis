@@ -1,0 +1,111 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01BA07> a ns1:ATCConcept ;
+    skos:notation "S01BA07" ;
+    skos:prefLabel "Fluorometholon"@cs,
+        "Fluorometholone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008628> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000838",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000851",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003326" ;
+    ns1:description "A glucocorticoid employed, usually as eye drops, in the treatment of allergic and inflammatory conditions of the eye. It has also been used topically in the treatment of various skin disorders. (From Martindale, The Extra Pharmacopoeia, 30th ed, p732)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/EFFLUMIDEX-LIQUIFILM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLAREX-1-MG-ML-OCNI-KAPKY--SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROPOS" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687" ;
+    ns1:title "Fluorometholon"@cs,
+        "Fluorometholone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat allergic reactions. Most of these drugs act by preventing the release of inflammatory mediators or inhibiting the actions of released mediators on their target cells. (From AMA Drug Evaluations Annual, 1994, p475)     "@en ;
+    ns1:title "Antialergika"@cs,
+        "Anti-allergic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000838> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation, often mild, of the conjunctiva caused by a variety of viral agents. Conjunctival involvement may be part of a systemic infection.     "@en ;
+    ns1:title "Konjunktivitida virová"@cs,
+        "Conjunctivitis, viral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000851> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the cornea.     "@en ;
+    ns1:title "Rohovka - nemoci"@cs,
+        "Corneal diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003326> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection by a variety of fungi, usually through four possible mechanisms: superficial infection producing conjunctivitis, keratitis, or lacrimal obstruction; extension of infection from neighboring structures - skin, paranasal sinuses, nasopharynx; direct introduction during surgery or accidental penetrating trauma; or via the blood or lymphatic routes in patients with underlying mycoses.     "@en ;
+    ns1:title "Oční infekce mykotické"@cs,
+        "Eye infections, fungal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134> a ns1:MechanismOfAction ;
+    ns1:title "Lipoxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EFFLUMIDEX-LIQUIFILM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:title "EFFLUMIDEX LIQUIFILM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLAREX-1-MG-ML-OCNI-KAPKY--SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:title "FLAREX 1 MG/ML OČNÍ KAPKY, SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUCON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:title "FLUCON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROPOS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01BA07" ;
+    ns1:title "FLUOROPOS"@cs .
+
+

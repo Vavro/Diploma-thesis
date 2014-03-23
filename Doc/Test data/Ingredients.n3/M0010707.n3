@@ -1,0 +1,276 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06BB53> a ns1:ATCConcept ;
+    skos:notation "D06BB53" ;
+    skos:prefLabel "Aciklovir, kombinace"@cs,
+        "Aciclovir, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/D07AB02> a ns1:ATCConcept ;
+    skos:notation "D07AB02" ;
+    skos:prefLabel "Hydrokortison-butyrát"@cs,
+        "Hydrocortisone butyrate"@en .
+
+<http://linked.opendata.cz/resource/ATC/D07CA01> a ns1:ATCConcept ;
+    skos:notation "D07CA01" ;
+    skos:prefLabel "Hydrokortison a antibiotika"@cs,
+        "Hydrocortisone and antibiotics"@en .
+
+<http://linked.opendata.cz/resource/ATC/H02AB09> a ns1:ATCConcept ;
+    skos:notation "H02AB09" ;
+    skos:prefLabel "Hydrokortison"@cs,
+        "Hydrocortisone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010707> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000945",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002766",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003034",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003547" ;
+    ns1:description "The main glucocorticoid secreted by the ADRENAL CORTEX. Its synthetic counterpart is used, either as an injection or topically, in the treatment of inflammation, allergy, collagen diseases, asthma, adrenocortical deficiency, shock, and some neoplastic conditions.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-10-MG-JENAPHARM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-VALEANT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-VUAB-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-0-1-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-0-1--LOTION",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-CRELO-0-1-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-LIPOCREAM-0-1-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCORT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PLENADREN-20-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PLENADREN-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-DUO-50-MG-G-10-MG-G-KREM" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000326",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000328",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001190",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001275",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001410",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001493",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001794",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002513",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002632",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002682",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002728",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002821",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003576",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010958" ;
+    ns1:title "Hydrokortison"@cs,
+        "Hydrocortisone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000326> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions in which the production of adrenal CORTICOSTEROIDS falls below the requirement of the body. Adrenal insufficiency can be caused by defects in the ADRENAL GLANDS, the PITUITARY GLAND, or the HYPOTHALAMUS.     "@en ;
+    ns1:title "Insuficience nadledvin"@cs,
+        "Adrenal insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000328> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of inherited disorders of the ADRENAL GLANDS, caused by enzyme defects in the synthesis of cortisol (HYDROCORTISONE) and/or ALDOSTERONE leading to accumulation of precursors for ANDROGENS. Depending on the hormone imbalance, congenital adrenal hyperplasia can be classified as salt-wasting, hypertensive, virilizing, or feminizing. Defects in STEROID 21-HYDROXYLASE; STEROID 11-BETA-HYDROXYLASE; STEROID 17-ALPHA-HYDROXYLASE; 3-beta-hydroxysteroid dehydrogenase (3-HYDROXYSTEROID DEHYDROGENASES); TESTOSTERONE 5-ALPHA-REDUCTASE; or steroidogenic acute regulatory protein; among others, underlie these disorders.     "@en ;
+    ns1:title "Nadledviny - hyperplazie kongenitální"@cs,
+        "Adrenal hyperplasia, congenital"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000945> a ns1:DiseaseOrFinding ;
+    ns1:description "Superficial infections of the skin or its appendages by any of various fungi.     "@en ;
+    ns1:title "Dermatomykózy"@cs,
+        "Dermatomycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001190> a ns1:DiseaseOrFinding ;
+    ns1:title "Obličejové dermatózy"@cs,
+        "Facial dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001275> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases of the foot, general or unspecified.     "@en ;
+    ns1:title "Noha - dermatózy"@cs,
+        "Foot dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001410> a ns1:DiseaseOrFinding ;
+    ns1:title "Ruka - dermatózy"@cs,
+        "Hand dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001493> a ns1:DiseaseOrFinding ;
+    ns1:description "Swollen veins in the lower part of the RECTUM or ANUS. Hemorrhoids can be inside the anus (internal), under the skin around the anus (external), or protruding from inside to outside of the anus. People with hemorrhoids may or may not exhibit symptoms which include bleeding, itching, and pain.     "@en ;
+    ns1:title "Hemoroidy"@cs,
+        "Hemorrhoids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001794> a ns1:DiseaseOrFinding ;
+    ns1:description "A nonspecific term used to denote any cutaneous lesion or group of lesions, or eruptions of any type on the leg. (From Stedman, 25th ed)     "@en ;
+    ns1:title "Končetiny dolní - dermatózy"@cs,
+        "Leg dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002513> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense chronic itching in the anal area.     "@en ;
+    ns1:title "Pruritus ani"@cs,
+        "Pruritus ani"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002632> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of connective tissue, especially the joints and related structures, characterized by inflammation, degeneration, or metabolic derangement.     "@en ;
+    ns1:title "Revmatické nemoci"@cs,
+        "Rheumatic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002682> a ns1:DiseaseOrFinding ;
+    ns1:title "Skalp - dermatózy"@cs,
+        "Scalp dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002728> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological condition manifested by failure to perfuse or oxygenate vital organs.     "@en ;
+    ns1:title "Šok"@cs,
+        "Shock"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002766> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by ARTHROPODS; HELMINTHS; or other parasites.     "@en ;
+    ns1:title "Kůže - nemoci parazitární"@cs,
+        "Skin diseases, parasitic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003034> a ns1:DiseaseOrFinding ;
+    ns1:description "Tuberculosis of the skin. It includes scrofuloderma and tuberculid, but not LUPUS VULGARIS.     "@en ;
+    ns1:title "Tuberkulóza kůže"@cs,
+        "Tuberculosis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003547> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by viruses.     "@en ;
+    ns1:title "Kůže - nemoci virové"@cs,
+        "Skin diseases, viral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003576> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of a variety of eruptive skin disorders characterized by erythema, oozing, vesiculation, and scaling. Etiology is varied.     "@en ;
+    ns1:title "Kůže - nemoci ekzematózní"@cs,
+        "Skin diseases, eczematous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010958> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal SEX DIFFERENTIATION or congenital DISORDERS OF SEX DEVELOPMENT caused by abnormal levels of steroid hormones expressed by the GONADS or the ADRENAL GLANDS, such as in CONGENITAL ADRENAL HYPERPLASIA and ADRENAL CORTEX NEOPLASMS. Due to abnormal steroid biosynthesis, clinical features include VIRILISM in females; FEMINIZATION in males; or precocious sexual development in children.     "@en ;
+    ns1:title "Adrenogenitální syndrom"@cs,
+        "Adrenogenital syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134> a ns1:MechanismOfAction ;
+    ns1:title "Lipoxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327> a ns1:PhysiologicEffect ;
+    ns1:title "Carbohydrate Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lysosomal Function"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739> a ns1:PhysiologicEffect ;
+    ns1:title "Lipid Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Polymorphonuclear Leukocyte Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Fibroblast Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Capillary Permeability"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-10-MG-JENAPHARM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB09" ;
+    ns1:title "HYDROCORTISON 10 MG JENAPHARM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-VALEANT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB09" ;
+    ns1:title "HYDROCORTISON VALEANT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCORTISON-VUAB-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB09" ;
+    ns1:title "HYDROCORTISON VUAB 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-0-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AB02" ;
+    ns1:title "LOCOID 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-0-1--LOTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AB02" ;
+    ns1:title "LOCOID 0,1% LOTION"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-CRELO-0-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AB02" ;
+    ns1:title "LOCOID CRELO 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOCOID-LIPOCREAM-0-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AB02" ;
+    ns1:title "LOCOID LIPOCREAM 0,1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07CA01" ;
+    ns1:title "PIMAFUCORT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PLENADREN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB09" ;
+    ns1:title "PLENADREN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PLENADREN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H02AB09" ;
+    ns1:title "PLENADREN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOVIRAX-DUO-50-MG-G-10-MG-G-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D06BB53" ;
+    ns1:title "ZOVIRAX DUO 50 MG/G+10 MG/G KRÉM"@cs .
+
+

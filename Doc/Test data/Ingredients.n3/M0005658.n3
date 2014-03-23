@@ -1,0 +1,86 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M03CA01> a ns1:ATCConcept ;
+    skos:notation "M03CA01" ;
+    skos:prefLabel "Dantrolen"@cs,
+        "Dantrolene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0005658> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866" ;
+    ns1:description "Skeletal muscle relaxant that acts by interfering with excitation-contraction coupling in the muscle fiber. It is used in spasticity and other neuromuscular abnormalities. Although the mechanism of action is probably not central, dantrolene is usually grouped with the central muscle relaxants.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000069" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DANTROLEN-I-V-" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014240" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009876" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000722",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000725",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001928",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002052",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002061",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002172",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002794" ;
+    ns1:title "Dantrolen"@cs,
+        "Dantrolene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014240> a ns1:PharmacologicalAction ;
+    ns1:description "A heterogeneous group of drugs used to produce muscle relaxation, excepting the neuromuscular blocking agents. They have their primary clinical and therapeutic uses in the treatment of muscle spasm and immobility associated with strains, sprains, and injuries of the back and, to a lesser degree, injuries to the neck. They have been used also for the treatment of a variety of clinical conditions that have in common only the presence of skeletal muscle hyperactivity, for example, the muscle spasms that can occur in MULTIPLE SCLEROSIS. (From Smith and Reynard, Textbook of Pharmacology, 1991, p358)     "@en ;
+    ns1:title "Myorelaxancia centrální"@cs,
+        "Muscle relaxants, central"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000722> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).     "@en ;
+    ns1:title "Cerebrální infarkt"@cs,
+        "Cerebral infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000725> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of nonprogressive motor disorders caused by chronic brain injuries that originate in the prenatal period, perinatal period, or first few years of life. The four major subtypes are spastic, athetoid, ataxic, and mixed cerebral palsy, with spastic forms being the most common. The motor disorder may range from difficulties with fine motor control to severe spasticity (see MUSCLE SPASTICITY) in all limbs. Spastic diplegia (Little disease) is the most common subtype, and is characterized by spasticity that is more prominent in the legs than in the arms. Pathologically, this condition may be associated with LEUKOMALACIA, PERIVENTRICULAR. (From Dev Med Child Neurol 1998 Aug;40(8):520-7)     "@en ;
+    ns1:title "Mozková obrna"@cs,
+        "Cerebral palsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001928> a ns1:DiseaseOrFinding ;
+    ns1:description "Rapid and excessive rise of temperature accompanied by muscular rigidity following general anesthesia.     "@en ;
+    ns1:title "Maligní hypertermie"@cs,
+        "Malignant hyperthermia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002061> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of muscle hypertonia associated with upper MOTOR NEURON DISEASE. Resistance to passive stretch of a spastic muscle results in minimal initial resistance (a \"free interval\") followed by an incremental increase in muscle tone. Tone increases in proportion to the velocity of stretch. Spasticity is usually accompanied by HYPERREFLEXIA and variable degrees of MUSCLE WEAKNESS. (From Adams et al., Principles of Neurology, 6th ed, p54)     "@en ;
+    ns1:title "Svalová spasticita"@cs,
+        "Muscle spasticity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002172> a ns1:DiseaseOrFinding ;
+    ns1:description "A potentially fatal syndrome associated primarily with the use of neuroleptic agents (see ANTIPSYCHOTIC AGENTS) which are in turn associated with dopaminergic receptor blockade (see RECEPTORS, DOPAMINE) in the BASAL GANGLIA and HYPOTHALAMUS, and sympathetic dysregulation. Clinical features include diffuse MUSCLE RIGIDITY; TREMOR; high FEVER; diaphoresis; labile blood pressure; cognitive dysfunction; and autonomic disturbances. Serum CPK level elevation and a leukocytosis may also be present. (From Adams et al., Principles of Neurology, 6th ed, p1199; Psychiatr Serv 1998 Sep;49(9):1163-72)     "@en ;
+    ns1:title "Neuroleptický maligní syndrom"@cs,
+        "Neuroleptic malignant syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002794> a ns1:DiseaseOrFinding ;
+    ns1:description "Penetrating and non-penetrating injuries to the spinal cord resulting from traumatic external forces (e.g., WOUNDS, GUNSHOT; WHIPLASH INJURIES; etc.).     "@en ;
+    ns1:title "Mícha - poranění"@cs,
+        "Spinal cord injuries"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000069> a ns1:MechanismOfAction ;
+    ns1:title "Calcium Channel Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009876> a ns1:PhysiologicEffect ;
+    ns1:title "Striated Muscle Metabolic Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DANTROLEN-I-V-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M03CA01" ;
+    ns1:title "DANTROLEN I.V."@cs .
+
+

@@ -1,0 +1,69 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B02AA02> a ns1:ATCConcept ;
+    skos:notation "B02AA02" ;
+    skos:prefLabel "Kyselina tranexamová"@cs,
+        "Tranexamic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021767> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000002846",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002936",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003130" ;
+    ns1:description "Antifibrinolytic hemostatic used in severe hemorrhage.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010264" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/EXACYL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001393" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000175632" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001483" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000575",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002846" ;
+    ns1:title "Kyselina tranexamová"@cs,
+        "Tranexamic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001393> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that prevent fibrinolysis or lysis of a blood clot or thrombus. Several endogenous antiplasmins are known. The drugs are used to control massive hemorrhage and in other coagulation disorders.     "@en ;
+    ns1:title "Antifibrinolytika"@cs,
+        "Antifibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:description "Hemorrhagic and thrombotic disorders that occur as a consequence of abnormalities in blood coagulation due to a variety of factors such as COAGULATION PROTEIN DISORDERS; BLOOD PLATELET DISORDERS; BLOOD PROTEIN DISORDERS or nutritional conditions.     "@en ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001483> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from the blood vessels of the mouth, which may occur as a result of injuries to the mouth, accidents in oral surgery, or diseases of the gums.     "@en ;
+    ns1:title "Ústa - hemoragie"@cs,
+        "Oral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002846> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding into the intracranial or spinal SUBARACHNOID SPACE, most resulting from INTRACRANIAL ANEURYSM rupture. It can occur after traumatic injuries (SUBARACHNOID HEMORRHAGE, TRAUMATIC). Clinical features include HEADACHE; NAUSEA; VOMITING, nuchal rigidity, variable neurological deficits and reduced mental status.     "@en ;
+    ns1:title "Subarachnoidální hemoragie"@cs,
+        "Subarachnoid hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002936> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation and development of a thrombus or blood clot in the blood vessel.     "@en ;
+    ns1:title "Trombóza"@cs,
+        "Thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003130> a ns1:DiseaseOrFinding ;
+    ns1:description "Visual impairments limiting one or more of the basic functions of the eye: visual acuity, dark adaptation, color vision, or peripheral vision. These may result from EYE DISEASES; OPTIC NERVE DISEASES; VISUAL PATHWAY diseases; OCCIPITAL LOBE diseases; OCULAR MOTILITY DISORDERS; and other conditions (From Newell, Ophthalmology: Principles and Concepts, 7th ed, p132).     "@en ;
+    ns1:title "Zrak - poruchy"@cs,
+        "Vision disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010264> a ns1:MechanismOfAction ;
+    ns1:title "Plasmin Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000175632> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Fibrinolysis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXACYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B02AA02" ;
+    ns1:title "EXACYL"@cs .
+
+

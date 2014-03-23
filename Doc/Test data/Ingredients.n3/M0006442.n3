@@ -1,0 +1,56 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V09CA02> a ns1:ATCConcept ;
+    skos:notation "V09CA02" ;
+    skos:prefLabel "Technecium-(99mTc) sukcimer"@cs,
+        "Technetium (99mTc) succimer"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006442> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A mercaptodicarboxylic acid used as an antidote to heavy metal poisoning because it forms strong chelates with them.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000087" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/TECHNESCAN-DMSA" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004002" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000004085" ;
+    ns1:title "Kyselina dimerkaptojantarová"@cs,
+        "Succimer"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390> a ns1:PharmacologicalAction ;
+    ns1:description "Agents counteracting or neutralizing the action of POISONS.     "@en ;
+    ns1:title "Antidota"@cs,
+        "Antidotes"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004002> a ns1:PharmacologicalAction ;
+    ns1:description "Chemicals that bind to and remove ions from solutions. Many chelating agents function through the formation of COORDINATION COMPLEXES with METALS.     "@en ;
+    ns1:title "Chelátotvorné látky"@cs,
+        "Chelating agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004085> a ns1:DiseaseOrFinding ;
+    ns1:description "Neurologic disorders occurring in children following lead exposure. The most frequent manifestation of childhood lead toxicity is an encephalopathy associated with chronic ingestion of lead that usually presents between the ages of 1 and 3 years. Clinical manifestations include behavioral changes followed by lethargy; CONVULSIONS; HALLUCINATIONS; DELIRIUM; ATAXIA; and vomiting. Elevated intracranial pressure (HYPERTENSION, INTRACRANIAL) and CEREBRAL EDEMA may occur. (From Adams et al., Principles of Neurology, 6th ed, p1210-2)     "@en ;
+    ns1:title "Otrava olovem v dětství - nervový systém"@cs,
+        "Lead poisoning, nervous system, childhood"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000087> a ns1:MechanismOfAction ;
+    ns1:title "Chelating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925> a ns1:PhysiologicEffect ;
+    ns1:title "Unknown Physiological Effect"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TECHNESCAN-DMSA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V09CA02" ;
+    ns1:title "TECHNESCAN DMSA"@cs .
+
+

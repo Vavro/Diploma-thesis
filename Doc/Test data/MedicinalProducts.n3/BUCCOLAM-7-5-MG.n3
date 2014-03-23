@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N03> a ns1:ATCConcept ;
+    dcterms:title "Antiepileptika"@cs,
+        "ANTIEPILEPTICS"@en ;
+    skos:notation "N03" .
+
+<http://linked.opendata.cz/resource/ATC/N03A> a ns1:ATCConcept ;
+    dcterms:title "Antiepileptika"@cs,
+        "ANTIEPILEPTICS"@en ;
+    skos:notation "N03A" .
+
+<http://linked.opendata.cz/resource/ATC/N03AE> a ns1:ATCConcept ;
+    dcterms:title "Benzodiazepinové deriváty"@cs,
+        "Benzodiazepine derivatives"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N03",
+        "http://linked.opendata.cz/resource/ATC/N03A" ;
+    skos:notation "N03AE" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0353521> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093" ;
+    ns1:title "Midazolam hydrochloride"@cs,
+        "Midazolam hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that alleviate ANXIETY, tension, and ANXIETY DISORDERS, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions. ADRENERGIC BETA-ANTAGONISTS are commonly used in the symptomatic treatment of anxiety but are not included here.     "@en ;
+    ns1:title "Trankvilizéry malé"@cs,
+        "Anti-anxiety agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168504> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AE" ;
+    ns1:hasIndicationGroup "ANTIEPILEPTICA, ANTICONVULSIVA"@cs ;
+    ns1:hasPackagingSize "4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasStrength "7.5MG/1.5ML"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM SOL BUC 4X1.5ML"@cs ;
+    ns1:title "BUCCOLAM 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUCCOLAM-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AE" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0353521" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168504" ;
+    ns1:title "BUCCOLAM 7,5 MG"@cs .
+
+

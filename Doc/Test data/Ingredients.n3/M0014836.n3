@@ -1,0 +1,219 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N07BA01> a ns1:ATCConcept ;
+    skos:notation "N07BA01" ;
+    skos:prefLabel "Nikotin"@cs,
+        "Nicotine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014836> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000406",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000469",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002905",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010308" ;
+    ns1:description "Nicotine is highly toxic alkaloid. It is the prototypical agonist at nicotinic cholinergic receptors where it dramatically stimulates neurons and ultimately blocks synaptic transmission. Nicotine is also important medically because of its presence in tobacco smoke.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000143" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-CLASSIC-GUM-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-CLASSIC-GUM-4-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-FRESHFRUIT-GUM-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-FRESHFRUIT-GUM-4-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-ICEMINT-GUM-2-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-ICEMINT-GUM-4-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INHALATOR-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INHALATOR-15-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-10-MG-16-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-15-MG-16-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-25-MG-16-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-2-MG-LISOVANE-PASTILKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-4-MG-LISOVANE-PASTILKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-AROMA-2-MG-LISOVANE-PASTILKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-AROMA-4-MG-LISOVANE-PASTILKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-SPRAY-1-MG-DAVKA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-14-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-21-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-7-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINI-1-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINI-4-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINT-2-5-MG-ORODISPERGOVATELNY-FILM" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008986",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028051" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009178",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009393",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009427",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009494" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002855" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002962" ;
+    ns1:title "Nikotin"@cs,
+        "Nicotine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008986> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that mimic neural transmission by stimulation of the nicotinic receptors on postganglionic autonomic neurons. Drugs that indirectly augment ganglionic transmission by increasing the release or slowing the breakdown of acetylcholine or by non-nicotinic effects on postganglionic neurons are not included here nor are the nonspecific cholinergic agonists.     "@en ;
+    ns1:title "Gangliová stimulancia"@cs,
+        "Ganglionic stimulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028051> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and activate nicotinic cholinergic receptors (RECEPTORS, NICOTINIC). Nicotinic agonists act at postganglionic nicotinic receptors, at neuroeffector junctions in the peripheral nervous system, and at nicotinic receptors in the central nervous system. Agents that function as neuromuscular depolarizing blocking agents are included here because they activate nicotinic receptors, although they are used clinically to block nicotinic transmission.     "@en ;
+    ns1:title "Receptory nikotinové - agonisté"@cs,
+        "Nicotinic agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000469> a ns1:DiseaseOrFinding ;
+    ns1:description "Any disturbances of the normal rhythmic beating of the heart or MYOCARDIAL CONTRACTION. Cardiac arrhythmias can be classified by the abnormalities in HEART RATE, disorders of electrical impulse generation, or impulse conduction.     "@en ;
+    ns1:title "Arytmie srdeční"@cs,
+        "Arrhythmias, cardiac"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002855> a ns1:DiseaseOrFinding ;
+    ns1:description "Physiological and psychological symptoms associated with withdrawal from the use of a drug after prolonged administration or habituation. The concept includes withdrawal from smoking or drinking, as well as withdrawal from an administered drug.     "@en ;
+    ns1:title "Abstinenční syndrom"@cs,
+        "Substance withdrawal syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002905> a ns1:DiseaseOrFinding ;
+    ns1:description "A variety of conditions affecting the anatomic and functional characteristics of the temporomandibular joint. Factors contributing to the complexity of temporomandibular diseases are its relation to dentition and mastication and the symptomatic effects in other areas which account for referred pain to the joint and the difficulties in applying traditional diagnostic procedures to temporomandibular joint pathology where tissue is rarely obtained and x-rays are often inadequate or nonspecific. Common diseases are developmental abnormalities, trauma, subluxation, luxation, arthritis, and neoplasia. (From Thoma's Oral Pathology, 6th ed, pp577-600)     "@en ;
+    ns1:title "Temporomandibulární kloub - nemoci"@cs,
+        "Temporomandibular joint disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002962> a ns1:DiseaseOrFinding ;
+    ns1:description "Tobacco used to the detriment of a person's health or social functioning. Tobacco dependence is included.     "@en ;
+    ns1:title "Poruchy vyvolané užíváním tabáku"@cs,
+        "Tobacco use disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010308> a ns1:DiseaseOrFinding ;
+    ns1:title "Current non-smoker"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000143> a ns1:MechanismOfAction ;
+    ns1:title "Cholinergic Nicotinic Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009178> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009393> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Medullary Respiratory Drive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009427> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Muscular System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009494> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Peripheral Nervous System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-CLASSIC-GUM-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE CLASSIC GUM 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-CLASSIC-GUM-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE CLASSIC GUM 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-FRESHFRUIT-GUM-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE FRESHFRUIT GUM 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-FRESHFRUIT-GUM-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE FRESHFRUIT GUM 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-ICEMINT-GUM-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE ICEMINT GUM 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-ICEMINT-GUM-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE ICEMINT GUM 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INHALATOR-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE INHALÁTOR 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INHALATOR-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE INHALÁTOR 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-10-MG-16-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE INVISIPATCH 10 MG/16 H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-15-MG-16-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE INVISIPATCH 15 MG/16 H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-INVISIPATCH-25-MG-16-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE INVISIPATCH 25 MG/16 H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-2-MG-LISOVANE-PASTILKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE MINT 2 MG LISOVANÉ PASTILKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-4-MG-LISOVANE-PASTILKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE MINT 4 MG LISOVANÉ PASTILKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-AROMA-2-MG-LISOVANE-PASTILKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE MINT AROMA 2 MG LISOVANÉ PASTILKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-MINT-AROMA-4-MG-LISOVANE-PASTILKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE MINT AROMA 4 MG LISOVANÉ PASTILKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NICORETTE-SPRAY-1-MG-DAVKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NICORETTE SPRAY 1 MG/DÁVKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-14-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN CLEAR 14 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-21-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN CLEAR 21 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-CLEAR-7-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN CLEAR 7 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINI-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN MINI 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINI-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN MINI 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIQUITIN-MINT-2-5-MG-ORODISPERGOVATELNY-FILM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07BA01" ;
+    ns1:title "NIQUITIN MINT 2,5 MG ORODISPERGOVATELNÝ FILM"@cs .
+
+

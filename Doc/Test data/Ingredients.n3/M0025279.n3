@@ -1,0 +1,255 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L04AD01> a ns1:ATCConcept ;
+    skos:notation "L04AD01" ;
+    skos:prefLabel "Cyklosporin"@cs,
+        "Ciclosporin  "@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025279> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002144",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010216" ;
+    ns1:description "A cyclic undecapeptide from an extract of soil fungi. It is a powerful immunosupressant with a specific action on T-lymphocytes. It is used for the prophylaxis of graft rejection in organ and tissue transplantation. (From Martindale, The Extra Pharmacopoeia, 30th ed).     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-100-MG-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008571",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008573",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008998" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001384" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000939",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000943",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001351",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001353",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001887",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002070",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002155",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003099" ;
+    ns1:title "Cyklosporin"@cs,
+        "Cyclosporine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to treat or prevent skin disorders or for the routine care of skin.     "@en ;
+    ns1:title "Dermatologické látky"@cs,
+        "Dermatologic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000943> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory genetically determined disease of the skin marked by increased ability to form reagin (IgE), with increased susceptibility to allergic rhinitis and asthma, and hereditary disposition to a lowered threshold for pruritus. It is manifested by lichenification, excoriation, and crusting, mainly on the flexural surfaces of the elbow and knee. In infants it is known as infantile eczema.     "@en ;
+    ns1:title "Atopická dermatitida"@cs,
+        "Dermatitis, atopic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001351> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the renal glomeruli (KIDNEY GLOMERULUS) that can be classified by the type of glomerular injuries including antibody deposition, complement activation, cellular proliferation, and glomerulosclerosis. These structural and functional abnormalities usually lead to HEMATURIA; PROTEINURIA; HYPERTENSION; and RENAL INSUFFICIENCY.     "@en ;
+    ns1:title "Glomerulonefritida"@cs,
+        "Glomerulonephritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001353> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinicopathological syndrome or diagnostic term for a type of glomerular injury that has multiple causes, primary or secondary. Clinical features include PROTEINURIA, reduced GLOMERULAR FILTRATION RATE, and EDEMA. Kidney biopsy initially indicates focal segmental glomerular consolidation (hyalinosis) or scarring which can progress to globally sclerotic glomeruli leading to eventual KIDNEY FAILURE.     "@en ;
+    ns1:title "Glomeruloskleróza fokálně segmentální"@cs,
+        "Glomerulosclerosis, focal segmental"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> a ns1:DiseaseOrFinding ;
+    ns1:description "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.     "@en ;
+    ns1:title "Nemoc štěpu proti hostiteli"@cs,
+        "Graft vs host disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001887> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, relapsing, inflammatory, and often febrile multisystemic disorder of connective tissue, characterized principally by involvement of the skin, joints, kidneys, and serosal membranes. It is of unknown etiology, but is thought to represent a failure of the regulatory mechanisms of the autoimmune system. The disease is marked by a wide range of system dysfunctions, an elevated erythrocyte sedimentation rate, and the formation of LE cells in the blood or bone marrow.     "@en ;
+    ns1:title "Systémový lupus erythematodes"@cs,
+        "Lupus erythematosus, systemic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002070> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of neuromuscular transmission characterized by weakness of cranial and skeletal muscles. Autoantibodies directed against acetylcholine receptors damage the motor endplate portion of the NEUROMUSCULAR JUNCTION, impairing the transmission of impulses to skeletal muscles. Clinical manifestations may include diplopia, ptosis, and weakness of facial, bulbar, respiratory, and proximal limb muscles. The disease may remain limited to the ocular muscles. THYMOMA is commonly associated with this condition. (Adams et al., Principles of Neurology, 6th ed, p1459)     "@en ;
+    ns1:title "Myasthenia gravis"@cs,
+        "Myasthenia gravis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002144> a ns1:DiseaseOrFinding ;
+    ns1:description "The pathological mechanisms and forms taken by tissue during degeneration into a neoplasm and its subsequent activity.     "@en ;
+    ns1:title "Nádorové procesy"@cs,
+        "Neoplastic processes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002155> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by severe PROTEINURIA, greater than 3.5 g/day in an average adult. The substantial loss of protein in the urine results in complications such as HYPOPROTEINEMIA; generalized EDEMA; HYPERTENSION; and HYPERLIPIDEMIAS. Diseases associated with nephrotic syndrome generally cause chronic kidney dysfunction.     "@en ;
+    ns1:title "Nefrotický syndrom"@cs,
+        "Nephrotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003099> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of part or all of the uvea, the middle (vascular) tunic of the eye, and commonly involving the other tunics (sclera and cornea, and the retina). (Dorland, 27th ed)     "@en ;
+    ns1:title "Uveitida"@cs,
+        "Uveitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008571> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cytokine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008573> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cytokine Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008998> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased T Lymphocyte Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CICLOSPORIN MYLAN 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CICLOSPORIN MYLAN 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CICLOSPORIN-MYLAN-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CICLOSPORIN MYLAN 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CYCLAID 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CYCLAID 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLAID-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "CYCLAID 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "EQUORAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "EQUORAL 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "EQUORAL 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EQUORAL-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "EQUORAL 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "SANDIMMUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "SANDIMMUN NEORAL 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-100-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "SANDIMMUN NEORAL 100 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "SANDIMMUN NEORAL 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDIMMUN-NEORAL-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L04AD01" ;
+    ns1:title "SANDIMMUN NEORAL 50 MG"@cs .
+
+

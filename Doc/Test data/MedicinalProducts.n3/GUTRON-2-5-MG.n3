@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C01> a ns1:ATCConcept ;
+    dcterms:title "Kardiaka"@cs,
+        "CARDIAC THERAPY"@en ;
+    skos:notation "C01" .
+
+<http://linked.opendata.cz/resource/ATC/C01C> a ns1:ATCConcept ;
+    dcterms:title "Kardiotonika, kromě srdečních glykosidů"@cs,
+        "CARDIAC STIMULANTS EXCL. CARDIAC GLYCOSIDES"@en ;
+    skos:notation "C01C" .
+
+<http://linked.opendata.cz/resource/ATC/C01CA> a ns1:ATCConcept ;
+    dcterms:title "Adrenergní a dopaminergní látky"@cs,
+        "Adrenergic and dopaminergic agents"@en ;
+    skos:notation "C01CA" .
+
+<http://linked.opendata.cz/resource/ATC/C01CA17> a ns1:ATCConcept ;
+    dcterms:title "Midodrin"@cs,
+        "Midodrine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C01",
+        "http://linked.opendata.cz/resource/ATC/C01C",
+        "http://linked.opendata.cz/resource/ATC/C01CA" ;
+    skos:notation "C01CA17" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0352408> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543920" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Midodrine hydrochloride"@cs,
+        "Midodrine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause constriction of the blood vessels.     "@en ;
+    ns1:title "Vazokonstriktory"@cs,
+        "Vasoconstrictor agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543920> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that bind to and activate ADRENERGIC ALPHA-1 RECEPTORS.     "@en ;
+    ns1:title "Alfa-1-adrenergní receptory - agonisté"@cs,
+        "Adrenergic alpha-1 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0006091> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01CA17" ;
+    ns1:hasIndication """Přípravky GUTRON 2,5 mg , GUTRON 5 mg  a GUTRON  1%  se užívají k léčbě ortostatické hypotenze  u dospělých a mladistvých starších 12 let a k adjuvantní terapii při  léčbě inkontinence moči při poruchách funkce sfinkteru u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOMIMETICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110491_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X2.5MG"@cs ;
+    ns1:title "GUTRON 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0006093> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01CA17" ;
+    ns1:hasIndication """Přípravky GUTRON 2,5 mg , GUTRON 5 mg  a GUTRON  1%  se užívají k léčbě ortostatické hypotenze  u dospělých a mladistvých starších 12 let a k adjuvantní terapii při  léčbě inkontinence moči při poruchách funkce sfinkteru u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOMIMETICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC110491_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X2.5MG"@cs ;
+    ns1:title "GUTRON 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GUTRON-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01CA17" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0352408" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0006091",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0006093" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "GUTRON 2,5 MG"@cs .
+
+

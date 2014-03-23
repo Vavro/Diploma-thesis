@@ -1,0 +1,174 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AB05> a ns1:ATCConcept ;
+    skos:notation "B01AB05" ;
+    skos:prefLabel "Enoxaparin"@cs,
+        "Enoxaparin"@en .
+
+<http://linked.opendata.cz/resource/ATC/C05BA01> a ns1:ATCConcept ;
+    skos:notation "C05BA01" ;
+    skos:prefLabel "Organo-heparinoid"@cs,
+        "Organo-heparinoid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010187> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000985",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002932",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004102" ;
+    ns1:description "A highly acidic mucopolysaccharide formed of equal parts of sulfated D-glucosamine and D-glucuronic acid with sulfaminic bridges. The molecular weight ranges from six to twenty thousand. Heparin occurs in and is obtained from liver, lung, mast cells, etc., of vertebrates. Its function is unknown, but it is used to prevent blood clotting in vivo and vitro, in the form of many different salts.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009960",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009963" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE-FORTE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HEPAROID-LECIVA" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004074" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000408",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000722",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000790",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000858",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001460",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002085",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002541",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003062",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003109",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003117" ;
+    ns1:title "Heparin"@cs,
+        "Heparin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that prevent clotting.     "@en ;
+    ns1:title "Antikoagulancia"@cs,
+        "Anticoagulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> a ns1:PharmacologicalAction ;
+    ns1:description "Fibrinolysin or agents that convert plasminogen to FIBRINOLYSIN.     "@en ;
+    ns1:title "Fibrinolytika"@cs,
+        "Fibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000408> a ns1:DiseaseOrFinding ;
+    ns1:description "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Nestabilní angina pectoris"@cs,
+        "Angina, unstable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000722> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).     "@en ;
+    ns1:title "Cerebrální infarkt"@cs,
+        "Cerebral infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000790> a ns1:DiseaseOrFinding ;
+    ns1:description "The fibrous tissue that replaces normal tissue during the process of WOUND HEALING.     "@en ;
+    ns1:title "Jizva"@cs,
+        "Cicatrix"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000858> a ns1:DiseaseOrFinding ;
+    ns1:description "Coagulation of blood in any of the CORONARY VESSELS. The presence of a blood clot (THROMBUS) often leads to MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Koronární trombóza"@cs,
+        "Coronary thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000985> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by procoagulant substances entering the general circulation causing a systemic thrombotic process. The activation of the clotting mechanism may arise from any of a number of disorders. A majority of the patients manifest skin lesions, sometimes leading to PURPURA FULMINANS.     "@en ;
+    ns1:title "Diseminovaná intravaskulární koagulace"@cs,
+        "Disseminated intravascular coagulation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001460> a ns1:DiseaseOrFinding ;
+    ns1:description "A collection of blood outside the BLOOD VESSELS. Hematoma can be localized in an organ, space, or tissue.     "@en ;
+    ns1:title "Hematom"@cs,
+        "Hematoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002541> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.     "@en ;
+    ns1:title "Plicní embolie"@cs,
+        "Pulmonary embolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003109> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin breakdown or ulceration caused by varicose veins in which there is too much hydrostatic pressure in the superficial venous system of the leg. Venous hypertension leads to increased pressure in the capillary bed, transudation of fluid and proteins into the interstitial space, altering blood flow and supply of nutrients to the skin and subcutaneous tissues, and eventual ulceration.     "@en ;
+    ns1:title "Bércové vředy"@cs,
+        "Varicose ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003117> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired venous blood flow or venous return (venous stasis), usually caused by inadequate venous valves. Venous insufficiency often occurs in the legs, and is associated with EDEMA and sometimes with VENOUS STASIS ULCERS at the ankle.     "@en ;
+    ns1:title "Žilní insuficience"@cs,
+        "Venous insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004074> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation or presence of a blood clot (THROMBUS) within a vein.     "@en ;
+    ns1:title "Žilní trombóza"@cs,
+        "Venous thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004102> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding within the SKULL, including hemorrhages in the brain and the three membranes of MENINGES. The escape of blood often leads to the formation of HEMATOMA in the cranial epidural, subdural, and subarachnoid spaces.     "@en ;
+    ns1:title "Intrakraniální hemoragie"@cs,
+        "Intracranial hemorrhages"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009960> a ns1:MechanismOfAction ;
+    ns1:title "Antithrombin Activators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009963> a ns1:MechanismOfAction ;
+    ns1:title "Thrombin Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Coagulation Factor Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AB05" ;
+    ns1:title "CLEXANE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLEXANE-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AB05" ;
+    ns1:title "CLEXANE FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HEPAROID-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C05BA01" ;
+    ns1:title "HEPAROID LÉČIVA"@cs .
+
+

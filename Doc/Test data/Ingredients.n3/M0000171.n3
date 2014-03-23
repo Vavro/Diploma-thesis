@@ -1,0 +1,315 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B05BA01> a ns1:ATCConcept ;
+    skos:notation "B05BA01" ;
+    skos:prefLabel "Aminokyseliny"@cs,
+        "Amino acids"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05BA10> a ns1:ATCConcept ;
+    skos:notation "B05BA10" ;
+    skos:prefLabel "Roztoky pro parenterální výživu, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05CB01> a ns1:ATCConcept ;
+    skos:notation "R05CB01" ;
+    skos:prefLabel "Acetylcystein"@cs,
+        "Acetylcysteine"@en .
+
+<http://linked.opendata.cz/resource/ATC/V03AB23> a ns1:ATCConcept ;
+    skos:notation "V03AB23" ;
+    skos:prefLabel "Acetylcystein"@cs,
+        "Acetylcysteine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000171> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "The N-acetyl derivative of CYSTEINE.  It is used as a mucolytic agent to reduce the viscosity of mucous secretions. It has also been shown to have antiviral effects in patients with HIV due to inhibition of viral stimulation by reactive oxygen intermediates.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-100-NEO",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-200-NEO",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-INJEKT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-LONG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-SIRUP",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-15-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-HEPA-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOSTERIL-N-HEPA-8-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVENOES-N-PAED-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-10--ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-20--ANTIDOTUM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-600",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MUCOBENE-600-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-100-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-200-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-600-SUMIVE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-15-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-5-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEPHROTECT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL-200" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008041",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008867" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001753",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002467" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000375",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000618",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000619",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000824",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000863",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000890",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001249",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001786",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002266",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002447",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002542",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002597",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002756" ;
+    ns1:title "Acetylcystein"@cs,
+        "Acetylcysteine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001518> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the prophylaxis or therapy of VIRUS DISEASES. Some of the ways they may act include preventing viral replication by inhibiting viral DNA polymerase; binding to specific cell-surface receptors and inhibiting viral penetration or uncoating; inhibiting viral protein synthesis; or blocking late stages of virus assembly.     "@en ;
+    ns1:title "Antivirové látky"@cs,
+        "Antiviral agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008041> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that increase mucous excretion. Mucolytic agents, that is drugs that liquefy mucous secretions, are also included here.     "@en ;
+    ns1:title "Expektorancia"@cs,
+        "Expectorants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that influence the course of a chemical reaction by ready combination with free radicals. Among other effects, this combining activity protects pancreatic islets against damage by cytokines and prevents myocardial and pulmonary perfusion injuries.     "@en ;
+    ns1:title "Volné radikály - scavengery"@cs,
+        "Free radical scavengers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000375> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of sporadic, familial and/or inherited, degenerative, and infectious disease processes, linked by the common theme of abnormal protein folding and deposition of AMYLOID. As the amyloid deposits enlarge they displace normal tissue structures, causing disruption of function. Various signs and symptoms depend on the location and size of the deposits.     "@en ;
+    ns1:title "Amyloidóza"@cs,
+        "Amyloidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000618> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent abnormal dilatation of the bronchi.     "@en ;
+    ns1:title "Bronchiektazie"@cs,
+        "Bronchiectasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000619> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the BRONCHIOLES.     "@en ;
+    ns1:title "Bronchiolitida"@cs,
+        "Bronchiolitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.     "@en ;
+    ns1:title "Kašel"@cs,
+        "Cough"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000890> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal recessive genetic disease of the EXOCRINE GLANDS. It is caused by mutations in the gene encoding the CYSTIC FIBROSIS TRANSMEMBRANE CONDUCTANCE REGULATOR expressed in several organs including the LUNG, the PANCREAS, the BILIARY SYSTEM, and the SWEAT GLANDS. Cystic fibrosis is characterized by epithelial secretory dysfunction associated with ductal obstruction resulting in AIRWAY OBSTRUCTION; chronic RESPIRATORY INFECTIONS; PANCREATIC INSUFFICIENCY; maldigestion; salt depletion; and HEAT PROSTRATION.     "@en ;
+    ns1:title "Cystická fibróza"@cs,
+        "Cystic fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001753> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute kidney failure resulting from destruction of EPITHELIAL CELLS of the KIDNEY TUBULES. It is commonly attributed to exposure to toxic agents or renal ISCHEMIA following severe TRAUMA.     "@en ;
+    ns1:title "Ledviny - tubulární nekróza akutní"@cs,
+        "Kidney tubular necrosis, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001786> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the LARYNGEAL MUCOSA, including the VOCAL CORDS. Laryngitis is characterized by irritation, edema, and reduced pliability of the mucosa leading to VOICE DISORDERS such as APHONIA and HOARSENESS.     "@en ;
+    ns1:title "Laryngitida"@cs,
+        "Laryngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002447> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition or physical state produced by the ingestion, injection, inhalation of or exposure to a deleterious agent.     "@en ;
+    ns1:title "Otrava"@cs,
+        "Poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002542> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlargement of air spaces distal to the TERMINAL BRONCHIOLES where gas-exchange normally takes place. This is usually due to destruction of the alveolar wall. Pulmonary emphysema can be classified by the location and distribution of the lesions.     "@en ;
+    ns1:title "Plicní emfyzém"@cs,
+        "Pulmonary emphysema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002597> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by progressive life-threatening RESPIRATORY INSUFFICIENCY in the absence of known LUNG DISEASES, usually following a systemic insult such as surgery or major TRAUMA.     "@en ;
+    ns1:title "Syndrom respirační tísně dospělých"@cs,
+        "Respiratory distress syndrome, adult"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> a ns1:MechanismOfAction ;
+    ns1:title "Free Radical Scavenging Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008867> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Respiratory Secretion Viscosity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-100-NEO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC 100 NEO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-200-NEO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC 200 NEO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-INJEKT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC INJEKT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-LONG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC LONG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACC-SIRUP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "ACC SIRUP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-15-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOPLASMAL-15%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-HEPA-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOPLASMAL HEPA-10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOSTERIL-N-HEPA-8-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOSTERIL N HEPA 8%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVENOES-N-PAED-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOVENOES N PAED 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-10--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "FLUIMUCIL 10% ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "FLUIMUCIL 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-20--ANTIDOTUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/V03AB23" ;
+    ns1:title "FLUIMUCIL 20% ANTIDOTUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "FLUIMUCIL 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUIMUCIL-600> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "FLUIMUCIL 600"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MUCOBENE-600-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "MUCOBENE 600 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-100-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "NAC AL 100 ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-200-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "NAC AL 200 ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NAC-AL-600-SUMIVE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "NAC AL 600 ŠUMIVÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-15-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 15%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEPHROTECT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NEPHROTECT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "SOLMUCOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "SOLMUCOL 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SOLMUCOL-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R05CB01" ;
+    ns1:title "SOLMUCOL 200"@cs .
+
+

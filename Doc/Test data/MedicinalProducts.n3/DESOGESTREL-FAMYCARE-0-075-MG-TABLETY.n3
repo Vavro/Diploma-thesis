@@ -1,0 +1,242 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03A> a ns1:ATCConcept ;
+    dcterms:title "Hormonální kontraceptiva k systémové aplikaci"@cs,
+        "HORMONAL CONTRACEPTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "G03A" .
+
+<http://linked.opendata.cz/resource/ATC/G03AC> a ns1:ATCConcept ;
+    dcterms:title "Progestiny"@cs,
+        "Progestogens"@en ;
+    skos:notation "G03AC" .
+
+<http://linked.opendata.cz/resource/ATC/G03AC09> a ns1:ATCConcept ;
+    dcterms:title "Desogestrel"@cs,
+        "Desogestrel"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03A",
+        "http://linked.opendata.cz/resource/ATC/G03AC" ;
+    skos:notation "G03AC09" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026028> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000730",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000857",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000950",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001443",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001714",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001869",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002934",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003502",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004182",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A synthetic progestational hormone used often as the progestogenic component of combined oral contraceptive agents.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669" ;
+    ns1:title "Desogestrel"@cs,
+        "Desogestrel"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120> a ns1:PharmacologicalAction ;
+    ns1:description "Oral contraceptives which owe their effectiveness to synthetic preparations.     "@en ;
+    ns1:title "Antikoncepční látky orální syntetické"@cs,
+        "Contraceptives, oral, synthetic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with PROGESTERONE RECEPTORS in target tissues to bring about the effects similar to those of PROGESTERONE. Primary actions of progestins, including natural and synthetic steroids, are on the UTERUS and the MAMMARY GLAND in preparation for and in maintenance of PREGNANCY.     "@en ;
+    ns1:title "Progestiny"@cs,
+        "Progestins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000730> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebrovaskulární poruchy"@cs,
+        "Cerebrovascular disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000857> a ns1:DiseaseOrFinding ;
+    ns1:title "Koronární nemoc"@cs,
+        "Coronary disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001443> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci srdečních chlopní"@cs,
+        "Heart valve diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001714> a ns1:DiseaseOrFinding ;
+    ns1:title "Žloutenka"@cs,
+        "Jaundice"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001869> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory jater"@cs,
+        "Liver neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory endometria"@cs,
+        "Endometrial neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004182> a ns1:DiseaseOrFinding ;
+    ns1:title "Syndromy bolesti hlavy"@cs,
+        "Headache disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182627> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "28 + SIL"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28X0.075MG + SIL"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182628> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X28 + SIL"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 84X0.075MG + SIL"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182629> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X28 + SIL"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 168X0.075MG + SIL"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182630> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "13X28 + SIL"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 364X0.075MG + SIL"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198047> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28X0.075MG"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198048> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 84X0.075MG"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198049> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 168X0.075MG"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198050> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasIndication """Perorální antikoncepce
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "13X28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152393_doc" ;
+    ns1:hasStrength "0.075MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 364X0.075MG"@cs ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESOGESTREL-FAMYCARE-0-075-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03AC09" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026028" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182627",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182628",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182629",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182630",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198047",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198048",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198049",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198050" ;
+    ns1:title "DESOGESTREL FAMYCARE 0,075 MG TABLETY"@cs .
+
+

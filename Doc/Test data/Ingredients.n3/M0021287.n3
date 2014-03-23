@@ -1,0 +1,221 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C04AD> a ns1:ATCConcept ;
+    skos:notation "C04AD" ;
+    skos:prefLabel "Deriváty purinu"@cs,
+        "Purine derivatives"@en .
+
+<http://linked.opendata.cz/resource/ATC/R03DA04> a ns1:ATCConcept ;
+    skos:notation "R03DA04" ;
+    skos:prefLabel "Theofylin"@cs,
+        "Theophylline"@en .
+
+<http://linked.opendata.cz/resource/ATC/R03DA05> a ns1:ATCConcept ;
+    skos:notation "R03DA05" ;
+    skos:prefLabel "Aminofylin"@cs,
+        "Aminophylline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021287> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000469",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002351",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713" ;
+    ns1:description "A methyl xanthine derivative from tea with diuretic, smooth muscle relaxant, bronchial dilation, cardiac and central nervous system stimulant activities.  Theophylline inhibits the 3',5'-CYCLIC NUCLEOTIDE PHOSPHODIESTERASE that degrades CYCLIC AMP thus potentiates the actions of agents that act through ADENYLATE CYCLASE and cyclic AMP.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000128" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-125-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-250-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-375-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-200",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-300",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-400",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OXANTIL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SYNTOPHYLLIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/THEOPLUS-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/THEOPLUS-300" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545362" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000454",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000498",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000600",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000617",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001072",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002542",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002821",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875" ;
+    ns1:title "Theofylin"@cs,
+        "Theophylline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit or antagonize the biosynthesis or actions of phosphodiesterases.     "@en ;
+    ns1:title "Fosfodiesterasa - inhibitory"@cs,
+        "Phosphodiesterase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545362> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that bind to and block the stimulation of PURINERGIC P1 RECEPTORS.     "@en ;
+    ns1:title "Purinergní receptory p1 - antagonisté"@cs,
+        "Purinergic p1 receptor antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000454> a ns1:DiseaseOrFinding ;
+    ns1:description "A transient absence of spontaneous respiration.     "@en ;
+    ns1:title "Apnoe"@cs,
+        "Apnea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000469> a ns1:DiseaseOrFinding ;
+    ns1:description "Any disturbances of the normal rhythmic beating of the heart or MYOCARDIAL CONTRACTION. Cardiac arrhythmias can be classified by the abnormalities in HEART RATE, disorders of electrical impulse generation, or impulse conduction.     "@en ;
+    ns1:title "Arytmie srdeční"@cs,
+        "Arrhythmias, cardiac"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000600> a ns1:DiseaseOrFinding ;
+    ns1:description "Cardiac arrhythmias that are characterized by excessively slow HEART RATE, usually below 50 beats per minute in human adults. They can be classified broadly into SINOATRIAL NODE dysfunction and ATRIOVENTRICULAR BLOCK.     "@en ;
+    ns1:title "Bradykardie"@cs,
+        "Bradycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000617> a ns1:DiseaseOrFinding ;
+    ns1:description "Spasmodic contraction of the smooth muscle of the bronchi.     "@en ;
+    ns1:title "Bronchospasmus"@cs,
+        "Bronchial spasm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001072> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological accumulation of air in tissues or organs.     "@en ;
+    ns1:title "Emfyzém"@cs,
+        "Emphysema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001622> a ns1:DiseaseOrFinding ;
+    ns1:description "Hypersecretion of THYROID HORMONES from the THYROID GLAND. Elevated levels of thyroid hormones increase BASAL METABOLIC RATE.     "@en ;
+    ns1:title "Hypertyreóza"@cs,
+        "Hyperthyroidism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002542> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlargement of air spaces distal to the TERMINAL BRONCHIOLES where gas-exchange normally takes place. This is usually due to destruction of the alveolar wall. Pulmonary emphysema can be classified by the location and distribution of the lesions.     "@en ;
+    ns1:title "Plicní emfyzém"@cs,
+        "Pulmonary emphysema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000128> a ns1:MechanismOfAction ;
+    ns1:title "Phosphodiesterase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322> a ns1:PhysiologicEffect ;
+    ns1:title "Bronchodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibition Gastric Acid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808> a ns1:PhysiologicEffect ;
+    ns1:title "Positive Chronotropy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-125-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "AFONILUM SR 125 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "AFONILUM SR 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFONILUM-SR-375-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "AFONILUM SR 375 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "EUPHYLLIN CR N 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "EUPHYLLIN CR N 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "EUPHYLLIN CR N 300"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EUPHYLLIN-CR-N-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "EUPHYLLIN CR N 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXANTIL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C04AD" ;
+    ns1:title "OXANTIL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYNTOPHYLLIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA05" ;
+    ns1:title "SYNTOPHYLLIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THEOPLUS-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "THEOPLUS 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THEOPLUS-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R03DA04" ;
+    ns1:title "THEOPLUS 300"@cs .
+
+

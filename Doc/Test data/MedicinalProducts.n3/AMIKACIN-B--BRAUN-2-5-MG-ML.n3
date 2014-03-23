@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01G> a ns1:ATCConcept ;
+    dcterms:title "Aminoglykosidová antibiotika"@cs,
+        "AMINOGLYCOSIDE ANTIBACTERIALS"@en ;
+    skos:notation "J01G" .
+
+<http://linked.opendata.cz/resource/ATC/J01GB> a ns1:ATCConcept ;
+    dcterms:title "Jiné aminoglykosidy"@cs,
+        "Other aminoglycosides"@en ;
+    skos:notation "J01GB" .
+
+<http://linked.opendata.cz/resource/ATC/J01GB06> a ns1:ATCConcept ;
+    dcterms:title "Amikacin"@cs,
+        "Amikacin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/J",
+        "http://linked.opendata.cz/resource/ATC/J01",
+        "http://linked.opendata.cz/resource/ATC/J01G",
+        "http://linked.opendata.cz/resource/ATC/J01GB" ;
+    skos:notation "J01GB06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000904> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:title "Amikacin sulfate"@cs,
+        "Amikacin sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0141834> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01GB06" ;
+    ns1:hasIndication """K léčbě těžkých infekcí vyvolaných bakteriemi citlivými na amikacin (viz bod 5.1), tam kde méně toxická antimikrobiální agens jsou neúčinná. Za těchto podmínek lze přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml, a 10 mg/ml , infuzní roztok  použít při:
+nozokomiálních infekcích dolních cest dýchacích , včetně závažné pneumonie,
+intraabdominálních infekcích, včetně peritonitidy,
+komplikovaných a rekurentních infekcích močových cest,
+infekcích kůže a měkkých tkání, včetně infekcí špatně se hojících ran,
+bakteriální endokarditidě,
+pooperačních intraabdominálních infekcích.
+Přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml a 10 mg/ml, infuzní roztok lze také použít k léčbě pacientů s bakteriemií, která se objeví v souvislosti nebo při podezření na tuto souvislost s jakoukoli infekcí, která je uvedena výše.
+Přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml a 10 mg/ml, infuzní roztok se obvykle podává v kombinaci 
+s ostatními vhodnými antibiotiky, tak aby bylo pokryto bakteriální spektrum, vyvolávající tuto infekci. 
+Je nutné věnovat pozornost oficiálním doporučením pro správné užívání  antibakteriálních léků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "10X100ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC133331_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X100ML"@cs ;
+    ns1:title "AMIKACIN B. BRAUN 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0141835> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01GB06" ;
+    ns1:hasIndication """K léčbě těžkých infekcí vyvolaných bakteriemi citlivými na amikacin (viz bod 5.1), tam kde méně toxická antimikrobiální agens jsou neúčinná. Za těchto podmínek lze přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml, a 10 mg/ml , infuzní roztok  použít při:
+nozokomiálních infekcích dolních cest dýchacích , včetně závažné pneumonie,
+intraabdominálních infekcích, včetně peritonitidy,
+komplikovaných a rekurentních infekcích močových cest,
+infekcích kůže a měkkých tkání, včetně infekcí špatně se hojících ran,
+bakteriální endokarditidě,
+pooperačních intraabdominálních infekcích.
+Přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml a 10 mg/ml, infuzní roztok lze také použít k léčbě pacientů s bakteriemií, která se objeví v souvislosti nebo při podezření na tuto souvislost s jakoukoli infekcí, která je uvedena výše.
+Přípravek Amikacin B. Braun 2,5 mg/ml, 5 mg/ml a 10 mg/ml, infuzní roztok se obvykle podává v kombinaci 
+s ostatními vhodnými antibiotiky, tak aby bylo pokryto bakteriální spektrum, vyvolávající tuto infekci. 
+Je nutné věnovat pozornost oficiálním doporučením pro správné užívání  antibakteriálních léků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "20X100ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC133331_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X100ML"@cs ;
+    ns1:title "AMIKACIN B. BRAUN 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMIKACIN-B--BRAUN-2-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01GB06" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000904" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0141834",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0141835" ;
+    ns1:title "AMIKACIN B. BRAUN 2,5 MG/ML"@cs .
+
+

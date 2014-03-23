@@ -1,0 +1,169 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01DD08> a ns1:ATCConcept ;
+    skos:notation "J01DD08" ;
+    skos:prefLabel "Cefixim"@cs,
+        "Cefixime"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0328108> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A third-generation cephalosporin antibiotic that is stable to hydrolysis by beta-lactamases.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRAX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRAX-200-MG-POTAHOVANE-TABLETY" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001380",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001398",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001758",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001786",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002266",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002387",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002507",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002756",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002969",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003076",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003812",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003823" ;
+    ns1:title "Cefixim"@cs,
+        "Cefixime"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001758> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus KLEBSIELLA.     "@en ;
+    ns1:title "Klebsiella - infekce"@cs,
+        "Klebsiella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001786> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the LARYNGEAL MUCOSA, including the VOCAL CORDS. Laryngitis is characterized by irritation, edema, and reduced pliability of the mucosa leading to VOICE DISORDERS such as APHONIA and HOARSENESS.     "@en ;
+    ns1:title "Laryngitida"@cs,
+        "Laryngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002387> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the throat (PHARYNX).     "@en ;
+    ns1:title "Faryngitida"@cs,
+        "Pharyngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002969> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the tonsils, especially the PALATINE TONSILS but the ADENOIDS (pharyngeal tonsils) and lingual tonsils may also be involved. Tonsillitis usually is caused by bacterial infection. Tonsillitis may be acute, chronic, or recurrent.     "@en ;
+    ns1:title "Tonzilitida"@cs,
+        "Tonsillitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003076> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation involving the URETHRA. Similar to CYSTITIS, clinical symptoms range from vague discomfort to painful urination (DYSURIA), urethral discharge, or both.     "@en ;
+    ns1:title "Uretritida"@cs,
+        "Urethritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003812> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the lung parenchyma that is caused by bacterial infections.     "@en ;
+    ns1:title "Bakteriální pneumonie"@cs,
+        "Pneumonia, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003823> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of non-skeletal tissue, i.e., exclusive of bone, ligaments, cartilage, and fibrous tissue. The concept is usually referred to as skin and soft tissue infections and usually subcutaneous and muscle tissue are involved. The predisposing factors in anaerobic infections are trauma, ischemia, and surgery. The organisms often derive from the fecal or oral flora, particularly in wounds associated with intestinal surgery, decubitus ulcer, and human bites. (From Cecil Textbook of Medicine, 19th ed, p1688)     "@en ;
+    ns1:title "Měkké tkáně - infekce"@cs,
+        "Soft tissue infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRAX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD08" ;
+    ns1:title "SUPRAX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUPRAX-200-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD08" ;
+    ns1:title "SUPRAX 200 MG POTAHOVANÉ TABLETY"@cs .
+
+

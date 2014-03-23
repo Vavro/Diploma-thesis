@@ -1,0 +1,123 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A05AA02> a ns1:ATCConcept ;
+    skos:notation "A05AA02" ;
+    skos:prefLabel "Kyselina ursodeoxycholová"@cs,
+        "Ursodeoxycholic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022413> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "An epimer of chenodeoxycholic acid. It is a mammalian bile acid found first in the bear and is apparently either a precursor or a product of chenodeoxycholate. Its administration changes the composition of bile and may dissolve gallstones. It is used as a cholagogue and choleretic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOCHOL-150-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOCHOL-300-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK-500-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK-SUSPENZE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/URSOSAN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004221" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008553" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000760",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000762",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001028",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001314",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001862",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001864",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000011058" ;
+    ns1:title "Kyselina ursodeoxycholová"@cs,
+        "Ursodeoxycholic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004221> a ns1:PharmacologicalAction ;
+    ns1:description "Gastrointestinal agents that stimulate the flow of bile into the duodenum (cholagogues) or stimulate the production of bile by the liver (choleretic).     "@en ;
+    ns1:title "Cholagoga a choleretika"@cs,
+        "Cholagogues and choleretics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000760> a ns1:DiseaseOrFinding ;
+    ns1:description "Presence or formation of GALLSTONES in the BILIARY TRACT, usually in the gallbladder (CHOLECYSTOLITHIASIS) or the common bile duct (CHOLEDOCHOLITHIASIS).     "@en ;
+    ns1:title "Cholelitiáza"@cs,
+        "Cholelithiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000762> a ns1:DiseaseOrFinding ;
+    ns1:description "Impairment of bile flow due to obstruction in small bile ducts (INTRAHEPATIC CHOLESTASIS) or obstruction in large bile ducts (EXTRAHEPATIC CHOLESTASIS).     "@en ;
+    ns1:title "Cholestáza"@cs,
+        "Cholestasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001028> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired digestion, especially after eating.     "@en ;
+    ns1:title "Dyspepsie"@cs,
+        "Dyspepsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001314> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the GASTRIC MUCOSA, a lesion observed in a number of unrelated disorders.     "@en ;
+    ns1:title "Gastritida"@cs,
+        "Gastritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER.     "@en ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001864> a ns1:DiseaseOrFinding ;
+    ns1:description "FIBROSIS of the hepatic parenchyma due to obstruction of BILE flow (CHOLESTASIS) in the intrahepatic or extrahepatic bile ducts (BILE DUCTS, INTRAHEPATIC; BILE DUCTS, EXTRAHEPATIC). Primary biliary cirrhosis involves the destruction of small intra-hepatic bile ducts and bile secretion. Secondary biliary cirrhosis is produced by prolonged obstruction of large intrahepatic or extrahepatic bile ducts from a variety of causes.     "@en ;
+    ns1:title "Biliární cirhóza"@cs,
+        "Liver cirrhosis, biliary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011058> a ns1:DiseaseOrFinding ;
+    ns1:description "Solid crystalline precipitates in the BILIARY TRACT, usually formed in the GALLBLADDER, resulting in the condition of CHOLELITHIASIS. Gallstones, derived from the BILE, consist mainly of calcium, cholesterol, or bilirubin.     "@en ;
+    ns1:title "Žlučové kameny"@cs,
+        "Gallstones"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008553> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cholesterol Absorption"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOCHOL-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOCHOL 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOCHOL-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOCHOL 300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOFALK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK-500-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOFALK 500 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOFALK-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOFALK SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/URSOSAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A05AA02" ;
+    ns1:title "URSOSAN"@cs .
+
+

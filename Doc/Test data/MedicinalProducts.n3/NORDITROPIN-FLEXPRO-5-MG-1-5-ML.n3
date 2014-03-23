@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H> a ns1:ATCConcept ;
+    dcterms:title "Systémová hormonální léčiva kromě pohlavních hormonů a inzulinů"@cs,
+        "SYSTEMIC HORMONAL PREPARATIONS, EXCL. SEX HORMONES AND INSULINS"@en ;
+    skos:notation "H" .
+
+<http://linked.opendata.cz/resource/ATC/H01> a ns1:ATCConcept ;
+    dcterms:title "Hypofyzární a hypotalamické hormony a analogy"@cs,
+        "PITUITARY AND HYPOTHALAMIC HORMONES AND ANALOGUES"@en ;
+    skos:notation "H01" .
+
+<http://linked.opendata.cz/resource/ATC/H01A> a ns1:ATCConcept ;
+    dcterms:title "Hormony předního laloku hypofýzy a analogy"@cs,
+        "ANTERIOR PITUITARY LOBE HORMONES AND ANALOGUES"@en ;
+    skos:notation "H01A" .
+
+<http://linked.opendata.cz/resource/ATC/H01AC> a ns1:ATCConcept ;
+    dcterms:title "Somatropin a agonisté somatropinu"@cs,
+        "Somatropin and analogues"@en ;
+    skos:notation "H01AC" .
+
+<http://linked.opendata.cz/resource/ATC/H01AC01> a ns1:ATCConcept ;
+    dcterms:title "Somatropin"@cs,
+        "Somatropin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/H",
+        "http://linked.opendata.cz/resource/ATC/H01",
+        "http://linked.opendata.cz/resource/ATC/H01A",
+        "http://linked.opendata.cz/resource/ATC/H01AC" ;
+    skos:notation "H01AC01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028842> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000609",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004102" ;
+    ns1:description "A 191-amino acid polypeptide hormone secreted by the human adenohypophysis (PITUITARY GLAND, ANTERIOR), also known as GH or somatotropin. Synthetic growth hormone, termed somatropin, has replaced the natural form in therapeutic usage such as treatment of dwarfism in children with growth hormone deficiency.     "@en ;
+    ns1:title "Lidský růstový hormon"@cs,
+        "Human growth hormone"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000609> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory mozku"@cs,
+        "Brain neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004102> a ns1:DiseaseOrFinding ;
+    ns1:title "Intrakraniální hemoragie"@cs,
+        "Intracranial hemorrhages"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0153494> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H01AC01" ;
+    ns1:hasIndication """Děti:
+Poruchy růstu způsobené nedostatkem růstového hormonu (GHD).
+Poruchy růstu u dívek s dysgenezí gonád (Turnerův syndrom)
+Zpomalení růstu u prepubertálních dětí způsobené chronickým onemocněním ledvin.
+Poruchy růstu (současné skóre směrodatné odchylky (SDS) výšky <-2,5 a na výšku rodičů korigované SDS výšky <-1) u dětí malého vzrůstu narozených jako malé vzhledem ke gestačnímu věku s porodní váhou a/nebo výškou nižší než -2 SD, u nichž není patrný růstový výšvih (SDS růstové rychlosti < 0 během posledního roku) do 4 let věku nebo později.
+Dospělí:
+Nedostatečnost růstového hormonu vzniklá v dětství:
+U pacientů s nedostatkem růstového hormonu vzniklým v dětství by po dovršení růstu měla být znovu zhodnocena sekreční kapacita. Test není vyžadován u pacientů s nedostatkem více než tří hypofyzárních hormonů, u pacientů se závažným nedostatkem růstového hormonu v důsledku definované genetické příčiny, v důsledku strukturálních hypotalamo-hypofyzárních abnormalit, v důsledku nádorů centrální nervové soustavy nebo v důsledku vysokých dávek při ozáření v oblasti hlavy či u pacientů se sekundárním nedostatkem růstového hormonu k hypotalamo-hypofyzárnímu onemocnění či poškození, pokud byly naměřeny hodnoty IGF-I <-2 SDS po minimálně čtyřech týdnech léčby růstovým hormonem.
+U všech ostatních pacientů je vyžadováno stanovení hladin IGF-I a jeden stimulační test růstovým hormonem.
+Nedostatečnost růstového hormonu vzniklá v dospělosti:
+Výrazný deficit růstového hormonu při známém hypotalamo-hypofyzárním onemocnění, ozáření v oblasti hlavy a traumatické poranění mozku. Nedostatek růstového hormonu by měl být spojen s deficitem ještě v jiné ose kromě prolaktinu. Nedostatek růstového hormonu by měl být prokázán jedním stimulačním testem. Testování deficitu růstového hormonu by mělo být prováděno po zavedení adekvátní substituce v každé deficitní ose.
+U dospělých je test inzulinové tolerance stimulačním testem volby. Je-li test inzulinové tolerance kontraindikován, je třeba použít alternativní stimulační testy. Doporučuje se kombinovaný arginin-růstový hormon uvolňující hormon. Lze také uvažovat o argininovém nebo glukagonovém testu, nicméně diagnostická hodnota těchto testů je menší než u testu inzulinové tolerance.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "1X1.5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155250_doc" ;
+    ns1:hasStrength "5MG/1.5ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X1.5ML/5MG"@cs ;
+    ns1:title "NORDITROPIN FLEXPRO 5 MG/1,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0153495> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H01AC01" ;
+    ns1:hasIndication """Děti:
+Poruchy růstu způsobené nedostatkem růstového hormonu (GHD).
+Poruchy růstu u dívek s dysgenezí gonád (Turnerův syndrom)
+Zpomalení růstu u prepubertálních dětí způsobené chronickým onemocněním ledvin.
+Poruchy růstu (současné skóre směrodatné odchylky (SDS) výšky <-2,5 a na výšku rodičů korigované SDS výšky <-1) u dětí malého vzrůstu narozených jako malé vzhledem ke gestačnímu věku s porodní váhou a/nebo výškou nižší než -2 SD, u nichž není patrný růstový výšvih (SDS růstové rychlosti < 0 během posledního roku) do 4 let věku nebo později.
+Dospělí:
+Nedostatečnost růstového hormonu vzniklá v dětství:
+U pacientů s nedostatkem růstového hormonu vzniklým v dětství by po dovršení růstu měla být znovu zhodnocena sekreční kapacita. Test není vyžadován u pacientů s nedostatkem více než tří hypofyzárních hormonů, u pacientů se závažným nedostatkem růstového hormonu v důsledku definované genetické příčiny, v důsledku strukturálních hypotalamo-hypofyzárních abnormalit, v důsledku nádorů centrální nervové soustavy nebo v důsledku vysokých dávek při ozáření v oblasti hlavy či u pacientů se sekundárním nedostatkem růstového hormonu k hypotalamo-hypofyzárnímu onemocnění či poškození, pokud byly naměřeny hodnoty IGF-I <-2 SDS po minimálně čtyřech týdnech léčby růstovým hormonem.
+U všech ostatních pacientů je vyžadováno stanovení hladin IGF-I a jeden stimulační test růstovým hormonem.
+Nedostatečnost růstového hormonu vzniklá v dospělosti:
+Výrazný deficit růstového hormonu při známém hypotalamo-hypofyzárním onemocnění, ozáření v oblasti hlavy a traumatické poranění mozku. Nedostatek růstového hormonu by měl být spojen s deficitem ještě v jiné ose kromě prolaktinu. Nedostatek růstového hormonu by měl být prokázán jedním stimulačním testem. Testování deficitu růstového hormonu by mělo být prováděno po zavedení adekvátní substituce v každé deficitní ose.
+U dospělých je test inzulinové tolerance stimulačním testem volby. Je-li test inzulinové tolerance kontraindikován, je třeba použít alternativní stimulační testy. Doporučuje se kombinovaný arginin-růstový hormon uvolňující hormon. Lze také uvažovat o argininovém nebo glukagonovém testu, nicméně diagnostická hodnota těchto testů je menší než u testu inzulinové tolerance.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "5X1.5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC155250_doc" ;
+    ns1:hasStrength "5MG/1.5ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X1.5ML/5MG"@cs ;
+    ns1:title "NORDITROPIN FLEXPRO 5 MG/1,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORDITROPIN-FLEXPRO-5-MG-1-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/H01AC01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028842" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0153494",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0153495" ;
+    ns1:title "NORDITROPIN FLEXPRO 5 MG/1,5 ML"@cs .
+
+

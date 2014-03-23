@@ -1,0 +1,158 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01EA01> a ns1:ATCConcept ;
+    skos:notation "J01EA01" ;
+    skos:prefLabel "Trimethoprim"@cs,
+        "Trimethoprim"@en .
+
+<http://linked.opendata.cz/resource/ATC/J01EE01> a ns1:ATCConcept ;
+    skos:notation "J01EE01" ;
+    skos:prefLabel "Sulfamethoxazol a trimethoprim"@cs,
+        "Sulfamethoxazole and trimethoprim"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021991> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000393",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001267" ;
+    ns1:description "A pyrimidine inhibitor of dihydrofolate reductase, it is an antibacterial related to PYRIMETHAMINE. The interference with folic acid metabolism may cause a depression of hematopoiesis. It is potentiated by SULFONAMIDES and the TRIMETHOPRIM-SULFAMETHOXAZOLE COMBINATION is the form most often used. It is sometimes used alone as an antimalarial. TRIMETHOPRIM RESISTANCE has been reported.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000111" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-120",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-480",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COTRIMOXAZOL-AL-FORTE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SUMETROLIM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRIPRIM-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRIPRIM-200-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001469",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009176" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000622",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002437",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002507",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002989",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003324",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003524" ;
+    ns1:title "Trimethoprim"@cs,
+        "Trimethoprim"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> a ns1:PharmacologicalAction ;
+    ns1:description "Substances capable of killing agents causing urinary tract infections or of preventing them from spreading.     "@en ;
+    ns1:title "Antiinfekční látky močové"@cs,
+        "Anti-infective agents, urinary"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001469> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the treatment of malaria. They are usually classified on the basis of their action against plasmodia at different stages in their life cycle in the human. (From AMA, Drug Evaluations Annual, 1992, p1585)     "@en ;
+    ns1:title "Antimalarika"@cs,
+        "Antimalarials"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of the enzyme, dihydrofolate reductase (TETRAHYDROFOLATE DEHYDROGENASE), which converts dihydrofolate (FH2) to tetrahydrofolate (FH4). They are frequently used in cancer chemotherapy. (From AMA, Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Kyselina listová - antagonisté"@cs,
+        "Folic acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000393> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by the presence of ANEMIA, abnormally large red blood cells (megalocytes or macrocytes), and MEGALOBLASTS.     "@en ;
+    ns1:title "Megaloblastová anémie"@cs,
+        "Anemia, megaloblastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001267> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of FOLIC ACID in the diet. Many plant and animal tissues contain folic acid, abundant in green leafy vegetables, yeast, liver, and mushrooms but destroyed by long-term cooking. Alcohol interferes with its intermediate metabolism and absorption. Folic acid deficiency may develop in long-term anticonvulsant therapy or with use of oral contraceptives. This deficiency causes anemia, macrocytic anemia, and megaloblastic anemia. It is indistinguishable from vitamin B 12 deficiency in peripheral blood and bone marrow findings, but the neurologic lesions seen in B 12 deficiency do not occur. (Merck Manual, 16th ed)     "@en ;
+    ns1:title "Nedostatek kyseliny listové"@cs,
+        "Folic acid deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002437> a ns1:DiseaseOrFinding ;
+    ns1:description "A pulmonary disease in humans occurring in immunodeficient or malnourished patients or infants, characterized by DYSPNEA, tachypnea, and HYPOXEMIA. Pneumocystis pneumonia is a frequently seen opportunistic infection in AIDS. It is caused by the fungus PNEUMOCYSTIS JIROVECII. The disease is also found in other MAMMALS where it is caused by related species of Pneumocystis.     "@en ;
+    ns1:title "Pneumocystová pneumonie"@cs,
+        "Pneumonia, pneumocystis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002989> a ns1:DiseaseOrFinding ;
+    ns1:description "The acquired form of infection by Toxoplasma gondii in animals and man.     "@en ;
+    ns1:title "Toxoplazmóza"@cs,
+        "Toxoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000111> a ns1:MechanismOfAction ;
+    ns1:title "Folic Acid Metabolism Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009176> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Cellular Death"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-120> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EE01" ;
+    ns1:title "BISEPTOL 120"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-480> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EE01" ;
+    ns1:title "BISEPTOL 480"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COTRIMOXAZOL-AL-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EE01" ;
+    ns1:title "COTRIMOXAZOL AL FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUMETROLIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EE01" ;
+    ns1:title "SUMETROLIM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRIPRIM-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EA01" ;
+    ns1:title "TRIPRIM 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRIPRIM-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01EA01" ;
+    ns1:title "TRIPRIM 200 MG"@cs .
+
+

@@ -1,0 +1,85 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0512702> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Apixaban"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168325> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168326> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasMaximalPrice "1400.63000488"^^xsd:float ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "828.320007324"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-02-06"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168327> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasMaximalPrice "3957.13989258"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2484.9699707"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-02-06"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168328> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasMaximalPrice "3957.13989258"^^xsd:float ;
+    ns1:hasPackagingSize "60X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "2484.9699707"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-04-04"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X1X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168329> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "100X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X1X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193741> a ns1:MedicinalProductPackaging ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasPackagingSize "168"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 168X2.5MG"@cs ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELIQUIS-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0512702" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168325",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168326",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168327",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168328",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0168329",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193741" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "ELIQUIS 2,5 MG"@cs .
+
+

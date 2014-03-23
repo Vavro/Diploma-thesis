@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01E> a ns1:ATCConcept ;
+    dcterms:title "Antiglaukomatika a miotika"@cs,
+        "ANTIGLAUCOMA PREPARATIONS AND MIOTICS"@en ;
+    skos:notation "S01E" .
+
+<http://linked.opendata.cz/resource/ATC/S01EC> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory karboanhydrázy"@cs,
+        "Carbonic anhydrase inhibitors"@en ;
+    skos:notation "S01EC" .
+
+<http://linked.opendata.cz/resource/ATC/S01EC03> a ns1:ATCConcept ;
+    dcterms:title "Dorzolamid"@cs,
+        "Dorzolamide"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S01",
+        "http://linked.opendata.cz/resource/ATC/S01E",
+        "http://linked.opendata.cz/resource/ATC/S01EC" ;
+    skos:notation "S01EC03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324545> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Dorzolamide hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134467> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EC03" ;
+    ns1:hasIndication """Přípravek OFTIDOR 2%, oční kapky, roztok je indikován:
+(	jako adjuvantní terapie k beta‑blokátorům,
+(	jako monoterapie u pacientů nereagujících na léčbu beta‑blokátory nebo u pacientů, u nichž jsou beta‑blokátory při léčbě zvýšeného nitroočního tlaku kontraindikovány v následujících případech:
+    	 (    při oční hypertenzi,
+    	 (    při glaukomu s otevřeným úhlem,
+    	 (    při pseudoexfoliativním glaukomu.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "229.929992676"^^xsd:float ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "249.25"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-11-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC133713_doc" ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5MLX100MG"@cs ;
+    ns1:title "OFTIDOR 2% OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134468> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EC03" ;
+    ns1:hasIndication """Přípravek OFTIDOR 2%, oční kapky, roztok je indikován:
+(	jako adjuvantní terapie k beta‑blokátorům,
+(	jako monoterapie u pacientů nereagujících na léčbu beta‑blokátory nebo u pacientů, u nichž jsou beta‑blokátory při léčbě zvýšeného nitroočního tlaku kontraindikovány v následujících případech:
+    	 (    při oční hypertenzi,
+    	 (    při glaukomu s otevřeným úhlem,
+    	 (    při pseudoexfoliativním glaukomu.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "3X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC133713_doc" ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 3X5MLX100MG"@cs ;
+    ns1:title "OFTIDOR 2% OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134469> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EC03" ;
+    ns1:hasIndication """Přípravek OFTIDOR 2%, oční kapky, roztok je indikován:
+(	jako adjuvantní terapie k beta‑blokátorům,
+(	jako monoterapie u pacientů nereagujících na léčbu beta‑blokátory nebo u pacientů, u nichž jsou beta‑blokátory při léčbě zvýšeného nitroočního tlaku kontraindikovány v následujících případech:
+    	 (    při oční hypertenzi,
+    	 (    při glaukomu s otevřeným úhlem,
+    	 (    při pseudoexfoliativním glaukomu.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "6X5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC133713_doc" ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 6X5MLX100MG"@cs ;
+    ns1:title "OFTIDOR 2% OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OFTIDOR-2--OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EC03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324545" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134467",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134468",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134469" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "OFTIDOR 2% OČNÍ KAPKY, ROZTOK"@cs .
+
+

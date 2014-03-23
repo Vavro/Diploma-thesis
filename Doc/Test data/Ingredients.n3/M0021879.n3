@@ -1,0 +1,98 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D10AD01> a ns1:ATCConcept ;
+    skos:notation "D10AD01" ;
+    skos:prefLabel "Tretinoin"@cs,
+        "Tretinoin"@en .
+
+<http://linked.opendata.cz/resource/ATC/D10AF52> a ns1:ATCConcept ;
+    skos:notation "D10AF52" ;
+    skos:prefLabel "Erythromycin, kombinace"@cs,
+        "Erythromycin, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/L01XX14> a ns1:ATCConcept ;
+    skos:notation "L01XX14" ;
+    skos:prefLabel "Tretinoin"@cs,
+        "Tretinoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021879> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An important regulator of GENE EXPRESSION during growth and development, and in NEOPLASMS. Tretinoin, also known as retinoic acid and derived from maternal VITAMIN A, is essential for normal GROWTH; and EMBRYONIC DEVELOPMENT. An excess of tretinoin can be teratogenic. It is used in the treatment of PSORIASIS; ACNE VULGARIS; and several other SKIN DISEASES. It has also been approved for use in promyelocytic leukemia (LEUKEMIA, PROMYELOCYTIC, ACUTE).     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOCACID",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RETIN-A-0-05-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VESANOID-10-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011969" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009979",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009982" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000288",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003270" ;
+    ns1:title "Tretinoin"@cs,
+        "Tretinoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011969> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that soften, separate, and cause desquamation of the cornified epithelium or horny layer of skin. They are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases.     "@en ;
+    ns1:title "Keratolytika"@cs,
+        "Keratolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000288> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disorder of the pilosebaceous apparatus associated with an increase in sebum secretion. It is characterized by open comedones (blackheads), closed comedones (whiteheads), and pustular nodules. The cause is unknown, but heredity and age are predisposing factors.     "@en ;
+    ns1:title "Acne vulgaris"@cs,
+        "Acne vulgaris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003270> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute myeloid leukemia in which abnormal PROMYELOCYTES predominate. It is frequently associated with DISSEMINATED INTRAVASCULAR COAGULATION.     "@en ;
+    ns1:title "Leukémie promyelocytární akutní"@cs,
+        "Leukemia, promyelocytic, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009979> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sebaceous Gland Quantity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009982> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sebaceous Gland Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D10AF52" ;
+    ns1:title "AKNEMYCIN PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOCACID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D10AD01" ;
+    ns1:title "LOCACID"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RETIN-A-0-05-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D10AD01" ;
+    ns1:title "RETIN-A 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VESANOID-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XX14" ;
+    ns1:title "VESANOID 10 MG"@cs .
+
+

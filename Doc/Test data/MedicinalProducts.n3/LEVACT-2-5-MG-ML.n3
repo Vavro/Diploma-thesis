@@ -1,0 +1,116 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01A> a ns1:ATCConcept ;
+    dcterms:title "Alkylační látky"@cs,
+        "ALKYLATING AGENTS"@en ;
+    skos:notation "L01A" .
+
+<http://linked.opendata.cz/resource/ATC/L01AA> a ns1:ATCConcept ;
+    dcterms:title "Analogy dusíkatého yperitu"@cs,
+        "Nitrogen mustard analogues"@en ;
+    skos:notation "L01AA" .
+
+<http://linked.opendata.cz/resource/ATC/L01AA09> a ns1:ATCConcept ;
+    dcterms:title "Bendamustin"@cs,
+        "Bendamustine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01",
+        "http://linked.opendata.cz/resource/ATC/L01A",
+        "http://linked.opendata.cz/resource/ATC/L01AA" ;
+    skos:notation "L01AA09" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0307744> a ns1:Ingredient ;
+    ns1:title "Bendamustine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179306> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA09" ;
+    ns1:hasIndication """Léčba první linie chronické lymfocytární leukémie (stádia B nebo C dle Bineta) u pacientů, pro které není vhodná kombinovaná chemoterapie obsahující fludarabin.
+V monoterapii k léčbě indolentního non-Hodgkinova lymfomu u pacientů, kteří progredovali během léčby rituximabem nebo režimem zahrnujícím rituximab nebo během 6 měsíců po takové léčbě.
+Léčba první linie mnohočetného myelomu (stádia II s progresí nebo stádia III dle Durie-Salmona) v kombinaci s prednisonem u pacientů starších 65 let, pro které není vhodná autologní transplantace kmenových buněk a kteří v době diagnózy trpí klinickou neuropatií, což vylučuje použití terapie obsahující thalidomid nebo bortezomib.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC138373_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV CSL 5X25MG"@cs ;
+    ns1:title "LEVACT 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179307> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA09" ;
+    ns1:hasIndication """Léčba první linie chronické lymfocytární leukémie (stádia B nebo C dle Bineta) u pacientů, pro které není vhodná kombinovaná chemoterapie obsahující fludarabin.
+V monoterapii k léčbě indolentního non-Hodgkinova lymfomu u pacientů, kteří progredovali během léčby rituximabem nebo režimem zahrnujícím rituximab nebo během 6 měsíců po takové léčbě.
+Léčba první linie mnohočetného myelomu (stádia II s progresí nebo stádia III dle Durie-Salmona) v kombinaci s prednisonem u pacientů starších 65 let, pro které není vhodná autologní transplantace kmenových buněk a kteří v době diagnózy trpí klinickou neuropatií, což vylučuje použití terapie obsahující thalidomid nebo bortezomib.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC138373_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV CSL 10X25MG"@cs ;
+    ns1:title "LEVACT 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179308> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA09" ;
+    ns1:hasIndication """Léčba první linie chronické lymfocytární leukémie (stádia B nebo C dle Bineta) u pacientů, pro které není vhodná kombinovaná chemoterapie obsahující fludarabin.
+V monoterapii k léčbě indolentního non-Hodgkinova lymfomu u pacientů, kteří progredovali během léčby rituximabem nebo režimem zahrnujícím rituximab nebo během 6 měsíců po takové léčbě.
+Léčba první linie mnohočetného myelomu (stádia II s progresí nebo stádia III dle Durie-Salmona) v kombinaci s prednisonem u pacientů starších 65 let, pro které není vhodná autologní transplantace kmenových buněk a kteří v době diagnózy trpí klinickou neuropatií, což vylučuje použití terapie obsahující thalidomid nebo bortezomib.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "40486.1289062"^^xsd:float ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "38554.1601562"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-01-11"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC138373_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV CSL 20X25MG"@cs ;
+    ns1:title "LEVACT 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179310> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA09" ;
+    ns1:hasIndication """Léčba první linie chronické lymfocytární leukémie (stádia B nebo C dle Bineta) u pacientů, pro které není vhodná kombinovaná chemoterapie obsahující fludarabin.
+V monoterapii k léčbě indolentního non-Hodgkinova lymfomu u pacientů, kteří progredovali během léčby rituximabem nebo režimem zahrnujícím rituximab nebo během 6 měsíců po takové léčbě.
+Léčba první linie mnohočetného myelomu (stádia II s progresí nebo stádia III dle Durie-Salmona) v kombinaci s prednisonem u pacientů starších 65 let, pro které není vhodná autologní transplantace kmenových buněk a kteří v době diagnózy trpí klinickou neuropatií, což vylučuje použití terapie obsahující thalidomid nebo bortezomib.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "39955.2695312"^^xsd:float ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "38554.1601562"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-01-11"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC138373_doc" ;
+    ns1:hasStrength "2.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV CSL 5X100MG"@cs ;
+    ns1:title "LEVACT 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LEVACT-2-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AA09" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0307744" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179306",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179307",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179308",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179310" ;
+    ns1:title "LEVACT 2,5 MG/ML"@cs .
+
+

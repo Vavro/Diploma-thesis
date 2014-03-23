@@ -1,0 +1,97 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05CD08> a ns1:ATCConcept ;
+    skos:notation "N05CD08" ;
+    skos:prefLabel "Midazolam"@cs,
+        "Midazolam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013843> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A short-acting hypnotic-sedative drug with anxiolytic and amnestic properties. It is used in dentistry, cardiac surgery, endoscopic procedures, as preanesthetic medication, and as an adjunct to local anesthesia. The short duration and cardiorespiratory stability makes it useful in poor-risk, elderly, and cardiac patients.  It is water-soluble at pH less than 4 and lipid-soluble at physiological pH.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/DORMICUM" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009188" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000435",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002822" ;
+    ns1:title "Midazolam"@cs,
+        "Midazolam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that alleviate ANXIETY, tension, and ANXIETY DISORDERS, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions. ADRENERGIC BETA-ANTAGONISTS are commonly used in the symptomatic treatment of anxiety but are not included here.     "@en ;
+    ns1:title "Trankvilizéry malé"@cs,
+        "Anti-anxiety agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000435> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent and disabling ANXIETY.     "@en ;
+    ns1:title "Úzkostné poruchy"@cs,
+        "Anxiety disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002527> a ns1:DiseaseOrFinding ;
+    ns1:description "A feeling of restlessness associated with increased motor activity. This may occur as a manifestation of nervous system drug toxicity or other conditions.     "@en ;
+    ns1:title "Psychomotorický neklid"@cs,
+        "Psychomotor agitation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002822> a ns1:DiseaseOrFinding ;
+    ns1:description "A prolonged seizure or seizures repeated frequently enough to prevent recovery between episodes occurring over a period of 20-30 minutes. The most common subtype is generalized tonic-clonic status epilepticus, a potentially fatal condition associated with neuronal injury and respiratory and metabolic dysfunction. Nonconvulsive forms include petit mal status and complex partial status, which may manifest as behavioral disturbances. Simple partial status epilepticus consists of persistent motor, sensory, or autonomic seizures that do not impair cognition (see also EPILEPSIA PARTIALIS CONTINUA). Subclinical status epilepticus generally refers to seizures occurring in an unresponsive or comatose individual in the absence of overt signs of seizure activity. (From N Engl J Med 1998 Apr 2;338(14):970-6; Neurologia 1997 Dec;12 Suppl 6:25-30)     "@en ;
+    ns1:title "Status epilepticus"@cs,
+        "Status epilepticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118> a ns1:MechanismOfAction ;
+    ns1:title "GABA A Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009188> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DORMICUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05CD08" ;
+    ns1:title "DORMICUM"@cs .
+
+

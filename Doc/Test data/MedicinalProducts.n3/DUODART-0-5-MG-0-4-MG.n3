@@ -1,0 +1,121 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G04> a ns1:ATCConcept ;
+    dcterms:title "Urologika"@cs,
+        "UROLOGICALS"@en ;
+    skos:notation "G04" .
+
+<http://linked.opendata.cz/resource/ATC/G04C> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii benigní hyperplazie prostaty"@cs,
+        "DRUGS USED IN BENIGN PROSTATIC HYPERTROPHY"@en ;
+    skos:notation "G04C" .
+
+<http://linked.opendata.cz/resource/ATC/G04CA> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté alfa-adrenergních receptorů"@cs,
+        "Alpha-adrenoreceptor antagonists"@en ;
+    skos:notation "G04CA" .
+
+<http://linked.opendata.cz/resource/ATC/G04CA52> a ns1:ATCConcept ;
+    dcterms:title "Tamsulosin a dutasterid"@cs,
+        "Tamsulosin and dutasteride"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G04",
+        "http://linked.opendata.cz/resource/ATC/G04C",
+        "http://linked.opendata.cz/resource/ATC/G04CA" ;
+    skos:notation "G04CA52" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0281571> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010200",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010205" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "Dutasteride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0397906> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Tamsulosin hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010200> a ns1:DiseaseOrFinding ;
+    ns1:title "Ženské pohlaví"@cs,
+        "Female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> a ns1:DiseaseOrFinding ;
+    ns1:title "Dítě"@cs,
+        "Child"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145986> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04CA52" ;
+    ns1:hasIndication """Léčba středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148532_doc" ;
+    ns1:hasTitleSupplement "POR CPS DUR 7"@cs ;
+    ns1:title "DUODART 0,5 MG/0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145987> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04CA52" ;
+    ns1:hasBreakMarketingDate "2013-08-28"^^xsd:date ;
+    ns1:hasIndication """Léčba středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasMaximalPrice "781.5"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "553.400024414"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-09-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148532_doc" ;
+    ns1:hasTitleSupplement "POR CPS DUR 30"@cs ;
+    ns1:title "DUODART 0,5 MG/0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145988> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04CA52" ;
+    ns1:hasIndication """Léčba středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasMaximalPrice "2323.63989258"^^xsd:float ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "1660.19995117"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC148532_doc" ;
+    ns1:hasTitleSupplement "POR CPS DUR 90"@cs ;
+    ns1:title "DUODART 0,5 MG/0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUODART-0-5-MG-0-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04CA52" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0281571",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0397906" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145986",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145987",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145988" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "DUODART 0,5 MG/0,4 MG"@cs .
+
+

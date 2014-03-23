@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BB> a ns1:ATCConcept ;
+    dcterms:title "Deriváty sulfonylmočoviny"@cs,
+        "Sulfonamides, urea derivatives"@en ;
+    skos:notation "A10BB" .
+
+<http://linked.opendata.cz/resource/ATC/A10BB12> a ns1:ATCConcept ;
+    dcterms:title "Glimepirid"@cs,
+        "Glimepiride"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A10",
+        "http://linked.opendata.cz/resource/ATC/A10B",
+        "http://linked.opendata.cz/resource/ATC/A10BB" ;
+    skos:notation "A10BB12" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0161111> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003499" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Glimepiride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> a ns1:DiseaseOrFinding ;
+    ns1:title "Diabetická ketoacidóza"@cs,
+        "Diabetic ketoacidosis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107957> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BB12" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "3X10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB (3X10)X2MG"@cs ;
+    ns1:title "AMARYL 2,0"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107958> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BB12" ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "2X15"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB (2X15)X2MG"@cs ;
+    ns1:title "AMARYL 2,0"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0137222> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BB12" ;
+    ns1:hasIndication """Amaryl je indikován k léčbě diabetes mellitus 2. typu, pokud dieta, fyzická aktivita a redukce hmotnosti samy o sobě nejsou adekvátní. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC107108_doc" ;
+    ns1:hasStrength "2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2MG"@cs ;
+    ns1:title "AMARYL 2,0"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMARYL-2-0> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A10BB12" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0161111" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107957",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107958",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0137222" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "AMARYL 2,0"@cs .
+
+

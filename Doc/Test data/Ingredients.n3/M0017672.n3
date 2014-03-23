@@ -1,0 +1,141 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G03DA04> a ns1:ATCConcept ;
+    skos:notation "G03DA04" ;
+    skos:prefLabel "Progesteron"@cs,
+        "Progesterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017672> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000271",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000612",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000721",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002935",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "The major progestational steroid that is secreted primarily by the CORPUS LUTEUM and the PLACENTA. Progesterone acts on the UTERUS, the MAMMARY GLANDS and the BRAIN. It is required in EMBRYO IMPLANTATION; PREGNANCY maintenance, and the development of mammary tissue for MILK production. Progesterone, converted from PREGNENOLONE, also serves as an intermediate in the biosynthesis of GONADAL STEROID HORMONES and adrenal CORTICOSTEROIDS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AGOLUTIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AGOLUTIN-DEPOT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CRINONE-8-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LUTINUS-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/UTROGESTAN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009014",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009715",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009717",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009857" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000368",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001101",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001685",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003091" ;
+    ns1:title "Progesteron"@cs,
+        "Progesterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with PROGESTERONE RECEPTORS in target tissues to bring about the effects similar to those of PROGESTERONE. Primary actions of progestins, including natural and synthetic steroids, are on the UTERUS and the MAMMARY GLAND in preparation for and in maintenance of PREGNANCY.     "@en ;
+    ns1:title "Progestiny"@cs,
+        "Progestins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000271> a ns1:DiseaseOrFinding ;
+    ns1:description "The retention in the UTERUS of a dead FETUS two months or more after its DEATH.     "@en ;
+    ns1:title "Potrat zamlklý"@cs,
+        "Abortion, missed"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000368> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of menstruation.     "@en ;
+    ns1:title "Amenorea"@cs,
+        "Amenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001101> a ns1:DiseaseOrFinding ;
+    ns1:description "Benign proliferation of the ENDOMETRIUM in the UTERUS. Endometrial hyperplasia is classified by its cytology and glandular tissue. There are simple, complex (adenomatous without atypia), and atypical hyperplasia representing also the ascending risk of becoming malignant.     "@en ;
+    ns1:title "Endometrium - hyperplazie"@cs,
+        "Endometrial hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001685> a ns1:DiseaseOrFinding ;
+    ns1:description "Diminished or absent ability of a female to achieve conception.     "@en ;
+    ns1:title "Ženská infertilita"@cs,
+        "Infertility, female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003091> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from blood vessels in the UTERUS, sometimes manifested as vaginal bleeding.     "@en ;
+    ns1:title "Uterus - hemoragie"@cs,
+        "Uterine hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185> a ns1:MechanismOfAction ;
+    ns1:title "Progestational Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009014> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Uterine Smooth Muscle Contraction or Tone"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009715> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibit Ovarian Follicular Phase"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009717> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibit Ovulation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009857> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulate Breast Glandular Development"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGOLUTIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03DA04" ;
+    ns1:title "AGOLUTIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGOLUTIN-DEPOT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03DA04" ;
+    ns1:title "AGOLUTIN DEPOT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CRINONE-8-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03DA04" ;
+    ns1:title "CRINONE 8%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LUTINUS-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03DA04" ;
+    ns1:title "LUTINUS 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/UTROGESTAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03DA04" ;
+    ns1:title "UTROGESTAN"@cs .
+
+

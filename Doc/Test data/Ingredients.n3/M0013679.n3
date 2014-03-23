@@ -1,0 +1,124 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A03FA01> a ns1:ATCConcept ;
+    skos:notation "A03FA01" ;
+    skos:prefLabel "Metoklopramid"@cs,
+        "Metoclopramide"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013679> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001126",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001703",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002390" ;
+    ns1:description "A dopamine D2 antagonist that is used as an antiemetic.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CERUCAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DEGAN-10-MG-ROZTOK-PRO-INJEKCI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DEGAN-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MCP-HEXAL-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRANERTON" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009329" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000004075" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001319",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003835",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004075" ;
+    ns1:title "Metoklopramid"@cs,
+        "Metoclopramide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001126> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent episodes of paroxysmal brain dysfunction due to a sudden, disorderly, and excessive neuronal discharge. Epilepsy classification systems are generally based upon: (1) clinical features of the seizure episodes (e.g., motor seizure), (2) etiology (e.g., post-traumatic), (3) anatomic site of seizure origin (e.g., frontal lobe seizure), (4) tendency to spread to other structures in the brain, and (5) temporal patterns (e.g., nocturnal epilepsy). (From Adams et al., Principles of Neurology, 6th ed, p313)     "@en ;
+    ns1:title "Epilepsie"@cs,
+        "Epilepsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001319> a ns1:DiseaseOrFinding ;
+    ns1:description "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.     "@en ;
+    ns1:title "Gastroezofageální reflux"@cs,
+        "Gastroesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001703> a ns1:DiseaseOrFinding ;
+    ns1:description "Opening or penetration through the wall of the INTESTINES.     "@en ;
+    ns1:title "Střeva - perforace"@cs,
+        "Intestinal perforation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002390> a ns1:DiseaseOrFinding ;
+    ns1:description "A usually benign, well-encapsulated, lobular, vascular tumor of chromaffin tissue of the ADRENAL MEDULLA or sympathetic paraganglia. The cardinal symptom, reflecting the increased secretion of EPINEPHRINE and NOREPINEPHRINE, is HYPERTENSION, which may be persistent or intermittent. During severe attacks, there may be HEADACHE; SWEATING, palpitation, apprehension, TREMOR; PALLOR or FLUSHING of the face, NAUSEA and VOMITING, pain in the CHEST and ABDOMEN, and paresthesias of the extremities. The incidence of malignancy is as low as 5% but the pathologic distinction between benign and malignant pheochromocytomas is not clear. (Dorland, 27th ed; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, p1298)     "@en ;
+    ns1:title "Feochromocytom"@cs,
+        "Pheochromocytoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003835> a ns1:DiseaseOrFinding ;
+    ns1:description "Chronic delayed gastric emptying. Gastroparesis may be caused by motor dysfunction or paralysis of  STOMACH muscles or may be associated with other systemic diseases such as DIABETES MELLITUS.     "@en ;
+    ns1:title "Gastroparéza"@cs,
+        "Gastroparesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004075> a ns1:DiseaseOrFinding ;
+    ns1:description "Emesis and queasiness occurring after anesthesia.     "@en ;
+    ns1:title "Pooperační nevolnost a zvracení"@cs,
+        "Postoperative nausea and vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009329> a ns1:PhysiologicEffect ;
+    ns1:title "Increased GI Motility"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CERUCAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA01" ;
+    ns1:title "CERUCAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEGAN-10-MG-ROZTOK-PRO-INJEKCI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA01" ;
+    ns1:title "DEGAN 10 MG ROZTOK PRO INJEKCI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEGAN-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA01" ;
+    ns1:title "DEGAN 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MCP-HEXAL-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A03FA01" ;
+    ns1:title "MCP HEXAL 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRANERTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BE51" ;
+    ns1:title "MIGRANERTON"@cs .
+
+

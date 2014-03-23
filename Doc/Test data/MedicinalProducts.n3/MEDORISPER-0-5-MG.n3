@@ -1,0 +1,128 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N05> a ns1:ATCConcept ;
+    dcterms:title "Psycholeptika"@cs,
+        "PSYCHOLEPTICS"@en ;
+    skos:notation "N05" .
+
+<http://linked.opendata.cz/resource/ATC/N05A> a ns1:ATCConcept ;
+    dcterms:title "Antipsychotika, neuroleptika"@cs,
+        "ANTIPSYCHOTICS"@en ;
+    skos:notation "N05A" .
+
+<http://linked.opendata.cz/resource/ATC/N05AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antipsychotika"@cs,
+        "Other antipsychotics"@en ;
+    skos:notation "N05AX" .
+
+<http://linked.opendata.cz/resource/ATC/N05AX08> a ns1:ATCConcept ;
+    dcterms:title "Risperidon"@cs,
+        "Risperidone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N05",
+        "http://linked.opendata.cz/resource/ATC/N05A",
+        "http://linked.opendata.cz/resource/ATC/N05AX" ;
+    skos:notation "N05AX08" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028338> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A selective blocker of DOPAMINE D2 RECEPTORS and SEROTONIN 5-HT2 RECEPTORS that acts as an atypical antipsychotic agent. It has been shown to improve both positive and negative symptoms in the treatment of SCHIZOPHRENIA.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Risperidon"@cs,
+        "Risperidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate serotonin receptors, thereby blocking the actions of serotonin or SEROTONIN RECEPTOR AGONISTS.     "@en ;
+    ns1:title "Serotonin - antagonisté"@cs,
+        "Serotonin antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102961> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX08" ;
+    ns1:hasIndication """MEDORISPER je indikován k léčbě schizofrenie.
+MEDORISPER je indikován k léčbě středně závažných až závažných manických epizod provázejících bipolární poruchy.
+MEDORISPER je indikován ke krátkodobé léčbě (do 6 týdnů) přetrvávající agrese u pacientů se středně závažnou až závažnou Alzheimerovskou demencí, kteří neodpovídají na nefarmakologické postupy a u kterých hrozí riziko sebepoškození nebo poškození ostatních.
+MEDORISPER je indikován ke krátkodobé symptomatické léčbě (až do 6 týdnů) přetrvávající agrese při poruchách chování u dětí od 5 let věku a mladistvých s podprůměrnými intelektuálními funkcemi nebo mentální retardací diagnostikovanými na základě DSM-IV kritérií, u kterých závažnost agresivity nebo jiné formy destruktivního chování vyžadují farmakologickou léčbu. Farmakologická léčba musí být součástí rozsáhlého léčebného programu, který zahrne i psychosociální a vzdělávací intervence. Doporučuje se, aby byl risperidon předepsán specialistou v dětské neurologii a psychiatrem pro děti a mladistvé nebo lékařem, který je dobře seznámen s léčbou disruptivních poruch chování u dětí a mladistvých.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasMaximalPrice "52.6699981689"^^xsd:float ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "66.1699981689"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161988_doc" ;
+    ns1:hasStrength "0,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X0,5MG"@cs ;
+    ns1:title "MEDORISPER 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102962> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX08" ;
+    ns1:hasIndication """MEDORISPER je indikován k léčbě schizofrenie.
+MEDORISPER je indikován k léčbě středně závažných až závažných manických epizod provázejících bipolární poruchy.
+MEDORISPER je indikován ke krátkodobé léčbě (do 6 týdnů) přetrvávající agrese u pacientů se středně závažnou až závažnou Alzheimerovskou demencí, kteří neodpovídají na nefarmakologické postupy a u kterých hrozí riziko sebepoškození nebo poškození ostatních.
+MEDORISPER je indikován ke krátkodobé symptomatické léčbě (až do 6 týdnů) přetrvávající agrese při poruchách chování u dětí od 5 let věku a mladistvých s podprůměrnými intelektuálními funkcemi nebo mentální retardací diagnostikovanými na základě DSM-IV kritérií, u kterých závažnost agresivity nebo jiné formy destruktivního chování vyžadují farmakologickou léčbu. Farmakologická léčba musí být součástí rozsáhlého léčebného programu, který zahrne i psychosociální a vzdělávací intervence. Doporučuje se, aby byl risperidon předepsán specialistou v dětské neurologii a psychiatrem pro děti a mladistvé nebo lékařem, který je dobře seznámen s léčbou disruptivních poruch chování u dětí a mladistvých.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161988_doc" ;
+    ns1:hasStrength "0,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X0,5MG"@cs ;
+    ns1:title "MEDORISPER 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102963> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX08" ;
+    ns1:hasIndication """MEDORISPER je indikován k léčbě schizofrenie.
+MEDORISPER je indikován k léčbě středně závažných až závažných manických epizod provázejících bipolární poruchy.
+MEDORISPER je indikován ke krátkodobé léčbě (do 6 týdnů) přetrvávající agrese u pacientů se středně závažnou až závažnou Alzheimerovskou demencí, kteří neodpovídají na nefarmakologické postupy a u kterých hrozí riziko sebepoškození nebo poškození ostatních.
+MEDORISPER je indikován ke krátkodobé symptomatické léčbě (až do 6 týdnů) přetrvávající agrese při poruchách chování u dětí od 5 let věku a mladistvých s podprůměrnými intelektuálními funkcemi nebo mentální retardací diagnostikovanými na základě DSM-IV kritérií, u kterých závažnost agresivity nebo jiné formy destruktivního chování vyžadují farmakologickou léčbu. Farmakologická léčba musí být součástí rozsáhlého léčebného programu, který zahrne i psychosociální a vzdělávací intervence. Doporučuje se, aby byl risperidon předepsán specialistou v dětské neurologii a psychiatrem pro děti a mladistvé nebo lékařem, který je dobře seznámen s léčbou disruptivních poruch chování u dětí a mladistvých.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasMaximalPrice "158.119995117"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "198.520004272"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC161988_doc" ;
+    ns1:hasStrength "0,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X0,5MG"@cs ;
+    ns1:title "MEDORISPER 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX08" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028338" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102961",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102962",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102963" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "MEDORISPER 0,5 MG"@cs .
+
+

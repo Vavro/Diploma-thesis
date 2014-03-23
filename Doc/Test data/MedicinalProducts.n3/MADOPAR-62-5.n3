@@ -1,0 +1,100 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N04> a ns1:ATCConcept ;
+    dcterms:title "Antiparkinsonika"@cs,
+        "ANTI-PARKINSON DRUGS"@en ;
+    skos:notation "N04" .
+
+<http://linked.opendata.cz/resource/ATC/N04B> a ns1:ATCConcept ;
+    dcterms:title "Dopaminergní léčiva"@cs,
+        "DOPAMINERGIC AGENTS"@en ;
+    skos:notation "N04B" .
+
+<http://linked.opendata.cz/resource/ATC/N04BA> a ns1:ATCConcept ;
+    dcterms:title "Dopa a její deriváty"@cs,
+        "Dopa and dopa derivatives"@en ;
+    skos:notation "N04BA" .
+
+<http://linked.opendata.cz/resource/ATC/N04BA02> a ns1:ATCConcept ;
+    dcterms:title "Levodopa a inhibitor dekarboxylázy"@cs,
+        "Levodopa and decarboxylase inhibitor"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N04",
+        "http://linked.opendata.cz/resource/ATC/N04B",
+        "http://linked.opendata.cz/resource/ATC/N04BA" ;
+    skos:notation "N04BA02" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0005580> a ns1:Ingredient ;
+    ns1:title "Benserazid-hydrochlorid"@cs,
+        "Benserazide hydrochloride"@en,
+        "Benserazidi hydrochloridum"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012434> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001969",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003321" ;
+    ns1:description "The naturally occurring form of DIHYDROXYPHENYLALANINE and the immediate precursor of DOPAMINE. Unlike dopamine itself, it can be taken orally and crosses the blood-brain barrier. It is rapidly taken up by dopaminergic neurons and converted to DOPAMINE. It is used for the treatment of PARKINSONIAN DISORDERS and is usually given with agents that inhibit its conversion to dopamine outside of the central nervous system.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499" ;
+    ns1:title "Levodopa"@cs,
+        "Levodopa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the treatment of Parkinson's disease. The most commonly used drugs act on the dopaminergic system in the striatum and basal ganglia or are centrally acting muscarinic antagonists.     "@en ;
+    ns1:title "Antiparkinsonika"@cs,
+        "Antiparkinson agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499> a ns1:PharmacologicalAction ;
+    ns1:description "Any drugs that are used for their effects on dopamine receptors, on the life cycle of dopamine, or on the survival of dopaminergic neurons.     "@en ;
+    ns1:title "Dopaminové látky"@cs,
+        "Dopamine agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001969> a ns1:DiseaseOrFinding ;
+    ns1:title "Melanom"@cs,
+        "Melanoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016044> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA02" ;
+    ns1:hasIndication """Parkinsonova nemoc
+Madopar 62,5 je indikován k léčbě (zmírnění symptomů) parkinsonismu u idiopatické Parkinsonovy nemoci. Dále může částečně zmírnit příznaky sekundárního parkinsonského syndromu po encefalitidách, intoxikacích (např. po otravě CO) a u parkinsonismu v důsledku mozkové arteriosklerózy. Madopar 62,5 je určen pro stavy s dysfagií a pro stavy vyžadující rychlý nástup účinku, tj. pro pacienty s časnou ranní a odpolední akinezí a u pacientů s „delayed-on“ či „wearing-off“ (syndrom z odeznění) fenomeny.
+Syndrom neklidných nohou (RLS)
+Madopar je dále určen k symptomatické léčbě syndromu neklidných nohou (RLS) včetně idiopatického RLS a k terapii RLS u dialyzovaných pacientů s renálním selháním. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasMaximalPrice "236.419998169"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "279.519989014"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC160083_doc" ;
+    ns1:hasStrength "62.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL SOL 100X62.5MG"@cs ;
+    ns1:title "MADOPAR 62,5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MADOPAR-62-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N04BA02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0005580",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012434" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016044" ;
+    ns1:title "MADOPAR 62,5"@cs .
+
+

@@ -1,0 +1,125 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C01> a ns1:ATCConcept ;
+    dcterms:title "Kardiaka"@cs,
+        "CARDIAC THERAPY"@en ;
+    skos:notation "C01" .
+
+<http://linked.opendata.cz/resource/ATC/C01E> a ns1:ATCConcept ;
+    dcterms:title "Jiná kardiaka"@cs,
+        "OTHER CARDIAC PREPARATIONS"@en ;
+    skos:notation "C01E" .
+
+<http://linked.opendata.cz/resource/ATC/C01EB> a ns1:ATCConcept ;
+    dcterms:title "Jiná kardiaka"@cs,
+        "Other cardiac preparations"@en ;
+    skos:notation "C01EB" .
+
+<http://linked.opendata.cz/resource/ATC/C01EB17> a ns1:ATCConcept ;
+    dcterms:title "Ivabradin"@cs,
+        "Ivabradine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C01",
+        "http://linked.opendata.cz/resource/ATC/C01E",
+        "http://linked.opendata.cz/resource/ATC/C01EB" ;
+    skos:notation "C01EB17" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017444> a ns1:Ingredient ;
+    ns1:title "Ivabradin-hydrochlorid"@cs,
+        "Ivabradine hydrochloride"@en,
+        "Ivabradini hydrochloridum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025989> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "112"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 112X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025990> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025991> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025992> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025993> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025994> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025995> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X7.5MG"@cs ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORLENTOR-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01EB17" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017444" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025989",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025990",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025991",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025992",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025993",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025994",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025995" ;
+    ns1:title "CORLENTOR 7,5 MG"@cs .
+
+

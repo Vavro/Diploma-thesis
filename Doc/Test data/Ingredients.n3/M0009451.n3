@@ -1,0 +1,327 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AC06> a ns1:ATCConcept ;
+    skos:notation "B01AC06" ;
+    skos:prefLabel "Kyselina acetylsalicylová"@cs,
+        "Acetylsalicylic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05BA01> a ns1:ATCConcept ;
+    skos:notation "B05BA01" ;
+    skos:prefLabel "Aminokyseliny"@cs,
+        "Amino acids"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05BA10> a ns1:ATCConcept ;
+    skos:notation "B05BA10" ;
+    skos:prefLabel "Roztoky pro parenterální výživu, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05DB> a ns1:ATCConcept ;
+    skos:notation "B05DB" ;
+    skos:prefLabel "Hypertonické roztoky"@cs,
+        "Hypertonic solutions"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA01> a ns1:ATCConcept ;
+    skos:notation "N02BA01" ;
+    skos:prefLabel "Kyselina acetylsalicylová"@cs,
+        "Acetylsalicylic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009451> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A non-essential amino acid. It is found primarily in gelatin and silk fibroin and used therapeutically as a nutrient. It is also a fast inhibitory neurotransmitter.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000142" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOMIX-1-NOVUM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOMIX-2-NOVUM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-15-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-B-BRAUN-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-B-BRAUN-5--E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-HEPA-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOSTERIL-N-HEPA-8-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-15-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-5-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVENOES-N-PAED-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N14G30E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N17G35E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N9G20E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-100",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-500",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN-PERIPHERAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-15-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-5-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEPHROTECT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G13-E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G16-E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G19-E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-BASAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-LIPID-PERI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-LIPID-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-OMEGA-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-OMEGA-SPECIAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-PERI",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-SPECIAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRINEAL-PD4-WITH-1-1--AMINOACIDS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N4-550E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N6-900E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N7-1000E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N8-800",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N5E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N7E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N9",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N9E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERIOLIMEL-N4E",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRIMENE-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-ELEKTROLYTE-FREE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-PERIPHERAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN-PERIPHERAL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027996" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009063",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009748" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002197" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002197",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002351" ;
+    ns1:title "Glycin"@cs,
+        "Glycine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027996> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used for their pharmacological actions on glycinergic systems. Glycinergic agents include agonists, antagonists, degradation or uptake inhibitors, depleters, precursors, and modulators of receptor function.     "@en ;
+    ns1:title "Glycinové látky"@cs,
+        "Glycine agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002197> a ns1:DiseaseOrFinding ;
+    ns1:description "A collective term for nutritional disorders resulting from poor absorption or nutritional imbalance, and metabolic disorders resulting from defects in biosynthesis (ANABOLISM) or breakdown (CATABOLISM) of endogenous substances.     "@en ;
+    ns1:title "Výživa a metabolismus - nemoci"@cs,
+        "Nutritional and metabolic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000142> a ns1:MechanismOfAction ;
+    ns1:title "Biological Macromolecular Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009063> a ns1:PhysiologicEffect ;
+    ns1:title "Glycine Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009748> a ns1:PhysiologicEffect ;
+    ns1:title "Metabolic Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOMIX-1-NOVUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "AMINOMIX 1 NOVUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOMIX-2-NOVUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "AMINOMIX 2 NOVUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-15-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOPLASMAL-15%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-B-BRAUN-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOPLASMAL B.BRAUN 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-B-BRAUN-5--E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "AMINOPLASMAL B.BRAUN 5% E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOPLASMAL-HEPA-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOPLASMAL HEPA-10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOSTERIL-N-HEPA-8-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOSTERIL N HEPA 8%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOVEN 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-15-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOVEN 15%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVEN-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOVEN 5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMINOVENOES-N-PAED-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "AMINOVENOES N PAED 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N14G30E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "CLINIMIX N14G30E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N17G35E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "CLINIMIX N17G35E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLINIMIX-N9G20E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "CLINIMIX N9G20E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B01AC06" ;
+    ns1:title "GODASAL 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02BA01" ;
+    ns1:title "GODASAL 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "KABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "KABIVEN PERIPHERAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-15-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 15%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEONUTRIN-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "NEONUTRIN 5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEPHROTECT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NEPHROTECT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G13-E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUMETA G13%E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G16-E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUMETA G16%E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUMETA-G19-E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUMETA G19%E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-BASAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX BASAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-LIPID-PERI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX LIPID PERI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-LIPID-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX LIPID PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-OMEGA-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX OMEGA PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-OMEGA-SPECIAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX OMEGA SPECIAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-PERI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX PERI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRIFLEX-SPECIAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "NUTRIFLEX SPECIAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRINEAL-PD4-WITH-1-1--AMINOACIDS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05DB" ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N4-550E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLICLINOMEL N4-550E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N6-900E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLICLINOMEL N6-900E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N7-1000E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLICLINOMEL N7-1000E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLICLINOMEL-N8-800> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLICLINOMEL N8-800"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N5E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLIMEL N5E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N7E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLIMEL N7E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N9> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLIMEL N9"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLIMEL-N9E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "OLIMEL N9E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERIOLIMEL-N4E> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "PERIOLIMEL N4E"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRIMENE-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA01" ;
+    ns1:title "PRIMENE 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "SMOFKABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-ELEKTROLYTE-FREE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "SMOFKABIVEN ELEKTROLYTE FREE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "SMOFKABIVEN PERIPHERAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "STRUCTOKABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "STRUCTOKABIVEN PERIPHERAL"@cs .
+
+

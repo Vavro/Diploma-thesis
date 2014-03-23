@@ -1,0 +1,122 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C01> a ns1:ATCConcept ;
+    dcterms:title "Kardiaka"@cs,
+        "CARDIAC THERAPY"@en ;
+    skos:notation "C01" .
+
+<http://linked.opendata.cz/resource/ATC/C01A> a ns1:ATCConcept ;
+    dcterms:title "Srdeční glykosidy"@cs,
+        "CARDIAC GLYCOSIDES"@en ;
+    skos:notation "C01A" .
+
+<http://linked.opendata.cz/resource/ATC/C01AA> a ns1:ATCConcept ;
+    dcterms:title "Digitalisové glykosidy"@cs,
+        "Digitalis glycosides"@en ;
+    skos:notation "C01AA" .
+
+<http://linked.opendata.cz/resource/ATC/C01AA05> a ns1:ATCConcept ;
+    dcterms:title "Digoxin"@cs,
+        "Digoxin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C01",
+        "http://linked.opendata.cz/resource/ATC/C01A",
+        "http://linked.opendata.cz/resource/ATC/C01AA" ;
+    skos:notation "C01AA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006386> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000375",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001430",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002363",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003118",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003541" ;
+    ns1:description "A cardiotonic glycoside obtained mainly from Digitalis lanata; it consists of three sugars and the aglycone DIGOXIGENIN. Digoxin has positive inotropic and negative chronotropic activity. It is used to control ventricular rate in ATRIAL FIBRILLATION and in the management of congestive heart failure with atrial fibrillation. Its use in congestive heart failure and sinus rhythm is less certain. The margin between toxic and therapeutic doses is small. (From Martindale, The Extra Pharmacopoeia, 30th ed, p666)     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Digoxin"@cs,
+        "Digoxin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that have a strengthening effect on the heart or that can increase cardiac output. They may be CARDIAC GLYCOSIDES; SYMPATHOMIMETICS; or other drugs. They are used after MYOCARDIAL INFARCT; CARDIAC SURGICAL PROCEDURES; in SHOCK; or in congestive heart failure (HEART FAILURE).     "@en ;
+    ns1:title "Kardiotonika"@cs,
+        "Cardiotonic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000375> a ns1:DiseaseOrFinding ;
+    ns1:title "Amyloidóza"@cs,
+        "Amyloidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000687> a ns1:DiseaseOrFinding ;
+    ns1:title "Kardiomyopatie hypertrofická"@cs,
+        "Cardiomyopathy, hypertrophic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002363> a ns1:DiseaseOrFinding ;
+    ns1:title "Konstriktivní perikarditida"@cs,
+        "Pericarditis, constrictive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003118> a ns1:DiseaseOrFinding ;
+    ns1:title "Fibrilace komor"@cs,
+        "Ventricular fibrillation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003541> a ns1:DiseaseOrFinding ;
+    ns1:title "Komorová tachykardie"@cs,
+        "Tachycardia, ventricular"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083318> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01AA05" ;
+    ns1:hasIndication """Srdeční selhávání u hypertrofických a dilatovaných srdcí při chronickém tlakovém a objemovém přetížení (arteriální hypertenze, aortální nebo mitrální insuficience, chronická ischemická choroba srdeční), zvláště je-li přítomna fibrilace síní s rychlou odpovědí komor. 
+Dlouhodobé podávání digoxinu je indikováno u chronického srdečního selhání (při dobré kompenzaci trvající několik měsíců, zejména při nejasné původní indikaci digoxinu, je možné opatrné vysazení digoxinu za pečlivé klinické a laboratorní kontroly zejména u nemocných, u kterých je vyšší riziko intoxikace).
+Fibrilace síní s rychlou odpovědí komor, zejména při současném srdečním selhání (pokud se nedá přímo přednost kardioverzi). 
+Přípravek je určen k léčbě dospělých a dětí od 3 let.
+"""@cs ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasMaximalPrice "29.6800003052"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "36.8899993896"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158852_doc" ;
+    ns1:hasStrength "0.125MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X0.125MG"@cs ;
+    ns1:title "DIGOXIN 0,125 LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIGOXIN-0-125-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C01AA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006386" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083318" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "DIGOXIN 0,125 LÉČIVA"@cs .
+
+

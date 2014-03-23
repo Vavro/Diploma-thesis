@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C07> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory"@cs,
+        "BETA BLOCKING AGENTS"@en ;
+    skos:notation "C07" .
+
+<http://linked.opendata.cz/resource/ATC/C07A> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory"@cs,
+        "BETA BLOCKING AGENTS"@en ;
+    skos:notation "C07A" .
+
+<http://linked.opendata.cz/resource/ATC/C07AB> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory selektivní"@cs,
+        "Beta blocking agents, selective"@en ;
+    skos:notation "C07AB" .
+
+<http://linked.opendata.cz/resource/ATC/C07AB07> a ns1:ATCConcept ;
+    dcterms:title "Bisoprolol"@cs,
+        "Bisoprolol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C07",
+        "http://linked.opendata.cz/resource/ATC/C07A",
+        "http://linked.opendata.cz/resource/ATC/C07AB" ;
+    skos:notation "C07AB07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026258> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544001" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Bisoprolol fumarate"@cs,
+        "Bisoprolol fumarate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit the actions of the sympathetic nervous system by any mechanism. The most common of these are the ADRENERGIC ANTAGONISTS and drugs that deplete norepinephrine or reduce the release of transmitters from adrenergic postganglionic terminals (see ADRENERGIC AGENTS). Drugs that act in the central nervous system to reduce sympathetic activity (e.g., centrally acting alpha-2 adrenergic agonists, see ADRENERGIC ALPHA-AGONISTS) are included here.     "@en ;
+    ns1:title "Sympatolytika"@cs,
+        "Sympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544001> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and block the activation of ADRENERGIC BETA-1 RECEPTORS.     "@en ;
+    ns1:title "Beta-1-adrenergní receptory - antagonisté"@cs,
+        "Adrenergic beta-1 receptor antagonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182680> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AB07" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasMaximalPrice "33.6100006104"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasReimbursementAmount "33.5999984741"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "BISO 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182715> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AB07" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 60X2.5MG"@cs ;
+    ns1:title "BISO 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182716> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AB07" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasMaximalPrice "112"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasReimbursementAmount "112"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X2.5MG"@cs ;
+    ns1:title "BISO 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182717> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AB07" ;
+    ns1:hasIndicationGroup "CARDIACA"@cs ;
+    ns1:hasPackagingSize "500"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 500X2.5MG"@cs ;
+    ns1:title "BISO 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISO-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AB07" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026258" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182680",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182715",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182716",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0182717" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "BISO 2,5 MG"@cs .
+
+

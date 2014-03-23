@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R01> a ns1:ATCConcept ;
+    dcterms:title "Nosní léčiva"@cs,
+        "NASAL PREPARATIONS"@en ;
+    skos:notation "R01" .
+
+<http://linked.opendata.cz/resource/ATC/R01A> a ns1:ATCConcept ;
+    dcterms:title "Dekongesční a jiná nosní léčiva k lokální aplikaci"@cs,
+        "DECONGESTANTS AND OTHER NASAL PREPARATIONS FOR TOPICAL USE"@en ;
+    skos:notation "R01A" .
+
+<http://linked.opendata.cz/resource/ATC/R01AD> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy"@cs,
+        "Corticosteroids"@en ;
+    skos:notation "R01AD" .
+
+<http://linked.opendata.cz/resource/ATC/R01AD01> a ns1:ATCConcept ;
+    dcterms:title "Beklometason"@cs,
+        "Beclometasone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R01",
+        "http://linked.opendata.cz/resource/ATC/R01A",
+        "http://linked.opendata.cz/resource/ATC/R01AD" ;
+    skos:notation "R01AD01" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0002055> a ns1:Ingredient ;
+    ns1:title "Beklometason-dipropionát"@cs,
+        "Beclometasone dipropionate"@en,
+        "Beclometasoni dipropionas"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102421> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD01" ;
+    ns1:hasIndication """Prevence a léčba celoroční a sezónní alergické rinitidy, včetně senné rýmy.
+Vazomotorická rinitida.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X9ML/70DÁV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Nosní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146478_doc" ;
+    ns1:hasStrength "50MCG/DÁVKA"^^xsd:string ;
+    ns1:hasTitleSupplement "NAS SPR SUS 1X9ML (70DÁV)"@cs ;
+    ns1:title "BECLOMET NASAL AQUA 50 MCG, NOSNÍ SPREJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102422> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD01" ;
+    ns1:hasIndication """Prevence a léčba celoroční a sezónní alergické rinitidy, včetně senné rýmy.
+Vazomotorická rinitida.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X10ML/80DÁV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Nosní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146478_doc" ;
+    ns1:hasStrength "50MCG/DÁVKA"^^xsd:string ;
+    ns1:hasTitleSupplement "NAS SPR SUS 1X10ML (80DÁV)"@cs ;
+    ns1:title "BECLOMET NASAL AQUA 50 MCG, NOSNÍ SPREJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102423> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD01" ;
+    ns1:hasIndication """Prevence a léčba celoroční a sezónní alergické rinitidy, včetně senné rýmy.
+Vazomotorická rinitida.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X23ML/200DÁV"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Nosní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC146478_doc" ;
+    ns1:hasStrength "50MCG/DÁVKA"^^xsd:string ;
+    ns1:hasTitleSupplement "NAS SPR SUS 1X23ML (200DÁV)"@cs ;
+    ns1:title "BECLOMET NASAL AQUA 50 MCG, NOSNÍ SPREJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BECLOMET-NASAL-AQUA-50-MCG--NOSNI-SPREJ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R01AD01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0002055" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102421",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102422",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102423" ;
+    ns1:title "BECLOMET NASAL AQUA 50 MCG, NOSNÍ SPREJ"@cs .
+
+

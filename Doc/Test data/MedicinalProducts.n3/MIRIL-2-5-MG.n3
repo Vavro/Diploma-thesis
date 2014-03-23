@@ -1,0 +1,229 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09A> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE INHIBITORS, PLAIN"@en ;
+    skos:notation "C09A" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE inhibitors, plain"@en ;
+    skos:notation "C09AA" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA05> a ns1:ATCConcept ;
+    dcterms:title "Ramipril"@cs,
+        "Ramipril"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C09",
+        "http://linked.opendata.cz/resource/ATC/C09A",
+        "http://linked.opendata.cz/resource/ATC/C09AA" ;
+    skos:notation "C09AA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026184> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000415",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001573",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A long-acting angiotensin-converting enzyme inhibitor. It is a prodrug that is transformed in the liver to its active metabolite ramiprilat.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456" ;
+    ns1:title "Ramipril"@cs,
+        "Ramipril"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs whose main indications are the treatment of hypertension and heart failure. They exert their hemodynamic effect mainly by inhibiting the renin-angiotensin system. They also modulate sympathetic nervous system activity and increase prostaglandin synthesis. They cause mainly vasodilation and mild natriuresis without affecting heart rate and contractility.     "@en ;
+    ns1:title "Inhibitory angiotenzin konvertujícího enzymu"@cs,
+        "Angiotensin-converting enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000415> a ns1:DiseaseOrFinding ;
+    ns1:title "Angioedém"@cs,
+        "Angioedema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023760> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndication """- Léčba hypertenze
+- Kardiovaskulární prevence: snížení kardiovaskulární morbidity a mortality u pacientů:
+s manifestním aterotrombotickým kardiovaskulárním onemocněním (anamnéza onemocnění
+koronárních tepen nebo mozkové příhody, nebo onemocnění periferních cév) nebo
+s diabetem a s nejméně jedním kardiovaskulárním rizikovým faktorem (viz bod 5.1).
+- Léčba onemocnění ledvin:
+incipientní glomerulární diabetická nefropatie definovaná přítomností mikroalbuminurie
+manifestní glomerulární diabetická nefropatie definována makroproteinurií u pacientů s nejméně jedním dalším kardiovaskulárním rizikovým faktorem (viz bod 5.1)
+manifestní glomerulární nediabetická nefropatie definovaná makroproteinurií ≥ 3 g/den (viz bod 5.1).
+- Léčba symptomatického selhání srdce
+- Sekundární prevence po akutním infarktu myokardu: snížení mortality v akutní fázi infarktu myokardu u pacientů s klinickými příznaky selhání srdce, se začátkem léčby > 48 hod po akutním infarktu myokardu
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153320_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023761> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndication """- Léčba hypertenze
+- Kardiovaskulární prevence: snížení kardiovaskulární morbidity a mortality u pacientů:
+s manifestním aterotrombotickým kardiovaskulárním onemocněním (anamnéza onemocnění
+koronárních tepen nebo mozkové příhody, nebo onemocnění periferních cév) nebo
+s diabetem a s nejméně jedním kardiovaskulárním rizikovým faktorem (viz bod 5.1).
+- Léčba onemocnění ledvin:
+incipientní glomerulární diabetická nefropatie definovaná přítomností mikroalbuminurie
+manifestní glomerulární diabetická nefropatie definována makroproteinurií u pacientů s nejméně jedním dalším kardiovaskulárním rizikovým faktorem (viz bod 5.1)
+manifestní glomerulární nediabetická nefropatie definovaná makroproteinurií ≥ 3 g/den (viz bod 5.1).
+- Léčba symptomatického selhání srdce
+- Sekundární prevence po akutním infarktu myokardu: snížení mortality v akutní fázi infarktu myokardu u pacientů s klinickými příznaky selhání srdce, se začátkem léčby > 48 hod po akutním infarktu myokardu
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "75.8600006104"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "75.8600006104"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153320_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023762> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndication """- Léčba hypertenze
+- Kardiovaskulární prevence: snížení kardiovaskulární morbidity a mortality u pacientů:
+s manifestním aterotrombotickým kardiovaskulárním onemocněním (anamnéza onemocnění
+koronárních tepen nebo mozkové příhody, nebo onemocnění periferních cév) nebo
+s diabetem a s nejméně jedním kardiovaskulárním rizikovým faktorem (viz bod 5.1).
+- Léčba onemocnění ledvin:
+incipientní glomerulární diabetická nefropatie definovaná přítomností mikroalbuminurie
+manifestní glomerulární diabetická nefropatie definována makroproteinurií u pacientů s nejméně jedním dalším kardiovaskulárním rizikovým faktorem (viz bod 5.1)
+manifestní glomerulární nediabetická nefropatie definovaná makroproteinurií ≥ 3 g/den (viz bod 5.1).
+- Léčba symptomatického selhání srdce
+- Sekundární prevence po akutním infarktu myokardu: snížení mortality v akutní fázi infarktu myokardu u pacientů s klinickými příznaky selhání srdce, se začátkem léčby > 48 hod po akutním infarktu myokardu
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153320_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023763> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023764> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041462> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041465> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041473> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasIndication """- Léčba hypertenze
+- Kardiovaskulární prevence: snížení kardiovaskulární morbidity a mortality u pacientů:
+s manifestním aterotrombotickým kardiovaskulárním onemocněním (anamnéza onemocnění
+koronárních tepen nebo mozkové příhody, nebo onemocnění periferních cév) nebo
+s diabetem a s nejméně jedním kardiovaskulárním rizikovým faktorem (viz bod 5.1).
+- Léčba onemocnění ledvin:
+incipientní glomerulární diabetická nefropatie definovaná přítomností mikroalbuminurie
+manifestní glomerulární diabetická nefropatie definována makroproteinurií u pacientů s nejméně jedním dalším kardiovaskulárním rizikovým faktorem (viz bod 5.1)
+manifestní glomerulární nediabetická nefropatie definovaná makroproteinurií ≥ 3 g/den (viz bod 5.1).
+- Léčba symptomatického selhání srdce
+- Sekundární prevence po akutním infarktu myokardu: snížení mortality v akutní fázi infarktu myokardu u pacientů s klinickými příznaky selhání srdce, se začátkem léčby > 48 hod po akutním infarktu myokardu
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "252.869995117"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "252.880004883"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC153320_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X2.5MG"@cs ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRIL-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026184" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023760",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023761",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023762",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023763",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0023764",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041462",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041465",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041473" ;
+    ns1:title "MIRIL 2,5 MG"@cs .
+
+

@@ -1,0 +1,232 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01DD04> a ns1:ATCConcept ;
+    skos:notation "J01DD04" ;
+    skos:prefLabel "Ceftriaxon"@cs,
+        "Ceftriaxone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003731> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001304",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001716" ;
+    ns1:description "A broad-spectrum cephalosporin antibiotic with a very long half-life and high penetrability to meninges, eyes and inner ears.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-KABI-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-KABI-2-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-SANDOZ-1-G",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SAMIXON-1000" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000587",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000741",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001106",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001124",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001154",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001242",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001380",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001758",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001890",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001981",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002266",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002379",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002494",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002507",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002666",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002716",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002817",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002837",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003512",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003812",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003823",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003861" ;
+    ns1:title "Ceftriaxon"@cs,
+        "Ceftriaxone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000587> a ns1:DiseaseOrFinding ;
+    ns1:description "Bone diseases caused by pathogenic microorganisms.     "@en ;
+    ns1:title "Kosti - nemoci infekční"@cs,
+        "Bone diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000741> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute, localized autoinoculable infectious disease usually acquired through sexual contact. Caused by HAEMOPHILUS DUCREYI, it occurs endemically almost worldwide, especially in tropical and subtropical countries and more commonly in seaports and urban areas than in rural areas.     "@en ;
+    ns1:title "Vřed měkký"@cs,
+        "Chancroid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001106> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any segment of the SMALL INTESTINE.     "@en ;
+    ns1:title "Enteritida"@cs,
+        "Enteritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001124> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the EPIDIDYMIS. Its clinical features include enlarged epididymis, a swollen SCROTUM; PAIN; PYURIA; and FEVER. It is usually related to infections in the URINARY TRACT, which likely spread to the EPIDIDYMIS through either the VAS DEFERENS or the lymphatics of the SPERMATIC CORD.     "@en ;
+    ns1:title "Epididymitida"@cs,
+        "Epididymitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001304> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the GALLBLADDER. They generally involve the impairment of BILE flow, GALLSTONES in the BILIARY TRACT, infections, neoplasms, or other diseases.     "@en ;
+    ns1:title "Žlučník - nemoci"@cs,
+        "Gallbladder diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001716> a ns1:DiseaseOrFinding ;
+    ns1:description "Yellow discoloration of the SKIN; MUCOUS MEMBRANE; and SCLERA in the NEWBORN. It is a sign of NEONATAL HYPERBILIRUBINEMIA. Most cases are transient self-limiting (PHYSIOLOGICAL NEONATAL JAUNDICE) occurring in the first week of life, but some can be a sign of pathological disorders, particularly LIVER DISEASES.     "@en ;
+    ns1:title "Novorozenecká žloutenka"@cs,
+        "Jaundice, neonatal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001758> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus KLEBSIELLA.     "@en ;
+    ns1:title "Klebsiella - infekce"@cs,
+        "Klebsiella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001890> a ns1:DiseaseOrFinding ;
+    ns1:description "An infectious disease caused by a spirochete, BORRELIA BURGDORFERI, which is transmitted chiefly by Ixodes dammini (see IXODES) and pacificus ticks in the United States and Ixodes ricinis (see IXODES) in Europe. It is a disease with early and late cutaneous manifestations plus involvement of the nervous system, heart, eye, and joints in variable combinations. The disease was formerly known as Lyme arthritis and first discovered at Old Lyme, Connecticut.     "@en ;
+    ns1:title "Lymeská nemoc"@cs,
+        "Lyme disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001981> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)     "@en ;
+    ns1:title "Meningitida"@cs,
+        "Meningitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002379> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PERITONEUM lining the ABDOMINAL CAVITY as the result of infectious, autoimmune, or chemical processes. Primary peritonitis is due to infection of the PERITONEAL CAVITY via hematogenous or lymphatic spread and without intra-abdominal source. Secondary peritonitis arises from the ABDOMINAL CAVITY itself through RUPTURE or ABSCESS of intra-abdominal organs.     "@en ;
+    ns1:title "Peritonitida"@cs,
+        "Peritonitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002494> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the RECTUM and the distal portion of the COLON.     "@en ;
+    ns1:title "Proktokolitida"@cs,
+        "Proctocolitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002666> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus SALMONELLA.     "@en ;
+    ns1:title "Salmonelóza"@cs,
+        "Salmonella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002716> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic disease associated with the presence of pathogenic microorganisms or their toxins in the blood.     "@en ;
+    ns1:title "Septikémie"@cs,
+        "Septicemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003512> a ns1:DiseaseOrFinding ;
+    ns1:description "Bacterial infections of the leptomeninges and subarachnoid space, frequently involving the cerebral cortex, cranial nerves, cerebral blood vessels, spinal cord, and nerve roots.     "@en ;
+    ns1:title "Meningitida bakteriální"@cs,
+        "Meningitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003812> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the lung parenchyma that is caused by bacterial infections.     "@en ;
+    ns1:title "Bakteriální pneumonie"@cs,
+        "Pneumonia, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003823> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of non-skeletal tissue, i.e., exclusive of bone, ligaments, cartilage, and fibrous tissue. The concept is usually referred to as skin and soft tissue infections and usually subcutaneous and muscle tissue are involved. The predisposing factors in anaerobic infections are trauma, ischemia, and surgery. The organisms often derive from the fecal or oral flora, particularly in wounds associated with intestinal surgery, decubitus ulcer, and human bites. (From Cecil Textbook of Medicine, 19th ed, p1688)     "@en ;
+    ns1:title "Měkké tkáně - infekce"@cs,
+        "Soft tissue infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.     "@en ;
+    ns1:title "Sepse"@cs,
+        "Sepsis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-KABI-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD04" ;
+    ns1:title "CEFTRIAXON KABI 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-KABI-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD04" ;
+    ns1:title "CEFTRIAXON KABI 2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CEFTRIAXON-SANDOZ-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD04" ;
+    ns1:title "CEFTRIAXON SANDOZ 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SAMIXON-1000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/J01DD04" ;
+    ns1:title "SAMIXON 1000"@cs .
+
+

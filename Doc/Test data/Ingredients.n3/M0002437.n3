@@ -1,0 +1,221 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D07AC01> a ns1:ATCConcept ;
+    skos:notation "D07AC01" ;
+    skos:prefLabel "Betamethason"@cs,
+        "Betamethasone"@en .
+
+<http://linked.opendata.cz/resource/ATC/D07CC01> a ns1:ATCConcept ;
+    skos:notation "D07CC01" ;
+    skos:prefLabel "Betamethason a antibiotika"@cs,
+        "Betamethasone and antibiotics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002437> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002075" ;
+    ns1:description "A glucocorticoid given orally, parenterally, by local injection, by inhalation, or applied topically in the management of various disorders in which corticosteroids are indicated. Its lack of mineralocorticoid properties makes betamethasone particularly suitable for treating cerebral edema and congenital adrenal hyperplasia. (From Martindale, The Extra Pharmacopoeia, 30th ed, p724)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BEDIJELF--0-5-MG---1-MG--G-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BEDIJELF--0-5-MG---1-MG--G-MAST",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BETESIL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BETNOVATE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FUCICORT" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009928" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000939",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000943",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001056",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001190",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001275",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001410",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001687",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001794",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001844",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002076",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002169",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002511",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002513",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002526",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002682",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002712",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003580" ;
+    ns1:title "Betamethason"@cs,
+        "Betamethasone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat asthma.     "@en ;
+    ns1:title "Antiastmatika"@cs,
+        "Anti-asthmatic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000943> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory genetically determined disease of the skin marked by increased ability to form reagin (IgE), with increased susceptibility to allergic rhinitis and asthma, and hereditary disposition to a lowered threshold for pruritus. It is manifested by lichenification, excoriation, and crusting, mainly on the flexural surfaces of the elbow and knee. In infants it is known as infantile eczema.     "@en ;
+    ns1:title "Atopická dermatitida"@cs,
+        "Dermatitis, atopic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001056> a ns1:DiseaseOrFinding ;
+    ns1:description "A pruritic papulovesicular dermatitis occurring as a reaction to many endogenous and exogenous agents (Dorland, 27th ed).     "@en ;
+    ns1:title "Ekzém"@cs,
+        "Eczema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001190> a ns1:DiseaseOrFinding ;
+    ns1:title "Obličejové dermatózy"@cs,
+        "Facial dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001275> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases of the foot, general or unspecified.     "@en ;
+    ns1:title "Noha - dermatózy"@cs,
+        "Foot dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001410> a ns1:DiseaseOrFinding ;
+    ns1:title "Ruka - dermatózy"@cs,
+        "Hand dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001794> a ns1:DiseaseOrFinding ;
+    ns1:description "A nonspecific term used to denote any cutaneous lesion or group of lesions, or eruptions of any type on the leg. (From Stedman, 25th ed)     "@en ;
+    ns1:title "Končetiny dolní - dermatózy"@cs,
+        "Leg dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001844> a ns1:DiseaseOrFinding ;
+    ns1:description "An inflammatory, pruritic disease of the skin and mucous membranes, which can be either generalized or localized. It is characterized by distinctive purplish, flat-topped papules having a predilection for the trunk and flexor surfaces. The lesions may be discrete or coalesce to form plaques. Histologically, there is a \"saw-tooth\" pattern of epidermal hyperplasia and vacuolar alteration of the basal layer of the epidermis along with an intense upper dermal inflammatory infiltrate composed predominantly of T-cells. Etiology is unknown.     "@en ;
+    ns1:title "Lichen planus"@cs,
+        "Lichen planus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002076> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, malignant T-cell lymphoma of the skin. In the late stages, the LYMPH NODES and viscera are affected.     "@en ;
+    ns1:title "Mycosis fungoides"@cs,
+        "Mycosis fungoides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002169> a ns1:DiseaseOrFinding ;
+    ns1:description "An extremely variable eczematous skin disease that is presumed to be a response to prolonged vigorous scratching, rubbing, or pinching to relieve intense pruritus. It varies in intensity, severity, course, and morphologic expression in different individuals. Neurodermatitis is believed by some to be psychogenic. The circumscribed or localized form is often referred to as lichen simplex chronicus.     "@en ;
+    ns1:title "Neurodermatitida"@cs,
+        "Neurodermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002511> a ns1:DiseaseOrFinding ;
+    ns1:description "A name applied to several itchy skin eruptions of unknown cause. The characteristic course is the formation of a dome-shaped papule with a small transient vesicle on top, followed by crusting over or lichenification. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Prurigo"@cs,
+        "Prurigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002513> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense chronic itching in the anal area.     "@en ;
+    ns1:title "Pruritus ani"@cs,
+        "Pruritus ani"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002682> a ns1:DiseaseOrFinding ;
+    ns1:title "Skalp - dermatózy"@cs,
+        "Scalp dermatoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002712> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory disease of the skin with unknown etiology. It is characterized by moderate ERYTHEMA, dry, moist, or greasy (SEBACEOUS GLAND) scaling and yellow crusted patches on various areas, especially the scalp, that exfoliate as dandruff. Seborrheic dermatitis is common in children and adolescents with HIV INFECTIONS.     "@en ;
+    ns1:title "Dermatitida seboroická"@cs,
+        "Dermatitis, seborrheic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003580> a ns1:DiseaseOrFinding ;
+    ns1:description "A non-allergic contact dermatitis caused by prolonged exposure to irritants and not explained by delayed hypersensitivity mechanisms.     "@en ;
+    ns1:title "Dermatitida dráždivá"@cs,
+        "Dermatitis, irritant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134> a ns1:MechanismOfAction ;
+    ns1:title "Lipoxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327> a ns1:PhysiologicEffect ;
+    ns1:title "Carbohydrate Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lysosomal Function"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739> a ns1:PhysiologicEffect ;
+    ns1:title "Lipid Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009928> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cellular Migration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BEDIJELF--0-5-MG---1-MG--G-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07CC01" ;
+    ns1:title "BEDIJELF (0,5 MG + 1 MG)/G KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BEDIJELF--0-5-MG---1-MG--G-MAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07CC01" ;
+    ns1:title "BEDIJELF (0,5 MG + 1 MG)/G MAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BETESIL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AC01" ;
+    ns1:title "BETESIL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BETNOVATE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07AC01" ;
+    ns1:title "BETNOVATE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUCICORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07CC01" ;
+    ns1:title "FUCICORT"@cs .
+
+

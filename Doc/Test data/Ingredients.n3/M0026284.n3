@@ -1,0 +1,920 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C07FB07> a ns1:ATCConcept ;
+    skos:notation "C07FB07" ;
+    skos:prefLabel "Bisoprolol a jiné antihypertenziva"@cs,
+        "Bisoprolol and other antihypertensives"@en .
+
+<http://linked.opendata.cz/resource/ATC/C08CA01> a ns1:ATCConcept ;
+    skos:notation "C08CA01" ;
+    skos:prefLabel "Amlodipin"@cs,
+        "Amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BB03> a ns1:ATCConcept ;
+    skos:notation "C09BB03" ;
+    skos:prefLabel "Lisinopril a amlodipin"@cs,
+        "lisinopril and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BB04> a ns1:ATCConcept ;
+    skos:notation "C09BB04" ;
+    skos:prefLabel "Perindopril a amlodipin"@cs,
+        "Perindopril and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BB07> a ns1:ATCConcept ;
+    skos:notation "C09BB07" ;
+    skos:prefLabel "Ramipril a amlodipin"@cs,
+        "Ramipril and amlodipine "@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DB01> a ns1:ATCConcept ;
+    skos:notation "C09DB01" ;
+    skos:prefLabel "Valsartan a amlodipin"@cs,
+        "Valsartan and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DB02> a ns1:ATCConcept ;
+    skos:notation "C09DB02" ;
+    skos:prefLabel "Olmesartan-medoxomil a amlodipin"@cs,
+        "Olmesartan medoxomil and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DB04> a ns1:ATCConcept ;
+    skos:notation "C09DB04" ;
+    skos:prefLabel "Telmisartan a amlodipin"@cs,
+        "Telmisartan and amplodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DX01> a ns1:ATCConcept ;
+    skos:notation "C09DX01" ;
+    skos:prefLabel "Valsartan, amlodipin a hydrochorothiazid"@cs,
+        "Amlodipine besylate, valsartan, hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DX03> a ns1:ATCConcept ;
+    skos:notation "C09DX03" ;
+    skos:prefLabel "Olmesartan-medoxomil, amlodipin a hydrochlorothiazid"@cs,
+        "Olmesartan medoxomil, amlodipine and hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09XA53> a ns1:ATCConcept ;
+    skos:notation "C09XA53" ;
+    skos:prefLabel "aliskiren a amlodipin"@cs,
+        "Aliskiren and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09XA54> a ns1:ATCConcept ;
+    skos:notation "C09XA54" ;
+    skos:prefLabel "Aliskiren, amlodipin a hydrochlorothiazid"@cs,
+        "Aliskiren, amlodipine and hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C10BX03> a ns1:ATCConcept ;
+    skos:notation "C10BX03" ;
+    skos:prefLabel "Atorvastatin a amlodipin"@cs,
+        "Atorvastatin and amlodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649" ;
+    ns1:description "A long-acting dihydropyridine calcium channel blocker. It is effective in the treatment of ANGINA PECTORIS and HYPERTENSION.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020065" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/AFITEN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AFITEN-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AGEN-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AGEN-5",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALOZUR-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALOZUR-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-10-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMILOSTAD-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMILOSTAD-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-10-MG-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-10-MG-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-20-MG-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-20-MG-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-4-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-4-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-8-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-8-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACCORD-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACCORD-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACTAVIS-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACTAVIS-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ATORVASTATIN-PFIZER-10-MG-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ATORVASTATIN-PFIZER-5-MG-10-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-BLUEFISH-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-BLUEFISH-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-HBF-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-HBF-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-MYLAN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-MYLAN-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ORION-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ORION-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-TEVA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-TEVA-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-VITABALANS-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-VITABALANS-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ZENTIVA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ZENTIVA-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLORATIO-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLORATIO-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLOZEK-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMLOZEK-5",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMLO-10",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMLO-5",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CADUET-10-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CADUET-5-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-2-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-10-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-10-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-5-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-5-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-10-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-5-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-5-MG-80-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-10-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-5-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-5-MG-80-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-320MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-10-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-10-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-2-5-MG-2-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-5-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-5-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-10-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-5-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-5-MG-80-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-10-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-5-MG-160-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-5-MG-80-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORMODIPINE-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NORMODIPINE-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-40-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-40-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-80-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-80-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORCAL-NEO-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ORCAL-NEO-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-4-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-4-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-8-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-8-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-10-MG-AMLODIPINE-10-MG-SERVIER",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-10-MG-AMLODIPINE-5-MG-SERVIER",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-5-MG-AMLODIPINE-10-MG-SERVIER",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-5-MG-AMLODIPINE-5-MG-SERVIER",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-10-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-10-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-2-5-MG-2-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-5-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-5-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-10-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-10-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-5-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-5-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-150-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-150-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-300-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-300-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-150-MG-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RECOTENS-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RECOTENS-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-20-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-40-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-40-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-20-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-40-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-40-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TENSIGAL-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-4-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-4-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-8-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-8-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TORELLA-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TORELLA-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-40-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-40-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-80-MG-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-80-MG-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-4-MG-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-4-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-8-MG-10-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-8-MG-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOREM-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZOREM-5-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008375",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000406",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000407",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000408",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616" ;
+    ns1:title "Amlodipin"@cs,
+        "Amlodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000407> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by the development of CHEST PAIN at rest with concomitant transient ST segment elevation in the ELECTROCARDIOGRAM, but with preserved exercise capacity.     "@en ;
+    ns1:title "Variantní angina pectoris"@cs,
+        "Angina pectoris, variant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000408> a ns1:DiseaseOrFinding ;
+    ns1:description "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Nestabilní angina pectoris"@cs,
+        "Angina, unstable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020065> a ns1:MechanismOfAction ;
+    ns1:title "L-Calcium Channel Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008375> a ns1:PhysiologicEffect ;
+    ns1:title "Coronary Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFITEN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AFITEN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFITEN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AFITEN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGEN-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AGEN 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGEN-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AGEN 5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALOZUR-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ALOZUR 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALOZUR-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ALOZUR 5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-10-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 10 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 20 MG/10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMESOS-20-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB03" ;
+    ns1:title "AMESOS 20 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMILOSTAD-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMILOSTAD 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMILOSTAD-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMILOSTAD 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-10-MG-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLATOR 10 MG/10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-10-MG-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLATOR 10 MG/5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-20-MG-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLATOR 20 MG/10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLATOR-20-MG-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLATOR 20 MG/5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-4-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "AMLESSA 4 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-4-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "AMLESSA 4 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-8-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "AMLESSA 8 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLESSA-8-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "AMLESSA 8 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACCORD-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ACCORD 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACCORD-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ACCORD 5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACTAVIS-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ACTAVIS 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ACTAVIS-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ACTAVIS 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ATORVASTATIN-PFIZER-10-MG-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLODIPIN/ATORVASTATIN PFIZER 10 MG/10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ATORVASTATIN-PFIZER-5-MG-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "AMLODIPIN/ATORVASTATIN PFIZER 5 MG/10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-BLUEFISH-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN BLUEFISH 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-BLUEFISH-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN BLUEFISH 5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-HBF-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN HBF 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-HBF-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN HBF 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-MYLAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN MYLAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-MYLAN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN MYLAN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ORION-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ORION 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ORION-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ORION 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-TEVA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN TEVA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-TEVA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN TEVA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-VITABALANS-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN VITABALANS 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-VITABALANS-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN VITABALANS 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ZENTIVA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ZENTIVA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLODIPIN-ZENTIVA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLODIPIN ZENTIVA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLORATIO-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLORATIO 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLORATIO-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLORATIO 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLOZEK-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLOZEK 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMLOZEK-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "AMLOZEK 5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMLO-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "APO-AMLO 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMLO-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "APO-AMLO 5"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CADUET-10-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "CADUET 10 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CADUET-5-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10BX03" ;
+    ns1:title "CADUET 5 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "CARDILOPIN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "CARDILOPIN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "CARDILOPIN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-10-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07FB07" ;
+    ns1:title "CONCOR COMBI 10 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-10-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07FB07" ;
+    ns1:title "CONCOR COMBI 10 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-5-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07FB07" ;
+    ns1:title "CONCOR COMBI 5 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONCOR-COMBI-5-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07FB07" ;
+    ns1:title "CONCOR COMBI 5 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-10-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "COPALIA 10 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-5-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "COPALIA 5 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-5-MG-80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "COPALIA 5 MG/80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 5 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 5 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-10-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "DAFIRO 10 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-5-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "DAFIRO 5 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-5-MG-80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "DAFIRO 5 MG/80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/160MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-320MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/320MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 5MG/160MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-10-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "EGIRAMLON 10 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-10-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "EGIRAMLON 10 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-2-5-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-5-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "EGIRAMLON 5 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-5-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "EGIRAMLON 5 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-10-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "EXFORGE 10 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-5-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "EXFORGE 5 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-5-MG-80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "EXFORGE 5 MG/80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/160 MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 5 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 5 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-10-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "IMPRIDA 10 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-5-MG-160-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "IMPRIDA 5 MG/160 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMPRIDA-5-MG-80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB01" ;
+    ns1:title "IMPRIDA 5 MG/80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORMODIPINE-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "NORMODIPINE 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NORMODIPINE-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "NORMODIPINE 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-40-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "ONDUARP 40 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-40-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "ONDUARP 40 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-80-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "ONDUARP 80 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDUARP-80-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "ONDUARP 80 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORCAL-NEO-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ORCAL NEO 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORCAL-NEO-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ORCAL NEO 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-4-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL/AMLODIPIN KRKA 4 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-4-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL/AMLODIPIN KRKA 4 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-8-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL/AMLODIPIN KRKA 8 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-AMLODIPIN-KRKA-8-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL/AMLODIPIN KRKA 8 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-10-MG-AMLODIPINE-10-MG-SERVIER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL ARGININE 10 MG/AMLODIPINE 10 MG SERVIER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-10-MG-AMLODIPINE-5-MG-SERVIER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL ARGININE 10 MG/AMLODIPINE 5 MG SERVIER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-5-MG-AMLODIPINE-10-MG-SERVIER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL ARGININE 5 MG/AMLODIPINE 10 MG SERVIER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERINDOPRIL-ARGININE-5-MG-AMLODIPINE-5-MG-SERVIER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PERINDOPRIL ARGININE 5 MG/AMLODIPINE 5 MG SERVIER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-10-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "PIRAMIL COMBI 10 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-10-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "PIRAMIL COMBI 10 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-2-5-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "PIRAMIL COMBI 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-5-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "PIRAMIL COMBI 5 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIRAMIL-COMBI-5-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB07" ;
+    ns1:title "PIRAMIL COMBI 5 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-10-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PRESTANCE 10 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-10-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PRESTANCE 10 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-5-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PRESTANCE 5 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRESTANCE-5-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "PRESTANCE 5 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-150-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA53" ;
+    ns1:title "RASILAMLO 150 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-150-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA53" ;
+    ns1:title "RASILAMLO 150 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-300-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA53" ;
+    ns1:title "RASILAMLO 300 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILAMLO-300-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA53" ;
+    ns1:title "RASILAMLO 300 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-150-MG-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 150 MG/5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/10 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/10 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/5 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RECOTENS-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "RECOTENS 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RECOTENS-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "RECOTENS 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-20-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SEVIKAR 20 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-40-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SEVIKAR 40 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-40-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SEVIKAR 40 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 20 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/10 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/10 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/5 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-20-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SINTONYN 20 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-40-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SINTONYN 40 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-40-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB02" ;
+    ns1:title "SINTONYN 40 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 20 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/10 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/10 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/5 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TENSIGAL-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "TENSIGAL 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-4-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "TONARSSA 4 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-4-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "TONARSSA 4 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-8-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "TONARSSA 8 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TONARSSA-8-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "TONARSSA 8 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TORELLA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "TORELLA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TORELLA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "TORELLA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-40-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "TWYNSTA 40 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-40-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "TWYNSTA 40 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-80-MG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "TWYNSTA 80 MG/10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TWYNSTA-80-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DB04" ;
+    ns1:title "TWYNSTA 80 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-4-MG-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "VIDONORM 4 MG/10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-4-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "VIDONORM 4 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-8-MG-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "VIDONORM 8 MG/10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIDONORM-8-MG-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BB04" ;
+    ns1:title "VIDONORM 8 MG/5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOREM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ZOREM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOREM-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C08CA01" ;
+    ns1:title "ZOREM 5 MG"@cs .
+
+

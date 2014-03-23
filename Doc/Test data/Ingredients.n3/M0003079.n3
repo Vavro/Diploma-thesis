@@ -1,0 +1,100 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01AB01> a ns1:ATCConcept ;
+    skos:notation "L01AB01" ;
+    skos:prefLabel "Busulfan"@cs,
+        "Busulfan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003079> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An alkylating agent having a selective immunosuppressive effect on BONE MARROW. It has been used in the palliative treatment of chronic myeloid leukemia (MYELOID LEUKEMIA, CHRONIC), but although symptomatic relief is provided, no permanent remission is brought about. According to the Fourth Annual Report on Carcinogens (NTP 85-002, 1985), busulfan is listed as a known carcinogen.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/BUSILVEX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MYLERAN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000721",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001815",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002454",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003261",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000181011" ;
+    ns1:title "Busulfan"@cs,
+        "Busulfan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000721> a ns1:PharmacologicalAction ;
+    ns1:description "Highly reactive chemicals that introduce alkyl radicals into biologically active molecules and thereby prevent their proper functioning. Many are used as antineoplastic agents, but most are very toxic, with carcinogenic, mutagenic, teratogenic, and immunosuppressant actions. They have also been used as components in poison gases.     "@en ;
+    ns1:title "Alkylační látky"@cs,
+        "Alkylating agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that differs from other alkylating agents used clinically in that they are monofunctional and thus unable to cross-link cellular macromolecules. Among their common properties are a requirement for metabolic activation to intermediates with antitumor efficacy and the presence in their chemical structures of N-methyl groups, that after metabolism, can covalently modify cellular DNA. The precise mechanisms by which each of these drugs acts to kill tumor cells are not completely understood. (From AMA, Drug Evaluations Annual, 1994, p2026)     "@en ;
+    ns1:title "Antitumorózní látky alkylující"@cs,
+        "Antineoplastic agents, alkylating"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that destroy bone marrow activity. They are used to prepare patients for BONE MARROW TRANSPLANTATION or STEM CELL TRANSPLANTATION.     "@en ;
+    ns1:title "Myeloablativní agonisté"@cs,
+        "Myeloablative agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002454> a ns1:DiseaseOrFinding ;
+    ns1:description "A myeloproliferative disorder of unknown etiology, characterized by abnormal proliferation of all hematopoietic bone marrow elements and an absolute increase in red cell mass and total blood volume, associated frequently with splenomegaly, leukocytosis, and thrombocythemia. Hematopoiesis is also reactive in extramedullary sites (liver and spleen). In time myelofibrosis occurs.     "@en ;
+    ns1:title "Polycythemia vera"@cs,
+        "Polycythemia vera"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003261> a ns1:DiseaseOrFinding ;
+    ns1:description "Clonal hematopoetic disorder caused by an acquired genetic defect in PLURIPOTENT STEM CELLS. It starts in MYELOID CELLS of the bone marrow, invades the blood and then other organs. The condition progresses from a stable, more indolent, chronic phase (LEUKEMIA, MYELOID, CHRONIC PHASE) lasting up to 7 years, to an advanced phase composed of an accelerated phase (LEUKEMIA, MYELOID, ACCELERATED PHASE) and BLAST CRISIS.     "@en ;
+    ns1:title "Chronická myeloidní leukemie"@cs,
+        "Leukemia, myelogenous, chronic, bcr-abl positive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181011> a ns1:DiseaseOrFinding ;
+    ns1:description "A de novo myeloproliferation arising from an abnormal stem cell. It is characterized by the replacement of bone marrow by fibrous tissue, a process that is mediated by CYTOKINES arising from the abnormal clone.     "@en ;
+    ns1:title "Primární myelofibróza"@cs,
+        "Primary myelofibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUSILVEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AB01" ;
+    ns1:title "BUSILVEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MYLERAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01AB01" ;
+    ns1:title "MYLERAN"@cs .
+
+

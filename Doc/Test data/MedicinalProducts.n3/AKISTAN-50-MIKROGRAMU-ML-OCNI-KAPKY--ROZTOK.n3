@@ -1,0 +1,63 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01E> a ns1:ATCConcept ;
+    dcterms:title "Antiglaukomatika a miotika"@cs,
+        "ANTIGLAUCOMA PREPARATIONS AND MIOTICS"@en ;
+    skos:notation "S01E" .
+
+<http://linked.opendata.cz/resource/ATC/S01EE> a ns1:ATCConcept ;
+    dcterms:title "Analogy prostaglandinů"@cs,
+        "PROSTAGLADIN ANALOGUES"@en ;
+    skos:notation "S01EE" .
+
+<http://linked.opendata.cz/resource/ATC/S01EE01> a ns1:ATCConcept ;
+    dcterms:title "Latanoprost"@cs,
+        "Latanoprost"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/S",
+        "http://linked.opendata.cz/resource/ATC/S01",
+        "http://linked.opendata.cz/resource/ATC/S01E",
+        "http://linked.opendata.cz/resource/ATC/S01EE" ;
+    skos:notation "S01EE01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0195347> a ns1:Ingredient ;
+    ns1:title "Latanoprost"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177863> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EE01" ;
+    ns1:hasIndication """Snížení zvýšeného nitroočního tlaku u pacientů, kteří trpí glaukomem s otevřeným úhlem a oční hypertenzí.
+Snížení zvýšeného nitroočního tlaku u pediatrických pacientů, kteří trpí zvýšeným nitroočním tlakem a dětským glaukomem.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "327.239990234"^^xsd:float ;
+    ns1:hasPackagingSize "1X2.5ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "304.489990234"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC157756_doc" ;
+    ns1:hasStrength "0.05MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X2.5ML/0.125MG"@cs ;
+    ns1:title "AKISTAN 50 MIKROGRAMŮ/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKISTAN-50-MIKROGRAMU-ML-OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/S01EE01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0195347" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177863" ;
+    ns1:title "AKISTAN 50 MIKROGRAMŮ/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+

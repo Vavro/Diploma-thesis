@@ -1,0 +1,59 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A16AA01> a ns1:ATCConcept ;
+    skos:notation "A16AA01" ;
+    skos:prefLabel "Levokarnitin"@cs,
+        "Levocarnitine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003493> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Constituent of striated muscle and liver. It is used therapeutically to stimulate gastric and pancreatic secretions and in the treatment of hyperlipoproteinemias.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000142" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/L-CARNITIN-FRESENIUS-1-G" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000002197" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001208",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002197",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002875" ;
+    ns1:title "Karnitin"@cs,
+        "Carnitine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001208> a ns1:DiseaseOrFinding ;
+    ns1:description "A hereditary or acquired form of generalized dysfunction of the PROXIMAL KIDNEY TUBULE without primary involvement of the KIDNEY GLOMERULUS. It is usually characterized by the tubular wasting of nutrients and salts (GLUCOSE; AMINO ACIDS; PHOSPHATES; and BICARBONATES) resulting in HYPOKALEMIA; ACIDOSIS; HYPERCALCIURIA; and PROTEINURIA.     "@en ;
+    ns1:title "Fanconiho syndrom"@cs,
+        "Fanconi syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002197> a ns1:DiseaseOrFinding ;
+    ns1:description "A collective term for nutritional disorders resulting from poor absorption or nutritional imbalance, and metabolic disorders resulting from defects in biosynthesis (ANABOLISM) or breakdown (CATABOLISM) of endogenous substances.     "@en ;
+    ns1:title "Výživa a metabolismus - nemoci"@cs,
+        "Nutritional and metabolic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000142> a ns1:MechanismOfAction ;
+    ns1:title "Biological Macromolecular Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/L-CARNITIN-FRESENIUS-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A16AA01" ;
+    ns1:title "L-CARNITIN \"FRESENIUS\" 1 G"@cs .
+
+

@@ -1,0 +1,258 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03B> a ns1:ATCConcept ;
+    dcterms:title "Androgeny"@cs,
+        "ANDROGENS"@en ;
+    skos:notation "G03B" .
+
+<http://linked.opendata.cz/resource/ATC/G03BA> a ns1:ATCConcept ;
+    dcterms:title "3-oxoandrosten(4) deriváty"@cs,
+        "3-oxoandrosten (4) derivatives"@en ;
+    skos:notation "G03BA" .
+
+<http://linked.opendata.cz/resource/ATC/G03BA03> a ns1:ATCConcept ;
+    dcterms:title "Testosteron"@cs,
+        "Testosterone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G03",
+        "http://linked.opendata.cz/resource/ATC/G03B",
+        "http://linked.opendata.cz/resource/ATC/G03BA" ;
+    skos:notation "G03BA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021196> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002500",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003834",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A potent androgenic steroid and major product secreted by the LEYDIG CELLS of the TESTIS. Its production is stimulated by LUTEINIZING HORMONE from the PITUITARY GLAND. In turn, testosterone exerts feedback control of the pituitary LH and FSH secretion. Depending on the tissues, testosterone can be further converted to DIHYDROTESTOSTERONE or ESTRADIOL.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001106" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "Testosteron"@cs,
+        "Testosterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001106> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ANDROGEN RECEPTORS in target tissues to bring about the effects similar to those of TESTOSTERONE. Depending on the target tissues, androgenic effects can be on SEX DIFFERENTIATION; male reproductive organs, SPERMATOGENESIS; secondary male SEX CHARACTERISTICS; LIBIDO; development of muscle mass, strength, and power.     "@en ;
+    ns1:title "Androgeny"@cs,
+        "Androgens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002499> a ns1:DiseaseOrFinding ;
+    ns1:title "Prostatic hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003834> a ns1:DiseaseOrFinding ;
+    ns1:title "Prsy - nádory u mužů"@cs,
+        "Breast neoplasms, male"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030742> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "1X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 1X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030743> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "2X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 2X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030747> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "7X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 7X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030748> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "10X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 10X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030749> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "14X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 14X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030750> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "28X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 28X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030752> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "30X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 30X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030753> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "50X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 50X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030754> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "60X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 60X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030755> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "90X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 90X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030756> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "100X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 100X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030761> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasIndication """Substituční léčba testosteronem u mužů s hypogonadismem při nedostatku testosteronu potvrzeném klinickými příznaky a biochemickými testy (viz 4.4 Zvláštní upozornění a zvláštní opatření pro použití).
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "10X5GM"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC97107_doc" ;
+    ns1:hasStrength "10MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM GEL 10X5GM 1%"@cs ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROGEL-50-MG--GEL-V-SACKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G03BA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021196" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030742",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030743",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030747",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030748",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030749",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030750",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030752",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030753",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030754",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030755",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030756",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0030761" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "ANDROGEL 50 MG, GEL V SÁČKU"@cs .
+
+

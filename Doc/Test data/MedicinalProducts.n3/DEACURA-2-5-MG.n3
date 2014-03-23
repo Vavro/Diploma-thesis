@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A11> a ns1:ATCConcept ;
+    dcterms:title "Vitaminy"@cs,
+        "VITAMINS"@en ;
+    skos:notation "A11" .
+
+<http://linked.opendata.cz/resource/ATC/A11H> a ns1:ATCConcept ;
+    dcterms:title "Jiné vitaminové přípravky (nekombinované)"@cs,
+        "OTHER PLAIN VITAMIN PREPARATIONS"@en ;
+    skos:notation "A11H" .
+
+<http://linked.opendata.cz/resource/ATC/A11HA> a ns1:ATCConcept ;
+    dcterms:title "Jiné vitaminové přípravky (nekombinované)"@cs,
+        "Other plain vitamin preparations"@en ;
+    skos:notation "A11HA" .
+
+<http://linked.opendata.cz/resource/ATC/A11HA05> a ns1:ATCConcept ;
+    dcterms:title "Biotin"@cs,
+        "Biotin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A11",
+        "http://linked.opendata.cz/resource/ATC/A11H",
+        "http://linked.opendata.cz/resource/ATC/A11HA" ;
+    skos:notation "A11HA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002565> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A water-soluble, enzyme co-factor present in minute amounts in every living cell. It occurs mainly bound to proteins or polypeptides and is abundant in liver, kidney, pancreas, yeast, and milk.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792" ;
+    ns1:title "Biotin"@cs,
+        "Biotin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185335> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA05" ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/F" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X2,5MG"@cs ;
+    ns1:title "DEACURA 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEACURA-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11HA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002565" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185335" ;
+    ns1:title "DEACURA 2,5 MG"@cs .
+
+

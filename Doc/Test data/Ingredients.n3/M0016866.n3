@@ -1,0 +1,155 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D01AA02> a ns1:ATCConcept ;
+    skos:notation "D01AA02" ;
+    skos:prefLabel "Natamycin"@cs,
+        "Natamycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/D07CA01> a ns1:ATCConcept ;
+    skos:notation "D07CA01" ;
+    skos:prefLabel "Hydrokortison a antibiotika"@cs,
+        "Hydrocortisone and antibiotics"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AA02> a ns1:ATCConcept ;
+    skos:notation "G01AA02" ;
+    skos:prefLabel "Natamycin"@cs,
+        "Natamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016866> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "Amphoteric macrolide antifungal antibiotic from Streptomyces natalensis or S. chattanoogensis. It is used for a variety of fungal infections, mainly topically.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCORT" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008476" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000492",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000568",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000569",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000650",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000800",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000833",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000880",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001546",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001681",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001734",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002813",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003010",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003326",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003498" ;
+    ns1:title "Natamycin"@cs,
+        "Natamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000492> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with fungi of the genus ASPERGILLUS.     "@en ;
+    ns1:title "Aspergilóza"@cs,
+        "Aspergillosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000568> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection that may appear in two forms: 1, a primary lesion characterized by the formation of a small cutaneous nodule and small nodules along the lymphatics that may heal within several months; and 2, chronic granulomatous lesions characterized by thick crusts, warty growths, and unusual vascularity and infection in the middle or upper lobes of the lung.     "@en ;
+    ns1:title "Blastomykóza"@cs,
+        "Blastomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000569> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the eyelids.     "@en ;
+    ns1:title "Blefaritida"@cs,
+        "Blepharitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000800> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus COCCIDIOIDES, endemic to the SOUTHWESTERN UNITED STATES. It is sometimes called valley fever but should not be confused with RIFT VALLEY FEVER. Infection is caused by inhalation of airborne, fungal particles known as arthroconidia, a form of FUNGAL SPORES. A primary form is an acute, benign, self-limited respiratory infection. A secondary form is a virulent, severe, chronic, progressive granulomatous disease with systemic involvement. It can be detected by use of COCCIDIOIDIN.     "@en ;
+    ns1:title "Kokcidioidomykóza"@cs,
+        "Coccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000833> a ns1:DiseaseOrFinding ;
+    ns1:title "Konjunktivitida"@cs,
+        "Conjunctivitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000880> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the species CRYPTOCOCCUS NEOFORMANS.     "@en ;
+    ns1:title "Kryptokokóza"@cs,
+        "Cryptococcosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001546> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection resulting from inhalation or ingestion of spores of the fungus of the genus HISTOPLASMA, species H. capsulatum. It is worldwide in distribution and particularly common in the midwestern United States. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Histoplazmóza"@cs,
+        "Histoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001734> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the cornea.     "@en ;
+    ns1:title "Keratitida"@cs,
+        "Keratitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002813> a ns1:DiseaseOrFinding ;
+    ns1:description "The commonest and least serious of the deep mycoses, characterized by nodular lesions of the cutaneous and subcutaneous tissues. It is caused by inhalation of contaminated dust or by infection of a wound.     "@en ;
+    ns1:title "Sporotrichóza"@cs,
+        "Sporotrichosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003010> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the vagina, marked by a purulent discharge. This disease is caused by the protozoan TRICHOMONAS VAGINALIS.     "@en ;
+    ns1:title "Trichomonádová vaginitida"@cs,
+        "Trichomonas vaginitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003326> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection by a variety of fungi, usually through four possible mechanisms: superficial infection producing conjunctivitis, keratitis, or lacrimal obstruction; extension of infection from neighboring structures - skin, paranasal sinuses, nasopharynx; direct introduction during surgery or accidental penetrating trauma; or via the blood or lymphatic routes in patients with underlying mycoses.     "@en ;
+    ns1:title "Oční infekce mykotické"@cs,
+        "Eye infections, fungal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003498> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with FUNGI of the phylum MICROSPORIDIA.     "@en ;
+    ns1:title "Mikrosporidióza"@cs,
+        "Microsporidiosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957> a ns1:MechanismOfAction ;
+    ns1:title "Ergosterol Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008476> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Membrane Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D01AA02",
+        "http://linked.opendata.cz/resource/ATC/G01AA02" ;
+    ns1:title "PIMAFUCIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIMAFUCORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D07CA01" ;
+    ns1:title "PIMAFUCORT"@cs .
+
+

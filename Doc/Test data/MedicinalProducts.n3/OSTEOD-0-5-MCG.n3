@@ -1,0 +1,233 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A11> a ns1:ATCConcept ;
+    dcterms:title "Vitaminy"@cs,
+        "VITAMINS"@en ;
+    skos:notation "A11" .
+
+<http://linked.opendata.cz/resource/ATC/A11C> a ns1:ATCConcept ;
+    dcterms:title "Vitamin A a D včetně jejich kombinací"@cs,
+        "VITAMIN  A  AND D, INCL. COMBINATIONS OF THE TWO"@en ;
+    skos:notation "A11C" .
+
+<http://linked.opendata.cz/resource/ATC/A11CC> a ns1:ATCConcept ;
+    dcterms:title "Vitamin D a analogy"@cs,
+        "Vitamin D and analogues"@en ;
+    skos:notation "A11CC" .
+
+<http://linked.opendata.cz/resource/ATC/A11CC04> a ns1:ATCConcept ;
+    dcterms:title "Kalcitriol"@cs,
+        "Calcitriol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/A",
+        "http://linked.opendata.cz/resource/ATC/A11",
+        "http://linked.opendata.cz/resource/ATC/A11C",
+        "http://linked.opendata.cz/resource/ATC/A11CC" ;
+    skos:notation "A11CC04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003148> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001000",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001577",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001922",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "The physiologically active form of vitamin D. It is formed primarily in the kidney by enzymatic hydroxylation of 25-hydroxycholecalciferol (CALCIFEDIOL). Its production is stimulated by low blood calcium levels and parathyroid hormone. Calcitriol increases intestinal absorption of calcium and phosphorus, and in concert with parathyroid hormone increases bone resorption.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003163",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480" ;
+    ns1:title "Kalcitriol"@cs,
+        "Calcitriol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003163> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that increase calcium influx into calcium channels of excitable tissues. This causes vasoconstriction in VASCULAR SMOOTH MUSCLE and/or CARDIAC MUSCLE cells as well as stimulation of insulin release from pancreatic islets. Therefore, tissue-selective calcium agonists have the potential to combat cardiac failure and endocrinological disorders. They have been used primarily in experimental studies in cell and tissue culture.     "@en ;
+    ns1:title "Vápníkové kanály - agonisté"@cs,
+        "Calcium channel agonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> a ns1:PharmacologicalAction ;
+    ns1:description "Organic substances that are required in small amounts for maintenance and growth, but which cannot be manufactured by the human body.     "@en ;
+    ns1:title "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     "@en ;
+    ns1:title "Inhibitory kostní resorpce"@cs,
+        "Bone density conservation agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001577> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalcémie"@cs,
+        "Hypercalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001922> a ns1:DiseaseOrFinding ;
+    ns1:title "Malabsorpční syndromy"@cs,
+        "Malabsorption syndromes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014607> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 20X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014608> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasMaximalPrice "359.450012207"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "418.670013428"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-04-16"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 30X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014609> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 100X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014610> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 100X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014611> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 30X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014612> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasIndication """OsteoD je indikován pro léčbu:  
+- diagnostikované postmenopauzální osteoporózy  
+- renální osteodystrofie u pacientů s chronickým selháním ledvin a především u těch, kteří podstupují  
+  dialyzační program  
+- hypoparatyreóza po chirurgických zákrocích  
+- idiopatické hypoparatyreózy  
+- pseudohypoparatyreózy  
+- vitamin D dependentní rachitis  
+- rachitis z nedostatku fosfátů, rezistentní na vitamin D.  
+  Přípravek mohou užívat děti od 3 let a  dospělí.
+ 
+"""@cs ;
+    ns1:hasIndicationGroup "VITAMINA, VITAGENA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128234_doc" ;
+    ns1:hasStrength "0.50RG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 20X0.5RG"@cs ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOD-0-5-MCG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A11CC04" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003148" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014607",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014608",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014609",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014610",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014611",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014612" ;
+    ns1:title "OSTEOD 0,5 MCG"@cs .
+
+

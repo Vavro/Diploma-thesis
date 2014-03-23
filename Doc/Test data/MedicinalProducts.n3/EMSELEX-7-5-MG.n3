@@ -1,0 +1,204 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G04> a ns1:ATCConcept ;
+    dcterms:title "Urologika"@cs,
+        "UROLOGICALS"@en ;
+    skos:notation "G04" .
+
+<http://linked.opendata.cz/resource/ATC/G04B> a ns1:ATCConcept ;
+    dcterms:title "Jiná urologika včetně spazmolytik"@cs,
+        "OTHER UROLOGICALS, INCL. ANTISPASMODICS"@en ;
+    skos:notation "G04B" .
+
+<http://linked.opendata.cz/resource/ATC/G04BD> a ns1:ATCConcept ;
+    dcterms:title "Močová spazmolytika"@cs,
+        "Urinary antispasmodics"@en ;
+    skos:notation "G04BD" .
+
+<http://linked.opendata.cz/resource/ATC/G04BD10> a ns1:ATCConcept ;
+    dcterms:title "Darifenacin"@cs,
+        "Darifenacin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/G",
+        "http://linked.opendata.cz/resource/ATC/G04",
+        "http://linked.opendata.cz/resource/ATC/G04B",
+        "http://linked.opendata.cz/resource/ATC/G04BD" ;
+    skos:notation "G04BD10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0265416> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Darifenacin"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028332> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "7 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 7X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028333> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "14 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028334> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "28 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 28X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028335> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "49 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 49X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028336> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "56 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 56X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028337> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "98 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 98X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029025> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "14X10 BLI-A (MULTIPACK"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X10X7.5MG BLI-A"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029026> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "7 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 7X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029027> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "14 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029028> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasMaximalPrice "884.380004883"^^xsd:float ;
+    ns1:hasPackagingSize "28 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "250.070007324"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 28X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029029> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "49 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 49X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029030> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "56 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 56X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029031> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "98 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 98X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029032> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasIndicationGroup "SPASMOLYTICA"@cs ;
+    ns1:hasPackagingSize "14X10 BLI-B (MULTIPACK"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X10X7.5MG BLI-B"@cs ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMSELEX-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/G04BD10" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0265416" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028332",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028333",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028334",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028335",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028336",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0028337",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029025",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029026",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029027",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029028",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029029",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029030",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029031",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029032" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "EMSELEX 7,5 MG"@cs .
+
+

@@ -1,0 +1,99 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N07XX02> a ns1:ATCConcept ;
+    skos:notation "N07XX02" ;
+    skos:prefLabel "Riluzol"@cs,
+        "Riluzole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029347> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610" ;
+    ns1:description "A glutamate antagonist (RECEPTORS, GLUTAMATE) used as an anticonvulsant (ANTICONVULSANTS) and to prolong the survival of patients with AMYOTROPHIC LATERAL SCLEROSIS.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/RILUTEK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RILUZOL-PMCS-50-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RILUZOLE-ZENTIVA-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SCLEFIC-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028008" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008494" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000376",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001211",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003418" ;
+    ns1:title "Riluzol"@cs,
+        "Riluzole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate excitatory amino acid receptors, thereby blocking the actions of agonists.     "@en ;
+    ns1:title "Excitační aminokyseliny - antagonisté"@cs,
+        "Excitatory amino acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028008> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs intended to prevent damage to the brain or spinal cord from ischemia, stroke, convulsions, or trauma. Some must be administered before the event, but others may be effective for some time after. They act by a variety of mechanisms, but often directly or indirectly minimize the damage produced by endogenous excitatory amino acids.     "@en ;
+    ns1:title "Neuroprotektivní látky"@cs,
+        "Neuroprotective agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000376> a ns1:DiseaseOrFinding ;
+    ns1:description "A degenerative disorder affecting upper MOTOR NEURONS in the brain and lower motor neurons in the brain stem and SPINAL CORD. Disease onset is usually after the age of 50 and the process is usually fatal within 3 to 6 years. Clinical manifestations include progressive weakness, atrophy, FASCICULATION, hyperreflexia, DYSARTHRIA, dysphagia, and eventual paralysis of respiratory function. Pathologic features include the replacement of motor neurons with fibrous ASTROCYTES and atrophy of anterior SPINAL NERVE ROOTS and corticospinal tracts. (From Adams et al., Principles of Neurology, 6th ed, pp1089-94)     "@en ;
+    ns1:title "Amyotrofická laterální skleróza"@cs,
+        "Amyotrophic lateral sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001211> a ns1:DiseaseOrFinding ;
+    ns1:description "Involuntary contraction of the muscle fibers innervated by a motor unit. Fasciculations can often by visualized and take the form of a muscle twitch or dimpling under the skin, but usually do not generate sufficient force to move a limb. They may represent a benign condition or occur as a manifestation of MOTOR NEURON DISEASE or PERIPHERAL NERVOUS SYSTEM DISEASES. (Adams et al., Principles of Neurology, 6th ed, p1294)     "@en ;
+    ns1:title "Fascikulace"@cs,
+        "Fasciculation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002702> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process consisting of hardening or fibrosis of an anatomical structure, often a vessel or a nerve.     "@en ;
+    ns1:title "Skleróza"@cs,
+        "Sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003418> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases characterized by a selective degeneration of the motor neurons of the spinal cord, brainstem, or motor cortex. Clinical subtypes are distinguished by the major site of degeneration. In AMYOTROPHIC LATERAL SCLEROSIS there is involvement of upper, lower, and brainstem motor neurons. In progressive muscular atrophy and related syndromes (see MUSCULAR ATROPHY, SPINAL) the motor neurons in the spinal cord are primarily affected. With progressive bulbar palsy (BULBAR PALSY, PROGRESSIVE), the initial degeneration occurs in the brainstem. In primary lateral sclerosis, the cortical neurons are affected in isolation. (Adams et al., Principles of Neurology, 6th ed, p1089)     "@en ;
+    ns1:title "Onemocnění motorického neuronu"@cs,
+        "Motor neuron disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088> a ns1:MechanismOfAction ;
+    ns1:title "Excitatory Amino Acid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008494> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Glutamate Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILUTEK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07XX02" ;
+    ns1:title "RILUTEK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILUZOL-PMCS-50-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07XX02" ;
+    ns1:title "RILUZOL PMCS 50 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILUZOLE-ZENTIVA-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07XX02" ;
+    ns1:title "RILUZOLE ZENTIVA 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SCLEFIC-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N07XX02" ;
+    ns1:title "SCLEFIC 50 MG"@cs .
+
+

@@ -1,0 +1,287 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09D> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, kombinace"@cs,
+        "ANGIOTENSIN II ANTAGONISTS, COMBINATIONS"@en ;
+    skos:notation "C09D" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II a diuretika"@cs,
+        "Angiotensin II antagonists and diuretics"@en ;
+    skos:notation "C09DA" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA03> a ns1:ATCConcept ;
+    dcterms:title "Valsartan a diuretika"@cs,
+        "Valsartan and diuretics"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C09",
+        "http://linked.opendata.cz/resource/ATC/C09D",
+        "http://linked.opendata.cz/resource/ATC/C09DA" ;
+    skos:notation "C09DA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0217346> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001573",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "Valsartan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157881> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161916> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "129.949996948"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161917> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161918> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161919> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161920> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161921> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161922> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172240> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 280"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172260> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X1"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172261> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X1"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172262> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých.
+Přípravek Janartan, fixní dávková kombinace, je indikován u pacientů, jejichž krevní tlak není dostatečně upraven valsartanem nebo hydrochlorothiazidem v monoterapii.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "280X1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158928_doc" ;
+    ns1:hasStrength "160/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 280X1"@cs ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0217346" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157881",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161916",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161917",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161918",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161919",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161920",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161921",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161922",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172240",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172260",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172261",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172262" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B",
+        "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+

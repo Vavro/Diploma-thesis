@@ -1,0 +1,277 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R06> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06" .
+
+<http://linked.opendata.cz/resource/ATC/R06A> a ns1:ATCConcept ;
+    dcterms:title "Antihistaminika pro systémovou aplikaci"@cs,
+        "ANTIHISTAMINES FOR SYSTEMIC USE"@en ;
+    skos:notation "R06A" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antihistaminika pro systémovou aplikaci"@cs,
+        "Other antihistamines for systemic use"@en ;
+    skos:notation "R06AX" .
+
+<http://linked.opendata.cz/resource/ATC/R06AX27> a ns1:ATCConcept ;
+    dcterms:title "Desloratadin"@cs,
+        "Desloratadine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/R",
+        "http://linked.opendata.cz/resource/ATC/R06",
+        "http://linked.opendata.cz/resource/ATC/R06A",
+        "http://linked.opendata.cz/resource/ATC/R06AX" ;
+    skos:notation "R06AX27" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Desloratadine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178743> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "30ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X30ML/15MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178744> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X50ML/25MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178745> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "60ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML/30MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178746> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML/50MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178747> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "120ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML/60MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178748> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML/75MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178749> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "225ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X225ML/112.5MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178750> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "300ML LŽIČKA"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X300ML/150MG LŽIČKA"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192702> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "50ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X50ML/25MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192703> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "60ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X60ML/30MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192704> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "100ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X100ML/50MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192705> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "120ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X120ML/60MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192706> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "150ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X150ML/75MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192707> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasIndication """Desloratadin Alvogen je indikován ke zmírnění příznaků spojených s:
+- alergickou rýmou (viz bod 5.1)
+- s urtikárií (viz bod 5.1).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "30ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC158427_doc" ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 1X30ML/15MG STŘ"@cs ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DESLORATADIN-ALVOGEN-0-5-MG-ML-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R06AX27" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0337021" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178743",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178744",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178745",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178746",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178747",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178748",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178749",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0178750",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192702",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192703",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192704",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192705",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192706",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192707" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "DESLORATADIN ALVOGEN 0,5 MG/ML PERORÁLNÍ ROZTOK"@cs .
+
+

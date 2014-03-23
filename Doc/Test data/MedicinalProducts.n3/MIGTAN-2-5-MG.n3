@@ -1,0 +1,214 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02C> a ns1:ATCConcept ;
+    dcterms:title "Antimigrenika"@cs,
+        "ANTIMIGRAINE PREPARATIONS"@en ;
+    skos:notation "N02C" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC> a ns1:ATCConcept ;
+    dcterms:title "Selektivní agonisté serotoninu na 5HT1 receptorech"@cs,
+        "Selective serotonin (5-HT1) agonists"@en ;
+    skos:notation "N02CC" .
+
+<http://linked.opendata.cz/resource/ATC/N02CC02> a ns1:ATCConcept ;
+    dcterms:title "Naratriptan"@cs,
+        "Naratriptan"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N02",
+        "http://linked.opendata.cz/resource/ATC/N02C",
+        "http://linked.opendata.cz/resource/ATC/N02CC" ;
+    skos:notation "N02CC02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0327812> a ns1:Ingredient ;
+    ns1:title "Naratriptan hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165044> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "2 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165045> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "2 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165046> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "3 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165047> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "3 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165048> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "4 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 4X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165049> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "4 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 4X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165050> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "6 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165051> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "6 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165052> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "12 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 12X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165053> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "12 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 12X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165054> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "18 II"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 18X2.5MG II"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165055> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasIndication """Naratriptan je indikován k akutní léčbě záchvatů migrény s aurou i bez aury.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIMIGRAENICA,ANTISEROTONICA"@cs ;
+    ns1:hasPackagingSize "18 I"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC159775_doc" ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 18X2.5MG I"@cs ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGTAN-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N02CC02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0327812" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165044",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165045",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165046",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165047",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165048",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165049",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165050",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165051",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165052",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165053",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165054",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0165055" ;
+    ns1:title "MIGTAN 2,5 MG"@cs .
+
+

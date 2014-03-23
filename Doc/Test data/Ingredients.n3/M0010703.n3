@@ -1,0 +1,1338 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B03XA01> a ns1:ATCConcept ;
+    skos:notation "B03XA01" ;
+    skos:prefLabel "Erytropoetin"@cs,
+        "Erythropoietin"@en .
+
+<http://linked.opendata.cz/resource/ATC/C03AA03> a ns1:ATCConcept ;
+    skos:notation "C03AA03" ;
+    skos:prefLabel "Hydrochlorothiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C03EA01> a ns1:ATCConcept ;
+    skos:notation "C03EA01" ;
+    skos:prefLabel "Hydrochlorothiazid a kalium šetřící diuretika"@cs,
+        "Hydrochlorothiazide and potassium-sparing agents"@en .
+
+<http://linked.opendata.cz/resource/ATC/C07BB07> a ns1:ATCConcept ;
+    skos:notation "C07BB07" ;
+    skos:prefLabel "Bisoprolol a thiazidy"@cs,
+        "Bisoprolol and thiazides"@en .
+
+<http://linked.opendata.cz/resource/ATC/C07BB12> a ns1:ATCConcept ;
+    skos:notation "C07BB12" ;
+    skos:prefLabel "Nebivolol a thiazidy"@cs,
+        "Nebivolol and thiazides"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA02> a ns1:ATCConcept ;
+    skos:notation "C09BA02" ;
+    skos:prefLabel "Enalapril a diuretika"@cs,
+        "Enalapril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA03> a ns1:ATCConcept ;
+    skos:notation "C09BA03" ;
+    skos:prefLabel "Lisinopril a diuretika"@cs,
+        "Lisinopril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA05> a ns1:ATCConcept ;
+    skos:notation "C09BA05" ;
+    skos:prefLabel "Ramipril a diuretika"@cs,
+        "Ramipril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA06> a ns1:ATCConcept ;
+    skos:notation "C09BA06" ;
+    skos:prefLabel "Chinapril a diuretika"@cs,
+        "Quinapril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA08> a ns1:ATCConcept ;
+    skos:notation "C09BA08" ;
+    skos:prefLabel "Cilazapril a diuretika"@cs,
+        "Cilazapril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09BA09> a ns1:ATCConcept ;
+    skos:notation "C09BA09" ;
+    skos:prefLabel "Fosinopril a diuretika"@cs,
+        "Fosinopril and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA01> a ns1:ATCConcept ;
+    skos:notation "C09DA01" ;
+    skos:prefLabel "Losartan a diuretika"@cs,
+        "Losartan and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA02> a ns1:ATCConcept ;
+    skos:notation "C09DA02" ;
+    skos:prefLabel "Eprosartan a diuretika"@cs,
+        "EPROSARTAN AND DIURETICS"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA03> a ns1:ATCConcept ;
+    skos:notation "C09DA03" ;
+    skos:prefLabel "Valsartan a diuretika"@cs,
+        "Valsartan and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA04> a ns1:ATCConcept ;
+    skos:notation "C09DA04" ;
+    skos:prefLabel "Irbesartan a diuretika"@cs,
+        "Irbesartan and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA06> a ns1:ATCConcept ;
+    skos:notation "C09DA06" ;
+    skos:prefLabel "Kandesartan a diuretika"@cs,
+        "Candesartan and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA07> a ns1:ATCConcept ;
+    skos:notation "C09DA07" ;
+    skos:prefLabel "Telmisartan a diuretika"@cs,
+        "TELMISARTAN AND DIURETICS"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DA08> a ns1:ATCConcept ;
+    skos:notation "C09DA08" ;
+    skos:prefLabel "Olmesartan-medoxomil a diuretika"@cs,
+        "Olmesartan medoxomil and diuretics"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DX01> a ns1:ATCConcept ;
+    skos:notation "C09DX01" ;
+    skos:prefLabel "Valsartan, amlodipin a hydrochorothiazid"@cs,
+        "Amlodipine besylate, valsartan, hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09DX03> a ns1:ATCConcept ;
+    skos:notation "C09DX03" ;
+    skos:prefLabel "Olmesartan-medoxomil, amlodipin a hydrochlorothiazid"@cs,
+        "Olmesartan medoxomil, amlodipine and hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09XA52> a ns1:ATCConcept ;
+    skos:notation "C09XA52" ;
+    skos:prefLabel "Aliskiren a hydrochlorothiazid"@cs,
+        "Aliskiren and hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/ATC/C09XA54> a ns1:ATCConcept ;
+    skos:notation "C09XA54" ;
+    skos:prefLabel "Aliskiren, amlodipin a hydrochlorothiazid"@cs,
+        "Aliskiren, amlodipine and hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ACCUZIDE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACCUZIDE-20",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-80-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMPRILAN-H-2-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/AMPRILAN-H-5-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMILZIDE-5-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-COMBILOS-50-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-150-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-300-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-300-25-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ARIONEX-COMBI-50-12-5-MG-POTAHOVANA-TABLETA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BERLIPRIL-H-10-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BINOCRIT-8000-IU-0-8-ML",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-160-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-160-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-80-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-16-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-32-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-32-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-8-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANDESARTAN-HYDROCHLOROTHIAZID--PHARMA-16-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CANDESARTAN-HYDROCHLOROTHIAZID--PHARMA-8-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-16-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-32-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-32-MG-25-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-8-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/CAZACOMBI-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-10-MG-6-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-2-5-MG-6-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-5-MG-6-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-320MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-10-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-20-MG-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-HL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GIOVAX-PLUS-H-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GIOVAX-PLUS-H-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HARTIL-H-2-5-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HARTIL-H-5-25-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCHLOROTHIAZID-LECIVA",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INHIBACE-PLUS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-MYLAN-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-MYLAN-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ARROW-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ARROW-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA--150MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-150MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-300MG-12-5MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-300MG-25MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-80-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KYLOTAN-PLUS-H-160-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KYLOTAN-PLUS-H-80-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-150-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-300-12-5-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-300-25-MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-10-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-2-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORADUR",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORADUR-MITE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-100-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSAGEN-COMBI-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-100-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-MYLAN-100-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-MYLAN-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-100-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZIDE-BLUEFISH-100-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZIDE-BLUEFISH-50-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSCOMB-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOSCOMB-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/LOZAP-H",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORAM-PLUS-H-2-5-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORAM-PLUS-H-5-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-40-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-80-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-80-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRIL-PLUS-H-2-5MG-12-5MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MIRIL-PLUS-H-5MG-25MG-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MODURETIC",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MONACE-COMBI-20-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEBILET-PLUS-H-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NEBILET-PLUS-H-5-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-20-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-20-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-40-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-80-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-10-MG-12-5-MG-POTAHOVANE-TBL-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-20-MG-12-5-MG-POTAHOVANE-TBL-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-20-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-H-2-5MG-12-5MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-H-5-MG-25-MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-HYDROCHLOROTHIAZID-5-MG-12-5-MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-150-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-150-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-300-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-300-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-150-MG-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/RHEFLUIN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANGONA-COMBI-100-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SANGONA-COMBI-50-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-20-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-20-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-40-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SKOPRYL-PLUS-H-20-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STADAPRESS-10-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STADAPRESS-20-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TEVETEN-PLUS-H-600-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-80-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRITAZIDE-2-5-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TRITAZIDE-5-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-80-MG--12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-160-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-160-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-80-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-RATIOPHARM-320-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-RATIOPHARM-320-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-160-MG-12-5-MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-160-MG-25-MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-80-MG-12-5-MG-ACTAVIS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-160-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-160-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-80-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-160-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-160-MG-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-320-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-80-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-160-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-160-25-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-80-MG-12-5-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-16-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-32-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-8-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-20-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-20-MG-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-40-MG-12-5-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-40-MG-25-MG" ;
+    ns1:hasPharmacokinetics "http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009275",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009277",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002155" ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002155> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by severe PROTEINURIA, greater than 3.5 g/day in an average adult. The substantial loss of protein in the urine results in complications such as HYPOPROTEINEMIA; generalized EDEMA; HYPERTENSION; and HYPERLIPIDEMIAS. Diseases associated with nephrotic syndrome generally cause chronic kidney dysfunction.     "@en ;
+    ns1:title "Nefrotický syndrom"@cs,
+        "Nephrotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000066> a ns1:MechanismOfAction ;
+    ns1:title "Small Ion Transport Pump Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009275> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule H+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009277> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACCUZIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "ACCUZIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACCUZIDE-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "ACCUZIDE 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "ACTELSAR HCT 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "ACTELSAR HCT 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACTELSAR-HCT-80-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "ACTELSAR HCT 80 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPRILAN-H-2-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "AMPRILAN H 2,5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPRILAN-H-5-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "AMPRILAN H 5 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-AMILZIDE-5-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA01" ;
+    ns1:title "APO-AMILZIDE 5/50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-COMBILOS-50-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "APO-COMBILOS 50/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "APO-VALSARTAN/HYDROCHLOROTHIAZID 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "APO-VALSARTAN/HYDROCHLOROTHIAZID 160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "APO-VALSARTAN/HYDROCHLOROTHIAZID 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-VALSARTAN-HYDROCHLOROTHIAZID-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "APO-VALSARTAN/HYDROCHLOROTHIAZID 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-150-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "ARABLOCKTANS 150/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-300-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "ARABLOCKTANS 300/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARABLOCKTANS-300-25-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "ARABLOCKTANS 300/25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARIONEX-COMBI-50-12-5-MG-POTAHOVANA-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "ARIONEX COMBI 50/12,5 MG POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BERLIPRIL-H-10-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA02" ;
+    ns1:title "BERLIPRIL H 10 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BINOCRIT-8000-IU-0-8-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B03XA01" ;
+    ns1:title "BINOCRIT 8000 IU/0,8 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-160-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "BLESSIN PLUS H 160/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-160-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "BLESSIN PLUS H 160/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BLESSIN-PLUS-H-80-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "BLESSIN PLUS H 80/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-16-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-32-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANCOMBINO 32 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-32-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANCOMBINO 32 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-8-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANCOMBINO 8 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDESARTAN-HYDROCHLOROTHIAZID--PHARMA-16-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANDESARTAN/HYDROCHLOROTHIAZID +PHARMA 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDESARTAN-HYDROCHLOROTHIAZID--PHARMA-8-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CANDESARTAN/HYDROCHLOROTHIAZID +PHARMA 8 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-16-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CARZAP HCT 16 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-32-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CARZAP HCT 32 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-32-MG-25-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CARZAP HCT 32 MG/25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARZAP-HCT-8-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "CARZAP HCT 8 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CAZACOMBI-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA08" ;
+    ns1:title "CAZACOMBI 5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "COAPROVEL 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "COAPROVEL 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COAPROVEL-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "COAPROVEL 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-10-MG-6-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "COMBISO 10 MG/6,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-2-5-MG-6-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "COMBISO 2,5 MG/6,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COMBISO-5-MG-6-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "COMBISO 5 MG/6,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-10-MG-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 10 MG/320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 5 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COPALIA-HCT-5-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "COPALIA HCT 5 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-160MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/160MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-10MG-320MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 10MG/320MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 5MG/160MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DAFIRO-HCT-5MG-160MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "DAFIRO HCT 5MG/160MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-10-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "DIROTON PLUS H 10 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-20-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "DIROTON PLUS H 20 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA02" ;
+    ns1:title "ENAP-H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-HL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA02" ;
+    ns1:title "ENAP-HL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-160-MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/160 MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-10-MG-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 10 MG/320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 5 MG/160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXFORGE-HCT-5-MG-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX01" ;
+    ns1:title "EXFORGE HCT 5 MG/160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GIOVAX-PLUS-H-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "GIOVAX PLUS H 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GIOVAX-PLUS-H-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "GIOVAX PLUS H 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HARTIL-H-2-5-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "HARTIL-H 2,5/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HARTIL-H-5-25-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "HARTIL-H 5/25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYDROCHLOROTHIAZID-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03AA03" ;
+    ns1:title "HYDROCHLOROTHIAZID LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IFIRMACOMBI 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IFIRMACOMBI 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IFIRMACOMBI-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IFIRMACOMBI 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INHIBACE-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA08" ;
+    ns1:title "INHIBACE PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID +PHARMA 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID +PHARMA 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID--PHARMA-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID +PHARMA 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID ACTAVIS 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID ACTAVIS 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-ACTAVIS-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID ACTAVIS 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID APOTEX 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID APOTEX 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-APOTEX-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID APOTEX 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-MYLAN-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID MYLAN 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZID-MYLAN-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZID MYLAN 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ARROW-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE ARROW 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ARROW-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE ARROW 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA--150MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA  150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-150MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-300MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 300MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-300MG-25MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 300MG/25MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN HYDROCHLOROTHIAZIDE ZENTIVA 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN HYDROCHLOROTHIAZIDE ZENTIVA 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-ZENTIVA-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBESARTAN HYDROCHLOROTHIAZIDE ZENTIVA 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBEZYD COMBI 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBEZYD COMBI 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBEZYD-COMBI-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "IRBEZYD COMBI 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "JANARTAN 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "JANARTAN 160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "JANARTAN 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "JANARTAN 320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JANARTAN-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "JANARTAN 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "KARVEZIDE 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "KARVEZIDE 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KARVEZIDE-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "KARVEZIDE 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "KINZALKOMB 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "KINZALKOMB 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KINZALKOMB-80-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "KINZALKOMB 80 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KYLOTAN-PLUS-H-160-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "KYLOTAN PLUS H 160/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KYLOTAN-PLUS-H-80-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "KYLOTAN PLUS H 80/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-150-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "LARTOKAZ 150/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-300-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "LARTOKAZ 300/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LARTOKAZ-300-25-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA04" ;
+    ns1:title "LARTOKAZ 300/25 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "LODOZ 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "LODOZ 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LODOZ-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB07" ;
+    ns1:title "LODOZ 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORADUR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA01" ;
+    ns1:title "LORADUR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORADUR-MITE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA01" ;
+    ns1:title "LORADUR MITE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-100-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LORISTA H 100 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LORISTA H 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-H-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LORISTA H 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSAGEN-COMBI-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSAGEN COMBI 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-100-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID JS PARTNER 100 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID JS PARTNER 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-JS-PARTNER-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID JS PARTNER 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-MYLAN-100-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID MYLAN 100 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-MYLAN-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID MYLAN 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-100-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID STADA 100 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID STADA 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZID-STADA-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZID STADA 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZIDE-BLUEFISH-100-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZIDE BLUEFISH 100/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSARTAN-HYDROCHLOROTHIAZIDE-BLUEFISH-50-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSARTAN/HYDROCHLOROTHIAZIDE BLUEFISH 50/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSCOMB-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSCOMB 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOSCOMB-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOSCOMB 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LOZAP-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "LOZAP H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORAM-PLUS-H-2-5-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "MEDORAM PLUS H 2,5/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORAM-PLUS-H-5-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "MEDORAM PLUS H 5/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-40-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "MICARDISPLUS 40/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-80-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "MICARDISPLUS 80/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MICARDISPLUS-80-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "MICARDISPLUS 80/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRIL-PLUS-H-2-5MG-12-5MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "MIRIL PLUS H 2,5MG/12,5MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIRIL-PLUS-H-5MG-25MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "MIRIL PLUS H 5MG/25MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MODURETIC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA01" ;
+    ns1:title "MODURETIC"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MONACE-COMBI-20-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA09" ;
+    ns1:title "MONACE COMBI 20 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEBILET-PLUS-H-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB12" ;
+    ns1:title "NEBILET PLUS H 5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEBILET-PLUS-H-5-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07BB12" ;
+    ns1:title "NEBILET PLUS H 5 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-20-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "OLMETEC PLUS H 20/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-20-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "OLMETEC PLUS H 20/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "OLMETEC PLUS H 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLMETEC-PLUS-H-40-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "OLMETEC PLUS H 40 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "PRITORPLUS 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "PRITORPLUS 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PRITORPLUS-80-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "PRITORPLUS 80 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-10-MG-12-5-MG-POTAHOVANE-TBL-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "QUINAPRIL/HYDROCHLOROTHIAZID AUROBINDO 10 MG/12,5 MG POTAHOVANÉ TBL."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-20-MG-12-5-MG-POTAHOVANE-TBL-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "QUINAPRIL/HYDROCHLOROTHIAZID AUROBINDO 20 MG/12,5 MG POTAHOVANÉ TBL."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUINAPRIL-HYDROCHLOROTHIAZID-AUROBINDO-20-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "QUINAPRIL/HYDROCHLOROTHIAZID AUROBINDO 20 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-H-2-5MG-12-5MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "RAMIPRIL H 2,5MG/12,5MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-H-5-MG-25-MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "RAMIPRIL H 5 MG/25 MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RAMIPRIL-HYDROCHLOROTHIAZID-5-MG-12-5-MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "RAMIPRIL/HYDROCHLOROTHIAZID 5 MG/12,5 MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-150-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA52" ;
+    ns1:title "RASILEZ HCT 150 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-150-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA52" ;
+    ns1:title "RASILEZ HCT 150 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-300-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA52" ;
+    ns1:title "RASILEZ HCT 300 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASILEZ-HCT-300-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA52" ;
+    ns1:title "RASILEZ HCT 300 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-150-MG-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 150 MG/5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/10 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-10-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/10 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RASITRIO-300-MG-5-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09XA54" ;
+    ns1:title "RASITRIO 300 MG/5 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RHEFLUIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03EA01" ;
+    ns1:title "RHEFLUIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANGONA-COMBI-100-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "SANGONA COMBI 100 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANGONA-COMBI-50-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA01" ;
+    ns1:title "SANGONA COMBI 50 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-20-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "SARTEN PLUS H 20/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-20-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "SARTEN PLUS H 20/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "SARTEN PLUS H 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARTEN-PLUS-H-40-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "SARTEN PLUS H 40 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 20 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/10 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/10 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVIKAR-HCT-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SEVIKAR HCT 40 MG/5 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-20-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 20 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/10 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-10-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/10 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/5 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINTONYN-COMBI-40-MG-5-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DX03" ;
+    ns1:title "SINTONYN COMBI 40 MG/5 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SKOPRYL-PLUS-H-20-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA03" ;
+    ns1:title "SKOPRYL PLUS H 20 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STADAPRESS-10-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "STADAPRESS 10/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STADAPRESS-20-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA06" ;
+    ns1:title "STADAPRESS 20/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEVETEN-PLUS-H-600-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA02" ;
+    ns1:title "TEVETEN PLUS H 600 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "TOLUCOMBI 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "TOLUCOMBI 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOLUCOMBI-80-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA07" ;
+    ns1:title "TOLUCOMBI 80 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRITAZIDE-2-5-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "TRITAZIDE 2,5 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRITAZIDE-5-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09BA05" ;
+    ns1:title "TRITAZIDE 5 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSACOMBI 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSACOMBI 160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSACOMBI 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSACOMBI 320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSACOMBI-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSACOMBI 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID GENERICON 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID GENERICON 160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID GENERICON 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID GENERICON 320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-GENERICON-80-MG--12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID GENERICON 80 MG /12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-160-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID KRKA 160 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-160-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID KRKA 160 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID KRKA 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID KRKA 320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-KRKA-80-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID KRKA 80 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-RATIOPHARM-320-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID RATIOPHARM 320 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZID-RATIOPHARM-320-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZID RATIOPHARM 320 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-160-MG-12-5-MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE 160 MG/12,5 MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-160-MG-25-MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE 160 MG/25 MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-80-MG-12-5-MG-ACTAVIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE 80 MG/12,5 MG ACTAVIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-160-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE RANBAXY 160/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-160-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE RANBAXY 160 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALSARTAN-HYDROCHLOROTHIAZIDE-RANBAXY-80-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALSARTAN/HYDROCHLOROTHIAZIDE RANBAXY 80/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-160-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALZAP COMBI 160 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-160-MG-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALZAP COMBI 160 MG/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-320-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALZAP COMBI 320 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALZAP-COMBI-80-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VALZAP COMBI 80 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-160-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VANATEX HCT 160/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-160-25-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VANATEX HCT 160/25 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VANATEX-HCT-80-MG-12-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA03" ;
+    ns1:title "VANATEX HCT 80 MG/12,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-16-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "XALEEC COMBI 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-32-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "XALEEC COMBI 32 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/XALEEC-COMBI-8-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA06" ;
+    ns1:title "XALEEC COMBI 8 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-20-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "ZEOTA HCT 20 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-20-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "ZEOTA HCT 20 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-40-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "ZEOTA HCT 40 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEOTA-HCT-40-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09DA08" ;
+    ns1:title "ZEOTA HCT 40 MG/25 MG"@cs .
+
+

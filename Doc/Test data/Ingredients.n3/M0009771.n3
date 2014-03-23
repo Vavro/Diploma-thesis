@@ -1,0 +1,139 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05AD01> a ns1:ATCConcept ;
+    skos:notation "N05AD01" ;
+    skos:prefLabel "Haloperidol"@cs,
+        "Haloperidol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009771> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000589",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000819",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000857",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001866",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002327" ;
+    ns1:description "A phenyl-piperidinyl-butyrophenone that is used primarily to treat SCHIZOPHRENIA and other PSYCHOSES. It is also used in schizoaffective disorder, DELUSIONAL DISORDERS, ballism, and TOURETTE SYNDROME (a drug of choice) and occasionally as adjunctive therapy in INTELLECTUAL DISABILITY and the chorea of HUNTINGTON DISEASE. It is a potent antiemetic and is used in the treatment of intractable HICCUPS. (From AMA Drug Evaluations Annual, 1994, p279)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/HALOPERIDOL-RICHTER",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/HALOPERIDOL-RICHTER-1-5-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028056" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008445",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000751",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001334",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002532",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002690",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002855",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003141" ;
+    ns1:title "Haloperidol"@cs,
+        "Haloperidol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028056> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of movement disorders. Most of these act centrally on dopaminergic or cholinergic systems. Among the most important clinically are those used for the treatment of Parkinson disease (ANTIPARKINSON AGENTS) and those for the tardive dyskinesias.     "@en ;
+    ns1:title "Látky proti dyskinézím"@cs,
+        "Anti-dyskinesia agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000589> a ns1:DiseaseOrFinding ;
+    ns1:title "Kostní dřeň - nemoci"@cs,
+        "Bone marrow diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000751> a ns1:DiseaseOrFinding ;
+    ns1:description "Disturbances considered to be pathological based on age and stage appropriateness, e.g., conduct disturbances and anaclitic depression. This concept does not include psychoneuroses, psychoses, or personality disorders with fixed patterns.     "@en ;
+    ns1:title "Poruchy chování u dětí"@cs,
+        "Child behavior disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000819> a ns1:DiseaseOrFinding ;
+    ns1:description "A profound state of unconsciousness associated with depressed cerebral activity from which the individual cannot be aroused. Coma generally occurs when there is dysfunction or injury involving both cerebral hemispheres or the brain stem RETICULAR FORMATION.     "@en ;
+    ns1:title "Kóma"@cs,
+        "Coma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000857> a ns1:DiseaseOrFinding ;
+    ns1:description "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.     "@en ;
+    ns1:title "Koronární nemoc"@cs,
+        "Coronary disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001334> a ns1:DiseaseOrFinding ;
+    ns1:description "A neuropsychological disorder related to alterations in DOPAMINE metabolism and neurotransmission involving frontal-subcortical neuronal circuits. Both multiple motor and one or more vocal tics need to be present with TICS occurring many times a day, nearly daily, over a period of more than one year. The onset is before age 18 and the disturbance is not due to direct physiological effects of a substance or a general medical condition. The disturbance causes marked distress or significant impairment in social, occupational, or other important areas of functioning. (From DSM-IV, 1994; Neurol Clin 1997 May;15(2):357-79)     "@en ;
+    ns1:title "Tourettův syndrom"@cs,
+        "Tourette syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)     "@en ;
+    ns1:title "Parkinsonova nemoc"@cs,
+        "Parkinson disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002532> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders in which there is a loss of ego boundaries or a gross impairment in reality testing with delusions or prominent hallucinations. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Psychotické poruchy"@cs,
+        "Psychotic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.     "@en ;
+    ns1:title "Schizofrenie"@cs,
+        "Schizophrenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002855> a ns1:DiseaseOrFinding ;
+    ns1:description "Physiological and psychological symptoms associated with withdrawal from the use of a drug after prolonged administration or habituation. The concept includes withdrawal from smoking or drinking, as well as withdrawal from an administered drug.     "@en ;
+    ns1:title "Abstinenční syndrom"@cs,
+        "Substance withdrawal syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008445> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Brain Stem Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072> a ns1:PhysiologicEffect ;
+    ns1:title "Hypothalamic Endocrine Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HALOPERIDOL-RICHTER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AD01" ;
+    ns1:title "HALOPERIDOL-RICHTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HALOPERIDOL-RICHTER-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AD01" ;
+    ns1:title "HALOPERIDOL-RICHTER 1,5 MG"@cs .
+
+

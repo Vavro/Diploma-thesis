@@ -1,0 +1,133 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A07EC01> a ns1:ATCConcept ;
+    skos:notation "A07EC01" ;
+    skos:prefLabel "Sulfasalazin"@cs,
+        "Sulfasalazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0019365> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000563",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002464",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003070" ;
+    ns1:description "A drug that is used in the management of inflammatory bowel diseases. Its activity is generally considered to lie in its metabolic breakdown product, 5-aminosalicylic acid (see MESALAMINE) released in the colon. (From Martindale, The Extra Pharmacopoeia, 30th ed, p907)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/SALAZOPYRIN-EN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SULFASALAZIN-K",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SULFASALAZIN-K-EN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000478",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000481",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000482",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000806",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000807" ;
+    ns1:title "Sulfasalazin"@cs,
+        "Sulfasalazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that prevent infectious agents or organisms from spreading or kill infectious agents in order to prevent the spread of infection.     "@en ;
+    ns1:title "Antiinfekční látky"@cs,
+        "Anti-infective agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their effects on the gastrointestinal system, as to control gastric acidity, regulate gastrointestinal motility and water flow, and improve digestion.     "@en ;
+    ns1:title "Gastrointestinální látky"@cs,
+        "Gastrointestinal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000563> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocked urine flow through the bladder neck, the narrow internal urethral opening at the base of the URINARY BLADDER. Narrowing or strictures of the URETHRA can be congenital or acquired. It is often observed in males with enlarged PROSTATE glands.     "@en ;
+    ns1:title "Močový měchýř - obstrukce"@cs,
+        "Urinary bladder neck obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000806> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON section of the large intestine (INTESTINE, LARGE), usually with symptoms such as DIARRHEA (often with blood and mucus), ABDOMINAL PAIN, and FEVER.     "@en ;
+    ns1:title "Kolitida"@cs,
+        "Colitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003070> a ns1:DiseaseOrFinding ;
+    ns1:description "Blockage in any part of the URETER causing obstruction of urine flow from the kidney to the URINARY BLADDER. The obstruction may be congenital, acquired, unilateral, bilateral, complete, partial, acute, or chronic. Depending on the degree and duration of the obstruction, clinical features vary greatly such as HYDRONEPHROSIS and obstructive nephropathy.     "@en ;
+    ns1:title "Ureter - obstrukce"@cs,
+        "Ureteral obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Aggregation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SALAZOPYRIN-EN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EC01" ;
+    ns1:title "SALAZOPYRIN EN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SULFASALAZIN-K> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EC01" ;
+    ns1:title "SULFASALAZIN K"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SULFASALAZIN-K-EN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A07EC01" ;
+    ns1:title "SULFASALAZIN K-EN"@cs .
+
+

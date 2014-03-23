@@ -1,0 +1,92 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A02BX02> a ns1:ATCConcept ;
+    skos:notation "A02BX02" ;
+    skos:prefLabel "Sukralfát"@cs,
+        "Sucralfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020717> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A basic aluminum complex of sulfated sucrose.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000175355" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ULCOGANT",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VENTER" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009054" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001008" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001008",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001165",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001314",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002432",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002830",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002832",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003062" ;
+    ns1:title "Sukralfát"@cs,
+        "Sucralfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340> a ns1:PharmacologicalAction ;
+    ns1:description "Various agents with different action mechanisms used to treat or ameliorate PEPTIC ULCER or irritation of the gastrointestinal tract. This has included ANTIBIOTICS to treat HELICOBACTER INFECTIONS; HISTAMINE H2 ANTAGONISTS to reduce GASTRIC ACID secretion; and ANTACIDS for symptomatic relief.     "@en ;
+    ns1:title "Protivředové látky"@cs,
+        "Anti-ulcer agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001008> a ns1:DiseaseOrFinding ;
+    ns1:description "A PEPTIC ULCER located in the DUODENUM.     "@en ;
+    ns1:title "Dvanáctníkové vředy"@cs,
+        "Duodenal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001165> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION, acute or chronic, of the ESOPHAGUS caused by BACTERIA, chemicals, or TRAUMA.     "@en ;
+    ns1:title "Ezofagitida"@cs,
+        "Esophagitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001314> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the GASTRIC MUCOSA, a lesion observed in a number of unrelated disorders.     "@en ;
+    ns1:title "Gastritida"@cs,
+        "Gastritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002832> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the soft tissues of the MOUTH, such as MUCOSA; PALATE; GINGIVA; and LIP.     "@en ;
+    ns1:title "Stomatitida"@cs,
+        "Stomatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000175355> a ns1:MechanismOfAction ;
+    ns1:title "Binding Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009054> a ns1:PhysiologicEffect ;
+    ns1:title "Gastric Acid Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULCOGANT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BX02" ;
+    ns1:title "ULCOGANT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENTER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A02BX02" ;
+    ns1:title "VENTER"@cs .
+
+

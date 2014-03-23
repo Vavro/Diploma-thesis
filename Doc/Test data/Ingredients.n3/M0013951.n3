@@ -1,0 +1,56 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01XX23> a ns1:ATCConcept ;
+    skos:notation "L01XX23" ;
+    skos:prefLabel "Mitotan"@cs,
+        "Mitotane"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013951> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description " A derivative of the insecticide  DICHLORODIPHENYLDICHLOROETHANE that specifically inhibits cells of the adrenal cortex and their production of hormones. It is used to treat adrenocortical tumors and causes CNS damage, but no bone marrow depression.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/LYSODREN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000323",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000883" ;
+    ns1:title "Mitotan"@cs,
+        "Mitotane"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000323> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancers of the ADRENAL CORTEX.     "@en ;
+    ns1:title "Adrenokortikální nádory"@cs,
+        "Adrenal cortex neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000883> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by prolonged exposure to excess levels of cortisol (HYDROCORTISONE) or other GLUCOCORTICOIDS from endogenous or exogenous sources. It is characterized by upper body OBESITY; OSTEOPOROSIS; HYPERTENSION; DIABETES MELLITUS; HIRSUTISM; AMENORRHEA; and excess body fluid. Endogenous Cushing syndrome or spontaneous hypercortisolism is divided into two groups, those due to an excess of ADRENOCORTICOTROPIN and those that are ACTH-independent.     "@en ;
+    ns1:title "Cushingův syndrom"@cs,
+        "Cushing syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LYSODREN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XX23" ;
+    ns1:title "LYSODREN"@cs .
+
+

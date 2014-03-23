@@ -1,0 +1,175 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C03DA01> a ns1:ATCConcept ;
+    skos:notation "C03DA01" ;
+    skos:prefLabel "Spironolakton"@cs,
+        "Spironolactone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020352> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001590",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001610",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "A potassium sparing diuretic that acts by antagonism of aldosterone in the distal renal tubules. It is used mainly in the treatment of refractory edema in patients with congestive heart failure, nephrotic syndrome, or hepatic cirrhosis. Its effects on the endocrine system are utilized in the treatments of hirsutism and acne but they can lead to adverse effects. (From Martindale, The Extra Pharmacopoeia, 30th ed, p827)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000139" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-25-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-50-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON-100-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON-50-MG" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0570017" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008581",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008583",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000490",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001543",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001573",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001618",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001638",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001862",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002153",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000181193" ;
+    ns1:title "Spironolakton"@cs,
+        "Spironolactone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0570017> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and block the activation of MINERALOCORTICOID RECEPTORS by MINERALOCORTICOIDS such as ALDOSTERONE.     "@en ;
+    ns1:title "Antagonisté mineralokortikoidních receptorů"@cs,
+        "Mineralocorticoid receptor antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of urine formation. It is usually associated with complete bilateral ureteral (URETER) obstruction, complete lower urinary tract obstruction, or unilateral ureteral obstruction when a solitary kidney is present.     "@en ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000490> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation or retention of free fluid within the peritoneal cavity.     "@en ;
+    ns1:title "Ascites"@cs,
+        "Ascites"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001543> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition observed in WOMEN and CHILDREN when there is excess coarse body hair of an adult male distribution pattern, such as facial and chest areas. It is the result of elevated ANDROGENS from the OVARIES, the ADRENAL GLANDS, or exogenous sources. The concept does not include HYPERTRICHOSIS, which is an androgen-independent excessive hair growth.     "@en ;
+    ns1:title "Hirzutismus"@cs,
+        "Hirsutism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by the overproduction of ALDOSTERONE. It is characterized by sodium retention and potassium excretion with resultant HYPERTENSION and HYPOKALEMIA.     "@en ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001590> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high potassium concentration in the blood, most often due to defective renal excretion. It is characterized clinically by electrocardiographic abnormalities (elevated T waves and depressed P waves, and eventually by atrial asystole). In severe cases, weakness and flaccid paralysis may occur. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hyperkalemie"@cs,
+        "Hyperkalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001618> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal increase of resistance to blood flow within the hepatic PORTAL SYSTEM, frequently seen in LIVER CIRRHOSIS and conditions with obstruction of the PORTAL VEIN.     "@en ;
+    ns1:title "Portální hypertenze"@cs,
+        "Hypertension, portal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001638> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low potassium concentration in the blood. It may result from potassium loss by renal secretion or by the gastrointestinal route, as by vomiting or diarrhea. It may be manifested clinically by neuromuscular disorders ranging from weakness to paralysis, by electrocardiographic abnormalities (depression of the T wave and elevation of the U wave), by renal disease, and by gastrointestinal disorders. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hypokalemie"@cs,
+        "Hypokalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002153> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY without inflammatory or neoplastic components. Nephrosis may be a primary disorder or secondary complication of other diseases. It is characterized by the NEPHROTIC SYNDROME indicating the presence of PROTEINURIA and HYPOALBUMINEMIA with accompanying EDEMA.     "@en ;
+    ns1:title "Nefróza"@cs,
+        "Nephrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181193> a ns1:DiseaseOrFinding ;
+    ns1:description "Heart failure caused by abnormal myocardial contraction during SYSTOLE leading to defective cardiac emptying.     "@en ;
+    ns1:title "Systolické srdeční selhání"@cs,
+        "Heart failure, systolic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000139> a ns1:MechanismOfAction ;
+    ns1:title "Mineralocorticoid Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299> a ns1:PhysiologicEffect ;
+    ns1:title "Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008581> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Distal Tubule H+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008583> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Distal Tubule K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009279> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Distal Tubule Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "SPIRONOLACTONE ORION 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "SPIRONOLACTONE ORION 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPIRONOLACTONE-ORION-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "SPIRONOLACTONE ORION 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "VEROSPIRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "VEROSPIRON 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VEROSPIRON-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C03DA01" ;
+    ns1:title "VEROSPIRON 50 MG"@cs .
+
+

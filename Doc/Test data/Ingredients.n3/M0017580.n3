@@ -1,0 +1,67 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AA03> a ns1:ATCConcept ;
+    skos:notation "N03AA03" ;
+    skos:prefLabel "Primidon"@cs,
+        "Primidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017580> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002464",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An antiepileptic agent related to the barbiturates; it is partly metabolized to PHENOBARBITAL in the body and owes some of its actions to this metabolite. Adverse effects are reported to be more frequent than with PHENOBARBITAL. (From Martindale, The Extra Pharmacopoeia, 30th ed, p309)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000105" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/LISKANTIN" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009761" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001126",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003005" ;
+    ns1:title "Primidon"@cs,
+        "Primidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001126> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent episodes of paroxysmal brain dysfunction due to a sudden, disorderly, and excessive neuronal discharge. Epilepsy classification systems are generally based upon: (1) clinical features of the seizure episodes (e.g., motor seizure), (2) etiology (e.g., post-traumatic), (3) anatomic site of seizure origin (e.g., frontal lobe seizure), (4) tendency to spread to other structures in the brain, and (5) temporal patterns (e.g., nocturnal epilepsy). (From Adams et al., Principles of Neurology, 6th ed, p313)     "@en ;
+    ns1:title "Epilepsie"@cs,
+        "Epilepsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003005> a ns1:DiseaseOrFinding ;
+    ns1:description "Cyclical movement of a body part that can represent either a physiologic process or a manifestation of disease. Intention or action tremor, a common manifestation of CEREBELLAR DISEASES, is aggravated by movement. In contrast, resting tremor is maximal when there is no attempt at voluntary movement, and occurs as a relatively frequent manifestation of PARKINSON DISEASE.     "@en ;
+    ns1:title "Tremor"@cs,
+        "Tremor"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000105> a ns1:MechanismOfAction ;
+    ns1:title "Neurotransmitter Transporter Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009761> a ns1:PhysiologicEffect ;
+    ns1:title "Neurotransmitter & Neuromuscular Transmitter Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LISKANTIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AA03" ;
+    ns1:title "LISKANTIN"@cs .
+
+

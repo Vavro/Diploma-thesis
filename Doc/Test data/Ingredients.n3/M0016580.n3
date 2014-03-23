@@ -1,0 +1,89 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AB02> a ns1:ATCConcept ;
+    skos:notation "N03AB02" ;
+    skos:prefLabel "Fenytoin"@cs,
+        "Phenytoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016580> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:description "An anticonvulsant that is used in a wide variety of seizures. It is also an anti-arrhythmic and a muscle relaxant. The mechanism of therapeutic action is not clear, although several cellular actions have been described including effects on ion channels, active transport, and general membrane stabilization. The mechanism of its muscle relaxant effect appears to involve a reduction in the sensitivity of muscle spindles to stretch. Phenytoin has been proposed for several other therapeutic uses, but its use has been limited by its many adverse effects and interactions with other drugs.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/EPANUTIN-PARENTERAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EPILAN-D-GEROT" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0559316" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008578",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001133" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001123",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001129",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001132" ;
+    ns1:title "Fenytoin"@cs,
+        "Phenytoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0559316> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that inhibit the activation of VOLTAGE-GATED SODIUM CHANNELS.     "@en ;
+    ns1:title "Blokátory sodíkových kanálů řízených napětím"@cs,
+        "Voltage-gated sodium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001123> a ns1:DiseaseOrFinding ;
+    ns1:description "Group of genetically determined disorders characterized by the blistering of skin and mucosae. There are four major forms: acquired, simple, junctional, and dystrophic. Each of the latter three has several varieties.     "@en ;
+    ns1:title "Epidermolysis bullosa"@cs,
+        "Epidermolysis bullosa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001129> a ns1:DiseaseOrFinding ;
+    ns1:description "A generalized seizure disorder characterized by recurrent major motor seizures. The initial brief tonic phase is marked by trunk flexion followed by diffuse extension of the trunk and extremities. The clonic phase features rhythmic flexor contractions of the trunk and limbs, pupillary dilation, elevations of blood pressure and pulse, urinary incontinence, and tongue biting. This is followed by a profound state of depressed consciousness (post-ictal state) which gradually improves over minutes to hours. The disorder may be cryptogenic, familial, or symptomatic (caused by an identified disease process). (From Adams et al., Principles of Neurology, 6th ed, p329)     "@en ;
+    ns1:title "Epilepsie tonicko-klonická"@cs,
+        "Epilepsy, tonic-clonic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001132> a ns1:DiseaseOrFinding ;
+    ns1:description "A localization-related (focal) form of epilepsy characterized by recurrent seizures that arise from foci within the temporal lobe, most commonly from its mesial aspect. A wide variety of psychic phenomena may be associated, including illusions, hallucinations, dyscognitive states, and affective experiences. The majority of complex partial seizures (see EPILEPSY, COMPLEX PARTIAL) originate from the temporal lobes. Temporal lobe seizures may be classified by etiology as cryptogenic, familial, or symptomatic (i.e., related to an identified disease process or lesion). (From Adams et al., Principles of Neurology, 6th ed, p321)     "@en ;
+    ns1:title "Epilepsie temporálního laloku"@cs,
+        "Epilepsy, temporal lobe"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001133> a ns1:DiseaseOrFinding ;
+    ns1:description "Recurrent seizures causally related to CRANIOCEREBRAL TRAUMA. Seizure onset may be immediate but is typically delayed for several days after the injury and may not occur for up to two years. The majority of seizures have a focal onset that correlates clinically with the site of brain injury. Cerebral cortex injuries caused by a penetrating foreign object (CRANIOCEREBRAL TRAUMA, PENETRATING) are more likely than closed head injuries (HEAD INJURIES, CLOSED) to be associated with epilepsy. Concussive convulsions are nonepileptic phenomena that occur immediately after head injury and are characterized by tonic and clonic movements. (From Rev Neurol 1998 Feb;26(150):256-261; Sports Med 1998 Feb;25(2):131-6)     "@en ;
+    ns1:title "Posttraumatická epilepsie"@cs,
+        "Epilepsy, post-traumatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008578> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Disorganized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPANUTIN-PARENTERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AB02" ;
+    ns1:title "EPANUTIN PARENTERAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPILAN-D-GEROT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N03AB02" ;
+    ns1:title "EPILAN D GEROT"@cs .
+
+

@@ -1,0 +1,58 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014893> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010203" ;
+    ns1:description "A urinary anti-infective agent effective against most gram-positive and gram-negative organisms. Although sulfonamides and antibiotics are usually the agents of choice for urinary tract infections, nitrofurantoin is widely used for prophylaxis and long-term suppression.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000003081",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003506",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003507" ;
+    ns1:title "Nitrofurantoin"@cs,
+        "Nitrofurantoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> a ns1:PharmacologicalAction ;
+    ns1:description "Substances capable of killing agents causing urinary tract infections or of preventing them from spreading.     "@en ;
+    ns1:title "Antiinfekční látky močové"@cs,
+        "Anti-infective agents, urinary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003506> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that show up as pink (negative) when treated by the gram-staining method.     "@en ;
+    ns1:title "Gramnegativní bakteriální infekce"@cs,
+        "Gram-negative bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that retain the crystal violet stain (positive) when treated by the gram-staining method.     "@en ;
+    ns1:title "Grampozitivní bakteriální infekce"@cs,
+        "Gram-positive bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> a ns1:DiseaseOrFinding ;
+    ns1:description "A child between 1 and 23 months of age.     "@en ;
+    ns1:title "Kojenec"@cs,
+        "Infant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+

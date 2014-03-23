@@ -1,0 +1,157 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M05BA04> a ns1:ATCConcept ;
+    skos:notation "M05BA04" ;
+    skos:prefLabel "Kyselina alendronová"@cs,
+        "Alendronic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/M05BB03> a ns1:ATCConcept ;
+    skos:notation "M05BB03" ;
+    skos:prefLabel "Kyselina alendronová a cholekalciferol"@cs,
+        "Alendronic acid and colecalciferol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028852> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001155",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001632" ;
+    ns1:description "A nonhormonal medication for the treatment of postmenopausal osteoporosis in women. This drug builds healthy bone, restoring some of the bone loss as a result of osteoporosis.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009958" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/ADROVANCE-70-MG-2800-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ADROVANCE-70-MG-5600-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDROGEN-70-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONAT-ACTAVIS-70-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONAT-SANDOZ-70",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONATE-TEVA-70-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/ALENWIN-70",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/BONASOL-70-MG-PERORALNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAMAX-70-MG-1X-TYDNE",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAVANCE-70-MG-2800-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAVANCE-70-MG-5600-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/GENDRON-70-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SIRANIN-70-MG-POTAHOVANE-TABLETY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STEOVESS-70-MG",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/TEVABONE-70-MG-TABLETY-A-1-MIKROGRAM-MEKKE-TOBOLKY",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VANTAVO-70-MG-2800-IU",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VANTAVO-70-MG-5600-IU" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008313" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000002260",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002277",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003303" ;
+    ns1:title "Alendronát"@cs,
+        "Alendronate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     "@en ;
+    ns1:title "Inhibitory kostní resorpce"@cs,
+        "Bone density conservation agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001155> a ns1:DiseaseOrFinding ;
+    ns1:description "A motility disorder of the ESOPHAGUS in which the LOWER ESOPHAGEAL SPHINCTER (near the CARDIA) fails to relax resulting in functional obstruction of the esophagus, and DYSPHAGIA. Achalasia is characterized by a grossly contorted and dilated esophagus (megaesophagus).     "@en ;
+    ns1:title "Achalázie jícnu"@cs,
+        "Esophageal achalasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001632> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of the blood calcium below normal. Manifestations include hyperactive deep tendon reflexes, Chvostek's sign, muscle and abdominal cramps, and carpopedal spasm. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hypokalcémie"@cs,
+        "Hypocalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002260> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of bone mass without alteration in the composition of bone, leading to fractures. Primary osteoporosis can be of two major types: postmenopausal osteoporosis (OSTEOPOROSIS, POSTMENOPAUSAL) and age-related or senile osteoporosis.     "@en ;
+    ns1:title "Osteoporóza"@cs,
+        "Osteoporosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002277> a ns1:DiseaseOrFinding ;
+    ns1:description "A rare cutaneous neoplasm that occurs in the elderly. It develops more frequently in women and predominantly involves apocrine gland-bearing areas, especially the vulva, scrotum, and perianal areas. The lesions develop as erythematous scaly patches that progress to crusted, pruritic, erythematous plaques. The clinical differential diagnosis includes squamous cell carcinoma in situ and superficial fungal infection. It is generally thought to be an adenocarcinoma of the epidermis, from which it extends into the contiguous epithelium of hair follicles and eccrine sweat ducts. (DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, p1478)     "@en ;
+    ns1:title "Pagetova nemoc extramamární"@cs,
+        "Paget disease, extramammary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> a ns1:DiseaseOrFinding ;
+    ns1:description "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     "@en ;
+    ns1:title "Osteoporóza postmenopauzální"@cs,
+        "Osteoporosis, postmenopausal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009958> a ns1:MechanismOfAction ;
+    ns1:title "Bone Surface Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008313> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Resorption Inhibition"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADROVANCE-70-MG-2800-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "ADROVANCE 70 MG/2800 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADROVANCE-70-MG-5600-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "ADROVANCE 70 MG/5600 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDROGEN-70-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "ALENDROGEN 70 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONAT-ACTAVIS-70-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "ALENDRONAT ACTAVIS 70 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONAT-SANDOZ-70> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "ALENDRONAT SANDOZ 70"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALENDRONATE-TEVA-70-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "ALENDRONATE-TEVA 70 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALENWIN-70> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "ALENWIN 70"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BONASOL-70-MG-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "BONASOL 70 MG PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAMAX-70-MG-1X-TYDNE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "FOSAMAX 70 MG 1X TÝDNĚ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAVANCE-70-MG-2800-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "FOSAVANCE 70 MG/2800 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOSAVANCE-70-MG-5600-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "FOSAVANCE 70 MG/5600 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GENDRON-70-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "GENDRON 70 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIRANIN-70-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "SIRANIN 70 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STEOVESS-70-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BA04" ;
+    ns1:title "STEOVESS 70 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEVABONE-70-MG-TABLETY-A-1-MIKROGRAM-MEKKE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:title "TEVABONE 70 MG TABLETY A 1 MIKROGRAM MĚKKÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VANTAVO-70-MG-2800-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "VANTAVO 70 MG/2800 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VANTAVO-70-MG-5600-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BB03" ;
+    ns1:title "VANTAVO 70 MG/5600 IU"@cs .
+
+

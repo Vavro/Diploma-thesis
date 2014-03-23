@@ -1,0 +1,259 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09A> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE INHIBITORS, PLAIN"@en ;
+    skos:notation "C09A" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE inhibitors, plain"@en ;
+    skos:notation "C09AA" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA09> a ns1:ATCConcept ;
+    dcterms:title "Fosinopril"@cs,
+        "Fosinopril"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C09",
+        "http://linked.opendata.cz/resource/ATC/C09A",
+        "http://linked.opendata.cz/resource/ATC/C09AA" ;
+    skos:notation "C09AA09" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026317> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Fosinopril sodium"@cs,
+        "Fosinopril sodium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs whose main indications are the treatment of hypertension and heart failure. They exert their hemodynamic effect mainly by inhibiting the renin-angiotensin system. They also modulate sympathetic nervous system activity and increase prostaglandin synthesis. They cause mainly vasodilation and mild natriuresis without affecting heart rate and contractility.     "@en ;
+    ns1:title "Inhibitory angiotenzin konvertujícího enzymu"@cs,
+        "Angiotensin-converting enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150740> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150741> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100 TBC"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150742> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "250"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 250X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150743> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "500"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 500X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150744> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 10X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150745> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 14X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150746> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150747> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150748> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "139.289993286"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "101.160003662"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-09-20"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150749> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "42"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 42X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150750> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150751> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 98X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150752> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasIndication """Hypertenze
+Symptomatické srdeční selhání
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC149450_doc" ;
+    ns1:hasStrength "20MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X20MG"@cs ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FOSINOPRIL--PHARMA-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C09AA09" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026317" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150740",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150741",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150742",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150743",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150744",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150745",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150746",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150747",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150748",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150749",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150750",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150751",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150752" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "FOSINOPRIL +PHARMA 20 MG"@cs .
+
+

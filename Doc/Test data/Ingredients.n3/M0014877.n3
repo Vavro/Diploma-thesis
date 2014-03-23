@@ -1,0 +1,95 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R07AX01> a ns1:ATCConcept ;
+    skos:notation "R07AX01" ;
+    skos:prefLabel "Oxid dusnatý"@cs,
+        "Nitric oxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014877> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A free radical gas produced endogenously by a variety of mammalian cells, synthesized from ARGININE by NITRIC OXIDE SYNTHASE. Nitric oxide is one of  the ENDOTHELIUM-DEPENDENT RELAXING FACTORS released by the vascular endothelium and mediates VASODILATION. It also inhibits platelet aggregation, induces disaggregation of aggregated platelets, and inhibits platelet adhesion to the vascular endothelium. Nitric oxide activates cytosolic GUANYLATE CYCLASE and thus elevates intracellular levels of CYCLIC GMP.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/INOMAX-400-PPM-MOL-MOL-INH--GAS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/INOMAX-800-PPM-MOL-MOL-INH--GAS",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOXAP-200-PPM-MOL-MOL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/NOXAP-800-PPM-MOL-MOL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027603",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448292" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009816" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000001616",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001619",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002596" ;
+    ns1:title "Oxid dusnatý"@cs,
+        "Nitric oxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that influence the course of a chemical reaction by ready combination with free radicals. Among other effects, this combining activity protects pancreatic islets against damage by cytokines and prevents myocardial and pulmonary perfusion injuries.     "@en ;
+    ns1:title "Volné radikály - scavengery"@cs,
+        "Free radical scavengers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027603> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used for their pharmacological actions on any aspect of neurotransmitter systems. Neurotransmitter agents include agonists, antagonists, degradation inhibitors, uptake inhibitors, depleters, precursors, and modulators of receptor function.     "@en ;
+    ns1:title "Neurotransmiterové látky"@cs,
+        "Neurotransmitter agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448292> a ns1:PharmacologicalAction ;
+    ns1:description "Paracrine substances produced by the VASCULAR ENDOTHELIUM with VASCULAR SMOOTH MUSCLE relaxation (VASODILATION) activities. Several factors have been identified, including NITRIC OXIDE and PROSTACYCLIN.     "@en ;
+    ns1:title "Relaxační faktory závislé na endotelu"@cs,
+        "Endothelium-dependent relaxing factors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001619> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased VASCULAR RESISTANCE in the PULMONARY CIRCULATION, usually secondary to HEART DISEASES or LUNG DISEASES.     "@en ;
+    ns1:title "Plicní hypertenze"@cs,
+        "Hypertension, pulmonary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002596> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of the newborn marked by DYSPNEA with CYANOSIS, heralded by such prodromal signs as dilatation of the alae nasi, expiratory grunt, and retraction of the suprasternal notch or costal margins, mostly frequently occurring in premature infants, children of diabetic mothers, and infants delivered by cesarean section, and sometimes with no apparent predisposing cause.     "@en ;
+    ns1:title "Syndrom respirační tísně novorozenců"@cs,
+        "Respiratory distress syndrome, newborn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120> a ns1:MechanismOfAction ;
+    ns1:title "Nitric Oxide Donors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009816> a ns1:PhysiologicEffect ;
+    ns1:title "Pulmonary Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INOMAX-400-PPM-MOL-MOL-INH--GAS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R07AX01" ;
+    ns1:title "INOMAX 400 PPM MOL/MOL INH. GAS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INOMAX-800-PPM-MOL-MOL-INH--GAS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R07AX01" ;
+    ns1:title "INOMAX 800 PPM MOL/MOL INH. GAS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOXAP-200-PPM-MOL-MOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R07AX01" ;
+    ns1:title "NOXAP 200 PPM MOL/MOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOXAP-800-PPM-MOL-MOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/R07AX01" ;
+    ns1:title "NOXAP 800 PPM MOL/MOL"@cs .
+
+

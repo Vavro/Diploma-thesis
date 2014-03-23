@@ -1,0 +1,51 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "OTHER ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01X" .
+
+<http://linked.opendata.cz/resource/ATC/L01XE> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory protein kinázy"@cs,
+        "Protein kinase inhibitors"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/L",
+        "http://linked.opendata.cz/resource/ATC/L01",
+        "http://linked.opendata.cz/resource/ATC/L01X" ;
+    skos:notation "L01XE" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0562363> a ns1:Ingredient ;
+    ns1:title "Linifanib"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185257> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XE" ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "25"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/F" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 25X2,5MG"@cs ;
+    ns1:title "LINIFANIB (ABT-869) 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LINIFANIB--ABT-869--2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/L01XE" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0562363" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185257" ;
+    ns1:title "LINIFANIB (ABT-869) 2,5 MG"@cs .
+
+

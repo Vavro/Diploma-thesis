@@ -1,0 +1,369 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující hladinu lipidů"@cs,
+        "Lipid modifying agents"@en ;
+    skos:notation "C10" .
+
+<http://linked.opendata.cz/resource/ATC/C10A> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující hladinu lipidů, samotná"@cs,
+        "Lipid modifying agents, plain"@en ;
+    skos:notation "C10A" .
+
+<http://linked.opendata.cz/resource/ATC/C10AA> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory HMG CoA reduktázy"@cs,
+        "HMG CoA reductase inhibitors"@en ;
+    skos:notation "C10AA" .
+
+<http://linked.opendata.cz/resource/ATC/C10AA05> a ns1:ATCConcept ;
+    dcterms:title "Atorvastatin"@cs,
+        "Atorvastatin"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C10",
+        "http://linked.opendata.cz/resource/ATC/C10A",
+        "http://linked.opendata.cz/resource/ATC/C10AA" ;
+    skos:notation "C10AA05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324841> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "Atorvastatin calcium"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157806> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "4"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 4X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157807> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157808> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157809> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157810> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157811> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157812> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasMaximalPrice "119.410003662"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "119.410003662"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-07-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157813> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157814> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157815> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157816> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157817> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157818> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "10X20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 200X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157819> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndication """Hypercholesterolemie
+Atorvastatin +pharma je indikován jako doplněk k dietě ke snížení zvýšeného celkového cholesterolu (TC), LDL-cholesterolu (LDL-C), apolipoproteinu B a triglyceridů u dospělých, dospívajících a dětí ve věku 10 let a starších s primární hypercholesterolémií, včetně familiární hypercholesterolémie (heterozygotní forma) nebo s kombinovanou (smíšenou) hyperlipidémií (odpovídající typu IIa nebo typu IIb podle Fredricksona), pokud dieta a jiná nefarmakologická opatření nebyla dostatečně účinná.
+Atorvastatin je též indikován ke snížení celkového cholesterolu a LDL-cholesterolu u dospělých s homozygotní familiární hypercholesterolémií jako přídatná léčba k další hypolipidemické terapii (např. LDL aferéza) nebo v případech, když tyto léčebné metody nejsou dostupné.
+Prevence kardiovaskulárních onemocnění
+Prevence kardiovaskulárních příhod u dospělých pacientů s předpokládaným vysokým rizikem první kardiovaskulární příhody (viz bod 5.1), jako doplněk při úpravách dalších rizikových faktorů.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "500"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC154015_doc" ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 500X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157820> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157821> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157822> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157823> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157824> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157825> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasIndicationGroup "HYPOLIPIDAEMICA"@cs ;
+    ns1:hasPackagingSize "200"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "10MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 200X10MG"@cs ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATORVASTATIN--PHARMA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C10AA05" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324841" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157806",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157807",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157808",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157809",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157810",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157811",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157812",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157813",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157814",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157815",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157816",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157817",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157818",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157819",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157820",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157821",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157822",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157823",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157824",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157825" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X" ;
+    ns1:title "ATORVASTATIN +PHARMA 10 MG"@cs .
+
+

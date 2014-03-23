@@ -1,0 +1,358 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C07> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory"@cs,
+        "BETA BLOCKING AGENTS"@en ;
+    skos:notation "C07" .
+
+<http://linked.opendata.cz/resource/ATC/C07A> a ns1:ATCConcept ;
+    dcterms:title "Beta-blokátory"@cs,
+        "BETA BLOCKING AGENTS"@en ;
+    skos:notation "C07A" .
+
+<http://linked.opendata.cz/resource/ATC/C07AG> a ns1:ATCConcept ;
+    dcterms:title "Alfa- a beta-blokátory"@cs,
+        "Alpha and beta blocking agents"@en ;
+    skos:notation "C07AG" .
+
+<http://linked.opendata.cz/resource/ATC/C07AG02> a ns1:ATCConcept ;
+    dcterms:title "Karvedilol"@cs,
+        "Carvedilol"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/C",
+        "http://linked.opendata.cz/resource/ATC/C07",
+        "http://linked.opendata.cz/resource/ATC/C07A",
+        "http://linked.opendata.cz/resource/ATC/C07AG" ;
+    skos:notation "C07AG02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127291> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000600",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001434",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001649",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002540",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002729",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002743",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003431",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003527",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000010195" ;
+    ns1:title "Carvedilol"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000600> a ns1:DiseaseOrFinding ;
+    ns1:title "Bradykardie"@cs,
+        "Bradycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002729> a ns1:DiseaseOrFinding ;
+    ns1:title "Šok kardiogenní"@cs,
+        "Shock, cardiogenic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002743> a ns1:DiseaseOrFinding ;
+    ns1:title "Syndrom chorého sinu"@cs,
+        "Sick sinus syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003431> a ns1:DiseaseOrFinding ;
+    ns1:title "Bronchy - hyperreaktivita"@cs,
+        "Bronchial hyperreactivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113315> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113316> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113317> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113318> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasMaximalPrice "76.4100036621"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "33.6800003052"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-05-19"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113319> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113320> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113321> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113322> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasMaximalPrice "207.970001221"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasReimbursementAmount "112.269996643"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-05-19"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113323> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113324> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113325> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113326> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113327> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113328> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113329> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113330> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasIndication """Esenciální hypertenze
+Chronická stabilní angina pectoris
+Podpůrná léčba mírného až středně těžkého stabilizovaného srdečního selhání.
+"""@cs ;
+    ns1:hasIndicationGroup "SYMPATHOLYTICA"@cs ;
+    ns1:hasPackagingSize "100 TBC"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC128697_doc" ;
+    ns1:hasStrength "12,5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X12,5MG"@cs ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARVEDILOL-ORION-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/C07AG02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127291" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113315",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113316",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113317",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113318",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113319",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113320",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113321",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113322",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113323",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113324",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113325",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113326",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113327",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113328",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113329",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0113330" ;
+    ns1:title "CARVEDILOL ORION 12,5 MG"@cs .
+
+

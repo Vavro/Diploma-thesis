@@ -1,0 +1,248 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A06AD10> a ns1:ATCConcept ;
+    skos:notation "A06AD10" ;
+    skos:prefLabel "Kombinace minerálních solí"@cs,
+        "Mineral salts in combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/A12CC02> a ns1:ATCConcept ;
+    skos:notation "A12CC02" ;
+    skos:prefLabel "Síran hořečnatý"@cs,
+        "Magnesium sulfate"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05BA10> a ns1:ATCConcept ;
+    skos:notation "B05BA10" ;
+    skos:prefLabel "Roztoky pro parenterální výživu, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/D02AC> a ns1:ATCConcept ;
+    skos:notation "D02AC" ;
+    skos:prefLabel "Měkký parafin a tukové produkty"@cs,
+        "Soft paraffin and fat products"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012889> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000305",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001430",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001499",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529" ;
+    ns1:description "A small colorless crystal used as an anticonvulsant, a cathartic, and an electrolyte replenisher in the treatment of pre-eclampsia and eclampsia. It causes direct inhibition of action potentials in myometrial muscle cells. Excitation and contraction are uncoupled, which decreases the frequency and force of contractions. (From AMA Drug Evaluations Annual, 1992, p1083)     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220",
+        "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/EXCIPIAL-MASTNY-KREM",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/EZICLEN-KONCENTRAT-PRO-PERORALNI-ROZTOK",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN-PERIPHERAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-SULFURICUM-BIOTIKA-10-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-SULFURICUM-BIOTIKA-20-",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-PERIPHERAL",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN-PERIPHERAL" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001167",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008303",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008453",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008735",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009329",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009845",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009870",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009933",
+        "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A" ;
+    ns1:mayPrevent "http://linked.opendata.cz/resource/ndfrt/disease/N0000001921",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000841",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001047",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001921",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002147",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002473",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002713",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003118",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003383" ;
+    ns1:title "Síran hořečnatý"@cs,
+        "Magnesium sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001067> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds capable of relieving pain without the loss of CONSCIOUSNESS.     "@en ;
+    ns1:title "Analgetika"@cs,
+        "Analgesics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001167> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are capable of inducing a total or partial loss of sensation, especially tactile sensation and pain. They may act to induce general ANESTHESIA, in which an unconscious state is achieved, or may act locally to induce numbness or lack of sensation at a targeted site.     "@en ;
+    ns1:title "Anestetika"@cs,
+        "Anesthetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that prevent preterm labor and immature birth by suppressing uterine contractions (TOCOLYSIS). Agents used to delay premature uterine activity include magnesium sulfate, beta-mimetics, oxytocin antagonists, calcium channel inhibitors, and adrenergic beta-receptor agonists. The use of intravenous alcohol as a tocolytic is now obsolete.     "@en ;
+    ns1:title "Tokolytika"@cs,
+        "Tocolytic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:description "An adrenal disease characterized by the progressive destruction of the ADRENAL CORTEX, resulting in insufficient production of ALDOSTERONE and HYDROCORTISONE. Clinical symptoms include ANOREXIA; NAUSEA; WEIGHT LOSS; MUSCLE WEAKNESS; and HYPERPIGMENTATION of the SKIN due to increase in circulating levels of ACTH precursor hormone which stimulates MELANOCYTES.     "@en ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000841> a ns1:DiseaseOrFinding ;
+    ns1:description "Infrequent or difficult evacuation of FECES. These symptoms are associated with a variety of causes, including low DIETARY FIBER intake, emotional or nervous disturbances, systemic and structural disorders, drug-induced aggravation, and infections.     "@en ;
+    ns1:title "Zácpa"@cs,
+        "Constipation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001047> a ns1:DiseaseOrFinding ;
+    ns1:description "Onset of HYPERREFLEXIA; SEIZURES; or COMA in a previously diagnosed pre-eclamptic patient (PRE-ECLAMPSIA).     "@en ;
+    ns1:title "Eklampsie"@cs,
+        "Eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired conduction of cardiac impulse that can occur anywhere along the conduction pathway, such as between the SINOATRIAL NODE and the right atrium (SA block) or between atria and ventricles (AV block). Heart blocks can be classified by the duration, frequency, or completeness of conduction block. Reversibility depends on the degree of structural or functional defects.     "@en ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER.     "@en ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001921> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of magnesium in the diet, characterized by anorexia, nausea, vomiting, lethargy, and weakness. Symptoms are paresthesias, muscle cramps, irritability, decreased attention span, and mental confusion, possibly requiring months to appear. Deficiency of body magnesium can exist even when serum values are normal. In addition, magnesium deficiency may be organ-selective, since certain tissues become deficient before others. (Harrison's Principles of Internal Medicine, 12th ed, p1936)     "@en ;
+    ns1:title "Hořčík - nedostatek"@cs,
+        "Magnesium deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002147> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part of the KIDNEY.     "@en ;
+    ns1:title "Nefritida"@cs,
+        "Nephritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002473> a ns1:DiseaseOrFinding ;
+    ns1:description "A complication of PREGNANCY, characterized by a complex of symptoms including maternal HYPERTENSION and PROTEINURIA with or without pathological EDEMA. Symptoms may range between mild and severe. Pre-eclampsia usually occurs after the 20th week of gestation, but may develop before this time in the presence of trophoblastic disease.     "@en ;
+    ns1:title "Preeklampsie"@cs,
+        "Pre-eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003118> a ns1:DiseaseOrFinding ;
+    ns1:description "A potentially lethal cardiac arrhythmia that is characterized by uncoordinated extremely rapid firing of electrical impulses (400-600/min) in HEART VENTRICLES. Such asynchronous ventricular quivering or fibrillation prevents any effective cardiac output and results in unconsciousness (SYNCOPE). It is one of the major electrocardiographic patterns seen with CARDIAC ARREST.     "@en ;
+    ns1:title "Fibrilace komor"@cs,
+        "Ventricular fibrillation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003383> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant form of polymorphic ventricular tachycardia that is characterized by HEART RATE between 200 and 250 beats per minute, and QRS complexes with changing amplitude and twisting of the points. The term also describes the syndrome of tachycardia with prolonged ventricular repolarization, long QT intervals exceeding 500 milliseconds or BRADYCARDIA. Torsades de pointes may be self-limited or may progress to VENTRICULAR FIBRILLATION.     "@en ;
+    ns1:title "Torsades de pointes"@cs,
+        "Torsades de pointes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220> a ns1:MechanismOfAction ;
+    ns1:title "Electrolyte Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226> a ns1:MechanismOfAction ;
+    ns1:title "Acid-Base Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008303> a ns1:PhysiologicEffect ;
+    ns1:title "Atrial Repolarization"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008453> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cardiac Muscle Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008735> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Muscular System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009329> a ns1:PhysiologicEffect ;
+    ns1:title "Increased GI Motility"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009845> a ns1:PhysiologicEffect ;
+    ns1:title "Small Intestine Fluid/Electrolyte Absorption Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009870> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulation Large Intestine Fluid/Electrolyte Absorption"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009933> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Vitamin Uptake and Modification"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXCIPIAL-MASTNY-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/D02AC" ;
+    ns1:title "EXCIPIAL MASTNÝ KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EZICLEN-KONCENTRAT-PRO-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A06AD10" ;
+    ns1:title "EZICLEN KONCENTRÁT PRO PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "KABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "KABIVEN PERIPHERAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-SULFURICUM-BIOTIKA-10-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A12CC02" ;
+    ns1:title "MAGNESIUM SULFURICUM BIOTIKA 10%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-SULFURICUM-BIOTIKA-20-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/A12CC02" ;
+    ns1:title "MAGNESIUM SULFURICUM BIOTIKA 20%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "SMOFKABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SMOFKABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "SMOFKABIVEN PERIPHERAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "STRUCTOKABIVEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STRUCTOKABIVEN-PERIPHERAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BA10" ;
+    ns1:title "STRUCTOKABIVEN PERIPHERAL"@cs .
+
+

@@ -1,0 +1,139 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05B> a ns1:ATCConcept ;
+    dcterms:title "Intravenózní roztoky"@cs,
+        "I.V. SOLUTIONS"@en ;
+    skos:notation "B05B" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB> a ns1:ATCConcept ;
+    dcterms:title "Roztoky ovlivňující rovnováhu elektrolytů"@cs,
+        "Solutions affecting the electrolyte balance"@en ;
+    skos:notation "B05BB" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB01> a ns1:ATCConcept ;
+    dcterms:title "Elektrolyty"@cs,
+        "Electrolytes"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/B",
+        "http://linked.opendata.cz/resource/ATC/B05",
+        "http://linked.opendata.cz/resource/ATC/B05B",
+        "http://linked.opendata.cz/resource/ATC/B05BB" ;
+    skos:notation "B05BB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000305",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000911",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001590",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001702",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003529",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000004155" ;
+    ns1:description "A white crystal or crystalline powder used in BUFFERS; FERTILIZERS; and EXPLOSIVES. It can be used to replenish ELECTROLYTES and restore WATER-ELECTROLYTE BALANCE in treating HYPOKALEMIA.     "@en ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Chlorid draselný"@cs,
+        "Potassium chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000355",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001057",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000001598",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000002540" ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000911> a ns1:DiseaseOrFinding ;
+    ns1:title "Dehydratace"@cs,
+        "Dehydration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001590> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemie"@cs,
+        "Hyperkalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004155> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemická periodická paralýza"@cs,
+        "Paralysis, hyperkalemic periodic"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188207> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BB01" ;
+    ns1:hasIndication """Úprava nebo udržování rovnováhy draslíku, sodíku, chloridů a tekutin v závislosti na klinickém stavu pacienta. Roztok je indikován zejména k léčbě hypokalemie, hypotonické a izotonické dehydratace a hypochloremické alkalózy.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X500ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152705_doc" ;
+    ns1:hasTitleSupplement "INF SOL 10X500ML"@cs ;
+    ns1:title "KALIUMCHLORID/NATRIUMCHLORID 0,15% + 0,9% B. BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188208> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BB01" ;
+    ns1:hasIndication """Úprava nebo udržování rovnováhy draslíku, sodíku, chloridů a tekutin v závislosti na klinickém stavu pacienta. Roztok je indikován zejména k léčbě hypokalemie, hypotonické a izotonické dehydratace a hypochloremické alkalózy.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X1000ML"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument "http://linked.opendata.cz/resource/sukl/spc/document/SPC152705_doc" ;
+    ns1:hasTitleSupplement "INF SOL 10X1000ML"@cs ;
+    ns1:title "KALIUMCHLORID/NATRIUMCHLORID 0,15% + 0,9% B. BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KALIUMCHLORID-NATRIUMCHLORID-0-15----0-9--B--BRAUN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/B05BB01" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188207",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188208" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "KALIUMCHLORID/NATRIUMCHLORID 0,15% + 0,9% B. BRAUN"@cs .
+
+

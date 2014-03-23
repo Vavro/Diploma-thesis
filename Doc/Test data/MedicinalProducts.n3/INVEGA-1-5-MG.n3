@@ -1,0 +1,255 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N05> a ns1:ATCConcept ;
+    dcterms:title "Psycholeptika"@cs,
+        "PSYCHOLEPTICS"@en ;
+    skos:notation "N05" .
+
+<http://linked.opendata.cz/resource/ATC/N05A> a ns1:ATCConcept ;
+    dcterms:title "Antipsychotika, neuroleptika"@cs,
+        "ANTIPSYCHOTICS"@en ;
+    skos:notation "N05A" .
+
+<http://linked.opendata.cz/resource/ATC/N05AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antipsychotika"@cs,
+        "Other antipsychotics"@en ;
+    skos:notation "N05AX" .
+
+<http://linked.opendata.cz/resource/ATC/N05AX13> a ns1:ATCConcept ;
+    dcterms:title "Paliperidon"@cs,
+        "Paliperidone"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N05",
+        "http://linked.opendata.cz/resource/ATC/N05A",
+        "http://linked.opendata.cz/resource/ATC/N05AX" ;
+    skos:notation "N05AX13" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0502016> a ns1:Ingredient ;
+    ns1:title "Paliperidone"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500531> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "14 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500532> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "28 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 28X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500533> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "30 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 30X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500534> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "49 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 49X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500535> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "56 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 56X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500536> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "98 BLI-A"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 98X1.5MG BLI-A"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500537> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "14 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500538> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "28 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 28X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500539> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "30 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 30X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500540> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "49 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 49X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500541> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "56 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 56X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500542> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "98 BLI-B"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 98X1.5MG BLI-B"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500543> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "14 BLI-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 14X1.5MG BLI-C"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500544> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "28 BLI-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 28X1.5MG BLI-C"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500545> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "49 BLI-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 49X1.5MG BLI-C"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500546> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "56 BLI-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 56X1.5MG BLI-C"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500547> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "98 BLI-C"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 98X1.5MG BLI-C"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500548> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 30X1.5MG"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500549> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "350"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL PRO 350X1.5MG"@cs ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INVEGA-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AX13" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0502016" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500531",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500532",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500533",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500534",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500535",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500536",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500537",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500538",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500539",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500540",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500541",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500542",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500543",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500544",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500545",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500546",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500547",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500548",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500549" ;
+    ns1:title "INVEGA 1,5 MG"@cs .
+
+

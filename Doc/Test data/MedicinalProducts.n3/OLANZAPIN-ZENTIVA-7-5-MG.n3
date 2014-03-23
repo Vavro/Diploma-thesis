@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N05> a ns1:ATCConcept ;
+    dcterms:title "Psycholeptika"@cs,
+        "PSYCHOLEPTICS"@en ;
+    skos:notation "N05" .
+
+<http://linked.opendata.cz/resource/ATC/N05A> a ns1:ATCConcept ;
+    dcterms:title "Antipsychotika, neuroleptika"@cs,
+        "ANTIPSYCHOTICS"@en ;
+    skos:notation "N05A" .
+
+<http://linked.opendata.cz/resource/ATC/N05AH> a ns1:ATCConcept ;
+    dcterms:title "Diazepiny, oxazepiny, thiazepiny a oxepiny"@cs,
+        "Diazepines, oxazepines, thiazepines and oxepines"@en ;
+    skos:notation "N05AH" .
+
+<http://linked.opendata.cz/resource/ATC/N05AH03> a ns1:ATCConcept ;
+    dcterms:title "Olanzapin"@cs,
+        "Olanzapine"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/N",
+        "http://linked.opendata.cz/resource/ATC/N05",
+        "http://linked.opendata.cz/resource/ATC/N05A",
+        "http://linked.opendata.cz/resource/ATC/N05AH" ;
+    skos:notation "N05AH03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0204623> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "Olanzapine"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156553> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X7.5MG"@cs ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156554> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X7.5MG"@cs ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156555> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "35"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 35X7.5MG"@cs ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156556> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X7.5MG"@cs ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156557> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasPackagingSize "70"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/B" ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 70X7.5MG"@cs ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OLANZAPIN-ZENTIVA-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/N05AH03" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0204623" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156553",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156554",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156555",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156556",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156557" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:title "OLANZAPIN ZENTIVA 7,5 MG"@cs .
+
+

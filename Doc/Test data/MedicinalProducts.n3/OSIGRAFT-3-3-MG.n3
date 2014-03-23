@@ -1,0 +1,59 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M> a ns1:ATCConcept ;
+    dcterms:title "Muskuloskeletární systém"@cs,
+        "MUSCULO-SKELETAL SYSTEM"@en ;
+    skos:notation "M" .
+
+<http://linked.opendata.cz/resource/ATC/M05> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii nemocí kostí"@cs,
+        "DRUGS FOR TREATMENT OF BONE DISEASES"@en ;
+    skos:notation "M05" .
+
+<http://linked.opendata.cz/resource/ATC/M05B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující stavbu a mineralizaci kosti"@cs,
+        "DRUGS AFFECTING BONE STRUCTURE AND MINERALIZATION"@en ;
+    skos:notation "M05B" .
+
+<http://linked.opendata.cz/resource/ATC/M05BC> a ns1:ATCConcept ;
+    dcterms:title "Kostní morfogenní proteiny (BMP)"@cs,
+        "Bone morphogenetic proteins"@en ;
+    skos:notation "M05BC" .
+
+<http://linked.opendata.cz/resource/ATC/M05BC02> a ns1:ATCConcept ;
+    dcterms:title "Eptotermin alfa"@cs,
+        "BMP-7"@en ;
+    skos:broaderTransitive "http://linked.opendata.cz/resource/ATC/M",
+        "http://linked.opendata.cz/resource/ATC/M05",
+        "http://linked.opendata.cz/resource/ATC/M05B",
+        "http://linked.opendata.cz/resource/ATC/M05BC" ;
+    skos:notation "M05BC02" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0016976> a ns1:Ingredient ;
+    ns1:title "Eptotermin alfa"@cs,
+        "Eptotermin alfa"@en,
+        "Eptoterminum alfa"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027609> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BC02" ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState "http://linked.opendata.cz/resource/sukl/registration-state/R" ;
+    ns1:hasRouteOfAdministration "Implantace"@cs ;
+    ns1:hasStrength "3.3MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "IMP PLV SUS 1X3.3MG"@cs ;
+    ns1:title "OSIGRAFT 3,3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSIGRAFT-3-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/M05BC02" ;
+    ns1:hasActiveIngredient "http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0016976" ;
+    ns1:hasMedicinalProductPackaging "http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027609" ;
+    ns1:title "OSIGRAFT 3,3 MG"@cs .
+
+

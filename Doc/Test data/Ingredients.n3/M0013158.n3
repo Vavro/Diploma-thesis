@@ -1,0 +1,79 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/P02CA01> a ns1:ATCConcept ;
+    skos:notation "P02CA01" ;
+    skos:prefLabel "Mebendazol"@cs,
+        "Mebendazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013158> a ns1:Ingredient ;
+    ns1:contraindicatedWith "http://linked.opendata.cz/resource/ndfrt/disease/N0000000999" ;
+    ns1:description "A benzimidazole that acts by interfering with CARBOHYDRATE METABOLISM and inhibiting polymerization of MICROTUBULES.     "@en ;
+    ns1:hasMechanismOfAction "http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000085" ;
+    ns1:hasMedicinalProduct "http://linked.opendata.cz/resource/sukl/medicinal-product/VERMOX",
+        "http://linked.opendata.cz/resource/sukl/medicinal-product/VERMOX-PERORALNI-SUSPENZE" ;
+    ns1:hasPharmacologicalAction "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001481",
+        "http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515" ;
+    ns1:hasPhysiologicEffect "http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008647" ;
+    ns1:hasPregnancyCategory "http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C" ;
+    ns1:mayTreat "http://linked.opendata.cz/resource/ndfrt/disease/N0000000383",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000000488",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003014",
+        "http://linked.opendata.cz/resource/ndfrt/disease/N0000003557" ;
+    ns1:title "Mebendazol"@cs,
+        "Mebendazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001481> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used in the treatment or control of nematode infestations. They are used also in veterinary practice.     "@en ;
+    ns1:title "Antinematodní látky"@cs,
+        "Antinematodal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that interact with TUBULIN to inhibit or promote polymerization of MICROTUBULES.     "@en ;
+    ns1:title "Tubulin - modulátory"@cs,
+        "Tubulin modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000383> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of humans or animals with hookworms of the genus ANCYLOSTOMA. Characteristics include anemia, dyspepsia, eosinophilia, and abdominal swelling.     "@en ;
+    ns1:title "Ankylostomiáza"@cs,
+        "Ancylostomiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000488> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection by nematodes of the genus ASCARIS. Ingestion of infective eggs causes diarrhea and pneumonitis. Its distribution is more prevalent in areas of poor sanitation and where human feces are used for fertilizer.     "@en ;
+    ns1:title "Askariáza"@cs,
+        "Ascariasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003014> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with nematodes of the genus TRICHURIS, formerly called Trichocephalus.     "@en ;
+    ns1:title "Trichurióza"@cs,
+        "Trichuriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003557> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with nematodes of the genus ENTEROBIUS; E. vermicularis, the pinworm of man, causes a crawling sensation and pruritus. This condition results in scratching the area, occasionally causing scarification.     "@en ;
+    ns1:title "Enterobióza"@cs,
+        "Enterobiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000085> a ns1:MechanismOfAction ;
+    ns1:title "Receptor Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008647> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucose Transport into Cells"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VERMOX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/P02CA01" ;
+    ns1:title "VERMOX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VERMOX-PERORALNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept "http://linked.opendata.cz/resource/ATC/P02CA01" ;
+    ns1:title "VERMOX PERORÁLNÍ SUSPENZE"@cs .
+
+
