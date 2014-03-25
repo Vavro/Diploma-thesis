@@ -1,13 +1,14 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core", "DragqnLD.Core\DragqnLD.Core.csproj", "{D8A0E344-3F64-4F69-83AC-156D8CE1FBD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FCDFCDAE-EEC1-421C-B0CA-7419F6E32DE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core.UnitTests", "Tests\DragqnLD.Core.UnitTests\DragqnLD.Core.UnitTests.csproj", "{94819897-1C47-42C5-8A8A-913EFD4D519B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.WebApi", "DragqnLD.WebApi\DragqnLD.WebApi.csproj", "{C5E23BDF-0762-43A0-82A5-84709C131A4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +24,10 @@ Global
 		{94819897-1C47-42C5-8A8A-913EFD4D519B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94819897-1C47-42C5-8A8A-913EFD4D519B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94819897-1C47-42C5-8A8A-913EFD4D519B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

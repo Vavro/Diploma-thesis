@@ -78,13 +78,13 @@ namespace DragqnLD.Core.Abstraction.Data
 
         private string ReadMemberNameFrom(ref int index)
         {
-            string memberName = null;
             for (int i = index; i < path.Length; i++)
             {
                 if (path[i] == '"')
                 {
-                    memberName = path.Substring(index, i - index + 1);
-                    index = i++;
+                    i++;
+                    string memberName = path.Substring(index, i - index);
+                    index = i;
                     return memberName;
                 }
             }

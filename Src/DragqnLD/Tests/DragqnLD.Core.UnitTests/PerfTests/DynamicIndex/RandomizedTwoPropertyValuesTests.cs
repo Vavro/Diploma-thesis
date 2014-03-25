@@ -17,7 +17,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         public RandomizedTwoPropertyValuesTests()
         {
             _rnd = new Random(TestDataConstants.RandomSeed);
-        }
+        }   
 
         //todo: dotaz na ty co nemaji Pregnancy Category - M0000171
         [Fact]
