@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core", "DragqnLD.Core\DragqnLD.Core.csproj", "{D8A0E344-3F64-4F69-83AC-156D8CE1FBD5}"
 EndProject
@@ -9,6 +9,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core.UnitTests", "Tests\DragqnLD.Core.UnitTests\DragqnLD.Core.UnitTests.csproj", "{94819897-1C47-42C5-8A8A-913EFD4D519B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.WebApi", "DragqnLD.WebApi\DragqnLD.WebApi.csproj", "{C5E23BDF-0762-43A0-82A5-84709C131A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Web.Html5", "DragqnLD.Web.Html5\DragqnLD.Web.Html5.csproj", "{FC0188CE-A5F5-4289-96CC-67434B99598B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8A0E344-3F64-4F69-83AC-156D8CE1FBD5} = {D8A0E344-3F64-4F69-83AC-156D8CE1FBD5}
+		{C5E23BDF-0762-43A0-82A5-84709C131A4E} = {C5E23BDF-0762-43A0-82A5-84709C131A4E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +34,10 @@ Global
 		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5E23BDF-0762-43A0-82A5-84709C131A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0188CE-A5F5-4289-96CC-67434B99598B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0188CE-A5F5-4289-96CC-67434B99598B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0188CE-A5F5-4289-96CC-67434B99598B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0188CE-A5F5-4289-96CC-67434B99598B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
