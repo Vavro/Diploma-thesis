@@ -1,11 +1,20 @@
-﻿define(function (require) {
-    var app = require('durandal/app'),
-        ko = require('knockout');
+﻿import app = require('durandal/app');
 
-    return {
-        name: ko.observable(),
-        sayHello: function () {
-            app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
-        }
-    };
-}); 
+class Shell {
+    name = ko.observable();
+    sayHello() : void {
+        app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+    }
+}
+
+export = Shell;
+
+//define(function (require) {
+    
+//    return {
+//        name: ko.observable(),
+//        sayHello: function () {
+//            app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+//        }
+//    };
+//}); 

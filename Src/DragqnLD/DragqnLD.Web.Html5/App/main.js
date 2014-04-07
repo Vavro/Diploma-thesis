@@ -9,6 +9,8 @@
     }
 });
 
+define('knockout', ko);
+
 define(function (require) {
     var system = require('durandal/system'),
         app = require('durandal/app'),
