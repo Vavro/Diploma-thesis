@@ -1,20 +1,30 @@
-﻿import app = require('durandal/app');
+﻿import router = require('plugins/router');
 
-class Shell {
-    name = ko.observable();
-    sayHello() : void {
-        app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+class shell {
+    private router = router;
+
+    activate() : any {
+        router.map([
+            { route: '', title: 'Home', moduleId: 'viewmodels/home', nav: true }
+        ]).buildNavigationModel();
+
+        return router.activate();
     }
 }
 
-export = Shell;
+export = shell;
 
 //define(function (require) {
-    
+//    var router = require('plugins/router');
+
 //    return {
-//        name: ko.observable(),
-//        sayHello: function () {
-//            app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+//        router: router,
+//        activate: function () {
+//            router.map([
+//                { route: '', title: 'Home', moduleId: 'viewmodels/home', nav: true }
+//            ]).buildNavigationModel();
+
+//            return router.activate();
 //        }
 //    };
-//}); 
+//});
