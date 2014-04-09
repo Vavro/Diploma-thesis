@@ -5,7 +5,8 @@ class shell {
 
     activate() : any {
         router.map([
-            { route: '', title: 'Home', moduleId: 'viewmodels/home', nav: true }
+            { route: '', title: 'Home', moduleId: 'viewmodels/home', nav: true },
+            { route: 'rainier', title: 'Mount Rainier', moduleId: 'viewmodels/rainier', nav:true}
         ]).buildNavigationModel();
 
         return router.activate();
