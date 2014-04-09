@@ -49,7 +49,7 @@
 
 @media (max-width: 979px) {
     .page-host {
-        top: 0;
+        top: 40;
     }
 
     .navbar-fixed-top {
