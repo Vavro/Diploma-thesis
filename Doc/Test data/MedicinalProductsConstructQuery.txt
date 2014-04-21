@@ -21,12 +21,12 @@ CONSTRUCT
     enc:hasResumedMarketingDate ?mppResumedMarketingDate ;
     enc:hasBreakMarketingDate ?mppBreakMarketingDate ;
     enc:hasSPCDocument ?spcDocument ;
-   	 enc:hasIndication ?indicationText ;
-   	 enc:hasIndicationGroup ?indicationGroup .
+    enc:hasIndication ?indicationText ;
+    enc:hasIndicationGroup ?indicationGroup .
   ?mppAtc a enc:ATCConcept ;
     dcterms:title ?atcTitle ;
     skos:notation ?atcNotation .
-ai a enc:MasterIngredient ;
+  ?ai a enc:MasterIngredient ;
     enc:title ?aiTitle ;
     enc:description ?aiDescription ;
     enc:hasPregnancyCategory ?aiPregnancyCategory ;
@@ -55,7 +55,7 @@ WHERE
       dcterms:title ?mppTitle ;
       sukl:hasTitleSupplement ?mppTitleSupplement .
     BIND (STRLANG(?mppTitleSupplement, 'cs') AS ?mppTitleSupplementWithLanguage)
-	 {
+    {
          ?mpp sukl:hasStrength ?mppStrength .
        } UNION {
          ?mpp sukl:hasPackagingSize ?mppPackagingSize .
