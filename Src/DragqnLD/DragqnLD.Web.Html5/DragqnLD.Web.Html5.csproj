@@ -19,7 +19,7 @@
   <ItemGroup>
     <Content Include="App\main.js" />
     <Content Include="App\views\home.html" />
-    <Content Include="App\views\rainier.html" />
+    <Content Include="App\views\queries.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -77,8 +77,8 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\viewmodels\queries.ts" />
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
-    <TypeScriptCompile Include="App\viewmodels\rainier.ts" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
     <TypeScriptCompile Include="Scripts\typings\durandal\durandal.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
