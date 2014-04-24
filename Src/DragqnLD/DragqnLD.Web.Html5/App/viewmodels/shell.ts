@@ -1,7 +1,15 @@
 ﻿import router = require('plugins/router');
 
+import dynamicHeightBindingHandler = require("common/dynamicHeightBindingHandler");
+
 class shell {
     private router = router;
+
+    constructor() {
+
+        dynamicHeightBindingHandler.install();
+
+    }
 
     activate() : any {
         router.map([

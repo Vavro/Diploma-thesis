@@ -2,12 +2,14 @@
     <h2>Queries</h2>
     <div class="row">
         <div>
+            <!--data-bind="dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }">-->
             <div data-bind="koGrid: { data : queries,
                                 columnDefs: [ { field: 'Id', displayName: 'Id'},
                                                 { field: 'Name', displayName: 'Name'},
                                                 { field: 'Description', displayName: 'Description'} ],
                                 autogenerateColumns: false,
-                                isMultiSelect: false}">
+                                isMultiSelect: false},
+                                dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }">
 
             </div>
         </div>
