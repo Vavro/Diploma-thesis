@@ -64,25 +64,26 @@
     <Content Include="Scripts\durandal\transitions\entrance.js" />
     <Content Include="Scripts\durandal\viewEngine.js" />
     <Content Include="Scripts\durandal\viewLocator.js" />
+    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\koGrid-2.1.1.debug.js" />
     <Content Include="Scripts\koGrid-2.1.1.js" />
     <Content Include="weyland-config.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\text.js" />
     <Content Include="web.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\viewmodels\queries.ts" />
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\durandal\durandal.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout.kogrid\ko-grid.d.ts" />
@@ -92,12 +93,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-2.1.0.min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\common\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
