@@ -108,3 +108,6 @@ Backup*/
 UpgradeLog*.XML
 /Src/DragqnLD/DragqnLD.Web.Html5/App/viewmodels/*.js
 /Src/DragqnLD/DragqnLD.Web.Html5/App/viewmodels/*.js.map
+
+/Src/DragqnLD/DragqnLD.Web.Html5/App/common/*.js
+/Src/DragqnLD/DragqnLD.Web.Html5/App/common/*.js.map
