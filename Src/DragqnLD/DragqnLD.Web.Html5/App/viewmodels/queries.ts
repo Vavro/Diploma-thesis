@@ -1,11 +1,12 @@
-﻿class queries {
+﻿import getQueriesCommand = require("commands/getQueriesCommand");
+
+class queries {
     queries = ko.observableArray();
     isAttached = ko.observable(false);
     activate(): void {
-        var self = this;
-
-        $.getJSON("http://localhost:2429/api/queries", (data, textStatus, jqXHR) => {
-            self.queries(data);
+        new getQueriesCommand().execute().done(results => {
+            //console.log(results);
+            this.queries(results);
         });
     }
 
