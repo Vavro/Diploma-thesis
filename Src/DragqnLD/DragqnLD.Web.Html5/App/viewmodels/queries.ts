@@ -19,7 +19,7 @@ class queries {
     }
 
     newQueryDefinition() : void {
-        router.navigate("/editQueryDefinition");
+        router.navigate("#editQuery");
     }
 }
 
