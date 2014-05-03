@@ -3,3 +3,7 @@
     Name: string;
     Description: string;
 } 
+
+interface queryDefinitionDto extends queryDto {
+    
+}
