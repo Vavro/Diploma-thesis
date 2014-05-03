@@ -18,6 +18,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="App\main.js" />
+    <Content Include="App\views\editQueryDefinition.html" />
     <Content Include="App\views\home.html" />
     <Content Include="App\views\queries.html" />
     <Content Include="App\views\shell.html" />
@@ -80,9 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
+    <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueriesCommand.ts" />
     <TypeScriptCompile Include="App\common\dynamicHeightBindingHandler.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
+    <TypeScriptCompile Include="App\models\queryDefinition.ts" />
+    <TypeScriptCompile Include="App\viewmodels\editQueryDefinition.ts" />
     <TypeScriptCompile Include="App\viewmodels\queries.ts" />
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
