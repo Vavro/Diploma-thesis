@@ -51,6 +51,15 @@ class editQueryDefinition {
         var url = "/queries";
         router.navigate(url);
     }
+
+    saveQueryDefinition(): void {
+        if (!$('form').valid()) {
+            $('form').showErrors();
+            return false;
+        }
+
+        var queryDef = this.queryDefinition;
+    }
 }
 
 export = editQueryDefinition;
