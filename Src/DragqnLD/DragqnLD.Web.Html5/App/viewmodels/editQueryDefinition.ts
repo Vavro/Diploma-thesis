@@ -53,10 +53,6 @@ class editQueryDefinition {
     }
 
     saveQueryDefinition(): void {
-        if (!$('form').valid()) {
-            $('form').showErrors();
-            return false;
-        }
 
         var queryDef = this.queryDefinition;
     }
