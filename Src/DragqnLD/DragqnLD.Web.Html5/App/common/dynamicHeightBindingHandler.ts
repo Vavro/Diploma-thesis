@@ -8,6 +8,7 @@
 class dynamicHeightBindingHandler {
     windowHeightObservable: KnockoutObservable<number>;
     throttleTimeMs = 100;
+    defaultBottomMargin = 5; //has to be set nonzero when margin on bottom of the page-host
 
     constructor() {
         var $window = $(window);
@@ -31,7 +32,7 @@ class dynamicHeightBindingHandler {
     // Called by Knockout a single time when the binding handler is setup.
     init(element: HTMLElement, valueAccessor: () => { resizeTrigger: number; target?: string; bottomMargin: number }, allBindings: any, viewModel: any, bindingContext: KnockoutBindingContext) {
         if (valueAccessor().target) {
-            element.style.overflowY = "auto";
+            element.style.overflowY = "hidden";
             element.style.overflowX = "hidden";
         }
     }
@@ -42,7 +43,7 @@ class dynamicHeightBindingHandler {
         if (bindingValue.target) {
             var newWindowHeight = bindingValue.resizeTrigger;
             var targetSelector = bindingValue.target || "footer";
-            var bottomMargin = bindingValue.bottomMargin || 0;
+            var bottomMargin = bindingValue.bottomMargin || this.defaultBottomMargin;
 
             // Check what was the last dispatched height to this element.
             var lastWindowHeightKey = "ravenStudioLastDispatchedHeight";

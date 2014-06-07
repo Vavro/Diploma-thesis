@@ -13,106 +13,82 @@
             </li>
         </ul>
     </div>
-    <div class="row" >
-        <form class="form-horizontal">
+    <div class="row">
+        <form role="form">
             <fieldset>
-
                 <!-- Form Name -->
                 <legend>Query Definition</legend>
                 <div data-bind="with: queryDefinition">
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Id">Id</label>
-                        <div class="col-md-8">
-                            <input id="Id" name="Id" type="text" placeholder="Insert Id of Query Definition" class="form-control input-md" required="" data-bind="value: id">
-                            <span class="help-block">Id of Query Definition</span>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="Id">Id</label>
+                            <div class="col-md-8">
+                                <input id="Id" name="Id" type="text" placeholder="Insert Id of Query Definition" class="form-control input-sm" required="" data-bind="value: id">
+                                <span class="help-block">Id of Query Definition</span>
+                            </div>
+                            <label class="col-md-4 control-label" for="Name">Name</label>
+                            <div class="col-md-8">
+                                <input id="Name" name="Name" type="text" placeholder="Name of the Query Definition" class="form-control input-sm" required="" data-bind="value: name">
+                                <span class="help-block">Name of the Query Definition for showing purposes</span>
+                            </div>
+                            <label class="col-md-4 control-label" for="Description">Description</label>
+                            <div class="col-md-8">
+                                <input id="Description" name="Description" type="text" placeholder="Description of the Query Definition" class="form-control input-sm" required="" data-bind="value: description">
+                                <span class="help-block">Description of the Query Definition for showing purposes</span>
+                            </div>
+                            <label class="col-md-4 control-label" for="ConstructQueryParameter">Construct Query Parameter Name</label>
+                            <div class="col-md-8">
+                                <input id="ConstructQueryParameter" name="ConstructQueryParameter" type="text" placeholder="Construct Query Parameter Name" class="form-control input-sm" required="">
+                                <span class="help-block">The Parameter Name in the Construct Query that is going to be replaced</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Name">Name</label>
-                        <div class="col-md-8">
-                            <input id="Name" name="Name" type="text" placeholder="Name of the Query Definition" class="form-control input-md" required="" data-bind="value: name">
-                            <span class="help-block">Name of the Query Definition for showing purposes</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="Description">Description</label>
-                        <div class="col-md-8">
-                            <input id="Description" name="Description" type="text" placeholder="Description of the Query Definition" class="form-control input-md" required="" data-bind="value: description">
-                            <span class="help-block">Description of the Query Definition for showing purposes</span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12" data-bind="with: selectQuery">
-                        <div class="row">
+                    <div class="form">
+                        <div class="col-sm-6 col-sm-first" data-bind="with: selectQuery">
                             <div class="form-group">
-                                <label class="col-md-4 control-label" for="SelectQuery">Select Query</label>
-                                <div class="col-md-8">
-                                    <textarea class="form-control" id="SelectQuery" name="SelectQuery" data-bind="value: query" placeholder="Define the Select Query that is to be run to get the parameters for the Construct Query"></textarea>
+                                <label class="control-label" for="SelectQueryEnpointAddress">Select Query Enpoint Address</label>
+                                <div>
+                                    <input id="SelectQueryEnpointAddress" name="SelectQueryEnpointAddress" type="text" placeholder="Select Query Enpoint Address" class="form-control input-sm" required="" data-bind="value: sparqlEndpoint">
+                                    <span class="help-block">Enpoint Address to run the Select Query against</span>
+                                </div>
+                                <label class="control-label" for="SelectQueryDefaultDataset">Select Query Default Dataset</label>
+                                <div>
+                                    <input id="SelectQueryDefaultDataset" name="SelectQueryDefaultDataset" type="text" placeholder="Select Query Default Dataset" class="form-control input-sm" data-bind="value: defaultDataSet">
+                                    <span class="help-block">The Default Dataset to use while running the Select Query against the </span>
+                                </div>
+                                <label class="control-label" for="SelectQuery">Select Query</label>
+                                <div>
+                                    <textarea rows="40" class="form-control" id="SelectQuery" name="SelectQuery" data-bind="value: query" placeholder="Define the Select Query that is to be run to get the parameters for the Construct Query"></textarea>
                                     <span class="help-block">Define the Select Query that is to be run to get the parameters for the Construct Query</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-sm-6 col-sm-last" data-bind="with: constructQuery">
                             <div class="form-group">
-                                <label class="col-md-4 control-label" for="SelectQueryEnpointAddress">Select Query Enpoint Address</label>
-                                <div class="col-md-8">
-                                    <input id="SelectQueryEnpointAddress" name="SelectQueryEnpointAddress" type="text" placeholder="Select Query Enpoint Address" class="form-control input-md" required="" data-bind="value: sparqlEndpoint">
+                                <label class="control-label" for="ConstructQueryEnpointAddress">Construct Query Enpoint Address</label>
+                                <div>
+                                    <input id="ConstructQueryEnpointAddress" name="SelectQueryEnpointAddress" type="text" placeholder="Select Query Enpoint Address" class="form-control input-sm" required="" data-bind="value: sparqlEndpoint">
                                     <span class="help-block">Enpoint Address to run the Select Query against</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="SelectQueryDefaultDataset">Select Query Default Dataset</label>
-                                <div class="col-md-8">
-                                    <input id="SelectQueryDefaultDataset" name="SelectQueryDefaultDataset" type="text" placeholder="Select Query Default Dataset" class="form-control input-md" data-bind="value: defaultDataSet">
-                                    <span class="help-block">The Default Dataset to use while running the Select Query against the </span>
+                                <label class="control-label" for="ConstructQueryDefaultDataset">Construct Query Default Dataset</label>
+                                <div>
+                                    <input id="ConstructQueryDefaultDataset" name="ConstructQueryDefaultDataset" type="text" placeholder="Construct Query Default Dataset" class="form-control input-sm" data-bind="value: defaultDataSet">
+                                    <span class="help-block">The Default Dataset to use while running the Construct Query against the </span>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" data-bind="with: constructQuery">
-                        <div class="row">
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="ConstructQuery">Construct Query</label>
-                                <div class="col-md-8">
-                                    <textarea class="form-control" id="ConstructQuery" name="ConstructQuery" data-bind="value: query" placeholder="Define the Construct Query shaping the data, with a variable that is going to be filled by the Select Query results"></textarea>
+                                <label class="control-label" for="ConstructQuery">Construct Query</label>
+                                <div>
+                                    <textarea rows="40" class="form-control" id="ConstructQuery" name="ConstructQuery" data-bind="value: query" placeholder="Define the Construct Query shaping the data, with a variable that is going to be filled by the Select Query results"></textarea>
                                     <span class="help-block">Define the Construct Query shaping the data, with a variable that is going to be filled by the Select Query results</span>
                                 </div>
                             </div>
-                            <div class="form-group">
-
-                                <label class="col-md-4 control-label" for="ConstructQueryEnpointAddress">Construct Query Enpoint Address</label>
-                                <div class="col-md-8">
-                                    <input id="ConstructQueryEnpointAddress" name="SelectQueryEnpointAddress" type="text" placeholder="Select Query Enpoint Address" class="form-control input-md" required="" data-bind="value: sparqlEndpoint">
-                                    <span class="help-block">Enpoint Address to run the Select Query against</span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-
-
-                                <label class="col-md-4 control-label" for="ConstructQueryDefaultDataset">Construct Query Default Dataset</label>
-                                <div class="col-md-8">
-                                    <input id="ConstructQueryDefaultDataset" name="ConstructQueryDefaultDataset" type="text" placeholder="Construct Query Default Dataset" class="form-control input-md" data-bind="value: defaultDataSet">
-                                    <span class="help-block">The Default Dataset to use while running the Construct Query against the </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="ConstructQueryParameter">Construct Query Parameter Name</label>
-                                <div class="col-md-8">
-                                    <input id="ConstructQueryParameter" name="ConstructQueryParameter" type="text" placeholder="Construct Query Parameter Name" class="form-control input-md" required="">
-                                    <span class="help-block">The Parameter Name in the Construct Query that is going to be replaced</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+                <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition">
+                    <i class="fa fa-save fa-inverse fa-lg"></i>&nbsp;Save
+                </button>
+                <button id="btn_cance" name="btn_cance" class="btn btn-danger"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
 
-                <!-- Button (Double) -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="btn_save"></label>
-                    <div class="col-md-8">
-                        <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition">Save</button>
-                        <button id="btn_cance" name="btn_cance" class="btn btn-danger">Cancel</button>
-                    </div>
-                </div>
             </fieldset>
         </form>
 
