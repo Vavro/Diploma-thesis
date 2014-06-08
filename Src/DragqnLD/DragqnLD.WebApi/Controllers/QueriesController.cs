@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -8,7 +9,7 @@ using DragqnLD.Core.Abstraction.Query;
 
 namespace DragqnLD.WebApi.Controllers
 {
-    public class QueriesController : ApiController
+    public class QueriesController : BaseApiController
     {
         // GET api/queries
         public IEnumerable<QueryDefinition> Get()
@@ -86,6 +87,7 @@ namespace DragqnLD.WebApi.Controllers
         // POST api/queries
         public void Post([FromBody]QueryDefinition value)
         {
+            
         }
 
         // PUT api/queries/5
