@@ -2,6 +2,7 @@
 
 import queryDefinition = require("models/queryDefinition");
 import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand");
+import saveQueryDefinitionCommand = require("commands/saveQueryDefinitionCommand");
 
 class editQueryDefinition {
 
@@ -54,7 +55,15 @@ class editQueryDefinition {
 
     saveQueryDefinition(): void {
 
-        var queryDef = this.queryDefinition;
+        var queryDef = this.queryDefinition();
+
+        var saveCommand = new saveQueryDefinitionCommand(queryDef);
+        saveCommand
+            .execute()
+            .done(() => {
+            
+            }); // fail reseno v ramci commandus
+
     }
 }
 

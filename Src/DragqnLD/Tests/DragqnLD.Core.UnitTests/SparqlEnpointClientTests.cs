@@ -28,7 +28,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                 DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
             };
 
             var result = await _sparqlEnpointClient.QueryForUris(selectQuery);
@@ -50,7 +50,7 @@ namespace DragqnLD.Core.UnitTests
                 //parameters that can be substituted have to be marked as @ not just ?
                 Query = @"DESCRIBE @u",
                 DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
             };
 
             var stream = await _sparqlEnpointClient.GetContructResultFor(constructQuery, "u", new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"));

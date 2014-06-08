@@ -80,6 +80,7 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\commands\saveQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueriesCommand.ts" />

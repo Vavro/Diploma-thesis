@@ -43,14 +43,14 @@ namespace DragqnLD.Core.UnitTests
                 {
                     Query = @"DESCRIBE <http://linked.opendata.cz/resource/ATC/M01AE01>",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 }, 
                 ConstructQueryUriParameterName = "test",
                 SelectQuery = new SparqlQueryInfo()
                 {
                     Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o }",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 }
             };
 
@@ -63,11 +63,11 @@ namespace DragqnLD.Core.UnitTests
             Assert.Equal(queryDefinition.Description, retrievedQueryDefinition.Description);
             Assert.Equal(queryDefinition.ConstructQuery.Query, retrievedQueryDefinition.ConstructQuery.Query);
             Assert.Equal(queryDefinition.ConstructQuery.DefaultDataSet, retrievedQueryDefinition.ConstructQuery.DefaultDataSet);
-            Assert.Equal(queryDefinition.ConstructQuery.SparqlEnpoint, retrievedQueryDefinition.ConstructQuery.SparqlEnpoint);
+            Assert.Equal(queryDefinition.ConstructQuery.SparqlEndpoint, retrievedQueryDefinition.ConstructQuery.SparqlEndpoint);
             Assert.Equal(queryDefinition.ConstructQueryUriParameterName, retrievedQueryDefinition.ConstructQueryUriParameterName);
             Assert.Equal(queryDefinition.SelectQuery.Query, retrievedQueryDefinition.SelectQuery.Query);
             Assert.Equal(queryDefinition.SelectQuery.DefaultDataSet, retrievedQueryDefinition.SelectQuery.DefaultDataSet);
-            Assert.Equal(queryDefinition.SelectQuery.SparqlEnpoint, retrievedQueryDefinition.SelectQuery.SparqlEnpoint);
+            Assert.Equal(queryDefinition.SelectQuery.SparqlEndpoint, retrievedQueryDefinition.SelectQuery.SparqlEndpoint);
         }
     }
 }

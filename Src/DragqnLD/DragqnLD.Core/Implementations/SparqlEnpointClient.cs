@@ -16,7 +16,7 @@ namespace DragqnLD.Core.Implementations
     {
         public async Task<IEnumerable<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery)
         {
-            var endpoint = new SparqlRemoteEndpoint(selectSparqlQuery.SparqlEnpoint, selectSparqlQuery.DefaultDataSet);
+            var endpoint = new SparqlRemoteEndpoint(selectSparqlQuery.SparqlEndpoint, selectSparqlQuery.DefaultDataSet);
             //todo: run in taks and await
             return await Task.Run(() =>
                 {
@@ -57,7 +57,7 @@ namespace DragqnLD.Core.Implementations
                 parametrizedQuery.SetUri(parameterName, objectUri);
                 var substitutedQuery = parametrizedQuery.ToString();
 
-                var endpoint = new SparqlRemoteEndpoint(constructSparqlQuery.SparqlEnpoint,
+                var endpoint = new SparqlRemoteEndpoint(constructSparqlQuery.SparqlEndpoint,
                 constructSparqlQuery.DefaultDataSet);
 
                 var result = endpoint.QueryRaw(substitutedQuery, new[] { "application/ld+json" });

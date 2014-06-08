@@ -25,14 +25,14 @@ namespace DragqnLD.WebApi.Controllers
                         //parameters that can be substituted have to be marked as @ not just ?
                         Query = @"DESCRIBE @u",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     },
                     ConstructQueryUriParameterName = "u",
                     SelectQuery = new SparqlQueryInfo()
                     {
                         Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     }
                 },
                 new QueryDefinition()
@@ -45,14 +45,14 @@ namespace DragqnLD.WebApi.Controllers
                         //parameters that can be substituted have to be marked as @ not just ?
                         Query = @"DESCRIBE @u",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     },
                     ConstructQueryUriParameterName = "u",
                     SelectQuery = new SparqlQueryInfo()
                     {
                         Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     }
                 }
             };
@@ -71,14 +71,14 @@ namespace DragqnLD.WebApi.Controllers
                     //parameters that can be substituted have to be marked as @ not just ?
                     Query = @"DESCRIBE @u",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 },
                 ConstructQueryUriParameterName = "u",
                 SelectQuery = new SparqlQueryInfo()
                 {
                     Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEnpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 }
             };
         }

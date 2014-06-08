@@ -60,7 +60,7 @@ namespace DragqnLD.Core.Abstraction.Query
     public class SparqlQueryInfo
     {
         public string Query { get; set; }
-        public Uri SparqlEnpoint { get; set; }
+        public Uri SparqlEndpoint { get; set; }
         public Uri DefaultDataSet { get; set; }
     }
 }

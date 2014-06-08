@@ -28,6 +28,25 @@
 
         return new queryDefinition(null);
     }
+
+    public toDto(): queryDefinitionDto {
+        return {
+            id: this.id,
+            name: this.name,
+            description: this.description,
+            constructQueryUriParameterName: this.constructQueryUriParameterName,
+            constructQuery: {
+                query: this.constructQuery.query,
+                sparqlEndpoint: this.constructQuery.sparqlEndpoint,
+                defaultDataSet: this.constructQuery.defaultDataSet
+            },
+            selectQuery: {
+                query: this.selectQuery.query,
+                sparqlEndpoint: this.selectQuery.sparqlEndpoint,
+                defaultDataSet: this.selectQuery.defaultDataSet
+            }
+        }
+    }
 }
 
 export = queryDefinition;
