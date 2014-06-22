@@ -61,6 +61,11 @@ body {
     padding-right: 0;
 }
 
+/* Validation */
+.validationMessage {
+    color: red;  
+}
+
 @media (min-width: 768px) {
     .col-sm-first {
         padding-left: 0;

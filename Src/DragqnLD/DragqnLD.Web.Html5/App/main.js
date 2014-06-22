@@ -11,6 +11,17 @@
 
 define('knockout', ko);
 
+ko.validation.configure({
+    registerExtenders: true,
+    messagesOnModified: true,
+    insertMessages: true,
+    messageTemplate: null,
+    decorateElement: true,
+    errorElementClass: "has-error",
+    errorMessageClass: "help-block",
+    grouping: {deep: true, observable: true}
+});
+
 define(function (require) {
     var system = require('durandal/system'),
         app = require('durandal/app'),

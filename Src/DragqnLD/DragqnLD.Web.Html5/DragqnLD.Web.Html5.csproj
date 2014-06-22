@@ -68,9 +68,13 @@
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\knockout-postbox.js" />
+    <Content Include="Scripts\knockout-postbox.min.js" />
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\koGrid-2.1.1.debug.js" />
     <Content Include="Scripts\koGrid-2.1.1.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="weyland-config.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
@@ -87,6 +91,7 @@
     <TypeScriptCompile Include="App\common\dynamicHeightBindingHandler.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />
+    <TypeScriptCompile Include="App\models\sparqlQueryInfo.ts" />
     <TypeScriptCompile Include="App\viewmodels\editQueryDefinition.ts" />
     <TypeScriptCompile Include="App\viewmodels\queries.ts" />
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
@@ -95,13 +100,16 @@
     <TypeScriptCompile Include="Scripts\typings\durandal\durandal.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout.kogrid\ko-grid.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout.postbox\knockout-postbox.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout.validation\knockout.validation.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\toastr\toastr.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Scripts\toastr.min.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

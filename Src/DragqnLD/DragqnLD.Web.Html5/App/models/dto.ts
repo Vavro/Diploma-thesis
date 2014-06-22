@@ -6,11 +6,11 @@
 
 interface queryDefinitionDto extends queryMetadataDto {
     constructQueryUriParameterName: string;
-    constructQuery: sparqlQueryInfo;
-    selectQuery : sparqlQueryInfo;
+    constructQuery: sparqlQueryInfoDto;
+    selectQuery : sparqlQueryInfoDto;
 }
 
-interface sparqlQueryInfo {
+interface sparqlQueryInfoDto {
     query : string;
     sparqlEndpoint : string;
     defaultDataSet : string;

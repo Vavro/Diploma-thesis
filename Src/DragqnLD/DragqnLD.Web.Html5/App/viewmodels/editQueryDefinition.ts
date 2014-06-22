@@ -9,9 +9,11 @@ class editQueryDefinition {
     queryDefinition = ko.observable<queryDefinition>();
     editedQueryId: KnockoutComputed<string>;
     isCreatingNewQueryDefinition = ko.observable(false);
+    errors = ko.validation.group(this.queryDefinition, { deep: true });
+    canSaveQueryDefinition = ko.computed(() => this.queryDefinition.isValid());
 
     constructor() {
-        this.editedQueryId = ko.computed(() : string => this.queryDefinition() ? this.queryDefinition().id : "");
+        this.editedQueryId = ko.computed(() : string => this.queryDefinition() ? this.queryDefinition().id() : "");
     }
 
     canActivate(args: any) : JQueryDeferred<{}> {
@@ -57,11 +59,17 @@ class editQueryDefinition {
 
         var queryDef = this.queryDefinition();
 
+        var valid = this.errors.length == 0;
+        if (!valid) {
+            this.errors.showAllMessages();
+            return;
+        }
+        
         var saveCommand = new saveQueryDefinitionCommand(queryDef);
         saveCommand
             .execute()
             .done(() => {
-            
+
             }); // fail reseno v ramci commandus
 
     }

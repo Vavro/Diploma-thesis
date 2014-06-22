@@ -1,50 +1,50 @@
-﻿class queryDefinition {
-    id: string;
-    name: string;
-    description: string;
-    constructQueryUriParameterName: string;
+﻿import sparqlQueryInfo = require('models/sparqlQueryInfo')
+
+class queryDefinition {
+    id = ko.observable<string>().extend({ required: true });
+    name = ko.observable<string>().extend({ required: true });
+    description = ko.observable<string>().extend({ required: true });
+    constructQueryUriParameterName = ko.observable<string>().extend({ required: true });
     constructQuery: sparqlQueryInfo;
     selectQuery: sparqlQueryInfo;
 
-    constructor(dto?: queryDefinitionDto) {
-        if (dto) {
-            this.id = dto.id;
-            this.name = dto.name;
-            this.description = dto.description;
-            this.constructQueryUriParameterName = dto.constructQueryUriParameterName;
-            this.constructQuery = dto.constructQuery;
-            this.selectQuery = dto.selectQuery;
-        } else {
-            this.id = "";
-            this.name = "";
-            this.description = "";
-            this.constructQueryUriParameterName = "";
-            this.constructQuery = { query: "", defaultDataSet: "", sparqlEndpoint: "" };
-            this.selectQuery = { query: "", defaultDataSet: "", sparqlEndpoint: "" };
-        }
+    constructor(dto: queryDefinitionDto) {
+
+        this.id(dto.id);
+        this.name(dto.name);
+        this.description(dto.description);
+        this.constructQueryUriParameterName(dto.constructQueryUriParameterName);
+        this.constructQuery = new sparqlQueryInfo(dto.constructQuery);
+        this.selectQuery = new sparqlQueryInfo(dto.selectQuery);
     }
 
     public static empty(): queryDefinition {
-
-        return new queryDefinition(null);
+        return new queryDefinition({
+            id: "",
+            name: "",
+            description: "",
+            constructQueryUriParameterName: "",
+            constructQuery: {
+                query: "",
+                defaultDataSet: "",
+                sparqlEndpoint: ""
+            },
+            selectQuery: {
+                query: "",
+                defaultDataSet: "",
+                sparqlEndpoint: ""
+            }
+        });
     }
 
     public toDto(): queryDefinitionDto {
         return {
-            id: this.id,
-            name: this.name,
-            description: this.description,
-            constructQueryUriParameterName: this.constructQueryUriParameterName,
-            constructQuery: {
-                query: this.constructQuery.query,
-                sparqlEndpoint: this.constructQuery.sparqlEndpoint,
-                defaultDataSet: this.constructQuery.defaultDataSet
-            },
-            selectQuery: {
-                query: this.selectQuery.query,
-                sparqlEndpoint: this.selectQuery.sparqlEndpoint,
-                defaultDataSet: this.selectQuery.defaultDataSet
-            }
+            id: this.id(),
+            name: this.name(),
+            description: this.description(),
+            constructQueryUriParameterName: this.constructQueryUriParameterName(),
+            constructQuery: this.constructQuery.toDto(),
+            selectQuery: this.selectQuery.toDto()
         }
     }
 }
