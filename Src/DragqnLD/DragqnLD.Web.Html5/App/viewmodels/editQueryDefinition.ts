@@ -5,15 +5,13 @@ import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand")
 import saveQueryDefinitionCommand = require("commands/saveQueryDefinitionCommand");
 
 class editQueryDefinition {
-
     queryDefinition = ko.observable<queryDefinition>();
     editedQueryId: KnockoutComputed<string>;
     isCreatingNewQueryDefinition = ko.observable(false);
-    errors = ko.validation.group(this.queryDefinition, { deep: true });
-    canSaveQueryDefinition = ko.computed(() => this.queryDefinition.isValid());
+    errors: KnockoutValidationErrors; //needs to init after queryDefinition is set
 
     constructor() {
-        this.editedQueryId = ko.computed(() : string => this.queryDefinition() ? this.queryDefinition().id() : "");
+        this.editedQueryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
     }
 
     canActivate(args: any) : JQueryDeferred<{}> {
@@ -48,6 +46,7 @@ class editQueryDefinition {
     editNewQueryDefinition() : void {
         this.isCreatingNewQueryDefinition(true);
         this.queryDefinition(queryDefinition.empty());
+        this.errors = ko.validation.group(this.queryDefinition, { deep: true });
     }
 
     navigateToQueries() : void {
@@ -59,7 +58,8 @@ class editQueryDefinition {
 
         var queryDef = this.queryDefinition();
 
-        var valid = this.errors.length == 0;
+
+        var valid = this.queryDefinition.isValid();
         if (!valid) {
             this.errors.showAllMessages();
             return;
