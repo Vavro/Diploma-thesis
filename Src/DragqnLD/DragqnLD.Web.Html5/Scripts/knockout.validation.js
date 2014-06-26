@@ -277,9 +277,12 @@
             var errors = [];
             forEach(array, function (observable) {
                 if (!observable.isValid()) {
+                    //my little fix, so that the last changed property doesnt give error when its not supposed to.
                     var e = observable.error();
                     if (e) {
                         errors.push(observable.error());
+                    } else {
+                        //console.error("not valid but error null");
                     }
                 }
             });

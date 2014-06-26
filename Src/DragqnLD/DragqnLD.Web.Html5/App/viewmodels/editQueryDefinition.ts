@@ -1,16 +1,19 @@
 ﻿import router = require("plugins/router");
+import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinition = require("models/queryDefinition");
 import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand");
 import saveQueryDefinitionCommand = require("commands/saveQueryDefinitionCommand");
 
-class editQueryDefinition {
+class editQueryDefinition extends viewModelBase {
     queryDefinition = ko.observable<queryDefinition>();
     editedQueryId: KnockoutComputed<string>;
     isCreatingNewQueryDefinition = ko.observable(false);
     errors: KnockoutValidationErrors; //needs to init after queryDefinition is set
+    isValid: KnockoutComputed<boolean>;
 
     constructor() {
+        super();
         this.editedQueryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
     }
 
@@ -47,6 +50,7 @@ class editQueryDefinition {
         this.isCreatingNewQueryDefinition(true);
         this.queryDefinition(queryDefinition.empty());
         this.errors = ko.validation.group(this.queryDefinition, { deep: true });
+        this.isValid = ko.computed({ owner: this, read: () => {return this.errors().length === 0 }});
     }
 
     navigateToQueries() : void {
@@ -58,11 +62,9 @@ class editQueryDefinition {
 
         var queryDef = this.queryDefinition();
 
-
-        var valid = this.queryDefinition.isValid();
-        if (!valid) {
+        if (this.errors().length !== 0) {
             this.errors.showAllMessages();
-            return;
+            this.notifyWarning("There are errors in the form, please check all values.");
         }
         
         var saveCommand = new saveQueryDefinitionCommand(queryDef);
@@ -70,8 +72,8 @@ class editQueryDefinition {
             .execute()
             .done(() => {
 
-            }); // fail reseno v ramci commandus
-
+            }); // fail reseno v ramci commands
+        
     }
 }
 
