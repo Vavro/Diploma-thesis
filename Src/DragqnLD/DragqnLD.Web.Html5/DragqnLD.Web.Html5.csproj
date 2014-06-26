@@ -20,6 +20,7 @@
     <Content Include="App\main.js" />
     <Content Include="App\views\editQueryDefinition.html" />
     <Content Include="App\views\home.html" />
+    <Content Include="App\views\notifications.html" />
     <Content Include="App\views\queries.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -34,6 +35,8 @@
     <Content Include="Content\images\ios-startup-image-portrait.png" />
     <Content Include="Content\KoGrid.css" />
     <Content Include="Content\starterkit.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
@@ -65,6 +68,8 @@
     <Content Include="Scripts\durandal\transitions\entrance.js" />
     <Content Include="Scripts\durandal\viewEngine.js" />
     <Content Include="Scripts\durandal\viewLocator.js" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.scss" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
@@ -94,6 +99,7 @@
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />
     <TypeScriptCompile Include="App\models\sparqlQueryInfo.ts" />
     <TypeScriptCompile Include="App\viewmodels\editQueryDefinition.ts" />
+    <TypeScriptCompile Include="App\viewmodels\notifications.ts" />
     <TypeScriptCompile Include="App\viewmodels\queries.ts" />
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />

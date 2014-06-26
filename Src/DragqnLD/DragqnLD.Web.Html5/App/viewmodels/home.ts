@@ -1,9 +1,14 @@
 ﻿import app = require('durandal/app');
+import viewModelBase = require("viewmodels/viewModelBase");
 
-class home {
+class home extends viewModelBase {
     name = ko.observable();
     sayHello() : void {
         app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+    }
+
+    testNotif(): void {
+        this.notifyWarning("smaug is here!");
     }
 }
 
