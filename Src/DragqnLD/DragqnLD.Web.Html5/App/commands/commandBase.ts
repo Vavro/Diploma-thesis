@@ -1,6 +1,9 @@
-﻿/// Commands encapsulate a read or write operation to the server and common AJAX related functionality.
+﻿import constants = require("common/constants");
+
+/// Commands encapsulate a read or write operation to the server and common AJAX related functionality.
 class commandBase {
 
+    private c = new constants();
     private baseUrl = "http://localhost:2429/api";
 
     execute<T>(): JQueryPromise<T> {
@@ -72,6 +75,20 @@ class commandBase {
         }
 
         return $.ajax(defaultOptions);
+    }
+
+    /*
+     * Notifications
+     */
+    notifyError(title: string, details?: string, httpStatusText?: string) : void {
+        ko.postbox.publish(this.c.topics.errors, "<p>" + title + "</p><p>" + details + "</p>");
+        if (console && console.log && typeof console.log === "function") {
+            console.log("Error during command execution", title, details, httpStatusText);
+        }
+    }
+
+    notifySuccess(text: string) : void {
+        ko.postbox.publish(this.c.topics.success);
     }
 }
 

@@ -17,18 +17,17 @@ class editQueryDefinition extends viewModelBase {
         this.editedQueryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
     }
 
-    canActivate(args: any) : JQueryDeferred<{}> {
+    canActivate(args: any): JQueryDeferred<{}> {
         if (args && args.id) {
             var canActivateResult = $.Deferred();
             new getQueryDefinitionCommand(args.id)
                 .execute()
-                .done((queryDefinition : queryDefinition) => {
+                .done((queryDefinition: queryDefinition) => {
                     this.queryDefinition(queryDefinition);
                     canActivateResult.resolve({ can: true });
                 })
-                .fail(() => {
-                    // todo: fail notification
-                    
+                .fail((response) => {
+                    this.notifyWarning("Could not get document " + args.id);
                 });
 
             return canActivateResult;
@@ -38,22 +37,22 @@ class editQueryDefinition extends viewModelBase {
     }
 
 
-    activate(navigationArgs: any) : void {
+    activate(navigationArgs: any): void {
         if (navigationArgs && navigationArgs.id) {
-            // todo something? 
+            // load done in canActivate
         } else {
             this.editNewQueryDefinition();
         }
     }
 
-    editNewQueryDefinition() : void {
+    editNewQueryDefinition(): void {
         this.isCreatingNewQueryDefinition(true);
         this.queryDefinition(queryDefinition.empty());
         this.errors = ko.validation.group(this.queryDefinition, { deep: true });
-        this.isValid = ko.computed({ owner: this, read: () => {return this.errors().length === 0 }});
+        this.isValid = ko.computed({ owner: this, read: () => {return this.errors().length === 0 } });
     }
 
-    navigateToQueries() : void {
+    navigateToQueries(): void {
         var url = "/queries";
         router.navigate(url);
     }
@@ -66,14 +65,14 @@ class editQueryDefinition extends viewModelBase {
             this.errors.showAllMessages();
             this.notifyWarning("There are errors in the form, please check all values.");
         }
-        
+
         var saveCommand = new saveQueryDefinitionCommand(queryDef);
         saveCommand
             .execute()
             .done(() => {
 
             }); // fail reseno v ramci commands
-        
+
     }
 }
 

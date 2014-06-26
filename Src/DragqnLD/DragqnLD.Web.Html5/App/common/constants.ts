@@ -2,6 +2,7 @@
     topics = {
         errors: "errors",
         warnings: "warnings",
+        success: "success"
     } 
 }
 
