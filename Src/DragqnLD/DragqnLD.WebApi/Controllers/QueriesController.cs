@@ -6,20 +6,21 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.WebApi.Models;
 
 namespace DragqnLD.WebApi.Controllers
 {
     public class QueriesController : BaseApiController
     {
         // GET api/queries
-        public IEnumerable<QueryDefinition> Get()
+        public IEnumerable<QueryDefinitionMetadataDto> Get()
         {
-            return new[] 
-            { 
-                new QueryDefinition() 
-                { 
-                    Id = "Query/1", 
-                    Name = "Test Query", 
+            var queries = new[]
+            {
+                new QueryDefinition()
+                {
+                    Id = "Query/1",
+                    Name = "Test Query",
                     Description = "Mockup Query Description",
                     ConstructQuery = new SparqlQueryInfo()
                     {
@@ -57,6 +58,8 @@ namespace DragqnLD.WebApi.Controllers
                     }
                 }
             };
+
+
         }
 
         // GET api/queries/5

@@ -4,7 +4,7 @@ import commandBase = require("commands/commandBase");
 
 class getQueriesCommand extends commandBase {
     
-    execute(): JQueryPromise<queryMetadataDto[]> {
+    execute(): JQueryPromise<queryDefinitionMetadataDto[]> {
         var url = "/queries";
         return this.query<any>(url, null);
     }

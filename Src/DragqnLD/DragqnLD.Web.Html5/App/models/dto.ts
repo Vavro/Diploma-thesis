@@ -1,10 +1,10 @@
-﻿interface queryMetadataDto {
+﻿interface queryDefinitionMetadataDto {
     id: string;
     name: string;
     description: string;
 } 
 
-interface queryDefinitionDto extends queryMetadataDto {
+interface queryDefinitionDto extends queryDefinitionMetadataDto {
     constructQueryUriParameterName: string;
     constructQuery: sparqlQueryInfoDto;
     selectQuery : sparqlQueryInfoDto;

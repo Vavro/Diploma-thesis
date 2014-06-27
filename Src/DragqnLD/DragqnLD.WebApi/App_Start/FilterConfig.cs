@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using DragqnLD.WebApi.Filters;
 
 namespace DragqnLD.WebApi
 {
@@ -8,6 +9,7 @@ namespace DragqnLD.WebApi
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ValidateModelFilter());
         }
     }
 }
