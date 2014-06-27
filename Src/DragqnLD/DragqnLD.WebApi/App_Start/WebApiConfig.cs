@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using DragqnLD.WebApi.App_Start;
+using DragqnLD.WebApi.Filters;
 
 namespace DragqnLD.WebApi
 {
@@ -22,6 +24,10 @@ namespace DragqnLD.WebApi
             );
 
             config.EnableCors(new EnableCorsAttribute("*","*","*"));
+
+            config.Filters.Add(new ValidateModelFilter());
+
+            AutoMapperConfig.Configure();
         }
     }
 }

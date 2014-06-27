@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using AutoMapper;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Models;
 
@@ -58,14 +59,14 @@ namespace DragqnLD.WebApi.Controllers
                     }
                 }
             };
-
-
+            var queriesDto = Mapper.Map<IEnumerable<QueryDefinition>, IEnumerable<QueryDefinitionMetadataDto>>(queries);
+            return queriesDto;
         }
 
         // GET api/queries/5
-        public QueryDefinition Get(string id)
+        public QueryDefinitionDto Get(string id)
         {
-            return new QueryDefinition()
+            var query = new QueryDefinition()
             {
                 Id = id,
                 Name = "Test",
@@ -85,16 +86,19 @@ namespace DragqnLD.WebApi.Controllers
                     SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 }
             };
+
+            var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionDto>(query);
+            return queryDto;
         }
 
         // POST api/queries
-        public void Post([FromBody]QueryDefinition value)
+        public void Post([FromBody]QueryDefinitionDto value)
         {
             
         }
 
         // PUT api/queries/5
-        public void Put(int id, [FromBody]QueryDefinition value)
+        public void Put(int id, [FromBody]QueryDefinitionDto value)
         {
         }
 
