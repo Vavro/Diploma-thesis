@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
 
@@ -38,7 +35,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
 
                     //Console.WriteLine("Getting document id {0}", documentId);
 
-                    var document = await _ravenDataStore.GetDocument(TestDataConstants.IngredientsQueryDefinitionId, documentId);
+                    var document = await RavenDataStore.GetDocument(TestDataConstants.IngredientsQueryDefinitionId, documentId);
 
                     Assert.NotNull(document.Content);
                 });

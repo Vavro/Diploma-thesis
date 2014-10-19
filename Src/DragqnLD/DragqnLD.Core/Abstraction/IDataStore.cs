@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
-using DragqnLD.Core.Implementations;
-using VDS.RDF.Parsing.Handlers;
 
 namespace DragqnLD.Core.Abstraction
 {

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
-using Raven.Abstractions.Data;
-using Raven.Tests.Helpers;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
@@ -29,7 +25,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var startWithTitle = NextRandomStartsWithValue(titles);
 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(startWithTitle));
                 
                 Assert.NotEmpty(uris);
@@ -45,7 +41,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var startWithTitle = NextRandomStartsWithValue(titles);
 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(startWithTitle));
 
                 Assert.NotEmpty(uris);

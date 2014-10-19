@@ -4,8 +4,8 @@
         durandal: '../Scripts/durandal',
         plugins: '../Scripts/durandal/plugins',
         transitions: '../Scripts/durandal/transitions',
-        knockout: '../Scripts/knockout-3.1.0',
-        jquery: '../Scripts/jquery-2.1.0'
+        knockout: '../Scripts/knockout-3.2.0',
+        jquery: '../Scripts/jquery-2.1.1'
     }
 });
 

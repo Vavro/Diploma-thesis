@@ -1,10 +1,8 @@
-﻿using System.Web;
-using System.Web.Mvc;
-using DragqnLD.WebApi.Filters;
+﻿using System.Web.Mvc;
 
 namespace DragqnLD.WebApi
 {
-    public class FilterConfig
+    public static class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {

@@ -117,7 +117,6 @@
     <Compile Include="PerfTests\RavenDataStoreQueryPerformanceTests.cs" />
     <Compile Include="QueryStoreTests.cs" />
     <Compile Include="RavenDataStoreTests.cs" />
-    <Compile Include="RavenTests\CanCallLastOnArray.cs" />
     <Compile Include="SparqlEnpointClientTests.cs" />
     <Compile Include="Utils\NoCachingQueriesListener.cs" />
     <Compile Include="Utils\NoStaleQueriesListener.cs" />

@@ -1,5 +1,4 @@
 using System;
-using VDS.RDF.Query;
 
 namespace DragqnLD.Core.Abstraction.Query
 {

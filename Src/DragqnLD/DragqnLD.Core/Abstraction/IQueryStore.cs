@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
 
@@ -22,7 +19,7 @@ namespace DragqnLD.Core.Abstraction
         /// <summary>
         /// Gets the query definition for the specified key.
         /// </summary>
-        /// <param name="key">The key.</param>
+        /// <param name="id">The key.</param>
         /// <returns>The query definition.</returns>
         Task<QueryDefinition> Get(string id);
 

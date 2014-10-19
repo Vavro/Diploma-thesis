@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Models;
 
+// ReSharper disable once CheckNamespace
 namespace DragqnLD.WebApi.App_Start
 {
     public class AutoMapperConfig
@@ -22,7 +19,7 @@ namespace DragqnLD.WebApi.App_Start
             }
         }
 
-        public static void Configure()
+        public static void ConfigureMapper()
         {
             Mapper.Initialize(cfg => cfg.AddProfile<DragqnLDProfile>());
         }

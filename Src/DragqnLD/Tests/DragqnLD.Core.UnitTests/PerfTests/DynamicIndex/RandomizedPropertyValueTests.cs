@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
-using Raven.Database.Data;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
@@ -30,7 +25,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var randomTitle = NextRandomValue(titles);
 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(randomTitle));
 
                 Assert.NotEmpty(uris);
@@ -46,7 +41,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var randomDescription = NextRandomValue(descriptions);
                 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsDescription.AsCondition(randomDescription));
 
                 Assert.NotEmpty(uris);
@@ -56,7 +51,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         [Fact]
         public async Task RandomMedicinalProductPregnancyCategory()
         {
-            var categories = new List<string>()
+            var categories = new List<string>
             {
                 @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A""",     
                 @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B""", 
@@ -69,7 +64,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var randomDescription = RandomItem(categories);
 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsPregnancyCategory.AsCondition(randomDescription));
 
                 Assert.NotEmpty(uris);
@@ -85,7 +80,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var randomTitle = NextRandomValue(titles);
 
-                var uris = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
                     TestDataConstants.PropertyNameMedicinalProductsTitle.AsCondition(randomTitle));
 
                 Assert.NotEmpty(uris);

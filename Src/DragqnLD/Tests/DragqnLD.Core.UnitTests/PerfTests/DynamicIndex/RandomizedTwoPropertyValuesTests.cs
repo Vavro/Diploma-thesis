@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
-using Raven.Database.Extensions;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
@@ -31,7 +29,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
                 var randomPc = EncloseValue(RandomItem(randomItem.PregnancyCategories));
                 var randomMt = EncloseValue(RandomItem(randomItem.MayTreatTitles));
 
-                var result = await _ravenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var result = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
                         TestDataConstants.PropertyNameIngredientMayTreat.AsCondition(randomMt),
                         TestDataConstants.PropertyNameIngredientPregnancyCategory.AsCondition(randomPc));
 

@@ -70,6 +70,7 @@ namespace DragqnLD.Core.Implementations
                 propertyMappings.AddMapping(oldPropertyName, newPropertyName);
 
                 var property = document.Property(oldPropertyName);
+                // ReSharper disable once CoVariantArrayConversion
                 object[] children = property.Children().ToArray();
                 JProperty newJProperty;
                 if (children.Length == 1)

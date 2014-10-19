@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
@@ -26,7 +25,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
         {
             Formatter = new ExpandedJsonLDDataFormatter();
 
-            _documentStore.RegisterListener(new NoStaleQueriesListener())
+            DocumentStore.RegisterListener(new NoStaleQueriesListener())
                 .RegisterListener(new NoTrackingQueriesListener())
                 .RegisterListener(new NoCachingQueriesListener());
 
@@ -44,10 +43,10 @@ namespace DragqnLD.Core.UnitTests.PerfTests
 
         private async Task StoreTestData(string inputFolder, string queryId, string idPrefix, List<Uri> documentIdsToFill)
         {
-            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix);
+            var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix).ToList();
             documentIdsToFill.AddRange(documents.Select(cr => cr.DocumentId));
 
-            await _ravenDataStore.BulkStoreDocuments((IEnumerable<ConstructResult>) documents);
+            await RavenDataStore.BulkStoreDocuments(documents);
         }
 
         private IEnumerable<ConstructResult> ConstructResultsForFolder(string inputFolder, string queryId, string idPrefix)

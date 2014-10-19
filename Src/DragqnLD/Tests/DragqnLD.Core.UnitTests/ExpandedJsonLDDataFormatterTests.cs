@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
@@ -28,9 +23,9 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         void CanFormatSimpleDataTest()
         {
-            string inputJson = @"ExpanderTestsData\json1-simple.json";
-            string expectedOutputJson = @"ExpandertestsData\json1out.json";
-            string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+            const string inputJson = @"ExpanderTestsData\json1-simple.json";
+            const string expectedOutputJson = @"ExpandertestsData\json1out.json";
+            const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
             TestFormat(inputJson, expectedOutputJson, id);
         }
@@ -62,19 +57,19 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         void CanFormatComplexDataTest()
         {
-            string inputJson = @"ExpanderTestsData\json2-whole.json";
-            string expectedOutputJson = @"ExpandertestsData\json2out.json";
-            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+            const string inputJson = @"ExpanderTestsData\json2-whole.json";
+            const string expectedOutputJson = @"ExpandertestsData\json2out.json";
+            const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
             TestFormat(inputJson, expectedOutputJson, id);
         }
 
         [Fact]
-        void CanFormatHeavilyNestedJSON()
+        void CanFormatHeavilyNestedJson()
         {
-            string inputJson = @"ExpanderTestsData\json3-nested.json";
-            string expectedOutputJson = @"ExpanderTestsData\json3out.json";
-            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+            const string inputJson = @"ExpanderTestsData\json3-nested.json";
+            const string expectedOutputJson = @"ExpanderTestsData\json3out.json";
+            const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
             TestFormat(inputJson, expectedOutputJson, id);
         }
@@ -82,11 +77,11 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         void WillThrowOnNestedData()
         {
-            string inputJson = @"ExpanderTestsData\json4-recursive.json";
-            var id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+            const string inputJson = @"ExpanderTestsData\json4-recursive.json";
+            const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
             //todo: add more specific exception
-            var ex = Assert.Throws<NotSupportedException>(() => { TestFormat(inputJson, null, id); });
+            var ex = Assert.Throws<NotSupportedException>(() => TestFormat(inputJson, null, id));
             Console.WriteLine(ex.ToString());
         }
 

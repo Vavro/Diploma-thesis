@@ -61,6 +61,11 @@ body {
     padding-right: 0;
 }
 
+/**/
+.notifications {
+    visibility: hidden;
+}
+
 /* Validation */
 .validationMessage {
     color: red;  

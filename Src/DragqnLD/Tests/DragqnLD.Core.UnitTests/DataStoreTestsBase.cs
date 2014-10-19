@@ -2,13 +2,14 @@
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Implementations;
 using Raven.Client.Embedded;
+using Raven.Database.Server;
 
 namespace DragqnLD.Core.UnitTests
 {
     public abstract class DataStoreTestsBase : IDisposable
     {
-        protected readonly IDataStore _ravenDataStore;
-        protected readonly EmbeddableDocumentStore _documentStore;
+        protected readonly IDataStore RavenDataStore;
+        protected readonly EmbeddableDocumentStore DocumentStore;
         protected const string JsonBernersLeeFileName = @"JSON\berners-lee.jsonld";
 
         protected const int RavenWebUiPort = 8081;
@@ -16,22 +17,22 @@ namespace DragqnLD.Core.UnitTests
 
         protected DataStoreTestsBase()
         {
-            var docStore = new EmbeddableDocumentStore()
+            var docStore = new EmbeddableDocumentStore
             {
                 RunInMemory = true,
                 Configuration = { Port = RavenWebUiPort }
             };
-            Raven.Database.Server.NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
+            NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
 
             docStore.Initialize();
 
-            _documentStore = docStore;
-            _ravenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
+            DocumentStore = docStore;
+            RavenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
         }
 
         public void Dispose()
         {
-            _documentStore.Dispose();
+            DocumentStore.Dispose();
 
             GC.Collect(2);
             GC.WaitForPendingFinalizers();

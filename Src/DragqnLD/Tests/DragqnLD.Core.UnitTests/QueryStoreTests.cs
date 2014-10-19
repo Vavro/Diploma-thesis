@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
-using Raven.Client.Document;
 using Raven.Client.Embedded;
-using Raven.Database.Server.Responders;
-using VDS.RDF.Parsing;
-using VDS.RDF.Query;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests
@@ -18,35 +11,36 @@ namespace DragqnLD.Core.UnitTests
     {
         public QueryStoreTests()
         {
-            var docStore = new EmbeddableDocumentStore()
+            var docStore = new EmbeddableDocumentStore
             {
                 RunInMemory = true,
             };
 
             docStore.Initialize();
 
-            documentStore = docStore;
-            queryStore = new QueryStore(documentStore);
+            _documentStore = docStore;
+            _queryStore = new QueryStore(_documentStore);
         }
 
-        private readonly EmbeddableDocumentStore documentStore;
-        private readonly QueryStore queryStore;
+        // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
+        private readonly EmbeddableDocumentStore _documentStore;
+        private readonly QueryStore _queryStore;
         
         [Fact]
         public async Task CanStoreQuery()
         {
-            var queryDefinition = new QueryDefinition()
+            var queryDefinition = new QueryDefinition
             {
                 Name = "test query",
                 Description = "testing query",
-                ConstructQuery = new SparqlQueryInfo()
+                ConstructQuery = new SparqlQueryInfo
                 {
                     Query = @"DESCRIBE <http://linked.opendata.cz/resource/ATC/M01AE01>",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
                     SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 }, 
                 ConstructQueryUriParameterName = "test",
-                SelectQuery = new SparqlQueryInfo()
+                SelectQuery = new SparqlQueryInfo
                 {
                     Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o }",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
@@ -54,10 +48,10 @@ namespace DragqnLD.Core.UnitTests
                 }
             };
 
-            var id = await queryStore.Add(queryDefinition);
+            var id = await _queryStore.Add(queryDefinition);
             Console.WriteLine(id);
 
-            var retrievedQueryDefinition = await queryStore.Get(id);
+            var retrievedQueryDefinition = await _queryStore.Get(id);
 
             Assert.Equal(queryDefinition.Name, retrievedQueryDefinition.Name);
             Assert.Equal(queryDefinition.Description, retrievedQueryDefinition.Description);

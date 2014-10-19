@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using DragqnLD.WebApi.Annotations;
 
 namespace DragqnLD.WebApi.Models
 {
@@ -14,6 +12,7 @@ namespace DragqnLD.WebApi.Models
         /// The identifier.
         /// </value>
         //todo: required? - for new query def it might not be
+        [UsedImplicitly]
         public string Id { get; set; }
 
         /// <summary>
@@ -23,6 +22,7 @@ namespace DragqnLD.WebApi.Models
         /// The name.
         /// </value>
         [Required]
+        [UsedImplicitly]
         public string Name { get; set; }
 
         /// <summary>
@@ -31,6 +31,7 @@ namespace DragqnLD.WebApi.Models
         /// <value>
         /// The description.
         /// </value>
+        [UsedImplicitly]
         public string Description { get; set; }        
     }
 }

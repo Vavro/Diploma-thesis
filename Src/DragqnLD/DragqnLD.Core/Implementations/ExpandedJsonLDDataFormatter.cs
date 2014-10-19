@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Raven.Abstractions.Data;
-using Raven.Abstractions.Extensions;
-using VDS.RDF.Query.Expressions.Functions.XPath.String;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -125,7 +121,7 @@ namespace DragqnLD.Core.Implementations
             
             public void ReadObjectsFromGraph()
             {
-                var _objects = new Dictionary<string, JObject>();
+                var objects = new Dictionary<string, JObject>();
                 foreach (var graphObject in _graphObjects)
                 {
                     var id = (string)graphObject["@id"];
@@ -134,7 +130,7 @@ namespace DragqnLD.Core.Implementations
                         throw new NotSupportedException(
                             String.Format(
                                 "The collection of objects in the graph property, didn't contain only objects with ids - invalid json: {0}",
-                                graphObject.ToString()));
+                                graphObject));
 
                     if (id == _rootObjectId)
                     {
@@ -142,7 +138,7 @@ namespace DragqnLD.Core.Implementations
                     }
                     else
                     {
-                        _objects.Add(id, typed);
+                        objects.Add(id, typed);
                     }
                 }
 
@@ -151,7 +147,7 @@ namespace DragqnLD.Core.Implementations
                         String.Format("The collection of objects in the graph property, didn't contain the object with id: {0}",
                             _rootObjectId));
 
-                _graphObjectsById = new ReadOnlyDictionary<string, JObject>(_objects);
+                _graphObjectsById = new ReadOnlyDictionary<string, JObject>(objects);
             }
         }
 

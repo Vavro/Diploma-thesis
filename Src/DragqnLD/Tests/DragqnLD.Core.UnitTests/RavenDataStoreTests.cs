@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
-using Newtonsoft.Json.Linq;
-using Raven.Abstractions.Data;
-using Raven.Abstractions.Indexing;
-using Raven.Client;
-using Raven.Client.Listeners;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
@@ -29,35 +22,35 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanStoreAndGetPlainJSONData()
+        public async Task CanStoreAndGetPlainJsonData()
         {
             var content = RavenJObject.Parse(@"{ ""name"" : ""Petr""}");
 
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = content }
+                Document = new Document { Content = content }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore);
+            await RavenDataStore.StoreDocument(dataToStore);
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
-            var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
+            var storedDocument = await RavenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
 
             Assert.Equal(storedDocument.Content.ToString(), content.ToString());
         }
 
         [Fact]
-        public async Task CanStoreAndGetComplexJSONLDData()
+        public async Task CanStoreAndGetComplexJsonLDData()
         {
-            var queryId = "QueryDefinitions/1";
+            const string queryId = "QueryDefinitions/1";
             var storedData = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
-            var storedDocument = await _ravenDataStore.GetDocument(storedData.QueryId, storedData.DocumentId);
+            var storedDocument = await RavenDataStore.GetDocument(storedData.QueryId, storedData.DocumentId);
 
             Assert.NotNull(storedDocument);
             Console.WriteLine("=========================================");
@@ -71,29 +64,29 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanQuerySimpleJSONData()
+        public async Task CanQuerySimpleJsonData()
         {
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Petr""}") }
+                Document = new Document { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Petr""}") }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore);
+            await RavenDataStore.StoreDocument(dataToStore);
 
-            var dataToStore2 = new ConstructResult()
+            var dataToStore2 = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
-                Document = new Document() { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Jan""}") }
+                Document = new Document { Content = RavenJObject.Parse(@"{ ""@id"" : ""http://linked.opendata.cz/resource/ATC/M01AE02"", ""name"" : ""Jan""}") }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore2);
+            await RavenDataStore.StoreDocument(dataToStore2);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.Equal(results.Count(), 1);
 
@@ -102,27 +95,27 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanInsertDuplicateIdsToDifferencQueries()
         {
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+                Document = new Document { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore);
+            await RavenDataStore.StoreDocument(dataToStore);
 
-            var dataToStore2 = new ConstructResult()
+            var dataToStore2 = new ConstructResult
             {
                 QueryId = "QueryDefinitions/2",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
+                Document = new Document { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore2);
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var storedDocument = await _ravenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
+            await RavenDataStore.StoreDocument(dataToStore2);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
+            var storedDocument = await RavenDataStore.GetDocument(dataToStore.QueryId, dataToStore.DocumentId);
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.NotNull(storedDocument);
             Console.WriteLine("=========================================");
@@ -137,57 +130,57 @@ namespace DragqnLD.Core.UnitTests
         }
 
         [Fact]
-        public async Task CanQueryComplexJSONLSData()
+        public async Task CanQueryComplexJsonLDData()
         {
-            var queryId = "QueryDefinitions/1";
+            const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
 
             //todo: autoescape colons in values, dots in property names .. -- escaping colons can be workaround by wrapping in " character
-            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"_type:""http://www.w3.org/2000/10/swap/pim/contact#Male""");
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"_type:""http://www.w3.org/2000/10/swap/pim/contact#Male""");
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.Equal(results.Count(), 1);
         }
 
         [Fact]
-        public async Task CanQueryByNestedPropertyItemsSimpleJSONData()
+        public async Task CanQueryByNestedPropertyItemsSimpleJsonData()
         {
             var parsed = RavenJObject.Parse(@"{ ""name"" : ""Petr"", ""parents"" : [ { ""age"" : ""45"" } ] }");
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = parsed }
+                Document = new Document { Content = parsed }
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore);
+            await RavenDataStore.StoreDocument(dataToStore);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"parents,age : ""45""");
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"parents,age : ""45""");
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
 
             Assert.Equal(results.Count(), 1);
         }
 
         [Fact]
-        public async Task CanQueryByNestedPropertyItemsComplexJSONLDData()
+        public async Task CanQueryByNestedPropertyItemsComplexJsonLDData()
         {
-            var queryId = "QueryDefinitions/1";
+            const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
 
             Assert.Equal(results.Count(), 1);
         }
 
         [Fact]
-        public async Task CanQueryByUnescapedPropertyComplexJSONLDData()
+        public async Task CanQueryByUnescapedPropertyComplexJsonLDData()
         {
-            var queryId = "QueryDefinitions/1";
+            const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperties(dataToStore.QueryId, 
+            var results = await RavenDataStore.QueryDocumentProperties(dataToStore.QueryId, 
                 @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""));
 
             Assert.Equal(results.Count(), 1);
@@ -202,24 +195,24 @@ namespace DragqnLD.Core.UnitTests
             formatter.Format(reader, writer, rootId, out mappings);
 
             var parsed = RavenJObject.Parse(writer.ToString());
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = queryId,
                 DocumentId = new Uri(rootId),
-                Document = new Document() {Content = parsed}
+                Document = new Document {Content = parsed}
             };
 
-            await _ravenDataStore.StoreDocument(dataToStore);
+            await RavenDataStore.StoreDocument(dataToStore);
             return dataToStore;
         }
 
         [Fact]
-        public async Task CanQueryByMultipleUnescaepdPropertiesComplexJSONLDData()
+        public async Task CanQueryByMultipleUnescaepdPropertiesComplexJsonLDData()
         {
-            var queryId = "QueryDefinitions/1";
+            const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await _ravenDataStore.QueryDocumentProperties(dataToStore.QueryId,
+            var results = await RavenDataStore.QueryDocumentProperties(dataToStore.QueryId,
                 @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""),
                 @"@type".AsCondition(@"""http://www.w3.org/2000/10/swap/pim/contact#Male"""));
             
@@ -229,25 +222,25 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanBulkInsertData()
         {
-            var dataToStore = new ConstructResult()
+            var dataToStore = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE01"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
+                Document = new Document { Content = RavenJObject.Parse("{ \"name\" : \"Petr\"}") }
             };
             
-            var dataToStore2 = new ConstructResult()
+            var dataToStore2 = new ConstructResult
             {
                 QueryId = "QueryDefinitions/1",
                 DocumentId = new Uri(@"http://linked.opendata.cz/resource/ATC/M01AE02"),
-                Document = new Document() { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
+                Document = new Document { Content = RavenJObject.Parse("{ \"name\" : \"Jan\"}") }
             };
 
-            await _ravenDataStore.BulkStoreDocuments(dataToStore, dataToStore2);
+            await RavenDataStore.BulkStoreDocuments(dataToStore, dataToStore2);
 
-            var results = await _ravenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
 
-            RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.Equal(results.Count(), 1);
         }

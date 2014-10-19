@@ -3,15 +3,10 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
-using DragqnLD.Core.Implementations.Utils;
-using Raven.Abstractions.Linq;
 using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
-using Raven.Abstractions.Data;
-using Raven.Client.Connection;
 using Raven.Json.Linq;
-using VDS.RDF.Query.Expressions.Primary;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -81,7 +76,7 @@ namespace DragqnLD.Core.Implementations
             {
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id);
-                var storedDocument = new Document() { Content = storedContent };
+                var storedDocument = new Document { Content = storedContent };
 
                 return storedDocument;
             }

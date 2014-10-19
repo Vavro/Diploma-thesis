@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
@@ -24,7 +22,7 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public async Task CanRunSelectQuery()
         {
-            var selectQuery = new SparqlQueryInfo()
+            var selectQuery = new SparqlQueryInfo
             {
                 Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                 DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
@@ -45,7 +43,7 @@ namespace DragqnLD.Core.UnitTests
         public async Task CanGetConstructResult()
         {
             //todo: substitution of parameter in implementation
-            var constructQuery = new SparqlQueryInfo()
+            var constructQuery = new SparqlQueryInfo
             {
                 //parameters that can be substituted have to be marked as @ not just ?
                 Query = @"DESCRIBE @u",
@@ -62,7 +60,7 @@ namespace DragqnLD.Core.UnitTests
             Assert.True(!String.IsNullOrWhiteSpace(result));
 
             //from downloaded data on 7.11.2013 23:37 - not really reliable..
-            var expectedHash = "0C-FF-1D-9F-7D-3E-37-48-83-BB-C3-7F-B5-A6-42-5F";
+            const string expectedHash = "0C-FF-1D-9F-7D-3E-37-48-83-BB-C3-7F-B5-A6-42-5F";
             
             using (var md5 = MD5.Create())
             {
@@ -75,8 +73,8 @@ namespace DragqnLD.Core.UnitTests
         }
         static byte[] GetBytes(string str)
         {
-            byte[] bytes = new byte[str.Length * sizeof(char)];
-            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            var bytes = new byte[str.Length * sizeof(char)];
+            Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
             return bytes;
         }
     }

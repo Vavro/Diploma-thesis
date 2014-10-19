@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using DragqnLD.WebApi.Annotations;
 
 namespace DragqnLD.WebApi.Models
 {
@@ -15,6 +16,7 @@ namespace DragqnLD.WebApi.Models
         /// The construct query.
         /// </value>
         [Required]
+        [UsedImplicitly]
         public SparqlQueryInfoDto ConstructQuery { get; set; }
 
         /// <summary>
@@ -24,6 +26,7 @@ namespace DragqnLD.WebApi.Models
         /// The name of the construct query parameter.
         /// </value>
         [Required]
+        [UsedImplicitly]
         public string ConstructQueryUriParameterName { get; set; }
 
         /// <summary>
@@ -33,6 +36,7 @@ namespace DragqnLD.WebApi.Models
         /// The select query.
         /// </value>
         [Required]
+        [UsedImplicitly]
         public SparqlQueryInfoDto SelectQuery { get; set; }
     }
 }

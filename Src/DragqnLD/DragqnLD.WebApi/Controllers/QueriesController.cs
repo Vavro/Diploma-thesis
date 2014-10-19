@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
 using DragqnLD.Core.Abstraction.Query;
@@ -18,12 +14,12 @@ namespace DragqnLD.WebApi.Controllers
         {
             var queries = new[]
             {
-                new QueryDefinition()
+                new QueryDefinition
                 {
                     Id = "Query/1",
                     Name = "Test Query",
                     Description = "Mockup Query Description",
-                    ConstructQuery = new SparqlQueryInfo()
+                    ConstructQuery = new SparqlQueryInfo
                     {
                         //parameters that can be substituted have to be marked as @ not just ?
                         Query = @"DESCRIBE @u",
@@ -31,19 +27,19 @@ namespace DragqnLD.WebApi.Controllers
                         SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     },
                     ConstructQueryUriParameterName = "u",
-                    SelectQuery = new SparqlQueryInfo()
+                    SelectQuery = new SparqlQueryInfo
                     {
                         Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
                         SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     }
                 },
-                new QueryDefinition()
+                new QueryDefinition
                 {
                     Id = "Query/2",
                     Name = "Test Query 2",
                     Description = "Mockup Query Descirption 2",
-                    ConstructQuery = new SparqlQueryInfo()
+                    ConstructQuery = new SparqlQueryInfo
                     {
                         //parameters that can be substituted have to be marked as @ not just ?
                         Query = @"DESCRIBE @u",
@@ -51,7 +47,7 @@ namespace DragqnLD.WebApi.Controllers
                         SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                     },
                     ConstructQueryUriParameterName = "u",
-                    SelectQuery = new SparqlQueryInfo()
+                    SelectQuery = new SparqlQueryInfo
                     {
                         Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                         DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
@@ -66,12 +62,12 @@ namespace DragqnLD.WebApi.Controllers
         // GET api/queries/5
         public QueryDefinitionDto Get(string id)
         {
-            var query = new QueryDefinition()
+            var query = new QueryDefinition
             {
                 Id = id,
                 Name = "Test",
                 Description = "Test",
-                ConstructQuery = new SparqlQueryInfo()
+                ConstructQuery = new SparqlQueryInfo
                 {
                     //parameters that can be substituted have to be marked as @ not just ?
                     Query = @"DESCRIBE @u",
@@ -79,7 +75,7 @@ namespace DragqnLD.WebApi.Controllers
                     SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
                 },
                 ConstructQueryUriParameterName = "u",
-                SelectQuery = new SparqlQueryInfo()
+                SelectQuery = new SparqlQueryInfo
                 {
                     Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
                     DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),

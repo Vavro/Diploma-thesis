@@ -37,7 +37,7 @@ namespace DragqnLD.Core.Abstraction.Data
                             {
                                 throw new NotSupportedException(String.Format("In Path {0} no member access type specified between two member names, character index {1}", path, i));
                             }
-                            yield return new PropertyPathPart() {MemberName = currentMemberName, Type = currentMemberAccessType};
+                            yield return new PropertyPathPart {MemberName = currentMemberName, Type = currentMemberAccessType};
                             currentMemberAccessType = MemberAccessType.Single;
                             currentMemberAccessTypeSet = false;
                         }

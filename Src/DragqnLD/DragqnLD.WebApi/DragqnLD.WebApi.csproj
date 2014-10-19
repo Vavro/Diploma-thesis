@@ -175,6 +175,7 @@
     <Compile Include="Models\QueryDefinitionDto.cs" />
     <Compile Include="Models\QueryMetadataDto.cs" />
     <Compile Include="Models\SparqlQueryInfoDto.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

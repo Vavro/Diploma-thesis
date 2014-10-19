@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
-using Raven.Client.Linq;
 using VDS.RDF;
 using VDS.RDF.Query;
 
@@ -22,7 +20,7 @@ namespace DragqnLD.Core.Implementations
                 {
                     var sparqlResultSet = endpoint.QueryWithResultSet(selectSparqlQuery.Query);
 
-                    string variableName = null;
+                    string variableName;
                     try
                     {
                         variableName = sparqlResultSet.Variables.Single();

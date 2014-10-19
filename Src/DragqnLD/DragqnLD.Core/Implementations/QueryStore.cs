@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using Raven.Client;
-using VDS.RDF.Query.Algebra;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -14,16 +10,16 @@ namespace DragqnLD.Core.Implementations
     {
         //todo: Inject session from current call - Raven session will be tied to one REST call?
 
-        private readonly IDocumentStore Store;
+        private readonly IDocumentStore _store;
         
         public QueryStore(IDocumentStore store)
         {
-            Store = store;
+            _store = store;
         }
 
         public async Task<string> Add(QueryDefinition definition)
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
                 await session.StoreAsync(definition);
                 await session.SaveChangesAsync();
@@ -33,7 +29,7 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<QueryDefinition> Get(string key)
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
                 var queryDefinition = await session.LoadAsync<QueryDefinition>(key);
                 return queryDefinition;
@@ -42,7 +38,7 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<IEnumerable<QueryDefinition>> GetAllDefinitions()
         {
-            using (var session = Store.OpenAsyncSession())
+            using (var session = _store.OpenAsyncSession())
             {
                 return await session.Query<QueryDefinition>().ToListAsync();
             }

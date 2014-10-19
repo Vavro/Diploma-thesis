@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Cors;
 using DragqnLD.WebApi.App_Start;
 using DragqnLD.WebApi.Filters;
@@ -27,7 +24,7 @@ namespace DragqnLD.WebApi
 
             config.Filters.Add(new ValidateModelFilter());
 
-            AutoMapperConfig.Configure();
+            AutoMapperConfig.ConfigureMapper();
         }
     }
 }

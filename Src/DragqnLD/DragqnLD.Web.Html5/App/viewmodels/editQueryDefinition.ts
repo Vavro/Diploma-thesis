@@ -27,6 +27,7 @@ class editQueryDefinition extends viewModelBase {
                     canActivateResult.resolve({ can: true });
                 })
                 .fail((response) => {
+                    //todo examine possible response and show it
                     this.notifyWarning("Could not get document " + args.id);
                 });
 
@@ -49,7 +50,7 @@ class editQueryDefinition extends viewModelBase {
         this.isCreatingNewQueryDefinition(true);
         this.queryDefinition(queryDefinition.empty());
         this.errors = ko.validation.group(this.queryDefinition, { deep: true });
-        this.isValid = ko.computed({ owner: this, read: () => {return this.errors().length === 0 } });
+        this.isValid = ko.computed({ owner: this, read: () => { return this.errors().length === 0; } });
     }
 
     navigateToQueries(): void {
