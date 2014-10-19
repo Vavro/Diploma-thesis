@@ -9,9 +9,9 @@ namespace DragqnLD.WebApi.Models
         public string Query { get; set; }
         [Required]
         [Url]
-        public Uri SparqlEndpoint { get; set; }
+        public string SparqlEndpoint { get; set; }
         [Required]
         [Url]
-        public Uri DefaultDataSet { get; set; }
+        public string DefaultDataSet { get; set; }
     }
 }
