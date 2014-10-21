@@ -14,12 +14,14 @@ class commandBase {
         var ajax = this.ajax(relativeUrl, args, "GET");
         if (resultsSelector) {
             var task = $.Deferred();
+            /* tslint:disable:typedef */
             ajax.done((results, status, xhr) => {
                 var transformedResults = resultsSelector(results);
                 task.resolve(transformedResults);
             });
             ajax.fail((request, status, error) => {
                 task.reject(request, status, error);
+            /* tslint:enable:typedef */
             });
             return task;
         } else {
@@ -70,7 +72,9 @@ class commandBase {
 
         if (options) {
             for (var prop in options) {
-                defaultOptions[prop] = options[prop];
+                if (options.hasOwnProperty(name)) {
+                    defaultOptions[prop] = options[prop];
+                }
             }
         }
 

@@ -3,12 +3,12 @@
 import getQueriesCommand = require("commands/getQueriesCommand");
 
 class queries {
-    queries = ko.observableArray();
+    queriesList = ko.observableArray();
     isAttached = ko.observable(false);
     activate(): void {
         new getQueriesCommand().execute().done(results => {
             // console.log(results);
-            this.queries(results);
+            this.queriesList(results);
         });
     }
 

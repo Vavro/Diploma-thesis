@@ -1,4 +1,4 @@
-﻿import sparqlQueryInfo = require('models/sparqlQueryInfo')
+﻿import sparqlQueryInfo = require("models/sparqlQueryInfo");
 
 class queryDefinition {
     id = ko.observable<string>().extend({ required: true });
@@ -45,7 +45,7 @@ class queryDefinition {
             constructQueryUriParameterName: this.constructQueryUriParameterName(),
             constructQuery: this.constructQuery.toDto(),
             selectQuery: this.selectQuery.toDto()
-        }
+        };
     }
 }
 

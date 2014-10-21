@@ -1,10 +1,10 @@
-﻿import app = require('durandal/app');
+﻿import app = require("durandal/app");
 import viewModelBase = require("viewmodels/viewModelBase");
 
 class home extends viewModelBase {
     name = ko.observable();
     sayHello() : void {
-        app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
+        app.showMessage("Hello " + this.name() + "! Nice to meet you.", "Greetings");
     }
 
     testNotif(): void {
@@ -14,7 +14,7 @@ class home extends viewModelBase {
 
 export = home;
 
-//define(function (require) {
+// define(function (require) {
 //    var app = require('durandal/app'),
 //        ko = require('knockout');
 
@@ -24,4 +24,4 @@ export = home;
 //            app.showMessage('Hello ' + this.name() + '! Nice to meet you.', 'Greetings');
 //        }
 //    };
-//});  
+// });  

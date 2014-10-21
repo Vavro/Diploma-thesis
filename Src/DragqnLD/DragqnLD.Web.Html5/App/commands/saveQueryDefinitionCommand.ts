@@ -10,10 +10,10 @@ class saveQueryDefinitionCommnad extends commandBase {
         var args = JSON.stringify(this.newQueryDefinition.toDto());
         var url = "/queries";
         var saveTask = this.post(url, args);
-        saveTask.done(() => {
+        saveTask.done(() : void => {
             this.notifySuccess("Saved " + this.newQueryDefinition.id());
         });
-        saveTask.fail((response: JQueryXHR) => {
+        saveTask.fail((response: JQueryXHR) : void => {
             this.notifyError("Failed to save " + this.newQueryDefinition.id(), response.responseText, response.statusText);
         });
 

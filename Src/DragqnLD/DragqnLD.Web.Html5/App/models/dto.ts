@@ -2,7 +2,7 @@
     id: string;
     name: string;
     description: string;
-} 
+}
 
 interface queryDefinitionDto extends queryDefinitionMetadataDto {
     constructQueryUriParameterName: string;

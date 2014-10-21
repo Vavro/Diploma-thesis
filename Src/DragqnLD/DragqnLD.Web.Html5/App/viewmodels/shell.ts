@@ -1,4 +1,4 @@
-﻿import router = require('plugins/router');
+﻿import router = require("plugins/router");
 
 import dynamicHeightBindingHandler = require("common/dynamicHeightBindingHandler");
 
@@ -12,11 +12,11 @@ class shell {
     }
 
     activate() : any {
-        router.map([
-        { route: '', title: 'Home', moduleId: 'viewmodels/home', nav: true },
-        { route: 'queries', title: 'Queries', moduleId: 'viewmodels/queries', nav: true },
-        { route: 'editQuery', title: 'Edit Query Definition', moduleId: 'viewmodels/editQueryDefinition', nav: false },
-        { route: 'notifications', title: '', moduleId: 'viewmodels/notifications', nav: false }
+        this.router.map([
+        { route: "", title: "Home", moduleId: "viewmodels/home", nav: true },
+        { route: "queries", title: "Queries", moduleId: "viewmodels/queries", nav: true },
+        { route: "editQuery", title: "Edit Query Definition", moduleId: "viewmodels/editQueryDefinition", nav: false },
+        { route: "notifications", title: "", moduleId: "viewmodels/notifications", nav: false }
         ]).buildNavigationModel();
 
         return router.activate();
@@ -25,7 +25,7 @@ class shell {
 
 export = shell;
 
-//define(function (require) {
+// define(function (require) {
 //    var router = require('plugins/router');
 
 //    return {
@@ -38,4 +38,4 @@ export = shell;
 //            return router.activate();
 //        }
 //    };
-//});
+// });

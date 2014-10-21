@@ -9,7 +9,7 @@ class editQueryDefinition extends viewModelBase {
     queryDefinition = ko.observable<queryDefinition>();
     editedQueryId: KnockoutComputed<string>;
     isCreatingNewQueryDefinition = ko.observable(false);
-    errors: KnockoutValidationErrors; //needs to init after queryDefinition is set
+    errors: KnockoutValidationErrors; // needs to init after queryDefinition is set
     isValid: KnockoutComputed<boolean>;
 
     constructor() {
@@ -22,12 +22,12 @@ class editQueryDefinition extends viewModelBase {
             var canActivateResult = $.Deferred();
             new getQueryDefinitionCommand(args.id)
                 .execute()
-                .done((queryDefinition: queryDefinition) => {
+                .done((queryDefinition: queryDefinition) : void => {
                     this.queryDefinition(queryDefinition);
                     canActivateResult.resolve({ can: true });
                 })
-                .fail((response) => {
-                    //todo examine possible response and show it
+                .fail((response : any) : void => {
+                    // todo examine possible response and show it
                     this.notifyWarning("Could not get document " + args.id);
                 });
 
@@ -50,7 +50,7 @@ class editQueryDefinition extends viewModelBase {
         this.isCreatingNewQueryDefinition(true);
         this.queryDefinition(queryDefinition.empty());
         this.errors = ko.validation.group(this.queryDefinition, { deep: true });
-        this.isValid = ko.computed({ owner: this, read: () => { return this.errors().length === 0; } });
+        this.isValid = ko.computed({ owner: this, read: () : boolean => { return this.errors().length === 0; } });
     }
 
     navigateToQueries(): void {
@@ -70,7 +70,7 @@ class editQueryDefinition extends viewModelBase {
         var saveCommand = new saveQueryDefinitionCommand(queryDef);
         saveCommand
             .execute()
-            .done(() => {
+            .done(() : void => {
 
             }); // fail reseno v ramci commands
 

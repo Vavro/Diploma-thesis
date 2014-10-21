@@ -18,7 +18,7 @@
             query: this.query(),
             sparqlEndpoint: this.sparqlEndpoint(),
             defaultDataSet: this.defaultDataSet()
-        }
+        };
     }
 }
 

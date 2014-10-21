@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="form">
-                        <div class="col-sm-6 col-sm-first" data-bind="with: selectQuery">
+                        <div class="col-sm-first col-sm-6" data-bind="with: selectQuery">
                             <div class="form-group" data-bind="validationElement: sparqlEndpoint">
                                 <label class="control-label" for="SelectQueryEnpointAddress">Select Query Enpoint Address</label>
                                 <div>
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-sm-last" data-bind="with: constructQuery">
+                        <div class="col-sm-last col-sm-6" data-bind="with: constructQuery">
                             <div class="form-group" data-bind="validationElement: sparqlEndpoint">
                                 <label class="control-label" for="ConstructQueryEnpointAddress">Construct Query Enpoint Address</label>
                                 <div>
@@ -99,11 +99,12 @@
                         </div>
                     </div>
                 </div>
-                <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition, enable: isValid" >
-                    <i class="fa fa-save fa-inverse fa-lg"></i>&nbsp;Save
-                </button>
-                <button id="btn_cancel" name="btn_cancel" class="btn btn-danger"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
-
+                <div class="col-sm-12">
+                    <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition, enable: isValid">
+                        <i class="fa fa-save fa-inverse fa-lg"></i>&nbsp;Save
+                    </button>
+                    <button id="btn_cancel" name="btn_cancel" class="btn btn-danger"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
+                </div>
             </fieldset>
         </form>
 

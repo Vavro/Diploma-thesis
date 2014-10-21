@@ -3,7 +3,7 @@
         errors: "errors",
         warnings: "warnings",
         success: "success"
-    } 
+    };
 }
 
 export = constants;
