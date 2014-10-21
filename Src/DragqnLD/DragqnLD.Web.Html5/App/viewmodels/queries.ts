@@ -21,6 +21,10 @@ class queries {
     newQueryDefinition() : void {
         router.navigate("#editQuery");
     }
+
+    viewQueryDefinition(): void {
+        router.navigate("#viewQuery");
+    }
 }
 
 export = queries;

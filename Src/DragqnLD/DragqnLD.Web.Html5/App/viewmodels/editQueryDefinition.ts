@@ -71,7 +71,7 @@ class editQueryDefinition extends viewModelBase {
         saveCommand
             .execute()
             .done(() : void => {
-
+                router.navigate("#viewQuery");
             }); // fail reseno v ramci commands
 
     }
