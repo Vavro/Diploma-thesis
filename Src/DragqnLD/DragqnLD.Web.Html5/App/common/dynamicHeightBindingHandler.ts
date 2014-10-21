@@ -60,7 +60,8 @@ class dynamicHeightBindingHandler {
         }
     }
 
-    stickToTarget(element: HTMLElement, targetSelector: string, bottomMargin: number) : void {
+    stickToTarget(element: HTMLElement, targetSelector: string, bottomMargin: number): void {
+        /* tslint:disable:no-unused-variable */
         var targetElement = $(targetSelector);
         if (targetSelector.length === 0) {
             throw new Error("Couldn't configure dynamic height because the target element isn't on the page. Target element: "
