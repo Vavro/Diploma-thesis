@@ -98,7 +98,7 @@
     "EvalTreatment": "MakeImmediateSafe",
     "GenerateSourceMaps": true,
     "GzipMinifiedFiles": false,
-    "LintOnBuild": true,
+    "LintOnBuild": false,
     "LintOnSave": true,
     "LintResultLocation": "Message",
     "MakeMinified": true,
@@ -175,7 +175,7 @@
     "ShowPreviewPane": true
   },
   "TypeScript": {
-    "LintOnBuild": true,
+    "LintOnBuild": false,
     "LintOnSave": true,
     "LintResultLocation": "Message",
     "ShowPreviewPane": true
