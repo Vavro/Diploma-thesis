@@ -31,7 +31,7 @@
 </head>
 <body>
     <script id="idTemplate" type="text/template">
-        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : '#viewQuery?id=' + $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
     </script>
 
     <div id="applicationHost">

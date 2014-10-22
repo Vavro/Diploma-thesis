@@ -15,7 +15,9 @@
             <div data-bind="koGrid: { data : queriesList,
                                 columnDefs: columnList,
                                 autogenerateColumns: false,
-                                isMultiSelect: false},
+                                multiSelect: false,
+                                displaySelectionCheckbox: false,
+                                selectWithCheckboxOnly: true},
                                 dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }">
 
             </div>
