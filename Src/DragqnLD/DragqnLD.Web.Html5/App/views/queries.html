@@ -13,9 +13,7 @@
         <div>
             <!-- ko if: isAttached() -->
             <div data-bind="koGrid: { data : queriesList,
-                                columnDefs: [ { field: 'Id', displayName: 'Id'},
-                                                { field: 'Name', displayName: 'Name'},
-                                                { field: 'Description', displayName: 'Description'}],
+                                columnDefs: columnList,
                                 autogenerateColumns: false,
                                 isMultiSelect: false},
                                 dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }">

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="Content/font-awesome.css" />
     <link rel="stylesheet" href="Content/durandal.css" />
     <link rel="stylesheet" href="Content/starterkit.css" />
-    <link rel="stylesheet" href="Content/KoGrid.css"/>
+    <link rel="stylesheet" href="Content/KoGrid.css" />
     <link rel="stylesheet" href="Content/toastr.css" />
 
     <script type="text/javascript">
@@ -30,6 +30,10 @@
     <meta name="description" content="DragqnLD administration interface" />
 </head>
 <body>
+    <script id="idTemplate" type="text/template">
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
+    </script>
+
     <div id="applicationHost">
         <div class="splash">
             <div class="message">
@@ -38,7 +42,7 @@
             <i class="fa fa-spinner fa-2x fa-spin active"></i>
         </div>
     </div>
-    
+
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="Scripts/knockout-3.2.0.debug.js"></script>
     <script src="Scripts/koGrid-2.1.1.debug.js"></script>
