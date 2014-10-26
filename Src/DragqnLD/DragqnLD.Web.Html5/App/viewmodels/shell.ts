@@ -1,6 +1,7 @@
 ﻿import router = require("plugins/router");
 
 import dynamicHeightBindingHandler = require("common/dynamicHeightBindingHandler");
+import aceEditorBindingHandler = require("common/aceEditorBindingHandler");
 
 class shell {
     private router = router;
@@ -8,7 +9,7 @@ class shell {
     constructor() {
 
         dynamicHeightBindingHandler.install();
-
+        aceEditorBindingHandler.install();
     }
 
     activate() : any {

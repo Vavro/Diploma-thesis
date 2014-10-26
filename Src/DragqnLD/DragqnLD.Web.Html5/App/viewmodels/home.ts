@@ -3,7 +3,10 @@ import viewModelBase = require("viewmodels/viewModelBase");
 
 class home extends viewModelBase {
     name = ko.observable();
-    sayHello() : void {
+
+    queryText = ko.observable("SELECT ?s ?p ?o WHERE {?s ?p ?o}");
+
+sayHello() : void {
         app.showMessage("Hello " + this.name() + "! Nice to meet you.", "Greetings");
     }
 
