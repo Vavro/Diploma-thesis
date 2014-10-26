@@ -992,8 +992,11 @@
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueriesCommand.ts" />
+    <TypeScriptCompile Include="App\common\aceEditorBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\constants.ts" />
     <TypeScriptCompile Include="App\common\dynamicHeightBindingHandler.ts" />
+    <TypeScriptCompile Include="App\common\extensionInterfaces.ts" />
+    <TypeScriptCompile Include="App\common\extensions.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />
     <TypeScriptCompile Include="App\models\sparqlQueryInfo.ts" />
@@ -1004,7 +1007,9 @@
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
     <TypeScriptCompile Include="App\viewmodels\viewModelBase.ts" />
     <TypeScriptCompile Include="App\viewmodels\viewQueryDefinition.ts" />
+    <TypeScriptCompile Include="Scripts\typings\ace\ace.amd.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\ace\ace.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\ace\aceExt.ts" />
     <TypeScriptCompile Include="Scripts\typings\bootstrap\bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\durandal\durandal.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />

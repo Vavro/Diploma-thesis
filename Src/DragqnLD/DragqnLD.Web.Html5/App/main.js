@@ -5,7 +5,8 @@
         plugins: '../Scripts/durandal/plugins',
         transitions: '../Scripts/durandal/transitions',
         knockout: '../Scripts/knockout-3.2.0',
-        jquery: '../Scripts/jquery-2.1.1'
+        jquery: '../Scripts/jquery-2.1.1',
+        ace: '../Scripts/ace'
     }
 });
 
