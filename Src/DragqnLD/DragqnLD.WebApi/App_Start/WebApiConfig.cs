@@ -15,10 +15,18 @@ namespace DragqnLD.WebApi
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "QueriesApiController",
+                routeTemplate: "queries/{*id}",
+                defaults: new { controller = "Queries", action = "Get", id = RouteParameter.Optional }
+            );
+
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
 
             config.EnableCors(new EnableCorsAttribute("*","*","*"));
 
