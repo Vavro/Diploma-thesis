@@ -120,3 +120,5 @@ UpgradeLog*.XML
 
 /Src/DragqnLD/DragqnLD.Web.Html5/Scripts/typings/ace/aceExt.js
 /Src/DragqnLD/DragqnLD.Web.Html5/Scripts/typings/ace/aceExt.js.map
+
+/Src/DragqnLD/DragqnLD.Web.Html5/Scripts/typings/jquery.fullscreen/jquery.fullscreen.js
