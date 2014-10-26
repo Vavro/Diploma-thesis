@@ -29,13 +29,13 @@
             <h4>Construct Query</h4>
             <div data-bind="with: constructQuery">
                 Query text: <span data-bind="text: query"></span><p />
-                Sparql endpoing: <span data-bind="text: sparqlEndpoint"></span><p />
-                Default Dataset: <span data-bind="text: defaultDataSet"></span>
+                Sparql endpoing: <a data-bind="text: sparqlEndpoint, attr:{href: sparqlEndpoint}"></a><p />
+                Default Dataset: <a data-bind="text: defaultDataSet, attr:{href: sparqlEndpoint}"></a>
             </div>
             <h4>Select Query</h4>
             <div data-bind="with: selectQuery">
-                Sparql endpoing: <span data-bind="text: sparqlEndpoint"></span><p />
-                Default Dataset: <span data-bind="text: defaultDataSet"></span><p />
+                Sparql endpoing: <a data-bind="text: sparqlEndpoint, attr:{href: sparqlEndpoint}"></a><p />
+                Default Dataset: <a data-bind="text: defaultDataSet, attr:{href: sparqlEndpoint}"></a><p />
                 Query text: <span data-bind="text: query"></span>
             </div>
         </div>
