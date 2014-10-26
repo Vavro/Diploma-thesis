@@ -117,3 +117,6 @@ UpgradeLog*.XML
 
 /Src/DragqnLD/DragqnLD.Web.Html5/App/viewmodels/*.js
 /Src/DragqnLD/DragqnLD.Web.Html5/App/viewmodels/*.js.map
+
+/Src/DragqnLD/DragqnLD.Web.Html5/Scripts/typings/ace/aceExt.js
+/Src/DragqnLD/DragqnLD.Web.Html5/Scripts/typings/ace/aceExt.js.map
