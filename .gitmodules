@@ -1,3 +1,0 @@
-[submodule "Src/DragqnLD/DragqnLD.Web.Html5/Scripts/ace"]
-	path = Src/DragqnLD/DragqnLD.Web.Html5/Scripts/ace
-	url = git://github.com/ajaxorg/ace.git
