@@ -10,41 +10,41 @@ class queryDefinition {
 
     constructor(dto: queryDefinitionDto) {
 
-        this.id(dto.id);
-        this.name(dto.name);
-        this.description(dto.description);
-        this.constructQueryUriParameterName(dto.constructQueryUriParameterName);
-        this.constructQuery = new sparqlQueryInfo(dto.constructQuery);
-        this.selectQuery = new sparqlQueryInfo(dto.selectQuery);
+        this.id(dto.Id);
+        this.name(dto.Name);
+        this.description(dto.Description);
+        this.constructQueryUriParameterName(dto.ConstructQueryUriParameterName);
+        this.constructQuery = new sparqlQueryInfo(dto.ConstructQuery);
+        this.selectQuery = new sparqlQueryInfo(dto.SelectQuery);
     }
 
     public static empty(): queryDefinition {
         return new queryDefinition({
-            id: "",
-            name: "",
-            description: "",
-            constructQueryUriParameterName: "",
-            constructQuery: {
-                query: "",
-                defaultDataSet: "",
-                sparqlEndpoint: ""
+            Id: "",
+            Name: "",
+            Description: "",
+            ConstructQueryUriParameterName: "",
+            ConstructQuery: {
+                Query: "",
+                DefaultDataSet: "",
+                SparqlEndpoint: ""
             },
-            selectQuery: {
-                query: "",
-                defaultDataSet: "",
-                sparqlEndpoint: ""
+            SelectQuery: {
+                Query: "",
+                DefaultDataSet: "",
+                SparqlEndpoint: ""
             }
         });
     }
 
     public toDto(): queryDefinitionDto {
         return {
-            id: this.id(),
-            name: this.name(),
-            description: this.description(),
-            constructQueryUriParameterName: this.constructQueryUriParameterName(),
-            constructQuery: this.constructQuery.toDto(),
-            selectQuery: this.selectQuery.toDto()
+            Id: this.id(),
+            Name: this.name(),
+            Description: this.description(),
+            ConstructQueryUriParameterName: this.constructQueryUriParameterName(),
+            ConstructQuery: this.constructQuery.toDto(),
+            SelectQuery: this.selectQuery.toDto()
         };
     }
 }

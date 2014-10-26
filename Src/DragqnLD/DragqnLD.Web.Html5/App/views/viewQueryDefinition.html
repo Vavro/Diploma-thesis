@@ -9,9 +9,43 @@
                 </h3>
             </li>
             <li class="active">
-                <span data-bind="text: title"></span>
+                <span data-bind="text: queryId"></span>
             </li>
         </ul>
     </div>
-    <h2 data-bind="text: title"></h2>
+    <div class="row">
+        <h2 data-bind="text: queryId"></h2>
+        <div class="col-sm-4" data-bind="with:queryDefinition">
+            <div>
+                Name: <span data-bind="text: name"></span> <p />
+                Description: <span data-bind="text: description"></span> <p /> <!-- todo: word wrapping for long descriptions -->
+                Status: <!-- todo add status for queries --> <p />
+                Document Count: <!-- todo add document count to queries -->
+            </div>
+            <h3>Query parameters</h3>
+            <div>
+                Parameter name: <span data-bind="text: constructQueryUriParameterName"></span>
+            </div>
+            <h4>Construct Query</h4>
+            <div data-bind="with: constructQuery">
+                Query text: <span data-bind="text: query"></span><p />
+                Sparql endpoing: <span data-bind="text: sparqlEndpoint"></span><p />
+                Default Dataset: <span data-bind="text: defaultDataSet"></span>
+            </div>
+            <h4>Select Query</h4>
+            <div data-bind="with: selectQuery">
+                Sparql endpoing: <span data-bind="text: sparqlEndpoint"></span><p />
+                Default Dataset: <span data-bind="text: defaultDataSet"></span><p />
+                Query text: <span data-bind="text: query"></span>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <h3>Indexes</h3>
+            <div>
+                <!-- todo add indexes list-->
+                <div class="pull-right"><button type="button" class="btn btn-primary"><i class="fa fa-plus" />Add</button></div>
+            </div>
+
+        </div>
+    </div>
 </section>

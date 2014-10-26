@@ -4,20 +4,20 @@
     defaultDataSet = ko.observable<string>().extend({required : true});
 
     constructor(dto: sparqlQueryInfoDto) {
-        this.query(dto.query);
-        this.sparqlEndpoint(dto.sparqlEndpoint);
-        this.defaultDataSet(dto.defaultDataSet);
+        this.query(dto.Query);
+        this.sparqlEndpoint(dto.SparqlEndpoint);
+        this.defaultDataSet(dto.DefaultDataSet);
     }
 
     public static empty(): sparqlQueryInfo {
-        return new sparqlQueryInfo({ query: "", sparqlEndpoint: "", defaultDataSet: "" });
+        return new sparqlQueryInfo({ Query: "", SparqlEndpoint: "", DefaultDataSet: "" });
     }
 
     public toDto(): sparqlQueryInfoDto {
         return {
-            query: this.query(),
-            sparqlEndpoint: this.sparqlEndpoint(),
-            defaultDataSet: this.defaultDataSet()
+            Query: this.query(),
+            SparqlEndpoint: this.sparqlEndpoint(),
+            DefaultDataSet: this.defaultDataSet()
         };
     }
 }

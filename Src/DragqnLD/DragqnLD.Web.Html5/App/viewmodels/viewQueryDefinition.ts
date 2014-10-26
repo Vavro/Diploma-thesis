@@ -5,7 +5,6 @@ import queryDefinition = require("models/queryDefinition");
 import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand");
 
 class viewQueryDefinition extends viewModelBase {
-    title = ko.observable("Query Definition detail");
 
     queryDefinition = ko.observable<queryDefinition>();
     queryId: KnockoutComputed<string>;
