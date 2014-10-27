@@ -438,6 +438,8 @@
     <Content Include="Scripts\ace\mode\soy_template_highlight_rules.js" />
     <Content Include="Scripts\ace\mode\space.js" />
     <Content Include="Scripts\ace\mode\space_highlight_rules.js" />
+    <Content Include="Scripts\ace\mode\sparql.js" />
+    <Content Include="Scripts\ace\mode\sparql_highlight_rules.js" />
     <Content Include="Scripts\ace\mode\sql.js" />
     <Content Include="Scripts\ace\mode\sql_highlight_rules.js" />
     <Content Include="Scripts\ace\mode\stylus.js" />
@@ -619,6 +621,7 @@
     <Content Include="Scripts\ace\snippets\snippets.js" />
     <Content Include="Scripts\ace\snippets\soy_template.js" />
     <Content Include="Scripts\ace\snippets\space.js" />
+    <Content Include="Scripts\ace\snippets\sparql.js" />
     <Content Include="Scripts\ace\snippets\sql.js" />
     <Content Include="Scripts\ace\snippets\stylus.js" />
     <Content Include="Scripts\ace\snippets\svg.js" />
