@@ -265,7 +265,7 @@ class aceEditorBindingHandler {
         if (this.previousLinesCount != currentLinesCount) {
             var newHeight = currentLinesCount
                 * aceEditor.renderer.lineHeight
-                + (<any>aceEditor.renderer).scrollBar.getWidth();
+                + (<any>aceEditor.renderer).scrollBar.getWidth()
             + 10; // few pixels extra padding
 
             if (newHeight < this.minHeight) {
