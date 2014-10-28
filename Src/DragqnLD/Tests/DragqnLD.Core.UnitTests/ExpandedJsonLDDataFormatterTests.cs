@@ -102,15 +102,26 @@ namespace DragqnLD.Core.UnitTests
                 var id = idPrefix + idWithoutNamespace;
 
                 var outputFileName = outputFolder + idWithoutNamespace + ".out.json";
-                
-                using( var o = new FileStream(outputFileName, FileMode.Create))
-                using(var outputFile = new StreamWriter(o))
-                { 
-                
-                    GetFormatted(inputFileName, id, outputFile);
 
-                    outputFile.Flush();
-                    outputFile.Close();
+                FileStream o = null;
+                try
+                {
+                    o = new FileStream(outputFileName, FileMode.Create);
+                    using (var outputFile = new StreamWriter(o))
+                    {
+                        o = null;
+
+                        GetFormatted(inputFileName, id, outputFile);
+
+                        outputFile.Flush();
+                    }
+                }
+                finally
+                {
+                    if (o != null)
+                    {
+                        o.Dispose();
+                    }
                 }
             }
 
