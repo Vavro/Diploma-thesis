@@ -69,7 +69,7 @@
                             <div class="form-group" data-bind="validationElement: query">
                                 <label class="control-label" for="SelectQuery">Select Query</label>
                                 <div>
-                                    <textarea rows="40" class="form-control" id="SelectQuery" name="SelectQuery" data-bind="value: query, valueUpdate: 'input'" placeholder="Define the Select Query that is to be run to get the parameters for the Construct Query"></textarea>
+                                    <pre id="queryEditorSelect" class="form-control" data-bind="aceEditor: { code: query, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
                                     <span class="help-block">Define the Select Query that is to be run to get the parameters for the Construct Query</span>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             <div class="form-group" data-bind="validationElement: query">
                                 <label class="control-label" for="ConstructQuery">Construct Query</label>
                                 <div>
-                                    <textarea rows="40" class="form-control" id="ConstructQuery" name="ConstructQuery" data-bind="value: query, valueUpdate: 'input'" placeholder="Define the Construct Query shaping the data, with a variable that is going to be filled by the Select Query results"></textarea>
+                                    <pre id="queryEditorConstruct" class="form-control" data-bind="aceEditor: { code: query, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
                                     <span class="help-block">Define the Construct Query shaping the data, with a variable that is going to be filled by the Select Query results</span>
                                 </div>
                             </div>
