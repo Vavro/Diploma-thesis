@@ -39,8 +39,8 @@ class aceEditorBindingHandler {
             composition.addBindingHandler("aceEditor");
 
 
-            var Editor = require("ace/editor").Editor;
-            require("ace/config").defineOptions(Editor.prototype, "editor", {
+            var editorRequire = require("ace/editor").Editor;
+            require("ace/config").defineOptions(editorRequire.prototype, "editor", {
                 editorType: {
                     set: function (val) {
                     },

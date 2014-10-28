@@ -10,8 +10,8 @@ namespace DragqnLD.Core.Implementations
     //query analysis should give out the replacement strings
     public class DocumentPropertyEscaper : IDocumentPropertyEscaper
     {
-        private PropertyMappings propertyMappings = new PropertyMappings();
-        public PropertyMappings PropertyMappings { get { return propertyMappings; } }
+        private readonly PropertyMappings _propertyMappings = new PropertyMappings();
+        public PropertyMappings PropertyMappings { get { return _propertyMappings; } }
 
         public void EscapeDocumentProperies(JObject document)
         {
@@ -67,7 +67,7 @@ namespace DragqnLD.Core.Implementations
             {
                 var oldPropertyName = keyValuePair.Key;
                 var newPropertyName = keyValuePair.Value;
-                propertyMappings.AddMapping(oldPropertyName, newPropertyName);
+                _propertyMappings.AddMapping(oldPropertyName, newPropertyName);
 
                 var property = document.Property(oldPropertyName);
                 // ReSharper disable once CoVariantArrayConversion

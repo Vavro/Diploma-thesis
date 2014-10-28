@@ -20,7 +20,6 @@
 
         // Array.removeAll
         arrayPrototype.removeAll = function (items: Array<any>) {
-            var i = 0;
             var self: Array<any> = this;
             for (var i = self.length - 1; i >= 0 && items.length > 0; i--) {
                 var itemsIndex = items.indexOf(self[i]);

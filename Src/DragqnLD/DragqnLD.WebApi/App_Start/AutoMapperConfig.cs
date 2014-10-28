@@ -5,7 +5,7 @@ using DragqnLD.WebApi.Models;
 // ReSharper disable once CheckNamespace
 namespace DragqnLD.WebApi.App_Start
 {
-    public class AutoMapperConfig
+    public static class AutoMapperConfig
     {
         class DragqnLDProfile : Profile
         {

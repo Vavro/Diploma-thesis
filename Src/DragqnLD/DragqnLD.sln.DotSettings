@@ -2,5 +2,10 @@
 	<s:Boolean x:Key="/Default/CodeInspection/CodeAnnotations/NamespacesWithAnnotations/=DragqnLD_002EWebApi_002EAnnotations/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AAreas_002Fd_003AHelpPage/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AAreas_002Fd_003AHelpPage_002Fd_003ASampleGeneration/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AAreas_002Fd_003ARouteDebugger/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AContent_002Ff_003Abootstrap_002D2_002E2_002E2_002Ecss/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AContent_002Ff_003Abootstrap_002Dtheme_002Ecss/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C5E23BDF_002D0762_002D43A0_002D82A5_002D84709C131A4E_002Fd_003AScripts/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=FC0188CE_002DA5F5_002D4289_002D96CC_002D67434B99598B_002Fd_003AScripts/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/Abbreviations/=LD/@EntryIndexedValue">LD</s:String>
 	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FCLASS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String></wpf:ResourceDictionary>
