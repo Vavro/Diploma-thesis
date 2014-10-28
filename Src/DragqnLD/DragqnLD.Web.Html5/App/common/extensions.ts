@@ -1,15 +1,15 @@
 ﻿class extensions {
-    static install() {
+    static install() : void {
         extensions.installArrayExtensions();
 
         // Want Intellisense for your extensions?
         // Go to extensionInterfaces.ts and add the function signature there.
     }
 
-    private static installArrayExtensions() {
+    private static installArrayExtensions() : void {
         // Array.remove
         var arrayPrototype: any = Array.prototype;
-        arrayPrototype.remove = function (item) {
+        arrayPrototype.remove = function (item : any) : number {
             var self: any[] = this;
             var index = self.indexOf(item);
             if (index >= 0) {
@@ -19,7 +19,7 @@
         };
 
         // Array.removeAll
-        arrayPrototype.removeAll = function (items: Array<any>) {
+        arrayPrototype.removeAll = function (items: Array<any>) : void {
             var self: Array<any> = this;
             for (var i = self.length - 1; i >= 0 && items.length > 0; i--) {
                 var itemsIndex = items.indexOf(self[i]);
@@ -31,13 +31,12 @@
         };
 
         // Array.first
-        arrayPrototype.first = function (filter?: (item) => boolean) {
+        arrayPrototype.first = function (filter?: (item : any) => boolean) : any {
             var self: any[] = this;
             if (self.length > 0) {
                 if (filter) {
                     return ko.utils.arrayFirst(self, filter);
-                }
-                else if (self.length > 0) {
+                } else if (self.length > 0) {
                     return self[0];
                 }
             }
@@ -46,7 +45,7 @@
         };
 
         // Array.last
-        arrayPrototype.last = function (filter?: (item) => boolean) {
+        arrayPrototype.last = function (filter?: (item : any) => boolean) : any {
             var self: any[] = this;
             if (filter) {
                 for (var i = self.length - 1; i > 0; i--) {
@@ -54,8 +53,7 @@
                         return self[i];
                     }
                 }
-            }
-            else if (self.length > 0) {
+            } else if (self.length > 0) {
                 return self[self.length - 1];
             }
 
@@ -63,18 +61,18 @@
         };
 
         // Array.pushAll
-        arrayPrototype.pushAll = function (items: Array<any>) {
+        arrayPrototype.pushAll = function (items: Array<any>) : void {
             this.push.apply(this, items);
         };
 
         // Array.contains
-        arrayPrototype.contains = function (item: any) {
+        arrayPrototype.contains = function (item: any) : boolean {
             var self: any[] = this;
             return self.indexOf(item) !== -1;
         };
 
         // Array.count
-        arrayPrototype.count = function (filter?: (item) => boolean) {
+        arrayPrototype.count = function (filter?: (item : any) => boolean) : number {
             var self: any[] = this;
             if (filter) {
                 var matches = 0;
@@ -91,7 +89,7 @@
         };
 
         // Array.count
-        arrayPrototype.distinct = function () {
+        arrayPrototype.distinct = function () : Array<any> {
             var distinctElements = [];
             for (var i = 0; i < this.length; i++) {
                 var element = this[i];
