@@ -11,6 +11,9 @@
         <pre id="queryEditor" class="form-control" data-bind="aceEditor: { code: queryText, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
     </form>
     <form>
+        <pre id="queryEditorRO" class="form-control" data-bind="aceEditor: { code: queryText, readOnly: true, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
+    </form>
+    <form>
         <fieldset>
             <button type="submit" class="btn" data-bind="click: testNotif">Notify!</button>
         </fieldset>

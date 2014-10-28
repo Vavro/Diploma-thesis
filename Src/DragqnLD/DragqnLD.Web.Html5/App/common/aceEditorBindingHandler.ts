@@ -52,7 +52,7 @@ class aceEditorBindingHandler {
             aceEditorBindingHandler.commands.push({
                 name: "Toggle Fullscreen",
                 bindKey: "Shift+F11",
-                exec: function (editor) {
+                exec: function(editor) {
                     aceEditorBindingHandler.dom.toggleCssClass(document.body, "fullScreen");
                     aceEditorBindingHandler.dom.toggleCssClass(editor.container, "fullScreen-editor");
                     editor.resize();
@@ -65,9 +65,9 @@ class aceEditorBindingHandler {
                         $(".fullScreenModeLabel").text(aceEditorBindingHandler.goToFullScreenText);
                         $(".fullScreenModeLabel").show();
                     }
-
-                }
-            });
+                },
+                readOnly: true
+        });
 
             aceEditorBindingHandler.commands.push({
                 name: "Exit FullScreen",
@@ -80,7 +80,8 @@ class aceEditorBindingHandler {
                         $(".fullScreenModeLabel").show();
                     }
                     editor.resize();
-                }
+                },
+                readOnly: true
             });
             /// 
         }
