@@ -32,10 +32,19 @@ namespace DragqnLD.Core.UnitTests
 
         public void Dispose()
         {
-            DocumentStore.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-            GC.Collect(2);
-            GC.WaitForPendingFinalizers();
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                DocumentStore.Dispose();
+                
+                GC.Collect(2);
+                GC.WaitForPendingFinalizers();
+            }
         }
     }
 }
