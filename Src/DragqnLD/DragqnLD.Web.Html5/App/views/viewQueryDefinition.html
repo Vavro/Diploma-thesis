@@ -15,6 +15,11 @@
     </div>
     <div class="row">
         <h2 data-bind="text: queryId"></h2>
+        <div class="col-sm-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" data-bind="click: runQuery, enabled: canRun"><i class="fa fa-play"></i></button>
+            </div>
+        </div>
         <div class="col-sm-6" data-bind="with:queryDefinition">
             <div>
                 Name: <span data-bind="text: name"></span> <p />

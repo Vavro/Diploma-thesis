@@ -191,8 +191,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProgressDto.cs" />
     <Compile Include="Models\QueryDefinitionDto.cs" />
+    <Compile Include="Models\QueryDefinitionStatusDto.cs" />
+    <Compile Include="Models\QueryDefinitionWithStatusDto.cs" />
     <Compile Include="Models\QueryMetadataDto.cs" />
+    <Compile Include="Models\QueryStatus.cs" />
     <Compile Include="Models\SparqlQueryInfoDto.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,17 +1,20 @@
 ﻿import router = require("plugins/router");
 import viewModelBase = require("viewmodels/viewModelBase");
 
-import queryDefinition = require("models/queryDefinition");
+import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
 import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand");
 
 class viewQueryDefinition extends viewModelBase {
 
-    queryDefinition = ko.observable<queryDefinition>();
+    queryDefinition = ko.observable<queryDefinitionWithStatus>();
     queryId: KnockoutComputed<string>;
+    canRun: KnockoutComputed<boolean>;
 
     constructor() {
         super();
-        this.queryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
+        this.queryId = ko.computed((): string => this.queryDefinition().id());
+        this.canRun = ko.computed((): boolean => this.queryDefinition().status().status() === queryStatus.ReadyToRun);
+
     }
 
     navigateToQueries(): void {
@@ -24,7 +27,7 @@ class viewQueryDefinition extends viewModelBase {
             var canActivateResult = $.Deferred();
             new getQueryDefinitionCommand(args.id)
                 .execute()
-                .done((queryDefinition: queryDefinition): void => {
+                .done((queryDefinition: queryDefinitionWithStatus): void => {
                     this.queryDefinition(queryDefinition);
                     canActivateResult.resolve({ can: true });
                 })
@@ -39,7 +42,6 @@ class viewQueryDefinition extends viewModelBase {
         }
     }
 
-
     activate(navigationArgs: any): void {
         if (navigationArgs && navigationArgs.id) {
             // load done in canActivate
@@ -48,6 +50,12 @@ class viewQueryDefinition extends viewModelBase {
             this.notifyWarning("viewQueryDefinition was activated without id, but shouldn't");
         }
     }
+
+    runQuery(): void {
+        this.notifySuccess("runQuery()");
+    }
+
+
 }
 
 export = viewQueryDefinition;

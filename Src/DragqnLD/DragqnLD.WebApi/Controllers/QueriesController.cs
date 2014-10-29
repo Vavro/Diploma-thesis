@@ -60,7 +60,7 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // GET api/queries/5
-        public QueryDefinitionDto Get(string id)
+        public QueryDefinitionWithStatusDto Get(string id)
         {
             var query = new QueryDefinition
             {
@@ -83,7 +83,8 @@ namespace DragqnLD.WebApi.Controllers
                 }
             };
 
-            var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionDto>(query);
+            //todo: load all the items into the metadata
+            var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(query);
             return queryDto;
         }
 

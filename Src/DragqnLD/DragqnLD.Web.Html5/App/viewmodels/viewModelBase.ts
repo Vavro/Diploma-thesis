@@ -10,6 +10,10 @@ class viewModelBase {
     public notifyError(message: string): void {
         ko.postbox.publish(this.c.topics.errors, message);
     }
+
+    public notifySuccess(message: string): void {
+        ko.postbox.publish(this.c.topics.success, message);
+    }
 }
 
 export = viewModelBase;

@@ -1026,6 +1026,7 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\commands\getQueryDefinitionWithStatusCommand.ts" />
     <TypeScriptCompile Include="App\commands\saveQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />
@@ -1036,7 +1037,10 @@
     <TypeScriptCompile Include="App\common\extensionInterfaces.ts" />
     <TypeScriptCompile Include="App\common\extensions.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
+    <TypeScriptCompile Include="App\models\progress.ts" />
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />
+    <TypeScriptCompile Include="App\models\queryDefinitionStatus.ts" />
+    <TypeScriptCompile Include="App\models\queryDefinitionWithStatus.ts" />
     <TypeScriptCompile Include="App\models\sparqlQueryInfo.ts" />
     <TypeScriptCompile Include="App\viewmodels\editQueryDefinition.ts" />
     <TypeScriptCompile Include="App\viewmodels\notifications.ts" />

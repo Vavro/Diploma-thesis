@@ -16,6 +16,9 @@ namespace DragqnLD.WebApi.App_Start
                 Mapper.CreateMap<QueryDefinition, QueryDefinitionMetadataDto>();
                 Mapper.CreateMap<QueryDefinition, QueryDefinitionDto>();
                 Mapper.CreateMap<SparqlQueryInfo, SparqlQueryInfoDto>();
+
+                //todo: temporary map probably before statistics in the db
+                Mapper.CreateMap<QueryDefinition, QueryDefinitionWithStatusDto>();
             }
         }
 
