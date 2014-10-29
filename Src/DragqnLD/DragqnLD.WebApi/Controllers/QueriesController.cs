@@ -83,8 +83,14 @@ namespace DragqnLD.WebApi.Controllers
                 }
             };
 
-            //todo: load all the items into the metadata
+            //todo: load all the items into the status- have version without status?
             var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(query);
+            queryDto.Status = new QueryDefinitionStatusDto()
+            {
+                DocumentLoadProgress = new ProgressDto() { CurrentItem = 15, TotalCount = 1234},
+                Status = QueryStatus.LoadingDocuments
+            };
+            queryDto.StoredDocumentCount = 1234;
             return queryDto;
         }
 

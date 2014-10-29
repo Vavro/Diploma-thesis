@@ -2,18 +2,18 @@
 import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
-import getQueryDefinitionCommand = require("commands/getQueryDefinitionCommand");
+import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitionWithStatusCommand");
 
 class viewQueryDefinition extends viewModelBase {
 
-    queryDefinition = ko.observable<queryDefinitionWithStatus>();
+    queryDefinition: KnockoutObservable<queryDefinitionWithStatus> = ko.observable<queryDefinitionWithStatus>();
     queryId: KnockoutComputed<string>;
     canRun: KnockoutComputed<boolean>;
 
     constructor() {
         super();
-        this.queryId = ko.computed((): string => this.queryDefinition().id());
-        this.canRun = ko.computed((): boolean => this.queryDefinition().status().status() === queryStatus.ReadyToRun);
+        this.queryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
+        this.canRun = ko.computed((): boolean => this.queryDefinition() ? this.queryDefinition().status().status() === queryStatus.ReadyToRun : false);
 
     }
 
@@ -25,7 +25,7 @@ class viewQueryDefinition extends viewModelBase {
     canActivate(args: any): JQueryDeferred<{}> {
         if (args && args.id) {
             var canActivateResult = $.Deferred();
-            new getQueryDefinitionCommand(args.id)
+            new getQueryDefinitionWithStatusCommand(args.id)
                 .execute()
                 .done((queryDefinition: queryDefinitionWithStatus): void => {
                     this.queryDefinition(queryDefinition);
