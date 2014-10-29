@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <h2 data-bind="text: queryId"></h2>
-        <div class="col-sm-4" data-bind="with:queryDefinition">
+        <div class="col-sm-6" data-bind="with:queryDefinition">
             <div>
                 Name: <span data-bind="text: name"></span> <p />
                 Description: <span data-bind="text: description"></span> <p /> <!-- todo: word wrapping for long descriptions -->
@@ -28,22 +28,24 @@
             </div>
             <h4>Construct Query</h4>
             <div data-bind="with: constructQuery">
-                Query text: <span data-bind="text: query"></span><p />
                 Sparql endpoing: <a data-bind="text: sparqlEndpoint, attr:{href: sparqlEndpoint}"></a><p />
-                Default Dataset: <a data-bind="text: defaultDataSet, attr:{href: sparqlEndpoint}"></a>
+                Default Dataset: <a data-bind="text: defaultDataSet, attr:{href: sparqlEndpoint}"></a><p />
+                Query text: <p />
+                <pre id="queryEditorConstruct" class="form-control" data-bind="aceEditor: { code: query, readOnly: true, allowResize: true, minHeight: 60, maxHeight: 100, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
             </div>
             <h4>Select Query</h4>
             <div data-bind="with: selectQuery">
                 Sparql endpoing: <a data-bind="text: sparqlEndpoint, attr:{href: sparqlEndpoint}"></a><p />
                 Default Dataset: <a data-bind="text: defaultDataSet, attr:{href: sparqlEndpoint}"></a><p />
-                Query text: <span data-bind="text: query"></span>
+                Query text:  <p />
+                <pre id="queryEditorConstruct" class="form-control" data-bind="aceEditor: { code: query, readOnly: true, allowResize: true, minHeight: 60, maxHeight: 100, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
             </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
             <h3>Indexes</h3>
             <div>
                 <!-- todo add indexes list-->
-                <div class="pull-right"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i>Add</button></div>
+                <div class="pull-left"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button></div>
             </div>
 
         </div>
