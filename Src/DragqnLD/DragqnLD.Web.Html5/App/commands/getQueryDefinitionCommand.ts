@@ -15,7 +15,7 @@ class getQueryDefinitionCommand extends commandBase {
         var url = "/queries/" + encodeURIComponent(this.id);
         var queryResult = this.query<queryDefinitionDto>(url, null, null);
         queryResult.fail(
-            xhr => queryDefinitionResult.fail(xhr));
+            xhr => queryDefinitionResult.reject(xhr));
         queryResult.done((result: queryDefinitionDto, status: any, xhr: JQueryXHR) : void => {
             var qD = new queryDefinition(result);
             queryDefinitionResult.resolve(qD);
