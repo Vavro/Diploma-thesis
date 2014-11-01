@@ -92,7 +92,7 @@ class commandBase {
     }
 
     notifySuccess(text: string) : void {
-        ko.postbox.publish(this.c.topics.success);
+        ko.postbox.publish(this.c.topics.success, text);
     }
 }
 
