@@ -13,7 +13,10 @@ class viewQueryDefinition extends viewModelBase {
     constructor() {
         super();
         this.queryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
-        this.canRun = ko.computed((): boolean => this.queryDefinition() ? this.queryDefinition().status().status() === queryStatus.ReadyToRun : false);
+        this.canRun = ko.computed((): boolean =>
+            this.queryDefinition() ?
+            this.queryDefinition().status().status() === queryStatus.ReadyToRun :
+            false);
 
     }
 
@@ -24,19 +27,7 @@ class viewQueryDefinition extends viewModelBase {
 
     canActivate(args: any): JQueryDeferred<{}> {
         if (args && args.id) {
-            var canActivateResult = $.Deferred();
-            new getQueryDefinitionWithStatusCommand(args.id)
-                .execute()
-                .done((queryDefinition: queryDefinitionWithStatus): void => {
-                    this.queryDefinition(queryDefinition);
-                    canActivateResult.resolve({ can: true });
-                })
-                .fail((response: any): void => {
-                    // todo examine possible response and show it
-                    this.notifyWarning("Could not get document " + args.id);
-                });
-
-            return canActivateResult;
+            return this.loadQuery(args.id);
         } else {
             return $.Deferred().resolve({ can: false });
         }
@@ -55,7 +46,33 @@ class viewQueryDefinition extends viewModelBase {
         this.notifySuccess("runQuery()");
     }
 
+    refresh(): void {
+        this.loadQuery();
+    }
 
+    private loadQuery(id?: string): JQueryDeferred<{}> {
+        var idToLoad = id ? id : this.queryId();
+        var canActivateResult = $.Deferred();
+        if (!idToLoad) {
+            this.notifyError("No id to be loaded");
+            return canActivateResult.reject("No id to be loaded");
+        }
+        new getQueryDefinitionWithStatusCommand(idToLoad)
+            .execute()
+            .done((queryDefinition: queryDefinitionWithStatus): void => {
+                this.queryDefinition(queryDefinition);
+                canActivateResult.resolve({ can: true });
+                this.notifySuccess("Query " + idToLoad + " loaded");
+            })
+            .fail((response: any): void => {
+                // todo examine possible response and show it
+                console.log("Could not get document " + idToLoad + "response: ");
+                console.log(response);
+                this.notifyWarning("Could not get document " + idToLoad );
+            });
+
+        return canActivateResult;
+    }
 }
 
 export = viewQueryDefinition;

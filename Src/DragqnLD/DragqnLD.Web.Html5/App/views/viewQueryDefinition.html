@@ -18,14 +18,15 @@
         <div class="col-sm-12">
             <div class="btn-group">
                 <button type="button" class="btn btn-primary" data-bind="click: runQuery, enabled: canRun"><i class="fa fa-play"></i></button>
+                <button type="button" class="btn btn-default" data-bind="click: refresh"><i class="fa fa-refresh"></i></button>
             </div>
         </div>
         <div class="col-sm-6" data-bind="with:queryDefinition">
             <div>
                 Name: <span data-bind="text: name"></span> <p />
                 Description: <span data-bind="text: description"></span> <p /> <!-- todo: word wrapping for long descriptions -->
-                Status: <!-- todo add status for queries --> <p />
-                Document Count: <!-- todo add document count to queries -->
+                Status: <span data-bind="text: status().statusText"></span><p />
+                Document Count: <span data-bind="text: storedDocumentCount"></span>
             </div>
             <h3>Query parameters</h3>
             <div>
