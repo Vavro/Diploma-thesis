@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
+using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
 
 namespace DragqnLD.WebApi.Controllers
 {
     public class QueriesController : BaseApiController
     {
+
+
         // GET api/queries
         public IEnumerable<QueryDefinitionMetadataDto> Get()
         {
@@ -60,35 +65,49 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // GET api/queries/5
-        public QueryDefinitionWithStatusDto Get(string id)
+        public async Task<QueryDefinitionWithStatusDto> Get(string id)
         {
-            var query = new QueryDefinition
-            {
-                Id = id,
-                Name = "Test",
-                Description = "Test",
-                ConstructQuery = new SparqlQueryInfo
-                {
-                    //parameters that can be substituted have to be marked as @ not just ?
-                    Query = @"DESCRIBE @u",
-                    DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                },
-                ConstructQueryUriParameterName = "u",
-                SelectQuery = new SparqlQueryInfo
-                {
-                    Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
-                    DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                    SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                }
-            };
+            var queryStore = new QueryStore(this.Store);
 
-            //todo: load all the items into the status- have version without status?
-            var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(query);
+            var queryDefinition = await queryStore.Get(id);
+#if DEBUG
+            if (queryDefinition == null)
+            {
+                queryDefinition = new QueryDefinition
+                {
+                    Id = id,
+                    Name = "Test",
+                    Description = "Test",
+                    ConstructQuery = new SparqlQueryInfo
+                    {
+                        //parameters that can be substituted have to be marked as @ not just ?
+                        Query = @"DESCRIBE @u",
+                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    },
+                    ConstructQueryUriParameterName = "u",
+                    SelectQuery = new SparqlQueryInfo
+                    {
+                        Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
+                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                    }
+                };
+            }
+#endif
+            var taskManager = new TaskManager();
+            //todo: reconsider doing this async/sync
+            var statistics = await taskManager.GetStatusOfQuery(id);
+
+            var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(queryDefinition);
             queryDto.Status = new QueryDefinitionStatusDto()
             {
-                DocumentLoadProgress = new ProgressDto() { CurrentItem = 15, TotalCount = 1234},
-                Status = QueryStatus.LoadingDocuments
+                DocumentLoadProgress = new ProgressDto()
+                {
+                    CurrentItem = statistics.DocumentLoadProgress.CurrentItem,
+                    TotalCount = statistics.DocumentLoadProgress.TotalCount
+                },
+                Status = statistics.Status
             };
             queryDto.StoredDocumentCount = 1234;
             return queryDto;
@@ -97,7 +116,7 @@ namespace DragqnLD.WebApi.Controllers
         // POST api/queries
         public void Post([FromBody]QueryDefinitionDto value)
         {
-            
+
         }
 
         // PUT api/queries/5
@@ -109,5 +128,36 @@ namespace DragqnLD.WebApi.Controllers
         public void Delete(int id)
         {
         }
+    }
+
+    /// <summary>
+    /// Mockup how it could be
+    /// </summary>
+    //todo: implement! :D
+    public class TaskManager
+    {
+        public Task<QueryDefinitionStatus> GetStatusOfQuery(string id)
+        {
+            return
+                Task<QueryDefinitionStatus>.Factory.StartNew(
+                    () =>
+                        new QueryDefinitionStatus()
+                        {
+                            Status = QueryStatus.LoadingDocuments,
+                            DocumentLoadProgress = new Progress() { CurrentItem = 15, TotalCount = 1234 }
+                        });
+        }
+    }
+
+    public class QueryDefinitionStatus
+    {
+        public QueryStatus Status { get; set; }
+        public Progress DocumentLoadProgress { get; set; }
+    }
+
+    public class Progress
+    {
+        public int CurrentItem { get; set; }
+        public int TotalCount { get; set; }
     }
 }
