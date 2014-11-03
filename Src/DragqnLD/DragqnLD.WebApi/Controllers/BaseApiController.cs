@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
+using DragqnLD.WebApi.Configuration;
 using log4net;
 using Raven.Client;
 using Raven.Client.Document;
@@ -30,8 +31,8 @@ namespace DragqnLD.WebApi.Controllers
         {
             var docStore = new DocumentStore
             {
-                Url = "http://localhost:8080",
-                DefaultDatabase = "WebApiSample"
+                Url = DragqnLdConfig.Instance.DatabaseUrl,
+                DefaultDatabase = DragqnLdConfig.Instance.DatabaseName
             };
 
             docStore.Initialize();
