@@ -17,7 +17,7 @@ namespace DragqnLD.WebApi
             config.Routes.MapHttpRoute(
                 name: "QueriesApiController",
                 routeTemplate: "api/queries/{*id}",
-                defaults: new { controller = "Queries", action = "Get", id = RouteParameter.Optional }
+                defaults: new { controller = "Queries", id = RouteParameter.Optional }
             );
 
 

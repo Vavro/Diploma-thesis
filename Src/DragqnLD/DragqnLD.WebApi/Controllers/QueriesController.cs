@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -12,54 +13,67 @@ namespace DragqnLD.WebApi.Controllers
 {
     public class QueriesController : BaseApiController
     {
+        private QueryStore _queryStore;
 
+        public QueriesController()
+        {
+            _queryStore = new QueryStore(this.Store);
+        }
 
         // GET api/queries
-        public IEnumerable<QueryDefinitionMetadataDto> Get()
+        public async Task<IEnumerable<QueryDefinitionMetadataDto>> Get()
         {
-            var queries = new[]
+            var queries = await _queryStore.GetAllDefinitions();
+
+#if DEBUG
+            if (!queries.Any())
             {
-                new QueryDefinition
-                {
-                    Id = "Query/1",
-                    Name = "Test Query",
-                    Description = "Mockup Query Description",
-                    ConstructQuery = new SparqlQueryInfo
+                queries = queries.Concat(
+                    new[]
                     {
-                        //parameters that can be substituted have to be marked as @ not just ?
-                        Query = @"DESCRIBE @u",
-                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                    },
-                    ConstructQueryUriParameterName = "u",
-                    SelectQuery = new SparqlQueryInfo
-                    {
-                        Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
-                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                    }
-                },
-                new QueryDefinition
-                {
-                    Id = "Query/2",
-                    Name = "Test Query 2",
-                    Description = "Mockup Query Descirption 2",
-                    ConstructQuery = new SparqlQueryInfo
-                    {
-                        //parameters that can be substituted have to be marked as @ not just ?
-                        Query = @"DESCRIBE @u",
-                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                    },
-                    ConstructQueryUriParameterName = "u",
-                    SelectQuery = new SparqlQueryInfo
-                    {
-                        Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
-                        DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
-                        SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
-                    }
-                }
-            };
+                        new QueryDefinition
+                        {
+                            Id = "Query/1",
+                            Name = "Test Query",
+                            Description = "Mockup Query Description",
+                            ConstructQuery = new SparqlQueryInfo
+                            {
+                                //parameters that can be substituted have to be marked as @ not just ?
+                                Query = @"DESCRIBE @u",
+                                DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                            },
+                            ConstructQueryUriParameterName = "u",
+                            SelectQuery = new SparqlQueryInfo
+                            {
+                                Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
+                                DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                            }
+                        },
+                        new QueryDefinition
+                        {
+                            Id = "Query/2",
+                            Name = "Test Query 2",
+                            Description = "Mockup Query Descirption 2",
+                            ConstructQuery = new SparqlQueryInfo
+                            {
+                                //parameters that can be substituted have to be marked as @ not just ?
+                                Query = @"DESCRIBE @u",
+                                DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                            },
+                            ConstructQueryUriParameterName = "u",
+                            SelectQuery = new SparqlQueryInfo
+                            {
+                                Query = @"SELECT DISTINCT ?s WHERE { ?s ?p ?o } LIMIT 100",
+                                DefaultDataSet = new Uri(@"http://linked.opendata.cz/resource/dataset/ATC"),
+                                SparqlEndpoint = new Uri(@"http://linked.opendata.cz/sparql")
+                            }
+                        }
+                    });
+            }
+#endif
             var queriesDto = Mapper.Map<IEnumerable<QueryDefinition>, IEnumerable<QueryDefinitionMetadataDto>>(queries);
             return queriesDto;
         }
@@ -67,9 +81,7 @@ namespace DragqnLD.WebApi.Controllers
         // GET api/queries/5
         public async Task<QueryDefinitionWithStatusDto> Get(string id)
         {
-            var queryStore = new QueryStore(this.Store);
-
-            var queryDefinition = await queryStore.Get(id);
+            var queryDefinition = await _queryStore.Get(id);
 #if DEBUG
             if (queryDefinition == null)
             {
@@ -114,14 +126,25 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // POST api/queries
-        public void Post([FromBody]QueryDefinitionDto value)
+        public async Task Post([FromBody]QueryDefinitionDto value)
         {
+            await StoreQueryDefinition(value);
 
+            //todo: response 200
+        }
+
+        private async Task StoreQueryDefinition(QueryDefinitionDto value)
+        {
+            //todo: add exception logging and maybe routing to clinet
+            var queryDefinition = Mapper.Map<QueryDefinitionDto, QueryDefinition>(value);
+
+            await _queryStore.Add(queryDefinition);
         }
 
         // PUT api/queries/5
-        public void Put(int id, [FromBody]QueryDefinitionDto value)
+        public async Task Put(int id, [FromBody]QueryDefinitionDto value)
         {
+            await StoreQueryDefinition(value);
         }
 
         // DELETE api/queries/5
