@@ -49,7 +49,7 @@ define(function(require, exports, module) {
                 token : keywordMapper,
                 regex : "[a-zA-Z_$][a-zA-Z0-9_$]*\\b"
             }, {
-                token : "keyword.variable",
+                token : "variable",
                 regex : "[@?][a-zA-Z_$]+"
             }, {
                 token : "keyword.operator",

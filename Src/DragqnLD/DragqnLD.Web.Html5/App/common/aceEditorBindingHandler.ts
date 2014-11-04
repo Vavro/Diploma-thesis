@@ -14,7 +14,7 @@ import aceLang = require("ace/ext/language_tools");
 class aceEditorBindingHandler {
 
     defaults = {
-        theme: "ace/theme/kuroir",
+        theme: "ace/theme/chrome",
         fontSize: "16px",
         lang: "ace/mode/csharp",
         readOnly: false,
