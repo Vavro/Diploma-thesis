@@ -70,8 +70,9 @@ class editQueryDefinition extends viewModelBase {
         var saveCommand = new saveQueryDefinitionCommand(queryDef);
         saveCommand
             .execute()
-            .done(() : void => {
-                router.navigate("#viewQuery");
+            .done((): void => {
+                var url = "#viewQuery?id=" + this.queryDefinition().id();
+                router.navigate(url);
             }); // fail reseno v ramci commands
 
     }
