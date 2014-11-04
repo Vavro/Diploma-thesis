@@ -37,12 +37,12 @@ define(function(require, exports, module) {
 
 var oop = require("../lib/oop");
 var TextMode = require("./text").Mode;
-var SPARQLHighlightRules = require("./sparql_highlight_rules").SPARQLHighlightRules;
+var SparqlHighlightRules = require("./sparql_highlight_rules").SparqlHighlightRules;
 // TODO: pick appropriate fold mode
 var FoldMode = require("./folding/cstyle").FoldMode;
 
 var Mode = function() {
-    this.HighlightRules = SPARQLHighlightRules;
+    this.HighlightRules = SparqlHighlightRules;
     this.foldingRules = new FoldMode();
 };
 oop.inherits(Mode, TextMode);
