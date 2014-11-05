@@ -6,7 +6,7 @@ namespace DragqnLD.Core.Abstraction
     /// <summary>
     /// The data loading inteface
     /// </summary>
-    interface IDataLoader
+    public interface IDataLoader
     {
         /// <summary>
         /// Loads the specified definition for indexing.

@@ -7,7 +7,7 @@ namespace DragqnLD.Core.Abstraction
     /// <summary>
     /// The query store, contains all indexed queries
     /// </summary>
-    interface IQueryStore
+    public interface IQueryStore
     {
         /// <summary>
         /// Adds the specified definition.

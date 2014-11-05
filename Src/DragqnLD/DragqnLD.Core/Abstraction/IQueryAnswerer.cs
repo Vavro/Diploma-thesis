@@ -3,7 +3,7 @@
     /// <summary>
     /// Query anwerer interface for executing queries for indexed details and property queries
     /// </summary>
-    interface IQueryAnswerer
+    public interface IQueryAnswerer
     {
     }
 }
