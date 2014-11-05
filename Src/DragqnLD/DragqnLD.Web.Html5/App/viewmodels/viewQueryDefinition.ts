@@ -3,6 +3,7 @@ import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
 import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitionWithStatusCommand");
+import processQueryCommand = require("commands/processQueryCommand")
 
 class viewQueryDefinition extends viewModelBase {
 
@@ -43,7 +44,13 @@ class viewQueryDefinition extends viewModelBase {
     }
 
     runQuery(): void {
-        this.notifySuccess("runQuery()");
+        //todo: remove - should be run upon save
+
+        new processQueryCommand(this.queryId())
+            .execute()
+            .done((result) => this.notifySuccess("runQuery() + " + result));
+
+        
     }
 
     refresh(): void {

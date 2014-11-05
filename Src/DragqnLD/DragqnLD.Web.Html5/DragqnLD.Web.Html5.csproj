@@ -1027,6 +1027,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\commands\getQueryDefinitionWithStatusCommand.ts" />
+    <TypeScriptCompile Include="App\commands\processQueryCommand.ts" />
     <TypeScriptCompile Include="App\commands\saveQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />

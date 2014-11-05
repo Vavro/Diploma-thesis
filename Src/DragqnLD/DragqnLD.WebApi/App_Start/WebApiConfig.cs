@@ -20,6 +20,12 @@ namespace DragqnLD.WebApi
                 defaults: new { controller = "Queries", id = RouteParameter.Optional }
             );
 
+            //todo: delete when embedded in querydef storing
+            config.Routes.MapHttpRoute(
+                name: "Process query",
+                routeTemplate: "api/process/{*id}",
+                defaults: new {controller = "Tasks"}
+            );
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

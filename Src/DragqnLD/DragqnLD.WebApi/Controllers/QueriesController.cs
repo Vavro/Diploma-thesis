@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
@@ -13,11 +13,11 @@ namespace DragqnLD.WebApi.Controllers
 {
     public class QueriesController : BaseApiController
     {
-        private QueryStore _queryStore;
+        private readonly IQueryStore _queryStore;
 
         public QueriesController()
         {
-            _queryStore = new QueryStore(this.Store);
+            _queryStore = new QueryStore(Store);
         }
 
         // GET api/queries
