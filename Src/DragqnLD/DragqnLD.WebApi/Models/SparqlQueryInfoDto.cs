@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using DragqnLD.WebApi.Annotations;
+using DragqnLD.WebApi.Validation;
 
 namespace DragqnLD.WebApi.Models
 {
@@ -10,11 +11,11 @@ namespace DragqnLD.WebApi.Models
         [UsedImplicitly]
         public string Query { get; set; }
         [Required]
-        [Url]
+        [UrlEx]
         [UsedImplicitly]
         public string SparqlEndpoint { get; set; }
         [Required]
-        [Url]
+        [UrlEx]
         [UsedImplicitly]
         public string DefaultDataSet { get; set; }
     }
