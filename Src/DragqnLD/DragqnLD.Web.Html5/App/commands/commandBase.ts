@@ -13,7 +13,7 @@ class commandBase {
     query<T>(relativeUrl: string, args: any, resultsSelector?: (results: any) => T): JQueryPromise<T> {
         var ajax = this.ajax(relativeUrl, args, "GET");
         if (resultsSelector) {
-            var task = $.Deferred();
+            var task = $.Deferred<T>();
             /* tslint:disable:typedef */
             ajax.done((results, status, xhr) => {
                 var transformedResults = resultsSelector(results);
