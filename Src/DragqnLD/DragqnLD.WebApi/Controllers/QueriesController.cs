@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
@@ -126,19 +129,24 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // POST api/queries
-        public async Task Post([FromBody]QueryDefinitionDto value)
+        public async Task<HttpResponseMessage> Post(HttpRequestMessage request, [FromBody]QueryDefinitionDto value)
         {
-            await StoreQueryDefinition(value);
+            var success = await StoreQueryDefinition(value);
 
+            var response = request.CreateResponse(HttpStatusCode.OK, new object());
+
+            return response;
             //todo: response 200
         }
 
-        private async Task StoreQueryDefinition(QueryDefinitionDto value)
+        private async Task<bool> StoreQueryDefinition(QueryDefinitionDto value)
         {
             //todo: add exception logging and maybe routing to clinet
             var queryDefinition = Mapper.Map<QueryDefinitionDto, QueryDefinition>(value);
 
             await _queryStore.Add(queryDefinition);
+
+            return true;
         }
 
         // PUT api/queries/5
