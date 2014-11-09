@@ -24,7 +24,7 @@ namespace DragqnLD.WebApi
             config.Routes.MapHttpRoute(
                 name: "Process query",
                 routeTemplate: "api/process/{*id}",
-                defaults: new {controller = "Tasks"}
+                defaults: new {controller = "Tasks", action = "Process"}
             );
 
             config.Routes.MapHttpRoute(

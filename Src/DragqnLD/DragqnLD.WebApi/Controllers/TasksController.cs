@@ -27,7 +27,7 @@ namespace DragqnLD.WebApi.Controllers
             _dataFormatter = new ExpandedJsonLDDataFormatter();
         }
 
-        public async Task<IEnumerable<Uri>>  Get(string id)
+        public async Task<IEnumerable<Uri>>  Process(string id)
         {
             var qd = await _queryStore.Get(id);
 
