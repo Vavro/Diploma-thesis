@@ -1,10 +1,11 @@
 ﻿import constants = require("common/constants");
+import appUrl = require("common/appUrl");
 
 /// Commands encapsulate a read or write operation to the server and common AJAX related functionality.
 class commandBase {
 
     private c = new constants();
-    private baseUrl = "http://localhost:2429/api";
+    private baseUrl = appUrl.baseUrl;
 
     execute<T>(): JQueryPromise<T> {
         throw new Error("Execute must be overidden.");
