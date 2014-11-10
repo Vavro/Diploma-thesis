@@ -74,8 +74,9 @@ class viewQueryDefinition extends viewModelBase {
                 // todo examine possible response and show it
                 console.log("Could not get document " + idToLoad + "response: ");
                 console.log(response);
-                this.notifyWarning("Could not get document " + idToLoad );
-            });
+                this.notifyWarning("Could not get document " + idToLoad);
+                canActivateResult.reject(response);
+        });
 
         return canActivateResult;
     }
