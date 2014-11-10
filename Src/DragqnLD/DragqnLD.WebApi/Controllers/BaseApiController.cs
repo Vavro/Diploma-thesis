@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
+using System.Web.Http.Routing;
 using DragqnLD.WebApi.Configuration;
 using log4net;
 using Raven.Client;
@@ -45,6 +48,35 @@ namespace DragqnLD.WebApi.Controllers
             HttpControllerContext controllerContext,
             CancellationToken cancellationToken)
         {
+            var values = controllerContext.RequestContext.RouteData.Values;
+            if (values.ContainsKey("MS_SubRoutes"))
+            {
+                var routeDatas = (IHttpRouteData[])controllerContext.Request.GetRouteData().Values["MS_SubRoutes"];
+                var selectedData = routeDatas.FirstOrDefault(data => data.Values.ContainsKey("definitionId"));
+
+                if (selectedData != null)
+                {
+                    selectedData.Values["definitionId"] = "Query/" + selectedData.Values["definitionId"];
+                    DefinitionId = selectedData.Values["definitionId"] as string;
+                }
+                else
+                {
+                    DefinitionId = null;
+                }
+            }
+            else
+            {
+                if (values.ContainsKey("definitionId"))
+                {
+                    values["definitionId"] = "Query/" + values["definitionId"];
+                    DefinitionId = values["definitionId"] as string;
+                }
+                else
+                {
+                    DefinitionId = null;
+                }
+            }
+
             using (Session = Store.OpenAsyncSession())
             {
                 var result = await base.ExecuteAsync(controllerContext, cancellationToken);
@@ -54,5 +86,6 @@ namespace DragqnLD.WebApi.Controllers
             }
         }
 
+        public string DefinitionId { get; private set; }
     }
 }

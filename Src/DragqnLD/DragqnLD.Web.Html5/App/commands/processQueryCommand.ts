@@ -11,7 +11,7 @@ class processQueryCommand extends commandBase {
 
     execute(): JQueryPromise<any> {
         var response = $.Deferred();
-        var url = "/process/" + encodeURIComponent(this.id);
+        var url = "/" + encodeURIComponent(this.id) + "/process";
         var queryResult = this.query<any>(url, null, null);
         queryResult.fail(
             xhr => response.reject(xhr));

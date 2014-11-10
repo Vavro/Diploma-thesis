@@ -27,9 +27,11 @@ namespace DragqnLD.WebApi.Controllers
             _dataFormatter = new ExpandedJsonLDDataFormatter();
         }
 
-        public async Task<IEnumerable<Uri>>  Process(string id)
+        [HttpGet]
+        [Route("api/query/{definitionId}/process")]
+        public async Task<IEnumerable<Uri>> Process(string definitionId)
         {
-            var qd = await _queryStore.Get(id);
+            var qd = await _queryStore.Get(definitionId);
 
             var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery);
 

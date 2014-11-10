@@ -82,15 +82,15 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // GET api/queries/5
-        public async Task<QueryDefinitionWithStatusDto> Get(string id)
+        public async Task<QueryDefinitionWithStatusDto> Get(string definitionId)
         {
-            var queryDefinition = await _queryStore.Get(id);
+            var queryDefinition = await _queryStore.Get(definitionId);
 #if DEBUG
             if (queryDefinition == null)
             {
                 queryDefinition = new QueryDefinition
                 {
-                    Id = id,
+                    Id = definitionId,
                     Name = "Test",
                     Description = "Test",
                     ConstructQuery = new SparqlQueryInfo
@@ -112,7 +112,7 @@ namespace DragqnLD.WebApi.Controllers
 #endif
             var taskManager = new TaskManager();
             //todo: reconsider doing this async/sync
-            var statistics = await taskManager.GetStatusOfQuery(id);
+            var statistics = await taskManager.GetStatusOfQuery(definitionId);
 
             var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(queryDefinition);
             queryDto.Status = new QueryDefinitionStatusDto()

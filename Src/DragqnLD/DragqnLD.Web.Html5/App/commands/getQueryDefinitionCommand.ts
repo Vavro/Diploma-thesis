@@ -12,7 +12,7 @@ class getQueryDefinitionCommand extends commandBase {
 
     execute(): JQueryPromise<any> {
         var queryDefinitionResult = $.Deferred();
-        var url = "/queries/" + encodeURIComponent(this.id);
+        var url = "/query/" + encodeURIComponent(this.id);
         var queryResult = this.query<queryDefinitionDto>(url, null, null);
         queryResult.fail(
             xhr => queryDefinitionResult.reject(xhr));
