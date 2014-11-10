@@ -1003,6 +1003,8 @@
     <Content Include="Scripts\ace\snippets\yaml.snippets" />
     <Content Include="Scripts\ace\snippets\_.snippets" />
     <Content Include="Scripts\ace\snippets\_all_modes.snippets" />
+    <None Include="Local FileSystem.pubxml" />
+    <None Include="Local IIS.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\durandal\transitions\entrance.js" />
     <Content Include="Scripts\durandal\viewEngine.js" />
