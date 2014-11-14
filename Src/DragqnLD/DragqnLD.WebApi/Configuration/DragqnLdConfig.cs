@@ -9,7 +9,7 @@ namespace DragqnLD.WebApi.Configuration
     public class DragqnLdConfig
     {
         private const string DatabaseUrlSettingsKey = "DragqnLdDatabaseUrl";
-        private const string DatabaseUrlDefaultValue = "http://localhost:8080";
+        private const string DatabaseUrlDefaultValue = "http://localhost:18296";
         private const string DatabaseNameSettingsKey = "DragqnLdDatabaseName";
         private const string DatabaseNameDefaultValue = "DragqnLd";
 
