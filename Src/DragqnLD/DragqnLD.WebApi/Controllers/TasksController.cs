@@ -9,6 +9,9 @@ using System.Web.Http;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
+using DragqnLD.WebApi.Models;
+using Newtonsoft.Json.Linq;
+using Raven.Imports.Newtonsoft.Json;
 using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
@@ -27,6 +30,11 @@ namespace DragqnLD.WebApi.Controllers
             _dataFormatter = new ExpandedJsonLDDataFormatter();
         }
 
+        /// <summary>
+        /// Processes the specified definition identifier.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process")]
         public async Task<IEnumerable<Uri>> Process(string definitionId)
@@ -62,6 +70,27 @@ namespace DragqnLD.WebApi.Controllers
             }
 
             return selectResults;
+        }
+
+
+        /// <summary>
+        /// Retuns only status of th especified definition.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns>A <see cref="QueryDefinitionStatusDto"/></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/status")]
+        public async Task<HttpResponseMessage> Status(string definitionId)
+        {
+            var status = new QueryDefinitionStatusDto()
+            {
+                DocumentLoadProgress = new ProgressDto() {CurrentItem = 16, TotalCount = 12345},
+                Status = QueryStatus.LoadingDocuments
+            };
+
+            var response = CreateResponseWithObject(status);
+
+            return response;
         }
     }
 }

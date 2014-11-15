@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -87,5 +88,14 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         public string DefinitionId { get; private set; }
+
+        protected HttpResponseMessage CreateResponseWithObject<T>(T obj, HttpStatusCode status = HttpStatusCode.OK)
+        {
+            Debug.Assert(Request != null, "Request is null");
+
+            var response = Request.CreateResponse(status, obj);
+
+            return response;
+        }
     }
 }
