@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Hosting;
 using System.Web.Http;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
@@ -37,41 +39,66 @@ namespace DragqnLD.WebApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process")]
-        public async Task<IEnumerable<Uri>> Process(string definitionId)
+        public async Task<HttpResponseMessage> Process(string definitionId)
         {
-            var qd = await _queryStore.Get(definitionId);
-
-            var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery);
-
-            //todo: store select results for viewing
-            //todo: start processing selects .. :)
-            foreach (var selectResult in selectResults)
+            //todo: make this a background task pushed into backgroundworker
+            HostingEnvironment.QueueBackgroundWorkItem(async ct => 
             {
-                var constructResultStream = await _sparqlEnpointClient.GetContructResultFor(qd.ConstructQuery, qd.ConstructQueryUriParameterName, selectResult);
-                var reader = new StreamReader(constructResultStream);
+                //todo: store cancellation token by definitionId so that task can get cancelled
+                //todo: do some statistics
+                // -- could be just in form 
+                //   - total count - known from select result
+                //   - current - ravendb count of stored docs + 1
                 
-                var writer = new StringWriter();
-                PropertyMappings mappings;
-                _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
+                //todo: move this to the Core assembly
+                var qd = await _queryStore.Get(definitionId);
 
-                var result = writer.ToString();
+                var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery);
 
-                var dataToStore = new ConstructResult
+                //done: start processing selects .. :)
+                foreach (var selectResult in selectResults)
                 {
-                    QueryId = qd.Id,
-                    DocumentId = selectResult,
-                    Document = new Document { Content = RavenJObject.Parse(result) }
-                };
-                
-                await _dataStore.StoreDocument(dataToStore);
+                    var constructResultStream = await _sparqlEnpointClient.GetContructResultFor(qd.ConstructQuery, qd.ConstructQueryUriParameterName, selectResult);
+                    var reader = new StreamReader(constructResultStream);
 
-                //todo: statistics
-                //todo: update document count ? -- maybe should be an raven index :) 
-            }
+                    var writer = new StringWriter();
+                    PropertyMappings mappings;
+                    _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
 
-            return selectResults;
+                    var result = writer.ToString();
+
+                    var dataToStore = new ConstructResult
+                    {
+                        QueryId = qd.Id,
+                        DocumentId = selectResult,
+                        Document = new Document { Content = RavenJObject.Parse(result) }
+                    };
+
+                    //done: store select results for viewing
+                    await _dataStore.StoreDocument(dataToStore);
+
+                    //todo: statistics
+                    //todo: update document count ? -- maybe should be an raven index :) 
+                }
+            });
+            
+            return CreateResponse();
         }
 
+        /// <summary>
+        /// Cancels the processing of the query definition.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/process/cancel")]
+        public async Task<HttpResponseMessage> Cancel(string definitionId)
+        {
+            //todo: get cancelationToken for definitionId and try to cancel
+
+            //todo: response according to cancel
+            return CreateResponse();
+        }
 
         /// <summary>
         /// Retuns only status of th especified definition.
@@ -79,7 +106,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <param name="definitionId">The definition identifier.</param>
         /// <returns>A <see cref="QueryDefinitionStatusDto"/></returns>
         [HttpGet]
-        [Route("api/query/{definitionId}/status")]
+        [Route("api/query/{definitionId}/process/status")]
         public async Task<HttpResponseMessage> Status(string definitionId)
         {
             var status = new QueryDefinitionStatusDto()

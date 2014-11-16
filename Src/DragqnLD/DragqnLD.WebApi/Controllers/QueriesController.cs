@@ -24,6 +24,10 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // GET api/queries
+        /// <summary>
+        /// Gets all stored query definitions.
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<QueryDefinitionMetadataDto>> Get()
         {
             var queries = await _queryStore.GetAllDefinitions();
@@ -82,6 +86,11 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // GET api/queries/5
+        /// <summary>
+        /// Gets the query definition for the specified definition identifier.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
         public async Task<QueryDefinitionWithStatusDto> Get(string definitionId)
         {
             var queryDefinition = await _queryStore.Get(definitionId);
@@ -129,35 +138,54 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // POST api/queries
-        public async Task<HttpResponseMessage> Post(HttpRequestMessage request, [FromBody]QueryDefinitionDto value)
+        /// <summary>
+        /// Stores a new query definition.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public async Task<HttpResponseMessage> Post([FromBody]QueryDefinitionDto value)
         {
             var success = await StoreQueryDefinition(value);
 
-            var response = request.CreateResponse(HttpStatusCode.OK, new object());
+            //todo: change reponse according to success
+            //done: response 200
+            var response = CreateResponse();
 
             return response;
-            //todo: response 200
         }
 
-        private async Task<bool> StoreQueryDefinition(QueryDefinitionDto value)
+        private async Task<HttpResponseMessage> StoreQueryDefinition(QueryDefinitionDto value)
         {
             //todo: add exception logging and maybe routing to clinet
             var queryDefinition = Mapper.Map<QueryDefinitionDto, QueryDefinition>(value);
 
             await _queryStore.Add(queryDefinition);
 
-            return true;
+            //todo: return id of created query definition
+            return CreateResponse();
         }
 
         // PUT api/queries/5
-        public async Task Put(int id, [FromBody]QueryDefinitionDto value)
+        /// <summary>
+        /// Stores or updates the query definition with the specified id
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <param name="queryDefinition">The query definition.</param>
+        /// <returns></returns>
+        public async Task<HttpResponseMessage> Put(int id, [FromBody]QueryDefinitionDto queryDefinition)
         {
-            await StoreQueryDefinition(value);
+            //todo: use the id (maybe delete from value)
+            var success = await StoreQueryDefinition(queryDefinition);
+
+            //todo: use success state value
+            return CreateResponse();
         }
 
         // DELETE api/queries/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
+            return CreateResponse(HttpStatusCode.NotImplemented);
         }
     }
 

@@ -89,6 +89,15 @@ namespace DragqnLD.WebApi.Controllers
 
         public string DefinitionId { get; private set; }
 
+        protected HttpResponseMessage CreateResponse(HttpStatusCode status = HttpStatusCode.OK)
+        {
+            Debug.Assert(Request != null, "Request is null");
+
+            //todo: why do i have to fill an empty object? (maybe its the return type?)
+            return Request.CreateResponse(status, new object());
+        }
+
+
         protected HttpResponseMessage CreateResponseWithObject<T>(T obj, HttpStatusCode status = HttpStatusCode.OK)
         {
             Debug.Assert(Request != null, "Request is null");

@@ -20,13 +20,22 @@ namespace DragqnLD.WebApi.Controllers
             _dataStore = new RavenDataStore(Store, new DocumentPropertyEscaper());
         }
 
+        /// <summary>
+        /// Gets this document metadata of this query definition id.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/documents")]
         public async Task<HttpResponseMessage> Get()
         {
-            return Request.CreateResponse(HttpStatusCode.NotImplemented);
+            return CreateResponse(HttpStatusCode.NotImplemented);
         }
 
+        /// <summary>
+        /// Gets the document for the specified query definition id.
+        /// </summary>
+        /// <param name="documentId">The document identifier.</param>
+        /// <returns></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/document")]
         public async Task<HttpResponseMessage> Get(string documentId)
@@ -34,7 +43,7 @@ namespace DragqnLD.WebApi.Controllers
             var document = await _dataStore.GetDocument(DefinitionId, new Uri(documentId));
 
             //todo: get rid of Content property write raw json to response
-            return Request.CreateResponse(HttpStatusCode.OK, document);
+            return CreateResponseWithObject(document);
         }
     }
 }
