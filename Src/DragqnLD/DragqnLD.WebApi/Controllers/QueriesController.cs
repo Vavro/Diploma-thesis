@@ -1,26 +1,34 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.WebPages.Scope;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
+using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
     public class QueriesController : BaseApiController
     {
         private readonly IQueryStore _queryStore;
+        private readonly PerQueryDefinitionTasksManager _perQueryDefinitionTasksManager;
 
         public QueriesController()
         {
             _queryStore = new QueryStore(Store);
+            _perQueryDefinitionTasksManager = PerQueryDefinitionTasksManager.Instance;
         }
 
         // GET api/queries
@@ -119,9 +127,8 @@ namespace DragqnLD.WebApi.Controllers
                 };
             }
 #endif
-            var taskManager = new TaskManager();
             //todo: reconsider doing this async/sync
-            var statistics = await taskManager.GetStatusOfQuery(definitionId);
+            var statistics = await _perQueryDefinitionTasksManager.GetStatusOfQuery(definitionId);
 
             var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(queryDefinition);
             queryDto.Status = new QueryDefinitionStatusDto()
@@ -193,9 +200,38 @@ namespace DragqnLD.WebApi.Controllers
     /// Mockup how it could be
     /// </summary>
     //todo: implement! :D
-    public class TaskManager
+    public class PerQueryDefinitionTasksManager
     {
-        public Task<QueryDefinitionStatus> GetStatusOfQuery(string id)
+        private static object _instanceLock = new object();
+        private static PerQueryDefinitionTasksManager _instance;
+
+        public static PerQueryDefinitionTasksManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_instanceLock)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new PerQueryDefinitionTasksManager();
+                        }
+                    }
+                }
+
+                return _instance;
+            }
+        }
+
+        private PerQueryDefinitionTasksManager()
+        {
+            
+        }
+
+        private ConcurrentDictionary<string, CancellationTokenSource> _jobs = new ConcurrentDictionary<string, CancellationTokenSource>();
+
+        public Task<QueryDefinitionStatus> GetStatusOfQuery(string definitionId)
         {
             return
                 Task<QueryDefinitionStatus>.Factory.StartNew(
@@ -205,6 +241,37 @@ namespace DragqnLD.WebApi.Controllers
                             Status = QueryStatus.LoadingDocuments,
                             DocumentLoadProgress = new Progress() { CurrentItem = 15, TotalCount = 1234 }
                         });
+        }
+
+        public Task EnqueTask(string definitionId, CancellationToken ct, Func<CancellationToken, string, Task> loadQueryDefinitionTask)
+        {
+            var newCts = new CancellationTokenSource();
+            var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct, newCts.Token);
+            
+            var localDefinitionId = definitionId;
+            _jobs.TryAdd(localDefinitionId, newCts);
+
+            var task = loadQueryDefinitionTask(linkedCts.Token, localDefinitionId).ContinueWith(_ =>
+            {
+                linkedCts.Dispose();
+                CancellationTokenSource cts;
+                if (_jobs.TryRemove(localDefinitionId, out cts))
+                {
+                    cts.Dispose();
+                }
+            }, ct);
+
+            return task;
+        }
+
+        public void TryCancel(string definitionId)
+        {
+            CancellationTokenSource cts;
+            var succ = _jobs.TryGetValue(definitionId, out cts);
+            if (succ)
+            {
+                cts.Cancel();
+            }
         }
     }
 

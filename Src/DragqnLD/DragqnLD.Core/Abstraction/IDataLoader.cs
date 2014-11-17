@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
 
 namespace DragqnLD.Core.Abstraction
@@ -12,6 +13,6 @@ namespace DragqnLD.Core.Abstraction
         /// Loads the specified definition for indexing.
         /// </summary>
         /// <param name="definition">The definition of queries to be indexed.</param>
-        Task<string> Load(QueryDefinition definition);
+        Task Load(CancellationToken ct, string definitionId);
     }
 }

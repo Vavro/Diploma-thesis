@@ -24,80 +24,46 @@ namespace DragqnLD.WebApi.Controllers
         private IQueryStore _queryStore;
         private ISparqlEnpointClient _sparqlEnpointClient;
         private IDataFormatter _dataFormatter;
+        private readonly PerQueryDefinitionTasksManager _queryDefinitionLoadTasksManager;
+        private DataLoader _dataLoader;
+
         public TasksController()
         {
+            //todo: injection!!
             _dataStore = new RavenDataStore(Store, new DocumentPropertyEscaper());
             _queryStore = new QueryStore(Store);
             _sparqlEnpointClient = new SparqlEnpointClient();
             _dataFormatter = new ExpandedJsonLDDataFormatter();
+            _queryDefinitionLoadTasksManager = PerQueryDefinitionTasksManager.Instance;
+            _dataLoader = new DataLoader(_queryStore, _sparqlEnpointClient, _dataFormatter, _dataStore);
         }
 
         /// <summary>
         /// Processes the specified definition identifier.
         /// </summary>
         /// <param name="definitionId">The definition identifier.</param>
-        /// <returns></returns>
+        /// <returns>Http Status Code Accepted as the Processing is scheduled for background.</returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process")]
-        public async Task<HttpResponseMessage> Process(string definitionId)
+        public HttpResponseMessage Process()
         {
-            //todo: make this a background task pushed into backgroundworker
-            HostingEnvironment.QueueBackgroundWorkItem(async ct => 
-            {
-                //todo: store cancellation token by definitionId so that task can get cancelled
-                //todo: do some statistics
-                // -- could be just in form 
-                //   - total count - known from select result
-                //   - current - ravendb count of stored docs + 1
-                
-                //todo: move this to the Core assembly
-                var qd = await _queryStore.Get(definitionId);
-
-                var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery);
-
-                //done: start processing selects .. :)
-                foreach (var selectResult in selectResults)
-                {
-                    var constructResultStream = await _sparqlEnpointClient.GetContructResultFor(qd.ConstructQuery, qd.ConstructQueryUriParameterName, selectResult);
-                    var reader = new StreamReader(constructResultStream);
-
-                    var writer = new StringWriter();
-                    PropertyMappings mappings;
-                    _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
-
-                    var result = writer.ToString();
-
-                    var dataToStore = new ConstructResult
-                    {
-                        QueryId = qd.Id,
-                        DocumentId = selectResult,
-                        Document = new Document { Content = RavenJObject.Parse(result) }
-                    };
-
-                    //done: store select results for viewing
-                    await _dataStore.StoreDocument(dataToStore);
-
-                    //todo: statistics
-                    //todo: update document count ? -- maybe should be an raven index :) 
-                }
-            });
+            HostingEnvironment.QueueBackgroundWorkItem(ct => _queryDefinitionLoadTasksManager.EnqueTask(DefinitionId, ct, _dataLoader.Load));
             
-            return CreateResponse();
+            return CreateResponse(HttpStatusCode.Accepted);
         }
 
         /// <summary>
         /// Cancels the processing of the query definition.
         /// </summary>
         /// <param name="definitionId">The definition identifier.</param>
-        /// <returns></returns>
+        /// <returns>Http Status Code Accepted as it tries to cancel the processing.</returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process/cancel")]
-        public async Task<HttpResponseMessage> Cancel(string definitionId)
+        public HttpResponseMessage Cancel()
         {
-            //todo: get cancelationToken for definitionId and try to cancel
+            _queryDefinitionLoadTasksManager.TryCancel(DefinitionId);
 
-            //todo: response according to cancel
-            return CreateResponse();
+            return CreateResponse(HttpStatusCode.Accepted);
         }
 
         /// <summary>
@@ -107,7 +73,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <returns>A <see cref="QueryDefinitionStatusDto"/></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process/status")]
-        public async Task<HttpResponseMessage> Status(string definitionId)
+        public async Task<HttpResponseMessage> Status()
         {
             var status = new QueryDefinitionStatusDto()
             {
