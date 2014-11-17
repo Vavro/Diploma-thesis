@@ -13,6 +13,6 @@ namespace DragqnLD.Core.Abstraction
         /// Loads the specified definition for indexing.
         /// </summary>
         /// <param name="definition">The definition of queries to be indexed.</param>
-        Task Load(CancellationToken ct, string definitionId);
+        Task Load(CancellationToken cancellationToken, string definitionId);
     }
 }

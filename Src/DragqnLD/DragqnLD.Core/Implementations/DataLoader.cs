@@ -23,13 +23,13 @@ namespace DragqnLD.Core.Implementations
             _dataStore = dataStore;
         }
 
-        public async Task Load(CancellationToken ct, string definitionId)
+        public async Task Load(CancellationToken cancellationToken, string definitionId)
         {
             //todo: do some statistics
             // -- could be just in form 
             //   - total count - known from select result
             //   - current - ravendb count of stored docs + 1
-            ct.ThrowIfCancellationRequested();
+            cancellationToken.ThrowIfCancellationRequested();
 
             var qd = await _queryStore.Get(definitionId).ConfigureAwait(false);
             
@@ -38,7 +38,7 @@ namespace DragqnLD.Core.Implementations
             //done: start processing selects .. :)
             foreach (var selectResult in selectResults)
             {
-                ct.ThrowIfCancellationRequested();
+                cancellationToken.ThrowIfCancellationRequested();
 
                 var constructResultStream = await _sparqlEnpointClient
                     .GetContructResultFor(qd.ConstructQuery, qd.ConstructQueryUriParameterName, selectResult)

@@ -47,7 +47,7 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/process")]
         public HttpResponseMessage Process()
         {
-            HostingEnvironment.QueueBackgroundWorkItem(ct => _queryDefinitionLoadTasksManager.EnqueTask(DefinitionId, ct, _dataLoader.Load));
+            HostingEnvironment.QueueBackgroundWorkItem(ct => _queryDefinitionLoadTasksManager.EnqueueTask(DefinitionId, ct, _dataLoader.Load));
             
             return CreateResponse(HttpStatusCode.Accepted);
         }

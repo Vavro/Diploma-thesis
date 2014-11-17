@@ -243,10 +243,10 @@ namespace DragqnLD.WebApi.Controllers
                         });
         }
 
-        public Task EnqueTask(string definitionId, CancellationToken ct, Func<CancellationToken, string, Task> loadQueryDefinitionTask)
+        public Task EnqueueTask(string definitionId, CancellationToken cancellationToken, Func<CancellationToken, string, Task> loadQueryDefinitionTask)
         {
             var newCts = new CancellationTokenSource();
-            var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(ct, newCts.Token);
+            var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, newCts.Token);
             
             var localDefinitionId = definitionId;
             _jobs.TryAdd(localDefinitionId, newCts);
@@ -259,7 +259,7 @@ namespace DragqnLD.WebApi.Controllers
                 {
                     cts.Dispose();
                 }
-            }, ct);
+            }, cancellationToken);
 
             return task;
         }
