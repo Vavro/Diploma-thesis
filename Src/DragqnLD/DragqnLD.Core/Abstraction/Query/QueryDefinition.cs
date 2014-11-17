@@ -1,5 +1,3 @@
-using System;
-
 namespace DragqnLD.Core.Abstraction.Query
 {
     /// <summary>
@@ -54,12 +52,5 @@ namespace DragqnLD.Core.Abstraction.Query
         /// The select query.
         /// </value>
         public SparqlQueryInfo SelectQuery { get; set; }
-    }
-
-    public class SparqlQueryInfo
-    {
-        public string Query { get; set; }
-        public Uri SparqlEndpoint { get; set; }
-        public Uri DefaultDataSet { get; set; }
     }
 }

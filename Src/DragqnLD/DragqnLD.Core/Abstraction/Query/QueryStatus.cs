@@ -1,4 +1,4 @@
-﻿namespace DragqnLD.WebApi.Models
+namespace DragqnLD.Core.Abstraction.Query
 {
     public enum QueryStatus
     {

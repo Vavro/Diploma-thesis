@@ -8,7 +8,7 @@ namespace DragqnLD.Core.Abstraction
 {
     public interface ISparqlEnpointClient
     {
-        Task<IEnumerable<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery);
+        Task<IList<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery);
 
         Task<Stream> GetContructResultFor(SparqlQueryInfo constructSparqlQuery, string parameterName, Uri objectUri);
     }

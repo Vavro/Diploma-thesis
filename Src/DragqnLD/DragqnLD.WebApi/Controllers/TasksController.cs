@@ -10,6 +10,7 @@ using System.Web.Hosting;
 using System.Web.Http;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
 using Newtonsoft.Json.Linq;
@@ -47,8 +48,11 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/process")]
         public HttpResponseMessage Process()
         {
-            HostingEnvironment.QueueBackgroundWorkItem(ct => _queryDefinitionLoadTasksManager.EnqueueTask(DefinitionId, ct, _dataLoader.Load));
-            
+            HostingEnvironment.QueueBackgroundWorkItem(ct =>
+                _queryDefinitionLoadTasksManager.EnqueueTask(DefinitionId, ct,
+                    (definitionId, cancellationToken, progress) =>
+                        _dataLoader.Load(definitionId, cancellationToken, progress)));
+
             return CreateResponse(HttpStatusCode.Accepted);
         }
 
@@ -75,12 +79,8 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/process/status")]
         public async Task<HttpResponseMessage> Status()
         {
-            var status = new QueryDefinitionStatusDto()
-            {
-                DocumentLoadProgress = new ProgressDto() {CurrentItem = 16, TotalCount = 12345},
-                Status = QueryStatus.LoadingDocuments
-            };
-
+            var status = await _queryDefinitionLoadTasksManager.GetStatusOfQuery(DefinitionId);
+            
             var response = CreateResponseWithObject(status);
 
             return response;

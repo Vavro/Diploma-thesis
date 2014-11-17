@@ -12,7 +12,7 @@ namespace DragqnLD.Core.Implementations
 {
     public class SparqlEnpointClient : ISparqlEnpointClient
     {
-        public async Task<IEnumerable<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery)
+        public async Task<IList<Uri>> QueryForUris(SparqlQueryInfo selectSparqlQuery)
         {
             var endpoint = new SparqlRemoteEndpoint(selectSparqlQuery.SparqlEndpoint, selectSparqlQuery.DefaultDataSet);
             //todo: run in taks and await
@@ -40,7 +40,7 @@ namespace DragqnLD.Core.Implementations
                                                     String.Format("Node {0} is not of type UriNode and cannot be parsed to uri", node));
                                             }
                                             return uriNode.Uri;
-                                        });
+                                        }).ToList();
 
                     return resultUris;
                 }).ConfigureAwait(false);

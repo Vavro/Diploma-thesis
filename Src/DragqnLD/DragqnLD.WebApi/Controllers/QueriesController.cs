@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -229,61 +230,76 @@ namespace DragqnLD.WebApi.Controllers
             
         }
 
-        private ConcurrentDictionary<string, CancellationTokenSource> _jobs = new ConcurrentDictionary<string, CancellationTokenSource>();
+        private class RunnigTaskData
+        {
+            //todo: not sure about thread safety 
+            public CancellationTokenSource CancellationTokenSource { get; set; }
+            public QueryDefinitionStatus LastStatus { get; set; }
+        }
+
+        private ConcurrentDictionary<string, RunnigTaskData> _runnignTasks = new ConcurrentDictionary<string, RunnigTaskData>();
 
         public Task<QueryDefinitionStatus> GetStatusOfQuery(string definitionId)
         {
+            //todo: prepared for update to querying db - so still a task although not necessary
             return
                 Task<QueryDefinitionStatus>.Factory.StartNew(
                     () =>
-                        new QueryDefinitionStatus()
+                    {
+                        RunnigTaskData runnigTaskData;
+                        if (_runnignTasks.TryGetValue(definitionId, out runnigTaskData))
                         {
-                            Status = QueryStatus.LoadingDocuments,
-                            DocumentLoadProgress = new Progress() { CurrentItem = 15, TotalCount = 1234 }
-                        });
+                            return runnigTaskData.LastStatus;
+                        }
+                        return QueryDefinitionStatus.From(QueryStatus.ReadyToRun);
+                    });
         }
 
-        public Task EnqueueTask(string definitionId, CancellationToken cancellationToken, Func<CancellationToken, string, Task> loadQueryDefinitionTask)
+        public Task EnqueueTask(
+            string definitionId,
+            CancellationToken cancellationToken,
+            Func<string, CancellationToken, Progress<QueryDefinitionStatus>, Task> loadQueryDefinitionTask)
         {
             var newCts = new CancellationTokenSource();
             var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, newCts.Token);
             
             var localDefinitionId = definitionId;
-            _jobs.TryAdd(localDefinitionId, newCts);
+            var taskData = new RunnigTaskData() {CancellationTokenSource = newCts};
+            _runnignTasks.TryAdd(localDefinitionId, taskData);
+            var progress = new Progress<QueryDefinitionStatus>(status => UpdateStatus(definitionId, status));
 
-            var task = loadQueryDefinitionTask(linkedCts.Token, localDefinitionId).ContinueWith(_ =>
+            var task = loadQueryDefinitionTask(localDefinitionId, linkedCts.Token, progress).ContinueWith(_ =>
             {
                 linkedCts.Dispose();
-                CancellationTokenSource cts;
-                if (_jobs.TryRemove(localDefinitionId, out cts))
+                RunnigTaskData taskDataForRemove;
+                if (_runnignTasks.TryRemove(localDefinitionId, out taskDataForRemove))
                 {
-                    cts.Dispose();
+                    taskDataForRemove.CancellationTokenSource.Dispose();
                 }
+                //todo: maybe save somewhere done status for querydefinition
             }, cancellationToken);
 
             return task;
         }
 
+        private void UpdateStatus(string definitionId, QueryDefinitionStatus status)
+        {
+            RunnigTaskData taskDataForProgress;
+            _runnignTasks.TryGetValue(definitionId, out taskDataForProgress);
+
+            Debug.Assert(taskDataForProgress != null, "taskDataForProgress != null");
+            taskDataForProgress.LastStatus = status;
+            //todo: could do live notification over a channel (websocket or event-stream)
+        }
+
         public void TryCancel(string definitionId)
         {
-            CancellationTokenSource cts;
-            var succ = _jobs.TryGetValue(definitionId, out cts);
+            RunnigTaskData runnigTaskData;
+            var succ = _runnignTasks.TryGetValue(definitionId, out runnigTaskData);
             if (succ)
             {
-                cts.Cancel();
+                runnigTaskData.CancellationTokenSource.Cancel();
             }
         }
-    }
-
-    public class QueryDefinitionStatus
-    {
-        public QueryStatus Status { get; set; }
-        public Progress DocumentLoadProgress { get; set; }
-    }
-
-    public class Progress
-    {
-        public int CurrentItem { get; set; }
-        public int TotalCount { get; set; }
     }
 }

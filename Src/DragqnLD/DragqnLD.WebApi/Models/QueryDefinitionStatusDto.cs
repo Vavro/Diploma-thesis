@@ -1,4 +1,5 @@
-﻿using DragqnLD.WebApi.Annotations;
+﻿using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.WebApi.Annotations;
 
 namespace DragqnLD.WebApi.Models
 {

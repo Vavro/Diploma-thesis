@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
@@ -23,7 +25,8 @@ namespace DragqnLD.Core.Implementations
             _dataStore = dataStore;
         }
 
-        public async Task Load(CancellationToken cancellationToken, string definitionId)
+        //todo: according to first architecture, should also store the querydefinition
+        public async Task Load(string definitionId, CancellationToken cancellationToken, IProgress<QueryDefinitionStatus> progress)
         {
             //todo: do some statistics
             // -- could be just in form 
@@ -31,13 +34,34 @@ namespace DragqnLD.Core.Implementations
             //   - current - ravendb count of stored docs + 1
             cancellationToken.ThrowIfCancellationRequested();
 
+            var status = QueryDefinitionStatus.From(QueryStatus.LoadingSelectResult);
+            if (progress != null)
+            {
+                progress.Report(status);
+            }
+
             var qd = await _queryStore.Get(definitionId).ConfigureAwait(false);
             
             var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery).ConfigureAwait(false);
+            var selectResultCount = selectResults.Count();
 
+            status.Status = QueryStatus.LoadingDocuments;
+            status.DocumentLoadProgress.TotalCount = selectResultCount;
+            if (progress != null)
+            {
+                progress.Report(status);
+            }
+
+            status.DocumentLoadProgress.CurrentItem = 0;
             //done: start processing selects .. :)
             foreach (var selectResult in selectResults)
             {
+                status.DocumentLoadProgress.CurrentItem++;
+                if (progress != null)
+                {
+                    progress.Report(status);
+                }
+
                 cancellationToken.ThrowIfCancellationRequested();
 
                 var constructResultStream = await _sparqlEnpointClient
@@ -62,10 +86,14 @@ namespace DragqnLD.Core.Implementations
                 //done: store select results for viewing
                 await _dataStore.StoreDocument(dataToStore).ConfigureAwait(false);
 
-                //todo: statistics
-                //todo: update document count ? -- maybe should be an raven index :) 
+                //todo: document count could be a raven index :) 
             }
-        
+
+            status.Status = QueryStatus.Loaded;
+            if (progress != null)
+            {
+                progress.Report(status);
+            }
         }
     }
 }
