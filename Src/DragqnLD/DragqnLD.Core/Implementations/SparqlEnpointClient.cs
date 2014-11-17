@@ -43,7 +43,7 @@ namespace DragqnLD.Core.Implementations
                                         });
 
                     return resultUris;
-                });
+                }).ConfigureAwait(false);
         }
 
         public async Task<Stream> GetContructResultFor(SparqlQueryInfo constructSparqlQuery, string parameterName, Uri objectUri)
@@ -60,7 +60,7 @@ namespace DragqnLD.Core.Implementations
 
                 var result = endpoint.QueryRaw(substitutedQuery, new[] { "application/ld+json" });
                 return result.GetResponseStream();
-            });
+            }).ConfigureAwait(false);
         }
     }
 }

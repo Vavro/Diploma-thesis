@@ -33,7 +33,7 @@ namespace DragqnLD.Core.Implementations
 
             var qd = await _queryStore.Get(definitionId).ConfigureAwait(false);
             
-            var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery);
+            var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery).ConfigureAwait(false);
 
             //done: start processing selects .. :)
             foreach (var selectResult in selectResults)

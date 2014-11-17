@@ -21,8 +21,8 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = _store.OpenAsyncSession())
             {
-                await session.StoreAsync(definition);
-                await session.SaveChangesAsync();
+                await session.StoreAsync(definition).ConfigureAwait(false);
+                await session.SaveChangesAsync().ConfigureAwait(false);
                 return definition.Id;
             }
         }
@@ -31,7 +31,7 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = _store.OpenAsyncSession())
             {
-                var queryDefinition = await session.LoadAsync<QueryDefinition>(key);
+                var queryDefinition = await session.LoadAsync<QueryDefinition>(key).ConfigureAwait(false);
                 return queryDefinition;
             }
         }
@@ -40,7 +40,7 @@ namespace DragqnLD.Core.Implementations
         {
             using (var session = _store.OpenAsyncSession())
             {
-                return await session.Query<QueryDefinition>().ToListAsync();
+                return await session.Query<QueryDefinition>().ToListAsync().ConfigureAwait(false);
             }
         }
     }

@@ -33,12 +33,12 @@ namespace DragqnLD.Core.Implementations
 
                 //_store.AsyncDatabaseCommands.PutAsync(id, new Etag(UuidType.Documents, ), content, );
 
-                await session.StoreAsync(content, id);
+                await session.StoreAsync(content, id).ConfigureAwait(false);
 
                 //edit the entity name, so all indexed documents for the same query are together
                 var metadata = session.Advanced.GetMetadataFor(content);
                 metadata["Raven-Entity-Name"] = dataToStore.QueryId;
-                await session.SaveChangesAsync();
+                await session.SaveChangesAsync().ConfigureAwait(false);
             }
         }
 
@@ -54,7 +54,7 @@ namespace DragqnLD.Core.Implementations
                     bulkInsert.Store(document, metadata, id);
                 }
 
-                await bulkInsert.DisposeAsync();
+                await bulkInsert.DisposeAsync().ConfigureAwait(false);
             }
 
         }
@@ -75,7 +75,7 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
-                var storedContent = await session.LoadAsync<RavenJObject>(id);
+                var storedContent = await session.LoadAsync<RavenJObject>(id).ConfigureAwait(false);
                 var storedDocument = new Document { Content = storedContent };
 
                 return storedDocument;
@@ -85,7 +85,7 @@ namespace DragqnLD.Core.Implementations
         public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, 
             params PropertyCondition[] conditions)
         {
-            return await QueryDocumentProperties(queryId, null, conditions);
+            return await QueryDocumentProperties(queryId, null, conditions).ConfigureAwait(false);
         }
 
         //todo: consider extracting path escaping interface, breaks SRP a bit, reformat of documents isn't in the DataStore either
@@ -108,13 +108,13 @@ namespace DragqnLD.Core.Implementations
                     .Append(propertyCondition.Value)
                     .Append(")");
             }
-            return await QueryDocumentEscapedLuceneQuery(queryId, indexName, luceneQuery.ToString());
+            return await QueryDocumentEscapedLuceneQuery(queryId, indexName, luceneQuery.ToString()).ConfigureAwait(false);
         }
 
 
         public async Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string luceneQuery)
         {
-            return await QueryDocumentEscapedLuceneQuery(queryId, null, luceneQuery);
+            return await QueryDocumentEscapedLuceneQuery(queryId, null, luceneQuery).ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string indexName, string luceneQuery)
@@ -139,7 +139,7 @@ namespace DragqnLD.Core.Implementations
                     ;
 
                 //todo: paging - raven returns max 1024 documents or something like that
-                var queryResults = await ravenLuceneQuery.QueryResultAsync;
+                var queryResults = await ravenLuceneQuery.QueryResultAsync.ConfigureAwait(false);
 
                 var ids = new List<string>(queryResults.Results.Count);
                 foreach (var queryResult in queryResults.Results)
