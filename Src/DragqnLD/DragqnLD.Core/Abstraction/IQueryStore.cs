@@ -37,5 +37,12 @@ namespace DragqnLD.Core.Abstraction
         /// <param name="dateTime">The date time.</param>
         /// <returns></returns>
         Task UpdateLastRun(string definitionId, DateTime dateTime);
+
+        /// <summary>
+        /// Gets the document count.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
+        Task<int> GetDocumentCount(string definitionId);
     }
 }

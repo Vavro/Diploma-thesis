@@ -69,6 +69,7 @@ class viewQueryDefinition extends viewModelBase {
                 this.queryDefinition(queryDefinition);
                 canActivateResult.resolve({ can: true });
                 this.notifySuccess("Query " + idToLoad + " loaded");
+                //todo: start polling for status
             })
             .fail((response: any): void => {
                 // todo examine possible response and show it

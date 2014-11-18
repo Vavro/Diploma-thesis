@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
+using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.Configuration;
 using log4net;
 using Raven.Client;
 using Raven.Client.Document;
+using Raven.Client.Indexes;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -40,6 +42,9 @@ namespace DragqnLD.WebApi.Controllers
             };
 
             docStore.Initialize();
+
+            IndexCreation.CreateIndexes(typeof(Documents_CountByCollection).Assembly, docStore);
+
             return docStore;
         });
 

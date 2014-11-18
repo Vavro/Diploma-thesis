@@ -16,7 +16,9 @@ using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
+using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.Models;
+using Raven.Client;
 using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
@@ -140,16 +142,15 @@ namespace DragqnLD.WebApi.Controllers
             var statusDto = Mapper.Map<QueryDefinitionStatusDto>(statistics);
             queryDto.Status = statusDto;
 
-            //todo: read from ravendb
-            queryDto.StoredDocumentCount = 1234;
+            queryDto.StoredDocumentCount = await _queryStore.GetDocumentCount(DefinitionId);
+
             return queryDto;
         }
-
+        
         // POST api/queries
         /// <summary>
         /// Stores a new query definition.
         /// </summary>
-        /// <param name="request">The request.</param>
         /// <param name="value">The value.</param>
         /// <returns></returns>
         public async Task<HttpResponseMessage> Post([FromBody]QueryDefinitionDto value)

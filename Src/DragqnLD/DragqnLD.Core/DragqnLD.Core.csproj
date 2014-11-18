@@ -89,6 +89,7 @@
     <Compile Include="Implementations\Utils\LuceneQueryStringExtensions.cs" />
     <Compile Include="Implementations\Utils\SpecialCharacters.cs" />
     <Compile Include="Implementations\Utils\StringExtensions.cs" />
+    <Compile Include="Indexes\Documents_CountByCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
