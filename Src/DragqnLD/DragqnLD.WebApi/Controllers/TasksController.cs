@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Hosting;
 using System.Web.Http;
+using AutoMapper;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
@@ -80,8 +81,13 @@ namespace DragqnLD.WebApi.Controllers
         public async Task<HttpResponseMessage> Status()
         {
             var status = await _queryDefinitionLoadTasksManager.GetStatusOfQuery(DefinitionId);
-            
-            var response = CreateResponseWithObject(status);
+            if (status == null)
+            {
+                var qd = await _queryStore.Get(DefinitionId);
+                status = qd.GetStatus();
+            }
+            var statusDto = Mapper.Map<QueryDefinitionStatusDto>(status);
+            var response = CreateResponseWithObject(statusDto);
 
             return response;
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
@@ -41,6 +42,16 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 return await session.Query<QueryDefinition>().ToListAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async Task UpdateLastRun(string definitionId, DateTime dateTime)
+        {
+            using (var session = _store.OpenAsyncSession())
+            {
+                var qd = await session.LoadAsync<QueryDefinition>(definitionId);
+                qd.LastProcessed = dateTime;
+                await session.SaveChangesAsync();
             }
         }
     }

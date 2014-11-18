@@ -129,18 +129,18 @@ namespace DragqnLD.WebApi.Controllers
             }
 #endif
             //todo: reconsider doing this async/sync
-            var statistics = await _perQueryDefinitionTasksManager.GetStatusOfQuery(definitionId);
-
             var queryDto = Mapper.Map<QueryDefinition, QueryDefinitionWithStatusDto>(queryDefinition);
-            queryDto.Status = new QueryDefinitionStatusDto()
+
+            var statistics = await _perQueryDefinitionTasksManager.GetStatusOfQuery(definitionId);
+            if (statistics == null)
             {
-                DocumentLoadProgress = new ProgressDto()
-                {
-                    CurrentItem = statistics.DocumentLoadProgress.CurrentItem,
-                    TotalCount = statistics.DocumentLoadProgress.TotalCount
-                },
-                Status = statistics.Status
-            };
+                statistics = queryDefinition.GetStatus();
+            }
+
+            var statusDto = Mapper.Map<QueryDefinitionStatusDto>(statistics);
+            queryDto.Status = statusDto;
+
+            //todo: read from ravendb
             queryDto.StoredDocumentCount = 1234;
             return queryDto;
         }
@@ -227,7 +227,7 @@ namespace DragqnLD.WebApi.Controllers
 
         private PerQueryDefinitionTasksManager()
         {
-            
+
         }
 
         private class RunnigTaskData
@@ -251,7 +251,8 @@ namespace DragqnLD.WebApi.Controllers
                         {
                             return runnigTaskData.LastStatus;
                         }
-                        return QueryDefinitionStatus.From(QueryStatus.ReadyToRun);
+
+                        return null;
                     });
         }
 
@@ -262,9 +263,9 @@ namespace DragqnLD.WebApi.Controllers
         {
             var newCts = new CancellationTokenSource();
             var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, newCts.Token);
-            
+
             var localDefinitionId = definitionId;
-            var taskData = new RunnigTaskData() {CancellationTokenSource = newCts};
+            var taskData = new RunnigTaskData() { CancellationTokenSource = newCts };
             _runnignTasks.TryAdd(localDefinitionId, taskData);
             var progress = new Progress<QueryDefinitionStatus>(status => UpdateStatus(definitionId, status));
 

@@ -94,6 +94,8 @@ namespace DragqnLD.Core.Implementations
             {
                 progress.Report(status);
             }
+
+            await _queryStore.UpdateLastRun(definitionId, DateTime.Now);
         }
     }
 }

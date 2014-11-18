@@ -23,6 +23,8 @@ namespace DragqnLD.WebApi.App_Start
 
                 //todo: temporary map probably before statistics in the db
                 Mapper.CreateMap<QueryDefinition, QueryDefinitionWithStatusDto>();
+                Mapper.CreateMap<Progress, ProgressDto>();
+                Mapper.CreateMap<QueryDefinitionStatus, QueryDefinitionStatusDto>();
             }
         }
 

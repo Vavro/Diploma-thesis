@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
 
@@ -29,5 +30,12 @@ namespace DragqnLD.Core.Abstraction
         /// <returns>An enumerable list of query definitions</returns>
         Task<IEnumerable<QueryDefinition>> GetAllDefinitions();
 
+        /// <summary>
+        /// Updates the last run.
+        /// </summary>
+        /// <param name="definitionId"></param>
+        /// <param name="dateTime">The date time.</param>
+        /// <returns></returns>
+        Task UpdateLastRun(string definitionId, DateTime dateTime);
     }
 }

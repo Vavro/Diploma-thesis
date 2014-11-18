@@ -1,3 +1,5 @@
+using System;
+
 namespace DragqnLD.Core.Abstraction.Query
 {
     /// <summary>
@@ -52,5 +54,18 @@ namespace DragqnLD.Core.Abstraction.Query
         /// The select query.
         /// </value>
         public SparqlQueryInfo SelectQuery { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last processed datetime.
+        /// </summary>
+        public DateTime? LastProcessed { get; set; }
+    }
+
+    public static class QueryDefinitionExtensions
+    {
+        public static QueryDefinitionStatus GetStatus(this QueryDefinition qd)
+        {
+            return QueryDefinitionStatus.From(qd.LastProcessed == null ? QueryStatus.ReadyToRun : QueryStatus.Loaded);
+        }
     }
 }
