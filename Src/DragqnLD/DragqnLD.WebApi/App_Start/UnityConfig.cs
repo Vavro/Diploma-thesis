@@ -2,6 +2,7 @@ using System;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Indexes;
+using DragqnLD.WebApi.App_Start;
 using DragqnLD.WebApi.Configuration;
 using DragqnLD.WebApi.Controllers;
 using Microsoft.Practices.Unity;
@@ -31,7 +32,7 @@ namespace DragqnLD.WebApi
             // e.g. container.RegisterType<ITestService, TestService>();
             
             //todo: solve how to register the IDocumentStore without having to initialize it immediately (although that probably doesn't matter)
-            container.RegisterInstance(LazyDocStore.Value, new ContainerControlledLifetimeManager());
+            container.RegisterInstance(RavenDbConfig.GetDocumentStore().Value, new ContainerControlledLifetimeManager());
 
             container.RegisterInstance(PerQueryDefinitionTasksManager.Instance);
             //these have to exist per request (per controller creation)
@@ -47,20 +48,5 @@ namespace DragqnLD.WebApi
             
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
-
-        private static readonly Lazy<IDocumentStore> LazyDocStore = new Lazy<IDocumentStore>(() =>
-        {
-            var docStore = new DocumentStore
-            {
-                Url = DragqnLdConfig.Instance.DatabaseUrl,
-                DefaultDatabase = DragqnLdConfig.Instance.DatabaseName
-            };
-
-            docStore.Initialize();
-
-            IndexCreation.CreateIndexes(typeof(Documents_CountByCollection).Assembly, docStore);
-
-            return docStore;
-        });
     }
 }
