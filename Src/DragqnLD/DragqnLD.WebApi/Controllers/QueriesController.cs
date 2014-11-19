@@ -146,7 +146,7 @@ namespace DragqnLD.WebApi.Controllers
 
             return queryDto;
         }
-        
+
         // POST api/queries
         /// <summary>
         /// Stores a new query definition.
@@ -241,11 +241,17 @@ namespace DragqnLD.WebApi.Controllers
 
         }
 
-        private class RunnigTaskData
+        private class RunnigTaskData : IDisposable
         {
             //todo: not sure about thread safety 
             public CancellationTokenSource CancellationTokenSource { get; set; }
             public QueryDefinitionStatus LastStatus { get; set; }
+            public void Dispose()
+            {
+                var cts = CancellationTokenSource;
+                CancellationTokenSource = null;
+                cts.Dispose();
+            }
         }
 
         private ConcurrentDictionary<string, RunnigTaskData> _runnignTasks = new ConcurrentDictionary<string, RunnigTaskData>();
@@ -298,7 +304,7 @@ namespace DragqnLD.WebApi.Controllers
                 RunnigTaskData taskDataForRemove;
                 if (_runnignTasks.TryRemove(localDefinitionId, out taskDataForRemove))
                 {
-                    taskDataForRemove.CancellationTokenSource.Dispose();
+                    taskDataForRemove.Dispose();
                 }
                 //todo: maybe save somewhere done status for querydefinition
             }, cancellationToken);
