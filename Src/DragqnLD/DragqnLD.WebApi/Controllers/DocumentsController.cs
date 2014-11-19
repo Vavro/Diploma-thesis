@@ -11,13 +11,20 @@ using DragqnLD.Core.Implementations;
 
 namespace DragqnLD.WebApi.Controllers
 {
+    /// <summary>
+    /// Controller for reading Documents stored for a Query Definition
+    /// </summary>
     public class DocumentsController : BaseApiController
     {
         private readonly IDataStore _dataStore;
 
-        public DocumentsController()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocumentsController"/> class.
+        /// </summary>
+        /// <param name="dataStore">The data store.</param>
+        public DocumentsController(IDataStore dataStore)
         {
-            _dataStore = new RavenDataStore(Store, new DocumentPropertyEscaper());
+            _dataStore = dataStore;
         }
 
         /// <summary>

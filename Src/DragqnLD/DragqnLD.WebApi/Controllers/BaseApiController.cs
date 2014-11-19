@@ -12,6 +12,7 @@ using System.Web.Http.Routing;
 using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.Configuration;
 using log4net;
+using Microsoft.Practices.Unity;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Indexes;
@@ -28,26 +29,10 @@ namespace DragqnLD.WebApi.Controllers
             return LogManager.GetLogger(stackFrame.GetMethod().DeclaringType);
         }
 
-        public IDocumentStore Store
-        {
-            get { return LazyDocStore.Value; }
-        }
+        [Dependency]
+        public IDocumentStore Store { get; set; }
 
-        private static readonly Lazy<IDocumentStore> LazyDocStore = new Lazy<IDocumentStore>(() =>
-        {
-            var docStore = new DocumentStore
-            {
-                Url = DragqnLdConfig.Instance.DatabaseUrl,
-                DefaultDatabase = DragqnLdConfig.Instance.DatabaseName
-            };
-
-            docStore.Initialize();
-
-            IndexCreation.CreateIndexes(typeof(Documents_CountByCollection).Assembly, docStore);
-
-            return docStore;
-        });
-
+        //todo: change architecture to Command based, and make commands accept the Session for this request?
         public IAsyncDocumentSession Session { get; set; }
 
         public async override Task<HttpResponseMessage> ExecuteAsync(

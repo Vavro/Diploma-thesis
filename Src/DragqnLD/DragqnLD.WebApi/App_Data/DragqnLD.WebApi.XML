@@ -685,6 +685,17 @@
             Returns true if this request is from local
             </summary>
         </member>
+        <member name="T:DragqnLD.WebApi.Controllers.DocumentsController">
+            <summary>
+            Controller for reading Documents stored for a Query Definition
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.#ctor(DragqnLD.Core.Abstraction.IDataStore)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.DocumentsController"/> class.
+            </summary>
+            <param name="dataStore">The data store.</param>
+        </member>
         <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.Get">
             <summary>
             Gets this document metadata of this query definition id.
@@ -697,6 +708,18 @@
             </summary>
             <param name="documentId">The document identifier.</param>
             <returns></returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Controllers.QueriesController">
+            <summary>
+            Basic operations for Query Definitions - store, load, delete, update
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.QueriesController.#ctor(DragqnLD.Core.Abstraction.IQueryStore,DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.QueriesController"/> class.
+            </summary>
+            <param name="queryStore">The query store.</param>
+            <param name="perQueryDefinitionTasksManager">The per query definition tasks manager.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.QueriesController.Get">
             <summary>
@@ -730,6 +753,19 @@
             <summary>
             Mockup how it could be
             </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.Controllers.TasksController">
+            <summary>
+            Manages backgrounds tasks availible for QueryDefinitions
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.TasksController.#ctor(DragqnLD.Core.Abstraction.IQueryStore,DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager,DragqnLD.Core.Implementations.DataLoader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.TasksController"/> class.
+            </summary>
+            <param name="queryStore">The query store.</param>
+            <param name="queryDefinitionLoadTasksManager">The query definition load tasks manager.</param>
+            <param name="dataLoader">The data loader.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.TasksController.Process">
             <summary>

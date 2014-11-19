@@ -23,15 +23,23 @@ using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
+    /// <summary>
+    /// Basic operations for Query Definitions - store, load, delete, update
+    /// </summary>
     public class QueriesController : BaseApiController
     {
         private readonly IQueryStore _queryStore;
         private readonly PerQueryDefinitionTasksManager _perQueryDefinitionTasksManager;
 
-        public QueriesController()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueriesController"/> class.
+        /// </summary>
+        /// <param name="queryStore">The query store.</param>
+        /// <param name="perQueryDefinitionTasksManager">The per query definition tasks manager.</param>
+        public QueriesController(IQueryStore queryStore, PerQueryDefinitionTasksManager perQueryDefinitionTasksManager)
         {
-            _queryStore = new QueryStore(Store);
-            _perQueryDefinitionTasksManager = PerQueryDefinitionTasksManager.Instance;
+            _queryStore = queryStore;
+            _perQueryDefinitionTasksManager = perQueryDefinitionTasksManager;
         }
 
         // GET api/queries

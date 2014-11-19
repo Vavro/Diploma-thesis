@@ -20,24 +20,26 @@ using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
+    /// <summary>
+    /// Manages backgrounds tasks availible for QueryDefinitions
+    /// </summary>
     public class TasksController : BaseApiController
     {
-        private IDataStore _dataStore;
-        private IQueryStore _queryStore;
-        private ISparqlEnpointClient _sparqlEnpointClient;
-        private IDataFormatter _dataFormatter;
+        private readonly IQueryStore _queryStore;
         private readonly PerQueryDefinitionTasksManager _queryDefinitionLoadTasksManager;
-        private DataLoader _dataLoader;
+        private readonly DataLoader _dataLoader;
 
-        public TasksController()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TasksController"/> class.
+        /// </summary>
+        /// <param name="queryStore">The query store.</param>
+        /// <param name="queryDefinitionLoadTasksManager">The query definition load tasks manager.</param>
+        /// <param name="dataLoader">The data loader.</param>
+        public TasksController(IQueryStore queryStore, PerQueryDefinitionTasksManager queryDefinitionLoadTasksManager, DataLoader dataLoader)
         {
-            //todo: injection!!
-            _dataStore = new RavenDataStore(Store, new DocumentPropertyEscaper());
-            _queryStore = new QueryStore(Store);
-            _sparqlEnpointClient = new SparqlEnpointClient();
-            _dataFormatter = new ExpandedJsonLDDataFormatter();
-            _queryDefinitionLoadTasksManager = PerQueryDefinitionTasksManager.Instance;
-            _dataLoader = new DataLoader(_queryStore, _sparqlEnpointClient, _dataFormatter, _dataStore);
+            _queryStore = queryStore;
+            _queryDefinitionLoadTasksManager = queryDefinitionLoadTasksManager;
+            _dataLoader = dataLoader;
         }
 
         /// <summary>
