@@ -3,6 +3,9 @@ using DragqnLD.WebApi.Annotations;
 
 namespace DragqnLD.WebApi.Models
 {
+    /// <summary>
+    /// Data transfer object for Query Definition Metadata
+    /// </summary>
     public class QueryDefinitionMetadataDto
     {
         /// <summary>
@@ -11,7 +14,6 @@ namespace DragqnLD.WebApi.Models
         /// <value>
         /// The identifier.
         /// </value>
-        //todo: required? - for new query def it might not be
         [UsedImplicitly]
         public string Id { get; set; }
 

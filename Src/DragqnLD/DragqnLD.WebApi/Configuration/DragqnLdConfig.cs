@@ -6,6 +6,9 @@ using System.Web;
 
 namespace DragqnLD.WebApi.Configuration
 {
+    /// <summary>
+    /// DragqnLd Server Configuration
+    /// </summary>
     public class DragqnLdConfig
     {
         private const string DatabaseUrlSettingsKey = "DragqnLdDatabaseUrl";
@@ -37,10 +40,28 @@ namespace DragqnLD.WebApi.Configuration
             return setting.Value;
         }
 
+        /// <summary>
+        /// Gets the database URL.
+        /// </summary>
+        /// <value>
+        /// The database URL.
+        /// </value>
         public string DatabaseUrl { get { return _databaseUrl.Value; } }
 
+        /// <summary>
+        /// Gets the name of the database.
+        /// </summary>
+        /// <value>
+        /// The name of the database.
+        /// </value>
         public string DatabaseName { get { return _databaseName.Value; } }
 
+        /// <summary>
+        /// Gets the instance of the configuration.
+        /// </summary>
+        /// <value>
+        /// The instance.
+        /// </value>
         public static DragqnLdConfig Instance
         {
             get

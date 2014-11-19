@@ -1,3 +1,5 @@
+#pragma warning disable 1591
+
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http.Controllers;

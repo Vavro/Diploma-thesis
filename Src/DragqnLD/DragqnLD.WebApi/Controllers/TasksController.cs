@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Hosting;
 using System.Web.Http;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
-using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
-using Newtonsoft.Json.Linq;
-using Raven.Imports.Newtonsoft.Json;
-using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -45,7 +36,6 @@ namespace DragqnLD.WebApi.Controllers
         /// <summary>
         /// Processes the specified definition identifier.
         /// </summary>
-        /// <param name="definitionId">The definition identifier.</param>
         /// <returns>Http Status Code Accepted as the Processing is scheduled for background.</returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process")]
@@ -62,7 +52,6 @@ namespace DragqnLD.WebApi.Controllers
         /// <summary>
         /// Cancels the processing of the query definition.
         /// </summary>
-        /// <param name="definitionId">The definition identifier.</param>
         /// <returns>Http Status Code Accepted as it tries to cancel the processing.</returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process/cancel")]
@@ -76,7 +65,6 @@ namespace DragqnLD.WebApi.Controllers
         /// <summary>
         /// Retuns only status of th especified definition.
         /// </summary>
-        /// <param name="definitionId">The definition identifier.</param>
         /// <returns>A <see cref="QueryDefinitionStatusDto"/></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/process/status")]

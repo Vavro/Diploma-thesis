@@ -200,6 +200,11 @@ namespace DragqnLD.WebApi.Controllers
         }
 
         // DELETE api/queries/5
+        /// <summary>
+        /// Deletes the query definition with the specified identifier.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         public HttpResponseMessage Delete(int id)
         {
             return CreateResponse(HttpStatusCode.NotImplemented);
@@ -207,14 +212,19 @@ namespace DragqnLD.WebApi.Controllers
     }
 
     /// <summary>
-    /// Mockup how it could be
+    /// Basic tasks overview, to have access to running tasks and their cancellation tokens
     /// </summary>
-    //todo: implement! :D
     public class PerQueryDefinitionTasksManager
     {
         private static object _instanceLock = new object();
         private static PerQueryDefinitionTasksManager _instance;
 
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        /// <value>
+        /// The instance.
+        /// </value>
         public static PerQueryDefinitionTasksManager Instance
         {
             get
@@ -248,6 +258,11 @@ namespace DragqnLD.WebApi.Controllers
 
         private ConcurrentDictionary<string, RunnigTaskData> _runnignTasks = new ConcurrentDictionary<string, RunnigTaskData>();
 
+        /// <summary>
+        /// Gets the status of query.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
         public Task<QueryDefinitionStatus> GetStatusOfQuery(string definitionId)
         {
             //todo: prepared for update to querying db - so still a task although not necessary
@@ -265,6 +280,13 @@ namespace DragqnLD.WebApi.Controllers
                     });
         }
 
+        /// <summary>
+        /// Enqueues the task.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <param name="loadQueryDefinitionTask">The load query definition task.</param>
+        /// <returns></returns>
         public Task EnqueueTask(
             string definitionId,
             CancellationToken cancellationToken,
@@ -302,6 +324,10 @@ namespace DragqnLD.WebApi.Controllers
             //todo: could do live notification over a channel (websocket or event-stream)
         }
 
+        /// <summary>
+        /// Tries to cancel a running task.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
         public void TryCancel(string definitionId)
         {
             RunnigTaskData runnigTaskData;

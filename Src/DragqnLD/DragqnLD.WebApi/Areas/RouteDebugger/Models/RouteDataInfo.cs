@@ -1,3 +1,5 @@
+#pragma warning disable 1591
+
 using System.Collections.Generic;
 
 namespace DragqnLD.WebApi.Areas.RouteDebugger.Models

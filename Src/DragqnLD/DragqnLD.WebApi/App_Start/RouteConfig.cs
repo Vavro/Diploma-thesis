@@ -3,8 +3,15 @@ using System.Web.Routing;
 
 namespace DragqnLD.WebApi
 {
+    /// <summary>
+    /// The MVC web page Route Configuration
+    /// </summary>
     public static class RouteConfig
     {
+        /// <summary>
+        /// Registers the routes.
+        /// </summary>
+        /// <param name="routes">The routes.</param>
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

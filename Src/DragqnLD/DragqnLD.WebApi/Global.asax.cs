@@ -6,8 +6,14 @@ using System.Web.Routing;
 
 namespace DragqnLD.WebApi
 {
+    /// <summary>
+    /// The HttpApplication definition of the DragqnLD Server
+    /// </summary>
     public class WebApiApplication : HttpApplication
     {
+        /// <summary>
+        /// Called at application start
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

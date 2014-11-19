@@ -13,8 +13,14 @@ using Unity.WebApi;
 
 namespace DragqnLD.WebApi
 {
+    /// <summary>
+    /// Unity DI container configuration
+    /// </summary>
     public static class UnityConfig
     {
+        /// <summary>
+        /// Registers the components.
+        /// </summary>
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
@@ -26,6 +32,7 @@ namespace DragqnLD.WebApi
             
             //todo: solve how to register the IDocumentStore without having to initialize it immediately (although that probably doesn't matter)
             container.RegisterInstance(LazyDocStore.Value, new ContainerControlledLifetimeManager());
+
             container.RegisterInstance(PerQueryDefinitionTasksManager.Instance);
             //these have to exist per request (per controller creation)
             container.RegisterType<IQueryStore, QueryStore>(new HierarchicalLifetimeManager());

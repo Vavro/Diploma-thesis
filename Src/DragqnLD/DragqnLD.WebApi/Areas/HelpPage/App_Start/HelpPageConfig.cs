@@ -1,3 +1,5 @@
+#pragma warning disable 1591
+
 // Uncomment the following to provide samples for PageResult<T>. Must also add the Microsoft.AspNet.WebApi.OData
 // package to your project.
 ////#define Handle_PageResultOfT

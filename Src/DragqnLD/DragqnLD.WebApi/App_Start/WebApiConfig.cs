@@ -5,8 +5,15 @@ using DragqnLD.WebApi.Filters;
 
 namespace DragqnLD.WebApi
 {
+    /// <summary>
+    /// Web Api confiration
+    /// </summary>
     public static class WebApiConfig
     {
+        /// <summary>
+        /// Registers the WebAPI into the specified configuration.
+        /// </summary>
+        /// <param name="config">The configuration.</param>
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services

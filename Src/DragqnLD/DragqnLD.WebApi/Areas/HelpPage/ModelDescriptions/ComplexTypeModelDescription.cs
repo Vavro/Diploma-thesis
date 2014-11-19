@@ -1,3 +1,5 @@
+#pragma warning disable 1591
+
 using System.Collections.ObjectModel;
 
 namespace DragqnLD.WebApi.Areas.HelpPage.ModelDescriptions

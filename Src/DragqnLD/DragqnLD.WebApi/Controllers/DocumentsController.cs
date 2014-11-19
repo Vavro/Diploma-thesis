@@ -35,6 +35,7 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/documents")]
         public async Task<HttpResponseMessage> Get()
         {
+            //todo: implement
             return CreateResponse(HttpStatusCode.NotImplemented);
         }
 

@@ -4,6 +4,70 @@
         <name>DragqnLD.WebApi</name>
     </assembly>
     <members>
+        <member name="T:DragqnLD.WebApi.App_Start.AutoMapperConfig">
+            <summary>
+            AutoMapper configuration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.App_Start.AutoMapperConfig.ConfigureMapper">
+            <summary>
+            Configures the mapper.
+            </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.BundleConfig">
+            <summary>
+            Bundle configuration for the mvc homepage
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Registers the bundles.
+            </summary>
+            <param name="bundles">The bundles.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.FilterConfig">
+            <summary>
+            Filter configuration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            Registers the global filters.
+            </summary>
+            <param name="filters">The filters.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.RouteConfig">
+            <summary>
+            The MVC web page Route Configuration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registers the routes.
+            </summary>
+            <param name="routes">The routes.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.UnityConfig">
+            <summary>
+            Unity DI container configuration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.UnityConfig.RegisterComponents">
+            <summary>
+            Registers the components.
+            </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.WebApiConfig">
+            <summary>
+            Web Api confiration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the WebAPI into the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
         <member name="M:DragqnLD.WebApi.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -685,6 +749,95 @@
             Returns true if this request is from local
             </summary>
         </member>
+        <member name="T:DragqnLD.WebApi.Configuration.DragqnLdConfig">
+            <summary>
+            DragqnLd Server Configuration
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Configuration.DragqnLdConfig.DatabaseUrl">
+            <summary>
+            Gets the database URL.
+            </summary>
+            <value>
+            The database URL.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Configuration.DragqnLdConfig.DatabaseName">
+            <summary>
+            Gets the name of the database.
+            </summary>
+            <value>
+            The name of the database.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Configuration.DragqnLdConfig.Instance">
+            <summary>
+            Gets the instance of the configuration.
+            </summary>
+            <value>
+            The instance.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Controllers.BaseApiController">
+            <summary>
+            Base api controller
+            </summary>
+        </member>
+        <member name="F:DragqnLD.WebApi.Controllers.BaseApiController.Log">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.ExecuteAsync(System.Web.Http.Controllers.HttpControllerContext,System.Threading.CancellationToken)">
+            <summary>
+            Executes asynchronously a single HTTP operation.
+            </summary>
+            <param name="controllerContext">The controller context for a single HTTP operation.</param>
+            <param name="cancellationToken">The cancellation token assigned for the HTTP operation.</param>
+            <returns>
+            The newly started task.
+            </returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateResponse(System.Net.HttpStatusCode)">
+            <summary>
+            Creates the response.
+            </summary>
+            <param name="status">The HTTP status code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateResponseWithObject``1(``0,System.Net.HttpStatusCode)">
+            <summary>
+            Creates the response with object in content.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <param name="status">The HTTP status code.</param>
+            <returns></returns>
+        </member>
+        <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.Store">
+            <summary>
+            Ravendb Document Store to be used.
+            </summary>
+            <value>
+            The document store.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.Session">
+            <summary>
+            Gets the ravendb session to be used with this request.
+            </summary>
+            <value>
+            The session.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.DefinitionId">
+            <summary>
+            Gets the definition identifier from the route.
+            </summary>
+            <value>
+            The definition identifier.
+            </value>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.DocumentsController">
             <summary>
             Controller for reading Documents stored for a Query Definition
@@ -707,6 +860,17 @@
             Gets the document for the specified query definition id.
             </summary>
             <param name="documentId">The document identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Controllers.HomeController">
+            <summary>
+            The home page controller
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.HomeController.Index">
+            <summary>
+            The home page action
+            </summary>
             <returns></returns>
         </member>
         <member name="T:DragqnLD.WebApi.Controllers.QueriesController">
@@ -749,10 +913,47 @@
             <param name="queryDefinition">The query definition.</param>
             <returns></returns>
         </member>
+        <member name="M:DragqnLD.WebApi.Controllers.QueriesController.Delete(System.Int32)">
+            <summary>
+            Deletes the query definition with the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager">
             <summary>
-            Mockup how it could be
+            Basic tasks overview, to have access to running tasks and their cancellation tokens
             </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager.GetStatusOfQuery(System.String)">
+            <summary>
+            Gets the status of query.
+            </summary>
+            <param name="definitionId">The definition identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager.EnqueueTask(System.String,System.Threading.CancellationToken,System.Func{System.String,System.Threading.CancellationToken,System.Progress{DragqnLD.Core.Abstraction.Query.QueryDefinitionStatus},System.Threading.Tasks.Task})">
+            <summary>
+            Enqueues the task.
+            </summary>
+            <param name="definitionId">The definition identifier.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="loadQueryDefinitionTask">The load query definition task.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager.TryCancel(System.String)">
+            <summary>
+            Tries to cancel a running task.
+            </summary>
+            <param name="definitionId">The definition identifier.</param>
+        </member>
+        <member name="P:DragqnLD.WebApi.Controllers.PerQueryDefinitionTasksManager.Instance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <value>
+            The instance.
+            </value>
         </member>
         <member name="T:DragqnLD.WebApi.Controllers.TasksController">
             <summary>
@@ -771,26 +972,70 @@
             <summary>
             Processes the specified definition identifier.
             </summary>
-            <param name="definitionId">The definition identifier.</param>
             <returns>Http Status Code Accepted as the Processing is scheduled for background.</returns>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.TasksController.Cancel">
             <summary>
             Cancels the processing of the query definition.
             </summary>
-            <param name="definitionId">The definition identifier.</param>
             <returns>Http Status Code Accepted as it tries to cancel the processing.</returns>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.TasksController.Status">
             <summary>
             Retuns only status of th especified definition.
             </summary>
-            <param name="definitionId">The definition identifier.</param>
             <returns>A <see cref="T:DragqnLD.WebApi.Models.QueryDefinitionStatusDto"/></returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Filters.ValidateModelFilter">
+            <summary>
+            Model validation Filter for incoming WebAPI requests
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Filters.ValidateModelFilter.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.WebApiApplication">
+            <summary>
+            The HttpApplication definition of the DragqnLD Server
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.WebApiApplication.Application_Start">
+            <summary>
+            Called at application start
+            </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.ProgressDto">
+            <summary>
+            Data transfer object for Progress
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.ProgressDto.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+            <value>
+            The total count.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.ProgressDto.CurrentItem">
+            <summary>
+            Gets or sets the current item.
+            </summary>
+            <value>
+            The current item.
+            </value>
         </member>
         <member name="T:DragqnLD.WebApi.Models.QueryDefinitionDto">
             <summary>
             Defines the a query that can be indexed by the system
+            </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.QueryDefinitionMetadataDto">
+            <summary>
+            Data transfer object for Query Definition Metadata
             </summary>
         </member>
         <member name="P:DragqnLD.WebApi.Models.QueryDefinitionMetadataDto.Id">
@@ -839,6 +1084,77 @@
             </summary>
             <value>
             The select query.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.QueryDefinitionStatusDto">
+            <summary>
+            Data transfer object for Query Definition Status
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.QueryDefinitionStatusDto.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.QueryDefinitionStatusDto.DocumentLoadProgress">
+            <summary>
+            Gets or sets the document load progress.
+            </summary>
+            <value>
+            The document load progress.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.QueryDefinitionWithStatusDto">
+            <summary>
+            Data transfer object for Query Definition with Status
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.QueryDefinitionWithStatusDto.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.QueryDefinitionWithStatusDto.StoredDocumentCount">
+            <summary>
+            Gets or sets the stored document count.
+            </summary>
+            <value>
+            The stored document count.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.SparqlQueryInfoDto">
+            <summary>
+            Data transfer object for Sparql Query info
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.SparqlQueryInfoDto.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>
+            The query.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.SparqlQueryInfoDto.SparqlEndpoint">
+            <summary>
+            Gets or sets the sparql endpoint.
+            </summary>
+            <value>
+            The sparql endpoint.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.SparqlQueryInfoDto.DefaultDataSet">
+            <summary>
+            Gets or sets the default data set.
+            </summary>
+            <value>
+            The default data set.
             </value>
         </member>
         <member name="T:DragqnLD.WebApi.Annotations.CanBeNullAttribute">

@@ -19,8 +19,14 @@ using Raven.Client.Indexes;
 
 namespace DragqnLD.WebApi.Controllers
 {
+    /// <summary>
+    /// Base api controller
+    /// </summary>
     public abstract class BaseApiController : ApiController
     {
+        /// <summary>
+        /// The logger
+        /// </summary>
         protected static readonly ILog Log = GetCurrentClassLogger();
 
         private static ILog GetCurrentClassLogger()
@@ -29,12 +35,32 @@ namespace DragqnLD.WebApi.Controllers
             return LogManager.GetLogger(stackFrame.GetMethod().DeclaringType);
         }
 
+        /// <summary>
+        /// Ravendb Document Store to be used.
+        /// </summary>
+        /// <value>
+        /// The document store.
+        /// </value>
         [Dependency]
         public IDocumentStore Store { get; set; }
 
         //todo: change architecture to Command based, and make commands accept the Session for this request?
-        public IAsyncDocumentSession Session { get; set; }
+        /// <summary>
+        /// Gets the ravendb session to be used with this request.
+        /// </summary>
+        /// <value>
+        /// The session.
+        /// </value>
+        public IAsyncDocumentSession Session { get; private set; }
 
+        /// <summary>
+        /// Executes asynchronously a single HTTP operation.
+        /// </summary>
+        /// <param name="controllerContext">The controller context for a single HTTP operation.</param>
+        /// <param name="cancellationToken">The cancellation token assigned for the HTTP operation.</param>
+        /// <returns>
+        /// The newly started task.
+        /// </returns>
         public async override Task<HttpResponseMessage> ExecuteAsync(
             HttpControllerContext controllerContext,
             CancellationToken cancellationToken)
@@ -77,8 +103,19 @@ namespace DragqnLD.WebApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets the definition identifier from the route.
+        /// </summary>
+        /// <value>
+        /// The definition identifier.
+        /// </value>
         public string DefinitionId { get; private set; }
 
+        /// <summary>
+        /// Creates the response.
+        /// </summary>
+        /// <param name="status">The HTTP status code.</param>
+        /// <returns></returns>
         protected HttpResponseMessage CreateResponse(HttpStatusCode status = HttpStatusCode.OK)
         {
             Debug.Assert(Request != null, "Request is null");
@@ -88,6 +125,13 @@ namespace DragqnLD.WebApi.Controllers
         }
 
 
+        /// <summary>
+        /// Creates the response with object in content.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj">The object.</param>
+        /// <param name="status">The HTTP status code.</param>
+        /// <returns></returns>
         protected HttpResponseMessage CreateResponseWithObject<T>(T obj, HttpStatusCode status = HttpStatusCode.OK)
         {
             Debug.Assert(Request != null, "Request is null");
