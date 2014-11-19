@@ -1,4 +1,3 @@
-@using System.Web.Http
 @using DragqnLD.WebApi.Areas.HelpPage.Models
 @model HelpPageApiModel
 
@@ -20,7 +19,7 @@
     <div class="panel">
       <div data-bind="foreach: UriParameters">
         <div>
-          <input readonly="true" spellcheck="false" tabindex="100" class="uriParameterLabel" data-bind="value: '{' + name + '}'" />
+          <input readonly="readonly" spellcheck="false" tabindex="100" class="uriParameterLabel" data-bind="value: '{' + name + '}'" />
           <span>= </span>
           <input spellcheck="false" data-bind="value: value, valueUpdate: 'afterkeydown', enable: enabled" />
           <input type="checkbox" data-bind="checked: enabled" />

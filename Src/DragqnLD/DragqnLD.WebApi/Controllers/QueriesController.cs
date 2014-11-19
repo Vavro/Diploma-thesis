@@ -1,25 +1,17 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.WebPages.Scope;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
-using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
-using DragqnLD.Core.Implementations;
-using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.Models;
-using Raven.Client;
-using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {

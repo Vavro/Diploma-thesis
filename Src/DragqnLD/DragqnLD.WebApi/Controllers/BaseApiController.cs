@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -9,13 +7,9 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
-using DragqnLD.Core.Indexes;
-using DragqnLD.WebApi.Configuration;
 using log4net;
 using Microsoft.Practices.Unity;
 using Raven.Client;
-using Raven.Client.Document;
-using Raven.Client.Indexes;
 
 namespace DragqnLD.WebApi.Controllers
 {
