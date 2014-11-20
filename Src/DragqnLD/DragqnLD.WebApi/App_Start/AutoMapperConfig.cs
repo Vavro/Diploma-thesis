@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Models;
 
@@ -28,6 +29,8 @@ namespace DragqnLD.WebApi.App_Start
                 Mapper.CreateMap<QueryDefinition, QueryDefinitionWithStatusDto>();
                 Mapper.CreateMap<Progress, ProgressDto>();
                 Mapper.CreateMap<QueryDefinitionStatus, QueryDefinitionStatusDto>();
+
+                Mapper.CreateMap<DocumentMetadata, DocumentMetadataDto>();
             }
         }
 

@@ -221,6 +221,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DocumentMetadataDto.cs" />
     <Compile Include="Models\ProgressDto.cs" />
     <Compile Include="Models\QueryDefinitionDto.cs" />
     <Compile Include="Models\QueryDefinitionStatusDto.cs" />

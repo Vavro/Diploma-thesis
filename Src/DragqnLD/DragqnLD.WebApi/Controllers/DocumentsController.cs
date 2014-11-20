@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AutoMapper;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.WebApi.Models;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -31,12 +34,10 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/documents")]
         public async Task<HttpResponseMessage> Get()
         {
-            var documents = await _dataStore.GetDocuments(DefinitionId);
-
-            return CreateResponseWithObject(documents);
-
-            //todo: implement
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var documentMetadatas = await _dataStore.GetDocuments(DefinitionId);
+            var documentMetadataDtos = Mapper.Map<IEnumerable<DocumentMetadataDto>>(documentMetadatas);
+           
+            return CreateResponseWithObject(documentMetadataDtos);
         }
 
         /// <summary>

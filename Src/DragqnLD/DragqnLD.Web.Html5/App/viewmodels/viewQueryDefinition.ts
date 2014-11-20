@@ -2,7 +2,9 @@
 import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
+import documentMetadata = require("models/documentMetadata");
 import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitionWithStatusCommand");
+import getQueryDocumentsCommand = require("commands/getQueryDocumentsCommand");
 import processQueryCommand = require("commands/processQueryCommand");
 
 class viewQueryDefinition extends viewModelBase {
@@ -10,6 +12,13 @@ class viewQueryDefinition extends viewModelBase {
     queryDefinition: KnockoutObservable<queryDefinitionWithStatus> = ko.observable<queryDefinitionWithStatus>();
     queryId: KnockoutComputed<string>;
     canRun: KnockoutComputed<boolean>;
+
+    documentsList: KnockoutObservableArray<documentMetadataDto> = ko.observableArray<documentMetadataDto>();
+    idTemplate = $("#viewDocumentIdTemplate").html();
+    documentsColumnList = ko.observableArray([
+        { field: "Id", displayName: "Id", cellTemplate: this.idTemplate }]);
+
+    isShowingDocuments = ko.observable(true);
 
     constructor() {
         super();
@@ -19,6 +28,12 @@ class viewQueryDefinition extends viewModelBase {
             this.queryDefinition().status().status() === queryStatus.ReadyToRun :
             false);
 
+    }
+
+    compositionComplete(): void {
+        console.log("viewQueryDefinition view attached");
+        
+        $(window).trigger("resize");
     }
 
     navigateToQueries(): void {
@@ -45,11 +60,10 @@ class viewQueryDefinition extends viewModelBase {
 
     runQuery(): void {
         // todo: remove - should be run upon save
-
         new processQueryCommand(this.queryId())
             .execute()
             .done((result : any) : void => this.notifySuccess("runQuery() + " + result));
-
+        //todo: start polling for status
     }
 
     refresh(): void {
@@ -69,7 +83,6 @@ class viewQueryDefinition extends viewModelBase {
                 this.queryDefinition(queryDefinition);
                 canActivateResult.resolve({ can: true });
                 this.notifySuccess("Query " + idToLoad + " loaded");
-                //todo: start polling for status
             })
             .fail((response: any): void => {
                 // todo examine possible response and show it
@@ -77,9 +90,25 @@ class viewQueryDefinition extends viewModelBase {
                 console.log(response);
                 this.notifyWarning("Could not get document " + idToLoad);
                 canActivateResult.reject(response);
-        });
+            });
+
+        new getQueryDocumentsCommand(idToLoad)
+            .execute()
+            .done(results => {
+                this.documentsList(results);
+                //todo: find out why this "hack" is necessary to have right datagrid size
+                $(window).trigger("resize"); 
+            });
 
         return canActivateResult;
+    }
+
+    public activateDocs(): void {
+        this.isShowingDocuments(true);
+    }
+
+    public activateIndexes(): void {
+        this.isShowingDocuments(false);
     }
 }
 

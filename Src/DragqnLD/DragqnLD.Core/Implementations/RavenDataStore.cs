@@ -64,13 +64,15 @@ namespace DragqnLD.Core.Implementations
             return BulkStoreDocuments(results.AsEnumerable());
         }
 
-        public async Task<List<DocumentMetadata>> GetDocuments(string definitionId)
+        public async Task<List<DocumentMetadata>> GetDocuments(string definitionId, int start = 0, int pageSize = 20)
         {
             using (var session = _store.OpenAsyncSession())
             {
                 //todo: this will return max 128 docs by default add paging
                 var queryResults = await session.Advanced.AsyncLuceneQuery<dynamic>()
                     .WhereEquals("@metadata.Raven-Entity-Name", definitionId)
+                    .Skip(start)
+                    .Take(pageSize)
                     .SelectFields<dynamic>("@metadata.@id")
                     .QueryResultAsync
                     .ConfigureAwait(false);

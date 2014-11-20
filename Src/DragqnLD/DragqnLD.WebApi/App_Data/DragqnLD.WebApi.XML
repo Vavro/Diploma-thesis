@@ -1018,6 +1018,19 @@
             Called at application start
             </summary>
         </member>
+        <member name="T:DragqnLD.WebApi.Models.DocumentMetadataDto">
+            <summary>
+            Stored document metadata
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.DocumentMetadataDto.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
         <member name="T:DragqnLD.WebApi.Models.ProgressDto">
             <summary>
             Data transfer object for Progress

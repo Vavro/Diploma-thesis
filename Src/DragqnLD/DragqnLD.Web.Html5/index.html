@@ -31,10 +31,12 @@
     <meta name="description" content="DragqnLD administration interface" />
 </head>
 <body>
-    <script id="idTemplate" type="text/template">
+    <script id="viewQueryIdTemplate" type="text/template">
         <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : '#viewQuery?id=' + $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
     </script>
-
+    <script id="viewDocumentIdTemplate" type="text/template">
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : '#viewDocument?id=' + $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
+    </script>
     <div id="applicationHost">
         <div class="splash">
             <div><img class="logo" src="/Content/images/Logo.svg" /></div>

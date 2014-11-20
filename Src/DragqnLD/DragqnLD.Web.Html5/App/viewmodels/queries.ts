@@ -3,7 +3,7 @@
 import getQueriesCommand = require("commands/getQueriesCommand");
 
 class queries {
-    idTemplate = $("#idTemplate").html();
+    idTemplate = $("#viewQueryIdTemplate").html();
     queriesList = ko.observableArray();
     columnList = ko.observableArray([
         { field: "Id", displayName: "Id", cellTemplate: this.idTemplate },

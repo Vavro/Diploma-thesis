@@ -48,12 +48,31 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <h3>Indexes</h3>
-            <div>
-                <!-- todo add indexes list-->
-                <div class="pull-left"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button></div>
+            <ul class="nav nav-tabs" id="queryDefinitionTabs">
+                <li class="active" data-bind="click: activateDocs, css: { active: isShowingDocuments }" title="Show documents"><a style="cursor: pointer;">Documents</a></li>
+                <li data-bind="click: activateIndexes, css: { active: isShowingDocuments() === false }" title="Show indexes"><a style="cursor: pointer;">Indexes</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" data-bind="css: { active: isShowingDocuments}">
+                    <h3>Documents</h3>
+                    <div>
+                        <div data-bind="koGrid: { data : documentsList,
+                                columnDefs: documentsColumnList,
+                                autogenerateColumns: false,
+                                multiSelect: false,
+                                displaySelectionCheckbox: false,
+                                selectWithCheckboxOnly: true},
+                                dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }"></div>
+                    </div>
+                </div>
+                <div class="tab-pane" data-bind="css: { active: isShowingDocuments() === false}">
+                    <h3>Indexes</h3>
+                    <div>
+                        <!-- todo add indexes list-->
+                        <div class="pull-left"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button></div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </div>
 </section>

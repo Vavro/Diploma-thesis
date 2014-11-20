@@ -38,4 +38,8 @@ interface sparqlQueryInfoDto {
     SparqlEndpoint: string;
     DefaultDataSet: string;
 }
+
+interface documentMetadataDto {
+    Id : string;
+}
 // ReSharper restore InconsistentNaming
