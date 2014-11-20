@@ -31,6 +31,10 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/documents")]
         public async Task<HttpResponseMessage> Get()
         {
+            var documents = await _dataStore.GetDocuments(DefinitionId);
+
+            return CreateResponseWithObject(documents);
+
             //todo: implement
             return CreateResponse(HttpStatusCode.NotImplemented);
         }

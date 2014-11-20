@@ -64,6 +64,24 @@ namespace DragqnLD.Core.Implementations
             return BulkStoreDocuments(results.AsEnumerable());
         }
 
+        public async Task<List<DocumentMetadata>> GetDocuments(string definitionId)
+        {
+            using (var session = _store.OpenAsyncSession())
+            {
+                //todo: this will return max 128 docs by default add paging
+                var queryResults = await session.Advanced.AsyncLuceneQuery<dynamic>()
+                    .WhereEquals("@metadata.Raven-Entity-Name", definitionId)
+                    .SelectFields<dynamic>("@metadata.@id")
+                    .QueryResultAsync
+                    .ConfigureAwait(false);
+
+                var documentMetadatas = new List<DocumentMetadata>(queryResults.Results.Count);
+                documentMetadatas.AddRange(queryResults.Results.Select(queryResult => new DocumentMetadata() {Id = queryResult.Value<string>("__document_id").Substring(definitionId.Length + 1)}));
+                
+                return documentMetadatas;
+            }
+        }
+
         private static string GetDocumentId(string queryId, string documentUri)
         {
             return String.Format("{0}/{1}", queryId, documentUri);

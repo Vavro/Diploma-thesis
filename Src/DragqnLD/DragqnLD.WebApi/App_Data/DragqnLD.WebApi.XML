@@ -36,6 +36,17 @@
             </summary>
             <param name="filters">The filters.</param>
         </member>
+        <member name="T:DragqnLD.WebApi.App_Start.RavenDbConfig">
+            <summary>
+            Ravendb configuration
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.App_Start.RavenDbConfig.GetDocumentStore">
+            <summary>
+            Gets the document store.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.RouteConfig">
             <summary>
             The MVC web page Route Configuration
