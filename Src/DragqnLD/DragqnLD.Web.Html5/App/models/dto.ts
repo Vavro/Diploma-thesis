@@ -44,7 +44,7 @@ interface documentMetadataDto {
 }
 
 interface pagedDocumentMetadataDto {
-    items: documentMetadataDto[];
-    totalItems: number;
+    Items: documentMetadataDto[];
+    TotalItems: number;
 }
 // ReSharper restore InconsistentNaming

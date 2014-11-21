@@ -27,6 +27,6 @@ namespace DragqnLD.Core.Abstraction.Data
     {
         public IList<DocumentMetadata> Items { get; set; }
 
-        public int TotalDocuments { get; set; }
+        public int TotalItems { get; set; }
     }
 }

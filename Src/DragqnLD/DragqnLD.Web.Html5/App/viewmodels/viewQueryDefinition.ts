@@ -120,8 +120,8 @@ class viewQueryDefinition extends viewModelBase {
         return new getQueryDocumentsCommand(id, start, pageSize)
             .execute()
             .done(result => {
-                this.documentsList(result.items);
-                this.documentsListPagingOptions.totalServerItems(result.totalItems);
+                this.documentsList(result.Items);
+                this.documentsListPagingOptions.totalServerItems(result.TotalItems);
                 //todo: find out why this "hack" is necessary to have right datagrid size
                 $(window).trigger("resize");
             });

@@ -1046,7 +1046,7 @@
             The items.
             </value>
         </member>
-        <member name="P:DragqnLD.WebApi.Models.PagedDocumentMetadataDto.TotalDocuments">
+        <member name="P:DragqnLD.WebApi.Models.PagedDocumentMetadataDto.TotalItems">
             <summary>
             Gets or sets the total documents.
             </summary>

@@ -81,7 +81,7 @@ namespace DragqnLD.Core.Implementations
                 var documentMetadatas = new List<DocumentMetadata>(queryResults.Results.Count);
                 documentMetadatas.AddRange(queryResults.Results.Select(queryResult => new DocumentMetadata() {Id = queryResult.Value<string>("__document_id").Substring(definitionId.Length + 1)}));
                 
-                return new PagedDocumentMetadata() {Items = documentMetadatas, TotalDocuments = statistics.TotalResults};
+                return new PagedDocumentMetadata() {Items = documentMetadatas, TotalItems = statistics.TotalResults};
             }
         }
 

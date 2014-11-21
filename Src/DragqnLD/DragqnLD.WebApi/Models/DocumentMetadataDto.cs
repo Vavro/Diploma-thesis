@@ -25,6 +25,7 @@ namespace DragqnLD.WebApi.Models
     /// <summary>
     /// Result of a paged request for documents
     /// </summary>
+    [UsedImplicitly]
     public class PagedDocumentMetadataDto
     {
         /// <summary>
@@ -33,6 +34,7 @@ namespace DragqnLD.WebApi.Models
         /// <value>
         /// The items.
         /// </value>
+        [UsedImplicitly]
         public IList<DocumentMetadataDto> Items { get; set; }
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace DragqnLD.WebApi.Models
         /// <value>
         /// The total documents.
         /// </value>
-        public int TotalDocuments { get; set; }
+        [UsedImplicitly]
+        public int TotalItems { get; set; }
     }
 }
