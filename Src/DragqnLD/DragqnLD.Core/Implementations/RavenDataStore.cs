@@ -64,12 +64,13 @@ namespace DragqnLD.Core.Implementations
             return BulkStoreDocuments(results.AsEnumerable());
         }
 
-        public async Task<List<DocumentMetadata>> GetDocuments(string definitionId, int start = 0, int pageSize = 20)
+        public async Task<PagedDocumentMetadata> GetDocuments(string definitionId, int start = 0, int pageSize = 20)
         {
             using (var session = _store.OpenAsyncSession())
             {
-                //todo: this will return max 128 docs by default add paging
+                RavenQueryStatistics statistics;
                 var queryResults = await session.Advanced.AsyncLuceneQuery<dynamic>()
+                    .Statistics(out statistics)
                     .WhereEquals("@metadata.Raven-Entity-Name", definitionId)
                     .Skip(start)
                     .Take(pageSize)
@@ -80,7 +81,7 @@ namespace DragqnLD.Core.Implementations
                 var documentMetadatas = new List<DocumentMetadata>(queryResults.Results.Count);
                 documentMetadatas.AddRange(queryResults.Results.Select(queryResult => new DocumentMetadata() {Id = queryResult.Value<string>("__document_id").Substring(definitionId.Length + 1)}));
                 
-                return documentMetadatas;
+                return new PagedDocumentMetadata() {Items = documentMetadatas, TotalDocuments = statistics.TotalResults};
             }
         }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction.Data
@@ -19,5 +21,12 @@ namespace DragqnLD.Core.Abstraction.Data
     public class DocumentMetadata
     {
         public string Id { get; set; }
+    }
+
+    public class PagedDocumentMetadata
+    {
+        public IList<DocumentMetadata> Items { get; set; }
+
+        public int TotalDocuments { get; set; }
     }
 }

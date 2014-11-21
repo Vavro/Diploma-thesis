@@ -1044,6 +1044,8 @@
     <TypeScriptCompile Include="App\common\dynamicHeightBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\extensionInterfaces.ts" />
     <TypeScriptCompile Include="App\common\extensions.ts" />
+    <TypeScriptCompile Include="App\common\pagedList.ts" />
+    <TypeScriptCompile Include="App\common\pagedResultSet.ts" />
     <TypeScriptCompile Include="App\models\documentMetadata.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
     <TypeScriptCompile Include="App\models\progress.ts" />

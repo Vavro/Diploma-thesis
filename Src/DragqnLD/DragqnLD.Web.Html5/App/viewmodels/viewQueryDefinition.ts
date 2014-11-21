@@ -15,8 +15,16 @@ class viewQueryDefinition extends viewModelBase {
 
     documentsList: KnockoutObservableArray<documentMetadataDto> = ko.observableArray<documentMetadataDto>();
     idTemplate = $("#viewDocumentIdTemplate").html();
+
     documentsColumnList = ko.observableArray([
         { field: "Id", displayName: "Id", cellTemplate: this.idTemplate }]);
+
+    documentsListPagingOptions = {
+        pageSizes: ko.observableArray([10, 20, 50]),
+        pageSize: ko.observable(20),
+        totalServerItems: ko.observable(0),
+        currentPage: ko.observable(1)
+    }
 
     isShowingDocuments = ko.observable(true);
 
@@ -28,11 +36,18 @@ class viewQueryDefinition extends viewModelBase {
             this.queryDefinition().status().status() === queryStatus.ReadyToRun :
             false);
 
+        this.documentsListPagingOptions.pageSize.subscribe(newValue => {
+            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), this.queryId());
+        });
+        this.documentsListPagingOptions.currentPage.subscribe(newValue => {
+            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), this.queryId());
+        });
+
     }
 
     compositionComplete(): void {
         console.log("viewQueryDefinition view attached");
-        
+
         $(window).trigger("resize");
     }
 
@@ -62,7 +77,7 @@ class viewQueryDefinition extends viewModelBase {
         // todo: remove - should be run upon save
         new processQueryCommand(this.queryId())
             .execute()
-            .done((result : any) : void => this.notifySuccess("runQuery() + " + result));
+            .done((result: any): void => this.notifySuccess("runQuery() + " + result));
         //todo: start polling for status
     }
 
@@ -77,30 +92,39 @@ class viewQueryDefinition extends viewModelBase {
             this.notifyError("No id to be loaded");
             return canActivateResult.reject("No id to be loaded");
         }
-        new getQueryDefinitionWithStatusCommand(idToLoad)
-            .execute()
-            .done((queryDefinition: queryDefinitionWithStatus): void => {
-                this.queryDefinition(queryDefinition);
-                canActivateResult.resolve({ can: true });
-                this.notifySuccess("Query " + idToLoad + " loaded");
-            })
-            .fail((response: any): void => {
-                // todo examine possible response and show it
-                console.log("Could not get document " + idToLoad + "response: ");
-                console.log(response);
-                this.notifyWarning("Could not get document " + idToLoad);
-                canActivateResult.reject(response);
-            });
 
-        new getQueryDocumentsCommand(idToLoad)
-            .execute()
-            .done(results => {
-                this.documentsList(results);
-                //todo: find out why this "hack" is necessary to have right datagrid size
-                $(window).trigger("resize"); 
-            });
+        this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), idToLoad).always(() => {
+            new getQueryDefinitionWithStatusCommand(idToLoad)
+                .execute()
+                .done((queryDefinition: queryDefinitionWithStatus): void => {
+                    this.queryDefinition(queryDefinition);
+                    canActivateResult.resolve({ can: true });
+                    this.notifySuccess("Query " + idToLoad + " loaded");
+                })
+                .fail((response: any): void => {
+                    // todo examine possible response and show it
+                    console.log("Could not get document " + idToLoad + "response: ");
+                    console.log(response);
+                    this.notifyWarning("Could not get document " + idToLoad);
+                    canActivateResult.reject(response);
+                });
+
+        });
+
 
         return canActivateResult;
+    }
+
+    private getDocumentsAsync(currentPage: number, pageSize: number, id: string): JQueryPromise<pagedDocumentMetadataDto> {
+        var start = (currentPage - 1) * pageSize;
+        return new getQueryDocumentsCommand(id, start, pageSize)
+            .execute()
+            .done(result => {
+                this.documentsList(result.items);
+                this.documentsListPagingOptions.totalServerItems(result.totalItems);
+                //todo: find out why this "hack" is necessary to have right datagrid size
+                $(window).trigger("resize");
+            });
     }
 
     public activateDocs(): void {

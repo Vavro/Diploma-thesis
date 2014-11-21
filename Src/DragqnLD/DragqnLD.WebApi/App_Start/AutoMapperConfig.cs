@@ -31,6 +31,7 @@ namespace DragqnLD.WebApi.App_Start
                 Mapper.CreateMap<QueryDefinitionStatus, QueryDefinitionStatusDto>();
 
                 Mapper.CreateMap<DocumentMetadata, DocumentMetadataDto>();
+                Mapper.CreateMap<PagedDocumentMetadata, PagedDocumentMetadataDto>();
             }
         }
 

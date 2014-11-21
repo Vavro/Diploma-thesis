@@ -860,10 +860,12 @@
             </summary>
             <param name="dataStore">The data store.</param>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.Get">
+        <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.Get(System.Int32,System.Int32)">
             <summary>
             Gets this document metadata of this query definition id.
             </summary>
+            <param name="start">The start.</param>
+            <param name="pageSize">Size of the page.</param>
             <returns></returns>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.Get(System.String)">
@@ -1029,6 +1031,27 @@
             </summary>
             <value>
             The identifier.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.PagedDocumentMetadataDto">
+            <summary>
+            Result of a paged request for documents
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.PagedDocumentMetadataDto.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.PagedDocumentMetadataDto.TotalDocuments">
+            <summary>
+            Gets or sets the total documents.
+            </summary>
+            <value>
+            The total documents.
             </value>
         </member>
         <member name="T:DragqnLD.WebApi.Models.ProgressDto">

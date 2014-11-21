@@ -28,7 +28,7 @@ namespace DragqnLD.Core.Abstraction
         
         //todo: maybe not necessary, delete?
         Task BulkStoreDocuments(params ConstructResult[] results);
-        Task<List<DocumentMetadata>> GetDocuments(string definitionId, int start = 0, int pageSize = 20);
+        Task<PagedDocumentMetadata> GetDocuments(string definitionId, int start = 0, int pageSize = 20);
     }
 
 }

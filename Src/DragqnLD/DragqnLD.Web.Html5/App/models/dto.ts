@@ -42,4 +42,9 @@ interface sparqlQueryInfoDto {
 interface documentMetadataDto {
     Id : string;
 }
+
+interface pagedDocumentMetadataDto {
+    items: documentMetadataDto[];
+    totalItems: number;
+}
 // ReSharper restore InconsistentNaming

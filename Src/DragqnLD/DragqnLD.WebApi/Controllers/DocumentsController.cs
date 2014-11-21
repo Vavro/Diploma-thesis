@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Antlr.Runtime.Tree;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.WebApi.Models;
@@ -29,15 +30,17 @@ namespace DragqnLD.WebApi.Controllers
         /// <summary>
         /// Gets this document metadata of this query definition id.
         /// </summary>
+        /// <param name="start">The start.</param>
+        /// <param name="pageSize">Size of the page.</param>
         /// <returns></returns>
         [HttpGet]
         [Route("api/query/{definitionId}/documents")]
-        public async Task<HttpResponseMessage> Get()
+        public async Task<HttpResponseMessage> Get(int start = 0, int pageSize = 20)
         {
-            var documentMetadatas = await _dataStore.GetDocuments(DefinitionId);
-            var documentMetadataDtos = Mapper.Map<IEnumerable<DocumentMetadataDto>>(documentMetadatas);
+            var pagedDocumentMetadata = await _dataStore.GetDocuments(DefinitionId, start, pageSize);
+            var pagedDocumentMetadataDto = Mapper.Map<PagedDocumentMetadataDto>(pagedDocumentMetadata);
            
-            return CreateResponseWithObject(documentMetadataDtos);
+            return CreateResponseWithObject(pagedDocumentMetadataDto);
         }
 
         /// <summary>
