@@ -12,9 +12,10 @@ class search extends viewModelBase {
     }
 
     public canActivate(args: any): JQueryDeferred<{}> {
-        this.init(args.id);
         if (args && args.id) {
-
+            this.init(args.id);
+        } else {
+            this.init();
         }
         return $.Deferred().resolve({ can: true });
     }
