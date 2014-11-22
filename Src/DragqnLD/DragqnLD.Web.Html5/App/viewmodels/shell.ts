@@ -18,6 +18,7 @@ class shell {
         { route: "queries", title: "Queries", moduleId: "viewmodels/queries", nav: true },
             { route: "editQuery", title: "Edit Query Definition", moduleId: "viewmodels/editQueryDefinition", nav: false },
             { route: "viewQuery", title: "View Query Definition", moduleId: "viewmodels/viewQueryDefinition", nav: false },
+        { route: "search", title: "Search", moduleId: "viewmodels/search", nav: true},
         { route: "notifications", title: "", moduleId: "viewmodels/notifications", nav: false }
         ]).buildNavigationModel();
 
