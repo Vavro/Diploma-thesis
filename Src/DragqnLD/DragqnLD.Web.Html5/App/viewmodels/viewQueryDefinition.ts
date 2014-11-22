@@ -2,7 +2,6 @@
 import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
-import documentMetadata = require("models/documentMetadata");
 import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitionWithStatusCommand");
 import getQueryDocumentsCommand = require("commands/getQueryDocumentsCommand");
 import processQueryCommand = require("commands/processQueryCommand");
@@ -24,7 +23,7 @@ class viewQueryDefinition extends viewModelBase {
         pageSize: ko.observable(20),
         totalServerItems: ko.observable(0),
         currentPage: ko.observable(1)
-    }
+    };
 
     isShowingDocuments = ko.observable(true);
 
@@ -37,10 +36,12 @@ class viewQueryDefinition extends viewModelBase {
             false);
 
         this.documentsListPagingOptions.pageSize.subscribe(newValue => {
-            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), this.queryId());
+            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
+                this.documentsListPagingOptions.pageSize(), this.queryId());
         });
         this.documentsListPagingOptions.currentPage.subscribe(newValue => {
-            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), this.queryId());
+            this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
+                this.documentsListPagingOptions.pageSize(), this.queryId());
         });
 
     }
@@ -78,7 +79,7 @@ class viewQueryDefinition extends viewModelBase {
         new processQueryCommand(this.queryId())
             .execute()
             .done((result: any): void => this.notifySuccess("runQuery() + " + result));
-        //todo: start polling for status
+        // todo: start polling for status
     }
 
     refresh(): void {
@@ -93,7 +94,9 @@ class viewQueryDefinition extends viewModelBase {
             return canActivateResult.reject("No id to be loaded");
         }
 
-        this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(), this.documentsListPagingOptions.pageSize(), idToLoad).always(() => {
+        this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
+            this.documentsListPagingOptions.pageSize(), idToLoad)
+            .always(() : void => {
             new getQueryDefinitionWithStatusCommand(idToLoad)
                 .execute()
                 .done((queryDefinition: queryDefinitionWithStatus): void => {
@@ -122,7 +125,7 @@ class viewQueryDefinition extends viewModelBase {
             .done(result => {
                 this.documentsList(result.Items);
                 this.documentsListPagingOptions.totalServerItems(result.TotalItems);
-                //todo: find out why this "hack" is necessary to have right datagrid size
+                // todo: find out why this "hack" is necessary to have right datagrid size
                 $(window).trigger("resize");
             });
     }
