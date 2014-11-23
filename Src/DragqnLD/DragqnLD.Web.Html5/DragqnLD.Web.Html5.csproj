@@ -1075,6 +1075,7 @@
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueriesCommand.ts" />
+    <TypeScriptCompile Include="App\commands\searchEscapedCommand.ts" />
     <TypeScriptCompile Include="App\common\aceEditorBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\appUrl.ts" />
     <TypeScriptCompile Include="App\common\constants.ts" />

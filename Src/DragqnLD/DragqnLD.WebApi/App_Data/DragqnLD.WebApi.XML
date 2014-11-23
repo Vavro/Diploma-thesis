@@ -968,6 +968,24 @@
             The instance.
             </value>
         </member>
+        <member name="T:DragqnLD.WebApi.Controllers.SearchController">
+            <summary>
+            Controller that provides searching API
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.#ctor(DragqnLD.Core.Abstraction.IDataStore)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.SearchController"/> class.
+            </summary>
+            <param name="dataStore">The data store.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchEscapedLuceneQuery(System.String)">
+            <summary>
+            Searchs by the escaped lucene query.
+            </summary>
+            <param name="escapedQuery">The escapted query.</param>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.TasksController">
             <summary>
             Manages backgrounds tasks availible for QueryDefinitions

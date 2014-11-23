@@ -1,12 +1,13 @@
 ﻿import viewModelBase = require("viewmodels/viewModelBase");
 import getQueriesCommand = require("commands/getQueriesCommand");
+import searchEscapedCommand = require("commands/searchEscapedCommand");
 
 class search extends viewModelBase {
     public definitions = ko.observableArray<queryDefinitionMetadataDto>();
     public selectedDefinition = ko.observable<string>();
     public definitionsExceptSelected: KnockoutComputed<queryDefinitionMetadataDto[]>;
 
-    public searchText = ko.observable<String>("");
+    public searchText = ko.observable<string>("");
     public searchResults = ko.observableArray<any>();
 
     private idTemplate = $("#viewDocumentIdTemplate").html();
@@ -61,10 +62,12 @@ class search extends viewModelBase {
         });
     }
 
-    private i = 0;
-    public search() : void {
-        this.searchResults.push({ Id: "Test/" + this.i });
-        this.i++;
+    public search(): void {
+        //todo: add paging
+        var command = new searchEscapedCommand(this.selectedDefinition(), this.searchText());
+        command.execute().done(result => {
+            this.searchResults(result.Items);
+        });
     }
 
     public setSelectedDefinition(definitionId: string) {

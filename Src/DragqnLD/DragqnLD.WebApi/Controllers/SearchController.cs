@@ -5,7 +5,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.UI;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.WebApi.Models;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -34,14 +36,29 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/searchEscaped")]
         public async Task<HttpResponseMessage> SearchEscapedLuceneQuery(string escapedQuery)
         {
-            var results = await _dataStore.QueryDocumentEscapedLuceneQuery(DefinitionId, escapedQuery);
+            try
+            {
+                //todo: add paging
+                var results = await _dataStore.QueryDocumentEscapedLuceneQuery(DefinitionId, escapedQuery);
 
-            //todo: streamline
-            var transformedResults = results.Select(result => new {Id = result.ToString()});
+                //todo: streamline
+                var documentMetadataDtos =
+                    results.Select(result => new DocumentMetadataDto() {Id = result.ToString()}).ToList();
+                var pagedDocumentMetadataDto = new PagedDocumentMetadataDto()
+                {
+                    Items = documentMetadataDtos,
+                    TotalItems = 1000
+                };
 
-            var response = CreateResponseWithObject(transformedResults);
+                var response = CreateResponseWithObject(pagedDocumentMetadataDto);
 
-            return response;
+                return response;
+            }
+            catch (Exception e)
+            {
+                Log.Fatal("exception", e);
+                throw;
+            }
         }
     }
 }
