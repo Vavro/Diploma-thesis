@@ -5,8 +5,15 @@ class search extends viewModelBase {
     public definitions = ko.observableArray<queryDefinitionMetadataDto>();
     public selectedDefinition = ko.observable<string>();
     public definitionsExceptSelected: KnockoutComputed<queryDefinitionMetadataDto[]>;
-    public queryText = ko.observable<String>("");
+
+    public searchText = ko.observable<String>("");
     public searchResults = ko.observableArray<any>();
+
+    private idTemplate = $("#viewDocumentIdTemplate").html();
+    public searchResultsColumnList = ko.observableArray([
+        { field: "Id", displayName: "Id", cellTemplate: this.idTemplate }]);
+
+    public isAttached = ko.observable(false);
 
     constructor() {
         super();
@@ -20,6 +27,13 @@ class search extends viewModelBase {
             }
             return allDefinitions;
         });
+    }
+
+    public compositionComplete(): void {
+        //todo: move to ancestor?
+        console.log("search view attached");
+        this.isAttached(true);
+        $(window).trigger("resize");
     }
 
     public canActivate(args: any): JQueryDeferred<{}> {
@@ -47,14 +61,16 @@ class search extends viewModelBase {
         });
     }
 
+    private i = 0;
     public search() : void {
-        
+        this.searchResults.push({ Id: "Test/" + this.i });
+        this.i++;
     }
 
     public setSelectedDefinition(definitionId: string) {
         this.selectedDefinition(definitionId);
 
-        //todo: change link
+        //todo: change link of this web page (add/change parameter)
     }
 }
 

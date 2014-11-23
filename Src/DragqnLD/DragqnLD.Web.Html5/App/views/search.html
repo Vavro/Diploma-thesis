@@ -3,26 +3,52 @@
         <ul class="breadcrumb">
             <li class="active">
                 <h3>
-                    <i class="fa fa-file-text-o"></i>
+                    <i class="fa fa-search"></i>
                     <span> Search</span>
                 </h3>
             </li>
         </ul>
     </div>
     <div class="row">
-        <div class="col-sm-12">
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary" data-bind="click: search, enabled: canSearch"><i class="fa fa-search"></i></button>
-
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span data-bind="text: selectedDefinition"></span><span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu">
-                    <!-- ko foreach: definitionsExceptSelected -->
-                    <li data-bind="click: $root.setSelectedDefinition.bind($root, $data.Id)">
-                        <a href="#"><span data-bind="text: $data.Id"></span></a>
-                    </li>
-                    <!-- /ko -->
-                </ul>
+        <form role="form">
+            <div class="col-sm-12">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span data-bind="text: selectedDefinition"></span><span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <!-- ko foreach: definitionsExceptSelected -->
+                        <li data-bind="click: $root.setSelectedDefinition.bind($root, $data.Id)">
+                            <a href="#"><span data-bind="text: $data.Id"></span></a>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" data-bind="click: search, enabled: canSearch"><i class="fa fa-search"></i></button>
+                </div>
             </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label class="control-label" for="SearchText">Search terms</label>
+                    <div>
+                        <pre id="searchText" class="form-control" data-bind="aceEditor: { code: searchText, allowResize: true, minHeight: 120, maxHeight: 600, typeName:'query', lang:'ace/mode/lucene'}, valueUpdate: 'afterkeydown'"></pre>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="control-label" for="results">Results</label>
+            <!-- ko if: isAttached() -->
+            <div id="results" data-bind="koGrid: { data : searchResults,
+                                columnDefs: searchResultsColumnList,
+                                autogenerateColumns: false,
+                                multiSelect: false,
+                                displaySelectionCheckbox: false,
+                                selectWithCheckboxOnly: true},
+                                dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer' }">
+            </div>
+            <!-- /ko -->
         </div>
     </div>
 </section>
