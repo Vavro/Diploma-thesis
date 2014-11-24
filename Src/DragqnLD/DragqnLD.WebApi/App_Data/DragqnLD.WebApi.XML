@@ -789,6 +789,23 @@
             The instance.
             </value>
         </member>
+        <member name="T:DragqnLD.WebApi.Connection.JsonContent">
+            <summary>
+            To write plain json to HttpResponseMessage
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.#ctor(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.JsonContent"/> class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.#ctor(Raven.Json.Linq.RavenJToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.JsonContent"/> class.
+            </summary>
+            <param name="value">The RavenJToken value.</param>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.BaseApiController">
             <summary>
             Base api controller
@@ -823,6 +840,21 @@
             <typeparam name="T"></typeparam>
             <param name="obj">The object.</param>
             <param name="status">The HTTP status code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateJsonResponse(Raven.Json.Linq.RavenJObject,System.Net.HttpStatusCode)">
+            <summary>
+            Creates the json response.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="status">The status.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.JsonContent(Raven.Json.Linq.RavenJToken)">
+            <summary>
+            Converts the data to a Json content.
+            </summary>
+            <param name="data">The data.</param>
             <returns></returns>
         </member>
         <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.Store">

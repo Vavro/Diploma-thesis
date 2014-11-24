@@ -54,8 +54,8 @@ namespace DragqnLD.WebApi.Controllers
         {
             var document = await _dataStore.GetDocument(DefinitionId, new Uri(documentId));
 
-            //todo: get rid of Content property write raw json to response
-            return CreateResponseWithObject(document);
+            //done: get rid of Content property write raw json to response
+            return CreateJsonResponse(document.Content);
         }
     }
 }

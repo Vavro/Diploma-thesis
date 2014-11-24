@@ -10,7 +10,7 @@ class viewDocument extends viewModelBase {
         if (args && args.documentId && args.definitionId) {
             var command = new getDocumentCommand(args.definitionId, args.documentId);
             command.execute().done(result => {
-                this.document(this.stringify(result.Content));
+                this.document(this.stringify(result));
             });
 
             can.resolve({ can: true });

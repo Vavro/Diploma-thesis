@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
+using DragqnLD.WebApi.Connection;
 using log4net;
 using Microsoft.Practices.Unity;
 using Raven.Client;
+using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -126,13 +128,39 @@ namespace DragqnLD.WebApi.Controllers
         /// <param name="obj">The object.</param>
         /// <param name="status">The HTTP status code.</param>
         /// <returns></returns>
-        protected HttpResponseMessage CreateResponseWithObject<T>(T obj, HttpStatusCode status = HttpStatusCode.OK)
+        protected HttpResponseMessage CreateResponseWithObject<T>(T obj, HttpStatusCode status = HttpStatusCode.OK) where T : class
         {
             Debug.Assert(Request != null, "Request is null");
 
             var response = Request.CreateResponse(status, obj);
+            
+            return response;
+        }
+
+        /// <summary>
+        /// Creates the json response.
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <param name="status">The status.</param>
+        /// <returns></returns>
+        protected HttpResponseMessage CreateJsonResponse(RavenJObject obj, HttpStatusCode status = HttpStatusCode.OK)
+        {
+            Debug.Assert(Request != null, "Request is null");
+
+            var response = Request.CreateResponse(status);
+            response.Content = JsonContent(obj);
 
             return response;
+        }
+
+        /// <summary>
+        /// Converts the data to a Json content.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public JsonContent JsonContent(RavenJToken data = null)
+        {
+            return new JsonContent(data);
         }
     }
 }
