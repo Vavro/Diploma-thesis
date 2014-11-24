@@ -1,6 +1,7 @@
 ﻿/// <amd-dependency path="ace/ext/language_tools" />
 /// <amd-dependency path="ace/mode/lucene" />
-/// <amd-dependency path="ace/theme/xcode" />
+/// <amd-dependency path="ace/mode/sparql" />
+/// <amd-dependency path="ace/theme/chrome" />
 /// <amd-dependency path="ace/mode/json" />
 import composition = require("durandal/composition");
 import ace = require("ace/ace");
@@ -39,8 +40,8 @@ class aceEditorBindingHandler {
             composition.addBindingHandler("aceEditor");
 
 
-            var editorRequire = require("ace/editor").Editor;
-            require("ace/config").defineOptions(editorRequire.prototype, "editor", {
+            var Editor = require("ace/editor").Editor;
+            require("ace/config").defineOptions(Editor.prototype, "editor", {
                 editorType: {
                     set: function (val) {
                     },
@@ -52,22 +53,27 @@ class aceEditorBindingHandler {
             aceEditorBindingHandler.commands.push({
                 name: "Toggle Fullscreen",
                 bindKey: "Shift+F11",
-                exec: function(editor) {
+                exec: function (editor) {
                     aceEditorBindingHandler.dom.toggleCssClass(document.body, "fullScreen");
                     aceEditorBindingHandler.dom.toggleCssClass(editor.container, "fullScreen-editor");
                     editor.resize();
+
 
                     if (aceEditorBindingHandler.dom.hasCssClass(document.body, "fullScreen") === true) {
                         $(".fullScreenModeLabel").text(aceEditorBindingHandler.leaveFullScreenText);
                         $(".fullScreenModeLabel").hide();
                         $(editor.container).find(".fullScreenModeLabel").show();
+                        editor.setOption("maxLines", null);
+
                     } else {
                         $(".fullScreenModeLabel").text(aceEditorBindingHandler.goToFullScreenText);
                         $(".fullScreenModeLabel").show();
+                        editor.setOption("maxLines", 10 * 1000);
+
                     }
-                },
-                readOnly: true
-        });
+
+                }
+            });
 
             aceEditorBindingHandler.commands.push({
                 name: "Exit FullScreen",
@@ -80,8 +86,7 @@ class aceEditorBindingHandler {
                         $(".fullScreenModeLabel").show();
                     }
                     editor.resize();
-                },
-                readOnly: true
+                }
             });
             /// 
         }
@@ -164,7 +169,7 @@ class aceEditorBindingHandler {
         // Setup key bubbling 
         if (bubbleEscKey) {
             aceEditor.commands.addCommand({
-                name: "RavenStudioBubbleEsc",
+                name: "DragqnLDBubbleEsc",
                 bindKey: "esc",
                 exec: () => false // Returning false causes the event to bubble up.
             });
@@ -205,7 +210,6 @@ class aceEditorBindingHandler {
         if ($(element).height() < this.minHeight) {
             $(element).height(this.minHeight);
         }
-        /*
         $(element).resizable({
             minHeight: this.minHeight,
             handles: "s, se",
@@ -213,7 +217,7 @@ class aceEditorBindingHandler {
             resize: function (event, ui) {
                 aceEditor.resize();
             }
-        });*/
+        });
 
         this.alterHeight(element, aceEditor);
         $(element).find('.ui-resizable-se').removeClass('ui-icon-gripsmall-diagonal-se');
@@ -225,7 +229,7 @@ class aceEditorBindingHandler {
         ko.utils.domNodeDisposal.addDisposeCallback(element, () => {
             $(element).off('keyup', aceFocusElement);
             $(element).off('focus', aceFocusElement);
-            /* $(element).resizable("destroy"); */
+            $(element).resizable("destroy");
         });
 
         // Keep track of the editor for this element.
@@ -266,7 +270,7 @@ class aceEditorBindingHandler {
         if (this.previousLinesCount != currentLinesCount) {
             var newHeight = currentLinesCount
                 * aceEditor.renderer.lineHeight
-                + (<any>aceEditor.renderer).scrollBar.getWidth()
+                + (<any>aceEditor.renderer).scrollBar.getWidth();
             + 10; // few pixels extra padding
 
             if (newHeight < this.minHeight) {

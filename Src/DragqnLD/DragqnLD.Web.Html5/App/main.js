@@ -6,6 +6,7 @@
         transitions: '../Scripts/durandal/transitions',
         knockout: '../Scripts/knockout-3.2.0',
         jquery: '../Scripts/jquery-2.1.1',
+        jqueryUi: '../Scripts/jquery-ui-1.11.1',
         ace: '../Scripts/ace'
     }
 });
@@ -26,7 +27,9 @@ ko.validation.configure({
 define(function (require) {
     var system = require('durandal/system'),
         app = require('durandal/app'),
-        viewLocator = require('durandal/viewLocator');
+        viewLocator = require('durandal/viewLocator'),
+        //init jqueryUi
+        jqueryui = require('jqueryUi');
 
     system.debug(true);
 

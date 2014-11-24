@@ -14,7 +14,7 @@
         <div class="col-sm-12">
             <label class="control-label" for="documentEditor">Document</label>
             <div>
-                <pre id="documentEditor" class="form-control" data-bind="aceEditor: { code: document, allowResize: true, lang:'ace/mode/json'}, valueUpdate: 'afterkeydown'"></pre>
+                <pre id="documentEditor" class="form-control" data-bind="aceEditor: { code: document, allowResize: true, lang:'ace/mode/json'},  dynamicHeight: { resizeTrigger: window.dragqnLDWindowHeight(), target: 'footer', bottomMargin: 40 }, valueUpdate: 'afterkeydown'"></pre>
             </div>
         </div>
     </div>
