@@ -48,7 +48,7 @@ interface pagedDocumentMetadataDto {
     TotalItems: number;
 }
 
-//todo: when i get rid of Content delete this Dto
+// todo: when i get rid of Content delete this Dto
 interface documentDto {
     Content : any;
 }

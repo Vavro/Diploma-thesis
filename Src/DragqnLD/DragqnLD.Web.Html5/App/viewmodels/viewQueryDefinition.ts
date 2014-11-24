@@ -6,17 +6,19 @@ import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitio
 import getQueryDocumentsCommand = require("commands/getQueryDocumentsCommand");
 import processQueryCommand = require("commands/processQueryCommand");
 
+import documentMetadata = require("models/documentMetadata");
+
 class viewQueryDefinition extends viewModelBase {
 
     queryDefinition: KnockoutObservable<queryDefinitionWithStatus> = ko.observable<queryDefinitionWithStatus>();
     queryId: KnockoutComputed<string>;
     canRun: KnockoutComputed<boolean>;
 
-    documentsList: KnockoutObservableArray<documentMetadataDto> = ko.observableArray<documentMetadataDto>();
+    documentsList: KnockoutObservableArray<documentMetadata> = ko.observableArray<documentMetadata>();
     idTemplate = $("#viewDocumentIdTemplate").html();
 
     documentsColumnList = ko.observableArray([
-        { field: "Id", displayName: "Id", cellTemplate: this.idTemplate }]);
+        { field: "id", displayName: "Id", cellTemplate: this.idTemplate }]);
 
     documentsListPagingOptions = {
         pageSizes: ko.observableArray([10, 20, 50]),
@@ -123,7 +125,11 @@ class viewQueryDefinition extends viewModelBase {
         return new getQueryDocumentsCommand(id, start, pageSize)
             .execute()
             .done(result => {
-                this.documentsList(result.Items);
+                this.documentsList.removeAll();
+                result.Items.forEach(item => {
+                    this.documentsList.push(new documentMetadata(id, item));
+                });
+    
                 this.documentsListPagingOptions.totalServerItems(result.TotalItems);
                 // todo: find out why this "hack" is necessary to have right datagrid size
                 $(window).trigger("resize");

@@ -93,6 +93,7 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<Document> GetDocument(string queryId, Uri documentId)
         {
+            //todo: Unescape document!
             using (var session = _store.OpenAsyncSession())
             {
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);

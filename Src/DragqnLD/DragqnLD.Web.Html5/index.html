@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="Content/starterkit.css" />
     <link rel="stylesheet" href="Content/KoGrid.css" />
     <link rel="stylesheet" href="Content/toastr.css" />
-    <link rel="stylesheet" href="Content/themes/base/all.css"/>
+    <link rel="stylesheet" href="Content/themes/base/all.css" />
 
     <script type="text/javascript">
         if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -32,10 +32,18 @@
 </head>
 <body>
     <script id="viewQueryIdTemplate" type="text/template">
-        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : '#viewQuery?id=' + $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }">
+            <a href="#" data-bind="attr: { href : '#viewQuery?id=' + $data.getProperty($parent) }">
+                <span data-bind="text: $data.getProperty($parent)"></span>
+            </a>
+        </div>
     </script>
     <script id="viewDocumentIdTemplate" type="text/template">
-        <div data-bind="attr: { class: 'kgCellText colt' + $index() }"><a href="#" data-bind="attr: { href : '#viewDocument?id=' + $data.getProperty($parent) }"><span data-bind="text: $data.getProperty($parent)"></span></a></div>
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }">
+            <a href="#" data-bind="attr: { href : '#viewDocument?definitionId=' + $parent.getProperty('definitionId')+ '&documentId=' + $parent.getProperty('id') }">
+                <span data-bind="text: $parent.getProperty('id')"></span>
+            </a>
+        </div>
     </script>
     <div id="applicationHost">
         <div class="splash">
@@ -54,7 +62,7 @@
     <script src="Scripts/knockout-postbox.js"></script>
     <script src="Scripts/knockout.validation.js"></script>
     <script src="Scripts/bootstrap.js"></script>
-    
+
 
     <script src="Scripts/toastr.js"></script>
     <script src="Scripts/require.js" data-main="App/main"></script>

@@ -7,7 +7,7 @@ class getDocumentCommand extends commandBase {
     }
 
     public execute(): JQueryPromise<any> {
-        var url = '/' + this.definitionId + '/document';
+        var url = "/" + this.definitionId + "/document";
         return this.query<any>(url, { documentId: this.documentId })
             .fail((request: JQueryXHR, status: string, error: string): void => {
                 this.notifyError("Failed to get document " + this.documentId + " for query definition " + this.definitionId,

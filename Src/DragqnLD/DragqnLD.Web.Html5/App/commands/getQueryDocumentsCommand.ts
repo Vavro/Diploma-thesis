@@ -6,7 +6,7 @@ class getQueryDocumentsCommand extends commandBase {
     }
 
     public execute(): JQueryPromise<pagedDocumentMetadataDto> {
-        //todo: think up a better way to create these urls
+        // todo: think up a better way to create these urls
         var url = "/" + this.queryId + "/documents";
         return this.query<pagedDocumentMetadataDto>(url, { start: this.start, pageSize: this.pageSize })
             .fail((request: JQueryXHR, status: string, error: string): void => {
