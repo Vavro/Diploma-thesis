@@ -2,6 +2,9 @@
 using System.Web.Http.Cors;
 using DragqnLD.WebApi.App_Start;
 using DragqnLD.WebApi.Filters;
+using DragqnLD.WebApi.MediaFormatters;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace DragqnLD.WebApi
 {
@@ -44,6 +47,10 @@ namespace DragqnLD.WebApi
             config.EnableCors(new EnableCorsAttribute("*","*","*"));
 
             config.Filters.Add(new ValidateModelFilter());
+
+            var serializerSettings = new JsonSerializerSettings();
+            serializerSettings.Converters.Add(new IsoDateTimeConverter());
+            config.Formatters[0] = new JsonNetFormatter(serializerSettings);
 
             AutoMapperConfig.ConfigureMapper();
         }
