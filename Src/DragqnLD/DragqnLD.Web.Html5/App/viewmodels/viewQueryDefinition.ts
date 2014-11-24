@@ -129,7 +129,7 @@ class viewQueryDefinition extends viewModelBase {
                 result.Items.forEach(item => {
                     this.documentsList.push(new documentMetadata(id, item));
                 });
-    
+
                 this.documentsListPagingOptions.totalServerItems(result.TotalItems);
                 // todo: find out why this "hack" is necessary to have right datagrid size
                 $(window).trigger("resize");

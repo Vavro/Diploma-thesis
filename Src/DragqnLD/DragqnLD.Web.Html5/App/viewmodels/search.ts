@@ -12,7 +12,7 @@ class search extends viewModelBase {
     public searchResults = ko.observableArray<documentMetadata>();
 
     private idTemplate = $("#viewDocumentIdTemplate").html();
-    
+
     public searchResultsColumnList = ko.observableArray([
         { field: "id", displayName: "Id", cellTemplate: this.idTemplate }]);
 
