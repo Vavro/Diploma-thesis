@@ -1,0 +1,21 @@
+﻿<section>
+    <div class="row">
+        <ul class="breadcrumb">
+            <li class="active">
+                <h3>
+                    <i class="fa fa-file"></i>
+                    <span> Document</span>
+                    <!-- todo: write doc id -->
+                </h3>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="control-label" for="documentEditor">Document</label>
+            <div>
+                <pre id="documentEditor" class="form-control" data-bind="aceEditor: { code: document, allowResize: true, lang:'ace/mode/json'}, valueUpdate: 'afterkeydown'"></pre>
+            </div>
+        </div>
+    </div>
+</section>

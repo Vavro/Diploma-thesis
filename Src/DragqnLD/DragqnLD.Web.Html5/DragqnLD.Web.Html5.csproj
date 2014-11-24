@@ -25,9 +25,8 @@
     <Content Include="App\views\queries.html" />
     <Content Include="App\views\search.html" />
     <Content Include="App\views\shell.html" />
+    <Content Include="App\views\viewDocument.html" />
     <Content Include="App\views\viewQueryDefinition.html" />
-    <Content Include="Content\bootstrap-select.css" />
-    <Content Include="Content\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -738,8 +737,6 @@
     <Content Include="Scripts\ace\worker\worker_client.js" />
     <Content Include="Scripts\ace\worker\worker_test.js" />
     <Content Include="Scripts\almond-custom.js" />
-    <Content Include="Scripts\bootstrap-select.js" />
-    <Content Include="Scripts\bootstrap-select.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\durandal\activator.js" />
@@ -1009,10 +1006,8 @@
     <Content Include="Scripts\ace\snippets\yaml.snippets" />
     <Content Include="Scripts\ace\snippets\_.snippets" />
     <Content Include="Scripts\ace\snippets\_all_modes.snippets" />
-    <Content Include="Content\bootstrap-select.css.map" />
     <None Include="Local FileSystem.pubxml" />
     <None Include="Local IIS.pubxml" />
-    <Content Include="Scripts\bootstrap-select.js.map" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\durandal\transitions\entrance.js" />
     <Content Include="Scripts\durandal\viewEngine.js" />
@@ -1068,6 +1063,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="App\commands\getDocumentCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionWithStatusCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDocumentsCommand.ts" />
     <TypeScriptCompile Include="App\commands\processQueryCommand.ts" />
@@ -1097,6 +1093,7 @@
     <TypeScriptCompile Include="App\viewmodels\home.ts" />
     <TypeScriptCompile Include="App\viewmodels\search.ts" />
     <TypeScriptCompile Include="App\viewmodels\shell.ts" />
+    <TypeScriptCompile Include="App\viewmodels\viewDocument.ts" />
     <TypeScriptCompile Include="App\viewmodels\viewModelBase.ts" />
     <TypeScriptCompile Include="App\viewmodels\viewQueryDefinition.ts" />
     <TypeScriptCompile Include="Scripts\typings\ace\ace.amd.d.ts" />

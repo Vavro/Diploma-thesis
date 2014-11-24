@@ -47,4 +47,9 @@ interface pagedDocumentMetadataDto {
     Items: documentMetadataDto[];
     TotalItems: number;
 }
+
+//todo: when i get rid of Content delete this Dto
+interface documentDto {
+    Content : any;
+}
 // ReSharper restore InconsistentNaming
