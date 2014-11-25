@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations.Utils;
 using Newtonsoft.Json.Linq;
+using Raven.Client.Connection;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -26,6 +29,22 @@ namespace DragqnLD.Core.Implementations
             propertyPath.ReplaceChars(SpecialCharacters.ProblematicCharacterSet, SpecialCharacters.EscapeChar,
                 out output);
             return output;
+        }
+
+        public void UnescapeDocumentProperties(RavenJObject storedContent, List<PropertyEscape> mappings)
+        {
+            var asJsonDoc = storedContent.ToJsonDocument();
+            var escapedMappings = new PropertyMapForUnescape(mappings);
+
+            foreach (var key in storedContent.Keys)
+            {
+                var originalPropertyName = escapedMappings.GetOriginalNameOrNull(key);
+                if (originalPropertyName != null)
+                {
+                    
+                }
+            }
+
         }
 
         private void EscapePropertiesInJObject(JObject document)
@@ -83,6 +102,33 @@ namespace DragqnLD.Core.Implementations
                 }
                 property.Replace(newJProperty);
             }
+        }
+    }
+
+    public class PropertyMapForUnescape
+    {
+        private readonly Dictionary<string, string> _mappings;
+
+        public PropertyMapForUnescape(List<PropertyEscape> mappings)
+        {
+            _mappings = new Dictionary<string, string>(mappings.Count);
+            foreach (var propertyEscape in mappings)
+            {
+                _mappings.Add(propertyEscape.NewName, propertyEscape.OldName);
+            }
+        }
+
+
+        public string GetOriginalNameOrNull(string newName)
+        {
+            string oldName;
+            var succ = _mappings.TryGetValue(newName, out oldName);
+            if (!succ)
+            {
+                return null;
+            }
+
+            return oldName;
         }
     }
 }

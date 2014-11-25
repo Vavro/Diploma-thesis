@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Abstraction.Query;
 using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace DragqnLD.Core.Implementations
                 await session.SaveChangesAsync().ConfigureAwait(false);
             }
         }
-
+        
         public async Task BulkStoreDocuments(IEnumerable<ConstructResult> results)
         {
             using(var bulkInsert = _store.BulkInsert())
@@ -90,17 +91,25 @@ namespace DragqnLD.Core.Implementations
             return String.Format("{0}/{1}", queryId, documentUri);
         }
 
-
         public async Task<Document> GetDocument(string queryId, Uri documentId)
         {
-            //todo: Unescape document!
+            return (await GetDocumentWithMappings(queryId, documentId)).Item1;
+        }
+
+        public async Task<Tuple<Document, List<PropertyEscape>>> GetDocumentWithMappings(string queryId, Uri documentId)
+        {
             using (var session = _store.OpenAsyncSession())
             {
+                var qd = await session.LoadAsync<QueryDefinition>(queryId);
+                var mappings = qd.Mappings;
+
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id).ConfigureAwait(false);
                 var storedDocument = new Document { Content = storedContent };
 
-                return storedDocument;
+
+
+                return new Tuple<Document, List<PropertyEscape>>(storedDocument, mappings);
             }
         }
 

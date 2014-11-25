@@ -11,7 +11,7 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// From.
         /// </value>
-        public string From { get; set; }
+        public string OldName { get; set; }
 
         /// <summary>
         /// Gets or sets to.
@@ -19,6 +19,6 @@ namespace DragqnLD.Core.Abstraction.Query
         /// <value>
         /// To.
         /// </value>
-        public string To { get; set; }
+        public string NewName { get; set; }
     }
 }

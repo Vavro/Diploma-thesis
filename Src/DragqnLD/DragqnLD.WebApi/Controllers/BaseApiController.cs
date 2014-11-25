@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
+using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Connection;
 using log4net;
 using Microsoft.Practices.Unity;
@@ -153,6 +155,16 @@ namespace DragqnLD.WebApi.Controllers
             return response;
         }
 
+        protected HttpResponseMessage CreateUnescapedJsonResponse(RavenJObject obj, List<PropertyEscape> mappings, HttpStatusCode status = HttpStatusCode.OK)
+        {
+            Debug.Assert(Request != null, "Request is null");
+
+            var response = Request.CreateResponse(status);
+            response.Content = UnescapedJsonContent(obj, mappings);
+
+            return response;
+        }
+
         /// <summary>
         /// Converts the data to a Json content.
         /// </summary>
@@ -161,6 +173,11 @@ namespace DragqnLD.WebApi.Controllers
         public JsonContent JsonContent(RavenJToken data = null)
         {
             return new JsonContent(data);
+        }
+        
+        private UnescapingJsonContent UnescapedJsonContent(RavenJObject content, List<PropertyEscape> mappings)
+        {
+            return new UnescapingJsonContent(content, mappings);
         }
     }
 }

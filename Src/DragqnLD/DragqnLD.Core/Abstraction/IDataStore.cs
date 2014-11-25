@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Abstraction.Query;
 
 namespace DragqnLD.Core.Abstraction
 {
@@ -13,6 +14,8 @@ namespace DragqnLD.Core.Abstraction
         Task StoreDocument(ConstructResult dataToStore);
 
         Task<Document> GetDocument(string queryId, Uri documentId);
+
+        Task<Tuple<Document, List<PropertyEscape>>> GetDocumentWithMappings(string queryId, Uri documentId);
 
         Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string indexName,
             string luceneQuery);

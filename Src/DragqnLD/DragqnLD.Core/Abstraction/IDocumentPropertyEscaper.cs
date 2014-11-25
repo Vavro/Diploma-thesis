@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Collections.Generic;
+using DragqnLD.Core.Abstraction.Query;
+using Newtonsoft.Json.Linq;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction
 {
@@ -8,5 +11,8 @@ namespace DragqnLD.Core.Abstraction
     {
         void EscapeDocumentProperies(JObject document);
         string EscapePropertyPath(string propertyPath);
+        
+        //todo:create tests!!
+        void UnescapeDocumentProperties(RavenJObject storedContent, List<PropertyEscape> mappings);
     }
 }

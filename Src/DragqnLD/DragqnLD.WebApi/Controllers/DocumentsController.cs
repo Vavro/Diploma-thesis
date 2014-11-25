@@ -7,7 +7,9 @@ using System.Web.Http;
 using Antlr.Runtime.Tree;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Models;
+using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
 {
@@ -52,10 +54,16 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/document")]
         public async Task<HttpResponseMessage> Get(string documentId)
         {
-            var document = await _dataStore.GetDocument(DefinitionId, new Uri(documentId));
+            var documentsWithMaps = await _dataStore.GetDocumentWithMappings(DefinitionId, new Uri(documentId));
+            var document = documentsWithMaps.Item1;
+            var mappings = documentsWithMaps.Item2;
 
             //done: get rid of Content property write raw json to response
-            return CreateJsonResponse(document.Content);
+            //todo: leaks the mapping and escaping from the core library
+
+            //done: Unescape document!
+            //todo: create cache for mappings
+            return CreateUnescapedJsonResponse(document.Content, mappings);
         }
     }
 }
