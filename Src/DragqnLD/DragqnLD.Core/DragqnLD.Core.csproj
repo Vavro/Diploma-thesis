@@ -71,6 +71,7 @@
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
     <Compile Include="Abstraction\Query\Progress.cs" />
+    <Compile Include="Abstraction\Query\PropertyEscape.cs" />
     <Compile Include="Abstraction\Query\QueryDefinitionStatus.cs" />
     <Compile Include="Abstraction\Query\QueryStatus.cs" />
     <Compile Include="Abstraction\Query\SparqlQueryInfo.cs" />

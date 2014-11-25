@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Implementations;
 
 namespace DragqnLD.Core.Abstraction
 {
@@ -44,5 +45,11 @@ namespace DragqnLD.Core.Abstraction
         /// <param name="definitionId">The definition identifier.</param>
         /// <returns></returns>
         Task<int> GetDocumentCount(string definitionId);
+
+        /// <summary>
+        /// Stores the mappings.
+        /// </summary>
+        /// <param name="mappings">The mappings.</param>s
+        Task StoreMappings(string definitionId, PropertyMappings mappings);
     }
 }

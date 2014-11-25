@@ -7,6 +7,7 @@ using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Indexes;
 using Raven.Client;
+using Raven.Imports.Newtonsoft.Json.Utilities;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -72,6 +73,18 @@ namespace DragqnLD.Core.Implementations
                 }
 
                 return 0;
+            }
+        }
+
+        public async Task StoreMappings(string definitionId, PropertyMappings mappings)
+        {
+            using (var session = _store.OpenAsyncSession())
+            {
+                var qd = await session.LoadAsync<QueryDefinition>(definitionId);
+                
+                qd.Mappings = mappings.AsList();
+                
+                await session.SaveChangesAsync();
             }
         }
     }

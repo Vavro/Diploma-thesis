@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using DragqnLD.Core.Implementations;
 
 namespace DragqnLD.Core.Abstraction.Query
 {
@@ -7,6 +9,11 @@ namespace DragqnLD.Core.Abstraction.Query
     /// </summary>
     public class QueryDefinition
     {
+        public QueryDefinition()
+        {
+            Mappings = new List<PropertyEscape>();
+        }
+
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
@@ -59,6 +66,14 @@ namespace DragqnLD.Core.Abstraction.Query
         /// Gets or sets the last processed datetime.
         /// </summary>
         public DateTime? LastProcessed { get; set; }
+
+        /// <summary>
+        /// Gets or sets the mappings.
+        /// </summary>
+        /// <value>
+        /// The mappings.
+        /// </value>
+        public List<PropertyEscape> Mappings { get; set; }
     }
 
     public static class QueryDefinitionExtensions

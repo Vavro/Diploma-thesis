@@ -53,7 +53,9 @@ namespace DragqnLD.Core.Implementations
             }
 
             status.DocumentLoadProgress.CurrentItem = 0;
+            PropertyMappings allMappings = new PropertyMappings();
             //done: start processing selects .. :)
+            //todo: can be faster if getting batches of items and streaming to raven
             foreach (var selectResult in selectResults)
             {
                 status.DocumentLoadProgress.CurrentItem++;
@@ -72,8 +74,10 @@ namespace DragqnLD.Core.Implementations
 
                 var writer = new StringWriter();
                 PropertyMappings mappings;
+                //todo: discovering mappings here should be used only for Describe queries - Constructs should have static mappings
+                //  - construct query mappings should be discovered from the query
                 _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
-
+                allMappings.Merge(mappings);
                 var result = writer.ToString();
 
                 var dataToStore = new ConstructResult
@@ -86,8 +90,11 @@ namespace DragqnLD.Core.Implementations
                 //done: store select results for viewing
                 await _dataStore.StoreDocument(dataToStore).ConfigureAwait(false);
 
-                //todo: document count could be a raven index :) 
+                //todo: document count could be a raven index - should it? :) 
             }
+
+            // todo: if this was one session, this wouldn't be necessary.. but then i'd rely on ravens tracking
+            await _queryStore.StoreMappings(definitionId, allMappings);
 
             status.Status = QueryStatus.Loaded;
             if (progress != null)
