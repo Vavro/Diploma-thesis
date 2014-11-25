@@ -1,12 +1,21 @@
 ﻿<section>
     <div class="row">
         <ul class="breadcrumb">
-            <li class="active">
+            <li>
                 <h3>
-                    <i class="fa fa-file"></i>
-                    <span> Document</span>
-                    <!-- todo: write doc id -->
+                    <i class="fa fa-file-text-o"></i>
+                    <!-- ReSharper disable once Html.IdNotResolved -->
+                    <a data-bind="attr: {href: navigateToQueriesUrl}">Queries</a>
                 </h3>
+            </li>
+            <li>
+                <a data-bind="attr: {href: navigateToDefinitionUrl}"><span data-bind="text: definitionId"></span></a>
+            </li>
+            <li>
+                <span>Documents</span>
+            </li>
+            <li class="active">
+                <span data-bind="text: documentId"></span>
             </li>
         </ul>
     </div>
