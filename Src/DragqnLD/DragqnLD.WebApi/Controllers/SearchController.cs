@@ -33,6 +33,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <param name="escapedQuery">The escapted query.</param>
         /// <returns></returns>
         [HttpGet]
+        //todo: better name  - like searchRaw
         [Route("api/query/{definitionId}/searchEscaped")]
         public async Task<HttpResponseMessage> SearchEscapedLuceneQuery(string escapedQuery)
         {
