@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -7,8 +6,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web;
-using DragqnLD.Core.Abstraction.Query;
-using DragqnLD.Core.Implementations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Raven.Abstractions.Extensions;
@@ -45,6 +42,11 @@ namespace DragqnLD.WebApi.Connection
             Headers.ContentType = new MediaTypeHeaderValue("application/json");
         }
 
+        /// <summary>
+        /// Gets the json text writer.
+        /// </summary>
+        /// <param name="stream">The stream.</param>
+        /// <returns></returns>
         protected virtual JsonTextWriter GetJsonTextWriter(Stream stream)
         {
             return new JsonTextWriter(new StreamWriter(stream))
@@ -52,7 +54,15 @@ namespace DragqnLD.WebApi.Connection
                 Formatting = Formatting.Indented
             };
         }
-        
+
+        /// <summary>
+        /// Serialize the HTTP content to a stream as an asynchronous operation.
+        /// </summary>
+        /// <param name="stream">The target stream.</param>
+        /// <param name="context">Information about the transport (channel binding token, for example). This parameter may be null.</param>
+        /// <returns>
+        /// Returns <see cref="T:System.Threading.Tasks.Task" />.The task object representing the asynchronous operation.
+        /// </returns>
         protected override Task SerializeToStreamAsync(Stream stream,
             TransportContext context)
         {
@@ -76,6 +86,11 @@ namespace DragqnLD.WebApi.Connection
             return Task.FromResult<object>(null);
         }
 
+        /// <summary>
+        /// Gets the raven specific json text writer.
+        /// </summary>
+        /// <param name="stream">The stream.</param>
+        /// <returns></returns>
         protected virtual Raven.Imports.Newtonsoft.Json.JsonTextWriter GetRavenJsonTextWriter(Stream stream)
         {
             return new Raven.Imports.Newtonsoft.Json.JsonTextWriter(new StreamWriter(stream))
@@ -84,79 +99,17 @@ namespace DragqnLD.WebApi.Connection
             };
         }
 
+        /// <summary>
+        /// Determines whether the HTTP content has a valid length in bytes.
+        /// </summary>
+        /// <param name="length">The length in bytes of the HTTP content.</param>
+        /// <returns>
+        /// Returns <see cref="T:System.Boolean" />.true if <paramref name="length" /> is a valid length; otherwise, false.
+        /// </returns>
         protected override bool TryComputeLength(out long length)
         {
             length = -1;
             return false;
-        }
-    }
-
-    public class UnescapingJsonContent : JsonContent
-    {
-        private readonly List<PropertyEscape> _mappings;
-
-        public UnescapingJsonContent(JToken value, List<PropertyEscape> mappings) : base(value)
-        {
-            _mappings = mappings;
-        }
-
-        public UnescapingJsonContent(RavenJToken value, List<PropertyEscape> mappings) : base(value)
-        {
-            _mappings = mappings;
-        }
-
-        protected override JsonTextWriter GetJsonTextWriter(Stream stream)
-        {
-            return new PropertyUnescapingJsonTextWriter(new StreamWriter(stream), _mappings)
-            {
-                Formatting = Formatting.Indented
-            };
-        }
-
-        protected override Raven.Imports.Newtonsoft.Json.JsonTextWriter GetRavenJsonTextWriter(Stream stream)
-        {
-            return new RavenPropertyUnescapingJsonTextWriter(new StreamWriter(stream), _mappings)
-            {
-                Formatting = Raven.Imports.Newtonsoft.Json.Formatting.Indented
-            };
-        }
-    }
-
-    public class PropertyUnescapingJsonTextWriter : JsonTextWriter
-    {
-        private readonly PropertyMapForUnescape _escapedMappings;
-
-        public PropertyUnescapingJsonTextWriter(TextWriter textWriter, List<PropertyEscape> mappings) : base(textWriter)
-        {
-            _escapedMappings = new PropertyMapForUnescape(mappings);
-        }
-
-        public override void WritePropertyName(string name)
-        {
-            var originalName = _escapedMappings.GetOriginalNameOrNull(name);
-            base.WritePropertyName(originalName ?? name);
-        }
-
-        public override void WritePropertyName(string name, bool escape)
-        {
-            var originalName = _escapedMappings.GetOriginalNameOrNull(name);
-            base.WritePropertyName(originalName ?? name, escape);
-        }
-    }
-
-    public class RavenPropertyUnescapingJsonTextWriter : Raven.Imports.Newtonsoft.Json.JsonTextWriter
-    {
-        private readonly PropertyMapForUnescape _escapedMappings;
-
-        public RavenPropertyUnescapingJsonTextWriter(TextWriter textWriter, List<PropertyEscape> mappings) : base(textWriter)
-        {
-            _escapedMappings = new PropertyMapForUnescape(mappings);
-        }
-
-        public override void WritePropertyName(string name)
-        {
-            var originalName = _escapedMappings.GetOriginalNameOrNull(name);
-            base.WritePropertyName(originalName ?? name);
         }
     }
 }

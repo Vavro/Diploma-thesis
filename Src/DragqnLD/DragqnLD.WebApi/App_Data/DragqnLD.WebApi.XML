@@ -806,6 +806,115 @@
             </summary>
             <param name="value">The RavenJToken value.</param>
         </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.GetJsonTextWriter(System.IO.Stream)">
+            <summary>
+            Gets the json text writer.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)">
+            <summary>
+            Serialize the HTTP content to a stream as an asynchronous operation.
+            </summary>
+            <param name="stream">The target stream.</param>
+            <param name="context">Information about the transport (channel binding token, for example). This parameter may be null.</param>
+            <returns>
+            Returns <see cref="T:System.Threading.Tasks.Task" />.The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.GetRavenJsonTextWriter(System.IO.Stream)">
+            <summary>
+            Gets the raven specific json text writer.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.JsonContent.TryComputeLength(System.Int64@)">
+            <summary>
+            Determines whether the HTTP content has a valid length in bytes.
+            </summary>
+            <param name="length">The length in bytes of the HTTP content.</param>
+            <returns>
+            Returns <see cref="T:System.Boolean" />.true if <paramref name="length" /> is a valid length; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter">
+            <summary>
+            Json text writer unescaping property names
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter"/> class.
+            </summary>
+            <param name="textWriter">The text writer.</param>
+            <param name="mappings">The mappings.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter.WritePropertyName(System.String)">
+            <summary>
+            Writes the property name of a name/value pair on a Json object.
+            </summary>
+            <param name="name">The name of the property.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter.WritePropertyName(System.String,System.Boolean)">
+            <summary>
+            Writes the property name of a name/value pair on a JSON object.
+            </summary>
+            <param name="name">The name of the property.</param>
+            <param name="escape">A flag to indicate whether the text should be escaped when it is written as a JSON property name.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter">
+            <summary>
+            Raven specific Json text writer unescaping property names
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter"/> class.
+            </summary>
+            <param name="textWriter">The text writer.</param>
+            <param name="mappings">The mappings.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter.WritePropertyName(System.String)">
+            <summary>
+            Writes the property name of a name/value pair on a Json object.
+            </summary>
+            <param name="name">The name of the property.</param>
+        </member>
+        <member name="T:DragqnLD.WebApi.Connection.UnescapingJsonContent">
+            <summary>
+            To write plain json to HttpResponseMessage with unescaping property names
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.UnescapingJsonContent"/> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="mappings">The mappings.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Raven.Json.Linq.RavenJToken,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.UnescapingJsonContent"/> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="mappings">The mappings.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.GetJsonTextWriter(System.IO.Stream)">
+            <summary>
+            Gets the json text writer.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.GetRavenJsonTextWriter(System.IO.Stream)">
+            <summary>
+            Gets the raven json text writer.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.BaseApiController">
             <summary>
             Base api controller
@@ -850,11 +959,28 @@
             <param name="status">The status.</param>
             <returns></returns>
         </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateUnescapedJsonResponse(Raven.Json.Linq.RavenJObject,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape},System.Net.HttpStatusCode)">
+            <summary>
+            Creates the unescaped json response.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="mappings">The mappings.</param>
+            <param name="status">The status.</param>
+            <returns></returns>
+        </member>
         <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.JsonContent(Raven.Json.Linq.RavenJToken)">
             <summary>
             Converts the data to a Json content.
             </summary>
             <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.UnescapedJsonContent(Raven.Json.Linq.RavenJObject,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+            <summary>
+            Converts the data to a Json content unescaping property names with provided mappings.
+            </summary>
+            <param name="content">The content.</param>
+            <param name="mappings">The mappings.</param>
             <returns></returns>
         </member>
         <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.Store">

@@ -213,6 +213,9 @@
     <Compile Include="Areas\RouteDebugger\RouteDebuggerConfig.cs" />
     <Compile Include="Configuration\DragqnLdConfig.cs" />
     <Compile Include="Connection\JsonContent.cs" />
+    <Compile Include="Connection\PropertyUnescapingJsonTextWriter.cs" />
+    <Compile Include="Connection\RavenPropertyUnescapingJsonTextWriter.cs" />
+    <Compile Include="Connection\UnescapingJsonContent.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

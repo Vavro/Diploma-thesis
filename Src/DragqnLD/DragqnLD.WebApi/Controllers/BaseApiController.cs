@@ -155,6 +155,13 @@ namespace DragqnLD.WebApi.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Creates the unescaped json response.
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <param name="mappings">The mappings.</param>
+        /// <param name="status">The status.</param>
+        /// <returns></returns>
         protected HttpResponseMessage CreateUnescapedJsonResponse(RavenJObject obj, List<PropertyEscape> mappings, HttpStatusCode status = HttpStatusCode.OK)
         {
             Debug.Assert(Request != null, "Request is null");
@@ -174,7 +181,13 @@ namespace DragqnLD.WebApi.Controllers
         {
             return new JsonContent(data);
         }
-        
+
+        /// <summary>
+        /// Converts the data to a Json content unescaping property names with provided mappings.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <param name="mappings">The mappings.</param>
+        /// <returns></returns>
         private UnescapingJsonContent UnescapedJsonContent(RavenJObject content, List<PropertyEscape> mappings)
         {
             return new UnescapingJsonContent(content, mappings);
