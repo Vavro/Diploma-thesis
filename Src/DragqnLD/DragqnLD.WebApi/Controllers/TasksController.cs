@@ -41,6 +41,7 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/process")]
         public HttpResponseMessage Process()
         {
+            //todo: ensure two same def id cant be processed at one time
             HostingEnvironment.QueueBackgroundWorkItem(ct =>
                 _queryDefinitionLoadTasksManager.EnqueueTask(DefinitionId, ct,
                     (definitionId, cancellationToken, progress) =>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
@@ -18,12 +19,15 @@ namespace DragqnLD.Core.Implementations
         private readonly IDocumentStore _store;
 
         private readonly IDocumentPropertyEscaper _escaper;
+        private readonly IPropertyUnescapesCache _propertyUnescapesCache;
 
-        public RavenDataStore(IDocumentStore store, IDocumentPropertyEscaper escaper)
+        public RavenDataStore(IDocumentStore store, IDocumentPropertyEscaper escaper, IPropertyUnescapesCache propertyUnescapesCache )
         {
             _store = store;
             _escaper = escaper;
+            _propertyUnescapesCache = propertyUnescapesCache;
         }
+
         public async Task StoreDocument(ConstructResult dataToStore)
         {
             using (var session = _store.OpenAsyncSession())
@@ -96,12 +100,20 @@ namespace DragqnLD.Core.Implementations
             return (await GetDocumentWithMappings(queryId, documentId)).Item1;
         }
 
-        public async Task<Tuple<Document, List<PropertyEscape>>> GetDocumentWithMappings(string queryId, Uri documentId)
+        public async Task<Tuple<Document, PropertyMapForUnescape>> GetDocumentWithMappings(string queryId, Uri documentId)
         {
             using (var session = _store.OpenAsyncSession())
             {
-                var qd = await session.LoadAsync<QueryDefinition>(queryId);
-                var mappings = qd.Mappings;
+                var mappings = await _propertyUnescapesCache.GetMapForUnescape(queryId, async () =>
+                {
+                    // function has to be awaited if run, should access after using block
+                    // ReSharper disable AccessToDisposedClosure
+                    Debug.Assert(session != null, "session != null");
+                    var qd = await session.LoadAsync<QueryDefinition>(queryId);
+                    // ReSharper restore AccessToDisposedClosure
+
+                    return qd.Mappings;
+                });
 
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id).ConfigureAwait(false);
@@ -109,7 +121,7 @@ namespace DragqnLD.Core.Implementations
 
 
 
-                return new Tuple<Document, List<PropertyEscape>>(storedDocument, mappings);
+                return new Tuple<Document, PropertyMapForUnescape>(storedDocument, mappings);
             }
         }
 

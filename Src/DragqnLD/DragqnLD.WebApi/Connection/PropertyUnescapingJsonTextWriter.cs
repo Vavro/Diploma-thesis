@@ -18,9 +18,9 @@ namespace DragqnLD.WebApi.Connection
         /// </summary>
         /// <param name="textWriter">The text writer.</param>
         /// <param name="mappings">The mappings.</param>
-        public PropertyUnescapingJsonTextWriter(TextWriter textWriter, List<PropertyEscape> mappings) : base(textWriter)
+        public PropertyUnescapingJsonTextWriter(TextWriter textWriter, PropertyMapForUnescape mappings) : base(textWriter)
         {
-            _escapedMappings = new PropertyMapForUnescape(mappings);
+            _escapedMappings = mappings;
         }
 
         /// <summary>

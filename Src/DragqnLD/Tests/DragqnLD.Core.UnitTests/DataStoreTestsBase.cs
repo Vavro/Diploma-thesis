@@ -27,7 +27,7 @@ namespace DragqnLD.Core.UnitTests
             docStore.Initialize();
 
             DocumentStore = docStore;
-            RavenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper());
+            RavenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper(), new PropertyUnescapesCache());
         }
 
         public void Dispose()

@@ -844,7 +844,7 @@
             Json text writer unescaping property names
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+        <member name="M:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,DragqnLD.Core.Implementations.PropertyMapForUnescape)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.PropertyUnescapingJsonTextWriter"/> class.
             </summary>
@@ -869,7 +869,7 @@
             Raven specific Json text writer unescaping property names
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+        <member name="M:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter.#ctor(System.IO.TextWriter,DragqnLD.Core.Implementations.PropertyMapForUnescape)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.RavenPropertyUnescapingJsonTextWriter"/> class.
             </summary>
@@ -887,14 +887,14 @@
             To write plain json to HttpResponseMessage with unescaping property names
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Newtonsoft.Json.Linq.JToken,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Newtonsoft.Json.Linq.JToken,DragqnLD.Core.Implementations.PropertyMapForUnescape)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.UnescapingJsonContent"/> class.
             </summary>
             <param name="value">The value.</param>
             <param name="mappings">The mappings.</param>
         </member>
-        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Raven.Json.Linq.RavenJToken,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+        <member name="M:DragqnLD.WebApi.Connection.UnescapingJsonContent.#ctor(Raven.Json.Linq.RavenJToken,DragqnLD.Core.Implementations.PropertyMapForUnescape)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Connection.UnescapingJsonContent"/> class.
             </summary>
@@ -959,7 +959,7 @@
             <param name="status">The status.</param>
             <returns></returns>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateUnescapedJsonResponse(Raven.Json.Linq.RavenJObject,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape},System.Net.HttpStatusCode)">
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateUnescapedJsonResponse(Raven.Json.Linq.RavenJObject,DragqnLD.Core.Implementations.PropertyMapForUnescape,System.Net.HttpStatusCode)">
             <summary>
             Creates the unescaped json response.
             </summary>
@@ -975,7 +975,7 @@
             <param name="data">The data.</param>
             <returns></returns>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.UnescapedJsonContent(Raven.Json.Linq.RavenJObject,System.Collections.Generic.List{DragqnLD.Core.Abstraction.Query.PropertyEscape})">
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.UnescapedJsonContent(Raven.Json.Linq.RavenJObject,DragqnLD.Core.Implementations.PropertyMapForUnescape)">
             <summary>
             Converts the data to a Json content unescaping property names with provided mappings.
             </summary>

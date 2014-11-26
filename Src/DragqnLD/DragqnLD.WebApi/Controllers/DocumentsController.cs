@@ -62,7 +62,7 @@ namespace DragqnLD.WebApi.Controllers
             //todo: leaks the mapping and escaping from the core library
 
             //done: Unescape document!
-            //todo: create cache for mappings
+            //done: create cache for mappings
             return CreateUnescapedJsonResponse(document.Content, mappings);
         }
     }

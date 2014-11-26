@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Implementations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Raven.Json.Linq;
@@ -12,14 +13,14 @@ namespace DragqnLD.WebApi.Connection
     /// </summary>
     public class UnescapingJsonContent : JsonContent
     {
-        private readonly List<PropertyEscape> _mappings;
+        private readonly PropertyMapForUnescape _mappings;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UnescapingJsonContent"/> class.
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="mappings">The mappings.</param>
-        public UnescapingJsonContent(JToken value, List<PropertyEscape> mappings) : base(value)
+        public UnescapingJsonContent(JToken value, PropertyMapForUnescape mappings) : base(value)
         {
             _mappings = mappings;
         }
@@ -29,7 +30,7 @@ namespace DragqnLD.WebApi.Connection
         /// </summary>
         /// <param name="value">The value.</param>
         /// <param name="mappings">The mappings.</param>
-        public UnescapingJsonContent(RavenJToken value, List<PropertyEscape> mappings) : base(value)
+        public UnescapingJsonContent(RavenJToken value, PropertyMapForUnescape mappings) : base(value)
         {
             _mappings = mappings;
         }

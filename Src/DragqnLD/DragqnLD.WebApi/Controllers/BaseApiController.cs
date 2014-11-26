@@ -9,6 +9,7 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Routing;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Connection;
 using log4net;
 using Microsoft.Practices.Unity;
@@ -162,7 +163,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <param name="mappings">The mappings.</param>
         /// <param name="status">The status.</param>
         /// <returns></returns>
-        protected HttpResponseMessage CreateUnescapedJsonResponse(RavenJObject obj, List<PropertyEscape> mappings, HttpStatusCode status = HttpStatusCode.OK)
+        protected HttpResponseMessage CreateUnescapedJsonResponse(RavenJObject obj, PropertyMapForUnescape mappings, HttpStatusCode status = HttpStatusCode.OK)
         {
             Debug.Assert(Request != null, "Request is null");
 
@@ -188,7 +189,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <param name="content">The content.</param>
         /// <param name="mappings">The mappings.</param>
         /// <returns></returns>
-        private UnescapingJsonContent UnescapedJsonContent(RavenJObject content, List<PropertyEscape> mappings)
+        private UnescapingJsonContent UnescapedJsonContent(RavenJObject content, PropertyMapForUnescape mappings)
         {
             return new UnescapingJsonContent(content, mappings);
         }
