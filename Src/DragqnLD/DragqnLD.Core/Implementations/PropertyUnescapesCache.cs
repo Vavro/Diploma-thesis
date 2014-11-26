@@ -11,6 +11,7 @@ namespace DragqnLD.Core.Implementations
 {
     public class PropertyUnescapesCache : IPropertyUnescapesCache
     {
+        //todo: add cache invalidation
         //todo: if there are a lot of query definitions this probably shouldnt always stay in memory
         ConcurrentDictionary<string, PropertyMapForUnescape> _cachedMapForUnescapes = new ConcurrentDictionary<string, PropertyMapForUnescape>();
         
