@@ -21,7 +21,7 @@ namespace DragqnLD.Core.Implementations
         private readonly IDocumentPropertyEscaper _escaper;
         private readonly IPropertyUnescapesCache _propertyUnescapesCache;
 
-        public RavenDataStore(IDocumentStore store, IDocumentPropertyEscaper escaper, IPropertyUnescapesCache propertyUnescapesCache )
+        public RavenDataStore(IDocumentStore store, IDocumentPropertyEscaper escaper, IPropertyUnescapesCache propertyUnescapesCache)
         {
             _store = store;
             _escaper = escaper;
@@ -46,11 +46,11 @@ namespace DragqnLD.Core.Implementations
                 await session.SaveChangesAsync().ConfigureAwait(false);
             }
         }
-        
+
         public async Task BulkStoreDocuments(IEnumerable<ConstructResult> results)
         {
-            using(var bulkInsert = _store.BulkInsert())
-            { 
+            using (var bulkInsert = _store.BulkInsert())
+            {
                 foreach (ConstructResult constructResult in results)
                 {
                     var document = constructResult.Document.Content;
@@ -84,9 +84,9 @@ namespace DragqnLD.Core.Implementations
                     .ConfigureAwait(false);
 
                 var documentMetadatas = new List<DocumentMetadata>(queryResults.Results.Count);
-                documentMetadatas.AddRange(queryResults.Results.Select(queryResult => new DocumentMetadata() {Id = queryResult.Value<string>("__document_id").Substring(definitionId.Length + 1)}));
-                
-                return new PagedDocumentMetadata() {Items = documentMetadatas, TotalItems = statistics.TotalResults};
+                documentMetadatas.AddRange(queryResults.Results.Select(queryResult => new DocumentMetadata() { Id = queryResult.Value<string>("__document_id").Substring(definitionId.Length + 1) }));
+
+                return new PagedDocumentMetadata() { Items = documentMetadatas, TotalItems = statistics.TotalResults };
             }
         }
 
@@ -100,20 +100,24 @@ namespace DragqnLD.Core.Implementations
             return (await GetDocumentWithMappings(queryId, documentId)).Item1;
         }
 
-        public async Task<Tuple<Document, PropertyMapForUnescape>> GetDocumentWithMappings(string queryId, Uri documentId)
+        public async Task<Tuple<Document, PropertyMapForUnescape>> GetDocumentWithMappings(string queryId, Uri documentId, bool loadMappings = false)
         {
             using (var session = _store.OpenAsyncSession())
             {
-                var mappings = await _propertyUnescapesCache.GetMapForUnescape(queryId, async () =>
+                PropertyMapForUnescape mappings = null;
+                if (loadMappings)
                 {
-                    // function has to be awaited if run, should access after using block
-                    // ReSharper disable AccessToDisposedClosure
-                    Debug.Assert(session != null, "session != null");
-                    var qd = await session.LoadAsync<QueryDefinition>(queryId);
-                    // ReSharper restore AccessToDisposedClosure
+                    mappings = await _propertyUnescapesCache.GetMapForUnescape(queryId, async () =>
+                        {
+                            // function has to be awaited if run, should access after using block
+                            // ReSharper disable AccessToDisposedClosure
+                            Debug.Assert(session != null, "session != null");
+                            var qd = await session.LoadAsync<QueryDefinition>(queryId);
+                            // ReSharper restore AccessToDisposedClosure
 
-                    return qd.Mappings;
-                });
+                            return qd.Mappings;
+                        });
+                }
 
                 string id = GetDocumentId(queryId, documentId.AbsoluteUri);
                 var storedContent = await session.LoadAsync<RavenJObject>(id).ConfigureAwait(false);
@@ -125,7 +129,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId, 
+        public async Task<IEnumerable<Uri>> QueryDocumentProperties(string queryId,
             params PropertyCondition[] conditions)
         {
             return await QueryDocumentProperties(queryId, null, conditions).ConfigureAwait(false);

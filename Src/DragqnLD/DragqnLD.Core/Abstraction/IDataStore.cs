@@ -16,7 +16,7 @@ namespace DragqnLD.Core.Abstraction
 
         Task<Document> GetDocument(string queryId, Uri documentId);
 
-        Task<Tuple<Document, PropertyMapForUnescape>> GetDocumentWithMappings(string queryId, Uri documentId);
+        Task<Tuple<Document, PropertyMapForUnescape>> GetDocumentWithMappings(string queryId, Uri documentId, bool loadMappings = false);
 
         Task<IEnumerable<Uri>> QueryDocumentEscapedLuceneQuery(string queryId, string indexName,
             string luceneQuery);
