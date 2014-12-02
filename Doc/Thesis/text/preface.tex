@@ -1,7 +1,24 @@
 \chapter{Introduction}
 %%\addcontentsline{toc}{chapter}{Introduction}
+Data load speed
+Big data storage and querying
+Application Accesibility, data categorization standardization (Linked Data)
 
-\section{Graph databases}
+More data usually means more power to the user or bussiness. But big sets of data have to be properly categorized and modeled. One way of storing and structuring large amounts of data naturally are graph databases using Linked Data principles.
+
+Graph databases store data in graph strctures using nodes, edges, and properties. Where a node resembles an entity and the node's properties usually represent features of this entity. Edges are meant to provide a means of expressing relaitionship between entities. A node could be used to represent a person with its properties being an id, name, or age. An edge or relationsip between persons could then express a friend relation between two persons. Graph databases are separated between general graph databases (Neo4j) and triplestores (Virtuoso). %todo: links to those dbs
+Triple stores, as opposed to general graph databases, have a standartized query language (SPARQL), and for the purpose of this thesis will be the only ones considered. In a triplestore data are stored using triples composing of subject-predicate-object value - which in the examples used above could mean: "Bratt is 27" or "Bratt knows Mary". Where the subject is the id of the entity, predicate is a property or edge to another antity and an object represents either the value of the property or the id of the referenced entity. Triples can be imported and exported to the Resource Description Framework (RDF)
+
 \section{Linked data principles}
+
+
 \section{Linked data usage in applications}
 
+\section{Why speed up}
+But when data are stored in graph databases, they inherently inherit costs when retrieving. 
+
+The present state of web application and applications in general gives more and more importance to the speed of loading data and showing these to the user. 
+
+One of the biggest factors in user addoption of new systems is considered to be responsiveness, which usually can be considered to be data loading speed. Data load speed can be influenced by 
+
+The thesis is focused on designing and implementing a system, which will try to help incorporate Linked data sources more effectively into an application. It should show a way to increase speed of loading data details and try to speed up data querying.
