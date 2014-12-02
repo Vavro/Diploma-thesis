@@ -41,11 +41,15 @@
 \usepackage{setspace}
 \onehalfspacing
 
+%% umožnit eps v pdftex
+\usepackage{epstopdf}
+
+
 
 %% Balíček hyperref, kterým jdou vyrábět klikací odkazy v PDF,
 %% ale hlavně ho používáme k uložení metadat do PDF (včetně obsahu).
 %% POZOR, nezapomeňte vyplnit jméno práce a autora.
-\usepackage[ps2pdf,unicode]{hyperref}   % Musí být za všemi ostatními balíčky
+\usepackage[pdftex,unicode,hidelinks]{hyperref}   % Musí být za všemi ostatními balíčky
 \hypersetup{pdftitle=Querying Preprocessed Linked Data Resources}
 \hypersetup{pdfauthor=Petr Vávro}
 
