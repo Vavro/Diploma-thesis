@@ -1,13 +1,14 @@
 \chapter{Objectives}
 
-\paragraph{Web service for storing Linked data resources}
+%% Create a web service for storing and retrieving
+The main objective of this thesis is to create a Web service for storing and retrieving Linked data query results %% add a sentence about speed up
+as a resource to be used in other applications. The data can be of any shape and come from any generic SPARQL endpoint.
 
-Create a web service that ...
+%% Searching of stored resources
+The service should allow searching of the stored resources in some way. This probably will not be possible by a generic SPARQL query. Rather a more specific query language will be provided, allowing querying properties of the stored resource. If needed the thesis will also provide guidance for deciding which queries are a better fit for the created service, or whether it's better to query the original generic SPARQL endpoint.
 
-\paragraph{Searching of stored resources}
-Searching
+%% Easy to use
+The service should be as easy to use as possible. The stored resources should be retrieved in a form, that is Linked Data compliant. So that for data retrieval the service is easy to plug into a working application. As the searching of the stored resources will be possible by another query language, enabling it will require more work to integrate into an application. The amount of work should be as minimal as possible, while maintaining the services performance at a maximum. Performance of the resource search is of more importance than the ease of integration with current existing applications.
 
-\paragraph{Ease of use}
-
-\paragraph{Usability of the service}
-Usability possibilities
+%% Usability objectives
+The thesis should also state optional usability extensions for the service, and possibly implement some of them. These extensions should make the service easier to use or automate tasks needed for administration of the service.
