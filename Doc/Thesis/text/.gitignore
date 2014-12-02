@@ -26,3 +26,6 @@
 
 ## ignore the produced pdf
 *.pdf
+
+## ignore compiled ps
+*.ps
