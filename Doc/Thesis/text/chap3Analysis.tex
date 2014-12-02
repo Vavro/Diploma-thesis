@@ -7,7 +7,16 @@
 	\item Data retrieval speed - data locality - cant be optimized
 	\item Options for faster load speed (simple results cache, document db)
 	\item Conclusion choose a document database
+\end{itemize}	
+%%maybe move to analysis just say here it could be quicker.
+Opposite to the graph database is usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
+\begin{itemize}
+	\item Graph databases provide ways to make complex queries over the whole data
+	\item Document databases usually provide only ways to query one document (data entity)
 \end{itemize}
+Document databases are nowadays considered to be the goto database for quick data retrieval.
+
+
 
 \section{Requirements for queries}
 \begin{itemize}
@@ -16,7 +25,8 @@
 			
 \end{itemize}
 
-\section{Choosing a storage engine (Document database comparisons)}
+\section{Choosing a storage engine}
+- Document database comparisons
 \begin{itemize}
 	\item Document database options
 \end{itemize}

@@ -1,24 +1,30 @@
 \chapter{Introduction}
 %%\addcontentsline{toc}{chapter}{Introduction}
-Data load speed
-Big data storage and querying
-Application Accesibility, data categorization standardization (Linked Data)
-
+%Data load speed
+%Big data storage and querying
+%Application Accesibility, data categorization standardization (Linked Data)
 More data usually means more power to the user or bussiness. But big sets of data have to be properly categorized and modeled. One way of storing and structuring large amounts of data naturally are graph databases using Linked Data principles.
 
-Graph databases store data in graph strctures using nodes, edges, and properties. Where a node resembles an entity and the node's properties usually represent features of this entity. Edges are meant to provide a means of expressing relaitionship between entities. A node could be used to represent a person with its properties being an id, name, or age. An edge or relationsip between persons could then express a friend relation between two persons. Graph databases are separated between general graph databases (Neo4j) and triplestores (Virtuoso). %todo: links to those dbs
-Triple stores, as opposed to general graph databases, have a standartized query language (SPARQL), and for the purpose of this thesis will be the only ones considered. In a triplestore data are stored using triples composing of subject-predicate-object value - which in the examples used above could mean: "Bratt is 27" or "Bratt knows Mary". Where the subject is the id of the entity, predicate is a property or edge to another antity and an object represents either the value of the property or the id of the referenced entity. Triples can be imported and exported to the Resource Description Framework (RDF)
+Graph databases store data in graph structures using nodes, edges, and properties. Where a node resembles an entity and the node's properties usually represent features of this entity. Edges are meant to provide a means of expressing relaitionship between entities. A node could be used to represent a person with its properties being an id, name, or age. An edge or relationsip between persons could then express a friend relation between two persons. Graph databases are separated between general graph databases (Neo4j) and triplestores (Virtuoso). %todo: links to those dbs
+Triple stores, as opposed to general graph databases, have a standartized query language (SPARQL), and for the purpose of this thesis will be the only ones considered. 
 
-\section{Linked data principles}
+In a triplestore data is stored using triples composing of subject-predicate-object value - which in the examples used above could mean: 
+\begin{itemize}
+	\item "Bratt is 27"
+	\item "Bratt knows Mary" 
+\end{itemize}
+Where the subject is the id of the entity (Bratt), predicate is a property (is old) or edge to another entity (knows) and an object represents either the value of the property (27) or the id of the referenced entity (Mary). Triples can be imported and exported to the Resource Description Framework (RDF).
 
+But data on itself are usually important only to a specific application with its own data domain. To make data important and standardized even outside of a specific application Linked Data principles can be used. Linked Data build upon other web technologies like RDF, OWL, SPARQL and others. Linked data are at the core of the Semantic Web - whose ultimate goal is to make data on the internet more useful for computer automation and data presentation. Linked data give us the opportunity to consume the provided data in multiple ways - always specific to a kind of application. 
+In the previusly shown examples the data could be used to create these applications.
+\begin{itemize}
+	\item An address book application, where the "user" is the subject and every "knows" relation provides an entry to the address book. 
+	\item Adding a "lives in" relation for a person we can create a demographic application that could map persons age with their average peer (relationsip known) age by location. 
+\end{itemize}	
+These two examples take the same structured Linked data and build a specific application. Each of these applications present a different view (Domain aggregate root) upon the same data.
+So triplestores provide a great way of storing complex structures of interlinked data and a general way of querying them. But the general aspect comes at a cost of data retrieval. Usually the retrieved domain aggregate root spans multiple triples and even contains nested triples (in the address book example we need to query Bratt for his knows relationships and then retrieve each of the persons details), which need to be retrieved at once. But in the general triplestore the data triples are scattered through out the database as there is no way of knowing how the data will be read.
 
-\section{Linked data usage in applications}
+Which gives us the conclusion that there are faster ways of retrieving the same aggregate roots. And the present state of web application and applications in general gives more and more importance to the speed of loading data and showing these to the user. It's proven by studies \cite{onlineSixRevisionsSpeed, onlineWebSiteOptimizationSpeed} that the speed of loading data drives user satisfaction and even bussiness sales.
 
-\section{Why speed up}
-But when data are stored in graph databases, they inherently inherit costs when retrieving. 
-
-The present state of web application and applications in general gives more and more importance to the speed of loading data and showing these to the user. 
-
-One of the biggest factors in user addoption of new systems is considered to be responsiveness, which usually can be considered to be data loading speed. Data load speed can be influenced by 
-
-The thesis is focused on designing and implementing a system, which will try to help incorporate Linked data sources more effectively into an application. It should show a way to increase speed of loading data details and try to speed up data querying.
+%%maybe add something about readability of site and the schema.org
+That is why the thesis is focused on designing and implementing a system, which will try to help incorporate Linked data sources easier and more effectively into an application. It should show a way to increase speed of loading data details and try to speed up data querying.
