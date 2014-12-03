@@ -3,16 +3,47 @@
 %% todo: add a chapter summary
 
 \section{Triplestore speed}
-As briefly introduced in \ref{chap:Introduction}
+As briefly introduced in \autoref{chap:Introduction} triplestores are effective at processing queries. Their effectiveness originates in the specific indices they use \cite{onlineAllgeroGraphTripleIndices}. But in an application data are usually used in views and these get constructed from multiple subject-predicate-object triples where more than one subject is present.
+%%todo: add example of nested data structure
+As \cite{onlineDbisQueryOptimizationInRdf} states the main achievable optimization for a graph database data retrieval is through data locality - optimizing database pages so, that data frequently retrieved together is located near each other. But in a general triplestore, that provides data for multiple different views can't really be optimized this way, as the data retrieved for queries can and will overlap but won't be identic in every aspect.
+%%todo: example of anouther nested data structure that needs only part of the previous example
+
+That leads to the conclusion, that there have to be ways to retrieve the mentioned data views faster for an application.
+
+\section{Storage requirements}
+\label{sec:StorageRequirements}
+The first way to speed up data retrieval that comes to mind is a query-results in-memory cache. Such a cache would store the result of the query along with the query and its parameters. On a subsequent query with the same parameters the cache would only retrieve the cached data and return it. This would skip all the steps needed to be executed by the triplestore - constructing an execution plan, executing the query and retrieving all the necessary database pages containing the requested data. This is a fine idea, but has its drawbacks.
+%% maybe do as a list of items
+\begin{itemize}
+	\item First of it's a tradeoff of space for time. The same data stored in the querystore can be retrieved by various queries and form different views. The cache would have to store all these different views separately. As the cache is in memory the amount of data will be constrained by its size. That can be partly aleviated by storing cache contents to disk, but the .
+	\item Secondly after the data changes the cache would still return old data. So we need a way to invalidate data in the cache, as on its own its detached from the original SPARQL data source and wouldn't know about the changes.
+	\item Thirdly a simple cache doesn't know anything about the data view or the query that produced it and wouldn't provide anything else. If we add some meaning to the data and the query that produced it we could also build a searchable index over it.
+\end{itemize}
+But thats not a mere cache of results anymore.
+
+%% Data = resource -> resource has Id (how to get that id) -> first index B-Trees (already implemented better in Lucene)
+For our needs the data resulted from the SPARQL query can be seen as a resource. To comply with the Linked Data principles the resource has a type and an id. It's type is defined by the query that produced it and it's id is defined by the parameters of the query. This provides us with a means to uniequely identify any cached data. At the same time it gives us the first two indexes we need to build. This defined resource has other beforehand unknown properies, any searchable property will give us another index.
+
+\section{Resource Query Requirements}
+The basic way of getting the resource by its unique identifier was already described in \autoref{sec:StorageRequirements}. 
+%% properties types and supported query operators
+
 
 \begin{itemize}
-	\item Query speed - optimized
-	\item Data retrieval speed - data locality - cant be optimized
+	\item Search document query operators
+\end{itemize}
+
+\section{How to index the data} %% todo better name
+
+The best way of creating an on disk index is by using a B-Tree.
+\begin{itemize}
 	\item Options for faster load speed (simple results cache, document db)
 	\item Conclusion choose a document database
-\end{itemize}	
+\end{itemize}
+
+\section{Document databases}
 %%maybe move to analysis just say here it could be quicker.
-Opposite to the graph database is usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
+Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
 \begin{itemize}
 	\item Graph databases provide ways to make complex queries over the whole data
 	\item Document databases usually provide only ways to query one document (data entity)
@@ -21,12 +52,6 @@ Document databases are nowadays considered to be the goto database for quick dat
 
 
 
-\section{Requirements for queries}
-\begin{itemize}
-	\item Get Detail
-	\item Search document query operators
-			
-\end{itemize}
 
 \section{Choosing a storage engine}
 - Document database comparisons
@@ -48,7 +73,7 @@ Document databases are nowadays considered to be the goto database for quick dat
 \section{Usability possibilities}
 \begin{itemize}
 	\item How easy it could be to use
-	\item 
+	\item Stored resources update
 \end{itemize}
 
 \section{Optimalization - maybe to Conclusion}

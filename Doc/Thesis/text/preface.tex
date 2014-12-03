@@ -21,7 +21,7 @@ In the previusly shown examples the data could be used to create these applicati
 \begin{itemize}
 	\item An address book application, where the "user" is the subject and every "knows" relation provides an entry to the address book. 
 	\item Adding a "lives in" relation for a person we can create a demographic application that could map persons age with their average peer (relationsip known) age by location. 
-\end{itemize}	
+\end{itemize}
 These two examples take the same structured Linked data and build a specific application. Each of these applications present a different view (Domain aggregate root) upon the same data.
 So triplestores provide a great way of storing complex structures of interlinked data and a general way of querying them. But the general aspect comes at a cost of data retrieval. Usually the retrieved domain aggregate root spans multiple triples and even contains nested triples (in the address book example we need to query Bratt for his knows relationships and then retrieve each of the persons details), which need to be retrieved at once. But in the general triplestore the data triples are scattered through out the database as there is no way of knowing how the data will be read.
 
