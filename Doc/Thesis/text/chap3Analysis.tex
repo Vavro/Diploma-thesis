@@ -30,7 +30,17 @@ The basic way of getting the resource by its unique identifier was already descr
 	\item Describe Query - Used to extract an RDF graph from the SPARQL endpoint, the contents of which is left to the endpoint to decide based on what the maintainer deems as useful information.
 	\item Construct Query - Used to extract information from the SPARQL endpoint and transform the results into valid RDF.
 \end{itemize}
-A describe query usually returns all the triples where the requested id is the subject or the object. As such it isn't really helpful in applications - as per specification it can return any data deemed useful. On the other side the construct query specifies a transformation of the data. So for different parameters the results of the construct query should have same properties - return a similar graph of triplets. These properties can be extracted from the returned data and added to an index. A triple in RDF data as mentioned in \autoref{Introduction} has three parts subject-predicate-object. For the resources as described in this thesis the predicate part equals to a property on the resource, the object than its value. Objects in 
+A describe query usually returns all the triples where the requested id is the subject or the object. As such it isn't really helpful in applications - as per specification it can return any data deemed useful. On the other side the construct query specifies a transformation of the data. So for different parameters the results of the construct query should have same properties - return a similar graph of triplets. These properties can be extracted from the returned data and added to an index. A triple in RDF data as mentioned in \autoref{Introduction} has three parts subject-predicate-object. For the resources as described in this thesis the predicate part equals to a property on the resource, the object is the value of the property. To be able to search not only by object equality  The basic recognized types in RDF for an object are \cite{onlineRdfConcepts}:
+\begin{itemize}
+	\item Literal - that consist of two or three elements %%http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal
+		\subitem Lexical form string
+		\subitem Datatype IRI - being an IRI identifying a datatype that determines how the lexical form maps to a literal value
+		\subitem Language tag - specified only when the the datatype IRI is \emph{'http://www.w3.org/1999/02/22-rdf-syntax-ns\#langString'}
+	\item IRI
+	\item blank node
+\end{itemize}
+Linked data promotes the use of vocabularies %%this is vague - be more precise
+that further specify the objects type - specify the range of the known datatype IRI set. 
 %% properties types and supported query operators
 
 
