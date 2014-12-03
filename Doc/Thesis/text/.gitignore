@@ -29,3 +29,6 @@
 
 ## ignore compiled ps
 *.ps
+
+## ignore synctex files for Sumatra
+*.synctex
