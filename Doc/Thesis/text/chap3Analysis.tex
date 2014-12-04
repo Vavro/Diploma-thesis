@@ -40,41 +40,73 @@ A describe query usually returns all the triples where the requested id is the s
 	\item blank node
 \end{itemize}
 Linked data promotes the use of vocabularies %%this is vague - be more precise
-that further specify the objects type - specify the range of the known datatype IRI set. 
-%% properties types and supported query operators
+that further specify the objects type - specify the range of the known datatype IRI set.
+%%here ends the slow typing.. :)
+Among the core datatypes defined by RDF are string, number, date and timespan. For querying the definition of the datatype gives options to query ranges.
 
-
+%% todo: operators might be better in objectives?
+The operators the created service should support depending on data type are:
 \begin{itemize}
-	\item Search document query operators
+	\item String - Equals, Not Equals
+	\item Number, Date, TimeSpan - Equals, Not Equals, Greater than, Less than, Between
+%% didn't i forget some operators?
 \end{itemize}
+%% todo: in operator is an extension - maybe mention later
 
-\section{How to index the data} %% todo better name
+Search by the basic operators could be done by a standard B-Tree stored on disk. As B-Trees support effective look up for specific data an even range queries.
 
-The best way of creating an on disk index is by using a B-Tree.
+%% todo: maybe should be in objectives, requirements - doesn't make much sense to add now
+Another useful operation for long texts is fulltext search. %% specify how a fulltext search usually works?
+This type of operation is at the current time not supported in SPARQL, and could be a major extension for usability of the service.
+
+The best way of creating an on disk index of data for the considered operators is by using a B-Tree. 
+%%here it sounds too easy - as databases have to also create a query plan - how to execute the query
+B-Trees support efficient lookup of specific values and can be used to do range queries. But fulltext searching is a category of its own. Adding fulltext capabilities to applications is usually a much bigger problem. As in fulltext we usually not only require to find the data that contains the searched terms, but it's expected that the results are returned in the order of relevance.
+
+Fortunately it's not necessary to create support for all of these features, as all of them are provided in document databases. Document databases use a document as their smallest entity. The document in the document database can be the defined resource, and the query syntax of most document databases supports all the defined operators.
+
+%% maybe use this somewhere?
+%\section{Document databases}
+%Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
+%\begin{itemize}
+	%\item Graph databases provide ways to make complex queries over the whole data
+	%\item Document databases usually provide only ways to query one document (data entity)
+%\end{itemize}
+%Document databases are nowadays considered to be the go to database for quick data retrieval.
+
+%% todo: add document db comparison
+%\section{Choosing a storage engine}
+%- Document database comparisons
+%\begin{itemize}
+	%\item Document database options
+%\end{itemize}
+
+%% isn't this more of a design choice than analysis?
+\section{Resource storage options}
+As most of the available document databases use JSON as their storage format, it's desirable to select an JSON RDF serialization. Availible json serializations of RDF are \cite{onlineW3CRdfSyntax}:
 \begin{itemize}
-	\item Options for faster load speed (simple results cache, document db)
-	\item Conclusion choose a document database
+	\item JSON-LD
+	\item RDF/JSON
+	\item Rdfj
+	\item jsonGRDDL
+	\item JSON+RDF
 \end{itemize}
+%% todo: maybe add some discussion about the formats
+The most human readable and easiest to consume in programs is JSON-LD, which was designed with these two goals. %% todo:source?
 
-\section{Document databases}
-%%maybe move to analysis just say here it could be quicker.
-Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
-\begin{itemize}
-	\item Graph databases provide ways to make complex queries over the whole data
-	\item Document databases usually provide only ways to query one document (data entity)
-\end{itemize}
-Document databases are nowadays considered to be the go to database for quick data retrieval.
+%% todo: add json-ld serialization sample and some json-ld format description
+But there is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms. Three of the algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
+\begin{description}
+	\item[Expansion Algorithm] This algorithm expands a JSON-LD document, such that all context definitions are removed, all terms and compact IRIs are expanded to absolute IRIs, blank node identifiers, or keywords and all JSON-LD values are expressed in arrays in expanded form.
+	\item[Compaction Algorithm] This algorithm compacts a JSON-LD document, such that the given context is applied. This must result in shortening any applicable IRIs to terms or compact IRIs, any applicable keywords to keyword aliases, and any applicable JSON-LD values expressed in expanded form to simple values such as strings or numbers.
+	\item[Flattening Algorithm] This algorithm flattens an expanded JSON-LD document by collecting all properties of a node in a single JSON object and labeling all blank nodes with blank node identifiers. This resulting uniform shape of the document, may drastically simplify the code required to process JSON-LD data in certain applications.
+\end{description}
+%% todo: add samples for what the algorithms do
+%% todo: flat vs nested data - easier to do nested objects queries, but not a norm
+%% todo: nowhere is the need to reformat the returned data stated
 
 
 
-
-\section{Choosing a storage engine}
-- Document database comparisons
-\begin{itemize}
-	\item Document database options
-\end{itemize}
-
-\section{Document storage options}
 \begin{itemize}
 	\item How to structure the data (JSON-LD)
 		\subitem JSON-LD algorithms
@@ -84,6 +116,8 @@ Document databases are nowadays considered to be the go to database for quick da
 		\subitem Split to multiple documents
 			\subsubitem How to split
 \end{itemize}
+
+%% todo: add a section about Web APIs and REST
 
 \section{Usability possibilities}
 \begin{itemize}

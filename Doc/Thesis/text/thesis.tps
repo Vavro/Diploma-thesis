@@ -12,7 +12,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=chap5Tests.tex
 
@@ -30,7 +30,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=epilog.tex
 
@@ -48,13 +48,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=bibliography.tex
 
 [Frame2_View0,0]
 TopLine=0
-Cursor=984
+Cursor=1296
 
 [Frame3]
 Flags=0
@@ -66,7 +66,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=chap1Objectives.tex
 
@@ -84,13 +84,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=thesis.tex
 
 [Frame4_View0,0]
-TopLine=246
-Cursor=7059
+TopLine=69
+Cursor=2674
 
 [Frame5]
 Flags=0
@@ -102,7 +102,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=chap2Structure.tex
 
@@ -120,13 +120,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=chap3Analysis.tex
 
 [Frame6_View0,0]
-TopLine=24
-Cursor=3581
+TopLine=48
+Cursor=5480
 
 [Frame7]
 Flags=0
@@ -138,7 +138,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=chap4Design.tex
 
@@ -156,15 +156,15 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=659
+NormalPos.bottom=1013
 Class=LaTeXView
 Document=preface.tex
 
 [Frame8_View0,0]
-TopLine=15
+TopLine=0
 Cursor=2768
 
 [SessionInfo]
 FrameCount=9
-ActiveFrame=6
+ActiveFrame=2
 
