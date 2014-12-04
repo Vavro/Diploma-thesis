@@ -1,7 +1,20 @@
 \chapter{Design}
 \label{chap:Design}
 
-%% select RavenDb as the document db of choice
+\begin{itemize}
+	\item select RavenDb as the document db of choice
+	\item implement in .NET
+	\item 2 main components - the REST Service and the management client (uses the same API)
+
+\end{itemize}
 
 \section{Web service design}
+Describe methods needed for the management of the service.
+
 \section{Query language design}
+Thanks to ravendb = lucene query syntax, describe the design of lucene syntax - all the possibilities how its processed?
+
+Somethink about how to create indexes in ravendb - dynamic vs static, mapreduce
+
+\section{Stored data update}
+Updates done by new requests for data - special update design - possibilities - update by new items query, delete items query, 

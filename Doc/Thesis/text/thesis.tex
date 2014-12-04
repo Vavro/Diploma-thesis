@@ -255,6 +255,18 @@ Linked Data, RDF, SPARQL, JSON, query optimization
 \include{chap2Structure}
 \include{chap3Analysis}
 \include{chap4Design}
+%% todo: separate to different file
+\chapter{Implementation}
+
+\begin{itemize}
+	\item What is implemented, how
+	\item Issues found when implementing
+		\subitem ravendb deletes @something properties
+		\subitem properties have to be c\# identifiers (which IRIs aren't)
+		\subitem Default lucene string comparison unsuitable for IRIs (they differ faster on the end)
+	\item What wasn't implemented and why
+\end{itemize}
+
 \include{chap5Tests}
 
 % Ukázka použití některých konstrukcí LateXu (odkomentujte, chcete-li)

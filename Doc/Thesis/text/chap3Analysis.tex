@@ -56,7 +56,7 @@ The operators the created service should support depending on data type are:
 Search by the basic operators could be done by a standard B-Tree stored on disk. As B-Trees support effective look up for specific data an even range queries.
 
 %% todo: maybe should be in objectives, requirements - doesn't make much sense to add now
-Another useful operation for long texts is fulltext search. %% specify how a fulltext search usually works?
+Another useful operation for long texts is fulltext search. %% specify how a fulltext search usually works? - startswith, exact, suggestions etc.
 This type of operation is at the current time not supported in SPARQL, and could be a major extension for usability of the service.
 
 The best way of creating an on disk index of data for the considered operators is by using a B-Tree. 
@@ -125,22 +125,17 @@ When requesting data from a SPARQL endpoint that supports returning JSON-LD it's
 			\subsubitem How to split
 \end{itemize}
 
-%% todo: add a section about Web APIs and REST
+%% todo: add a section about Web APIs and REST - maybe its a design choice.. 
 
-\section{Usability possibilities}
-\begin{itemize}
-	\item How easy it could be to use
-	\item Stored resources update
-\end{itemize}
-
-\section{Optimization - maybe to Conclusion}
+\section{Optimization - maybe to Conclusion or Implementation}
 \begin{itemize}
 	\item Offload workload to client
 		\subitem Transform of data (required storage implementation details) - i.e. have to rename the properties
 		\subitem Analysis of sent queries (renamed properties of documents force a rename in the query)
 \end{itemize}
 
-
-
-
-
+\section{Usability possibilities}
+\begin{itemize}
+	\item How easy it could be to use - analyze steps needed to plug in details caching, querying
+	\item Stored resources update
+\end{itemize}
