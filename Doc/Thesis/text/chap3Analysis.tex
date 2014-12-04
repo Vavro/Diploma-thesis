@@ -95,7 +95,7 @@ As most of the available document databases use JSON as their storage format, it
 The most human readable and easiest to consume in programs is JSON-LD, which was designed with these two goals. %% todo:source?
 
 %% todo: add json-ld serialization sample and some json-ld format description
-But there is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms. Three of the algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
+There is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms. Three of the algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
 \begin{description}
 	\item[Expansion Algorithm] This algorithm expands a JSON-LD document, such that all context definitions are removed, all terms and compact IRIs are expanded to absolute IRIs, blank node identifiers, or keywords and all JSON-LD values are expressed in arrays in expanded form.
 	\item[Compaction Algorithm] This algorithm compacts a JSON-LD document, such that the given context is applied. This must result in shortening any applicable IRIs to terms or compact IRIs, any applicable keywords to keyword aliases, and any applicable JSON-LD values expressed in expanded form to simple values such as strings or numbers.
@@ -103,7 +103,15 @@ But there is more than one way to serialize RDF into JSON-LD. JSON-LD defines pr
 \end{description}
 %% todo: add samples for what the algorithms do
 %% todo: flat vs nested data - easier to do nested objects queries, but not a norm
-%% todo: nowhere is the need to reformat the returned data stated
+For the purposes of storing the returned JSON document in a document database and querying it, the application of the Compaction algorithm should ease up the index definitions. 
+%% todo: now i need to query nested data, wasn't stated before
+As the service needs to query even embedded nested objects in the resource, it would be best to run some sort of opposite algorithm to the Flattening Algorithm. This algorithm would nest the object that are present in the returned 
+%% todo: here i state that the returned data is a graph - should probably say that construct queries usually return a graph of triplets
+graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query. %% todo: maybe add a more formal name and replace it, to add more consistency and clearness
+%% todo: add example of the shape we want
+%% todo: give more meaning to the unflatten algorithm .. maybe define with a pseudo language
+When requesting data from a SPARQL endpoint that supports returning JSON-LD it's not possible to specify the algorithms the server should run on the returned data, so its up to the client to alter the serialization.
+
 
 
 

@@ -54,7 +54,7 @@ Document=bibliography.tex
 
 [Frame2_View0,0]
 TopLine=0
-Cursor=1296
+Cursor=1430
 
 [Frame3]
 Flags=0
@@ -72,7 +72,7 @@ Document=chap1Objectives.tex
 
 [Frame3_View0,0]
 TopLine=0
-Cursor=45
+Cursor=1762
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame4_View0,0]
-TopLine=69
-Cursor=2674
+TopLine=238
+Cursor=6789
 
 [Frame5]
 Flags=0
@@ -125,8 +125,8 @@ Class=LaTeXView
 Document=chap3Analysis.tex
 
 [Frame6_View0,0]
-TopLine=48
-Cursor=5480
+TopLine=104
+Cursor=11841
 
 [Frame7]
 Flags=0
@@ -144,7 +144,7 @@ Document=chap4Design.tex
 
 [Frame7_View0,0]
 TopLine=0
-Cursor=37
+Cursor=87
 
 [Frame8]
 Flags=0
@@ -166,5 +166,5 @@ Cursor=2768
 
 [SessionInfo]
 FrameCount=9
-ActiveFrame=2
+ActiveFrame=6
 
