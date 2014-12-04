@@ -1,21 +1,26 @@
 ﻿<section>
-    <h2>Hello! What is your name?</h2>
-    <form class="form-inline">
-        <fieldset>
-            <label>Name</label>
-            <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
-            <button type="submit" class="btn" data-bind="click: sayHello, enable: name">Click Me</button>
-        </fieldset>
-    </form>
-    <form>
-        <pre id="queryEditor" class="form-control" data-bind="aceEditor: { code: queryText, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
-    </form>
-    <form>
-        <pre id="queryEditorRO" class="form-control" data-bind="aceEditor: { code: queryText, readOnly: true, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
-    </form>
-    <form>
-        <fieldset>
-            <button type="submit" class="btn" data-bind="click: testNotif">Notify!</button>
-        </fieldset>
-    </form>
+    <div class="jumbotron">
+        <h1>DragQnLD Server Management</h1>
+        <p class="lead">use Documents to Represent Aggregation Queries of Linked Data.</p>
+    </div>
+
+    <!--<h2>Hello! What is your name?</h2>
+        <form class="form-inline">
+            <fieldset>
+                <label>Name</label>
+                <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+                <button type="submit" class="btn" data-bind="click: sayHello, enable: name">Click Me</button>
+            </fieldset>
+        </form>
+        <form>
+            <pre id="queryEditor" class="form-control" data-bind="aceEditor: { code: queryText, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
+        </form>
+        <form>
+            <pre id="queryEditorRO" class="form-control" data-bind="aceEditor: { code: queryText, readOnly: true, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'"></pre>
+        </form>
+        <form>
+            <fieldset>
+                <button type="submit" class="btn" data-bind="click: testNotif">Notify!</button>
+            </fieldset>
+        </form>-->
 </section>
