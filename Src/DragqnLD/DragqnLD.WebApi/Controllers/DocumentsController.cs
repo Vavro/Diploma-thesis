@@ -54,7 +54,7 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/document")]
         public async Task<HttpResponseMessage> Get(string documentId)
         {
-            var documentsWithMaps = await _dataStore.GetDocumentWithMappings(DefinitionId, new Uri(documentId));
+            var documentsWithMaps = await _dataStore.GetDocumentWithMappings(DefinitionId, new Uri(documentId), true);
             var document = documentsWithMaps.Item1;
             var mappings = documentsWithMaps.Item2;
 
