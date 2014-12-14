@@ -32,3 +32,7 @@
 
 ## ignore synctex files for Sumatra
 *.synctex
+
+
+## ignore generated todo list
+thesis.tdo

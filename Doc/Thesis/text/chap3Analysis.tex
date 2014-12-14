@@ -1,12 +1,12 @@
 \chapter{Analysis}
 \label{chap:Analysis}
-%% todo: add a chapter summary
+\todoi{add a chapter summary}
 
 \section{Triplestore speed}
 As briefly introduced in \autoref{chap:Introduction} triplestores are effective at processing queries. Their effectiveness originates in the specific indices they use \cite{onlineAllgeroGraphTripleIndices}. But in an application data are usually used in views and these get constructed from multiple subject-predicate-object triples where more than one subject is present.
-%%todo: add example of nested data structure
+\todoi{add example of nested data structure}
 As \cite{onlineDbisQueryOptimizationInRdf} states the main achievable optimization for a graph database data retrieval is through data locality - optimizing database pages so, that data frequently retrieved together is located near each other. But in a general triplestore, that provides data for multiple different views can't really be optimized this way, as the data retrieved for queries can and will overlap but won't be identical in every aspect.
-%%todo: example of anouther nested data structure that needs only part of the previous example
+\todoi{example of anouther nested data structure that needs only part of the previous example}
 
 That leads to the conclusion, that there have to be ways to retrieve the mentioned data views faster for an application.
 
@@ -44,18 +44,18 @@ that further specify the objects type - specify the range of the known datatype 
 %%here ends the slow typing.. :)
 Among the core datatypes defined by RDF are string, number, date and timespan. For querying the definition of the datatype gives options to query ranges.
 
-%% todo: operators might be better in objectives?
+\todoi{operators might be better in objectives?}
 The operators the created service should support depending on data type are:
 \begin{itemize}
 	\item String - Equals, Not Equals
 	\item Number, Date, TimeSpan - Equals, Not Equals, Greater than, Less than, Between
 %% didn't i forget some operators?
 \end{itemize}
-%% todo: in operator is an extension - maybe mention later
+\todoi{in operator is an extension - maybe mention later}
 
 Search by the basic operators could be done by a standard B-Tree stored on disk. As B-Trees support effective look up for specific data an even range queries.
 
-%% todo: maybe should be in objectives, requirements - doesn't make much sense to add now
+\todoi{maybe should be in objectives, requirements - doesn't make much sense to add now}
 Another useful operation for long texts is fulltext search. %% specify how a fulltext search usually works? - startswith, exact, suggestions etc.
 This type of operation is at the current time not supported in SPARQL, and could be a major extension for usability of the service.
 
@@ -74,7 +74,7 @@ Fortunately it's not necessary to create support for all of these features, as a
 %\end{itemize}
 %Document databases are nowadays considered to be the go to database for quick data retrieval.
 
-%% todo: add document db comparison
+\todoi{add document db comparison}
 %\section{Choosing a storage engine}
 %- Document database comparisons
 %\begin{itemize}
@@ -91,25 +91,26 @@ As most of the available document databases use JSON as their storage format, it
 	\item jsonGRDDL
 	\item JSON+RDF
 \end{itemize}
-%% todo: maybe add some discussion about the formats
-The most human readable and easiest to consume in programs is JSON-LD, which was designed with these two goals. %% todo:source?
+\todoi{maybe add some discussion about the formats}
+The most human readable and easiest to consume in programs is JSON-LD, which was designed with these two goals. \todoi{source?}
 
-%% todo: add json-ld serialization sample and some json-ld format description
+\todoi{add json-ld serialization sample and some json-ld format description}
 There is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms. Three of the algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
 \begin{description}
 	\item[Expansion Algorithm] This algorithm expands a JSON-LD document, such that all context definitions are removed, all terms and compact IRIs are expanded to absolute IRIs, blank node identifiers, or keywords and all JSON-LD values are expressed in arrays in expanded form.
 	\item[Compaction Algorithm] This algorithm compacts a JSON-LD document, such that the given context is applied. This must result in shortening any applicable IRIs to terms or compact IRIs, any applicable keywords to keyword aliases, and any applicable JSON-LD values expressed in expanded form to simple values such as strings or numbers.
 	\item[Flattening Algorithm] This algorithm flattens an expanded JSON-LD document by collecting all properties of a node in a single JSON object and labeling all blank nodes with blank node identifiers. This resulting uniform shape of the document, may drastically simplify the code required to process JSON-LD data in certain applications.
 \end{description}
-%% todo: add samples for what the algorithms do
-%% todo: flat vs nested data - easier to do nested objects queries, but not a norm
+\todoi{add samples for what the algorithms do}
+\todoi{flat vs nested data - easier to do nested objects queries, but not a norm}
 For the purposes of storing the returned JSON document in a document database and querying it, the application of the Compaction algorithm should ease up the index definitions. 
-%% todo: now i need to query nested data, wasn't stated before
+\todoi{now i need to query nested data, wasn't stated before}
 As the service needs to query even embedded nested objects in the resource, it would be best to run some sort of opposite algorithm to the Flattening Algorithm. This algorithm would nest the object that are present in the returned 
-%% todo: here i state that the returned data is a graph - should probably say that construct queries usually return a graph of triplets
-graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query. %% todo: maybe add a more formal name and replace it, to add more consistency and clearness
-%% todo: add example of the shape we want
-%% todo: give more meaning to the unflatten algorithm .. maybe define with a pseudo language
+\todoi{here i state that the returned data is a graph - should probably say that construct queries usually return a graph of triplets}
+graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query. 
+\todoi{maybe add a more formal name and replace it, to add more consistency and clearness}
+\todoi{add example of the shape we want}
+\todoi{give more meaning to the unflatten algorithm .. maybe define with a pseudo language}
 When requesting data from a SPARQL endpoint that supports returning JSON-LD it's not possible to specify the algorithms the server should run on the returned data, so its up to the client to alter the serialization.
 
 
@@ -125,7 +126,7 @@ When requesting data from a SPARQL endpoint that supports returning JSON-LD it's
 			\subsubitem How to split
 \end{itemize}
 
-%% todo: add a section about Web APIs and REST - maybe its a design choice.. 
+\todoi{add a section about Web APIs and REST - maybe its a design choice.. }
 
 \section{Optimization - maybe to Conclusion or Implementation}
 \begin{itemize}
