@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
 
@@ -8,18 +9,18 @@ namespace DragqnLD.Core.UnitTests.PerfTests
     public class RandomizedIdQueryTests : DataStorePerfTestsBase
     {
         [Fact]
-        public void GetRandomIdIngredients()
+        public async Task GetRandomIdIngredients()
         {
-            GetRandomIdTest(IngredientsIds, "Random Get Id Ingredients");
+            await GetRandomIdTest(IngredientsIds, "Random Get Id Ingredients");
         }
 
         [Fact]
-        public void GetRandomIdMedicinalProducts()
+        public async Task GetRandomIdMedicinalProducts()
         {
-            GetRandomIdTest(MedicinalProductsIds, "Random Get Id Medicinal Products");
+            await GetRandomIdTest(MedicinalProductsIds, "Random Get Id Medicinal Products");
         }
 
-        private async void GetRandomIdTest(List<Uri> idsList, string description)
+        private async Task GetRandomIdTest(List<Uri> idsList, string description)
         {
             var rnd = new Random(TestDataConstants.RandomSeed);
 
