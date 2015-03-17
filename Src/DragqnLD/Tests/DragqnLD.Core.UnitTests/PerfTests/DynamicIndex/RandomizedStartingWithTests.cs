@@ -41,7 +41,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
             {
                 var startWithTitle = NextRandomStartsWithValue(titles);
 
-                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.IngredientsQueryDefinitionId,
+                var uris = await RavenDataStore.QueryDocumentProperties(TestDataConstants.MedicinalProductQueryDefinitionId,
                     TestDataConstants.PropertyNameIngredientsTitle.AsCondition(startWithTitle));
 
                 Assert.NotEmpty(uris);

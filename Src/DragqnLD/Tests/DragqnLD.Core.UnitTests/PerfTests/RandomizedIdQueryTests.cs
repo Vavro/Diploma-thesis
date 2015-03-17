@@ -11,16 +11,16 @@ namespace DragqnLD.Core.UnitTests.PerfTests
         [Fact]
         public async Task GetRandomIdIngredients()
         {
-            await GetRandomIdTest(IngredientsIds, "Random Get Id Ingredients");
+            await GetRandomIdTest(IngredientsIds, "Random Get Id Ingredients", TestDataConstants.IngredientsQueryDefinitionId);
         }
 
         [Fact]
         public async Task GetRandomIdMedicinalProducts()
         {
-            await GetRandomIdTest(MedicinalProductsIds, "Random Get Id Medicinal Products");
+            await GetRandomIdTest(MedicinalProductsIds, "Random Get Id Medicinal Products", TestDataConstants.MedicinalProductQueryDefinitionId);
         }
 
-        private async Task GetRandomIdTest(List<Uri> idsList, string description)
+        private async Task GetRandomIdTest(List<Uri> idsList, string description, string queryDefinitionId)
         {
             var rnd = new Random(TestDataConstants.RandomSeed);
 
@@ -36,7 +36,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
 
                     //Console.WriteLine("Getting document id {0}", documentId);
 
-                    var document = await RavenDataStore.GetDocument(TestDataConstants.IngredientsQueryDefinitionId, documentId);
+                    var document = await RavenDataStore.GetDocument(queryDefinitionId, documentId);
 
                     Assert.NotNull(document.Content);
                 });
