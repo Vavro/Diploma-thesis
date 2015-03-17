@@ -33,7 +33,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         }
 
         [Fact]
-        public async void RandomMedicalProductsTitleStartWith()
+        public async Task RandomMedicalProductsTitleStartWith()
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
 
