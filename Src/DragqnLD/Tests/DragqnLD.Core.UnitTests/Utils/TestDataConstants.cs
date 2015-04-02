@@ -1,6 +1,6 @@
 namespace DragqnLD.Core.UnitTests.Utils
 {
-    static internal class TestDataConstants
+    public static class TestDataConstants
     {
         private const string RelTestDataDir = @"..\..\..\..\..\..\Doc\Test data\";
 
@@ -11,10 +11,10 @@ namespace DragqnLD.Core.UnitTests.Utils
         public const string IngredientsDescriptionsFile = RelTestDataDir + "IngredientDescriptions.txt";
         public const string MedicinalProductsFolder = @"..\..\..\..\..\..\Doc\Test data\MedicinalProducts";
         public const string MedicinalProductsTitlesFile = @"..\..\..\..\..\..\Doc\Test data\MedicinalProductsTitles.txt";
-        internal const string IngredientsNamespacePrefix = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/";
-        internal const string IngredientsQueryDefinitionId = "QueryDefinitions/1";
-        internal const string MedicinalProductNamespacePrefix = @"http://linked.opendata.cz/resource/sukl/medicinal-product/";
-        internal const string MedicinalProductQueryDefinitionId = "QueryDefinitions/2";
+        public const string IngredientsNamespacePrefix = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/";
+        public const string IngredientsQueryDefinitionId = "QueryDefinitions/1";
+        public const string MedicinalProductNamespacePrefix = @"http://linked.opendata.cz/resource/sukl/medicinal-product/";
+        public const string MedicinalProductQueryDefinitionId = "QueryDefinitions/2";
         public const string PropertyNameIngredientsDescription = @"http://linked.opendata.cz/ontology/drug-encyclopedia/description,@value";
         public const string PropertyNameMedicinalProductsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
         public const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";

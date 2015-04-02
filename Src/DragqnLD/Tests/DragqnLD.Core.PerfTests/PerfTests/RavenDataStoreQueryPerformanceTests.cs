@@ -8,9 +8,8 @@ using Raven.Abstractions.Indexing;
 using Raven.Tests.Helpers;
 using Xunit;
 using Xunit.Abstractions;
-using Xunit.Extensions;
 
-namespace DragqnLD.Core.UnitTests.PerfTests
+namespace DragqnLD.Core.PerfTests.PerfTests
 {
     public class RavenDataStoreQueryPerformanceTests : DataStorePerfTestsBase
     {
@@ -66,7 +65,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
                 {
                     var result = await RavenDataStore.QueryDocumentProperties(queryId,
                             searchedProperty.AsCondition(searchedValue));
-                    Assert.Equal(expectedResultCount, result.Count());
+                    Assert.Equal(expectedResultCount, Enumerable.Count<Uri>(result));
                 });
             RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
         }
@@ -93,7 +92,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             await Profile("HasPharmalogical action Analgesics, non-narcotic and Antipyretics", 100, async () =>
             {
                 var result = await RavenDataStore.QueryDocumentProperties(queryId, indexName, property.AsCondition(searchedValue));
-                var resultAsList = result as IList<Uri> ?? result.ToList();
+                var resultAsList = result as IList<Uri> ?? Enumerable.ToList<Uri>(result);
                 Assert.Equal(1, resultAsList.Count());
                 Assert.Equal(@"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/m0000115",
                     resultAsList.First().ToString());
@@ -117,7 +116,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             {
                 var result =
                     await RavenDataStore.QueryDocumentProperties(queryId, propertyName.AsCondition(searchedValue));
-                Assert.Equal(12, result.Count());
+                Assert.Equal(12, Enumerable.Count<Uri>(result));
             });
 
             RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
@@ -141,7 +140,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                         TestDataConstants.PropertyNameIngredientMayTreat.AsCondition(searchedMayTreatTitle),
                         TestDataConstants.PropertyNameIngredientPregnancyCategory.AsCondition(searchedPregnancyCategory));
 
-                    var resultAsList = result as IList<Uri> ?? result.ToList();
+                    var resultAsList = result as IList<Uri> ?? Enumerable.ToList<Uri>(result);
                     Assert.Equal(1, resultAsList.Count());
                     Assert.Equal(expectedId, resultAsList.First().AbsoluteUri);
                 });
@@ -177,7 +176,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                     var result = await RavenDataStore.QueryDocumentProperties(queryId, indexName,
                         propertyNameMedicalProductsTitleEscaped.AsCondition(searchedTitle));
 
-                    Assert.Equal(expectedResultCount, result.Count());
+                    Assert.Equal(expectedResultCount, Enumerable.Count<Uri>(result));
                 }, async () =>
                 {
                     await DocumentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
@@ -219,7 +218,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                         RavenDataStore.QueryDocumentProperties(queryId, indexName,
                             propertyNameMedicalProductsDescriptionEscaped.AsCondition(searchedText));
 
-                Assert.Equal(expectedResultCount, result.Count());
+                Assert.Equal(expectedResultCount, Enumerable.Count<Uri>(result));
             }, async () =>
             {
                 await DocumentStore.AsyncDatabaseCommands.PutIndexAsync(indexName,
@@ -265,7 +264,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                 {
                     var results =
                         await RavenDataStore.QueryDocumentEscapedLuceneQuery(queryId, indexName, escapedLuceneQuery);
-                    Assert.Equal(27, results.Count());
+                    Assert.Equal(27, Enumerable.Count<Uri>(results));
                 }, async () =>
                 {
                     await DocumentStore.AsyncDatabaseCommands.PutIndexAsync(indexName, new IndexDefinition { Map = indexDefinition }, true);

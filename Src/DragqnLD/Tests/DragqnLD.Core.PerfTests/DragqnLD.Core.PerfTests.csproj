@@ -1,20 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\packages\xunit.core.2.0.0\build\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.props" Condition="Exists('..\..\packages\xunit.core.2.0.0\build\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.props')" />
-  <Import Project="..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props')" />
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{94819897-1C47-42C5-8A8A-913EFD4D519B}</ProjectGuid>
+    <ProjectGuid>{F7662897-E196-44EF-BD1A-8998B5377D18}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DragqnLD.Core.UnitTests</RootNamespace>
-    <AssemblyName>DragqnLD.Core.UnitTests</AssemblyName>
+    <RootNamespace>DragqnLD.Core.PerfTests</RootNamespace>
+    <AssemblyName>DragqnLD.Core.PerfTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>33dd4891</NuGetPackageImportStamp>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>132a6e13</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -36,75 +39,50 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dotNetRDF">
-      <HintPath>..\..\packages\dotNetRDF.1.0.6.3421\lib\net40\dotNetRDF.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Data.Edm">
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.Data.Edm.5.6.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Data.OData">
+    <Reference Include="Microsoft.Data.OData, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.Data.OData.5.6.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Configuration">
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\WindowsAzure.Storage.2.0.6.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\..\packages\RavenDB.Client.2.5.2935\lib\net45\Raven.Abstractions.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Raven.Client.Embedded">
+    <Reference Include="Raven.Client.Embedded, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\RavenDB.Embedded.2.5.2935\lib\net45\Raven.Client.Embedded.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Raven.Client.Lightweight">
       <HintPath>..\..\packages\RavenDB.Client.2.5.2935\lib\net45\Raven.Client.Lightweight.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Raven.Database, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raven.Database">
       <HintPath>..\..\packages\RavenDB.Database.2.5.2935\lib\net45\Raven.Database.dll</HintPath>
     </Reference>
-    <Reference Include="Raven.Server, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raven.Server">
       <HintPath>..\..\packages\RavenDB.Tests.Helpers.2.5.2935\lib\net45\Raven.Server.exe</HintPath>
     </Reference>
-    <Reference Include="Raven.Tests.Helpers, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Raven.Tests.Helpers">
       <HintPath>..\..\packages\RavenDB.Tests.Helpers.2.5.2935\lib\net45\Raven.Tests.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.Services.Client" />
-    <Reference Include="System.Spatial">
-      <HintPath>..\..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="VDS.Common">
-      <HintPath>..\..\packages\VDS.Common.1.3.0\lib\net40-client\VDS.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Spatial, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
-    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="xunit.abstractions">
       <HintPath>..\..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
     </Reference>
     <Reference Include="xunit.assert">
@@ -114,72 +92,68 @@
       <HintPath>..\..\packages\xunit.extensibility.core.2.0.0\lib\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
   <ItemGroup>
-    <Compile Include="DataStoreTestsBase.cs" />
-    <Compile Include="ExpandedJsonLDDataFormatterTests.cs" />
+    <Compile Include="PerfTests\DataStorePerfTestsBase.cs" />
+    <Compile Include="PerfTests\DynamicIndex\RandomizedPropertyValueTests.cs" />
+    <Compile Include="PerfTests\DynamicIndex\RandomizedStartingWithTests.cs" />
+    <Compile Include="PerfTests\DynamicIndex\RandomizedTwoPropertyValuesTests.cs" />
+    <Compile Include="PerfTests\RandomizedIdQueryTests.cs" />
+    <Compile Include="PerfTests\RavenDataStoreQueryPerformanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryStoreTests.cs" />
-    <Compile Include="RavenDataStoreTests.cs" />
-    <Compile Include="SparqlEnpointClientTests.cs" />
-    <Compile Include="TestsBase.cs" />
-    <Compile Include="Utils\NoCachingQueriesListener.cs" />
-    <Compile Include="Utils\NoStaleQueriesListener.cs" />
-    <Compile Include="Utils\NoTrackingQueriesListener.cs" />
-    <Compile Include="Utils\TestDataConstants.cs" />
-    <Compile Include="Utils\TestUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ExpanderTestsData\json1-simple.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpanderTestsData\json1out.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpanderTestsData\json2out.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpanderTestsData\json3-nested.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpanderTestsData\json3out.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="JSON\berners-lee.jsonld">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PerfTests\StaticIndex\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DragqnLD.Core\DragqnLD.Core.csproj">
       <Project>{D8A0E344-3F64-4F69-83AC-156D8CE1FBD5}</Project>
       <Name>DragqnLD.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DragqnLD.Core.UnitTests\DragqnLD.Core.UnitTests.csproj">
+      <Project>{94819897-1C47-42C5-8A8A-913EFD4D519B}</Project>
+      <Name>DragqnLD.Core.UnitTests</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ExpanderTestsData\json2-whole.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ExpanderTestsData\json4-recursive.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.runner.visualstudio.2.0.0\build\net20\xunit.runner.visualstudio.props'))" />
     <Error Condition="!Exists('..\..\packages\xunit.core.2.0.0\build\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.core.2.0.0\build\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.props'))" />
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>

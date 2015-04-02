@@ -6,7 +6,7 @@ using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
+namespace DragqnLD.Core.PerfTests.PerfTests.DynamicIndex
 {
     public class RandomizedPropertyValueTests : DataStorePerfTestsBase
     {

@@ -5,7 +5,7 @@ using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace DragqnLD.Core.UnitTests.PerfTests
+namespace DragqnLD.Core.PerfTests.PerfTests
 {
     public class RandomizedIdQueryTests : DataStorePerfTestsBase
     {

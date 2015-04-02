@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime;
-using System.Security.Principal;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
+using DragqnLD.Core.UnitTests;
 using DragqnLD.Core.UnitTests.Utils;
 using Raven.Json.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace DragqnLD.Core.UnitTests.PerfTests
+namespace DragqnLD.Core.PerfTests.PerfTests
 {
     public class PerfDataStoreFixture : DataStoreFixture
     {

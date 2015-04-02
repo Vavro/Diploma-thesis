@@ -7,7 +7,7 @@ using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
+namespace DragqnLD.Core.PerfTests.PerfTests.DynamicIndex
 {
     public class RandomizedTwoPropertyValuesTests : DataStorePerfTestsBase
     {
@@ -64,7 +64,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var lines = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsMayTreatPregnancyFile);
 
-            var results = lines.Select(s =>
+            var results = Enumerable.Select<string, MayTreatAndPregnancyItem>(lines, s =>
             {
                 var split = s.Split(new [] {";;"}, StringSplitOptions.None);
                 var pcs = new List<string>();
