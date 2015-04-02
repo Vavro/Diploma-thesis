@@ -3,19 +3,20 @@ using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Implementations;
 using Raven.Client.Embedded;
 using Raven.Database.Server;
+using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public abstract class DataStoreTestsBase : IDisposable
+
+    public class DataStoreFixture : IDisposable
     {
-        protected readonly IDataStore RavenDataStore;
-        protected readonly EmbeddableDocumentStore DocumentStore;
-        protected const string JsonBernersLeeFileName = @"JSON\berners-lee.jsonld";
-
+        public readonly IDataStore RavenDataStore;
+        public readonly EmbeddableDocumentStore DocumentStore;
+        
         protected const int RavenWebUiPort = 8081;
-        protected const string JsonBersersLeeId = @"http://www.w3.org/People/Berners-Lee/card#i";
 
-        protected DataStoreTestsBase()
+        public DataStoreFixture()
         {
             var docStore = new EmbeddableDocumentStore
             {
@@ -41,10 +42,27 @@ namespace DragqnLD.Core.UnitTests
             if (disposing)
             {
                 DocumentStore.Dispose();
-                
+
                 GC.Collect(2);
                 GC.WaitForPendingFinalizers();
             }
+        }
+    }
+    public abstract class DataStoreTestsBase : TestsBase
+    {
+        protected readonly IDataStore RavenDataStore;
+        protected readonly EmbeddableDocumentStore DocumentStore;
+        protected const string JsonBernersLeeFileName = @"JSON\berners-lee.jsonld";
+
+        protected const string JsonBersersLeeId = @"http://www.w3.org/People/Berners-Lee/card#i";
+
+        private readonly DataStoreFixture _dataStoreFixture;
+
+        protected DataStoreTestsBase(ITestOutputHelper output, DataStoreFixture dataStoreFixture) : base(output)
+        {
+            _dataStoreFixture = dataStoreFixture;
+            DocumentStore = _dataStoreFixture.DocumentStore;
+            RavenDataStore = _dataStoreFixture.RavenDataStore;
         }
     }
 }

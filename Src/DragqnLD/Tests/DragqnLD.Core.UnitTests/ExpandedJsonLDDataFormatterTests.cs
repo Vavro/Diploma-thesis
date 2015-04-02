@@ -3,6 +3,7 @@ using System.IO;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
+using Xunit.Abstractions;
 using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests
@@ -18,8 +19,12 @@ namespace DragqnLD.Core.UnitTests
     //todo: batch update of documents
     //todo: metrics of querying
 
-    public class ExpandedJsonLDDataFormatterTests
+    public class ExpandedJsonLDDataFormatterTests : TestsBase
     {
+        public ExpandedJsonLDDataFormatterTests(ITestOutputHelper output) : base(output)
+        {
+        }
+
         [Fact]
         void CanFormatSimpleDataTest()
         {
@@ -82,7 +87,7 @@ namespace DragqnLD.Core.UnitTests
 
             //todo: add more specific exception
             var ex = Assert.Throws<NotSupportedException>(() => TestFormat(inputJson, null, id));
-            Console.WriteLine(ex.ToString());
+            Output.WriteLine(ex.ToString());
         }
 
         [Theory]

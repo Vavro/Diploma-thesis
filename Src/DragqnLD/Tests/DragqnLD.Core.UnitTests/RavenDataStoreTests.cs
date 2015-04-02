@@ -8,15 +8,16 @@ using DragqnLD.Core.Implementations.Utils;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
     //todo: get rid of Content property
     //todo: make all simple test data work with a contained @id property
-    public class RavenDataStoreTests : DataStoreTestsBase
+    public class RavenDataStoreTests : DataStoreTestsBase, IClassFixture<DataStoreFixture>
     {
         
-        public RavenDataStoreTests()
+        public RavenDataStoreTests(ITestOutputHelper output, DataStoreFixture dataStoreFixture) : base(output, dataStoreFixture)
         {
             
         }
@@ -53,12 +54,12 @@ namespace DragqnLD.Core.UnitTests
             var storedDocument = await RavenDataStore.GetDocument(storedData.QueryId, storedData.DocumentId);
 
             Assert.NotNull(storedDocument);
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Original data:");
-            Console.WriteLine(storedData.Document.Content.ToString());
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Stored data:");
-            Console.WriteLine(storedDocument.Content.ToString());
+            Output.WriteLine("=========================================");
+            Output.WriteLine("Original data:");
+            Output.WriteLine(storedData.Document.Content.ToString());
+            Output.WriteLine("=========================================");
+            Output.WriteLine("Stored data:");
+            Output.WriteLine(storedDocument.Content.ToString());
 
             Assert.Equal(storedData.Document.Content.ToString(), storedDocument.Content.ToString());
         }
@@ -118,12 +119,12 @@ namespace DragqnLD.Core.UnitTests
             RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.NotNull(storedDocument);
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Original data:");
-            Console.WriteLine(dataToStore.Document.Content.ToString());
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Stored data:");
-            Console.WriteLine(storedDocument.Content.ToString());
+            Output.WriteLine("=========================================");
+            Output.WriteLine("Original data:");
+            Output.WriteLine(dataToStore.Document.Content.ToString());
+            Output.WriteLine("=========================================");
+            Output.WriteLine("Stored data:");
+            Output.WriteLine(storedDocument.Content.ToString());
 
             Assert.Equal(dataToStore.Document.Content.ToString(), storedDocument.Content.ToString());
 

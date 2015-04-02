@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
@@ -11,7 +12,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
     {
         private readonly Random _rnd;
 
-        public RandomizedStartingWithTests()
+        public RandomizedStartingWithTests(ITestOutputHelper output, PerfDataStoreFixture fixture) : base(output, fixture)
         {
             _rnd = new Random(TestDataConstants.RandomSeed);
         }
@@ -21,7 +22,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
 
-            await TestUtilities.Profile("Random ingredients title starts with", 100, async () =>
+            await Profile("Random ingredients title starts with", 100, async () =>
             {
                 var startWithTitle = NextRandomStartsWithValue(titles);
 
@@ -37,7 +38,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
 
-            await TestUtilities.Profile("Random medicinal products title starts with", 100, async () =>
+            await Profile("Random medicinal products title starts with", 100, async () =>
             {
                 var startWithTitle = NextRandomStartsWithValue(titles);
 

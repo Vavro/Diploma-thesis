@@ -7,12 +7,17 @@ using DragqnLD.Core.UnitTests.Utils;
 using Raven.Abstractions.Indexing;
 using Raven.Tests.Helpers;
 using Xunit;
+using Xunit.Abstractions;
 using Xunit.Extensions;
 
 namespace DragqnLD.Core.UnitTests.PerfTests
 {
     public class RavenDataStoreQueryPerformanceTests : DataStorePerfTestsBase
     {
+        public RavenDataStoreQueryPerformanceTests(ITestOutputHelper output, PerfDataStoreFixture fixture) : base(output, fixture)
+        {
+        }
+
         [Theory]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115")]
         [InlineData(TestDataConstants.IngredientsQueryDefinitionId, @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099")]
@@ -21,7 +26,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
         public async Task GetById(string queryId, string documentId)
         {
             var id = new Uri(documentId);
-            await TestUtilities.Profile(
+            await Profile(
                 String.Format("GetById, queryId: {0}, id: {1}", queryId, documentId),
                 1000,
                 async () =>
@@ -54,7 +59,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
         //todo: slow perf of hasPregnancy property query could be because values are really close - figure this out
         public async Task QueryExactPropertyValueProperty(string queryId, string inputFolder, string idPrefix, string searchedProperty, string searchedValue, int expectedResultCount)
         {
-            await TestUtilities.Profile(
+            await Profile(
                 String.Format("Query exact property value \n in {0} \n property {1} \n value {2} \n expected result count {3}", idPrefix, searchedProperty, searchedValue, expectedResultCount),
                 100,
                 async () =>
@@ -85,7 +90,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             const string property = "http://linked.opendata.cz/ontology/drug-encyclopedia/hasPharmacologicalAction_http://linked.opendata.cz/ontology/drug-encyclopedia/title_@value";
             const string searchedValue = @"(+""Analgesics, non-narcotic"" +""Antipyretics"")";
 
-            await TestUtilities.Profile("HasPharmalogical action Analgesics, non-narcotic and Antipyretics", 100, async () =>
+            await Profile("HasPharmalogical action Analgesics, non-narcotic and Antipyretics", 100, async () =>
             {
                 var result = await RavenDataStore.QueryDocumentProperties(queryId, indexName, property.AsCondition(searchedValue));
                 var resultAsList = result as IList<Uri> ?? result.ToList();
@@ -108,7 +113,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             const string propertyName = TestDataConstants.PropertyNameMedicinalProductsTitle;
             const string searchedValue = "APO*";
-            await TestUtilities.Profile("Medicinal product Starts with 'APO' ", 100, async () =>
+            await Profile("Medicinal product Starts with 'APO' ", 100, async () =>
             {
                 var result =
                     await RavenDataStore.QueryDocumentProperties(queryId, propertyName.AsCondition(searchedValue));
@@ -127,7 +132,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             var expectedId = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014807".ToLower();
 
-            await TestUtilities.Profile(
+            await Profile(
                 String.Format("Searching for ingredient with \n MayTreat : {0}, \n PregnancyCategory : {1}", searchedMayTreatTitle, searchedPregnancyCategory),
                 100,
                 async () =>
@@ -164,7 +169,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             const string searchedTitle = "ARXTRA~";
             const int expectedResultCount = 6;
 
-            await TestUtilities.Profile(
+            await Profile(
                 String.Format("Fuzzy search for {0}, expected results {1}", searchedTitle, expectedResultCount),
                 100,
                 async () =>
@@ -207,7 +212,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             const string searchedText = "(semisynthetic ergotamine alkaloid)";
             const int expectedResultCount = 13;
 
-            await TestUtilities.Profile("Fullsearch on description of ingredients", 100, async () =>
+            await Profile("Fullsearch on description of ingredients", 100, async () =>
             {
                 var result =
                     await
@@ -253,7 +258,7 @@ http___linked_opendata_cz_ontology_drug_encyclopedia_hasATCConcept_http___www_w3
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
 
             
-            await TestUtilities.Profile(
+            await Profile(
                 "Medicinal product, with broader atc concept \"Antianemic preparations\" but not having contraindicated with \"hypertension\" in active ingredients",
                 100,
                 async () =>

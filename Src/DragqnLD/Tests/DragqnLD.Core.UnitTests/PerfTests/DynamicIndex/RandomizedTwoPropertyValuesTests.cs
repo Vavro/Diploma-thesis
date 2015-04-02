@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
@@ -12,7 +13,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
     {
         private Random _rnd;
 
-        public RandomizedTwoPropertyValuesTests()
+        public RandomizedTwoPropertyValuesTests(ITestOutputHelper output, PerfDataStoreFixture fixture) : base(output, fixture)
         {
             _rnd = new Random(TestDataConstants.RandomSeed);
         }   
@@ -23,7 +24,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var items = ReadMayTreatTreatAndPregnancyItems();
 
-            await TestUtilities.Profile("Randomized Ingredient May Treat and Pregnancy Category", 100, async () =>
+            await Profile("Randomized Ingredient May Treat and Pregnancy Category", 100, async () =>
             {
                 var randomItem = RandomItem(items);
                 var randomPc = EncloseValue(RandomItem(randomItem.PregnancyCategories));

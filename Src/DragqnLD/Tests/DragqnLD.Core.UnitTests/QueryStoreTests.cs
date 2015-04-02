@@ -4,12 +4,13 @@ using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using Raven.Client.Embedded;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public class QueryStoreTests
+    public class QueryStoreTests : TestsBase
     {
-        public QueryStoreTests()
+        public QueryStoreTests(ITestOutputHelper output) : base(output)
         {
             var docStore = new EmbeddableDocumentStore
             {
@@ -49,7 +50,7 @@ namespace DragqnLD.Core.UnitTests
             };
 
             var id = await _queryStore.Add(queryDefinition);
-            Console.WriteLine(id);
+            Output.WriteLine(id);
 
             var retrievedQueryDefinition = await _queryStore.Get(id);
 

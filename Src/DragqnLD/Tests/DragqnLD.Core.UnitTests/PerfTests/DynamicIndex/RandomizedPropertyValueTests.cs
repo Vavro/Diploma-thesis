@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
 {
@@ -11,7 +12,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
     {
         private readonly Random _rnd;
 
-        public RandomizedPropertyValueTests()
+        public RandomizedPropertyValueTests(ITestOutputHelper output, PerfDataStoreFixture fixture) : base(output, fixture)
         {
             _rnd = new Random(TestDataConstants.RandomSeed);
         }
@@ -21,7 +22,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsTitlesFile);
 
-            await TestUtilities.Profile("Random ingredients title", 100, async () =>
+            await Profile("Random ingredients title", 100, async () =>
             {
                 var randomTitle = NextRandomValue(titles);
 
@@ -37,7 +38,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var descriptions = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
 
-            await TestUtilities.Profile("Random ingredients description", 100, async () =>
+            await Profile("Random ingredients description", 100, async () =>
             {
                 var randomDescription = NextRandomValue(descriptions);
                 
@@ -60,7 +61,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
                 @"""http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X"""
             };
 
-            await TestUtilities.Profile("Random ingredients description", 100, async () =>
+            await Profile("Random ingredients description", 100, async () =>
             {
                 var randomDescription = RandomItem(categories);
 
@@ -76,7 +77,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests.DynamicIndex
         {
             var titles = TestUtilities.ReadValuesFromFile(TestDataConstants.MedicinalProductsTitlesFile);
 
-            await TestUtilities.Profile("Random ingredients title", 100, async () =>
+            await Profile("Random ingredients title", 100, async () =>
             {
                 var randomTitle = NextRandomValue(titles);
 

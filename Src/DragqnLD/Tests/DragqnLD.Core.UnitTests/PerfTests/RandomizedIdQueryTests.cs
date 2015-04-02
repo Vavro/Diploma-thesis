@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.UnitTests.Utils;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests.PerfTests
 {
     public class RandomizedIdQueryTests : DataStorePerfTestsBase
     {
+        public RandomizedIdQueryTests(ITestOutputHelper output, PerfDataStoreFixture fixture) : base(output, fixture)
+        {
+        }
+
         [Fact]
         public async Task GetRandomIdIngredients()
         {
@@ -26,7 +31,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
 
             var ingredientsCount = idsList.Count;
 
-            await TestUtilities.Profile(description,
+            await Profile(description,
                 1000,
                 async () =>
                 {
@@ -34,7 +39,7 @@ namespace DragqnLD.Core.UnitTests.PerfTests
 
                     var documentId = idsList[randomIdPosition];
 
-                    //Console.WriteLine("Getting document id {0}", documentId);
+                    //Output.WriteLine("Getting document id {0}", documentId);
 
                     var document = await RavenDataStore.GetDocument(queryDefinitionId, documentId);
 

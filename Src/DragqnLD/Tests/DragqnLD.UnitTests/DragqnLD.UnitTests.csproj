@@ -92,6 +92,10 @@
       <Project>{c5e23bdf-0762-43a0-82a5-84709c131a4e}</Project>
       <Name>DragqnLD.WebApi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DragqnLD.Core.UnitTests\DragqnLD.Core.UnitTests.csproj">
+      <Project>{94819897-1C47-42C5-8A8A-913EFD4D519B}</Project>
+      <Name>DragqnLD.Core.UnitTests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
