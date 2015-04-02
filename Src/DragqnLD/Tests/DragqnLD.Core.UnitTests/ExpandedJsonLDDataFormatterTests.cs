@@ -19,6 +19,7 @@ namespace DragqnLD.Core.UnitTests
     //todo: batch update of documents
     //todo: metrics of querying
 
+    [Trait("Category", "Basic")]
     public class ExpandedJsonLDDataFormatterTests : TestsBase
     {
         public ExpandedJsonLDDataFormatterTests(ITestOutputHelper output) : base(output)

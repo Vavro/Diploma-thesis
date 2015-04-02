@@ -9,6 +9,7 @@ namespace DragqnLD.UnitTests
 {
     public class CodeQualityEnsurance
     {
+        [Trait("Category", "Code Quality")]
         [Fact]
         public void EnsureNoAsyncVoidTest()
         {

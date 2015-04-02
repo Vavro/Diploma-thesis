@@ -13,6 +13,7 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.PerfTests.PerfTests
 {
+    [Trait("Category", "Perf test")]
     public class PerfDataStoreFixture : DataStoreFixture
     {
         public readonly ExpandedJsonLDDataFormatter Formatter;
@@ -38,6 +39,7 @@ namespace DragqnLD.Core.PerfTests.PerfTests
 
             Task.WaitAll(ingredientsTask, medicinalProductsTask);
         }
+
         private async Task StoreTestData(string inputFolder, string queryId, string idPrefix, List<Uri> documentIdsToFill)
         {
             var documents = ConstructResultsForFolder(inputFolder, queryId, idPrefix).ToList();
@@ -75,6 +77,7 @@ namespace DragqnLD.Core.PerfTests.PerfTests
         
     }
 
+    [Trait("Category", "Perf test")]
     [Collection("Perf tests")]
     public abstract class DataStorePerfTestsBase : DataStoreTestsBase
     {

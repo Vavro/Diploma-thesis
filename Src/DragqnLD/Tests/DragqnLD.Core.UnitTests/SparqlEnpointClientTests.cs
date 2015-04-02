@@ -11,6 +11,7 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
+    [Trait("Category", "Basic")]
     public class SparqlEnpointClientTests : LocalVirtuosoServerTests
     {
         private readonly ISparqlEnpointClient _sparqlEnpointClient;

@@ -8,6 +8,8 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
+
+    [Trait("Category", "Basic")]
     public class QueryStoreTests : TestsBase
     {
         public QueryStoreTests(ITestOutputHelper output) : base(output)
