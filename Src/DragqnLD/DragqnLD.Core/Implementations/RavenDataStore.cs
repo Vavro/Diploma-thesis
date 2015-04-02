@@ -48,12 +48,9 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        //enables overrides of data in the store with the same id
-        private static readonly BulkInsertOptions BulkInsertOptions = new BulkInsertOptions() {CheckForUpdates = true};
-
         public async Task BulkStoreDocuments(IEnumerable<ConstructResult> results)
         {
-            using (var bulkInsert = _store.BulkInsert(options: BulkInsertOptions))
+            using (var bulkInsert = _store.BulkInsert(options:new BulkInsertOptions(){OverwriteExisting = true}))
             {
                 foreach (ConstructResult constructResult in results)
                 {
@@ -84,7 +81,7 @@ namespace DragqnLD.Core.Implementations
                     .Skip(start)
                     .Take(pageSize)
                     .SelectFields<dynamic>("@metadata.@id")
-                    .QueryResultAsync
+                    .QueryResultAsync()
                     .ConfigureAwait(false);
 
                 var documentMetadatas = new List<DocumentMetadata>(queryResults.Results.Count);
@@ -190,7 +187,7 @@ namespace DragqnLD.Core.Implementations
                     ;
 
                 //todo: paging - raven returns max 1024 documents or something like that
-                var queryResults = await ravenLuceneQuery.QueryResultAsync.ConfigureAwait(false);
+                var queryResults = await ravenLuceneQuery.QueryResultAsync().ConfigureAwait(false);
 
                 var ids = new List<string>(queryResults.Results.Count);
                 foreach (var queryResult in queryResults.Results)

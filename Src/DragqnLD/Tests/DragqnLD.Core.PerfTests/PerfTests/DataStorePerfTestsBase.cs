@@ -19,15 +19,15 @@ namespace DragqnLD.Core.PerfTests.PerfTests
     {
         public readonly ExpandedJsonLDDataFormatter Formatter;
         public readonly List<Uri> IngredientsIds = new List<Uri>();
-        public readonly List<Uri> MedicinalProductsIds = new List<Uri>(); 
+        public readonly List<Uri> MedicinalProductsIds = new List<Uri>();
 
         public PerfDataStoreFixture()
         {
             Formatter = new ExpandedJsonLDDataFormatter();
 
-            DocumentStore.RegisterListener(new NoStaleQueriesListener())
-                .RegisterListener(new NoTrackingQueriesListener())
-                .RegisterListener(new NoCachingQueriesListener());
+            DocumentStore.RegisterListener(new NoStaleQueriesListener());
+            DocumentStore.RegisterListener(new NoTrackingQueriesListener());
+            DocumentStore.RegisterListener(new NoCachingQueriesListener());
 
             var ingredientsTask = StoreTestData(TestDataConstants.IngredientsFolder,
                 TestDataConstants.IngredientsQueryDefinitionId,
@@ -76,7 +76,7 @@ namespace DragqnLD.Core.PerfTests.PerfTests
 // ReSharper disable once UnusedMember.Global
     public class PerfTestCollection : ICollectionFixture<PerfDataStoreFixture>
     {
-        
+
     }
 
     [Trait("Category", "Perf test")]
@@ -153,17 +153,17 @@ namespace DragqnLD.Core.PerfTests.PerfTests
                 startpolling = null;
             }
         }
-
-        protected readonly ExpandedJsonLDDataFormatter Formatter;
-        protected readonly List<Uri> IngredientsIds = new List<Uri>();
-        protected readonly List<Uri> MedicinalProductsIds = new List<Uri>();
-
+        
         private GcNotificationListener _gcListener;
+        protected ExpandedJsonLDDataFormatter Formatter;
+        protected List<Uri> IngredientsIds = new List<Uri>();
+        protected List<Uri> MedicinalProductsIds = new List<Uri>();
 
-        protected DataStorePerfTestsBase(ITestOutputHelper output, PerfDataStoreFixture perfDataStoreFixture) : base(output, perfDataStoreFixture)
+        protected DataStorePerfTestsBase(ITestOutputHelper output, PerfDataStoreFixture perfDataStoreFixture)
+            : base(output, perfDataStoreFixture)
         {
             Formatter = perfDataStoreFixture.Formatter;
-            IngredientsIds= perfDataStoreFixture.IngredientsIds;
+            IngredientsIds = perfDataStoreFixture.IngredientsIds;
             MedicinalProductsIds = perfDataStoreFixture.MedicinalProductsIds;
 
 // ReSharper disable once ConditionIsAlwaysTrueOrFalse
