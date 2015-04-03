@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
+using Raven.Abstractions.Data;
 using Raven.Client;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,9 +48,12 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
+        //enables overrides of data in the store with the same id
+        private static readonly BulkInsertOptions BulkInsertOptions = new BulkInsertOptions() {CheckForUpdates = true};
+
         public async Task BulkStoreDocuments(IEnumerable<ConstructResult> results)
         {
-            using (var bulkInsert = _store.BulkInsert())
+            using (var bulkInsert = _store.BulkInsert(options: BulkInsertOptions))
             {
                 foreach (ConstructResult constructResult in results)
                 {
