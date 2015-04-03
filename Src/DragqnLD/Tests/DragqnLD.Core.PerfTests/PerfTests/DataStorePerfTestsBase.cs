@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
@@ -72,6 +73,7 @@ namespace DragqnLD.Core.PerfTests.PerfTests
     }
 
     [CollectionDefinition("Perf tests")]
+// ReSharper disable once UnusedMember.Global
     public class PerfTestCollection : ICollectionFixture<PerfDataStoreFixture>
     {
         
@@ -79,19 +81,101 @@ namespace DragqnLD.Core.PerfTests.PerfTests
 
     [Trait("Category", "Perf test")]
     [Collection("Perf tests")]
-    public abstract class DataStorePerfTestsBase : DataStoreTestsBase
+    public abstract class DataStorePerfTestsBase : DataStoreTestsBase, IDisposable
     {
-        protected ExpandedJsonLDDataFormatter Formatter;
-        protected List<Uri> IngredientsIds = new List<Uri>();
-        protected List<Uri> MedicinalProductsIds = new List<Uri>(); 
+        private const bool ListenToGcNotification = false;
+        
+        private class GcNotificationListener : IDisposable
+        {
+            private Thread startpolling;
+            private readonly ITestOutputHelper _output;
+
+            public GcNotificationListener(ITestOutputHelper output)
+            {
+                _output = output;
+            }
+
+            public void Start()
+            {
+                GC.RegisterForFullGCNotification(10, 10);
+
+                startpolling = new Thread(() =>
+                {
+                    _output.WriteLine("GC listening");
+                    while (true)
+                    {
+                        // Check for a notification of an approaching collection.
+                        GCNotificationStatus s = GC.WaitForFullGCApproach();
+                        if (s == GCNotificationStatus.Succeeded)
+                        {
+                            //Call event
+
+                            _output.WriteLine("GC is about to begin");
+                            GC.Collect();
+
+                        }
+                        else if (s == GCNotificationStatus.Canceled)
+                        {
+                            _output.WriteLine("GC wait for full gc Approach cancelled");
+                        }
+                        else if (s == GCNotificationStatus.Timeout)
+                        {
+                            _output.WriteLine("GC wait for full gc Approach timout");
+                        }
+
+                        // Check for a notification of a completed collection.
+                        s = GC.WaitForFullGCComplete();
+                        if (s == GCNotificationStatus.Succeeded)
+                        {
+                            //Call event
+                            _output.WriteLine("GC has ended");
+                        }
+                        else if (s == GCNotificationStatus.Canceled)
+                        {
+                            _output.WriteLine("GC wait for full gc complete cancelled");
+                        }
+                        else if (s == GCNotificationStatus.Timeout)
+                        {
+                            _output.WriteLine("GC wait for full gc complete timeout");
+                        }
+                    }
+// ReSharper disable once FunctionNeverReturns
+                });
+
+                startpolling.Start();
+            }
+            
+            public void Dispose()
+            {
+                GC.CancelFullGCNotification();
+                _output.WriteLine("GC notif cancelled");
+                startpolling.Abort();
+                startpolling = null;
+            }
+        }
+
+        protected readonly ExpandedJsonLDDataFormatter Formatter;
+        protected readonly List<Uri> IngredientsIds = new List<Uri>();
+        protected readonly List<Uri> MedicinalProductsIds = new List<Uri>();
+
+        private GcNotificationListener _gcListener;
 
         protected DataStorePerfTestsBase(ITestOutputHelper output, PerfDataStoreFixture perfDataStoreFixture) : base(output, perfDataStoreFixture)
         {
             Formatter = perfDataStoreFixture.Formatter;
             IngredientsIds= perfDataStoreFixture.IngredientsIds;
             MedicinalProductsIds = perfDataStoreFixture.MedicinalProductsIds;
+
+// ReSharper disable once ConditionIsAlwaysTrueOrFalse
+            if (ListenToGcNotification)
+#pragma warning disable 162
+            {
+                _gcListener = new GcNotificationListener(output);
+                _gcListener.Start();
+            }
+#pragma warning restore 162
         }
-        
+
         public void Profile(string description, int iterations, Action func,
             Action withFirstRun = null)
         {
@@ -104,5 +188,16 @@ namespace DragqnLD.Core.PerfTests.PerfTests
             await TestUtilities.Profile(description, iterations, Output, func, withFirstRun);
         }
 
+        public void Dispose()
+        {
+// ReSharper disable once ConditionIsAlwaysTrueOrFalse
+            if (ListenToGcNotification)
+#pragma warning disable 162
+            {
+                _gcListener.Dispose();
+                _gcListener = null;
+            }
+#pragma warning restore 162
+        }
     }
 }
