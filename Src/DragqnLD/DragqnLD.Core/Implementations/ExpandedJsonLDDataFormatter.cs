@@ -168,6 +168,8 @@ namespace DragqnLD.Core.Implementations
             flatGraphNester.NestEverythingIntoRootObject();
 
             var rootJObject = flatGraphNester.RootJObject;
+            
+
 
             //todo: escape property names before reformat (better perf), but will need to handle keywords (@type, @id, @context etc.) to not be reformatted
             var propertyEscaper = new DocumentPropertyEscaper();
