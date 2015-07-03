@@ -75,7 +75,7 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 RavenQueryStatistics statistics;
-                var queryResults = await session.Advanced.AsyncLuceneQuery<dynamic>()
+                var queryResults = await session.Advanced.AsyncDocumentQuery<dynamic>()
                     .Statistics(out statistics)
                     .WhereEquals("@metadata.Raven-Entity-Name", definitionId)
                     .Skip(start)
@@ -172,12 +172,12 @@ namespace DragqnLD.Core.Implementations
                 IAsyncDocumentQuery<dynamic> ravenLuceneQuery;
                 if (indexName != null)
                 {
-                    ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>(indexName).WhereEquals("_metadata_Raven_Entity_Name", queryId);
+                    ravenLuceneQuery = session.Advanced.AsyncDocumentQuery<dynamic>(indexName).WhereEquals("_metadata_Raven_Entity_Name", queryId);
                 }
                 else
                 {
                     //todo: perf test version .AsyncLuceneQuery<dynamic>(String.Format("dynamic/{0}", queryId)); hates "/" in queryId but could be faster when more collections are in db
-                    ravenLuceneQuery = session.Advanced.AsyncLuceneQuery<dynamic>().WhereEquals("@metadata.Raven-Entity-Name", queryId);
+                    ravenLuceneQuery = session.Advanced.AsyncDocumentQuery<dynamic>().WhereEquals("@metadata.Raven-Entity-Name", queryId);
                 }
 
                 ravenLuceneQuery = ravenLuceneQuery

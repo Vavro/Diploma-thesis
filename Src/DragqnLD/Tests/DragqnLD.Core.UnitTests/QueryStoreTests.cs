@@ -18,6 +18,7 @@ namespace DragqnLD.Core.UnitTests
             {
                 RunInMemory = true,
             };
+            docStore.Configuration.Storage.Voron.AllowOn32Bits = true;
 
             docStore.Initialize();
 

@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.PerfTests.PerfTests.DynamicIndex
 {
-    public class RandomizedPropertyValueTests : DataStorePerfTestsBase
+    public class RandomizedPropertyValueTests : DataStorePerfTestsBase, IClassFixture<PerfDataStoreFixture>
     {
         private readonly Random _rnd;
 

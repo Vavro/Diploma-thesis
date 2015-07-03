@@ -49,23 +49,23 @@
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions">
-      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3599\lib\net45\Raven.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3690\lib\net45\Raven.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Raven.Client.Lightweight">
-      <HintPath>..\..\packages\RavenDB.Client.3.0.3599\lib\net45\Raven.Client.Lightweight.dll</HintPath>
+      <HintPath>..\..\packages\RavenDB.Client.3.0.3690\lib\net45\Raven.Client.Lightweight.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Raven.Database">
-      <HintPath>..\..\packages\RavenDB.Database.3.0.3599\lib\net45\Raven.Database.dll</HintPath>
+      <HintPath>..\..\packages\RavenDB.Database.3.0.3690\lib\net45\Raven.Database.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Raven.Server">
-      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3599\lib\net45\Raven.Server.exe</HintPath>
+      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3690\lib\net45\Raven.Server.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Raven.Tests.Helpers">
-      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3599\lib\net45\Raven.Tests.Helpers.dll</HintPath>
+      <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3690\lib\net45\Raven.Tests.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -108,10 +108,6 @@
     <Compile Include="Utils\TestUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\packages\RavenDB.Database.3.0.3599\lib\net45\Raven.Studio.Html5.zip">
-      <Link>Raven.Studio.Html5.zip</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -135,6 +131,9 @@
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Raven.Studio.Html5.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

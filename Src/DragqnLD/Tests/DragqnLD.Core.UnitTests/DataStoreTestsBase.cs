@@ -23,6 +23,7 @@ namespace DragqnLD.Core.UnitTests
                 RunInMemory = true,
                 Configuration = { Port = RavenWebUiPort }
             };
+            docStore.Configuration.Storage.Voron.AllowOn32Bits = true;
             NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
 
             docStore.Initialize();
@@ -48,7 +49,7 @@ namespace DragqnLD.Core.UnitTests
             }
         }
     }
-    public abstract class DataStoreTestsBase : TestsBase
+    public abstract class DataStoreTestsBase : TestsBase, IClassFixture<DataStoreFixture>
     {
         protected readonly IDataStore RavenDataStore;
         protected readonly EmbeddableDocumentStore DocumentStore;

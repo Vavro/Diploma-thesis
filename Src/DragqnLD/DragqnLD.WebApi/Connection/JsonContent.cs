@@ -79,7 +79,7 @@ namespace DragqnLD.WebApi.Connection
                 var rjw = GetRavenJsonTextWriter(stream);
                 
 
-                _ravenValue.WriteTo(rjw, null);
+                _ravenValue.WriteTo(rjw);
 
                 rjw.Flush();
             }
