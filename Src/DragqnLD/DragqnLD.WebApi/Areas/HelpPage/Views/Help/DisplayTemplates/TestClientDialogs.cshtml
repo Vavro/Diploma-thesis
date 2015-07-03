@@ -79,7 +79,7 @@
             }
     ],
     Samples: {
-      @Html.Raw(@String.Join(",", Model.SampleRequests.Select(s => String.Format("\"{0}\": \"{1}\"", s.Key, HttpUtility.UrlEncode(s.Value.ToString()))).ToArray()))
+      @Html.Raw(@String.Join(",", Model.SampleRequests.Select(s => String.Format("\"{0}\": \"{1}\"", s.Key, HttpUtility.UrlEncode(s.Value != null ? s.Value.ToString() : null))).ToArray()))
     },
     BaseAddress: '@applicationPath'
   };
