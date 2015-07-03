@@ -155,11 +155,7 @@ namespace DragqnLD.WebApi.Controllers
         /// <returns></returns>
         public async Task<HttpResponseMessage> Post([FromBody]QueryDefinitionDto value)
         {
-            var success = await StoreQueryDefinition(value);
-
-            //todo: change reponse according to success
-            //done: response 200
-            var response = CreateResponse();
+            var response = await StoreQueryDefinition(value);
 
             return response;
         }
@@ -171,8 +167,11 @@ namespace DragqnLD.WebApi.Controllers
 
             await _queryStore.Add(queryDefinition);
 
-            //todo: return id of created query definition
-            return CreateResponse();
+            //todo: return whether updated or created, if from POST only create is allowed?
+            //done: return id of created query definition
+            var response = CreateResponseWithObject(queryDefinition.Id, HttpStatusCode.Created);
+
+            return response;
         }
 
         // PUT api/queries/5
@@ -185,10 +184,9 @@ namespace DragqnLD.WebApi.Controllers
         public async Task<HttpResponseMessage> Put(int id, [FromBody]QueryDefinitionDto queryDefinition)
         {
             //todo: use the id (maybe delete from value)
-            var success = await StoreQueryDefinition(queryDefinition);
+            var response = await StoreQueryDefinition(queryDefinition);
 
-            //todo: use success state value
-            return CreateResponse();
+            return response;
         }
 
         // DELETE api/queries/5

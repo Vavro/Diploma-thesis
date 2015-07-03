@@ -6,12 +6,13 @@ class saveQueryDefinitionCommnad extends commandBase {
         super();
     }
 
-    execute(): JQueryPromise<any> {
+    execute(): JQueryPromise<string> {
         var args = JSON.stringify(this.newQueryDefinition.toDto());
         var url = "/queries";
         var saveTask = this.post(url, args);
-        saveTask.done((response: JQueryXHR) : void => {
-            this.notifySuccess("Saved " + this.newQueryDefinition.id() + "/n response:" + response.status);
+        saveTask.done((response: string) : string => {
+            this.notifySuccess("Saved " + this.newQueryDefinition.id() + "/n response:" + response);
+            return response;
         });
         saveTask.fail((response: JQueryXHR) : void => {
             this.notifyError("Failed to save " + this.newQueryDefinition.id(), response.responseText, response.statusText);
