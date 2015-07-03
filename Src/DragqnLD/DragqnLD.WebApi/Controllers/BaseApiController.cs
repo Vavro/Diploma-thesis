@@ -178,7 +178,7 @@ namespace DragqnLD.WebApi.Controllers
         /// </summary>
         /// <param name="data">The data.</param>
         /// <returns></returns>
-        public JsonContent JsonContent(RavenJToken data = null)
+        private JsonContent JsonContent(RavenJToken data = null)
         {
             return new JsonContent(data);
         }
