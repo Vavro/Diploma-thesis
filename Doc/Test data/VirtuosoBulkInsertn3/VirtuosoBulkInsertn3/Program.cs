@@ -51,7 +51,7 @@ namespace VirtuosoBulkInsertn3
         private static int InsertN3File(FileInfo inputFile, string graph, VirtuosoConnection connection)
         {
             string fileContent;
-            using (var reader = new StreamReader(inputFile.FullName))
+            using (var reader = new StreamReader(inputFile.FullName, Encoding.UTF8))
             {
                 fileContent = reader.ReadToEnd();
             }

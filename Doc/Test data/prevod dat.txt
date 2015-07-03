@@ -1,0 +1,1 @@
+po spusteni JsonLdToRdf bylo nutne jeste nahradit vsechny linky pomoci regex searche: "(http://[^"]*)" na <$1>

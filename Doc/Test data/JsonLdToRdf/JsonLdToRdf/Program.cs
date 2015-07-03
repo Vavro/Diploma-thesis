@@ -28,11 +28,11 @@ namespace JsonLdToRdf
             Console.ReadLine();
         }
 
-        private static void ConvertDir(string ingredientsDirName, HttpClient client)
+        private static void ConvertDir(string dirName, HttpClient client)
         {
-            var inputFilesDir = new DirectoryInfo(ingredientsDirName);
+            var inputFilesDir = new DirectoryInfo(dirName);
             var inputFiles = inputFilesDir.GetFiles("*.json");
-            var outputFileDir = ingredientsDirName + ".n3";
+            var outputFileDir = dirName + ".n3";
             if (Directory.Exists(outputFileDir))
             {
                 Directory.Delete(outputFileDir, true);
@@ -40,7 +40,7 @@ namespace JsonLdToRdf
             Directory.CreateDirectory(outputFileDir);
 
             int inputFileCount = inputFiles.Length;
-            Console.WriteLine("Converting directory {0} with {1} files ", ingredientsDirName, inputFileCount);
+            Console.WriteLine("Converting directory {0} with {1} files ", dirName, inputFileCount);
             Console.WriteLine("Writing files to directory {0}", outputFileDir);
 
             for (var i = 0; i < inputFiles.Length; i++)
@@ -54,7 +54,7 @@ namespace JsonLdToRdf
                 Console.WriteLine("Converted file {0}/{1} : {2}", i+1, inputFileCount, outputFileName);
             }
 
-            Console.WriteLine("Converting directory {0} Complete", ingredientsDirName);
+            Console.WriteLine("Converting directory {0} Complete", dirName);
         }
 
         private const string source = "json-ld";
