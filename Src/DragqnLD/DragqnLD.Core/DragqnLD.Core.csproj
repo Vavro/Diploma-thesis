@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Abstraction\Data\ConstructResult.cs" />
     <Compile Include="Abstraction\Data\PropertyCondition.cs" />
+    <Compile Include="Abstraction\IConstructAnalyzer.cs" />
     <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
     <Compile Include="Abstraction\IPropertyUnescapesCache.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Abstraction\Query\QueryDefinitionStatus.cs" />
     <Compile Include="Abstraction\Query\QueryStatus.cs" />
     <Compile Include="Abstraction\Query\SparqlQueryInfo.cs" />
+    <Compile Include="Implementations\ConstructAnalyzer.cs" />
     <Compile Include="Implementations\DocumentPropertyEscaper.cs" />
     <Compile Include="Implementations\ExpandedJsonLDDataFormatter.cs" />
     <Compile Include="Implementations\PropertyMappings.cs" />
