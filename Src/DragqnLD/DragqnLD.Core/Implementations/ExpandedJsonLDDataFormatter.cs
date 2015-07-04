@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using DragqnLD.Core.Abstraction;
+using JsonLD.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -168,8 +169,10 @@ namespace DragqnLD.Core.Implementations
             flatGraphNester.NestEverythingIntoRootObject();
 
             var rootJObject = flatGraphNester.RootJObject;
-            
-
+            //todo: base iri as parameter?
+            var c = new JsonLD.Core.Context();
+            c.Parse(JObject.Parse(@" { }"));
+            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, c, new JsonLdOptions() {});
 
             //todo: escape property names before reformat (better perf), but will need to handle keywords (@type, @id, @context etc.) to not be reformatted
             var propertyEscaper = new DocumentPropertyEscaper();
