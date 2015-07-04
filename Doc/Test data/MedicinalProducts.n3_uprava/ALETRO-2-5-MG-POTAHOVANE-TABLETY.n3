@@ -1,0 +1,212 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02B> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté hormonů a příbuzná léčiva"@cs,
+        "HORMONE ANTAGONISTS AND RELATED AGENTS"@en ;
+    skos:notation "L02B" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG> a ns1:ATCConcept ;
+    dcterms:title "Enzymové inhibitory"@cs,
+        "Enzyme inhibitors"@en ;
+    skos:notation "L02BG" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG04> a ns1:ATCConcept ;
+    dcterms:title "Letrozol"@cs,
+        "Letrozole"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L02>,
+        <http://linked.opendata.cz/resource/ATC/L02B>,
+        <http://linked.opendata.cz/resource/ATC/L02BG> ;
+    skos:notation "L02BG04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184835> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:title "Letrozole"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135986> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2306.42993164"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "2279.47998047"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-07-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155709> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155710> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155711> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155712> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191696> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndication """Adjuvantní léčba žen v postmenopauze s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo při progresi onemocnění, které již byly léčeny antiestrogeny.
+Neoadjuvantní léčba žen v postmenopauze s HER-2 negativním karcinomem prsu s pozitivními hormonálními receptory, kdy není vhodná chemoterapie a není indikovaný okamžitý chirurgický zákrok.. 
+Účinnost nebyla prokázána pacientek s karcinomem prsu s negativními hormonálními receptory.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2306.42993164"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "2279.47998047"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-11-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157211_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191697> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndication """Adjuvantní léčba žen v postmenopauze s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo při progresi onemocnění, které již byly léčeny antiestrogeny.
+Neoadjuvantní léčba žen v postmenopauze s HER-2 negativním karcinomem prsu s pozitivními hormonálními receptory, kdy není vhodná chemoterapie a není indikovaný okamžitý chirurgický zákrok.. 
+Účinnost nebyla prokázána pacientek s karcinomem prsu s negativními hormonálními receptory.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157211_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191698> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndication """Adjuvantní léčba žen v postmenopauze s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo při progresi onemocnění, které již byly léčeny antiestrogeny.
+Neoadjuvantní léčba žen v postmenopauze s HER-2 negativním karcinomem prsu s pozitivními hormonálními receptory, kdy není vhodná chemoterapie a není indikovaný okamžitý chirurgický zákrok.. 
+Účinnost nebyla prokázána pacientek s karcinomem prsu s negativními hormonálními receptory.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157211_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191699> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndication """Adjuvantní léčba žen v postmenopauze s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo při progresi onemocnění, které již byly léčeny antiestrogeny.
+Neoadjuvantní léčba žen v postmenopauze s HER-2 negativním karcinomem prsu s pozitivními hormonálními receptory, kdy není vhodná chemoterapie a není indikovaný okamžitý chirurgický zákrok.. 
+Účinnost nebyla prokázána pacientek s karcinomem prsu s negativními hormonálními receptory.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157211_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191700> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasIndication """Adjuvantní léčba žen v postmenopauze s časným stádiem karcinomu prsu s pozitivními hormonálními receptory.
+Prodloužená adjuvantní léčba karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze, které prodělaly předchozí pětiletou standardní adjuvantní léčbu tamoxifenem.
+První linie léčby pokročilého karcinomu prsu s pozitivními hormonálními receptory u žen v postmenopauze.
+Léčba pokročilého karcinomu prsu u žen s přirozenou nebo uměle vyvolanou menopauzou po relapsu nebo při progresi onemocnění, které již byly léčeny antiestrogeny.
+Neoadjuvantní léčba žen v postmenopauze s HER-2 negativním karcinomem prsu s pozitivními hormonálními receptory, kdy není vhodná chemoterapie a není indikovaný okamžitý chirurgický zákrok.. 
+Účinnost nebyla prokázána pacientek s karcinomem prsu s negativními hormonálními receptory.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157211_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X2.5MG"@cs ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALETRO-2-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184835> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135986>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155709>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155710>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155711>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0155712>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191696>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191697>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191698>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191699>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0191700> ;
+    ns1:title "ALETRO 2,5 MG POTAHOVANÉ TABLETY"@cs .
+
+

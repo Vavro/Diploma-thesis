@@ -1,0 +1,326 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01BA01> a ns1:ATCConcept ;
+    skos:notation "L01BA01" ;
+    skos:prefLabel "Methotrexát"@cs,
+        "Methotrexate"@en .
+
+<http://linked.opendata.cz/resource/ATC/L04AX03> a ns1:ATCConcept ;
+    skos:notation "L04AX03" ;
+    skos:prefLabel "Methotrexát (pouze perorální)"@cs,
+        "Methotrexate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013595> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000575>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001867>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003302>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antineoplastic antimetabolite with immunosuppressant properties. It is an inhibitor of TETRAHYDROFOLATE DEHYDROGENASE and prevents the formation of tetrahydrofolate, necessary for synthesis of thymidylate, an essential component of DNA.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000098>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000191> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-ACCORD-25-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-10-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-10-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-2-5-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-20-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-5-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-10-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-100-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-2-5-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-25-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METOJECT-10-MG-ML-ROZTOK-NA-INJEKCE--PREDPLNENA-INJEKCNI-STRIKACKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METOJECT-50-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TREXAN-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TREXAN-2-5-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000481>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000633>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000775>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001162>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001560>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001815>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001883>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001905>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002526>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002678>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002828>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002914>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003023>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003287>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000181267> ;
+    ns1:title "Methotrexát"@cs,
+        "Methotrexate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022> a ns1:PharmacologicalAction ;
+    ns1:description "Non-steroidal chemical compounds with abortifacient activity.     "@en ;
+    ns1:title "Abortiva nesteroidní"@cs,
+        "Abortifacient agents, nonsteroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to treat or prevent skin disorders or for the routine care of skin.     "@en ;
+    ns1:title "Dermatologické látky"@cs,
+        "Dermatologic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of the enzyme, dihydrofolate reductase (TETRAHYDROFOLATE DEHYDROGENASE), which converts dihydrofolate (FH2) to tetrahydrofolate (FH4). They are frequently used in cancer chemotherapy. (From AMA, Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Kyselina listová - antagonisté"@cs,
+        "Folic acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:description "Hemorrhagic and thrombotic disorders that occur as a consequence of abnormalities in blood coagulation due to a variety of factors such as COAGULATION PROTEIN DISORDERS; BLOOD PLATELET DISORDERS; BLOOD PROTEIN DISORDERS or nutritional conditions.     "@en ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000633> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of undifferentiated malignant LYMPHOMA usually found in central Africa, but also reported in other parts of the world. It is commonly manifested as a large osteolytic lesion in the jaw or as an abdominal mass. B-cell antigens are expressed on the immature cells that make up the tumor in virtually all cases of Burkitt lymphoma. The Epstein-Barr virus (HERPESVIRUS 4, HUMAN) has been isolated from Burkitt lymphoma cases in Africa and it is implicated as the causative agent in these cases; however, most non-African cases are EBV-negative.     "@en ;
+    ns1:title "Burkittův lymfom"@cs,
+        "Burkitt lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000775> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant metastatic form of trophoblastic tumors. Unlike the HYDATIDIFORM MOLE, choriocarcinoma contains no CHORIONIC VILLI but rather sheets of undifferentiated cytotrophoblasts and syncytiotrophoblasts (TROPHOBLASTS). It is characterized by the large amounts of CHORIONIC GONADOTROPIN produced. Tissue origins can be determined by DNA analyses: placental (fetal) origin or  non-placental origin (CHORIOCARCINOMA, NON-GESTATIONAL).     "@en ;
+    ns1:title "Choriokarcinom"@cs,
+        "Choriocarcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001162> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the ESOPHAGUS.     "@en ;
+    ns1:title "Nádory jícnu"@cs,
+        "Esophageal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001560> a ns1:DiseaseOrFinding ;
+    ns1:description "Trophoblastic hyperplasia associated with normal gestation, or molar pregnancy. It is characterized by the swelling of the CHORIONIC VILLI and elevated human CHORIONIC GONADOTROPIN. Hydatidiform moles or molar pregnancy may be categorized as complete or partial based on their gross morphology, histopathology, and karyotype.     "@en ;
+    ns1:title "Mola hydatidosa"@cs,
+        "Hydatidiform mole"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001867> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver diseases associated with ALCOHOLISM. It usually refers to the coexistence of two or more subentities, i.e., ALCOHOLIC FATTY LIVER; ALCOHOLIC HEPATITIS; and ALCOHOLIC CIRRHOSIS.     "@en ;
+    ns1:title "Alkoholické nemoci jater"@cs,
+        "Liver diseases, alcoholic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001883> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LUNG.     "@en ;
+    ns1:title "Plíce - nádory"@cs,
+        "Lung neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002076> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, malignant T-cell lymphoma of the skin. In the late stages, the LYMPH NODES and viscera are affected.     "@en ;
+    ns1:title "Mycosis fungoides"@cs,
+        "Mycosis fungoides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002678> a ns1:DiseaseOrFinding ;
+    ns1:description "A sarcoma originating in bone-forming cells, affecting the ends of long bones. It is the most common and most malignant of sarcomas of the bones, and occurs chiefly among 10- to 25-year-old youths. (From Stedman, 25th ed)     "@en ;
+    ns1:title "Osteosarkom"@cs,
+        "Osteosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002828> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the STOMACH.     "@en ;
+    ns1:title "Nádory žaludku"@cs,
+        "Stomach neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002914> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the TESTIS. Germ cell tumors (GERMINOMA) of the testis constitute 95% of all testicular neoplasms.     "@en ;
+    ns1:title "Testikulární nádory"@cs,
+        "Testicular neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003023> a ns1:DiseaseOrFinding ;
+    ns1:description "Trophoblastic growth, which may be gestational or nongestational in origin. Trophoblastic neoplasia resulting from pregnancy is often described as gestational trophoblastic disease to distinguish it from germ cell tumors which frequently show trophoblastic elements, and from the trophoblastic differentiation which sometimes occurs in a wide variety of epithelial cancers. Gestational trophoblastic growth has several forms, including HYDATIDIFORM MOLE and CHORIOCARCINOMA. (From Holland et al., Cancer Medicine, 3d ed, p1691)     "@en ;
+    ns1:title "Trofoblastické nádory"@cs,
+        "Trophoblastic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003287> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of inflammatory arthritis associated with PSORIASIS, often involving the axial joints and the peripheral terminal interphalangeal joints. It is characterized by the presence of HLA-B27-associated SPONDYLARTHROPATHY, and the absence of rheumatoid factor.     "@en ;
+    ns1:title "Psoriatická artritida"@cs,
+        "Arthritis, psoriatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003302> a ns1:DiseaseOrFinding ;
+    ns1:description "Includes the spectrum of human immunodeficiency virus infections that range from asymptomatic seropositivity, thru AIDS-related complex (ARC), to acquired immunodeficiency syndrome (AIDS).     "@en ;
+    ns1:title "Hiv infekce"@cs,
+        "Hiv infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181267> a ns1:DiseaseOrFinding ;
+    ns1:description "A neoplasm characterized by abnormalities of the lymphoid cell precursors leading to excessive lymphoblasts in the marrow and other organs. It is the most common cancer in children and accounts for the vast majority of all childhood leukemias.     "@en ;
+    ns1:title "Akutní lymfatická leukemie"@cs,
+        "Precursor cell lymphoblastic leukemia-lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000098> a ns1:MechanismOfAction ;
+    ns1:title "Thymidylate Synthetase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000191> a ns1:MechanismOfAction ;
+    ns1:title "Dihydrofolate Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-ACCORD-25-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXAT ACCORD 25 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXAT \"EBEWE\""@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXAT EBEWE 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX03> ;
+    ns1:title "METHOTREXAT EBEWE 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-2-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX03> ;
+    ns1:title "METHOTREXAT EBEWE 2,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXAT EBEWE 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXAT-EBEWE-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX03> ;
+    ns1:title "METHOTREXAT EBEWE 5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXATE HOSPIRA 10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-100-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXATE HOSPIRA 100 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-2-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXATE HOSPIRA 2,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-25-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METHOTREXATE HOSPIRA 25 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METOJECT-10-MG-ML-ROZTOK-NA-INJEKCE--PREDPLNENA-INJEKCNI-STRIKACKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METOJECT-50-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:title "METOJECT 50 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TREXAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX03> ;
+    ns1:title "TREXAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TREXAN-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX03> ;
+    ns1:title "TREXAN 2,5 MG"@cs .
+
+

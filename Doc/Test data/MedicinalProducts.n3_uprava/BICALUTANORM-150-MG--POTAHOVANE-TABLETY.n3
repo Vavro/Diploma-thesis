@@ -1,0 +1,514 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02B> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté hormonů a příbuzná léčiva"@cs,
+        "HORMONE ANTAGONISTS AND RELATED AGENTS"@en ;
+    skos:notation "L02B" .
+
+<http://linked.opendata.cz/resource/ATC/L02BB> a ns1:ATCConcept ;
+    dcterms:title "Antiandrogeny"@cs,
+        "Anti-androgens"@en ;
+    skos:notation "L02BB" .
+
+<http://linked.opendata.cz/resource/ATC/L02BB03> a ns1:ATCConcept ;
+    dcterms:title "Bikalutamid"@cs,
+        "Bicalutamide"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L02>,
+        <http://linked.opendata.cz/resource/ATC/L02B>,
+        <http://linked.opendata.cz/resource/ATC/L02BB> ;
+    skos:notation "L02BB03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0151653> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Bicalutamide"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154782> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 5X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154783> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154784> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154785> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154786> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154787> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154788> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "40"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 40X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154789> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154790> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154791> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "80"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 80X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154792> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154793> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154794> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "140"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 140X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154795> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "200"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 200X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154796> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154797> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "280"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 280X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156651> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "1222.18005371"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "1222.18005371"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-06-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156652> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176404> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "5"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 5X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176405> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176406> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176407> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176408> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176409> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176410> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "40"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 40X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176411> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176412> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176413> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "80"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 80X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176414> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176415> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176416> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "140"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 140X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176417> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "200"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 200X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176418> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176419> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "280"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 280X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176420> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "1222.18005371"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1222.18005371"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-06-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176421> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasIndication """Bicalutanorm 150 mg, potahované tablety je indikován buď samostatně nebo jako adjuvantní léčba k radikální prostatektomii nebo radioterapii u pacientů s lokálně pokročilým karcinomem prostaty a  vysokým rizikem progrese nemoci (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152020_doc> ;
+    ns1:hasStrength "150MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X150MG"@cs ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BICALUTANORM-150-MG--POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BB03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0151653> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154782>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154783>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154784>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154785>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154786>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154787>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154788>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154789>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154790>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154791>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154792>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154793>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154794>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154795>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154796>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154797>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156651>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0156652>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176404>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176405>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176406>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176407>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176408>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176409>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176410>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176411>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176412>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176413>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176414>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176415>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176416>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176417>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176418>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176419>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176420>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176421> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "BICALUTANORM 150 MG, POTAHOVANÉ TABLETY"@cs .
+
+

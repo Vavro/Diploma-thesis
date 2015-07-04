@@ -1,0 +1,102 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05DA09> a ns1:ATCConcept ;
+    skos:notation "R05DA09" ;
+    skos:prefLabel "Dextromethorfan"@cs,
+        "Dextromethorphan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006138> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Methyl analog of DEXTRORPHAN that shows high affinity binding to several regions of the brain, including the medullary cough center. This compound is an NMDA receptor antagonist (RECEPTORS, N-METHYL-D-ASPARTATE) and acts as a non-competitive channel blocker. It is one of the widely used ANTITUSSIVES, and is also used to study the involvement of glutamate receptors in neurotoxicity.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-NOCNI-LECBA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDDEX-VICKS-PASTILKY-NA-SUCHY-KASEL-S-MEDEM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDDEX-VICKS-SIRUP-NA-SUCHY-KASEL-S-MEDEM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROBITUSSIN-ANTITUSSICUM-NA-SUCHY-KASEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROBITUSSIN-JUNIOR-NA-SUCHY-DRAZDIVY-KASEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/STOPEX-30-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/STOPEX-JUNIOR-15-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TUSSIDRILL-SIRUP-BEZ-CUKRU-15-MG-5-ML> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001516>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> ;
+    ns1:title "Dextromethorfan"@cs,
+        "Dextromethorphan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001516> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress cough. They act centrally on the medullary cough center. EXPECTORANTS, also used in the treatment of cough, act locally.     "@en ;
+    ns1:title "Antitusika"@cs,
+        "Antitussive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate excitatory amino acid receptors, thereby blocking the actions of agonists.     "@en ;
+    ns1:title "Excitační aminokyseliny - antagonisté"@cs,
+        "Excitatory amino acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.     "@en ;
+    ns1:title "Kašel"@cs,
+        "Cough"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088> a ns1:MechanismOfAction ;
+    ns1:title "Excitatory Amino Acid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Medullary Respiratory Drive"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-NOCNI-LECBA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "COLDREX NOČNÍ LÉČBA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDDEX-VICKS-PASTILKY-NA-SUCHY-KASEL-S-MEDEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "MEDDEX VICKS PASTILKY NA SUCHÝ KAŠEL S MEDEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDDEX-VICKS-SIRUP-NA-SUCHY-KASEL-S-MEDEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "MEDDEX VICKS SIRUP NA SUCHÝ KAŠEL S MEDEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROBITUSSIN-ANTITUSSICUM-NA-SUCHY-KASEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "ROBITUSSIN ANTITUSSICUM NA SUCHÝ KAŠEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROBITUSSIN-JUNIOR-NA-SUCHY-DRAZDIVY-KASEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "ROBITUSSIN JUNIOR NA SUCHÝ DRÁŽDIVÝ KAŠEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STOPEX-30-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "STOPEX 30 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STOPEX-JUNIOR-15-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "STOPEX JUNIOR 15 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TUSSIDRILL-SIRUP-BEZ-CUKRU-15-MG-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA09> ;
+    ns1:title "TUSSIDRILL SIRUP BEZ CUKRU 15 MG/5 ML"@cs .
+
+

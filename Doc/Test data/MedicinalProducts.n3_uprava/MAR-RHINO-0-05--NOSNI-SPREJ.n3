@@ -1,0 +1,63 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R01> a ns1:ATCConcept ;
+    dcterms:title "Nosní léčiva"@cs,
+        "NASAL PREPARATIONS"@en ;
+    skos:notation "R01" .
+
+<http://linked.opendata.cz/resource/ATC/R01A> a ns1:ATCConcept ;
+    dcterms:title "Dekongesční a jiná nosní léčiva k lokální aplikaci"@cs,
+        "DECONGESTANTS AND OTHER NASAL PREPARATIONS FOR TOPICAL USE"@en ;
+    skos:notation "R01A" .
+
+<http://linked.opendata.cz/resource/ATC/R01AA> a ns1:ATCConcept ;
+    dcterms:title "Sympatomimetika samotná"@cs,
+        "Sympathomimetics, plain"@en ;
+    skos:notation "R01AA" .
+
+<http://linked.opendata.cz/resource/ATC/R01AA07> a ns1:ATCConcept ;
+    dcterms:title "Xylometazolin"@cs,
+        "Xylometazoline"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/R>,
+        <http://linked.opendata.cz/resource/ATC/R01>,
+        <http://linked.opendata.cz/resource/ATC/R01A>,
+        <http://linked.opendata.cz/resource/ATC/R01AA> ;
+    skos:notation "R01AA07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0310881> a ns1:Ingredient ;
+    ns1:title "Xylometazoline hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107738> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA07> ;
+    ns1:hasIndication """Ke snížení otoku nosní sliznice u akutní rýmy, vasomotorické rýmy (rhinitis vasomotorica), alergické rýmy (rhinitis allergica). 
+K urychlení uvolnění sekrece u paranasální sinusitidy a při kataru Eustachovy trubice společně s rýmou. 
+mar rhino 0,05% nosní sprej je určen k léčbě dětí od 2 let do 7 let. 
+mar rhino 0,1% nosní sprej je určen pro dospělé, mladistvé a děti od 7 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OTORHINOLARYNGOLOGICA"@cs ;
+    ns1:hasPackagingSize "15ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Nosní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148789_doc> ;
+    ns1:hasStrength "0.5MG/1ML"^^xsd:string ;
+    ns1:hasTitleSupplement "NAS SPR SOL 15ML/7.5MG"@cs ;
+    ns1:title "MAR RHINO 0,05% NOSNÍ SPREJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAR-RHINO-0-05--NOSNI-SPREJ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA07> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0310881> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107738> ;
+    ns1:title "MAR RHINO 0,05% NOSNÍ SPREJ"@cs .
+
+

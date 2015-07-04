@@ -1,0 +1,79 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R06AD03> a ns1:ATCConcept ;
+    skos:notation "R06AD03" ;
+    skos:prefLabel "Thiethylperazin"@cs,
+        "Thiethylperazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021336> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A dopamine antagonist that is particularly useful in treating the nausea and vomiting associated with anesthesia, mildly emetic cancer chemotherapy agents, radiation therapy, and toxins. This piperazine phenothiazine does not prevent vertigo or motion sickness. (From AMA Drug Evaluations Annual, 1994, p457)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/TORECAN> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008487>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008500>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009034>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003121>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> ;
+    ns1:title "Thiethylperazin"@cs,
+        "Thiethylperazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002114> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.     "@en ;
+    ns1:title "Nauzea"@cs,
+        "Nausea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003121> a ns1:DiseaseOrFinding ;
+    ns1:description "An illusion of movement, either of the external world revolving around the individual or of the individual revolving in space. Vertigo may be associated with disorders of the inner ear (EAR, INNER); VESTIBULAR NERVE; BRAINSTEM; or CEREBRAL CORTEX. Lesions in the TEMPORAL LOBE and PARIETAL LOBE may be associated with FOCAL SEIZURES that may feature vertigo as an ictal manifestation. (From Adams et al., Principles of Neurology, 6th ed, pp300-1)     "@en ;
+    ns1:title "Vertigo"@cs,
+        "Vertigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008487> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008500> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009034> a ns1:PhysiologicEffect ;
+    ns1:title "Emesis Suppression"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009072> a ns1:PhysiologicEffect ;
+    ns1:title "Hypothalamic Endocrine Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TORECAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R06AD03> ;
+    ns1:title "TORECAN"@cs .
+
+

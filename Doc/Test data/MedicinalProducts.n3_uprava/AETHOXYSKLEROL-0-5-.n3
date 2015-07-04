@@ -1,0 +1,182 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C05> a ns1:ATCConcept ;
+    dcterms:title "Vazoprotektiva, venofarmaka"@cs,
+        "VASOPROTECTIVES"@en ;
+    skos:notation "C05" .
+
+<http://linked.opendata.cz/resource/ATC/C05B> a ns1:ATCConcept ;
+    dcterms:title "Antivarikózní terapie"@cs,
+        "ANTIVARICOSE THERAPY"@en ;
+    skos:notation "C05B" .
+
+<http://linked.opendata.cz/resource/ATC/C05BB> a ns1:ATCConcept ;
+    dcterms:title "Sklerotizující látky k lokální injekci"@cs,
+        "Sclerosing agents for local injection"@en ;
+    skos:notation "C05BB" .
+
+<http://linked.opendata.cz/resource/ATC/C05BB02> a ns1:ATCConcept ;
+    dcterms:title "Lauromakrogol 400 (polidokanol)"@cs,
+        "Polidocanol"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C05>,
+        <http://linked.opendata.cz/resource/ATC/C05B>,
+        <http://linked.opendata.cz/resource/ATC/C05BB> ;
+    skos:notation "C05BB02" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000522> a ns1:Ingredient ;
+    ns1:title "Lauromakrogol 400"@cs,
+        "Lauromacrogol 400"@en,
+        "Lauromacrogolum 400"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008510> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C05BB02> ;
+    ns1:hasIndication """A) Sklerotizace varixů a hemoroidů
+Podle velikosti varixů, které mají být sklerotizovány, je třeba zvolit různé koncentrace Aethoxysklerolu. Platí následující odstupňování koncentrací pro jednotlivé indikace:
+	Způsob použití
+	Koncentrace Aethoxysklerolu (%)
+	
+	0,5
+	1
+	2
+	3
+	4
+	Metličkové varixy
+	x
+	
+	
+	
+	
+	Centrální žíly metličkových varixů
+	x
+	x
+	
+	
+	
+	Retikulární varixy
+	
+	x
+	
+	
+	
+	Malé varixy
+	
+	x
+	
+	
+	
+	Středně velké varixy
+	
+	
+	x
+	x
+	
+	Velké varixy
+	
+	
+	
+	x
+	x
+	Hemoroidální onemocnění stupně I a II
+	
+	
+	
+	x
+	x
+B)  Endoskopická sklerotizace jícnových varixů při akutním krvácení z jícnových varixů
+Pro tuto terapeutickou indikace se  používá  Aethoxysklerol 1% balený v lahvičkách  (inj.  1x30 ml).
+"""@cs ;
+    ns1:hasIndicationGroup "VENOPHARMACA, ANTIVARICOSA"@cs ;
+    ns1:hasPackagingSize "5X2ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108843_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2ML"@cs ;
+    ns1:title "AETHOXYSKLEROL 0,5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008512> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C05BB02> ;
+    ns1:hasIndication """A) Sklerotizace varixů a hemoroidů
+Podle velikosti varixů, které mají být sklerotizovány, je třeba zvolit různé koncentrace Aethoxysklerolu. Platí následující odstupňování koncentrací pro jednotlivé indikace:
+	Způsob použití
+	Koncentrace Aethoxysklerolu (%)
+	
+	0,5
+	1
+	2
+	3
+	4
+	Metličkové varixy
+	x
+	
+	
+	
+	
+	Centrální žíly metličkových varixů
+	x
+	x
+	
+	
+	
+	Retikulární varixy
+	
+	x
+	
+	
+	
+	Malé varixy
+	
+	x
+	
+	
+	
+	Středně velké varixy
+	
+	
+	x
+	x
+	
+	Velké varixy
+	
+	
+	
+	x
+	x
+	Hemoroidální onemocnění stupně I a II
+	
+	
+	
+	x
+	x
+B)  Endoskopická sklerotizace jícnových varixů při akutním krvácení z jícnových varixů
+Pro tuto terapeutickou indikace se  používá  Aethoxysklerol 1% balený v lahvičkách  (inj.  1x30 ml).
+"""@cs ;
+    ns1:hasIndicationGroup "VENOPHARMACA, ANTIVARICOSA"@cs ;
+    ns1:hasPackagingSize "1X30ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108843_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X30ML"@cs ;
+    ns1:title "AETHOXYSKLEROL 0,5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AETHOXYSKLEROL-0-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C05BB02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000522> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008510>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0008512> ;
+    ns1:title "AETHOXYSKLEROL 0,5%"@cs .
+
+

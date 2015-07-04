@@ -1,0 +1,62 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06BB04> a ns1:ATCConcept ;
+    skos:notation "D06BB04" ;
+    skos:prefLabel "Podofylotoxin"@cs,
+        "Podophyllotoxin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017087> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> ;
+    ns1:description "A lignan (LIGNANS) found in PODOPHYLLIN resin from the roots of PODOPHYLLUM plants. It is a potent spindle poison, toxic if taken internally, and has been used as a cathartic. It is very irritating to skin and mucous membranes, has keratolytic actions, has been used to treat warts and keratoses, and may have antineoplastic properties, as do some of its congeners and derivatives.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/WARTEC-CREAM> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011969>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000003152> ;
+    ns1:title "Podofylotoxin"@cs,
+        "Podophyllotoxin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486> a ns1:PharmacologicalAction ;
+    ns1:description "Agents obtained from higher plants that have demonstrable cytostatic or antineoplastic activity.     "@en ;
+    ns1:title "Antitumorózní látky fytogenní"@cs,
+        "Antineoplastic agents, phytogenic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011969> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that soften, separate, and cause desquamation of the cornified epithelium or horny layer of skin. They are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases.     "@en ;
+    ns1:title "Keratolytika"@cs,
+        "Keratolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that interact with TUBULIN to inhibit or promote polymerization of MICROTUBULES.     "@en ;
+    ns1:title "Tubulin - modulátory"@cs,
+        "Tubulin modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003152> a ns1:DiseaseOrFinding ;
+    ns1:description "Benign epidermal proliferations or tumors; some are viral in origin.     "@en ;
+    ns1:title "Bradavice"@cs,
+        "Warts"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Mitosis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/WARTEC-CREAM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D06BB04> ;
+    ns1:title "WARTEC CREAM"@cs .
+
+

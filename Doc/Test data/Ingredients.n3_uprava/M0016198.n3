@@ -1,0 +1,209 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C04AD03> a ns1:ATCConcept ;
+    skos:notation "C04AD03" ;
+    skos:prefLabel "Pentoxifylin"@cs,
+        "Pentoxifylline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016198> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002610> ;
+    ns1:description "A METHYLXANTHINE derivative that inhibits phosphodiesterase and affects blood rheology. It improves blood flow by increasing erythrocyte and leukocyte flexibility. It also inhibits platelet aggregation. Pentoxifylline modulates immunologic activity by stimulating cytokine production.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN-SR-400>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN-SR-600>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOMER-RETARD-400-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOMER-RETARD-600-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOXIFYLLIN-AL-400-RETARD>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TRENTAL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TRENTAL-400> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009065> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000723>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000955>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000958>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001309>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001694>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002326>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002936>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003113>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003855>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000011076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171661>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000181118> ;
+    ns1:title "Pentoxifylin"@cs,
+        "Pentoxifylline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit or antagonize the biosynthesis or actions of phosphodiesterases.     "@en ;
+    ns1:title "Fosfodiesterasa - inhibitory"@cs,
+        "Phosphodiesterase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs or agents which antagonize or impair any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system.     "@en ;
+    ns1:title "Inhibitory agregace trombocytů"@cs,
+        "Platelet aggregation inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to protect against ionizing radiation. They are usually of interest for use in radiation therapy but have been considered for other, e.g. military, purposes.     "@en ;
+    ns1:title "Záření - látky ochranné"@cs,
+        "Radiation-protective agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024679> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that influence the course of a chemical reaction by ready combination with free radicals. Among other effects, this combining activity protects pancreatic islets against damage by cytokines and prevents myocardial and pulmonary perfusion injuries.     "@en ;
+    ns1:title "Volné radikály - scavengery"@cs,
+        "Free radical scavengers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000723> a ns1:DiseaseOrFinding ;
+    ns1:description "Localized reduction of blood flow to brain tissue due to arterial obstruction or systemic hypoperfusion. This frequently occurs in conjunction with brain hypoxia (HYPOXIA, BRAIN). Prolonged ischemia is associated with BRAIN INFARCTION.     "@en ;
+    ns1:title "Ischemie mozku"@cs,
+        "Brain ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000955> a ns1:DiseaseOrFinding ;
+    ns1:description "VASCULAR DISEASES that are associated with DIABETES MELLITUS.     "@en ;
+    ns1:title "Diabetické angiopatie"@cs,
+        "Diabetic angiopathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000958> a ns1:DiseaseOrFinding ;
+    ns1:description "Peripheral, autonomic, and cranial nerve disorders that are associated with DIABETES MELLITUS. These conditions usually result from diabetic microvascular injury involving small blood vessels that supply nerves (VASA NERVORUM). Relatively common conditions which may be associated with diabetic neuropathy include third nerve palsy (see OCULOMOTOR NERVE DISEASES); MONONEUROPATHY; mononeuropathy multiplex; diabetic amyotrophy; a painful POLYNEUROPATHY; autonomic neuropathy; and thoracoabdominal neuropathy. (From Adams et al., Principles of Neurology, 6th ed, p1325)     "@en ;
+    ns1:title "Diabetické neuropatie"@cs,
+        "Diabetic neuropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001309> a ns1:DiseaseOrFinding ;
+    ns1:description "Death and putrefaction of tissue usually due to a loss of blood supply.     "@en ;
+    ns1:title "Gangréna"@cs,
+        "Gangrene"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001694> a ns1:DiseaseOrFinding ;
+    ns1:description "A symptom complex characterized by pain and weakness in SKELETAL MUSCLE group associated with exercise, such as leg pain and weakness brought on by walking. Such muscle limpness disappears after a brief rest and is often relates to arterial STENOSIS; muscle ISCHEMIA; and accumulation of LACTATE.     "@en ;
+    ns1:title "Intermitentní klaudikace"@cs,
+        "Intermittent claudication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002326> a ns1:DiseaseOrFinding ;
+    ns1:description "Subjective cutaneous sensations (e.g., cold, warmth, tingling, pressure, etc.) that are experienced spontaneously in the absence of stimulation.     "@en ;
+    ns1:title "Parestézie"@cs,
+        "Paresthesia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002610> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from the vessels of the retina.     "@en ;
+    ns1:title "Retina - hemoragie"@cs,
+        "Retinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002936> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation and development of a thrombus or blood clot in the blood vessel.     "@en ;
+    ns1:title "Trombóza"@cs,
+        "Thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003113> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any one of the blood vessels, including the ARTERIES; VEINS; and rest of the vasculature system in the body.     "@en ;
+    ns1:title "Vaskulitida"@cs,
+        "Vasculitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003482> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by somnolence or coma in the presence of an acute infection with PLASMODIUM FALCIPARUM (and rarely other Plasmodium species). Initial clinical manifestations include HEADACHES; SEIZURES; and alterations of mentation followed by a rapid progression to COMA. Pathologic features include cerebral capillaries filled with parasitized erythrocytes and multiple small foci of cortical and subcortical necrosis. (From Adams et al., Principles of Neurology, 6th ed, p136)     "@en ;
+    ns1:title "Malárie mozková"@cs,
+        "Malaria, cerebral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003855> a ns1:DiseaseOrFinding ;
+    ns1:description "Inability to achieve and maintain an erection (ERECTILE DYSFUNCTION) due to defects in the arterial blood flow to the PENIS, defect in venous occlusive function allowing blood drainage (leakage) from the erectile tissue (corpus cavernosum penis), or both.     "@en ;
+    ns1:title "Impotence vaskulogenní"@cs,
+        "Impotence, vasculogenic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)     "@en ;
+    ns1:title "Cévní mozková příhoda"@cs,
+        "Stroke"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> a ns1:DiseaseOrFinding ;
+    ns1:description "The mass or quantity of heaviness of an individual. It is expressed by units of pounds or kilograms.     "@en ;
+    ns1:title "Tělesná hmotnost"@cs,
+        "Body weight"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171661> a ns1:DiseaseOrFinding ;
+    ns1:description "A thickening and loss of elasticity of the walls of ARTERIES that occurs with formation of ATHEROSCLEROTIC PLAQUES within the ARTERIAL INTIMA.     "@en ;
+    ns1:title "Ateroskleróza"@cs,
+        "Atherosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181118> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by one or more episodes of DEEP VEIN THROMBOSIS, usually the blood clots are lodged in the legs.  Clinical features include EDEMA; PAIN; aching; heaviness; and MUSCLE CRAMP in the leg. When severe leg swelling leads to skin breakdown, it is called venous STASIS ULCER.     "@en ;
+    ns1:title "Posttrombotický syndrom"@cs,
+        "Postthrombotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009065> a ns1:PhysiologicEffect ;
+    ns1:title "Hematologic Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "AGAPURIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN-SR-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "AGAPURIN SR 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGAPURIN-SR-600> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "AGAPURIN SR 600"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOMER-RETARD-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "PENTOMER RETARD 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOMER-RETARD-600-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "PENTOMER RETARD 600 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTOXIFYLLIN-AL-400-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "PENTOXIFYLLIN AL 400 RETARD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRENTAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "TRENTAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRENTAL-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C04AD03> ;
+    ns1:title "TRENTAL 400"@cs .
+
+

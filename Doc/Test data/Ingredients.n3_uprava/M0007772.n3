@@ -1,0 +1,141 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G03AA14> a ns1:ATCConcept ;
+    skos:notation "G03AA14" ;
+    skos:prefLabel "Nomegestrol a estrogen"@cs,
+        "Nomegestrol and estrogen"@en .
+
+<http://linked.opendata.cz/resource/ATC/G03CA03> a ns1:ATCConcept ;
+    skos:notation "G03CA03" ;
+    skos:prefLabel "Estradiol"@cs,
+        "Estradiol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007772> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002135>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "Generally refers to the 17-beta-isomer of estradiol, an aromatized C18 steroid with hydroxyl group at 3-beta- and 17-beta-position. Estradiol-17-beta is the most potent form of mammalian estrogenic steroids. In humans, it is produced primarily by the cyclic ovaries and the PLACENTA. It is also produced by the adipose tissue of men and postmenopausal women. The 17-alpha-isomer of estradiol binds weakly to estrogen receptors (RECEPTORS, ESTROGEN) and exhibits little estrogenic activity in estrogen-responsive tissues. Various isomers can be synthesized.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000100> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/IOA-2-5-MG-1-5MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OESTROGEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOELY-2-5-MG-1-5-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009902> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001636>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001992>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001993>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002500>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003452>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003943> ;
+    ns1:title "Estradiol"@cs,
+        "Estradiol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001636> a ns1:DiseaseOrFinding ;
+    ns1:description "Condition resulting from deficient gonadal functions, such as GAMETOGENESIS and the production of GONADAL STEROID HORMONES. It is characterized by delay in GROWTH, germ cell maturation, and development of secondary sex characteristics. Hypogonadism can be due to a deficiency of GONADOTROPINS (hypogonadotropic hypogonadism) or due to primary gonadal failure (hypergonadotropic hypogonadism).     "@en ;
+    ns1:title "Hypogonadismus"@cs,
+        "Hypogonadism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001992> a ns1:DiseaseOrFinding ;
+    ns1:description "The premature cessation of menses (MENSTRUATION) when the last menstrual period occurs in a woman under the age of 40. It is due to the depletion of OVARIAN FOLLICLES. Premature MENOPAUSE can be caused by diseases; OVARIECTOMY; RADIATION; chemicals; and chromosomal abnormalities.     "@en ;
+    ns1:title "Menopauza předčasná"@cs,
+        "Menopause, premature"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001993> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive uterine bleeding during MENSTRUATION.     "@en ;
+    ns1:title "Menoragie"@cs,
+        "Menorrhagia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:description "Certain tumors that 1, arise in organs that are normally dependent on specific hormones and 2, are stimulated or caused to regress by manipulation of the endocrine environment.     "@en ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> a ns1:DiseaseOrFinding ;
+    ns1:description "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     "@en ;
+    ns1:title "Osteoporóza postmenopauzální"@cs,
+        "Osteoporosis, postmenopausal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003452> a ns1:DiseaseOrFinding ;
+    ns1:description "Cessation of ovarian function after MENARCHE but before the age of 40, without or with OVARIAN FOLLICLE depletion. It is characterized by the presence of OLIGOMENORRHEA or AMENORRHEA, elevated GONADOTROPINS, and low ESTRADIOL levels. It is a state of female HYPERGONADOTROPIC HYPOGONADISM. Etiologies include genetic defects, autoimmune processes, chemotherapy, radiation, and infections.     "@en ;
+    ns1:title "Primární ovariální insuficience"@cs,
+        "Primary ovarian insufficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003943> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, temporary sensation of heat predominantly experienced by some women during MENOPAUSE. (Random House Unabridged Dictionary, 2d ed)     "@en ;
+    ns1:title "Návaly"@cs,
+        "Hot flashes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000100> a ns1:MechanismOfAction ;
+    ns1:title "Estrogen Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Formation Stimulation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009902> a ns1:PhysiologicEffect ;
+    ns1:title "Vaginal Function Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IOA-2-5-MG-1-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA14> ;
+    ns1:title "IOA 2,5 MG/1,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OESTROGEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03CA03> ;
+    ns1:title "OESTROGEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOELY-2-5-MG-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA14> ;
+    ns1:title "ZOELY 2,5 MG/1,5 MG"@cs .
+
+

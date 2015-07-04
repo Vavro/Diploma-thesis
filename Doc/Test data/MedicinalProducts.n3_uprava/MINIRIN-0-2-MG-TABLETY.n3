@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H> a ns1:ATCConcept ;
+    dcterms:title "Systémová hormonální léčiva kromě pohlavních hormonů a inzulinů"@cs,
+        "SYSTEMIC HORMONAL PREPARATIONS, EXCL. SEX HORMONES AND INSULINS"@en ;
+    skos:notation "H" .
+
+<http://linked.opendata.cz/resource/ATC/H01> a ns1:ATCConcept ;
+    dcterms:title "Hypofyzární a hypotalamické hormony a analogy"@cs,
+        "PITUITARY AND HYPOTHALAMIC HORMONES AND ANALOGUES"@en ;
+    skos:notation "H01" .
+
+<http://linked.opendata.cz/resource/ATC/H01B> a ns1:ATCConcept ;
+    dcterms:title "Hormony zadního laloku hypofýzy"@cs,
+        "POSTERIOR PITUITARY LOBE HORMONES"@en ;
+    skos:notation "H01B" .
+
+<http://linked.opendata.cz/resource/ATC/H01BA> a ns1:ATCConcept ;
+    dcterms:title "Vasopresin a analogy"@cs,
+        "Vasopressin and analogues"@en ;
+    skos:notation "H01BA" .
+
+<http://linked.opendata.cz/resource/ATC/H01BA02> a ns1:ATCConcept ;
+    dcterms:title "Desmopresin"@cs,
+        "Desmopressin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/H>,
+        <http://linked.opendata.cz/resource/ATC/H01>,
+        <http://linked.opendata.cz/resource/ATC/H01B>,
+        <http://linked.opendata.cz/resource/ATC/H01BA> ;
+    skos:notation "H01BA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330516> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010183>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472145> ;
+    ns1:title "Desmopresinacetát"@cs,
+        "Desmopressin acetate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010183> a ns1:PharmacologicalAction ;
+    ns1:description "Agents acting to arrest the flow of blood. Absorbable hemostatics arrest bleeding either by the formation of an artificial clot or by providing a mechanical matrix that facilitates clotting when applied directly to the bleeding surface. These agents function more at the capillary level and are not effective at stemming arterial or venous bleeding under any significant intravascular pressure.     "@en ;
+    ns1:title "Hemostatika"@cs,
+        "Hemostatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472145> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that reduce the excretion of URINE, most notably the octapeptide VASOPRESSINS.     "@en ;
+    ns1:title "Antidiuretika"@cs,
+        "Antidiuretic agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0042452> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01BA02> ;
+    ns1:hasIndication """Tablety MINIRIN  jsou indikovány:
+-k léčbě centrálního diabetu insipidu 
+-k léčbě primárního nočního pomočování u dětí starších  pěti let s normální koncentrační schopností ledvin.
+- k symptomatické léčbě nykturie dospělých spojené s noční polyurií, tj. noční tvorbou moči překračující kapacitu močového měchýře.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "1149.58996582"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1162.09997559"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-01-21"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151714_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X0.2MG"@cs ;
+    ns1:title "MINIRIN 0,2 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0098930> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01BA02> ;
+    ns1:hasIndication """Tablety MINIRIN  jsou indikovány:
+-k léčbě centrálního diabetu insipidu 
+-k léčbě primárního nočního pomočování u dětí starších  pěti let s normální koncentrační schopností ledvin.
+- k symptomatické léčbě nykturie dospělých spojené s noční polyurií, tj. noční tvorbou moči překračující kapacitu močového měchýře.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "15"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151714_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 15X0.2MG"@cs ;
+    ns1:title "MINIRIN 0,2 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0098931> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01BA02> ;
+    ns1:hasIndication """Tablety MINIRIN  jsou indikovány:
+-k léčbě centrálního diabetu insipidu 
+-k léčbě primárního nočního pomočování u dětí starších  pěti let s normální koncentrační schopností ledvin.
+- k symptomatické léčbě nykturie dospělých spojené s noční polyurií, tj. noční tvorbou moči překračující kapacitu močového měchýře.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151714_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90X0.2MG"@cs ;
+    ns1:title "MINIRIN 0,2 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINIRIN-0-2-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01BA02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330516> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0042452>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0098930>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0098931> ;
+    ns1:title "MINIRIN 0,2 MG TABLETY"@cs .
+
+

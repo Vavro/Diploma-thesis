@@ -1,0 +1,149 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01C> a ns1:ATCConcept ;
+    dcterms:title "Beta-laktamová antibiotika, peniciliny"@cs,
+        "BETA-LACTAM ANTIBACTERIALS, PENICILLINS"@en ;
+    skos:notation "J01C" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR> a ns1:ATCConcept ;
+    dcterms:title "Kombinace penicilinů, včetně inhibitorů beta-laktamáz"@cs,
+        "Combinations of penicillins, incl. beta-lactamase"@en ;
+    skos:notation "J01CR" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR01> a ns1:ATCConcept ;
+    dcterms:title "Ampicilin a enzymový inhibitor"@cs,
+        "Ampicillin and enzyme inhibitor"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J01>,
+        <http://linked.opendata.cz/resource/ATC/J01C>,
+        <http://linked.opendata.cz/resource/ATC/J01CR> ;
+    skos:notation "J01CR01" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013404> a ns1:Ingredient ;
+    ns1:title "Sodná sůl ampicilinu na injekci"@cs,
+        "Ampicillin sodium for injection"@en,
+        "Ampicillinum natricum pro iniectione"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020734> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:title "Sulbactam sodium"@cs,
+        "Sulbactam sodium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0100325> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR01> ;
+    ns1:hasIndication """Tento léčivý přípravek je indikován u infekcí vyvolaných baktériemi, které jsou citlivé na přípravek Ampicillin and Sulbactam IBI a rezistentní na ampicilin v monoterapii:
+- infekce horních a dolních cest dýchacích
+- infekce horních a dolních močových cest včetně infekcí ledvin
+- intraabdominální infekce
+- infekce pohlavních orgánů
+- infekce kůže a měkkých tkání
+- perioperační profylaxe těžkých infekcí po intraabdominálních chirurgických výkonech.
+Je třeba řídit se oficiálními pokyny ohledně správného používání antibakteriálních přípravků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "1 LAH (50 ML)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155137_doc> ;
+    ns1:hasStrength "1G+500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 1X1G+500MG/LAH"@cs ;
+    ns1:title "AMPICILLIN AND SULBACTAM IBI 1 G + 500 MG PRÁŠEK PRO INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102575> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR01> ;
+    ns1:hasIndication """Tento léčivý přípravek je indikován u infekcí vyvolaných baktériemi, které jsou citlivé na přípravek Ampicillin and Sulbactam IBI a rezistentní na ampicilin v monoterapii:
+- infekce horních a dolních cest dýchacích
+- infekce horních a dolních močových cest včetně infekcí ledvin
+- intraabdominální infekce
+- infekce pohlavních orgánů
+- infekce kůže a měkkých tkání
+- perioperační profylaxe těžkých infekcí po intraabdominálních chirurgických výkonech.
+Je třeba řídit se oficiálními pokyny ohledně správného používání antibakteriálních přípravků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "1 LAH (20 ML)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155137_doc> ;
+    ns1:hasStrength "1G+500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 1X1G+500MG/LAH"@cs ;
+    ns1:title "AMPICILLIN AND SULBACTAM IBI 1 G + 500 MG PRÁŠEK PRO INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136083> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR01> ;
+    ns1:hasIndication """Tento léčivý přípravek je indikován u infekcí vyvolaných baktériemi, které jsou citlivé na přípravek Ampicillin and Sulbactam IBI a rezistentní na ampicilin v monoterapii:
+- infekce horních a dolních cest dýchacích
+- infekce horních a dolních močových cest včetně infekcí ledvin
+- intraabdominální infekce
+- infekce pohlavních orgánů
+- infekce kůže a měkkých tkání
+- perioperační profylaxe těžkých infekcí po intraabdominálních chirurgických výkonech.
+Je třeba řídit se oficiálními pokyny ohledně správného používání antibakteriálních přípravků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "10 LAH (20 ML)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155137_doc> ;
+    ns1:hasStrength "1G+500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 10X1G+500MG/LAH"@cs ;
+    ns1:title "AMPICILLIN AND SULBACTAM IBI 1 G + 500 MG PRÁŠEK PRO INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136084> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR01> ;
+    ns1:hasIndication """Tento léčivý přípravek je indikován u infekcí vyvolaných baktériemi, které jsou citlivé na přípravek Ampicillin and Sulbactam IBI a rezistentní na ampicilin v monoterapii:
+- infekce horních a dolních cest dýchacích
+- infekce horních a dolních močových cest včetně infekcí ledvin
+- intraabdominální infekce
+- infekce pohlavních orgánů
+- infekce kůže a měkkých tkání
+- perioperační profylaxe těžkých infekcí po intraabdominálních chirurgických výkonech.
+Je třeba řídit se oficiálními pokyny ohledně správného používání antibakteriálních přípravků.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "10 LAH (50 ML)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155137_doc> ;
+    ns1:hasStrength "1G+500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 10X1G+500MG/LAH"@cs ;
+    ns1:title "AMPICILLIN AND SULBACTAM IBI 1 G + 500 MG PRÁŠEK PRO INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPICILLIN-AND-SULBACTAM-IBI-1-G---500-MG-PRASEK-PRO-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013404>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020734> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0100325>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0102575>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136083>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0136084> ;
+    ns1:title "AMPICILLIN AND SULBACTAM IBI 1 G + 500 MG PRÁŠEK PRO INJEKČNÍ ROZTOK"@cs .
+
+

@@ -1,0 +1,117 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A08AA01> a ns1:ATCConcept ;
+    skos:notation "A08AA01" ;
+    skos:prefLabel "Fentermin"@cs,
+        "Phentermine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016536> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000473>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001345>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003325>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> ;
+    ns1:description "A central nervous system stimulant and sympathomimetic with actions and uses similar to those of DEXTROAMPHETAMINE. It has been used most frequently in the treatment of obesity.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000102>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000114>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000184> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ADIPEX-RETARD> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001063>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001614>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027961> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009229>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009242> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002200>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> ;
+    ns1:title "Fentermin"@cs,
+        "Phentermine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001063> a ns1:PharmacologicalAction ;
+    ns1:description "A loosely defined group of drugs that tend to increase behavioral alertness, agitation, or excitation. They work by a variety of mechanisms, but usually not by direct excitation of neurons. The many drugs that have such actions as side effects to their main therapeutic use are not included here.     "@en ;
+    ns1:title "Analeptika"@cs,
+        "Central nervous system stimulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001614> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to suppress appetite.     "@en ;
+    ns1:title "Anorektika"@cs,
+        "Appetite depressants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027961> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that act on adrenergic receptors or affect the life cycle of adrenergic transmitters. Included here are adrenergic agonists and antagonists and agents that affect the synthesis, storage, uptake, metabolism, or release of adrenergic transmitters.     "@en ;
+    ns1:title "Adrenergní látky"@cs,
+        "Adrenergic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000473> a ns1:DiseaseOrFinding ;
+    ns1:description "Thickening and loss of elasticity of the walls of ARTERIES of all sizes. There are many forms classified by the types of lesions and arteries involved, such as ATHEROSCLEROSIS with fatty lesions in the ARTERIAL INTIMA of medium and large muscular arteries.     "@en ;
+    ns1:title "Arterioskleróza"@cs,
+        "Arteriosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001345> a ns1:DiseaseOrFinding ;
+    ns1:description "An ocular disease, occurring in many forms, having as its primary characteristics an unstable or a sustained increase in the intraocular pressure which the eye cannot withstand without damage to its structure or impairment of its function. The consequences of the increased pressure may be manifested in a variety of symptoms, depending upon type and severity, such as excavation of the optic disk, hardness of the eyeball, corneal anesthesia, reduced visual acuity, seeing of colored halos around lights, disturbed dark adaptation, visual field defects, and headaches. (Dictionary of Visual Science, 4th ed)     "@en ;
+    ns1:title "Glaukom"@cs,
+        "Glaucoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002200> a ns1:DiseaseOrFinding ;
+    ns1:description "A status with BODY WEIGHT that is grossly above the acceptable or desirable weight, usually due to accumulation of excess FATS in the body. The standards may vary with age, sex, genetic or cultural background. In the BODY MASS INDEX, a BMI greater than 30.0 kg/m2 is considered obese, and a BMI greater than 40.0 kg/m2 is considered morbidly obese (MORBID OBESITY).     "@en ;
+    ns1:title "Obezita"@cs,
+        "Obesity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003325> a ns1:DiseaseOrFinding ;
+    ns1:description "Abuse, overuse, or misuse of a substance by its injection into a vein.     "@en ;
+    ns1:title "Drogy - abúzus intravenózní"@cs,
+        "Substance abuse, intravenous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> a ns1:DiseaseOrFinding ;
+    ns1:description "A person 6 to 12 years of age. An individual 2 to 5 years old is CHILD, PRESCHOOL.     "@en ;
+    ns1:title "Dítě"@cs,
+        "Child"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> a ns1:DiseaseOrFinding ;
+    ns1:description "The mass or quantity of heaviness of an individual. It is expressed by units of pounds or kilograms.     "@en ;
+    ns1:title "Tělesná hmotnost"@cs,
+        "Body weight"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000102> a ns1:MechanismOfAction ;
+    ns1:title "Norepinephrine Uptake Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000114> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Uptake Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000184> a ns1:MechanismOfAction ;
+    ns1:title "Monoamine Oxidase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009229> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Cerebral Cortex Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009242> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Cerebral Cortex Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADIPEX-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A08AA01> ;
+    ns1:title "ADIPEX RETARD"@cs .
+
+

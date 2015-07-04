@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J07> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny"@cs,
+        "VACCINES"@en ;
+    skos:notation "J07" .
+
+<http://linked.opendata.cz/resource/ATC/J07B> a ns1:ATCConcept ;
+    dcterms:title "Virové vakcíny"@cs,
+        "VIRAL VACCINES"@en ;
+    skos:notation "J07B" .
+
+<http://linked.opendata.cz/resource/ATC/J07BA> a ns1:ATCConcept ;
+    dcterms:title "Vakcína proti virové encefalitidě"@cs,
+        "Encephalitis vaccines"@en ;
+    skos:notation "J07BA" .
+
+<http://linked.opendata.cz/resource/ATC/J07BA01> a ns1:ATCConcept ;
+    dcterms:title "Klíšťová encefalitida, inaktivovaný celý virus"@cs,
+        "Encephalitis, tick borne, inactivated, whole virus"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J07>,
+        <http://linked.opendata.cz/resource/ATC/J07B>,
+        <http://linked.opendata.cz/resource/ATC/J07BA> ;
+    skos:notation "J07BA01" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013983> a ns1:Ingredient ;
+    ns1:title "Purif. inaktiv. virus klíšťové encefalitidy"@cs,
+        "Virus encephalitidis inactivatum purificatum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055111> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BA01> ;
+    ns1:hasIndication """FSME-IMMUN 0,5 ml BAXTER je indikován k aktivní (profylaktické) imunizaci osob starších 16 let proti klíšťové encefalitidě (KE).
+FSME-IMMUN 0,5 ml BAXTER má být podáván na základě oficiálních doporučení, která se týkají potřeby a načasování očkování proti KE.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160041_doc> ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 1X0.5ML/DÁV"@cs ;
+    ns1:title "FSME-IMMUN 0,5 ML BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055112> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BA01> ;
+    ns1:hasIndication """FSME-IMMUN 0,5 ml BAXTER je indikován k aktivní (profylaktické) imunizaci osob starších 16 let proti klíšťové encefalitidě (KE).
+FSME-IMMUN 0,5 ml BAXTER má být podáván na základě oficiálních doporučení, která se týkají potřeby a načasování očkování proti KE.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160041_doc> ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 10X0.5ML/DÁV"@cs ;
+    ns1:title "FSME-IMMUN 0,5 ML BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055113> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BA01> ;
+    ns1:hasIndication """FSME-IMMUN 0,5 ml BAXTER je indikován k aktivní (profylaktické) imunizaci osob starších 16 let proti klíšťové encefalitidě (KE).
+FSME-IMMUN 0,5 ml BAXTER má být podáván na základě oficiálních doporučení, která se týkají potřeby a načasování očkování proti KE.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160041_doc> ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 20X0.5ML/DÁV"@cs ;
+    ns1:title "FSME-IMMUN 0,5 ML BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055114> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BA01> ;
+    ns1:hasIndication """FSME-IMMUN 0,5 ml BAXTER je indikován k aktivní (profylaktické) imunizaci osob starších 16 let proti klíšťové encefalitidě (KE).
+FSME-IMMUN 0,5 ml BAXTER má být podáván na základě oficiálních doporučení, která se týkají potřeby a načasování očkování proti KE.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160041_doc> ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 100X0.5ML/DÁV"@cs ;
+    ns1:title "FSME-IMMUN 0,5 ML BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FSME-IMMUN-0-5-ML-BAXTER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013983> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055111>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055112>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055113>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055114> ;
+    ns1:title "FSME-IMMUN 0,5 ML BAXTER"@cs .
+
+

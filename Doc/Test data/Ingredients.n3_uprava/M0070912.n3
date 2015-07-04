@@ -1,0 +1,111 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A10BF01> a ns1:ATCConcept ;
+    skos:notation "A10BF01" ;
+    skos:prefLabel "Akarbóza"@cs,
+        "Acarbose"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0070912> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000972>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001862>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001922>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> ;
+    ns1:description "An inhibitor of alpha glucosidase that retards the digestion and absorption of carbohydrates in the small intestine and hence reduces the increase in blood-glucose concentrations after a carbohydrate load. It is given orally to non-insulin dependent diabetes mellitus patients where diet modification or oral hypoglycemic agents do not control their condition. (From Martindale The Extra Pharmacopoeia, 31st ed)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000166>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010274> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AKARBOZA-MYLAN-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBAY-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBAY-50> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009722> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000950>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> ;
+    ns1:title "Akarbóza"@cs,
+        "Acarbose"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.     "@en ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> a ns1:DiseaseOrFinding ;
+    ns1:description "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.     "@en ;
+    ns1:title "Diabetes mellitus 2. typu"@cs,
+        "Diabetes mellitus, type 2"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000972> a ns1:DiseaseOrFinding ;
+    ns1:description "Congenital structural abnormalities of the DIGESTIVE SYSTEM.     "@en ;
+    ns1:title "Abnormality trávicího systému"@cs,
+        "Digestive system abnormalities"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001922> a ns1:DiseaseOrFinding ;
+    ns1:description "General term for a group of MALNUTRITION syndromes caused by failure of normal INTESTINAL ABSORPTION of nutrients.     "@en ;
+    ns1:title "Malabsorpční syndromy"@cs,
+        "Malabsorption syndromes"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> a ns1:DiseaseOrFinding ;
+    ns1:description "A life-threatening complication of diabetes mellitus, primarily of TYPE 1 DIABETES MELLITUS with severe INSULIN deficiency and extreme HYPERGLYCEMIA. It is characterized by KETOSIS; DEHYDRATION; and depressed consciousness leading to COMA.     "@en ;
+    ns1:title "Diabetická ketoacidóza"@cs,
+        "Diabetic ketoacidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000166> a ns1:MechanismOfAction ;
+    ns1:title "alpha Glucosidase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010274> a ns1:MechanismOfAction ;
+    ns1:title "Amylase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009722> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibition Carbohydrate Digestion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKARBOZA-MYLAN-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BF01> ;
+    ns1:title "AKARBOZA MYLAN 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBAY-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BF01> ;
+    ns1:title "GLUCOBAY 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBAY-50> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BF01> ;
+    ns1:title "GLUCOBAY 50"@cs .
+
+

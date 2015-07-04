@@ -1,0 +1,129 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L04> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04" .
+
+<http://linked.opendata.cz/resource/ATC/L04A> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04A" .
+
+<http://linked.opendata.cz/resource/ATC/L04AD> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory kalcineurinu"@cs,
+        "Calcineurin inhibitors"@en ;
+    skos:notation "L04AD" .
+
+<http://linked.opendata.cz/resource/ATC/L04AD02> a ns1:ATCConcept ;
+    dcterms:title "Takrolimus"@cs,
+        "Tacrolimus  "@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L04>,
+        <http://linked.opendata.cz/resource/ATC/L04A>,
+        <http://linked.opendata.cz/resource/ATC/L04AD> ;
+    skos:notation "L04AD02" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0016808> a ns1:Ingredient ;
+    ns1:title "Monohydrát takrolimusu"@cs,
+        "Tacrolimus monohydrate"@en,
+        "Tacrolimusum monohydricum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198841> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndication """Profylaxe rejekce transplantátu u příjemců alotransplantátů jater, ledvin nebo srdce. 
+Léčba rejekce alotransplantátu, v případech rezistentních na léčbu jinými imunosupresivními léčivými přípravky.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155055_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 20X0.5MG"@cs ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198842> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndication """Profylaxe rejekce transplantátu u příjemců alotransplantátů jater, ledvin nebo srdce. 
+Léčba rejekce alotransplantátu, v případech rezistentních na léčbu jinými imunosupresivními léčivými přípravky.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasMaximalPrice "1162.18994141"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1325.42004395"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155055_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 30X0.5MG"@cs ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198843> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndication """Profylaxe rejekce transplantátu u příjemců alotransplantátů jater, ledvin nebo srdce. 
+Léčba rejekce alotransplantátu, v případech rezistentních na léčbu jinými imunosupresivními léčivými přípravky.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155055_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 50X0.5MG"@cs ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198844> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndication """Profylaxe rejekce transplantátu u příjemců alotransplantátů jater, ledvin nebo srdce. 
+Léčba rejekce alotransplantátu, v případech rezistentních na léčbu jinými imunosupresivními léčivými přípravky.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasMaximalPrice "2242.87011719"^^xsd:float ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "2650.85009766"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155055_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 60X0.5MG"@cs ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198845> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndication """Profylaxe rejekce transplantátu u příjemců alotransplantátů jater, ledvin nebo srdce. 
+Léčba rejekce alotransplantátu, v případech rezistentních na léčbu jinými imunosupresivními léčivými přípravky.
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasMaximalPrice "3668.95996094"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "4418.08984375"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155055_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 100X0.5MG"@cs ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-TACROLIMUS-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0016808> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198841>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198842>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198843>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198844>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0198845> ;
+    ns1:title "APO-TACROLIMUS 0,5 MG"@cs .
+
+

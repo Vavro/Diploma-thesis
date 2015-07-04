@@ -1,0 +1,173 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01CD01> a ns1:ATCConcept ;
+    skos:notation "L01CD01" ;
+    skos:prefLabel "Paklitaxel"@cs,
+        "Paclitaxel"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026156> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A cyclodecane isolated from the bark of the Pacific yew tree, TAXUS BREVIFOLIA. It stabilizes MICROTUBULES in their polymerized form leading to cell death.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000135>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010260> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ABRAXANE-5-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ANZATAX-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BREVITAX-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EGILITAX-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONCOTAX-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLIMEDAC-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLINE-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-ACTAVIS-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-EBEWE-6-MG-ML-KONCENTRAT-PRO-INFUZNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-HOSPIRA-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-KABI-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-MYLAN-6-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-STADA-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TAXOL-PRO-INJ-> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001883>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002274>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002671>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002676>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000181048> ;
+    ns1:title "Paclitaxel"@cs,
+        "Paclitaxel"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486> a ns1:PharmacologicalAction ;
+    ns1:description "Agents obtained from higher plants that have demonstrable cytostatic or antineoplastic activity.     "@en ;
+    ns1:title "Antitumorózní látky fytogenní"@cs,
+        "Antineoplastic agents, phytogenic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0473515> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that interact with TUBULIN to inhibit or promote polymerization of MICROTUBULES.     "@en ;
+    ns1:title "Tubulin - modulátory"@cs,
+        "Tubulin modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001883> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LUNG.     "@en ;
+    ns1:title "Plíce - nádory"@cs,
+        "Lung neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002671> a ns1:DiseaseOrFinding ;
+    ns1:description "A connective tissue neoplasm formed by proliferation of mesodermal cells; it is usually highly malignant.     "@en ;
+    ns1:title "Sarkom"@cs,
+        "Sarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002676> a ns1:DiseaseOrFinding ;
+    ns1:description "A multicentric, malignant neoplastic vascular proliferation characterized by the development of bluish-red cutaneous nodules, usually on the lower extremities, most often on the toes or feet, and slowly increasing in size and number and spreading to more proximal areas. The tumors have endothelium-lined channels and vascular spaces admixed with variably sized aggregates of spindle-shaped cells, and often remain confined to the skin and subcutaneous tissue, but widespread visceral involvement may occur. Kaposi's sarcoma occurs spontaneously in Jewish and Italian males in Europe and the United States. An aggressive variant in young children is endemic in some areas of Africa. A third form occurs in about 0.04% of kidney transplant patients. There is also a high incidence in AIDS patients. (From Dorland, 27th ed & Holland et al., Cancer Medicine, 3d ed, pp2105-7) HHV-8 is the suspected cause.     "@en ;
+    ns1:title "Sarkom kaposiho"@cs,
+        "Sarcoma, kaposi"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181048> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of highly malignant lung cancer that is composed of small ovoid cells (SMALL CELL CARCINOMA).     "@en ;
+    ns1:title "Malobuněčný karcinom plic"@cs,
+        "Small cell lung carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000135> a ns1:MechanismOfAction ;
+    ns1:title "Immunologic Adjuvants"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010260> a ns1:MechanismOfAction ;
+    ns1:title "beta Tubulin Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008732> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Mitosis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ABRAXANE-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "ABRAXANE 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANZATAX-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "ANZATAX 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BREVITAX-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "BREVITAX 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGILITAX-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "EGILITAX 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONCOTAX-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "ONCOTAX 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLIMEDAC-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLIMEDAC 6 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLINE-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLINE 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-ACTAVIS-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL ACTAVIS 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-EBEWE-6-MG-ML-KONCENTRAT-PRO-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL EBEWE 6 MG/ML KONCENTRÁT PRO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-HOSPIRA-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL HOSPIRA 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-KABI-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL KABI 6 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-MYLAN-6-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL MYLAN 6 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PACLITAXEL-STADA-6-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "PACLITAXEL STADA 6 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TAXOL-PRO-INJ-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD01> ;
+    ns1:title "TAXOL PRO INJ."@cs .
+
+

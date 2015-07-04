@@ -1,0 +1,86 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J05AF04> a ns1:ATCConcept ;
+    skos:notation "J05AF04" ;
+    skos:prefLabel "Stavudin"@cs,
+        "Stavudine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027323> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A dideoxynucleoside analog that inhibits reverse transcriptase and has in vitro activity against HIV.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-1-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-15-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-30-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-40-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> ;
+    ns1:title "Stavudin"@cs,
+        "Stavudine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are chemically similar to naturally occurring metabolites, but differ enough to interfere with normal metabolic pathways. (From AMA Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Antimetabolity"@cs,
+        "Antimetabolites"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of reverse transcriptase (RNA-DIRECTED DNA POLYMERASE), an enzyme that synthesizes DNA on an RNA template.     "@en ;
+    ns1:title "Reverzní transkriptasa - inhibitory"@cs,
+        "Reverse transcriptase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used to treat AIDS and/or stop the spread of the HIV infection. These do not include drugs used to treat symptoms or opportunistic infections associated with AIDS.     "@en ;
+    ns1:title "Látky proti hiv"@cs,
+        "Anti-hiv agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> a ns1:MechanismOfAction ;
+    ns1:title "Reverse Transcriptase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Reverse Transcription to DNA"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF04> ;
+    ns1:title "ZERIT 1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF04> ;
+    ns1:title "ZERIT 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF04> ;
+    ns1:title "ZERIT 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF04> ;
+    ns1:title "ZERIT 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZERIT-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF04> ;
+    ns1:title "ZERIT 40 MG"@cs .
+
+

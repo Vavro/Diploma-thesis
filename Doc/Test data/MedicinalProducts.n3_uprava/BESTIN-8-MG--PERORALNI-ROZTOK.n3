@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N07> a ns1:ATCConcept ;
+    dcterms:title "Jiná léčiva nervového systému"@cs,
+        "OTHER NERVOUS SYSTEM DRUGS"@en ;
+    skos:notation "N07" .
+
+<http://linked.opendata.cz/resource/ATC/N07C> a ns1:ATCConcept ;
+    dcterms:title "Antivertiginóza"@cs,
+        "ANTIVERTIGO PREPARATIONS"@en ;
+    skos:notation "N07C" .
+
+<http://linked.opendata.cz/resource/ATC/N07CA> a ns1:ATCConcept ;
+    dcterms:title "Antivertiginóza"@cs,
+        "Antivertigo preparations"@en ;
+    skos:notation "N07CA" .
+
+<http://linked.opendata.cz/resource/ATC/N07CA01> a ns1:ATCConcept ;
+    dcterms:title "Betahistin"@cs,
+        "Betahistine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N07>,
+        <http://linked.opendata.cz/resource/ATC/N07C>,
+        <http://linked.opendata.cz/resource/ATC/N07CA> ;
+    skos:notation "N07CA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330845> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026465> ;
+    ns1:title "Betahistine hydrochloride"@cs,
+        "Betahistine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026465> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and activate histamine receptors. Although they have been suggested for a variety of clinical applications histamine agonists have so far been more widely used in research than therapeutically.     "@en ;
+    ns1:title "Histamin - agonisté"@cs,
+        "Histamine agonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169179> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07CA01> ;
+    ns1:hasIndication """Léčba závratí spojených s funkčními poruchami vestibulárního ústrojí v rámci Menièrova syndromu.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasPackagingSize "60ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC128384_doc> ;
+    ns1:hasStrength "8MG/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 60ML"@cs ;
+    ns1:title "BESTIN 8 MG, PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169180> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07CA01> ;
+    ns1:hasIndication """Léčba závratí spojených s funkčními poruchami vestibulárního ústrojí v rámci Menièrova syndromu.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasMaximalPrice "266.920013428"^^xsd:float ;
+    ns1:hasPackagingSize "120ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "258"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-06-14"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC128384_doc> ;
+    ns1:hasStrength "8MG/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "POR SOL 120ML"@cs ;
+    ns1:title "BESTIN 8 MG, PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BESTIN-8-MG--PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07CA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330845> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169179>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169180> ;
+    ns1:title "BESTIN 8 MG, PERORÁLNÍ ROZTOK"@cs .
+
+

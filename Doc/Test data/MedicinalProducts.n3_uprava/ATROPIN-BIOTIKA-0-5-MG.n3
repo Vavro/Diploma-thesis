@@ -1,0 +1,183 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii funkčních poruch trávicího traktu"@cs,
+        "DRUGS FOR FUNCTIONAL GASTROINTESTINAL DISORDERS"@en ;
+    skos:notation "A03" .
+
+<http://linked.opendata.cz/resource/ATC/A03B> a ns1:ATCConcept ;
+    dcterms:title "Alkaloidy rulíku a deriváty, samotné"@cs,
+        "BELLADONNA AND DERIVATIVES, PLAIN"@en ;
+    skos:notation "A03B" .
+
+<http://linked.opendata.cz/resource/ATC/A03BA> a ns1:ATCConcept ;
+    dcterms:title "Alkaloidy rulíku, terciární aminy"@cs,
+        "Belladonna alkaloids, tertiary amines"@en ;
+    skos:notation "A03BA" .
+
+<http://linked.opendata.cz/resource/ATC/A03BA01> a ns1:ATCConcept ;
+    dcterms:title "Atropin"@cs,
+        "Atropine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/A>,
+        <http://linked.opendata.cz/resource/ATC/A03>,
+        <http://linked.opendata.cz/resource/ATC/A03B>,
+        <http://linked.opendata.cz/resource/ATC/A03BA> ;
+    skos:notation "A03BA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001931> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000316>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001430>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001709>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001748>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001966>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002070>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002888>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002948>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003070>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "An alkaloid, originally from Atropa belladonna, but found in other plants, mainly SOLANACEAE.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Atropin"@cs,
+        "Atropine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that dilate the pupil. They may be either sympathomimetics or parasympatholytics.     "@en ;
+    ns1:title "Mydriatika"@cs,
+        "Mydriatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit the actions of the parasympathetic nervous system. The major group of drugs used therapeutically for this purpose is the MUSCARINIC ANTAGONISTS.     "@en ;
+    ns1:title "Parasympatolytika"@cs,
+        "Parasympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate MUSCARINIC RECEPTORS, thereby blocking the actions of endogenous ACETYLCHOLINE or exogenous agonists. Muscarinic antagonists have widespread effects including actions on the iris and ciliary muscle of the eye, the heart and blood vessels, secretions of the respiratory tract, GI system, and salivary glands, GI motility, urinary bladder tone, and the central nervous system.     "@en ;
+    ns1:title "Muskarin - antagonisté"@cs,
+        "Muscarinic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000316> a ns1:DiseaseOrFinding ;
+    ns1:title "Tkáně - adheze"@cs,
+        "Tissue adhesions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001709> a ns1:DiseaseOrFinding ;
+    ns1:title "Iris - nemoci"@cs,
+        "Iris diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001807> a ns1:DiseaseOrFinding ;
+    ns1:title "Čočka oční - nemoci"@cs,
+        "Lens diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001966> a ns1:DiseaseOrFinding ;
+    ns1:title "Megakolon toxické"@cs,
+        "Megacolon, toxic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002070> a ns1:DiseaseOrFinding ;
+    ns1:title "Myasthenia gravis"@cs,
+        "Myasthenia gravis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002888> a ns1:DiseaseOrFinding ;
+    ns1:title "Tachykardie"@cs,
+        "Tachycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002948> a ns1:DiseaseOrFinding ;
+    ns1:title "Tyreotoxikóza"@cs,
+        "Thyrotoxicosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003070> a ns1:DiseaseOrFinding ;
+    ns1:title "Ureter - obstrukce"@cs,
+        "Ureteral obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0000392> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A03BA01> ;
+    ns1:hasIndication """Antidotum při otravě inhibitory acetylcholinesterázy, premedikace před celkovou anestézií, při akutním infarktu k zvládnutí bradykardicko-hypotenzního syndromu, fibrilace a flutter předsíní s pomalou komorovou odpovědí, bradykardie a bradykardické arytmie jako následek parasympatotonie nebo předávkování beta-sympatolytiky. Pomocný lék při bradyarytmiích vyvolaných předávkováním digitálisovými glykozidy. Akutní extrapyramidové dyskinezy na začátku léčby neuroleptiky. Používá se v kombinaci se spazmoanalgetiky a papaverinem.
+"""@cs ;
+    ns1:hasIndicationGroup "PARASYMPATHOLYTICA, GANGLIOPLEGICA"@cs ;
+    ns1:hasMaximalPrice "69.9000015259"^^xsd:float ;
+    ns1:hasPackagingSize "10X1ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "42.0099983215"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96390_doc> ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1ML/0.5MG"@cs ;
+    ns1:title "ATROPIN BIOTIKA 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-BIOTIKA-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A03BA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001931> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0000392> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "ATROPIN BIOTIKA 0,5 MG"@cs .
+

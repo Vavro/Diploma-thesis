@@ -1,0 +1,111 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06A> a ns1:ATCConcept ;
+    dcterms:title "Antidepresiva"@cs,
+        "ANTIDEPRESSANTS"@en ;
+    skos:notation "N06A" .
+
+<http://linked.opendata.cz/resource/ATC/N06AB> a ns1:ATCConcept ;
+    dcterms:title "Selektivní inhibitory zpětného vychytávání serotoninu"@cs,
+        "Selective serotonin reuptake inhibitors"@en ;
+    skos:notation "N06AB" .
+
+<http://linked.opendata.cz/resource/ATC/N06AB10> a ns1:ATCConcept ;
+    dcterms:title "Escitalopram"@cs,
+        "Escitalopram"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06A>,
+        <http://linked.opendata.cz/resource/ATC/N06AB> ;
+    skos:notation "N06AB10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023529> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A furancarbonitrile that is one of the SEROTONIN UPTAKE INHIBITORS used as an antidepressant. The drug is also effective in reducing ethanol uptake in alcoholics and is used in depressed patients who also suffer from tardive dyskinesia in preference to tricyclic antidepressants, which aggravate this condition.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Citalopram"@cs,
+        "Citalopram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0406596> a ns1:Ingredient ;
+    ns1:description "S-enantiomer of citalopram.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> ;
+    ns1:title "Escitalopram"@cs,
+        "Escitalopram"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit the reuptake of serotonin in the brain. This increases the serotonin concentration in the synaptic cleft which then activates serotonin receptors to a greater extent. These agents have been used in treatment of depression, panic disorder, obsessive-compulsive behavior, and alcoholism, as analgesics, and to treat obesity and bulimia. Many of the ADRENERGIC UPTAKE INHIBITORS also inhibit serotonin uptake; they are not included here.     "@en ;
+    ns1:title "Inhibitory vychytávání serotoninu"@cs,
+        "Serotonin uptake inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally and mechanistically diverse group of drugs that are not tricyclics or monoamine oxidase inhibitors. The most clinically important appear to act selectively on serotonergic systems, especially by inhibiting serotonin reuptake.     "@en ;
+    ns1:title "Antidepresiva druhé generace"@cs,
+        "Antidepressive agents, second-generation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181625> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AB10> ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod. 
+Léčba panických poruch provázených nebo neprovázených agorafobií. 
+Léčba sociální úzkostné poruchy (sociální fobie). 
+Léčba generalizované úzkostné poruchy. 
+Léčba obsedantně-kompulzivní poruchy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "15ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157797_doc> ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GTT SOL 1X15ML/300MG"@cs ;
+    ns1:title "CESOPIL 20 MG/ML PERORÁLNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181626> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AB10> ;
+    ns1:hasIndication """Léčba těžkých depresivních epizod. 
+Léčba panických poruch provázených nebo neprovázených agorafobií. 
+Léčba sociální úzkostné poruchy (sociální fobie). 
+Léčba generalizované úzkostné poruchy. 
+Léčba obsedantně-kompulzivní poruchy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "5X15ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157797_doc> ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR GTT SOL 5X15ML/300MG"@cs ;
+    ns1:title "CESOPIL 20 MG/ML PERORÁLNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CESOPIL-20-MG-ML-PERORALNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AB10> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023529>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0406596> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181625>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0181626> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CESOPIL 20 MG/ML PERORÁLNÍ KAPKY, ROZTOK"@cs .
+
+

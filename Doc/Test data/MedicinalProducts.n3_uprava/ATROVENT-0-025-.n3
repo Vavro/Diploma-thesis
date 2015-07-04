@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii onemocnění spojených s obstrukcí dýchacích cest"@cs,
+        "DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03" .
+
+<http://linked.opendata.cz/resource/ATC/R03B> a ns1:ATCConcept ;
+    dcterms:title "Jiná inhalační léčiva onemocnění spojených s obstrukcí dých.cest"@cs,
+        "OTHER DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES, INHALANTS"@en ;
+    skos:notation "R03B" .
+
+<http://linked.opendata.cz/resource/ATC/R03BB> a ns1:ATCConcept ;
+    dcterms:title "Anticholinergika"@cs,
+        "Anticholinergics"@en ;
+    skos:notation "R03BB" .
+
+<http://linked.opendata.cz/resource/ATC/R03BB01> a ns1:ATCConcept ;
+    dcterms:title "Ipratropium-bromid"@cs,
+        "Ipratropium bromide"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/R>,
+        <http://linked.opendata.cz/resource/ATC/R03>,
+        <http://linked.opendata.cz/resource/ATC/R03B>,
+        <http://linked.opendata.cz/resource/ATC/R03BB> ;
+    skos:notation "R03BB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330049> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027991> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Ipratropium bromide"@cs,
+        "Ipratropium bromide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027991> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate CHOLINERGIC RECEPTORS, thereby blocking the actions of ACETYLCHOLINE or cholinergic agonists.     "@en ;
+    ns1:title "Cholinergní antagonisté"@cs,
+        "Cholinergic antagonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0092351> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03BB01> ;
+    ns1:hasIndication """Symptomatická léčba bronchospasmu spojeného s  bronchiálním astmem, chronickou obstrukční bronchitidou a emfyzémem.
+Atrovent 0,025%, roztok k inhalaci se používá spolu s inhalačními beta2 - agonisty při léčbě akutního bronchospasmu spojeného s chronickou obstrukční plicní nemocí (zahrnující chronickou bronchitidu) a s astmatem.
+"""@cs ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "123.379997253"^^xsd:float ;
+    ns1:hasPackagingSize "20ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "17.5799999237"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC113428_doc> ;
+    ns1:hasStrength "0.25MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INH SOL 1X20ML"@cs ;
+    ns1:title "ATROVENT 0,025%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATROVENT-0-025-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03BB01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330049> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0092351> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "ATROVENT 0,025%"@cs .
+
+

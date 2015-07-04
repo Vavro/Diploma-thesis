@@ -1,0 +1,168 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09B> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, kombinace"@cs,
+        "ACE INHIBITORS, COMBINATIONS"@en ;
+    skos:notation "C09B" .
+
+<http://linked.opendata.cz/resource/ATC/C09BA> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory a diuretika"@cs,
+        "ACE inhibitors and diuretics"@en ;
+    skos:notation "C09BA" .
+
+<http://linked.opendata.cz/resource/ATC/C09BA03> a ns1:ATCConcept ;
+    dcterms:title "Lisinopril a diuretika"@cs,
+        "Lisinopril and diuretics"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C09>,
+        <http://linked.opendata.cz/resource/ATC/C09B>,
+        <http://linked.opendata.cz/resource/ATC/C09BA> ;
+    skos:notation "C09BA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000431>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026329> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A second-generation histamine H1 receptor antagonist used in the treatment of allergic rhinitis and urticaria. Unlike most classical antihistamines (HISTAMINE H1 ANTAGONISTS) it lacks central nervous system depressing effects such as drowsiness.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0419330> ;
+    ns1:title "Loratadin"@cs,
+        "Loratadine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026771> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000415>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "One of the ANGIOTENSIN-CONVERTING ENZYME INHIBITORS (ACE inhibitors), orally active, that has been used in the treatment of hypertension and congestive heart failure.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Lisinopril"@cs,
+        "Lisinopril"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs whose main indications are the treatment of hypertension and heart failure. They exert their hemodynamic effect mainly by inhibiting the renin-angiotensin system. They also modulate sympathetic nervous system activity and increase prostaglandin synthesis. They cause mainly vasodilation and mild natriuresis without affecting heart rate and contractility.     "@en ;
+    ns1:title "Inhibitory angiotenzin konvertujícího enzymu"@cs,
+        "Angiotensin-converting enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> a ns1:PharmacologicalAction ;
+    ns1:description "Agents, usually topical, that relieve itching (pruritus).     "@en ;
+    ns1:title "Antipruritika"@cs,
+        "Antipruritics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that have a strengthening effect on the heart or that can increase cardiac output. They may be CARDIAC GLYCOSIDES; SYMPATHOMIMETICS; or other drugs. They are used after MYOCARDIAL INFARCT; CARDIAC SURGICAL PROCEDURES; in SHOCK; or in congestive heart failure (HEART FAILURE).     "@en ;
+    ns1:title "Kardiotonika"@cs,
+        "Cardiotonic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat allergic reactions. Most of these drugs act by preventing the release of inflammatory mediators or inhibiting the actions of released mediators on their target cells. (From AMA Drug Evaluations Annual, 1994, p475)     "@en ;
+    ns1:title "Antialergika"@cs,
+        "Anti-allergic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0419330> a ns1:PharmacologicalAction ;
+    ns1:description "A class of non-sedating drugs that bind to but do not activate histamine receptors (DRUG INVERSE AGONISM), thereby blocking the actions of histamine or histamine agonists. These antihistamines represent a heterogenous group of compounds with differing chemical structures, adverse effects, distribution, and metabolism. Compared to the early (first generation) antihistamines, these non-sedating antihistamines have greater receptor specificity, lower penetration of BLOOD-BRAIN BARRIER, and are less likely to cause drowsiness or psychomotor impairment.     "@en ;
+    ns1:title "Histamin h1 - antagonisté nesedativní"@cs,
+        "Histamine h1 antagonists, non-sedating"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000415> a ns1:DiseaseOrFinding ;
+    ns1:title "Angioedém"@cs,
+        "Angioedema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0115688> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BA03> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u pacientů, kteří jsou stabilizovaní při léčbě jednotlivými složkami podávaným ve stejných poměrech.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "133.899993896"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "100.760002136"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-09-14"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154051_doc> ;
+    ns1:hasStrength "10/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30"@cs ;
+    ns1:title "DIROTON PLUS H 10 MG/12,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DIROTON-PLUS-H-10-MG-12-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BA03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026329>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026771> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0115688> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "DIROTON PLUS H 10 MG/12,5 MG TABLETY"@cs .
+
+

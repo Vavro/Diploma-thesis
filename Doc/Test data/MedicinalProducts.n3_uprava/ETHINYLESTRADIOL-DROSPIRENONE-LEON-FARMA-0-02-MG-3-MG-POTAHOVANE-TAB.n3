@@ -1,0 +1,234 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03A> a ns1:ATCConcept ;
+    dcterms:title "Hormonální kontraceptiva k systémové aplikaci"@cs,
+        "HORMONAL CONTRACEPTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "G03A" .
+
+<http://linked.opendata.cz/resource/ATC/G03AA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, fixed combinations"@en ;
+    skos:notation "G03AA" .
+
+<http://linked.opendata.cz/resource/ATC/G03AA12> a ns1:ATCConcept ;
+    dcterms:title "Drospirenon a estrogen"@cs,
+        "Drospirenone and estrogen"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G03>,
+        <http://linked.opendata.cz/resource/ATC/G03A>,
+        <http://linked.opendata.cz/resource/ATC/G03AA> ;
+    skos:notation "G03AA12" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007862> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002135>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A semisynthetic alkylated ESTRADIOL with a 17-alpha-ethinyl substitution. It has high estrogenic potency when administered orally, and is often used as the estrogenic component in ORAL CONTRACEPTIVES.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> ;
+    ns1:title "Ethinylestradiol"@cs,
+        "Ethinyl estradiol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0107880> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000730>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000857>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001714>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001748>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001869>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002135>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003502>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:title "Drospirenone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000730> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebrovaskulární poruchy"@cs,
+        "Cerebrovascular disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000857> a ns1:DiseaseOrFinding ;
+    ns1:title "Koronární nemoc"@cs,
+        "Coronary disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001714> a ns1:DiseaseOrFinding ;
+    ns1:title "Žloutenka"@cs,
+        "Jaundice"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001869> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory jater"@cs,
+        "Liver neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory endometria"@cs,
+        "Endometrial neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004182> a ns1:DiseaseOrFinding ;
+    ns1:title "Syndromy bolesti hlavy"@cs,
+        "Headache disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131972> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "1X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131973> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131974> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131975> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "13X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 13X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163512> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "2X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180422> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "2X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180423> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "1X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 1X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180424> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "3X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 3X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180425> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "6X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 6X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180426> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "13X21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 13X21"@cs ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETHINYLESTRADIOL-DROSPIRENONE-LEON-FARMA-0-02-MG-3-MG-POTAHOVANE-TAB> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AA12> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007862>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0107880> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131972>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131973>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131974>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0131975>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163512>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180422>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180423>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180424>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180425>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180426> ;
+    ns1:title "ETHINYLESTRADIOL/DROSPIRENONE LEÓN FARMA 0,02 MG/3 MG POTAHOVANÉ TAB"@cs .
+
+

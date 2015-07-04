@@ -1,0 +1,270 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AA03> a ns1:ATCConcept ;
+    skos:notation "B01AA03" ;
+    skos:prefLabel "Warfarin"@cs,
+        "Warfarin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022871> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000273>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000353>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000403>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000491>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000781>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000988>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001047>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001066>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001097>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001617>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001815>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002361>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002362>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002473>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002504>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002556>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003136>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003895>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An anticoagulant that acts by inhibiting the synthesis of vitamin K-dependent coagulation factors. Warfarin is indicated for the prophylaxis and/or treatment of venous thrombosis and its extension, pulmonary embolism, and atrial fibrillation with embolization. It is also used as an adjunct in the prophylaxis of systemic embolism after myocardial infarction. Warfarin is also used as a rodenticide.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000164> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/WARFARIN-PMCS-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/WARFARIN-PMCS-5-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019250> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008557> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000724>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000858>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002467>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002541>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004074>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000507>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002467>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002541>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> ;
+    ns1:title "Warfarin"@cs,
+        "Warfarin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that prevent clotting.     "@en ;
+    ns1:title "Antikoagulancia"@cs,
+        "Anticoagulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019250> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used to destroy or inhibit the action of rats, mice, or other rodents.     "@en ;
+    ns1:title "Rodenticidy"@cs,
+        "Rodenticides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000273> a ns1:DiseaseOrFinding ;
+    ns1:description "UTERINE BLEEDING from a GESTATION of less than 20 weeks without any CERVICAL DILATATION. It is characterized by vaginal bleeding, lower back discomfort, or midline pelvic cramping and a risk factor for MISCARRIAGE.     "@en ;
+    ns1:title "Hrozící potrat"@cs,
+        "Abortion, threatened"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000353> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary, chronic disease with genetic, psychosocial, and environmental factors influencing its development and manifestations. The disease is often progressive and fatal. It is characterized by impaired control over drinking, preoccupation with the drug alcohol, use of alcohol despite adverse consequences, and distortions in thinking, most notably denial. Each of these symptoms may be continuous or periodic. (Morse & Flavin for the Joint Commission of the National Council on Alcoholism and Drug Dependence and the American Society of Addiction Medicine to Study the Definition and Criteria for the Diagnosis of Alcoholism: in JAMA 1992;268:1012-4)     "@en ;
+    ns1:title "Alkoholismus"@cs,
+        "Alcoholism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000403> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological outpouching or sac-like dilatation in the wall of any blood vessel (ARTERIES or VEINS) or the heart (HEART ANEURYSM). It indicates a thin and weakened area in the wall which may later rupture. Aneurysms are classified by location, etiology, or other characteristics.     "@en ;
+    ns1:title "Aneurysma"@cs,
+        "Aneurysm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000491> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition due to a dietary deficiency of ascorbic acid (vitamin C), characterized by malaise, lethargy, and weakness. As the disease progresses, joints, muscles, and subcutaneous tissues may become the sites of hemorrhage. Ascorbic acid deficiency frequently develops into SCURVY in young children fed unsupplemented cow's milk exclusively during their first year. It develops also commonly in chronic alcoholism. (Cecil Textbook of Medicine, 19th ed, p1177)     "@en ;
+    ns1:title "Kyselina askorbová - nedostatek"@cs,
+        "Ascorbic acid deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000507> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal cardiac rhythm that is characterized by rapid, uncoordinated firing of electrical impulses in the upper chambers of the heart (HEART ATRIA). In such case, blood cannot be effectively pumped into the lower chambers of the heart (HEART VENTRICLES). It is caused by abnormal impulse generation.     "@en ;
+    ns1:title "Fibrilace síní"@cs,
+        "Atrial fibrillation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000724> a ns1:DiseaseOrFinding ;
+    ns1:description "Brief reversible episodes of focal, nonconvulsive ischemic dysfunction of the brain having a duration of less than 24 hours, and usually less than one hour, caused by transient thrombotic or embolic blood vessel occlusion or stenosis. Events may be classified by arterial distribution, temporal pattern, or etiology (e.g., embolic vs. thrombotic). (From Adams et al., Principles of Neurology, 6th ed, pp814-6)     "@en ;
+    ns1:title "Tranzitorní ischemická ataka"@cs,
+        "Ischemic attack, transient"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000781> a ns1:DiseaseOrFinding ;
+    ns1:description "A deficiency of blood coagulation factor IX inherited as an X-linked disorder. (Also known as Christmas Disease, after the first patient studied in detail, not the holy day.) Historical and clinical features resemble those in classic hemophilia (HEMOPHILIA A), but patients present with fewer symptoms. Severity of bleeding is usually similar in members of a single family. Many patients are asymptomatic until the hemostatic system is stressed by surgery or trauma. Treatment is similar to that for hemophilia A. (From Cecil Textbook of Medicine, 19th ed, p1008)     "@en ;
+    ns1:title "Hemofilie b"@cs,
+        "Hemophilia b"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000858> a ns1:DiseaseOrFinding ;
+    ns1:description "Coagulation of blood in any of the CORONARY VESSELS. The presence of a blood clot (THROMBUS) often leads to MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Koronární trombóza"@cs,
+        "Coronary thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000988> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a DIVERTICULUM or diverticula.     "@en ;
+    ns1:title "Divertikulitida"@cs,
+        "Diverticulitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001047> a ns1:DiseaseOrFinding ;
+    ns1:description "Onset of HYPERREFLEXIA; SEIZURES; or COMA in a previously diagnosed pre-eclamptic patient (PRE-ECLAMPSIA).     "@en ;
+    ns1:title "Eklampsie"@cs,
+        "Eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001066> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical manifestation of excessive LEANNESS usually caused by disease or a lack of nutrition (MALNUTRITION).     "@en ;
+    ns1:title "Vyhublost"@cs,
+        "Emaciation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001097> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOCARDIUM caused by BACTERIA that entered the bloodstream. The strains of bacteria vary with predisposing factors, such as CONGENITAL HEART DEFECTS; HEART VALVE DISEASES; HEART VALVE PROSTHESIS IMPLANTATION; or intravenous drug use.     "@en ;
+    ns1:title "Bakteriální endokarditida"@cs,
+        "Endocarditis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001478> a ns1:DiseaseOrFinding ;
+    ns1:description "The classic hemophilia resulting from a deficiency of factor VIII. It is an inherited disorder of blood coagulation characterized by a permanent tendency to hemorrhage.     "@en ;
+    ns1:title "Hemofilie a"@cs,
+        "Hemophilia a"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001617> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of markedly elevated BLOOD PRESSURE with DIASTOLIC PRESSURE usually greater than 120 mm Hg. Malignant hypertension is characterized by widespread vascular damage, PAPILLEDEMA, retinopathy, HYPERTENSIVE ENCEPHALOPATHY, and renal dysfunction.     "@en ;
+    ns1:title "Hypertenze maligní"@cs,
+        "Hypertension, malignant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002361> a ns1:DiseaseOrFinding ;
+    ns1:description "Fluid accumulation within the PERICARDIUM. Serous effusions are associated with pericardial diseases. Hemopericardium is associated with trauma. Lipid-containing effusion (chylopericardium) results from leakage of THORACIC DUCT. Severe cases can lead to CARDIAC TAMPONADE.     "@en ;
+    ns1:title "Perikardiální efúze"@cs,
+        "Pericardial effusion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002362> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the PERICARDIUM from various origins, such as infection, neoplasm, autoimmune process, injuries, or drug-induced. Pericarditis usually leads to PERICARDIAL EFFUSION, or CONSTRICTIVE PERICARDITIS.     "@en ;
+    ns1:title "Perikarditida"@cs,
+        "Pericarditis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002473> a ns1:DiseaseOrFinding ;
+    ns1:description "A complication of PREGNANCY, characterized by a complex of symptoms including maternal HYPERTENSION and PROTEINURIA with or without pathological EDEMA. Symptoms may range between mild and severe. Pre-eclampsia usually occurs after the 20th week of gestation, but may develop before this time in the presence of trophoblastic disease.     "@en ;
+    ns1:title "Preeklampsie"@cs,
+        "Pre-eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002498> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving the PROSTATE or its component tissues.     "@en ;
+    ns1:title "Prostata - nemoci"@cs,
+        "Prostatic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002504> a ns1:DiseaseOrFinding ;
+    ns1:description "The lack of sufficient energy or protein to meet the body's metabolic demands, as a result of either an inadequate dietary intake of protein, intake of poor quality dietary protein, increased demands due to disease, or increased nutrient losses.     "@en ;
+    ns1:title "Protein-energetická malnutrice"@cs,
+        "Protein-energy malnutrition"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002541> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocking of the PULMONARY ARTERY or one of its branches by an EMBOLUS.     "@en ;
+    ns1:title "Plicní embolie"@cs,
+        "Pulmonary embolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002556> a ns1:DiseaseOrFinding ;
+    ns1:description "Any form of purpura in which the PLATELET COUNT is decreased. Many forms are thought to be caused by immunological mechanisms.     "@en ;
+    ns1:title "Purpura trombocytopenická"@cs,
+        "Purpura, thrombocytopenic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:description "Obstruction of a blood vessel (embolism) by a blood clot (THROMBUS) in the blood stream.     "@en ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003136> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN K in the diet, characterized by an increased tendency to hemorrhage (HEMORRHAGIC DISORDERS). Such bleeding episodes may be particularly severe in newborn infants. (From Cecil Textbook of Medicine, 19th ed, p1182)     "@en ;
+    ns1:title "Vitamin k - nedostatek"@cs,
+        "Vitamin k deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003895> a ns1:DiseaseOrFinding ;
+    ns1:description "Hemorrhage following any surgical procedure. It may be immediate or delayed and is not restricted to the surgical wound.     "@en ;
+    ns1:title "Pooperační hemoragie"@cs,
+        "Postoperative hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004074> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation or presence of a blood clot (THROMBUS) within a vein.     "@en ;
+    ns1:title "Žilní trombóza"@cs,
+        "Venous thrombosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)     "@en ;
+    ns1:title "Cévní mozková příhoda"@cs,
+        "Stroke"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000164> a ns1:MechanismOfAction ;
+    ns1:title "Vitamin K Epoxide Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008556> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Coagulation Factor Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008557> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Coagulation Factor Concentration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/WARFARIN-PMCS-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AA03> ;
+    ns1:title "WARFARIN PMCS 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/WARFARIN-PMCS-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AA03> ;
+    ns1:title "WARFARIN PMCS 5 MG"@cs .
+
+

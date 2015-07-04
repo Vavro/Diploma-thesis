@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G04> a ns1:ATCConcept ;
+    dcterms:title "Urologika"@cs,
+        "UROLOGICALS"@en ;
+    skos:notation "G04" .
+
+<http://linked.opendata.cz/resource/ATC/G04B> a ns1:ATCConcept ;
+    dcterms:title "Jiná urologika včetně spazmolytik"@cs,
+        "OTHER UROLOGICALS, INCL. ANTISPASMODICS"@en ;
+    skos:notation "G04B" .
+
+<http://linked.opendata.cz/resource/ATC/G04BE> a ns1:ATCConcept ;
+    dcterms:title "Léčiva používaná při poruchách erekce"@cs,
+        "Drugs used in erectile dysfunction"@en ;
+    skos:notation "G04BE" .
+
+<http://linked.opendata.cz/resource/ATC/G04BE08> a ns1:ATCConcept ;
+    dcterms:title "Tadalafil"@cs,
+        "Tadalafil"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G04>,
+        <http://linked.opendata.cz/resource/ATC/G04B>,
+        <http://linked.opendata.cz/resource/ATC/G04BE> ;
+    skos:notation "G04BE08" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0431130> a ns1:Ingredient ;
+    ns1:title "Tadalafil"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029256> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04BE08> ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X2.5MG"@cs ;
+    ns1:title "CIALIS 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CIALIS-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04BE08> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0431130> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029256> ;
+    ns1:title "CIALIS 2,5 MG"@cs .
+
+

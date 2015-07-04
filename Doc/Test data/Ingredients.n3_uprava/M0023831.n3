@@ -1,0 +1,120 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D10AD54> a ns1:ATCConcept ;
+    skos:notation "D10AD54" ;
+    skos:prefLabel "Isotretinoin, kombinace"@cs,
+        "Isotretinoin, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/D10BA01> a ns1:ATCConcept ;
+    skos:notation "D10BA01" ;
+    skos:prefLabel "Isotretinoin"@cs,
+        "Isotretinoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023831> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A topical dermatologic agent that is used in the treatment of ACNE VULGARIS and several other skin diseases. The drug has teratogenic and other adverse effects.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNENORMIN-10-MG-MEKKE-TOBOLKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNENORMIN-20-MG-MEKKE-TOBOLKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-10-MG-MEKKA-TOBOLKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-20-MG-MEKKA-TOBOLKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOTREXIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROACCUTANE-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROACCUTANE-20-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021173> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009982> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000288>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000790>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001815>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> ;
+    ns1:title "Isotretinoin"@cs,
+        "Isotretinoin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to treat or prevent skin disorders or for the routine care of skin.     "@en ;
+    ns1:title "Dermatologické látky"@cs,
+        "Dermatologic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021173> a ns1:PharmacologicalAction ;
+    ns1:description "An agent that causes the production of physical defects in the developing embryo.     "@en ;
+    ns1:title "Teratogeny"@cs,
+        "Teratogens"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000288> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disorder of the pilosebaceous apparatus associated with an increase in sebum secretion. It is characterized by open comedones (blackheads), closed comedones (whiteheads), and pustular nodules. The cause is unknown, but heredity and age are predisposing factors.     "@en ;
+    ns1:title "Acne vulgaris"@cs,
+        "Acne vulgaris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000790> a ns1:DiseaseOrFinding ;
+    ns1:description "The fibrous tissue that replaces normal tissue during the process of WOUND HEALING.     "@en ;
+    ns1:title "Jizva"@cs,
+        "Cicatrix"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> a ns1:DiseaseOrFinding ;
+    ns1:description "A common neoplasm of early childhood arising from neural crest cells in the sympathetic nervous system, and characterized by diverse clinical behavior, ranging from spontaneous remission to rapid metastatic progression and death. This tumor is the most common intraabdominal malignancy of childhood, but it may also arise from thorax, neck, or rarely occur in the central nervous system. Histologic features include uniform round cells with hyperchromatic nuclei arranged in nests and separated by fibrovascular septa. Neuroblastomas may be associated with the opsoclonus-myoclonus syndrome. (From DeVita et al., Cancer: Principles and Practice of Oncology, 5th ed, pp2099-2101; Curr Opin Oncol 1998 Jan;10(1):43-51)     "@en ;
+    ns1:title "Neuroblastom"@cs,
+        "Neuroblastoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009982> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sebaceous Gland Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNENORMIN-10-MG-MEKKE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "AKNENORMIN 10 MG MĚKKÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNENORMIN-20-MG-MEKKE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "AKNENORMIN 20 MG MĚKKÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-10-MG-MEKKA-TOBOLKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "CURACNÉ 10 MG MĚKKÁ TOBOLKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-20-MG-MEKKA-TOBOLKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "CURACNÉ 20 MG MĚKKÁ TOBOLKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CURACNE-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "CURACNÉ 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOTREXIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AD54> ;
+    ns1:title "ISOTREXIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROACCUTANE-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "ROACCUTANE 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROACCUTANE-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10BA01> ;
+    ns1:title "ROACCUTANE 20 MG"@cs .
+
+

@@ -1,0 +1,85 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05BA02> a ns1:ATCConcept ;
+    skos:notation "N05BA02" ;
+    skos:prefLabel "Chlordiazepoxid"@cs,
+        "Chlordiazepoxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004133> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An anxiolytic benzodiazepine derivative with anticonvulsant, sedative, and amnesic properties. It has also been used in the symptomatic treatment of alcohol withdrawal.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ELENIUM> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009188> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000353>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000435> ;
+    ns1:title "Chlordiazepoxid"@cs,
+        "Chlordiazepoxide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that alleviate ANXIETY, tension, and ANXIETY DISORDERS, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions. ADRENERGIC BETA-ANTAGONISTS are commonly used in the symptomatic treatment of anxiety but are not included here.     "@en ;
+    ns1:title "Trankvilizéry malé"@cs,
+        "Anti-anxiety agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000353> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary, chronic disease with genetic, psychosocial, and environmental factors influencing its development and manifestations. The disease is often progressive and fatal. It is characterized by impaired control over drinking, preoccupation with the drug alcohol, use of alcohol despite adverse consequences, and distortions in thinking, most notably denial. Each of these symptoms may be continuous or periodic. (Morse & Flavin for the Joint Commission of the National Council on Alcoholism and Drug Dependence and the American Society of Addiction Medicine to Study the Definition and Criteria for the Diagnosis of Alcoholism: in JAMA 1992;268:1012-4)     "@en ;
+    ns1:title "Alkoholismus"@cs,
+        "Alcoholism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000435> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent and disabling ANXIETY.     "@en ;
+    ns1:title "Úzkostné poruchy"@cs,
+        "Anxiety disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118> a ns1:MechanismOfAction ;
+    ns1:title "GABA A Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009188> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELENIUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05BA02> ;
+    ns1:title "ELENIUM"@cs .
+
+

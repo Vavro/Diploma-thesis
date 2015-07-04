@@ -1,0 +1,808 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05B> a ns1:ATCConcept ;
+    dcterms:title "Intravenózní roztoky"@cs,
+        "I.V. SOLUTIONS"@en ;
+    skos:notation "B05B" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB> a ns1:ATCConcept ;
+    dcterms:title "Roztoky ovlivňující rovnováhu elektrolytů"@cs,
+        "Solutions affecting the electrolyte balance"@en ;
+    skos:notation "B05BB" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB01> a ns1:ATCConcept ;
+    dcterms:title "Elektrolyty"@cs,
+        "Electrolytes"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B05>,
+        <http://linked.opendata.cz/resource/ATC/B05B>,
+        <http://linked.opendata.cz/resource/ATC/B05BB> ;
+    skos:notation "B05BB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046065> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046066> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X500ML PL"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X500ML-PE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046067> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X1000ML PL"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X1000MLPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046071> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X250ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X250ML-SKL"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046073> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X1000ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X1000ML-SKL"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046084> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X500ML VAK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X500ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046087> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X1000ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X1000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046090> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X2000ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X2000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047305> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X100ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X100ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047308> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "6X1000ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 6X1000ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047311> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X250ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X250ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047314> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X500ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X500ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050518> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050542> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X1000ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X1000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050633> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "5X2000ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 5X2000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050634> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050676> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X1000ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X1000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050677> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "5X2000ML VA"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 5X2000ML"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050686> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X10ML AMP I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X10ML- LDPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050761> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X20ML AMP I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X20ML- LDPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050973> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100MLPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051245> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X1000ML P"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X1000MLP"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051365> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML-PE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051366> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X100ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X100MLPELAH"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051367> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X250ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X250MLPELAH"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051383> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X500ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X500MLPELAH"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051384> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X1000ML P"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X1000MLPLAH"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096881> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Nosný roztok nebo vehikulum pro ředění kompatibilních koncentrátů elektrolytů nebo léčivých přípravků
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X50ML SKLO"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157799_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X50ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096882> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML SKLO"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096884> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X500ML PL"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X500ML-PE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096885> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasBreakMarketingDate "2013-01-01"^^xsd:date ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasMaximalPrice "43.2599983215"^^xsd:float ;
+    ns1:hasPackagingSize "1X1000ML-P"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "37.8100013733"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2007-07-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X1000MLPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096886> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Nosný roztok nebo vehikulum pro ředění kompatibilních koncentrátů elektrolytů nebo léčivých přípravků
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasMaximalPrice "79.2200012207"^^xsd:float ;
+    ns1:hasPackagingSize "20X10ML AMP I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "7.55999994278"^^xsd:float ;
+    ns1:hasResumedMarketingDate "1998-04-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157799_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML-LDPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096887> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Nosný roztok nebo vehikulum pro ředění kompatibilních koncentrátů elektrolytů nebo léčivých přípravků
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasMaximalPrice "93.5999984741"^^xsd:float ;
+    ns1:hasPackagingSize "20X20ML AMP I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "15.1199998856"^^xsd:float ;
+    ns1:hasResumedMarketingDate "1999-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157799_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X20ML LDPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097682> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasBreakMarketingDate "2013-01-01"^^xsd:date ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasMaximalPrice "22.8899993896"^^xsd:float ;
+    ns1:hasPackagingSize "1X250ML PL"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "9.44999980927"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2007-05-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X250ML-PE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097684> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X250ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X250ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097685> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X500ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X500ML-SKL"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097686> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X1000ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X1000ML-SK"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176754> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """ - náhrada tekutin a elektrolytů při hypochloremické alkalóze
+ - ztráty chloridů
+ - krátkodobé doplnění intravaskulárního objemu
+ - hypotonická nebo isotonická dehydratace
+ - nosný roztok (vehikulum) pro kompatibilní koncentrované elektrolyty a léčivé přípravky
+ - zevně k oplachování ran a zvlhčování jejich obvazů
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X50 ML PE"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131632_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X50 MLPE"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187659> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Nosný roztok nebo vehikulum pro ředění kompatibilních koncentrátů elektrolytů nebo léčivých přípravků
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "100X10ML AMP II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157799_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 100X10ML-PP"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187660> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Nosný roztok nebo vehikulum pro ředění kompatibilních koncentrátů elektrolytů nebo léčivých přípravků
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "100X20ML AMP II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157799_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 100X20ML PP"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORID-SODNY-0-9--BRAUN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046065>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046066>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046067>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046071>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046073>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046084>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046087>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0046090>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047305>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047308>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047311>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0047314>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050518>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050542>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050633>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050634>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050676>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050677>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050686>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050761>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050973>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051245>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051365>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051366>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051367>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051383>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0051384>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096881>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096882>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096884>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096885>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096886>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0096887>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097682>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097684>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097685>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0097686>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176754>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187659>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187660> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CHLORID SODNÝ 0,9% BRAUN"@cs .
+
+

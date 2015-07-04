@@ -1,0 +1,203 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A02BA03> a ns1:ATCConcept ;
+    skos:notation "A02BA03" ;
+    skos:prefLabel "Famotidin"@cs,
+        "Famotidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0024121> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A competitive histamine H2-receptor antagonist. Its main pharmacodynamic effect is the inhibition of gastric secretion.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000151> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FAMOTIDINE-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FAMOTIDINE-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ULFAMID-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ULFAMID-40> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010396> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001008>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001008>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001028>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001165>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001166>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001319>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001444>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001949>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002290>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002351>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002830>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003062>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003088>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003185>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003419>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010972> ;
+    ns1:title "Famotidin"@cs,
+        "Famotidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001340> a ns1:PharmacologicalAction ;
+    ns1:description "Various agents with different action mechanisms used to treat or ameliorate PEPTIC ULCER or irritation of the gastrointestinal tract. This has included ANTIBIOTICS to treat HELICOBACTER INFECTIONS; HISTAMINE H2 ANTAGONISTS to reduce GASTRIC ACID secretion; and ANTACIDS for symptomatic relief.     "@en ;
+    ns1:title "Protivředové látky"@cs,
+        "Anti-ulcer agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010396> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that selectively bind to but do not activate histamine H2 receptors, thereby blocking the actions of histamine. Their clinically most important action is the inhibition of acid secretion in the treatment of gastrointestinal ulcers. Smooth muscle may also be affected. Some drugs in this class have strong effects in the central nervous system, but these actions are not well understood.     "@en ;
+    ns1:title "Histamin h2 - antagonisté"@cs,
+        "Histamine h2 antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001008> a ns1:DiseaseOrFinding ;
+    ns1:description "A PEPTIC ULCER located in the DUODENUM.     "@en ;
+    ns1:title "Dvanáctníkové vředy"@cs,
+        "Duodenal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001028> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired digestion, especially after eating.     "@en ;
+    ns1:title "Dyspepsie"@cs,
+        "Dyspepsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001165> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION, acute or chronic, of the ESOPHAGUS caused by BACTERIA, chemicals, or TRAUMA.     "@en ;
+    ns1:title "Ezofagitida"@cs,
+        "Esophagitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001166> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the ESOPHAGUS that is caused by the reflux of GASTRIC JUICE with contents of the STOMACH and DUODENUM.     "@en ;
+    ns1:title "Peptická ezofagitida"@cs,
+        "Esophagitis, peptic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001319> a ns1:DiseaseOrFinding ;
+    ns1:description "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.     "@en ;
+    ns1:title "Gastroezofageální reflux"@cs,
+        "Gastroesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001444> a ns1:DiseaseOrFinding ;
+    ns1:description "Substernal pain or burning sensation, usually associated with regurgitation of gastric juice into the esophagus.     "@en ;
+    ns1:title "Pyróza"@cs,
+        "Heartburn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001949> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogenous group of disorders characterized by the abnormal increase of MAST CELLS in only the skin (MASTOCYTOSIS, CUTANEOUS), in extracutaneous tissues involving multiple organs (MASTOCYTOSIS, SYSTEMIC), or in solid tumors (MASTOCYTOMA).     "@en ;
+    ns1:title "Mastocytóza"@cs,
+        "Mastocytosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002290> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PANCREAS. Pancreatitis is classified as acute unless there are computed tomographic or endoscopic retrograde cholangiopancreatographic findings of CHRONIC PANCREATITIS (International Symposium on Acute Pancreatitis, Atlanta, 1992). The two most common forms of acute pancreatitis are ALCOHOLIC PANCREATITIS and gallstone pancreatitis.     "@en ;
+    ns1:title "Pankreatitida"@cs,
+        "Pancreatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003088> a ns1:DiseaseOrFinding ;
+    ns1:description "A vascular reaction of the skin characterized by erythema and wheal formation due to localized increase of vascular permeability. The causative mechanism may be allergy, infection, or stress.     "@en ;
+    ns1:title "Urtikarie"@cs,
+        "Urticaria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003185> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome that is characterized by the triad of severe PEPTIC ULCER, hypersecretion of GASTRIC ACID, and GASTRIN-producing tumors of the PANCREAS or other tissue (GASTRINOMA). This syndrome may be sporadic or be associated with MULTIPLE ENDOCRINE NEOPLASIA TYPE 1.     "@en ;
+    ns1:title "Zollingerův-ellisonův syndrom"@cs,
+        "Zollinger-ellison syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with organisms of the genus HELICOBACTER, particularly, in humans, HELICOBACTER PYLORI. The clinical manifestations are focused in the stomach, usually the gastric mucosa and antrum, and the upper duodenum. This infection plays a major role in the pathogenesis of type B gastritis and peptic ulcer disease.     "@en ;
+    ns1:title "Helicobacter - infekce"@cs,
+        "Helicobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010972> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of disorders caused by the abnormal proliferation of MAST CELLS in a variety of extracutaneous tissues including bone marrow, liver, spleen, lymph nodes, and gastrointestinal tract. Systemic mastocytosis is commonly seen in adults. These diseases are categorized on the basis of clinical features, pathologic findings, and prognosis.     "@en ;
+    ns1:title "Systémová mastocytóza"@cs,
+        "Mastocytosis, systemic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000151> a ns1:MechanismOfAction ;
+    ns1:title "Histamine H2 Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Histamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009724> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibition Gastric Acid Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FAMOTIDINE-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "APO-FAMOTIDINE 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FAMOTIDINE-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "APO-FAMOTIDINE 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "FAMOSAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "FAMOSAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FAMOSAN-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "FAMOSAN 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "QUAMATEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "QUAMATEL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/QUAMATEL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "QUAMATEL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULFAMID-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "ULFAMID 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULFAMID-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BA03> ;
+    ns1:title "ULFAMID 40"@cs .
+
+

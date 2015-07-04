@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01XA02> a ns1:ATCConcept ;
+    skos:notation "S01XA02" ;
+    skos:prefLabel "Retinol"@cs,
+        "Retinol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022788> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Retinol and derivatives of retinol that play an essential role in metabolic functioning of the retina, the growth of and differentiation of epithelial tissue, the growth of bone, reproduction, and the immune response. Dietary vitamin A is derived from a variety of CAROTENOIDS found in plants. It is enriched in the liver, egg yolks, and the fat component of dairy products.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-A-POS> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003131> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000939>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002198>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002396>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003131>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003178> ;
+    ns1:title "Vitamin a"@cs,
+        "Vitamin a"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> a ns1:PharmacologicalAction ;
+    ns1:description "Organic substances that are required in small amounts for maintenance and growth, but which cannot be manufactured by the human body.     "@en ;
+    ns1:title "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002198> a ns1:DiseaseOrFinding ;
+    ns1:description "Failure or imperfection of vision at night or in dim light, with good vision only on bright days. (Dorland, 27th ed)     "@en ;
+    ns1:title "Noční slepota"@cs,
+        "Night blindness"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002396> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal responses to sunlight or artificial light due to extreme reactivity of light-absorbing molecules in tissues. It refers almost exclusively to skin photosensitivity, including sunburn, reactions due to repeated prolonged exposure in the absence of photosensitizing factors, and reactions requiring photosensitizing factors such as photosensitizing agents and certain diseases. With restricted reference to skin tissue, it does not include photosensitivity of the eye to light, as in photophobia or photosensitive epilepsy.     "@en ;
+    ns1:title "Poruchy fotosenzitivity"@cs,
+        "Photosensitivity disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003131> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN A in the diet, characterized by NIGHT BLINDNESS and other ocular manifestations such as dryness of the conjunctiva and later of the cornea (XEROPHTHALMIA). Vitamin A deficiency is a very common problem worldwide, particularly in developing countries as a consequence of famine or shortages of vitamin A-rich foods. In the United States it is found among the urban poor, the elderly, alcoholics, and patients with malabsorption. (From Cecil Textbook of Medicine, 19th ed, p1179)     "@en ;
+    ns1:title "Nedostatek vitaminu a"@cs,
+        "Vitamin a deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003178> a ns1:DiseaseOrFinding ;
+    ns1:description "Dryness of the eye surfaces caused by deficiency of tears or conjunctival secretions. It may be associated with vitamin A deficiency, trauma, or any condition in which the eyelids do not close completely.     "@en ;
+    ns1:title "Xeroftalmie"@cs,
+        "Xerophthalmia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> a ns1:MechanismOfAction ;
+    ns1:title "Free Radical Scavenging Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-A-POS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01XA02> ;
+    ns1:title "VITAMIN A-POS"@cs .
+
+

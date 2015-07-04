@@ -1,0 +1,208 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06D> a ns1:ATCConcept ;
+    dcterms:title "Léčiva proti demenci"@cs,
+        "ANTI-DEMENTIA DRUGS"@en ;
+    skos:notation "N06D" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA> a ns1:ATCConcept ;
+    dcterms:title "Anticholinesterázy"@cs,
+        "Anticholinesterases"@en ;
+    skos:notation "N06DA" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA02> a ns1:ATCConcept ;
+    dcterms:title "Donepezil"@cs,
+        "Donepezil"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06D>,
+        <http://linked.opendata.cz/resource/ATC/N06DA> ;
+    skos:notation "N06DA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0206795> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> ;
+    ns1:title "Donepezil"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154020> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154021> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "120"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 120X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154022> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "50 H"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154023> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154024> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154025> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasMaximalPrice "552.349975586"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "552.359985352"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154026> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154027> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154028> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154029> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154030> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Donepezil hydrochlorid je indikován k symptomatické léčbě mírné až středně těžké Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC112126_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X5MG"@cs ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALZIL-5-MG--POTAHOVANA-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0206795> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154020>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154021>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154022>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154023>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154024>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154025>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154026>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154027>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154028>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154029>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0154030> ;
+    ns1:title "ALZIL 5 MG, POTAHOVANÁ TABLETA"@cs .
+
+

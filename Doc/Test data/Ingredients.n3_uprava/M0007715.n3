@@ -1,0 +1,188 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D10AD54> a ns1:ATCConcept ;
+    skos:notation "D10AD54" ;
+    skos:prefLabel "Isotretinoin, kombinace"@cs,
+        "Isotretinoin, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/D10AF02> a ns1:ATCConcept ;
+    skos:notation "D10AF02" ;
+    skos:prefLabel "Erythromycin"@cs,
+        "Erythromycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/D10AF52> a ns1:ATCConcept ;
+    skos:notation "D10AF52" ;
+    skos:prefLabel "Erythromycin, kombinace"@cs,
+        "Erythromycin, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007715> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> ;
+    ns1:description "A bacteriostatic antibiotic macrolide produced by Streptomyces erythreus. Erythromycin A is considered its major active component. In sensitive organisms, it inhibits protein synthesis by binding to 50S ribosomal subunits. This binding process inhibits peptidyl transferase activity and interferes with translocation of amino acids during translation and assembly of proteins.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-2000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-PLUS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ERYFLUID>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOTREXIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZINERYT> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000288>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000741>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000754>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001148>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001317>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001380>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001800>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002073>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002817>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002837>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002881>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003163>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> ;
+    ns1:title "Erythromycin"@cs,
+        "Erythromycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their effects on the gastrointestinal system, as to control gastric acidity, regulate gastrointestinal motility and water flow, and improve digestion.     "@en ;
+    ns1:title "Gastrointestinální látky"@cs,
+        "Gastrointestinal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000288> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disorder of the pilosebaceous apparatus associated with an increase in sebum secretion. It is characterized by open comedones (blackheads), closed comedones (whiteheads), and pustular nodules. The cause is unknown, but heredity and age are predisposing factors.     "@en ;
+    ns1:title "Acne vulgaris"@cs,
+        "Acne vulgaris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000649> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus CAMPYLOBACTER.     "@en ;
+    ns1:title "Campylobacter - infekce"@cs,
+        "Campylobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000741> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute, localized autoinoculable infectious disease usually acquired through sexual contact. Caused by HAEMOPHILUS DUCREYI, it occurs endemically almost worldwide, especially in tropical and subtropical countries and more commonly in seaports and urban areas than in rural areas.     "@en ;
+    ns1:title "Vřed měkký"@cs,
+        "Chancroid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000754> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus CHLAMYDIA.     "@en ;
+    ns1:title "Chlamydiové infekce"@cs,
+        "Chlamydia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001148> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic bacterial infection of major folds of the skin, caused by Corynebacterium minutissimum.     "@en ;
+    ns1:title "Erytrazma"@cs,
+        "Erythrasma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001317> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM. Causes of gastroenteritis are many including genetic, infection, HYPERSENSITIVITY, drug effects, and CANCER.     "@en ;
+    ns1:title "Gastroenteritida"@cs,
+        "Gastroenteritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001800> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute, sometimes fatal, pneumonia-like bacterial infection characterized by high fever, malaise, muscle aches, respiratory disorders and headache. It is named for an outbreak at the 1976 Philadelphia convention of the American Legion.     "@en ;
+    ns1:title "Legionářská nemoc"@cs,
+        "Legionnaires' disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002073> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with species of the genus MYCOPLASMA.     "@en ;
+    ns1:title "Mycoplasma - infekce"@cs,
+        "Mycoplasma infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> a ns1:DiseaseOrFinding ;
+    ns1:description "A contagious venereal disease caused by the spirochete TREPONEMA PALLIDUM.     "@en ;
+    ns1:title "Syfilis"@cs,
+        "Syphilis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003076> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation involving the URETHRA. Similar to CYSTITIS, clinical symptoms range from vague discomfort to painful urination (DYSURIA), urethral discharge, or both.     "@en ;
+    ns1:title "Uretritida"@cs,
+        "Urethritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003163> a ns1:DiseaseOrFinding ;
+    ns1:description "A respiratory infection caused by BORDETELLA PERTUSSIS and characterized by paroxysmal coughing ending in a prolonged crowing intake of breath.     "@en ;
+    ns1:title "Pertuse"@cs,
+        "Whooping cough"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AF02> ;
+    ns1:title "AKNEMYCIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-2000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AF02> ;
+    ns1:title "AKNEMYCIN 2000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNEMYCIN-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AF52> ;
+    ns1:title "AKNEMYCIN PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ERYFLUID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AF02> ;
+    ns1:title "ERYFLUID"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOTREXIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AD54> ;
+    ns1:title "ISOTREXIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZINERYT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AF52> ;
+    ns1:title "ZINERYT"@cs .
+
+

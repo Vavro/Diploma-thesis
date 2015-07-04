@@ -1,0 +1,164 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D11AX10> a ns1:ATCConcept ;
+    skos:notation "D11AX10" ;
+    skos:prefLabel "Finasterid"@cs,
+        "Finasteride"@en .
+
+<http://linked.opendata.cz/resource/ATC/G04CB01> a ns1:ATCConcept ;
+    skos:notation "G04CB01" ;
+    skos:prefLabel "Finasterid"@cs,
+        "Finasteride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027324> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> ;
+    ns1:description "An orally active 3-OXO-5-ALPHA-STEROID 4-DEHYDROGENASE inhibitor. It is used as a surgical alternative for treatment of benign PROSTATIC HYPERPLASIA.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000126> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROFIN-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FINAS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINAJELF-5-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINANORM-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINARD-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-MYLAN-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-ORION-5-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-ZENTIVA-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERIDE-ACCORD-1-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERIDE-ACCORD-5-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FINPROS-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GEFIN-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HYPLAFIN-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENESTER>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROPECIA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545267> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009936> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000358>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001543>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002499>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002500>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003353> ;
+    ns1:title "Finasterid"@cs,
+        "Finasteride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545267> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit 3-OXO-5-ALPHA-STEROID 4-DEHYDROGENASE. They are commonly used to reduce the production of DIHYDROTESTOSTERONE.     "@en ;
+    ns1:title "5-alfa-reduktasa - inhibitory"@cs,
+        "5-alpha reductase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000358> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of hair from areas where it is normally present.     "@en ;
+    ns1:title "Alopecie"@cs,
+        "Alopecia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001543> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition observed in WOMEN and CHILDREN when there is excess coarse body hair of an adult male distribution pattern, such as facial and chest areas. It is the result of elevated ANDROGENS from the OVARIES, the ADRENAL GLANDS, or exogenous sources. The concept does not include HYPERTRICHOSIS, which is an androgen-independent excessive hair growth.     "@en ;
+    ns1:title "Hirzutismus"@cs,
+        "Hirsutism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002499> a ns1:DiseaseOrFinding ;
+    ns1:title "Prostatic hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003353> a ns1:DiseaseOrFinding ;
+    ns1:description "Inability to empty the URINARY BLADDER with voiding (URINATION).     "@en ;
+    ns1:title "Retence moči"@cs,
+        "Urinary retention"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> a ns1:DiseaseOrFinding ;
+    ns1:description "A person 6 to 12 years of age. An individual 2 to 5 years old is CHILD, PRESCHOOL.     "@en ;
+    ns1:title "Dítě"@cs,
+        "Child"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000126> a ns1:MechanismOfAction ;
+    ns1:title "5-alpha Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009936> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Dihydrotestosterone Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANDROFIN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "ANDROFIN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-FINAS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "APO-FINAS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINAJELF-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINAJELF 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINANORM-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINANORM 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINARD-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINARD 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-MYLAN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINASTERID MYLAN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-ORION-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINASTERID ORION 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERID-ZENTIVA-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINASTERID ZENTIVA 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERIDE-ACCORD-1-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX10> ;
+    ns1:title "FINASTERIDE ACCORD 1 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINASTERIDE-ACCORD-5-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINASTERIDE ACCORD 5 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FINPROS-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "FINPROS 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GEFIN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "GEFIN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HYPLAFIN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "HYPLAFIN 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENESTER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB01> ;
+    ns1:title "PENESTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROPECIA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX10> ;
+    ns1:title "PROPECIA"@cs .
+
+

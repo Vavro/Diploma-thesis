@@ -1,0 +1,145 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L04AD02> a ns1:ATCConcept ;
+    skos:notation "L04AD02" ;
+    skos:prefLabel "Takrolimus"@cs,
+        "Tacrolimus  "@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025261> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A macrolide isolated from the culture broth of a strain of Streptomyces tsukubaensis that has strong immunosuppressive activity in vivo and prevents the activation of T-lymphocytes in response to antigenic or mitogenic stimulation in vitro.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-5-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-5-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008344>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008573>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008998> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000943>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> ;
+    ns1:title "Takrolimus"@cs,
+        "Tacrolimus"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000943> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory genetically determined disease of the skin marked by increased ability to form reagin (IgE), with increased susceptibility to allergic rhinitis and asthma, and hereditary disposition to a lowered threshold for pruritus. It is manifested by lichenification, excoriation, and crusting, mainly on the flexural surfaces of the elbow and knee. In infants it is known as infantile eczema.     "@en ;
+    ns1:title "Atopická dermatitida"@cs,
+        "Dermatitis, atopic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> a ns1:DiseaseOrFinding ;
+    ns1:description "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.     "@en ;
+    ns1:title "Nemoc štěpu proti hostiteli"@cs,
+        "Graft vs host disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008344> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Growth Phase Arrest"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008573> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cytokine Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008998> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased T Lymphocyte Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "ADVAGRAF 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "ADVAGRAF 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "ADVAGRAF 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADVAGRAF-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "ADVAGRAF 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "GECROL 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "GECROL 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GECROL-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "GECROL 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "PROGRAF 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "PROGRAF 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "PROGRAF 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROGRAF-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "PROGRAF 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACNI 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACNI 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACNI-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACNI 5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACROLIMUS MYLAN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACROLIMUS MYLAN 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TACROLIMUS-MYLAN-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:title "TACROLIMUS MYLAN 5 MG"@cs .
+
+

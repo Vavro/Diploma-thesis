@@ -1,0 +1,63 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01G> a ns1:ATCConcept ;
+    dcterms:title "Dekongesční léčiva a antialergika"@cs,
+        "DECONGESTANTS AND ANTIALLERGICS"@en ;
+    skos:notation "S01G" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antialergika"@cs,
+        "Other antiallergics"@en ;
+    skos:notation "S01GX" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX07> a ns1:ATCConcept ;
+    dcterms:title "Azelastin"@cs,
+        "Azelastine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/S>,
+        <http://linked.opendata.cz/resource/ATC/S01>,
+        <http://linked.opendata.cz/resource/ATC/S01G>,
+        <http://linked.opendata.cz/resource/ATC/S01GX> ;
+    skos:notation "S01GX07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0314382> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Azelastine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0189422> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX07> ;
+    ns1:hasIndication """Symptomatická léčba a prevence sezónní alergické konjunktivitidy u dospělých a dětí od 4 let. 
+Symptomatická léčba a prevence nesezónní (celoroční) alergické konjunktivitidy u dospělých a dětí od 12 let.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC159663_doc> ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X10ML/5MG"@cs ;
+    ns1:title "AZELASTIN URSAPHARM 0,5 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AZELASTIN-URSAPHARM-0-5-MG-ML-OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX07> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0314382> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0189422> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "AZELASTIN URSAPHARM 0,5 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+

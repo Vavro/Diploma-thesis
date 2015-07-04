@@ -1,0 +1,155 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03F> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny v kombinaci"@cs,
+        "PROGESTOGENS AND ESTROGENS IN COMBINATION"@en ;
+    skos:notation "G03F" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, combinations"@en ;
+    skos:notation "G03FA" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA12> a ns1:ATCConcept ;
+    dcterms:title "Medroxyprogesteron a estrogen"@cs,
+        "Medroxyprogesterone and estrogen"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G03>,
+        <http://linked.opendata.cz/resource/ATC/G03F>,
+        <http://linked.opendata.cz/resource/ATC/G03FA> ;
+    skos:notation "G03FA12" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026185> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A synthetic progestin that is derived from 17-hydroxyprogesterone. It is a long-acting contraceptive that is effective both orally or by intramuscular injection and has also been used to treat breast and endometrial neoplasms.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005103>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005104>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Medroxyprogesteronacetát"@cs,
+        "Medroxyprogesterone acetate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065463> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002135>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002934>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:title "Estradiol valerate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005103> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances or agents with contraceptive activity in females. Use for female contraceptive agents in general or for which there is no specific heading.     "@en ;
+    ns1:title "Antikoncepční látky ženské"@cs,
+        "Contraceptive agents, female"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005104> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances or agents with contraceptive activity in males. Use for male contraceptive agents in general or for which there is no specific heading.     "@en ;
+    ns1:title "Antikoncepční látky mužské"@cs,
+        "Contraceptive agents, male"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002934> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboembolie"@cs,
+        "Thromboembolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013510> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA12> ;
+    ns1:hasIndication """Hormonální substituční terapie (HRT) při symptomech z nedostatku estrogenů u žen s neporušenou dělohou, které jsou více než tři roky po menopauze.
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu 
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "260.089996338"^^xsd:float ;
+    ns1:hasPackagingSize "1X28=28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "63.2999992371"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC103947_doc> ;
+    ns1:hasStrength "1+2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28"@cs ;
+    ns1:title "INDIVINA 1 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013511> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA12> ;
+    ns1:hasIndication """Hormonální substituční terapie (HRT) při symptomech z nedostatku estrogenů u žen s neporušenou dělohou, které jsou více než tři roky po menopauze.
+Pro preventivní léčbu osteoporózy u postmenopauzálních žen s vysokým rizikem budoucích fraktur, které netolerují, nebo mají kontraindikovánu jinou preventivní léčbu osteoporózy a u kterých jiná léčba prokazatelně nevykazuje léčebnou odezvu 
+Zkušenosti s léčbou pacientek starších než 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "856.710021973"^^xsd:float ;
+    ns1:hasPackagingSize "3X28=84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "189.919998169"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC103947_doc> ;
+    ns1:hasStrength "1+2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 3X28"@cs ;
+    ns1:title "INDIVINA 1 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INDIVINA-1-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA12> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026185>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0065463> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013510>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0013511> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "INDIVINA 1 MG/2,5 MG"@cs .
+
+

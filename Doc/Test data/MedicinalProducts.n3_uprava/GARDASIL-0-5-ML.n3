@@ -1,0 +1,198 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J07> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny"@cs,
+        "VACCINES"@en ;
+    skos:notation "J07" .
+
+<http://linked.opendata.cz/resource/ATC/J07B> a ns1:ATCConcept ;
+    dcterms:title "Virové vakcíny"@cs,
+        "VIRAL VACCINES"@en ;
+    skos:notation "J07B" .
+
+<http://linked.opendata.cz/resource/ATC/J07BM> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny proti papilomaviru"@cs,
+        "Papillomavirus vaccines"@en ;
+    skos:notation "J07BM" .
+
+<http://linked.opendata.cz/resource/ATC/J07BM01> a ns1:ATCConcept ;
+    dcterms:title "Papilomavirus lidský (typ 6, 11, 16, 18)"@cs,
+        "Papillomavirus (human types 6, 11, 16,18)"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J07>,
+        <http://linked.opendata.cz/resource/ATC/J07B>,
+        <http://linked.opendata.cz/resource/ATC/J07BM> ;
+    skos:notation "J07BM01" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017651> a ns1:Ingredient ;
+    ns1:title "Protein lidského papillomaviru typu 6"@cs,
+        "Human papillomavirus type 6 l1 protein"@en,
+        "Papillomaviri humani typus 6 proteinum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017652> a ns1:Ingredient ;
+    ns1:title "Protein lidského papillomaviru typu 11"@cs,
+        "Human papillomavirus type 11 l1 protein"@en,
+        "Papillomaviri humani typus 11 proteinum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017653> a ns1:Ingredient ;
+    ns1:title "Protein lidského papillomaviru typu 11"@cs,
+        "Human papillomavirus type 11 l1 protein"@en,
+        "Papillomaviri humani typus 16 proteinum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017654> a ns1:Ingredient ;
+    ns1:title "Protein lidského papillomaviru typu 18"@cs,
+        "Human papillomavirus type 18 l1 protein"@en,
+        "Papillomaviri humani typus 18 proteinum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027879> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 1X0,5ML"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027880> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 10X0,5ML"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027881> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10XPS"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 10X0,5ML PS"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027882> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1XPS"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 1X0,5ML PS"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027883> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1PS+J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 1X0,5ML PS+J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027884> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10PS+10J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 10X0,5ML PS+10J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027885> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10PS+20J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 10X0,5ML PS+20J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027886> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1PS+2J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 1X0,5ML PS+2J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029370> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 20X0,5ML"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029372> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20PS+20J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 20X0,5ML PS+20J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029373> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20PS"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 20X0,5ML PS"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029374> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "20PS+40J"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intramuskulární podání"@cs ;
+    ns1:hasStrength "0,5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SUS 20X0,5ML PS+40J"@cs ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GARDASIL-0-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07BM01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017651>,
+        <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017652>,
+        <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017653>,
+        <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0017654> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027879>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027880>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027881>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027882>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027883>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027884>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027885>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027886>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029370>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029372>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029373>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029374> ;
+    ns1:title "GARDASIL 0,5 ML"@cs .
+
+

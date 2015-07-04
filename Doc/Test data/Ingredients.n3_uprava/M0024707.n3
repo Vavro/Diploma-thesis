@@ -1,0 +1,167 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01XA02> a ns1:ATCConcept ;
+    skos:notation "L01XA02" ;
+    skos:prefLabel "Karboplatina"@cs,
+        "Carboplatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0024707> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An organoplatinum compound that possesses antineoplastic activity.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOMEDAC-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-ACCORD-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-EBEWE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-HOSPIRA-10-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-KABI-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOSOL-10-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-150>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-450>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-50> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000564>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000589>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001162>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001883>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002132>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002274>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002678>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003434>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003502>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000181048> ;
+    ns1:title "Karboplatina"@cs,
+        "Carboplatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349> a ns1:PharmacologicalAction ;
+    ns1:description "Reagents with two reactive groups, usually at opposite ends of the molecule, that are capable of reacting with and thereby forming bridges between side chains of amino acids in proteins; the locations of naturally reactive areas within proteins can thereby be identified; may also be used for other macromolecules, like glycoproteins, nucleic acids, or other.     "@en ;
+    ns1:title "Reagencia zkříženě vázaná"@cs,
+        "Cross-linking reagents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000564> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nádory"@cs,
+        "Urinary bladder neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000589> a ns1:DiseaseOrFinding ;
+    ns1:title "Kostní dřeň - nemoci"@cs,
+        "Bone marrow diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001162> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the ESOPHAGUS.     "@en ;
+    ns1:title "Nádory jícnu"@cs,
+        "Esophageal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001883> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LUNG.     "@en ;
+    ns1:title "Plíce - nádory"@cs,
+        "Lung neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002132> a ns1:DiseaseOrFinding ;
+    ns1:description "Neoplasms composed of primordial GERM CELLS of embryonic GONADS or of elements of the germ layers of the EMBRYO, MAMMALIAN. The concept does not refer to neoplasms located in the gonads or present in an embryo or FETUS.     "@en ;
+    ns1:title "Germinální a embryonální nádory"@cs,
+        "Neoplasms, germ cell and embryonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002678> a ns1:DiseaseOrFinding ;
+    ns1:description "A sarcoma originating in bone-forming cells, affecting the ends of long bones. It is the most common and most malignant of sarcomas of the bones, and occurs chiefly among 10- to 25-year-old youths. (From Stedman, 25th ed)     "@en ;
+    ns1:title "Osteosarkom"@cs,
+        "Osteosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003434> a ns1:DiseaseOrFinding ;
+    ns1:description "Benign and malignant neoplastic processes that arise from or secondarily involve the brain, spinal cord, or meninges.     "@en ;
+    ns1:title "Nádory centrálního nervového systému"@cs,
+        "Central nervous system neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of ENDOMETRIUM, the mucous lining of the UTERUS. These neoplasms can be benign or malignant. Their classification and grading are based on the various cell types and the percent of undifferentiated cells.     "@en ;
+    ns1:title "Nádory endometria"@cs,
+        "Endometrial neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181048> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of highly malignant lung cancer that is composed of small ovoid cells (SMALL CELL CARCINOMA).     "@en ;
+    ns1:title "Malobuněčný karcinom plic"@cs,
+        "Small cell lung carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOMEDAC-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOMEDAC 10 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-ACCORD-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOPLATIN ACCORD 10 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-EBEWE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOPLATIN \"EBEWE\""@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-HOSPIRA-10-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOPLATIN HOSPIRA 10 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOPLATIN-KABI-10-MG-ML-KONCENTRAT-PRO-PRIPRAVU-INFUZNIHO-ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOPLATIN KABI 10 MG/ML KONCENTRÁT PRO PŘÍPRAVU INFUZNÍHO ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARBOSOL-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CARBOSOL 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CYCLOPLATIN 150"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-450> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CYCLOPLATIN 450"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLOPLATIN-50> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA02> ;
+    ns1:title "CYCLOPLATIN 50"@cs .
+
+

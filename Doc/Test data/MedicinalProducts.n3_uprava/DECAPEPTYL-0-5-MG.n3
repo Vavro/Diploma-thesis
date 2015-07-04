@@ -1,0 +1,66 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02A> a ns1:ATCConcept ;
+    dcterms:title "Hormony a příbuzné látky"@cs,
+        "HORMONES AND RELATED AGENTS"@en ;
+    skos:notation "L02A" .
+
+<http://linked.opendata.cz/resource/ATC/L02AE> a ns1:ATCConcept ;
+    dcterms:title "Analogy gonadotropin-releasing hormonu"@cs,
+        "Gonadotropin releasing hormone analogues"@en ;
+    skos:notation "L02AE" .
+
+<http://linked.opendata.cz/resource/ATC/L02AE04> a ns1:ATCConcept ;
+    dcterms:title "Triptorelin"@cs,
+        "Triptorelin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L02>,
+        <http://linked.opendata.cz/resource/ATC/L02A>,
+        <http://linked.opendata.cz/resource/ATC/L02AE> ;
+    skos:notation "L02AE04" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0010211> a ns1:Ingredient ;
+    ns1:title "Triptorelin-acetát"@cs,
+        "Triptorelin acetate"@en,
+        "Triptorelini acetas"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0091780> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02AE04> ;
+    ns1:hasIndication """Přípravek Decapeptyl je indikován 
+Muži:
+K léčení pokročilé rakoviny prostaty, při kterém je potřebné potlačení tvorby testosteronu;
+Ženy:
+K supresi hypofyzární hormonogeneze před kontrolovanou ovariální hyperstimulací (COS) a v jejím průběhu  při asistované reprodukci.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "7X1ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156015_doc> ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 7X1ML/0.5MG"@cs ;
+    ns1:title "DECAPEPTYL 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DECAPEPTYL-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02AE04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0010211> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0091780> ;
+    ns1:title "DECAPEPTYL 0,5 MG"@cs .
+
+

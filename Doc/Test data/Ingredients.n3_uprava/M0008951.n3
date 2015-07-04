@@ -1,0 +1,113 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N06DA04> a ns1:ATCConcept ;
+    skos:notation "N06DA04" ;
+    skos:prefLabel "Galantamin"@cs,
+        "Galantamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008951> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> ;
+    ns1:description "A benzazepine derived from norbelladine. It is found in GALANTHUS and other AMARYLLIDACEAE. It is a cholinesterase inhibitor that has been used to reverse the muscular effects of GALLAMINE TRIETHIODIDE and TUBOCURARINE and has been studied as a treatment for ALZHEIMER DISEASE and other central nervous system disorders.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000177> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-16-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-24-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-8-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-16-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-24-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-8-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004295>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015925>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028009> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009178>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009342>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009585> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000363>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000914> ;
+    ns1:title "Galantamin"@cs,
+        "Galantamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004295> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit cholinesterases. The neurotransmitter ACETYLCHOLINE is rapidly hydrolyzed, and thereby inactivated, by cholinesterases. When cholinesterases are inhibited, the action of endogenously released acetylcholine at cholinergic synapses is potentiated. Cholinesterase inhibitors are widely used clinically for their potentiation of cholinergic inputs to the gastrointestinal tract and urinary bladder, the eye, and skeletal muscles; they are also used for their effects on the heart and the central nervous system.     "@en ;
+    ns1:title "Cholinesterasa - inhibitory"@cs,
+        "Cholinesterase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015925> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of parasympathetic nervous system activity. Included here are drugs that directly stimulate muscarinic receptors and drugs that potentiate cholinergic activity, usually by slowing the breakdown of acetylcholine (CHOLINESTERASE INHIBITORS). Drugs that stimulate both sympathetic and parasympathetic postganglionic neurons (GANGLIONIC STIMULANTS) are not included here.     "@en ;
+    ns1:title "Parasympatomimetika"@cs,
+        "Parasympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028009> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to specifically facilitate learning or memory, particularly to prevent the cognitive deficits associated with dementias. These drugs act by a variety of mechanisms. While no potent nootropic drugs have yet been accepted for general use, several are being actively investigated.     "@en ;
+    ns1:title "Nootropní látky"@cs,
+        "Nootropic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000363> a ns1:DiseaseOrFinding ;
+    ns1:description "A degenerative disease of the BRAIN characterized by the insidious onset of DEMENTIA. Impairment of MEMORY, judgment, attention span, and problem solving skills are followed by severe APRAXIAS and a global loss of cognitive abilities. The condition primarily occurs after age 60, and is marked pathologically by severe cortical atrophy and the triad of SENILE PLAQUES; NEUROFIBRILLARY TANGLES; and NEUROPIL THREADS. (From Adams et al., Principles of Neurology, 6th ed, pp1049-57)     "@en ;
+    ns1:title "Alzheimerova nemoc"@cs,
+        "Alzheimer disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000914> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.     "@en ;
+    ns1:title "Demence"@cs,
+        "Dementia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000177> a ns1:MechanismOfAction ;
+    ns1:title "Cholinesterase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009178> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009342> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glutamate Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009585> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-16-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN MYLAN 16 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-24-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN MYLAN 24 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-MYLAN-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN MYLAN 8 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-16-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN TEVA 16 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-24-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN TEVA 24 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GALANTAMIN-TEVA-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA04> ;
+    ns1:title "GALANTAMIN TEVA 8 MG"@cs .
+
+

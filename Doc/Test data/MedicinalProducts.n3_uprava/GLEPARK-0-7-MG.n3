@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N04> a ns1:ATCConcept ;
+    dcterms:title "Antiparkinsonika"@cs,
+        "ANTI-PARKINSON DRUGS"@en ;
+    skos:notation "N04" .
+
+<http://linked.opendata.cz/resource/ATC/N04B> a ns1:ATCConcept ;
+    dcterms:title "Dopaminergní léčiva"@cs,
+        "DOPAMINERGIC AGENTS"@en ;
+    skos:notation "N04B" .
+
+<http://linked.opendata.cz/resource/ATC/N04BC> a ns1:ATCConcept ;
+    dcterms:title "Agonisté dopaminu"@cs,
+        "Dopamine agonists"@en ;
+    skos:notation "N04BC" .
+
+<http://linked.opendata.cz/resource/ATC/N04BC05> a ns1:ATCConcept ;
+    dcterms:title "Pramipexol"@cs,
+        "Pramipexole"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N04>,
+        <http://linked.opendata.cz/resource/ATC/N04B>,
+        <http://linked.opendata.cz/resource/ATC/N04BC> ;
+    skos:notation "N04BC05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0170120> a ns1:Ingredient ;
+    ns1:title "Pramipexole"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134077> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC05> ;
+    ns1:hasIndication """Přípravek Glepark je určen k léčbě známek a příznaků idiopatické Parkinsonovy nemoci u dospělých, jako samostatná léčba (bez užívání přípravku levodopa) nebo v kombinaci s přípravkem levodopa, tj. po celou dobu průběhu nemoci až do pozdního stádia choroby, kdy přípravek ztrácí účinnost nebo jeho účinnost není trvalá, čímž dochází ke kolísání léčebného účinku (poslední dávka nebo „on-off“ fluktuace).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156092_doc> ;
+    ns1:hasStrength "0.70MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X0.70MG"@cs ;
+    ns1:title "GLEPARK 0,7 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134078> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC05> ;
+    ns1:hasIndication """Přípravek Glepark je určen k léčbě známek a příznaků idiopatické Parkinsonovy nemoci u dospělých, jako samostatná léčba (bez užívání přípravku levodopa) nebo v kombinaci s přípravkem levodopa, tj. po celou dobu průběhu nemoci až do pozdního stádia choroby, kdy přípravek ztrácí účinnost nebo jeho účinnost není trvalá, čímž dochází ke kolísání léčebného účinku (poslední dávka nebo „on-off“ fluktuace).
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasMaximalPrice "1796.42004395"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1796.43005371"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156092_doc> ;
+    ns1:hasStrength "0.70MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X0.70MG"@cs ;
+    ns1:title "GLEPARK 0,7 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLEPARK-0-7-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC05> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0170120> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134077>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0134078> ;
+    ns1:title "GLEPARK 0,7 MG"@cs .
+
+

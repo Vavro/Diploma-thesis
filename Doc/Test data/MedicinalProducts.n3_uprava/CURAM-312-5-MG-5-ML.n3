@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01C> a ns1:ATCConcept ;
+    dcterms:title "Beta-laktamová antibiotika, peniciliny"@cs,
+        "BETA-LACTAM ANTIBACTERIALS, PENICILLINS"@en ;
+    skos:notation "J01C" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR> a ns1:ATCConcept ;
+    dcterms:title "Kombinace penicilinů, včetně inhibitorů beta-laktamáz"@cs,
+        "Combinations of penicillins, incl. beta-lactamase"@en ;
+    skos:notation "J01CR" .
+
+<http://linked.opendata.cz/resource/ATC/J01CR02> a ns1:ATCConcept ;
+    dcterms:title "Amoxicilin a enzymový inhibitor"@cs,
+        "Amoxicillin and enzyme inhibitor"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J01>,
+        <http://linked.opendata.cz/resource/ATC/J01C>,
+        <http://linked.opendata.cz/resource/ATC/J01CR> ;
+    skos:notation "J01CR02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329136> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:title "Clavulanate potassium"@cs,
+        "Clavulanate potassium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330774> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:title "Amoxicillin trihydrate"@cs,
+        "Amoxicillin trihydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053570> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR02> ;
+    ns1:hasIndication """Přípravek Curam je indikován k léčbě následujících infekcí u dospělých a dětí (viz body 4.2, 4.4 a 5.1): 
+akutní bakteriální sinusitida (odpovídajícím způsobem diagnostikovaná) 
+akutní otitis media 
+akutní exacerbace chronické bronchitidy (odpovídajícím způsobem diagnostikovaná) 
+komunitní pneumonie 
+cystitida 
+pyelonefritida 
+infekce kůže a měkkých tkání, zejména celulitida, pokousání zvířetem, těžký dentální absces s postupující celulitidou. 
+Infekce kostí a kloubů, zejména osteomyelitida. 
+Je nutno vzít v potaz úřední místní pokyny ke správnému používání antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "60ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160358_doc> ;
+    ns1:hasStrength "62.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR PLV SUS 1X60ML"@cs ;
+    ns1:title "CURAM 312,5 MG/5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053571> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR02> ;
+    ns1:hasIndication """Přípravek Curam je indikován k léčbě následujících infekcí u dospělých a dětí (viz body 4.2, 4.4 a 5.1): 
+akutní bakteriální sinusitida (odpovídajícím způsobem diagnostikovaná) 
+akutní otitis media 
+akutní exacerbace chronické bronchitidy (odpovídajícím způsobem diagnostikovaná) 
+komunitní pneumonie 
+cystitida 
+pyelonefritida 
+infekce kůže a měkkých tkání, zejména celulitida, pokousání zvířetem, těžký dentální absces s postupující celulitidou. 
+Infekce kostí a kloubů, zejména osteomyelitida. 
+Je nutno vzít v potaz úřední místní pokyny ke správnému používání antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "205.710006714"^^xsd:float ;
+    ns1:hasPackagingSize "100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "158.720001221"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-03-22"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160358_doc> ;
+    ns1:hasStrength "62.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "POR PLV SUS 1X100ML"@cs ;
+    ns1:title "CURAM 312,5 MG/5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CURAM-312-5-MG-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CR02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0329136>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330774> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053570>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0053571> ;
+    ns1:title "CURAM 312,5 MG/5 ML"@cs .
+
+

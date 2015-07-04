@@ -1,0 +1,146 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C10AD52> a ns1:ATCConcept ;
+    skos:notation "C10AD52" ;
+    skos:prefLabel "Kyselina nikotinová, kombinace"@cs,
+        "Nicotinic acid, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014807> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001481>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> ;
+    ns1:description "A water-soluble vitamin of the B complex occurring in various animal and plant tissues. It is required by the body for the formation of coenzymes NAD and NADP. It has PELLAGRA-curative, vasodilating, and antilipemic properties.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000231> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/PELZONT-1000-MG-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TREDAPTIVE-1000-MG-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TREVACLYN-1000-MG-20-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008555>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008687>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009061>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009345>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009399> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/A>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000473>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002343> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001592>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002343>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003422> ;
+    ns1:title "Niacin"@cs,
+        "Niacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that lower the levels of certain LIPIDS in the BLOOD. They are used to treat HYPERLIPIDEMIAS.     "@en ;
+    ns1:title "Hypolipidemika"@cs,
+        "Hypolipidemic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000473> a ns1:DiseaseOrFinding ;
+    ns1:description "Thickening and loss of elasticity of the walls of ARTERIES of all sizes. There are many forms classified by the types of lesions and arteries involved, such as ATHEROSCLEROSIS with fatty lesions in the ARTERIAL INTIMA of medium and large muscular arteries.     "@en ;
+    ns1:title "Arterioskleróza"@cs,
+        "Arteriosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding or escape of blood from a vessel.     "@en ;
+    ns1:title "Hemoragie"@cs,
+        "Hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001592> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with excess LIPIDS in the blood.     "@en ;
+    ns1:title "Hyperlipidémie"@cs,
+        "Hyperlipidemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002343> a ns1:DiseaseOrFinding ;
+    ns1:description "A disease due to deficiency of NIACIN, a B-complex vitamin, or its precursor TRYPTOPHAN. It is characterized by scaly DERMATITIS which is often associated with DIARRHEA and DEMENTIA (the three D's).     "@en ;
+    ns1:title "Pelagra"@cs,
+        "Pellagra"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003422> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving any one of the BLOOD VESSELS in the vasculature outside the HEART.     "@en ;
+    ns1:title "Onemocnění periferních cév"@cs,
+        "Peripheral vascular diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000231> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Activators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008555> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cholesterol Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008687> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lipogenesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009061> a ns1:PhysiologicEffect ;
+    ns1:title "Glucose Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009345> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glycogenolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009399> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Metabolic Rate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PELZONT-1000-MG-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AD52> ;
+    ns1:title "PELZONT 1000 MG/20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TREDAPTIVE-1000-MG-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AD52> ;
+    ns1:title "TREDAPTIVE 1000 MG/20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TREVACLYN-1000-MG-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AD52> ;
+    ns1:title "TREVACLYN 1000 MG/20 MG"@cs .
+
+

@@ -1,0 +1,65 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J05AG01> a ns1:ATCConcept ;
+    skos:notation "J05AG01" ;
+    skos:prefLabel "Nevirapin"@cs,
+        "Nevirapine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029429> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A potent, non-nucleoside reverse transcriptase inhibitor used in combination with nucleoside analogues for treatment of HIV infection and AIDS.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/NEVIRAPINE-TEVA-200-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VIRAMUNE> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> ;
+    ns1:title "Nevirapin"@cs,
+        "Nevirapine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of reverse transcriptase (RNA-DIRECTED DNA POLYMERASE), an enzyme that synthesizes DNA on an RNA template.     "@en ;
+    ns1:title "Reverzní transkriptasa - inhibitory"@cs,
+        "Reverse transcriptase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used to treat AIDS and/or stop the spread of the HIV infection. These do not include drugs used to treat symptoms or opportunistic infections associated with AIDS.     "@en ;
+    ns1:title "Látky proti hiv"@cs,
+        "Anti-hiv agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> a ns1:MechanismOfAction ;
+    ns1:title "Reverse Transcriptase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Reverse Transcription to DNA"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEVIRAPINE-TEVA-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AG01> ;
+    ns1:title "NEVIRAPINE TEVA 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIRAMUNE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AG01> ;
+    ns1:title "VIRAMUNE"@cs .
+
+

@@ -1,0 +1,223 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05D> a ns1:ATCConcept ;
+    dcterms:title "Peritoneální dialýza"@cs,
+        "PERITONEAL DIALYTICS"@en ;
+    skos:notation "B05D" .
+
+<http://linked.opendata.cz/resource/ATC/B05DB> a ns1:ATCConcept ;
+    dcterms:title "Hypertonické roztoky"@cs,
+        "Hypertonic solutions"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B05>,
+        <http://linked.opendata.cz/resource/ATC/B05D> ;
+    skos:notation "B05DB" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000856> a ns1:Ingredient ;
+    ns1:title "Hexahydrát chloridu hořečnatého"@cs,
+        "Magnesium chloride hexahydrate"@en,
+        "Magnesii chloridum hexahydricum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013184> a ns1:Ingredient ;
+    ns1:title "Roztok mléčnanu sodného 50%"@cs,
+        "Sodium lactate solution 50 per cent (m/m)"@en,
+        "Natrii lactatis solutio 50%"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330320> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020928> ;
+    ns1:title "Glucose monohydrate"@cs,
+        "Glucose monohydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330895> a ns1:Ingredient ;
+    ns1:title "Calcium chloride dihydrate"@cs,
+        "Calcium chloride dihydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020928> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that sweeten food, beverages, medications, etc., such as sugar, saccharine or other low-calorie synthetic products. (From Random House Unabridged Dictionary, 2d ed)     "@en ;
+    ns1:title "Sladidla"@cs,
+        "Sweetening agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014854> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X1500ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "STAY SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X1500ML STAY"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014855> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X2000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "STAY SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X2000ML STAY"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014856> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X2500ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "STAY SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X2500ML STAY"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014857> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X3000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "STAY SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X3000ML STAY"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014858> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X3000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "SLEEP SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X3000ML SLEEP"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128791> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "2X5000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "SAFE LOCK"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 2X5000ML LOCK"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128838> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "2X5000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "SLEEP SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 2X5000ML SLEEP"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128839> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "2X6000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "SLEEP SAFE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 2X6000ML SLEEP"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128840> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Pro použití u pacientů s dekompenzovaným chronickým renálním selháním různé patogenese, které může být léčeno peritoneální dialýzou.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "2X6000ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC117572_doc> ;
+    ns1:hasStrength "SAFE LOCK"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 2X6000ML LOCK"@cs ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BALANCE-4-25--GLUCOSE--1-75-MMOL-L-CALCIUM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000856>,
+        <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013184>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330320>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330895> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014854>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014855>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014856>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014857>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0014858>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128791>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128838>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128839>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0128840> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "BALANCE 4,25% GLUCOSE, 1,75 MMOL/L CALCIUM"@cs .
+
+

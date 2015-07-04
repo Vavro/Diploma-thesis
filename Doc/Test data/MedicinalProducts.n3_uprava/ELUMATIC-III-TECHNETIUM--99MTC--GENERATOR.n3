@@ -1,0 +1,270 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V09> a ns1:ATCConcept ;
+    dcterms:title "Diagnostická radiofarmaka"@cs,
+        "DIAGNOSTIC RADIOPHARMACEUTICALS"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V> ;
+    skos:notation "V09" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0003064> a ns1:Ingredient ;
+    ns1:title "Technecistan-(99m tc) sodný"@cs,
+        "Sodium pertechnetate (99m tc)"@en,
+        "Natrii pertechnetas (99m tc)"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093949> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "2GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 2GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093950> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "4GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 4GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093951> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "6GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 6GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093952> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "8GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 8GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093953> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "10GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 10GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093954> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "12GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 12GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093955> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "16GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 16GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093956> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasIndication """Tento léčivý přípravek je určen pouze k diagnostickým účelům.
+Eluát z generátoru (technecistan (99mTc) sodný, štěpný produkt, dle Evropského lékopisu) může být použit jako reagencie pro značení různých nosičových komponent dodávaných ve formě kitů, nebo může být aplikován přímo in vivo . 
+V případě intravenózního podání je sterilní roztok technecistanu (99mTc) sodného použit jako diagnostická pomůcka pro následující vyšetření: 
+Scintigrafie štítné žlázy: přímé zobrazení a měření vychytávání štítnou žlázou podává informace o velikosti, uložení, nodóznosti a funkce štítné žlázy při jejím onemocnění. 
+Scintigrafie slinných žláz: posouzení funkce a průchodnosti kanálků slinných žláz.
+Lokalizace ektopické žaludeční mukózy: Meckelův divertikl.
+Scintigrafie mozku: zjišťování poruch hematoencefalické bariéry, zapříčiněných tumorem, infarktem, hemoragií a edémem, nejsou-li k dispozici jiné metody. 
+Použije-li se sterilní roztok technecistanu (99mTc) sodného společně s redukčním činidlem, ovlivní se značení červených krvinek použitelných pro tato vyšetření:
+Scintigrafie srdce a cév 
+angiokardioscintigrafie pro:
+hodnocení komorové ejekční frakce
+hodnocení celkové a regionální pohyblivosti srdeční stěny
+zobrazení srdeční fáze
+zobrazení prokrvení orgánů a cévních abnormalit.
+Diagnostika a lokalizace okultního krvácení v gastrointestinálním traktu
+Po instilaci sterilního roztoku technecistanu (99mTc) sodného do oka:
+Scintigrafie slzných kanálků: posouzení průchodnosti slzných kanálků.
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "1GEN"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC108138_doc> ;
+    ns1:hasStrength "20GB/GEN"^^xsd:string ;
+    ns1:hasTitleSupplement "RAD GEN 20GB EXP:D"@cs ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELUMATIC-III-TECHNETIUM--99MTC--GENERATOR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0003064> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093949>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093950>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093951>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093952>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093953>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093954>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093955>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0093956> ;
+    ns1:title "ELUMATIC III,TECHNETIUM (99MTC) GENERATOR"@cs .
+
+

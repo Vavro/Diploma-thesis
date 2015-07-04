@@ -1,0 +1,92 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05AF03> a ns1:ATCConcept ;
+    skos:notation "N05AF03" ;
+    skos:prefLabel "Chlorprotixen"@cs,
+        "Chlorprothixene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004207> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000819>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A thioxanthine with effects similar to the phenothiazine antipsychotics.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000099>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORPROTHIXEN-15-LECIVA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORPROTHIXEN-50-LECIVA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002532>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002694>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003968> ;
+    ns1:title "Chlorprothixen"@cs,
+        "Chlorprothixene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000819> a ns1:DiseaseOrFinding ;
+    ns1:description "A profound state of unconsciousness associated with depressed cerebral activity from which the individual cannot be aroused. Coma generally occurs when there is dysfunction or injury involving both cerebral hemispheres or the brain stem RETICULAR FORMATION.     "@en ;
+    ns1:title "Kóma"@cs,
+        "Coma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002527> a ns1:DiseaseOrFinding ;
+    ns1:description "A feeling of restlessness associated with increased motor activity. This may occur as a manifestation of nervous system drug toxicity or other conditions.     "@en ;
+    ns1:title "Psychomotorický neklid"@cs,
+        "Psychomotor agitation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002532> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders in which there is a loss of ego boundaries or a gross impairment in reality testing with delusions or prominent hallucinations. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Psychotické poruchy"@cs,
+        "Psychotic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002694> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic form of schizophrenia characterized primarily by the presence of persecutory or grandiose delusions, often associated with hallucination.     "@en ;
+    ns1:title "Schizofrenie paranoidní"@cs,
+        "Schizophrenia, paranoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003968> a ns1:DiseaseOrFinding ;
+    ns1:description "A repetitive and persistent pattern of behavior in which the basic rights of others or major age-appropriate societal norms or rules are violated. These behaviors include aggressive conduct that causes or threatens physical harm to other people or animals, nonaggressive conduct that causes property loss or damage, deceitfulness or theft, and serious violations of rules. The onset is before age 18. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Porucha chování"@cs,
+        "Conduct disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000099> a ns1:MechanismOfAction ;
+    ns1:title "Adrenergic alpha-Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORPROTHIXEN-15-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AF03> ;
+    ns1:title "CHLORPROTHIXEN 15 LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORPROTHIXEN-50-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AF03> ;
+    ns1:title "CHLORPROTHIXEN 50 LÉČIVA"@cs .
+
+

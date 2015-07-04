@@ -1,0 +1,236 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AF01> a ns1:ATCConcept ;
+    skos:notation "N03AF01" ;
+    skos:prefLabel "Karbamazepin"@cs,
+        "Carbamazepine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003328> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000589>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An anticonvulsant used to control grand mal and psychomotor or focal seizures. Its mode of action is not fully understood, but some of its actions resemble those of PHENYTOIN; although there is little chemical resemblance between the two compounds, their three-dimensional structure is similar.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BISTON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-200-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-RETARD-300>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-RETARD-600>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TEGRETOL-CR-200>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TEGRETOL-CR-400>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-150-RETARD>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-300-RETARD>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-600-RETARD> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028007>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008578>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000502>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000553>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000958>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001014>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001126>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001129>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002052>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002162>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002326>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002532>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002605>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002690>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002839>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002855>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003018>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003515> ;
+    ns1:title "Karbamazepin"@cs,
+        "Carbamazepine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028007> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat bipolar disorders or mania associated with other affective disorders.     "@en ;
+    ns1:title "Antimanika"@cs,
+        "Antimanic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000502> a ns1:DiseaseOrFinding ;
+    ns1:description "Impairment of the ability to perform smoothly coordinated voluntary movements. This condition may affect the limbs, trunk, eyes, pharynx, larynx, and other structures. Ataxia may result from impaired sensory or motor function. Sensory ataxia may result from posterior column injury or PERIPHERAL NERVE DISEASES. Motor ataxia may be associated with CEREBELLAR DISEASES; CEREBRAL CORTEX diseases; THALAMIC DISEASES; BASAL GANGLIA DISEASES; injury to the RED NUCLEUS; and other conditions.     "@en ;
+    ns1:title "Ataxie"@cs,
+        "Ataxia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000553> a ns1:DiseaseOrFinding ;
+    ns1:description "A major affective disorder marked by severe mood swings (manic or major depressive episodes) and a tendency to remission and recurrence.     "@en ;
+    ns1:title "Bipolární poruchy"@cs,
+        "Bipolar disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000589> a ns1:DiseaseOrFinding ;
+    ns1:title "Kostní dřeň - nemoci"@cs,
+        "Bone marrow diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000958> a ns1:DiseaseOrFinding ;
+    ns1:description "Peripheral, autonomic, and cranial nerve disorders that are associated with DIABETES MELLITUS. These conditions usually result from diabetic microvascular injury involving small blood vessels that supply nerves (VASA NERVORUM). Relatively common conditions which may be associated with diabetic neuropathy include third nerve palsy (see OCULOMOTOR NERVE DISEASES); MONONEUROPATHY; mononeuropathy multiplex; diabetic amyotrophy; a painful POLYNEUROPATHY; autonomic neuropathy; and thoracoabdominal neuropathy. (From Adams et al., Principles of Neurology, 6th ed, p1325)     "@en ;
+    ns1:title "Diabetické neuropatie"@cs,
+        "Diabetic neuropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001014> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of speech articulation caused by imperfect coordination of pharynx, larynx, tongue, or face muscles. This may result from CRANIAL NERVE DISEASES; NEUROMUSCULAR DISEASES; CEREBELLAR DISEASES; BASAL GANGLIA DISEASES; BRAIN STEM diseases; or diseases of the corticobulbar tracts (see PYRAMIDAL TRACTS). The cortical language centers are intact in this condition. (From Adams et al., Principles of Neurology, 6th ed, p489)     "@en ;
+    ns1:title "Dysartrie"@cs,
+        "Dysarthria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001126> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent episodes of paroxysmal brain dysfunction due to a sudden, disorderly, and excessive neuronal discharge. Epilepsy classification systems are generally based upon: (1) clinical features of the seizure episodes (e.g., motor seizure), (2) etiology (e.g., post-traumatic), (3) anatomic site of seizure origin (e.g., frontal lobe seizure), (4) tendency to spread to other structures in the brain, and (5) temporal patterns (e.g., nocturnal epilepsy). (From Adams et al., Principles of Neurology, 6th ed, p313)     "@en ;
+    ns1:title "Epilepsie"@cs,
+        "Epilepsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001129> a ns1:DiseaseOrFinding ;
+    ns1:description "A generalized seizure disorder characterized by recurrent major motor seizures. The initial brief tonic phase is marked by trunk flexion followed by diffuse extension of the trunk and extremities. The clonic phase features rhythmic flexor contractions of the trunk and limbs, pupillary dilation, elevations of blood pressure and pulse, urinary incontinence, and tongue biting. This is followed by a profound state of depressed consciousness (post-ictal state) which gradually improves over minutes to hours. The disorder may be cryptogenic, familial, or symptomatic (caused by an identified disease process). (From Adams et al., Principles of Neurology, 6th ed, p329)     "@en ;
+    ns1:title "Epilepsie tonicko-klonická"@cs,
+        "Epilepsy, tonic-clonic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002326> a ns1:DiseaseOrFinding ;
+    ns1:description "Subjective cutaneous sensations (e.g., cold, warmth, tingling, pressure, etc.) that are experienced spontaneously in the absence of stimulation.     "@en ;
+    ns1:title "Parestézie"@cs,
+        "Paresthesia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002532> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders in which there is a loss of ego boundaries or a gross impairment in reality testing with delusions or prominent hallucinations. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Psychotické poruchy"@cs,
+        "Psychotic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002605> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by aching or burning sensations in the lower and rarely the upper extremities that occur prior to sleep or may awaken the patient from sleep. Complying with an irresistible urge to move the affected limbs brings temporary relief. Sleep may become disrupted, resulting in excessive daytime hypersomnolence. This condition may be associated with UREMIA; DIABETES MELLITUS; and rheumatoid arthritis. Restless Legs Syndrome differs from NOCTURNAL MYOCLONUS SYNDROME in that in the latter condition the individual does not report adverse sensory stimuli and it is primarily a sleep-associated movement disorder. (Adams et al., Principles of Neurology, 6th ed, p387; Schweiz Rundsch Med Prax 1997 Apr 30;86(18):732-736)     "@en ;
+    ns1:title "Syndrom neklidných nohou"@cs,
+        "Restless legs syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.     "@en ;
+    ns1:title "Schizofrenie"@cs,
+        "Schizophrenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002702> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process consisting of hardening or fibrosis of an anatomical structure, often a vessel or a nerve.     "@en ;
+    ns1:title "Skleróza"@cs,
+        "Sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002839> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of traumatic stress disorders with symptoms that last more than one month. There are various forms of post-traumatic stress disorder, depending on the time of onset and the duration of these stress symptoms. In the acute form, the duration of the symptoms is between 1 to 3 months. In the chronic form, symptoms last more than 3 months. With delayed onset, symptoms develop more than 6 months after the traumatic event.     "@en ;
+    ns1:title "Posttraumatická stresová porucha"@cs,
+        "Stress disorders, post-traumatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002855> a ns1:DiseaseOrFinding ;
+    ns1:description "Physiological and psychological symptoms associated with withdrawal from the use of a drug after prolonged administration or habituation. The concept includes withdrawal from smoking or drinking, as well as withdrawal from an administered drug.     "@en ;
+    ns1:title "Abstinenční syndrom"@cs,
+        "Substance withdrawal syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003018> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by recurrent episodes of excruciating pain lasting several seconds or longer in the sensory distribution of the TRIGEMINAL NERVE. Pain may be initiated by stimulation of trigger points on the face, lips, or gums or by movement of facial muscles or chewing. Associated conditions include MULTIPLE SCLEROSIS, vascular anomalies, ANEURYSMS, and neoplasms. (Adams et al., Principles of Neurology, 6th ed, p187)     "@en ;
+    ns1:title "Neuralgie trigeminu"@cs,
+        "Trigeminal neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003515> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent partial seizures marked by impairment of cognition. During the seizure the individual may experience a wide variety of psychic phenomenon including formed hallucinations, illusions, deja vu, intense emotional feelings, confusion, and spatial disorientation. Focal motor activity, sensory alterations and AUTOMATISM may also occur. Complex partial seizures often originate from foci in one or both temporal lobes. The etiology may be idiopathic (cryptogenic partial complex epilepsy) or occur as a secondary manifestation of a focal cortical lesion (symptomatic partial complex epilepsy). (From Adams et al., Principles of Neurology, 6th ed, pp317-8)     "@en ;
+    ns1:title "Epilepsie komplexní parciální"@cs,
+        "Epilepsy, complex partial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008578> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Disorganized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "BISTON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "NEUROTOP 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-RETARD-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "NEUROTOP RETARD 300"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROTOP-RETARD-600> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "NEUROTOP RETARD 600"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEGRETOL-CR-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "TEGRETOL CR 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEGRETOL-CR-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "TEGRETOL CR 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-150-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "TIMONIL 150 RETARD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-300-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "TIMONIL 300 RETARD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TIMONIL-600-RETARD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AF01> ;
+    ns1:title "TIMONIL 600 RETARD"@cs .
+
+

@@ -1,0 +1,106 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01AA03> a ns1:ATCConcept ;
+    skos:notation "L01AA03" ;
+    skos:prefLabel "Melfalan"@cs,
+        "Melphalan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013330> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An alkylating nitrogen mustard that is used as an antineoplastic in the form of the levo isomer - MELPHALAN, the racemic mixture - MERPHALAN, and the dextro isomer - MEDPHALAN; toxic to bone marrow, but little vesicant action; potential carcinogen.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ALKERAN> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002050>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002167>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002274>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002628> ;
+    ns1:title "Melfalan"@cs,
+        "Melphalan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that differs from other alkylating agents used clinically in that they are monofunctional and thus unable to cross-link cellular macromolecules. Among their common properties are a requirement for metabolic activation to intermediates with antitumor efficacy and the presence in their chemical structures of N-methyl groups, that after metabolism, can covalently modify cellular DNA. The precise mechanisms by which each of these drugs acts to kill tumor cells are not completely understood. (From AMA, Drug Evaluations Annual, 1994, p2026)     "@en ;
+    ns1:title "Antitumorózní látky alkylující"@cs,
+        "Antineoplastic agents, alkylating"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that destroy bone marrow activity. They are used to prepare patients for BONE MARROW TRANSPLANTATION or STEM CELL TRANSPLANTATION.     "@en ;
+    ns1:title "Myeloablativní agonisté"@cs,
+        "Myeloablative agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002050> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignancy of mature PLASMA CELLS engaging in monoclonal immunoglobulin production. It is characterized by hyperglobulinemia, excess Bence-Jones proteins (free monoclonal IMMUNOGLOBULIN LIGHT CHAINS) in the urine, skeletal destruction, bone pain, and fractures. Other features include ANEMIA; HYPERCALCEMIA; and RENAL INSUFFICIENCY.     "@en ;
+    ns1:title "Mnohočetný myelom"@cs,
+        "Multiple myeloma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> a ns1:DiseaseOrFinding ;
+    ns1:description "A common neoplasm of early childhood arising from neural crest cells in the sympathetic nervous system, and characterized by diverse clinical behavior, ranging from spontaneous remission to rapid metastatic progression and death. This tumor is the most common intraabdominal malignancy of childhood, but it may also arise from thorax, neck, or rarely occur in the central nervous system. Histologic features include uniform round cells with hyperchromatic nuclei arranged in nests and separated by fibrovascular septa. Neuroblastomas may be associated with the opsoclonus-myoclonus syndrome. (From DeVita et al., Cancer: Principles and Practice of Oncology, 5th ed, pp2099-2101; Curr Opin Oncol 1998 Jan;10(1):43-51)     "@en ;
+    ns1:title "Neuroblastom"@cs,
+        "Neuroblastoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002628> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant solid tumor arising from mesenchymal tissues which normally differentiate to form striated muscle. It can occur in a wide variety of sites. It is divided into four distinct types: pleomorphic, predominantly in male adults; alveolar (RHABDOMYOSARCOMA, ALVEOLAR), mainly in adolescents and young adults; embryonal (RHABDOMYOSARCOMA, EMBRYONAL), predominantly in infants and children; and botryoidal, also in young children. It is one of the most frequently occurring soft tissue sarcomas and the most common in children under 15. (From Dorland, 27th ed; Holland et al., Cancer Medicine, 3d ed, p2186; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, pp1647-9)     "@en ;
+    ns1:title "Rhabdomyosarkom"@cs,
+        "Rhabdomyosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Transcription to RNA"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALKERAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01AA03> ;
+    ns1:title "ALKERAN"@cs .
+
+

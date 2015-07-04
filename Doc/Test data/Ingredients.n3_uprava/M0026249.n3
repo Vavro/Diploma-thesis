@@ -1,0 +1,297 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01FA09> a ns1:ATCConcept ;
+    skos:notation "J01FA09" ;
+    skos:prefLabel "Klarithromycin"@cs,
+        "Clarithromycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026249> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A semisynthetic macrolide antibiotic derived from ERYTHROMYCIN that is active against a variety of microorganisms. It can inhibit protein synthesis in bacteria by reversibly binding to the 50S ribosomal subunits. This inhibits the translocation of aminoacyl transfer-RNA and prevents peptide chain elongation.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN---TEVA-250-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN---TEVA-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN-RATIOPHARM-250-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN-RATIOPHARM-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-125MG-5ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-250>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-UNO>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLABAX-250-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLABAX-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-125-MG-5-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-250>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-250-MG-5-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-I-V->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-SR>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-MYLAN-250-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-MYLAN-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-RETARD-MYLAN-500-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001097>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002072> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000524>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000622>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000754>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001008>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001141>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001269>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001298>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001398>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001671>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002072>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002266>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002351>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002387>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002432>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002436>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002562>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002756>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002764>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002817>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002830>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002837>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002969>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003062>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> ;
+    ns1:title "Clarithromycin"@cs,
+        "Clarithromycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000754> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus CHLAMYDIA.     "@en ;
+    ns1:title "Chlamydiové infekce"@cs,
+        "Chlamydia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001008> a ns1:DiseaseOrFinding ;
+    ns1:description "A PEPTIC ULCER located in the DUODENUM.     "@en ;
+    ns1:title "Dvanáctníkové vředy"@cs,
+        "Duodenal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001097> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOCARDIUM caused by BACTERIA that entered the bloodstream. The strains of bacteria vary with predisposing factors, such as CONGENITAL HEART DEFECTS; HEART VALVE DISEASES; HEART VALVE PROSTHESIS IMPLANTATION; or intravenous drug use.     "@en ;
+    ns1:title "Bakteriální endokarditida"@cs,
+        "Endocarditis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001141> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infection of the skin caused by species of STREPTOCOCCUS. This disease most frequently affects infants, young children, and the elderly. Characteristics include pink-to-red lesions that spread rapidly and are warm to the touch. The commonest site of involvement is the face.     "@en ;
+    ns1:title "Erysipel"@cs,
+        "Erysipelas"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001269> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of follicles, primarily hair follicles.     "@en ;
+    ns1:title "Folikulitida"@cs,
+        "Folliculitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001298> a ns1:DiseaseOrFinding ;
+    ns1:description "A persistent skin infection marked by the presence of furuncles, often chronic and recurrent. In humans, the causative agent is various species of STAPHYLOCOCCUS. In salmonid fish (SALMONIDS), the pathogen is AEROMONAS SALMONICIDA.     "@en ;
+    ns1:title "Furunkulóza"@cs,
+        "Furunculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001671> a ns1:DiseaseOrFinding ;
+    ns1:description "A common superficial bacterial infection caused by STAPHYLOCOCCUS AUREUS or group A beta-hemolytic streptococci. Characteristics include pustular lesions that rupture and discharge a thin, amber-colored fluid that dries and forms a crust. This condition is commonly located on the face, especially about the mouth and nose.     "@en ;
+    ns1:title "Impetigo"@cs,
+        "Impetigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002072> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with nontuberculous mycobacteria (atypical mycobacteria): M. kansasii, M. marinum, M. scrofulaceum, M. flavescens, M. gordonae, M. obuense, M. gilvum, M. duvali, M. szulgai, M. intracellulare (see MYCOBACTERIUM AVIUM COMPLEX;), M. xenopi (littorale), M. ulcerans, M. buruli, M. terrae, M. fortuitum (minetti, giae), M. chelonae.     "@en ;
+    ns1:title "Mykobaktérie atypické - infekce"@cs,
+        "Mycobacterium infections, nontuberculous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002387> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the throat (PHARYNX).     "@en ;
+    ns1:title "Faryngitida"@cs,
+        "Pharyngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002436> a ns1:DiseaseOrFinding ;
+    ns1:description "Interstitial pneumonia caused by extensive infection of the lungs (LUNG) and BRONCHI, particularly the lower lobes of the lungs, by MYCOPLASMA PNEUMONIAE in humans. In SHEEP, it is caused by MYCOPLASMA OVIPNEUMONIAE. In CATTLE, it may be caused by MYCOPLASMA DISPAR.     "@en ;
+    ns1:title "Mykoplazmová pneumonie"@cs,
+        "Pneumonia, mycoplasma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002562> a ns1:DiseaseOrFinding ;
+    ns1:description "Any purulent skin disease (Dorland, 27th ed).     "@en ;
+    ns1:title "Pyodermie"@cs,
+        "Pyoderma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002764> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria, fungi, parasites, or viruses.     "@en ;
+    ns1:title "Kůže - nemoci infekční"@cs,
+        "Skin diseases, infectious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002969> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the tonsils, especially the PALATINE TONSILS but the ADENOIDS (pharyngeal tonsils) and lingual tonsils may also be involved. Tonsillitis usually is caused by bacterial infection. Tonsillitis may be acute, chronic, or recurrent.     "@en ;
+    ns1:title "Tonzilitida"@cs,
+        "Tonsillitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with organisms of the genus HELICOBACTER, particularly, in humans, HELICOBACTER PYLORI. The clinical manifestations are focused in the stomach, usually the gastric mucosa and antrum, and the upper duodenum. This infection plays a major role in the pathogenesis of type B gastritis and peptic ulcer disease.     "@en ;
+    ns1:title "Helicobacter - infekce"@cs,
+        "Helicobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN---TEVA-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "CLARITHROMYCIN - TEVA 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN---TEVA-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "CLARITHROMYCIN - TEVA 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN-RATIOPHARM-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "CLARITHROMYCIN-RATIOPHARM 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLARITHROMYCIN-RATIOPHARM-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "CLARITHROMYCIN-RATIOPHARM 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-125MG-5ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "FROMILID 125MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "FROMILID 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "FROMILID 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FROMILID-UNO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "FROMILID UNO"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLABAX-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLABAX 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLABAX-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLABAX 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-125-MG-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID 125 MG/5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-250> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID 250"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-250-MG-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID 250 MG/5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-I-V-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID I.V."@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLACID-SR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLACID SR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-MYLAN-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLARITROMYCIN MYLAN 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-MYLAN-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLARITROMYCIN MYLAN 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLARITROMYCIN-RETARD-MYLAN-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01FA09> ;
+    ns1:title "KLARITROMYCIN RETARD MYLAN 500 MG"@cs .
+
+

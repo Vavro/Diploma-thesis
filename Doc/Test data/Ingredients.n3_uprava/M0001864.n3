@@ -1,0 +1,469 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B01AC06> a ns1:ATCConcept ;
+    skos:notation "B01AC06" ;
+    skos:prefLabel "Kyselina acetylsalicylová"@cs,
+        "Acetylsalicylic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/B01AC30> a ns1:ATCConcept ;
+    skos:notation "B01AC30" ;
+    skos:prefLabel "Antiagregancia kromě heparinu, kombinace"@cs,
+        "Combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/B01AC56> a ns1:ATCConcept ;
+    skos:notation "B01AC56" ;
+    skos:prefLabel "Kyselina acetylsalicylová a eso"@cs,
+        "Acetylsalicylic acid and esomeprazol"@en .
+
+<http://linked.opendata.cz/resource/ATC/C07AB57> a ns1:ATCConcept ;
+    skos:notation "C07AB57" ;
+    skos:prefLabel "Bisoprolol, kombinace"@cs,
+        "Bisoprolol, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA01> a ns1:ATCConcept ;
+    skos:notation "N02BA01" ;
+    skos:prefLabel "Kyselina acetylsalicylová"@cs,
+        "Acetylsalicylic acid"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA51> a ns1:ATCConcept ;
+    skos:notation "N02BA51" ;
+    skos:prefLabel "Kyselina acetylsalicylová, kombinace kromě psycholeptik"@cs,
+        "Acetylsalicylic acid, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001864> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000575>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000577>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001485>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002110>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002634>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003128>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010203>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010207>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010214>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> ;
+    ns1:description "The prototypical analgesic used in the treatment of mild to moderate pain. It has anti-inflammatory and antipyretic properties and acts as an inhibitor of cyclooxygenase which results in the inhibition of the biosynthesis of prostaglandins. Aspirin also inhibits platelet aggregation and is used in the prevention of arterial and venous thrombosis. (From Martindale, The Extra Pharmacopoeia, 30th ed, p5)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLCOFFIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN---C>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN-EFFERVESCENS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AGGRENOX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-30-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-400-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASATEVA-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-C>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-COMPLEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-PROTECT-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AXANUM-81-MG-20-MG-TVRDE-TOBOLKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BETAPRES-10-MG-75-MG-TOBOLKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BETAPRES-5-MG-75-MG-TOBOLKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BLOKBIS-10-MG-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BLOKBIS-5-MG-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIORAL-75-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOCOVER-75-MG-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOCOVER-75-MG-75-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOPLAVIN-75-MG-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOPLAVIN-75-MG-75-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-CEPHYL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ORISANTIN-200-MG-25-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/STACYL-100-MG-ENTEROSOLVENTNI-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN> ;
+    ns1:hasPharmacokinetics <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026>,
+        <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000722>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000724>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002473> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000408>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000724>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000824>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001242>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001382>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001418>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001680>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002162>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002244>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002629>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002984>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004159>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> ;
+    ns1:title "Aspirin"@cs,
+        "Aspirin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> a ns1:PharmacologicalAction ;
+    ns1:description "Fibrinolysin or agents that convert plasminogen to FIBRINOLYSIN.     "@en ;
+    ns1:title "Fibrinolytika"@cs,
+        "Fibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017012> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs or agents which antagonize or impair any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system.     "@en ;
+    ns1:title "Inhibitory agregace trombocytů"@cs,
+        "Platelet aggregation inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to reduce body temperature in fever.     "@en ;
+    ns1:title "Antipyretika"@cs,
+        "Antipyretics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000408> a ns1:DiseaseOrFinding ;
+    ns1:description "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Nestabilní angina pectoris"@cs,
+        "Angina, unstable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:description "Hemorrhagic and thrombotic disorders that occur as a consequence of abnormalities in blood coagulation due to a variety of factors such as COAGULATION PROTEIN DISORDERS; BLOOD PLATELET DISORDERS; BLOOD PROTEIN DISORDERS or nutritional conditions.     "@en ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000577> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders caused by abnormalities in platelet count or function.     "@en ;
+    ns1:title "Trombocytopatie"@cs,
+        "Blood platelet disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000722> a ns1:DiseaseOrFinding ;
+    ns1:description "The formation of an area of NECROSIS in the CEREBRUM caused by an insufficiency of arterial or venous blood flow. Infarcts of the cerebrum are generally classified by hemisphere (i.e., left vs. right), lobe (e.g., frontal lobe infarction), arterial distribution (e.g., INFARCTION, ANTERIOR CEREBRAL ARTERY), and etiology (e.g., embolic infarction).     "@en ;
+    ns1:title "Cerebrální infarkt"@cs,
+        "Cerebral infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000724> a ns1:DiseaseOrFinding ;
+    ns1:description "Brief reversible episodes of focal, nonconvulsive ischemic dysfunction of the brain having a duration of less than 24 hours, and usually less than one hour, caused by transient thrombotic or embolic blood vessel occlusion or stenosis. Events may be classified by arterial distribution, temporal pattern, or etiology (e.g., embolic vs. thrombotic). (From Adams et al., Principles of Neurology, 6th ed, pp814-6)     "@en ;
+    ns1:title "Tranzitorní ischemická ataka"@cs,
+        "Ischemic attack, transient"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001382> a ns1:DiseaseOrFinding ;
+    ns1:description "Hereditary metabolic disorder characterized by recurrent acute arthritis, hyperuricemia and deposition of sodium urate in and around the joints, sometimes with formation of uric acid calculi.     "@en ;
+    ns1:title "Dna (nemoc)"@cs,
+        "Gout"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001418> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.     "@en ;
+    ns1:title "Bolesti hlavy"@cs,
+        "Headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001485> a ns1:DiseaseOrFinding ;
+    ns1:description "Spontaneous or near spontaneous bleeding caused by a defect in clotting mechanisms (BLOOD COAGULATION DISORDERS) or another abnormality causing a structural flaw in the blood vessels (HEMOSTATIC DISORDERS).     "@en ;
+    ns1:title "Hemoragické poruchy"@cs,
+        "Hemorrhagic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001680> a ns1:DiseaseOrFinding ;
+    ns1:description "Formation of an infarct, which is NECROSIS in tissue due to local ISCHEMIA resulting from obstruction of BLOOD CIRCULATION, most commonly by a THROMBUS or EMBOLUS.     "@en ;
+    ns1:title "Infarkt"@cs,
+        "Infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002110> a ns1:DiseaseOrFinding ;
+    ns1:description "Focal accumulations of EDEMA fluid in the NASAL MUCOSA accompanied by HYPERPLASIA of the associated submucosal connective tissue. Polyps may be NEOPLASMS, foci of INFLAMMATION, degenerative lesions, or malformations.     "@en ;
+    ns1:title "Nosní polypy"@cs,
+        "Nasal polyps"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002473> a ns1:DiseaseOrFinding ;
+    ns1:description "A complication of PREGNANCY, characterized by a complex of symptoms including maternal HYPERTENSION and PROTEINURIA with or without pathological EDEMA. Symptoms may range between mild and severe. Pre-eclampsia usually occurs after the 20th week of gestation, but may develop before this time in the presence of trophoblastic disease.     "@en ;
+    ns1:title "Preeklampsie"@cs,
+        "Pre-eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002629> a ns1:DiseaseOrFinding ;
+    ns1:description "A febrile disease occurring as a delayed sequela of infections with STREPTOCOCCUS PYOGENES. It is characterized by multiple focal inflammatory lesions of the connective tissue structures, such as the heart, blood vessels, and joints (POLYARTHRITIS) and brain, and by the presence of ASCHOFF BODIES in the myocardium and skin.     "@en ;
+    ns1:title "Revmatická horečka"@cs,
+        "Rheumatic fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002634> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA, the mucous membrane lining the NASAL CAVITIES.     "@en ;
+    ns1:title "Rinitida"@cs,
+        "Rhinitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003128> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for diseases produced by viruses.     "@en ;
+    ns1:title "Virové nemoci"@cs,
+        "Virus diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004159> a ns1:DiseaseOrFinding ;
+    ns1:description "Tissue NECROSIS in any area of the brain, including the CEREBRAL HEMISPHERES, the CEREBELLUM, and the BRAIN STEM. Brain infarction is the result of a cascade of events initiated by inadequate blood flow through the brain that is followed by HYPOXIA and HYPOGLYCEMIA in brain tissue. Damage may be temporary, permanent, selective or pan-necrosis.     "@en ;
+    ns1:title "Mozkový infarkt"@cs,
+        "Brain infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)     "@en ;
+    ns1:title "Cévní mozková příhoda"@cs,
+        "Stroke"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> a ns1:DiseaseOrFinding ;
+    ns1:description "A child between 1 and 23 months of age.     "@en ;
+    ns1:title "Kojenec"@cs,
+        "Infant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010207> a ns1:DiseaseOrFinding ;
+    ns1:title "Young child"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010214> a ns1:DiseaseOrFinding ;
+    ns1:description "A person 13 to 18 years of age.     "@en ;
+    ns1:title "Mladiství"@cs,
+        "Adolescent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> a ns1:DiseaseOrFinding ;
+    ns1:description "The last third of a human PREGNANCY, from the beginning of the 29th through the 42nd completed week (197 to 294 days) of gestation.     "@en ;
+    ns1:title "Těhotenství - třetí trimestr"@cs,
+        "Pregnancy trimester, third"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Activating Factor Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Aggregation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "ACIFEIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLCOFFIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ACYLCOFFIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "ACYLPYRIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN---C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ACYLPYRIN + C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN-EFFERVESCENS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "ACYLPYRIN EFFERVESCENS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AGGRENOX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "AGGRENOX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "ANOPYRIN 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "ANOPYRIN 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANOPYRIN-400-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "ANOPYRIN 400 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASATEVA-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "ASATEVA 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "ASPIRIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "ASPIRIN 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ASPIRIN C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-COMPLEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ASPIRIN COMPLEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-PROTECT-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "ASPIRIN PROTECT 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AXANUM-81-MG-20-MG-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC56> ;
+    ns1:title "AXANUM 81 MG/20 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BETAPRES-10-MG-75-MG-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C07AB57> ;
+    ns1:title "BETAPRES 10 MG/75 MG TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BETAPRES-5-MG-75-MG-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C07AB57> ;
+    ns1:title "BETAPRES 5 MG/75 MG TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BLOKBIS-10-MG-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C07AB57> ;
+    ns1:title "BLOKBIS 10 MG/100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BLOKBIS-5-MG-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C07AB57> ;
+    ns1:title "BLOKBIS 5 MG/100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIORAL-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "CARDIORAL 75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOCOVER-75-MG-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "DUOCOVER 75 MG/100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOCOVER-75-MG-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "DUOCOVER 75 MG/75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOPLAVIN-75-MG-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "DUOPLAVIN 75 MG/100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOPLAVIN-75-MG-75-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "DUOPLAVIN 75 MG/75 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "EXCEDRINIL 250 MG/250 MG/65 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "GODASAL 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GODASAL-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA01> ;
+    ns1:title "GODASAL 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "MIGRALGIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-CEPHYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "NEO-CEPHYL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORISANTIN-200-MG-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC30> ;
+    ns1:title "ORISANTIN 200 MG/25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STACYL-100-MG-ENTEROSOLVENTNI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AC06> ;
+    ns1:title "STACYL 100 MG ENTEROSOLVENTNÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "THOMAPYRIN"@cs .
+
+

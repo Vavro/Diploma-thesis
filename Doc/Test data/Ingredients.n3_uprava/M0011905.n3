@@ -1,0 +1,77 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B02BC30> a ns1:ATCConcept ;
+    skos:notation "B02BC30" ;
+    skos:prefLabel "Lokální hemostatika, kombinace"@cs,
+        "Local hemostatics, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011905> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A single-chain polypeptide derived from bovine tissues consisting of 58 amino-acid residues. It is an inhibitor of proteolytic enzymes including CHYMOTRYPSIN; KALLIKREIN; PLASMIN; and TRYPSIN. It is used in the treatment of HEMORRHAGE associated with raised plasma concentrations of plasmin. It is also used to reduce blood loss and transfusion requirements in patients at high risk of major blood loss during and following open heart surgery with EXTRACORPOREAL CIRCULATION. (Reynolds JEF(Ed): Martindale: The Extra Pharmacopoeia (electronic version). Micromedex, Inc, Englewood, CO, 1995)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000169> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ARTISS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TISSEEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TISSEEL-LYO> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010183>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022084>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024260> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009070> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003354> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> ;
+    ns1:title "Aprotinin"@cs,
+        "Aprotinin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010183> a ns1:PharmacologicalAction ;
+    ns1:description "Agents acting to arrest the flow of blood. Absorbable hemostatics arrest bleeding either by the formation of an artificial clot or by providing a mechanical matrix that facilitates clotting when applied directly to the bleeding surface. These agents function more at the capillary level and are not effective at stemming arterial or venous bleeding under any significant intravascular pressure.     "@en ;
+    ns1:title "Hemostatika"@cs,
+        "Hemostatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022084> a ns1:PharmacologicalAction ;
+    ns1:description "Serine proteinase inhibitors which inhibit trypsin. They may be endogenous or exogenous compounds.     "@en ;
+    ns1:title "Inhibitory trypsinu"@cs,
+        "Trypsin inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0024260> a ns1:PharmacologicalAction ;
+    ns1:description "Exogenous or endogenous compounds which inhibit SERINE ENDOPEPTIDASES.     "@en ;
+    ns1:title "Serinproteinasy - inhibitory"@cs,
+        "Serine proteinase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding or escape of blood from a vessel.     "@en ;
+    ns1:title "Hemoragie"@cs,
+        "Hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003354> a ns1:DiseaseOrFinding ;
+    ns1:description "Loss of blood during a surgical procedure.     "@en ;
+    ns1:title "Hemoragie chirurgická"@cs,
+        "Blood loss, surgical"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000169> a ns1:MechanismOfAction ;
+    ns1:title "Serine Proteinase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009070> a ns1:PhysiologicEffect ;
+    ns1:title "Hemostasis Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ARTISS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B02BC30> ;
+    ns1:title "ARTISS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TISSEEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B02BC30> ;
+    ns1:title "TISSEEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TISSEEL-LYO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B02BC30> ;
+    ns1:title "TISSEEL LYO"@cs .
+
+

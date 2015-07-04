@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C02> a ns1:ATCConcept ;
+    dcterms:title "Antihypertenziva"@cs,
+        "ANTIHYPERTENSIVES"@en ;
+    skos:notation "C02" .
+
+<http://linked.opendata.cz/resource/ATC/C02A> a ns1:ATCConcept ;
+    dcterms:title "Antiadrenergní látky, centrálně působící"@cs,
+        "ANTIADRENERGIC AGENTS, CENTRALLY ACTING"@en ;
+    skos:notation "C02A" .
+
+<http://linked.opendata.cz/resource/ATC/C02AC> a ns1:ATCConcept ;
+    dcterms:title "Agonisté imidazolinových receptorů"@cs,
+        "Imidazoline receptor agonists"@en ;
+    skos:notation "C02AC" .
+
+<http://linked.opendata.cz/resource/ATC/C02AC05> a ns1:ATCConcept ;
+    dcterms:title "Moxonidin"@cs,
+        "Moxonidine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C02>,
+        <http://linked.opendata.cz/resource/ATC/C02A>,
+        <http://linked.opendata.cz/resource/ATC/C02AC> ;
+    skos:notation "C02AC05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127943> a ns1:Ingredient ;
+    ns1:title "Moxonidine"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157085> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157086> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "137.190002441"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "137.199996948"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157087> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "395.809997559"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "147.009994507"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157088> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "480.209991455"^^xsd:float ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "480.209991455"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-04-03"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163408> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163409> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba mírné až středně těžké hypertenze u dospělých.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "1158.2800293"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "490.019989014"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC116754_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X400RG"@cs ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOXONIDIN-MYLAN-0-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127943> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157085>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157086>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157087>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157088>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163408>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163409> ;
+    ns1:title "MOXONIDIN MYLAN 0,4 MG"@cs .
+
+

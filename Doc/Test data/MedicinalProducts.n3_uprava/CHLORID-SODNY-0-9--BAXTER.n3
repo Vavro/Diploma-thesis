@@ -1,0 +1,453 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05B> a ns1:ATCConcept ;
+    dcterms:title "Intravenózní roztoky"@cs,
+        "I.V. SOLUTIONS"@en ;
+    skos:notation "B05B" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB> a ns1:ATCConcept ;
+    dcterms:title "Roztoky ovlivňující rovnováhu elektrolytů"@cs,
+        "Solutions affecting the electrolyte balance"@en ;
+    skos:notation "B05BB" .
+
+<http://linked.opendata.cz/resource/ATC/B05BB01> a ns1:ATCConcept ;
+    dcterms:title "Elektrolyty"@cs,
+        "Electrolytes"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B05>,
+        <http://linked.opendata.cz/resource/ATC/B05B>,
+        <http://linked.opendata.cz/resource/ATC/B05BB> ;
+    skos:notation "B05BB01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187183> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "8X1500ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 8X1500ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187184> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "6X2000ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 6X2000ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187185> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X250ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X250ML(SKLO)"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187186> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X500ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X500ML(SKLO)"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187187> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187188> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X1000ML I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 12X1000ML I"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187189> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187190> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X250ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X250ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187191> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X1000ML II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 12X1000ML II"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187192> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "8X1500ML I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 8X1500ML I"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187193> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "6X2000ML I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 6X2000ML I"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187194> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 1X100ML(SKLO)"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187195> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML III"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML III"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187196> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X1000ML III"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 12X1000ML III"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187197> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "8X1500ML IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 8X1500ML IV"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187198> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "6X2000ML IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 6X2000ML IV"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187199> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML IV"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187200> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X1000ML IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 12X1000ML IV"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187201> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X1000ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 12X1000ML V"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187202> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "8X1500ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 8X1500ML V"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187203> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "6X2000ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 6X2000ML V"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187204> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasIndication """Přípravek CHLORID SODNÝ 0,9% BAXTER je indikován k:
+léčbě  hypovolémie
+léčbě izotonické extracelulární dehydratace
+léčbě deplece sodíku
+použití jako vehikulum nebo rozpouštědlo kompatibilních léčiv pro parenterální podání
+objemy vyšší než 1000 ml mohou být použity jako irigační roztoky při chirurgických výkonech nebo jako proplachovací roztoky (priming solution) při dialýze.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X500ML V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140009_doc> ;
+    ns1:hasStrength "0.9%"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 20X500ML V"@cs ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHLORID-SODNY-0-9--BAXTER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05BB01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187183>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187184>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187185>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187186>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187187>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187188>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187189>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187190>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187191>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187192>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187193>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187194>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187195>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187196>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187197>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187198>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187199>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187200>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187201>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187202>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187203>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187204> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CHLORID SODNÝ 0,9% BAXTER"@cs .
+
+

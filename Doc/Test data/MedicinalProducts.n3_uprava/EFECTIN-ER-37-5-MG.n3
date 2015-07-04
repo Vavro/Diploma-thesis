@@ -1,0 +1,711 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06A> a ns1:ATCConcept ;
+    dcterms:title "Antidepresiva"@cs,
+        "ANTIDEPRESSANTS"@en ;
+    skos:notation "N06A" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidepresiva"@cs,
+        "Other antidepressants"@en ;
+    skos:notation "N06AX" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX16> a ns1:ATCConcept ;
+    dcterms:title "Venlafaxin"@cs,
+        "Venlafaxine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06A>,
+        <http://linked.opendata.cz/resource/ATC/N06AX> ;
+    skos:notation "N06AX16" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136959> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Venlafaxine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0004077> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 30X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0004078> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 60X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041972> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 10X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169105> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 10X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169106> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "30 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 30X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169107> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "60 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 60X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192584> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "7 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 7X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192585> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "14 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 14X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192586> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "84 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 84X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192587> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 100X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192588> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "20 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 20X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192589> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "21 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 21X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192590> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "28 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 28X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192591> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "35 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 35X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192592> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 50X37.5MG I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192593> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10X7 H I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 10X7X37.5MG HOSP I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192594> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "1X70 H I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 1X70X37.5MG HOSP I"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192595> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 10X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192596> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "30 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 30X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192597> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "60 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 60X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192598> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "7 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 7X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192599> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "14 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 14X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192600> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "20 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 20X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192601> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "21 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 21X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192602> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "28 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 28X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192603> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "35 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 35X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192604> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 50X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192605> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "10X7 H II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 10X7X37.5MG HOSPII"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192606> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "1X70 H II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 1X70X37.5MG HOSPII"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192607> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 100X37.5MG II"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192608> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 7X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192609> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 14X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192610> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 20X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192611> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "21"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 21X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192612> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "35"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 35X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192613> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 50X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192614> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 100X37.5MG"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192615> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasIndication """Léčba velkých depresivních epizod.
+K prevenci recidivy velkých depresivních epizod.
+Léčba generalizované úzkostné poruchy.
+Léčba sociální úzkostné poruchy.
+Léčba panické poruchy s agorafobií nebo bez ní.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "70 H"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160025_doc> ;
+    ns1:hasStrength "37.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS RDR 70X37.5MG HOSP"@cs ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EFECTIN-ER-37-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX16> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136959> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0004077>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0004078>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0041972>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169105>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169106>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0169107>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192584>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192585>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192586>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192587>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192588>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192589>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192590>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192591>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192592>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192593>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192594>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192595>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192596>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192597>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192598>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192599>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192600>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192601>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192602>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192603>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192604>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192605>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192606>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192607>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192608>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192609>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192610>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192611>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192612>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192613>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192614>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0192615> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "EFECTIN ER 37,5 MG"@cs .
+
+

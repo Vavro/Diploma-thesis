@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01D> a ns1:ATCConcept ;
+    dcterms:title "Jiná beta-laktamová antibiotika"@cs,
+        "OTHER BETA-LACTAM ANTIBACTERIALS"@en ;
+    skos:notation "J01D" .
+
+<http://linked.opendata.cz/resource/ATC/J01DH> a ns1:ATCConcept ;
+    dcterms:title "Karbapenemy"@cs,
+        "Carbapenems"@en ;
+    skos:notation "J01DH" .
+
+<http://linked.opendata.cz/resource/ATC/J01DH02> a ns1:ATCConcept ;
+    dcterms:title "Meropenem"@cs,
+        "Meropenem"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J01>,
+        <http://linked.opendata.cz/resource/ATC/J01D>,
+        <http://linked.opendata.cz/resource/ATC/J01DH> ;
+    skos:notation "J01DH02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0165499> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Meropenem"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183006> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DH02> ;
+    ns1:hasIndication """Meropenem Ardez  je u dospělých a dětí od 3 měsíců indikován k léčbě následujících infekcí (viz bod 4.4 a 5.1):
+pneumonie, včetně získané komunitní pneumonie a nozokomiální pneumonie
+bronchopulmonálních infekcí u cystické fibrózy
+komplikované infekce močových cest 
+komplikované nitrobřišní infekce
+intrapartální a postpartální  infekce
+komplikované infekce kůže a měkkých tkání
+akutní bakteriální meningitidy
+Meropenem Ardez lze použít ke komplexní léčbě febrilních neutropenických pacientů při podezření na bakteriální infekci.
+Je nutné brát v úvahu oficiální doporučení o vhodném použití antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce a infuse"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160694_doc> ;
+    ns1:hasStrength "500MG"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF PLV SOL 10X500MG"@cs ;
+    ns1:title "MEROPENEM ARDEZ 0,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEROPENEM-ARDEZ-0-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DH02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0165499> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0183006> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "MEROPENEM ARDEZ 0,5 G"@cs .
+
+

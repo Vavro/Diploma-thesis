@@ -1,0 +1,368 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09D> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, kombinace"@cs,
+        "ANGIOTENSIN II ANTAGONISTS, COMBINATIONS"@en ;
+    skos:notation "C09D" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II a diuretika"@cs,
+        "Angiotensin II antagonists and diuretics"@en ;
+    skos:notation "C09DA" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA06> a ns1:ATCConcept ;
+    dcterms:title "Kandesartan a diuretika"@cs,
+        "Candesartan and diuretics"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C09>,
+        <http://linked.opendata.cz/resource/ATC/C09D>,
+        <http://linked.opendata.cz/resource/ATC/C09DA> ;
+    skos:notation "C09DA06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000431>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0208739> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002591>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Candesartan cilexetil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002591> a ns1:DiseaseOrFinding ;
+    ns1:title "Arteria renalis - obstrukce"@cs,
+        "Renal artery obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158989> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 14 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158990> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 14 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158991> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "15 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 15 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158992> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "15 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 15 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158993> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "131.520004272"^^xsd:float ;
+    ns1:hasPackagingSize "28 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "158.259994507"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-05-02"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158994> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "131.520004272"^^xsd:float ;
+    ns1:hasPackagingSize "28 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "158.259994507"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 28 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158995> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158996> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158997> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 56 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158998> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 56 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158999> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 60 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159000> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 60 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159001> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "84 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 84 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159002> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "84 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 84 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159003> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159004> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159005> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 98 I"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159006> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasIndication """Léčba esenciální hypertenze u dospělých, pokud není monoterapie kandesartan-cilexetilem nebo hydrochlorothiazidem dostatečně účinná.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154335_doc> ;
+    ns1:hasStrength "16/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 98 II"@cs ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANCOMBINO-16-MG-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA06> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0208739> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158989>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158990>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158991>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158992>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158993>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158994>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158995>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158996>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158997>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158998>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158999>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159001>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159002>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159003>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159004>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159005>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0159006> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "CANCOMBINO 16 MG/12,5 MG"@cs .
+
+

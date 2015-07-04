@@ -1,0 +1,141 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M01AC01> a ns1:ATCConcept ;
+    skos:notation "M01AC01" ;
+    skos:prefLabel "Piroxikam"@cs,
+        "Piroxicam"@en .
+
+<http://linked.opendata.cz/resource/ATC/M02AA07> a ns1:ATCConcept ;
+    skos:notation "M02AA07" ;
+    skos:prefLabel "Piroxikam"@cs,
+        "Piroxicam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016899> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A cyclooxygenase inhibiting, non-steroidal anti-inflammatory agent (NSAID) that is well established in treating rheumatoid arthritis and osteoarthritis and used for musculoskeletal disorders, dysmenorrhea, and postoperative pain. Its long half-life enables it to be administered once daily.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FLAMEXIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HOTEMIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HOTEMIN-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PIROXICAM-AL-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PIROXICAM-AL-20> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002244>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002360>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002809>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002810>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002858> ;
+    ns1:title "Piroxikam"@cs,
+        "Piroxicam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002360> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the tissues around a joint. (Dorland, 27th ed)     "@en ;
+    ns1:title "Periartritida"@cs,
+        "Periarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002809> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the SPINE. This includes both arthritic and non-arthritic conditions.     "@en ;
+    ns1:title "Spondylitida"@cs,
+        "Spondylitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002810> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory condition affecting the axial joints, such as the SACROILIAC JOINT and other intervertebral or costovertebral joints. It occurs predominantly in young males and is characterized by pain and stiffness of joints (ANKYLOSIS) with inflammation at tendon insertions.     "@en ;
+    ns1:title "Ankylózující spondylitida"@cs,
+        "Spondylitis, ankylosing"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002858> a ns1:DiseaseOrFinding ;
+    ns1:description "An injury to the skin causing erythema, tenderness, and sometimes blistering and resulting from excessive exposure to the sun. The reaction is produced by the ultraviolet radiation in sunlight.     "@en ;
+    ns1:title "Spáleniny sluneční"@cs,
+        "Sunburn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLAMEXIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC01> ;
+    ns1:title "FLAMEXIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HOTEMIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC01>,
+        <http://linked.opendata.cz/resource/ATC/M02AA07> ;
+    ns1:title "HOTEMIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HOTEMIN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC01> ;
+    ns1:title "HOTEMIN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIROXICAM-AL-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC01> ;
+    ns1:title "PIROXICAM AL 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PIROXICAM-AL-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC01> ;
+    ns1:title "PIROXICAM AL 20"@cs .
+
+

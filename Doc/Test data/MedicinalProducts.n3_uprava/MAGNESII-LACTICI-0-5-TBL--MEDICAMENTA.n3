@@ -1,0 +1,176 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A12> a ns1:ATCConcept ;
+    dcterms:title "Minerální doplňky"@cs,
+        "MINERAL SUPPLEMENTS"@en ;
+    skos:notation "A12" .
+
+<http://linked.opendata.cz/resource/ATC/A12C> a ns1:ATCConcept ;
+    dcterms:title "Jiné minerální doplňky"@cs,
+        "OTHER MINERAL SUPPLEMENTS"@en ;
+    skos:notation "A12C" .
+
+<http://linked.opendata.cz/resource/ATC/A12CC> a ns1:ATCConcept ;
+    dcterms:title "Hořčík"@cs,
+        "Magnesium"@en ;
+    skos:notation "A12CC" .
+
+<http://linked.opendata.cz/resource/ATC/A12CC06> a ns1:ATCConcept ;
+    dcterms:title "Magnesium-laktát"@cs,
+        "Magnesium lactate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/A>,
+        <http://linked.opendata.cz/resource/ATC/A12>,
+        <http://linked.opendata.cz/resource/ATC/A12C>,
+        <http://linked.opendata.cz/resource/ATC/A12CC> ;
+    skos:notation "A12CC06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012884> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000305>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000456>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000950>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000988>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001221>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001430>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001499>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001703>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003309>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> ;
+    ns1:description "A metallic element that has the atomic symbol Mg, atomic number 12, and atomic weight 24.31. It is important for the activity of many enzymes, especially those involved in OXIDATIVE PHOSPHORYLATION.     "@en ;
+    ns1:title "Hořčík"@cs,
+        "Magnesium"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000456> a ns1:DiseaseOrFinding ;
+    ns1:title "Apendicitida"@cs,
+        "Appendicitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000988> a ns1:DiseaseOrFinding ;
+    ns1:title "Divertikulitida"@cs,
+        "Diverticulitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001221> a ns1:DiseaseOrFinding ;
+    ns1:title "Nahromadění stolice"@cs,
+        "Fecal impaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001703> a ns1:DiseaseOrFinding ;
+    ns1:title "Střeva - perforace"@cs,
+        "Intestinal perforation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003309> a ns1:DiseaseOrFinding ;
+    ns1:title "Bolesti břicha"@cs,
+        "Abdominal pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017992> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC06> ;
+    ns1:hasIndication """Prevence a monoterapie hypomagnezémie a současná léčba hypomagnezémie doprováze-jící jiná onemocnění  jako je diabetes, virové hepatitidy,  poruchy jaterních funkcí v důs-ledku alkoholismu, jaterní  insuficience provázející některá jiná onemocnění,  hypercho-lesterolémie; dlouhodobé stresové stavy, funkční příznaky anxietních krizí s hyperventila-cí (spasmofilie, konstituční tetanie); podpůrná léčba při současné kauzální terapii kardio-vaskulárních chorob (hypertenzi, stavech po infarktu myokardu, nežádoucích účincích vysokých dávek kardioglykosidů), jako doplněk antihypertenzní terapie. Dále je hořčíkový přípravek vhodný k prevenci premenstruálních tenzí, k tlumení migrenózních stavů a jako součást léčby chronických zánětlivých střevních onemocnění. 
+Doplňková terapie některých alergických onemocnění, dlouhodobé aplikace hormo-nálních kontraceptiv, silných diuretik a laxancií zvyšujících eliminaci hořčíku z orga-nismu. 
+Při zjištěné hypomagnezémii v graviditě: insomnolence, algické uterospasmy, algické kontraktury kosterního svalstva.
+Přípravek mohou užívat dospělí, děti nad 6 let věku, mladiství a těhotné i kojící ženy.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138628_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X0.5GM"@cs ;
+    ns1:title "MAGNESII LACTICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0070535> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC06> ;
+    ns1:hasIndication """Prevence a monoterapie hypomagnezémie a současná léčba hypomagnezémie doprováze-jící jiná onemocnění  jako je diabetes, virové hepatitidy,  poruchy jaterních funkcí v důs-ledku alkoholismu, jaterní  insuficience provázející některá jiná onemocnění,  hypercho-lesterolémie; dlouhodobé stresové stavy, funkční příznaky anxietních krizí s hyperventila-cí (spasmofilie, konstituční tetanie); podpůrná léčba při současné kauzální terapii kardio-vaskulárních chorob (hypertenzi, stavech po infarktu myokardu, nežádoucích účincích vysokých dávek kardioglykosidů), jako doplněk antihypertenzní terapie. Dále je hořčíkový přípravek vhodný k prevenci premenstruálních tenzí, k tlumení migrenózních stavů a jako součást léčby chronických zánětlivých střevních onemocnění. 
+Doplňková terapie některých alergických onemocnění, dlouhodobé aplikace hormo-nálních kontraceptiv, silných diuretik a laxancií zvyšujících eliminaci hořčíku z orga-nismu. 
+Při zjištěné hypomagnezémii v graviditě: insomnolence, algické uterospasmy, algické kontraktury kosterního svalstva.
+Přípravek mohou užívat dospělí, děti nad 6 let věku, mladiství a těhotné i kojící ženy.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "1000"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138628_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 1000X0.5GM"@cs ;
+    ns1:title "MAGNESII LACTICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086393> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC06> ;
+    ns1:hasIndication """Prevence a monoterapie hypomagnezémie a současná léčba hypomagnezémie doprováze-jící jiná onemocnění  jako je diabetes, virové hepatitidy,  poruchy jaterních funkcí v důs-ledku alkoholismu, jaterní  insuficience provázející některá jiná onemocnění,  hypercho-lesterolémie; dlouhodobé stresové stavy, funkční příznaky anxietních krizí s hyperventila-cí (spasmofilie, konstituční tetanie); podpůrná léčba při současné kauzální terapii kardio-vaskulárních chorob (hypertenzi, stavech po infarktu myokardu, nežádoucích účincích vysokých dávek kardioglykosidů), jako doplněk antihypertenzní terapie. Dále je hořčíkový přípravek vhodný k prevenci premenstruálních tenzí, k tlumení migrenózních stavů a jako součást léčby chronických zánětlivých střevních onemocnění. 
+Doplňková terapie některých alergických onemocnění, dlouhodobé aplikace hormo-nálních kontraceptiv, silných diuretik a laxancií zvyšujících eliminaci hořčíku z orga-nismu. 
+Při zjištěné hypomagnezémii v graviditě: insomnolence, algické uterospasmy, algické kontraktury kosterního svalstva.
+Přípravek mohou užívat dospělí, děti nad 6 let věku, mladiství a těhotné i kojící ženy.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138628_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X0.5GM"@cs ;
+    ns1:title "MAGNESII LACTICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184525> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC06> ;
+    ns1:hasIndication """Prevence a monoterapie hypomagnezémie a současná léčba hypomagnezémie doprováze-jící jiná onemocnění  jako je diabetes, virové hepatitidy,  poruchy jaterních funkcí v důs-ledku alkoholismu, jaterní  insuficience provázející některá jiná onemocnění,  hypercho-lesterolémie; dlouhodobé stresové stavy, funkční příznaky anxietních krizí s hyperventila-cí (spasmofilie, konstituční tetanie); podpůrná léčba při současné kauzální terapii kardio-vaskulárních chorob (hypertenzi, stavech po infarktu myokardu, nežádoucích účincích vysokých dávek kardioglykosidů), jako doplněk antihypertenzní terapie. Dále je hořčíkový přípravek vhodný k prevenci premenstruálních tenzí, k tlumení migrenózních stavů a jako součást léčby chronických zánětlivých střevních onemocnění. 
+Doplňková terapie některých alergických onemocnění, dlouhodobé aplikace hormo-nálních kontraceptiv, silných diuretik a laxancií zvyšujících eliminaci hořčíku z orga-nismu. 
+Při zjištěné hypomagnezémii v graviditě: insomnolence, algické uterospasmy, algické kontraktury kosterního svalstva.
+Přípravek mohou užívat dospělí, děti nad 6 let věku, mladiství a těhotné i kojící ženy.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138628_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X0.5GM"@cs ;
+    ns1:title "MAGNESII LACTICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESII-LACTICI-0-5-TBL--MEDICAMENTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC06> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012884> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017992>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0070535>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086393>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184525> ;
+    ns1:title "MAGNESII LACTICI 0,5 TBL. MEDICAMENTA"@cs .
+
+

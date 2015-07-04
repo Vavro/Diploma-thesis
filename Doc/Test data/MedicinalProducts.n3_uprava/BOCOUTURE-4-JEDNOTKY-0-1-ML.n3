@@ -1,0 +1,131 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M> a ns1:ATCConcept ;
+    dcterms:title "Muskuloskeletární systém"@cs,
+        "MUSCULO-SKELETAL SYSTEM"@en ;
+    skos:notation "M" .
+
+<http://linked.opendata.cz/resource/ATC/M03> a ns1:ATCConcept ;
+    dcterms:title "Myorelaxancia"@cs,
+        "MUSCLE RELAXANTS"@en ;
+    skos:notation "M03" .
+
+<http://linked.opendata.cz/resource/ATC/M03A> a ns1:ATCConcept ;
+    dcterms:title "Periferně působící myorelaxancia"@cs,
+        "MUSCLE RELAXANTS, PERIPHERALLY ACTING AGENTS"@en ;
+    skos:notation "M03A" .
+
+<http://linked.opendata.cz/resource/ATC/M03AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná periferně působící myorelaxancia"@cs,
+        "Other muscle relaxants, peripherally acting agents"@en ;
+    skos:notation "M03AX" .
+
+<http://linked.opendata.cz/resource/ATC/M03AX01> a ns1:ATCConcept ;
+    dcterms:title "Botulotoxin"@cs,
+        "Botulinum toxin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/M>,
+        <http://linked.opendata.cz/resource/ATC/M03>,
+        <http://linked.opendata.cz/resource/ATC/M03A>,
+        <http://linked.opendata.cz/resource/ATC/M03AX> ;
+    skos:notation "M03AX01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028703> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A serotype of botulinum toxins that has specificity for cleavage of SYNAPTOSOMAL-ASSOCIATED PROTEIN 25.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014721>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014777> ;
+    ns1:title "Botulotoxiny typ a"@cs,
+        "Botulinum toxins, type a"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014721> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their actions on skeletal muscle. Included are agents that act directly on skeletal muscle, those that alter neuromuscular transmission (NEUROMUSCULAR BLOCKING AGENTS), and drugs that act centrally as skeletal muscle relaxants (MUSCLE RELAXANTS, CENTRAL). Drugs used in the treatment of movement disorders are ANTI-DYSKINESIA AGENTS.     "@en ;
+    ns1:title "Nervosvalové látky"@cs,
+        "Neuromuscular agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014777> a ns1:PharmacologicalAction ;
+    ns1:description "Toxic substances from microorganisms, plants or animals that interfere with the functions of the nervous system. Most venoms contain neurotoxic substances. Myotoxins are included in this concept.     "@en ;
+    ns1:title "Neurotoxiny"@cs,
+        "Neurotoxins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161981> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:hasIndication """Bocouture je určen k přechodnému zlepšení vzhledu střední až velké vertikální vrásky mezi obočím (glabelární vrásky) u dospělých do 65 let, jestliže závažnost této vrásky má důležitý psychologický dopad na pacienta.
+"""@cs ;
+    ns1:hasIndicationGroup "MYORELAXANTIA"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150994_doc> ;
+    ns1:hasStrength "50UT"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 1X50UT"@cs ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161982> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:hasIndication """Bocouture je určen k přechodnému zlepšení vzhledu střední až velké vertikální vrásky mezi obočím (glabelární vrásky) u dospělých do 65 let, jestliže závažnost této vrásky má důležitý psychologický dopad na pacienta.
+"""@cs ;
+    ns1:hasIndicationGroup "MYORELAXANTIA"@cs ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150994_doc> ;
+    ns1:hasStrength "50UT"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 2X50UT"@cs ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161983> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:hasIndication """Bocouture je určen k přechodnému zlepšení vzhledu střední až velké vertikální vrásky mezi obočím (glabelární vrásky) u dospělých do 65 let, jestliže závažnost této vrásky má důležitý psychologický dopad na pacienta.
+"""@cs ;
+    ns1:hasIndicationGroup "MYORELAXANTIA"@cs ;
+    ns1:hasPackagingSize "3"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150994_doc> ;
+    ns1:hasStrength "50UT"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 3X50UT"@cs ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161984> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:hasIndication """Bocouture je určen k přechodnému zlepšení vzhledu střední až velké vertikální vrásky mezi obočím (glabelární vrásky) u dospělých do 65 let, jestliže závažnost této vrásky má důležitý psychologický dopad na pacienta.
+"""@cs ;
+    ns1:hasIndicationGroup "MYORELAXANTIA"@cs ;
+    ns1:hasPackagingSize "6"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150994_doc> ;
+    ns1:hasStrength "50UT"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 6X50UT"@cs ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOCOUTURE-4-JEDNOTKY-0-1-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028703> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161981>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161982>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161983>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0161984> ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+

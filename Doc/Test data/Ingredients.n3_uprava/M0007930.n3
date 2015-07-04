@@ -1,0 +1,139 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01CB01> a ns1:ATCConcept ;
+    skos:notation "L01CB01" ;
+    skos:prefLabel "Etoposid"@cs,
+        "Etoposide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007930> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A semisynthetic derivative of PODOPHYLLOTOXIN that exhibits antitumor activity. Etoposide inhibits DNA synthesis by forming a complex with topoisomerase II and DNA. This complex induces breaks in double stranded DNA and prevents repair by topoisomerase II binding. Accumulated breaks in DNA prevent entry into the mitotic phase of cell division, and lead to cell death. Etoposide acts primarily in the G2 and S phases of the cell cycle.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ETOPOSID-EBEWE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ETOPOSIDE-TEVA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000564>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000609>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001883>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002167>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002500>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002628>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002674>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002676>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002914>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003023>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003093>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003267>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003294> ;
+    ns1:title "Etoposid"@cs,
+        "Etoposide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001486> a ns1:PharmacologicalAction ;
+    ns1:description "Agents obtained from higher plants that have demonstrable cytostatic or antineoplastic activity.     "@en ;
+    ns1:title "Antitumorózní látky fytogenní"@cs,
+        "Antineoplastic agents, phytogenic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000564> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nádory"@cs,
+        "Urinary bladder neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000609> a ns1:DiseaseOrFinding ;
+    ns1:description "Neoplasms of the intracranial components of the central nervous system, including the cerebral hemispheres, basal ganglia, hypothalamus, thalamus, brain stem, and cerebellum. Brain neoplasms are subdivided into primary (originating from brain tissue) and secondary (i.e., metastatic) forms. Primary neoplasms are subdivided into benign and malignant forms. In general, brain tumors may also be classified by age of onset, histologic type, or presenting location in the brain.     "@en ;
+    ns1:title "Nádory mozku"@cs,
+        "Brain neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001883> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the LUNG.     "@en ;
+    ns1:title "Plíce - nádory"@cs,
+        "Lung neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002076> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, malignant T-cell lymphoma of the skin. In the late stages, the LYMPH NODES and viscera are affected.     "@en ;
+    ns1:title "Mycosis fungoides"@cs,
+        "Mycosis fungoides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002167> a ns1:DiseaseOrFinding ;
+    ns1:description "A common neoplasm of early childhood arising from neural crest cells in the sympathetic nervous system, and characterized by diverse clinical behavior, ranging from spontaneous remission to rapid metastatic progression and death. This tumor is the most common intraabdominal malignancy of childhood, but it may also arise from thorax, neck, or rarely occur in the central nervous system. Histologic features include uniform round cells with hyperchromatic nuclei arranged in nests and separated by fibrovascular septa. Neuroblastomas may be associated with the opsoclonus-myoclonus syndrome. (From DeVita et al., Cancer: Principles and Practice of Oncology, 5th ed, pp2099-2101; Curr Opin Oncol 1998 Jan;10(1):43-51)     "@en ;
+    ns1:title "Neuroblastom"@cs,
+        "Neuroblastoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002628> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant solid tumor arising from mesenchymal tissues which normally differentiate to form striated muscle. It can occur in a wide variety of sites. It is divided into four distinct types: pleomorphic, predominantly in male adults; alveolar (RHABDOMYOSARCOMA, ALVEOLAR), mainly in adolescents and young adults; embryonal (RHABDOMYOSARCOMA, EMBRYONAL), predominantly in infants and children; and botryoidal, also in young children. It is one of the most frequently occurring soft tissue sarcomas and the most common in children under 15. (From Dorland, 27th ed; Holland et al., Cancer Medicine, 3d ed, p2186; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, pp1647-9)     "@en ;
+    ns1:title "Rhabdomyosarkom"@cs,
+        "Rhabdomyosarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002674> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant tumor of the bone which always arises in the medullary tissue, occurring more often in cylindrical bones. The tumor occurs usually before the age of 20, about twice as frequently in males as in females.     "@en ;
+    ns1:title "Ewingův sarkom"@cs,
+        "Sarcoma, ewing"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002676> a ns1:DiseaseOrFinding ;
+    ns1:description "A multicentric, malignant neoplastic vascular proliferation characterized by the development of bluish-red cutaneous nodules, usually on the lower extremities, most often on the toes or feet, and slowly increasing in size and number and spreading to more proximal areas. The tumors have endothelium-lined channels and vascular spaces admixed with variably sized aggregates of spindle-shaped cells, and often remain confined to the skin and subcutaneous tissue, but widespread visceral involvement may occur. Kaposi's sarcoma occurs spontaneously in Jewish and Italian males in Europe and the United States. An aggressive variant in young children is endemic in some areas of Africa. A third form occurs in about 0.04% of kidney transplant patients. There is also a high incidence in AIDS patients. (From Dorland, 27th ed & Holland et al., Cancer Medicine, 3d ed, pp2105-7) HHV-8 is the suspected cause.     "@en ;
+    ns1:title "Sarkom kaposiho"@cs,
+        "Sarcoma, kaposi"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002914> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the TESTIS. Germ cell tumors (GERMINOMA) of the testis constitute 95% of all testicular neoplasms.     "@en ;
+    ns1:title "Testikulární nádory"@cs,
+        "Testicular neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003023> a ns1:DiseaseOrFinding ;
+    ns1:description "Trophoblastic growth, which may be gestational or nongestational in origin. Trophoblastic neoplasia resulting from pregnancy is often described as gestational trophoblastic disease to distinguish it from germ cell tumors which frequently show trophoblastic elements, and from the trophoblastic differentiation which sometimes occurs in a wide variety of epithelial cancers. Gestational trophoblastic growth has several forms, including HYDATIDIFORM MOLE and CHORIOCARCINOMA. (From Holland et al., Cancer Medicine, 3d ed, p1691)     "@en ;
+    ns1:title "Trofoblastické nádory"@cs,
+        "Trophoblastic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003093> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the UTERUS.     "@en ;
+    ns1:title "Uterus - nádory"@cs,
+        "Uterine neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003267> a ns1:DiseaseOrFinding ;
+    ns1:description "Clonal expansion of myeloid blasts in bone marrow, blood, and other tissue. Myeloid leukemias develop from changes in cells that normally produce NEUTROPHILS; BASOPHILS; EOSINOPHILS; and MONOCYTES.     "@en ;
+    ns1:title "Akutní myeloidní leukemie m1"@cs,
+        "Leukemia, myeloid, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003294> a ns1:DiseaseOrFinding ;
+    ns1:description "General term for the abnormal appearance of histiocytes in the blood. Based on the pathological features of the cells involved rather than on clinical findings, the histiocytic diseases are subdivided into three groups: HISTIOCYTOSIS, LANGERHANS CELL; HISTIOCYTOSIS, NON-LANGERHANS-CELL; and HISTIOCYTIC DISORDERS, MALIGNANT.     "@en ;
+    ns1:title "Histiocytóza"@cs,
+        "Histiocytosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETOPOSID-EBEWE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CB01> ;
+    ns1:title "ETOPOSID \"EBEWE\""@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETOPOSIDE-TEVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CB01> ;
+    ns1:title "ETOPOSIDE-TEVA"@cs .
+
+

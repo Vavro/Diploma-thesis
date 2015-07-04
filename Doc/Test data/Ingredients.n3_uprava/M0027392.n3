@@ -1,0 +1,119 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02CC01> a ns1:ATCConcept ;
+    skos:notation "N02CC01" ;
+    skos:prefLabel "Sumatriptan"@cs,
+        "Sumatriptan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027392> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000407>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000724>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> ;
+    ns1:description "A serotonin agonist that acts selectively at 5HT1 receptors. It is used in the treatment of MIGRAINE DISORDERS.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000256> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ROSEMIG-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROSEMIG-20-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026368> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008351>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009198> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000798>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> ;
+    ns1:title "Sumatriptan"@cs,
+        "Sumatriptan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause constriction of the blood vessels.     "@en ;
+    ns1:title "Vazokonstriktory"@cs,
+        "Vasoconstrictor agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026368> a ns1:PharmacologicalAction ;
+    ns1:description "Endogenous compounds and drugs that specifically stimulate SEROTONIN 5-HT1 RECEPTORS. Included under this heading are agonists for one or more of the specific 5-HT1 receptor subtypes.     "@en ;
+    ns1:title "Serotoninové receptory 5-ht1 - agonisté"@cs,
+        "Serotonin 5-ht1 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000407> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by the development of CHEST PAIN at rest with concomitant transient ST segment elevation in the ELECTROCARDIOGRAM, but with preserved exercise capacity.     "@en ;
+    ns1:title "Variantní angina pectoris"@cs,
+        "Angina pectoris, variant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000724> a ns1:DiseaseOrFinding ;
+    ns1:description "Brief reversible episodes of focal, nonconvulsive ischemic dysfunction of the brain having a duration of less than 24 hours, and usually less than one hour, caused by transient thrombotic or embolic blood vessel occlusion or stenosis. Events may be classified by arterial distribution, temporal pattern, or etiology (e.g., embolic vs. thrombotic). (From Adams et al., Principles of Neurology, 6th ed, pp814-6)     "@en ;
+    ns1:title "Tranzitorní ischemická ataka"@cs,
+        "Ischemic attack, transient"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000798> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary headache disorder that is characterized by severe, strictly unilateral PAIN which is orbital, supraorbital, temporal or in any combination of these sites, lasting 15-180 min. occurring 1 to 8 times a day. The attacks are associated with one or more of the following, all of which are ipsilateral: conjunctival injection, lacrimation, nasal congestion, rhinorrhea, facial SWEATING, eyelid EDEMA, and miosis. (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Cluster headache"@cs,
+        "Cluster headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002114> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.     "@en ;
+    ns1:title "Nauzea"@cs,
+        "Nausea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)     "@en ;
+    ns1:title "Cévní mozková příhoda"@cs,
+        "Stroke"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of disabling primary headache disorders, characterized by recurrent unilateral pulsatile headaches. The two major subtypes are common migraine (without aura) and classic migraine (with aura or neurological symptoms). (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Migréna"@cs,
+        "Migraine disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000256> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008351> a ns1:PhysiologicEffect ;
+    ns1:title "Cerebral Arterial Vasoconstriction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009198> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROSEMIG-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02CC01> ;
+    ns1:title "ROSEMIG 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROSEMIG-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02CC01> ;
+    ns1:title "ROSEMIG 20 MG"@cs .
+
+

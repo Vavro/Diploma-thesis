@@ -1,0 +1,154 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R01AA05> a ns1:ATCConcept ;
+    skos:notation "R01AA05" ;
+    skos:prefLabel "Oxymetazolin"@cs,
+        "Oxymetazoline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015681> a ns1:Ingredient ;
+    ns1:description "A direct acting sympathomimetic used as a vasoconstrictor to relieve nasal congestion. (From Martindale, The Extra Pharmacopoeia, 30th ed, p1251)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000209> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-GLYCEROLEM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-HERMANKEM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-MENTOLEM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-01->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-025->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-05->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-01-->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-025-->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-05->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OXAMET-0-5-PM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OXAMET-MINT-0-5-PM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SINEX-VICKS-ALOE-A-EUKALYPTUS-0-5-MG-ML> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000492>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022552> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008371>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008896> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000824>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000833>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002266>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002634>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> ;
+    ns1:title "Oxymetazolin"@cs,
+        "Oxymetazoline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000492> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that selectively bind to and activate alpha adrenergic receptors.     "@en ;
+    ns1:title "Receptory adrenergní alfa - agonisté"@cs,
+        "Adrenergic alpha-agonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022552> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs designed to treat inflammation of the nasal passages, generally the result of an infection (more often than not the common cold) or an allergy related condition, e.g., hay fever. The inflammation involves swelling of the mucous membrane that lines the nasal passages and results in inordinate mucus production. The primary class of nasal decongestants are vasoconstrictor agents. (From PharmAssist, The Family Guide to Health and Medicine, 1993)     "@en ;
+    ns1:title "Vasokonstriktiva nosní"@cs,
+        "Nasal decongestants"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000833> a ns1:DiseaseOrFinding ;
+    ns1:title "Konjunktivitida"@cs,
+        "Conjunctivitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002634> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA, the mucous membrane lining the NASAL CAVITIES.     "@en ;
+    ns1:title "Rinitida"@cs,
+        "Rhinitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002756> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in one or more of the PARANASAL SINUSES.     "@en ;
+    ns1:title "Sinusitida"@cs,
+        "Sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000209> a ns1:MechanismOfAction ;
+    ns1:title "Adrenergic alpha-Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008371> a ns1:PhysiologicEffect ;
+    ns1:title "Conjunctival Arterial Vasoconstriction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008896> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Nasal and Sinus Secretions"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "AFRIN 0,5 MG/ML NOSNÍ SPREJ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-GLYCEROLEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "AFRIN 0,5 MG/ML NOSNÍ SPREJ S GLYCEROLEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-HERMANKEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "AFRIN 0,5 MG/ML NOSNÍ SPREJ S HEŘMÁNKEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AFRIN-0-5-MG-ML-NOSNI-SPREJ-S-MENTOLEM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "AFRIN 0,5 MG/ML NOSNÍ SPREJ S MENTOLEM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-01-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN 0,01%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-025-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN 0,025%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-0-05-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-01--> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN SENSITIVE 0,01 %"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-025--> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN SENSITIVE 0,025 %"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NASIVIN-SENSITIVE-0-05-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "NASIVIN SENSITIVE 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXAMET-0-5-PM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "OXAMET 0,5 PM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OXAMET-MINT-0-5-PM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "OXAMET MINT 0,5 PM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SINEX-VICKS-ALOE-A-EUKALYPTUS-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R01AA05> ;
+    ns1:title "SINEX VICKS ALOE A EUKALYPTUS 0,5 MG/ML"@cs .
+
+

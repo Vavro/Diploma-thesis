@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C02AB01> a ns1:ATCConcept ;
+    skos:notation "C02AB01" ;
+    skos:prefLabel "Methyldopa (levotočivá)"@cs,
+        "Methyldopa (levorotatory)"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013626> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001000>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> ;
+    ns1:description "An alpha-2 adrenergic agonist that has both central and peripheral nervous system effects. Its primary clinical use is as an antihypertensive agent.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000209> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/DOPEGYT> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543921> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008500>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> ;
+    ns1:title "Methyldopa"@cs,
+        "Methyldopa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020945> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit the actions of the sympathetic nervous system by any mechanism. The most common of these are the ADRENERGIC ANTAGONISTS and drugs that deplete norepinephrine or reduce the release of transmitters from adrenergic postganglionic terminals (see ADRENERGIC AGENTS). Drugs that act in the central nervous system to reduce sympathetic activity (e.g., centrally acting alpha-2 adrenergic agonists, see ADRENERGIC ALPHA-AGONISTS) are included here.     "@en ;
+    ns1:title "Sympatolytika"@cs,
+        "Sympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543921> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that bind to and activate ADRENERGIC ALPHA-2 RECEPTORS.     "@en ;
+    ns1:title "Alfa-2-adrenergní receptory - agonisté"@cs,
+        "Adrenergic alpha-2 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000209> a ns1:MechanismOfAction ;
+    ns1:title "Adrenergic alpha-Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008500> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOPEGYT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AB01> ;
+    ns1:title "DOPEGYT"@cs .
+
+

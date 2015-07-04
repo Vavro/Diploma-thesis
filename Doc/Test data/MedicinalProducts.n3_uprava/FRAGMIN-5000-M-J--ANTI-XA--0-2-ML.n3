@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B01> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01" .
+
+<http://linked.opendata.cz/resource/ATC/B01A> a ns1:ATCConcept ;
+    dcterms:title "Antikoagulancia, antitrombotika"@cs,
+        "ANTITHROMBOTIC AGENTS"@en ;
+    skos:notation "B01A" .
+
+<http://linked.opendata.cz/resource/ATC/B01AB> a ns1:ATCConcept ;
+    dcterms:title "Hepariny"@cs,
+        "Heparin group"@en ;
+    skos:notation "B01AB" .
+
+<http://linked.opendata.cz/resource/ATC/B01AB04> a ns1:ATCConcept ;
+    dcterms:title "Dalteparin"@cs,
+        "Dalteparin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B01>,
+        <http://linked.opendata.cz/resource/ATC/B01A>,
+        <http://linked.opendata.cz/resource/ATC/B01AB> ;
+    skos:notation "B01AB04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027163> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Dalteparin sodný"@cs,
+        "Dalteparin sodium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001380> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that prevent clotting.     "@en ;
+    ns1:title "Antikoagulancia"@cs,
+        "Anticoagulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008434> a ns1:PharmacologicalAction ;
+    ns1:description "Fibrinolysin or agents that convert plasminogen to FIBRINOLYSIN.     "@en ;
+    ns1:title "Fibrinolytika"@cs,
+        "Fibrinolytic agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107734> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AB04> ;
+    ns1:hasIndication """Léčba akutní trombózy hlubokých žil a plicní embolie.
+Prevence srážení krve v mimotělním systému při hemodialýze a hemofiltraci v souvislosti s akutním renálním selháním nebo s chronickou renální nedostatečností.
+Profylaxe tromboembolie v souvislosti s chirurgickým výkonem.
+Profylaxe tromboembolie u pacientů s omezenou pohyblivostí způsobenou akutním zdravotním stavem.
+Léčba nestabilní anginy pectoris a non-Q infarktu myokardu (NSTEMI).
+Léčba hluboké žilní trombózy a/nebo plicní embolie a prodloužená tromboprofylaxe u pacientů s nádorovým onemocněním.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICOAGULANTIA (FIBRINOLYTICA, ANTIFIBRINOL.)"@cs ;
+    ns1:hasMaximalPrice "835.479980469"^^xsd:float ;
+    ns1:hasPackagingSize "10X0.2ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "937.940002441"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-07-19"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130108_doc> ;
+    ns1:hasStrength "25KU/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.2ML/5KU"@cs ;
+    ns1:title "FRAGMIN 5000 M.J.(ANTI-XA)/0,2 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FRAGMIN-5000-M-J--ANTI-XA--0-2-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B01AB04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0027163> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0107734> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "FRAGMIN 5000 M.J.(ANTI-XA)/0,2 ML"@cs .
+
+

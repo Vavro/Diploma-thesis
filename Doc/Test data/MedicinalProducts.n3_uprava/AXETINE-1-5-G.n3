@@ -1,0 +1,154 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01D> a ns1:ATCConcept ;
+    dcterms:title "Jiná beta-laktamová antibiotika"@cs,
+        "OTHER BETA-LACTAM ANTIBACTERIALS"@en ;
+    skos:notation "J01D" .
+
+<http://linked.opendata.cz/resource/ATC/J01DC> a ns1:ATCConcept ;
+    dcterms:title "Cefalosporiny II. generace"@cs,
+        "Second-generation cephalosporins"@en ;
+    skos:notation "J01DC" .
+
+<http://linked.opendata.cz/resource/ATC/J01DC02> a ns1:ATCConcept ;
+    dcterms:title "Cefuroxim"@cs,
+        "Cefuroxime"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J01>,
+        <http://linked.opendata.cz/resource/ATC/J01D>,
+        <http://linked.opendata.cz/resource/ATC/J01DC> ;
+    skos:notation "J01DC02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003733> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Broad-spectrum cephalosporin antibiotic resistant to beta-lactamase. It has been proposed for infections with gram-negative and gram-positive organisms, GONORRHEA, and HAEMOPHILUS.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Cefuroxim"@cs,
+        "Cefuroxime"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064830> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DC02> ;
+    ns1:hasIndication """Přípravek AXETINE je indikován k léčbě níže uvedených infekcí u dospělých a dětí včetně novorozenců (od narození), viz body 4.4 a 5.1.
+Komunitní pneumonie
+Akutní exacerbace chronické bronchitidy
+Komplikované infekce močových cest, včetně pyelonefritidy
+Infekce měkkých tkání: celulitida, erysipel a ranné infekce
+Intraabdominální infekce (viz bod 4.4)
+Profylaxe infekce při gastrointestinálních (včetně ezofageálních), ortopedických, kardiovaskulárních a gynekologických chirurgických výkonech (včetně císařského řezu)
+V léčbě a prevenci infekcí, u kterých je velká pravděpodobnost, že jsou způsobeny anaerobními organismy, je třeba podávat cefuroxim s dalšími vhodnými antibiotiky.
+Při použití přípravku je třeba dbát oficiálních doporučení pro správné používání antibiotik.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce a infuse"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160953_doc> ;
+    ns1:hasStrength "1.5GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF PLV SOL 1X1.5GM"@cs ;
+    ns1:title "AXETINE 1,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064831> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DC02> ;
+    ns1:hasIndication """Přípravek AXETINE je indikován k léčbě níže uvedených infekcí u dospělých a dětí včetně novorozenců (od narození), viz body 4.4 a 5.1.
+Komunitní pneumonie
+Akutní exacerbace chronické bronchitidy
+Komplikované infekce močových cest, včetně pyelonefritidy
+Infekce měkkých tkání: celulitida, erysipel a ranné infekce
+Intraabdominální infekce (viz bod 4.4)
+Profylaxe infekce při gastrointestinálních (včetně ezofageálních), ortopedických, kardiovaskulárních a gynekologických chirurgických výkonech (včetně císařského řezu)
+V léčbě a prevenci infekcí, u kterých je velká pravděpodobnost, že jsou způsobeny anaerobními organismy, je třeba podávat cefuroxim s dalšími vhodnými antibiotiky.
+Při použití přípravku je třeba dbát oficiálních doporučení pro správné používání antibiotik.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "1004.32000732"^^xsd:float ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1003.78997803"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce a infuse"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160953_doc> ;
+    ns1:hasStrength "1.5GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF PLV SOL 10X1.5GM"@cs ;
+    ns1:title "AXETINE 1,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064832> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DC02> ;
+    ns1:hasIndication """Přípravek AXETINE je indikován k léčbě níže uvedených infekcí u dospělých a dětí včetně novorozenců (od narození), viz body 4.4 a 5.1.
+Komunitní pneumonie
+Akutní exacerbace chronické bronchitidy
+Komplikované infekce močových cest, včetně pyelonefritidy
+Infekce měkkých tkání: celulitida, erysipel a ranné infekce
+Intraabdominální infekce (viz bod 4.4)
+Profylaxe infekce při gastrointestinálních (včetně ezofageálních), ortopedických, kardiovaskulárních a gynekologických chirurgických výkonech (včetně císařského řezu)
+V léčbě a prevenci infekcí, u kterých je velká pravděpodobnost, že jsou způsobeny anaerobními organismy, je třeba podávat cefuroxim s dalšími vhodnými antibiotiky.
+Při použití přípravku je třeba dbát oficiálních doporučení pro správné používání antibiotik.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce a infuse"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160953_doc> ;
+    ns1:hasStrength "1.5GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF PLV SOL 50X1.5GM"@cs ;
+    ns1:title "AXETINE 1,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064833> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DC02> ;
+    ns1:hasBreakMarketingDate "2011-02-01"^^xsd:date ;
+    ns1:hasIndication """Přípravek AXETINE je indikován k léčbě níže uvedených infekcí u dospělých a dětí včetně novorozenců (od narození), viz body 4.4 a 5.1.
+Komunitní pneumonie
+Akutní exacerbace chronické bronchitidy
+Komplikované infekce močových cest, včetně pyelonefritidy
+Infekce měkkých tkání: celulitida, erysipel a ranné infekce
+Intraabdominální infekce (viz bod 4.4)
+Profylaxe infekce při gastrointestinálních (včetně ezofageálních), ortopedických, kardiovaskulárních a gynekologických chirurgických výkonech (včetně císařského řezu)
+V léčbě a prevenci infekcí, u kterých je velká pravděpodobnost, že jsou způsobeny anaerobními organismy, je třeba podávat cefuroxim s dalšími vhodnými antibiotiky.
+Při použití přípravku je třeba dbát oficiálních doporučení pro správné používání antibiotik.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "8974.78027344"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "10037.9404297"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce a infuse"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160953_doc> ;
+    ns1:hasStrength "1.5GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ+INF PLV SOL 100X1.5GM"@cs ;
+    ns1:title "AXETINE 1,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AXETINE-1-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01DC02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003733> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064830>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064831>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064832>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0064833> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "AXETINE 1,5 G"@cs .
+
+

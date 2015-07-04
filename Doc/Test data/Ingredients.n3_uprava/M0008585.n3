@@ -1,0 +1,77 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V03AB25> a ns1:ATCConcept ;
+    skos:notation "V03AB25" ;
+    skos:prefLabel "Flumazenil"@cs,
+        "Flumazenil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008585> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A potent benzodiazepine receptor antagonist. Since it reverses the sedative and other actions of benzodiazepines, it has been suggested as an antidote to benzodiazepine overdoses.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000074>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000229> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ANEXATE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FLUMAZENIL-PHARMASELECT-0-1-MG-ML> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008631> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000003064>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003288> ;
+    ns1:title "Flumazenil"@cs,
+        "Flumazenil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390> a ns1:PharmacologicalAction ;
+    ns1:description "Agents counteracting or neutralizing the action of POISONS.     "@en ;
+    ns1:title "Antidota"@cs,
+        "Antidotes"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003064> a ns1:DiseaseOrFinding ;
+    ns1:description "Loss of the ability to maintain awareness of self and environment combined with markedly reduced responsiveness to environmental stimuli. (From Adams et al., Principles of Neurology, 6th ed, pp344-5)     "@en ;
+    ns1:title "Bezvědomí"@cs,
+        "Unconsciousness"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003288> a ns1:DiseaseOrFinding ;
+    ns1:description "Improper use of drugs or medications outside the intended purpose, scope, or guidelines for use. This is in contrast to MEDICATION ADHERENCE, and distinguished from DRUG ABUSE, which is a deliberate or willful action frequently associated with psychological disorders.     "@en ;
+    ns1:title "Nadměrná dávka"@cs,
+        "Prescription drug misuse"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000074> a ns1:MechanismOfAction ;
+    ns1:title "GABA A Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000229> a ns1:MechanismOfAction ;
+    ns1:title "GABA B Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008631> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ANEXATE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB25> ;
+    ns1:title "ANEXATE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUMAZENIL-PHARMASELECT-0-1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB25> ;
+    ns1:title "FLUMAZENIL PHARMASELECT 0,1 MG/ML"@cs .
+
+

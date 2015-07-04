@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AF> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ke snížení toxicity protinádorové léčby"@cs,
+        "Detoxifying agents for antineoplastic treatment"@en ;
+    skos:notation "V03AF" .
+
+<http://linked.opendata.cz/resource/ATC/V03AF07> a ns1:ATCConcept ;
+    dcterms:title "Rasburikáza"@cs,
+        "Rasburicase"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V03>,
+        <http://linked.opendata.cz/resource/ATC/V03A>,
+        <http://linked.opendata.cz/resource/ATC/V03AF> ;
+    skos:notation "V03AF07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0443962> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> ;
+    ns1:title "Rasburicase"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> a ns1:DiseaseOrFinding ;
+    ns1:title "Glukosafosfátdehydrogenasa - nedostatek"@cs,
+        "Glucosephosphate dehydrogenase deficiency"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025489> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AF07> ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "3+3X1ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "1.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PSO LQF 3X1.5MG"@cs ;
+    ns1:title "FASTURTEC 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025490> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AF07> ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1+1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "1.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PSO LQF 1X7.5MG"@cs ;
+    ns1:title "FASTURTEC 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FASTURTEC-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AF07> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0443962> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025489>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025490> ;
+    ns1:title "FASTURTEC 1,5 MG"@cs .
+
+

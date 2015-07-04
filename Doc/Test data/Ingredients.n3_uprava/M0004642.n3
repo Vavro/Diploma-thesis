@@ -1,0 +1,285 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D01AC01> a ns1:ATCConcept ;
+    skos:notation "D01AC01" ;
+    skos:prefLabel "Klotrimazol"@cs,
+        "Clotrimazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/D01AC20> a ns1:ATCConcept ;
+    skos:notation "D01AC20" ;
+    skos:prefLabel "Imidazolové a triazolové deriváty, kombinace"@cs,
+        "Imidazole and triazole derivates, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/D07BA01> a ns1:ATCConcept ;
+    skos:notation "D07BA01" ;
+    skos:prefLabel "Prednisolon a antiseptika"@cs,
+        "Prednisolone and antiseptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AF02> a ns1:ATCConcept ;
+    skos:notation "G01AF02" ;
+    skos:prefLabel "Klotrimazol"@cs,
+        "Clotrimazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004642> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An imidazole derivative with a broad spectrum of antimycotic activity. It inhibits biosynthesis of the sterol ergostol, an important component of fungal CELL MEMBRANES. Its action leads to increased membrane permeability and apparent disruption of enzyme systems bound to the membrane.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010265> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNECOLOR-KREMPASTA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/AKNECOLOR-LIGHT-KREMPASTA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-1--SPRAY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-200-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-KREM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIMAX-1->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-1-DEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-3-DNY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-6-DNI>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-COMBI-PACK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-KREM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CANIFUG-LOSUNG-1->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-1->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-200>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-SPRAY-1->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-HBF>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/IMACORT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/IMAZOL-KREMPASTA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/IMAZOL-PLUS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/JENAMAZOL-2-> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000288>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000650>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000652>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000653>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000654>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000939>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000945>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001148>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002075>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002330>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002653>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002955>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002958>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002959>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003147> ;
+    ns1:title "Klotrimazol"@cs,
+        "Clotrimazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit STEROL 14-DEMETHYLASE. A variety of azole-derived ANTIFUNGAL AGENTS act through this mechanism.     "@en ;
+    ns1:title "14-alfa-demethylasa - inhibitory"@cs,
+        "14-alpha demethylase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000288> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic disorder of the pilosebaceous apparatus associated with an increase in sebum secretion. It is characterized by open comedones (blackheads), closed comedones (whiteheads), and pustular nodules. The cause is unknown, but heredity and age are predisposing factors.     "@en ;
+    ns1:title "Acne vulgaris"@cs,
+        "Acne vulgaris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000527> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the head of the PENIS, glans penis.     "@en ;
+    ns1:title "Balanitida"@cs,
+        "Balanitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000652> a ns1:DiseaseOrFinding ;
+    ns1:description "Candidiasis of the skin manifested as eczema-like lesions of the interdigital spaces, perleche, or chronic paronychia. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza kožní"@cs,
+        "Candidiasis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the mucous membranes of the mouth by a fungus of the genus CANDIDA. (Dorland, 27th ed)     "@en ;
+    ns1:title "Orální kandidóza"@cs,
+        "Candidiasis, oral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000654> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the VULVA and VAGINA with a fungus of the genus CANDIDA.     "@en ;
+    ns1:title "Kandidóza vulvovaginální"@cs,
+        "Candidiasis, vulvovaginal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000945> a ns1:DiseaseOrFinding ;
+    ns1:description "Superficial infections of the skin or its appendages by any of various fungi.     "@en ;
+    ns1:title "Dermatomykózy"@cs,
+        "Dermatomycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001148> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic bacterial infection of major folds of the skin, caused by Corynebacterium minutissimum.     "@en ;
+    ns1:title "Erytrazma"@cs,
+        "Erythrasma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002330> a ns1:DiseaseOrFinding ;
+    ns1:description "An inflammatory reaction involving the folds of the skin surrounding the fingernail. It is characterized by acute or chronic purulent, tender, and painful swellings of the tissues around the nail, caused by an abscess of the nail fold. The pathogenic yeast causing paronychia is most frequently Candida albicans. Saprophytic fungi may also be involved. The causative bacteria are usually Staphylococcus, Pseudomonas aeruginosa, or Streptococcus. (Andrews' Diseases of the Skin, 8th ed, p271)     "@en ;
+    ns1:title "Paronychie"@cs,
+        "Paronychia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002653> a ns1:DiseaseOrFinding ;
+    ns1:description "A cutaneous disorder primarily of convexities of the central part of the FACE, such as FOREHEAD; CHEEK; NOSE; and CHIN. It is characterized by FLUSHING; ERYTHEMA; EDEMA; RHINOPHYMA; papules; and ocular symptoms. It may occur at any age but typically after age 30. There are various subtypes of rosacea: erythematotelangiectatic, papulopustular, phymatous, and ocular (National Rosacea Society's Expert Committee on the Classification and Staging of Rosacea, J Am Acad Dermatol 2002; 46:584-7).     "@en ;
+    ns1:title "Rosacea"@cs,
+        "Rosacea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002955> a ns1:DiseaseOrFinding ;
+    ns1:description "Fungal infection of keratinized tissues such as hair, skin and nails. The main causative fungi include MICROSPORUM; TRICHOPHYTON; and EPIDERMOPHYTON.     "@en ;
+    ns1:title "Tinea"@cs,
+        "Tinea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002958> a ns1:DiseaseOrFinding ;
+    ns1:description "Dermatological pruritic lesion in the feet, caused by Trichophyton rubrum, T. mentagrophytes, or Epidermophyton floccosum.     "@en ;
+    ns1:title "Tinea pedis"@cs,
+        "Tinea pedis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002959> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection of the nail, usually caused by DERMATOPHYTES; YEASTS; or nondermatophyte MOLDS.     "@en ;
+    ns1:title "Onychomykóza"@cs,
+        "Onychomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003147> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the VULVA. It is characterized by PRURITUS and painful urination.     "@en ;
+    ns1:title "Vulvitida"@cs,
+        "Vulvitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010265> a ns1:MechanismOfAction ;
+    ns1:title "Squalene Monooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNECOLOR-KREMPASTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "AKNECOLOR KRÉMPASTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AKNECOLOR-LIGHT-KREMPASTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "AKNECOLOR LIGHT KRÉMPASTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-1--SPRAY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CANDIBENE 1% SPRAY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANDIBENE 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANDIBENE 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIBENE-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CANDIBENE KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANDIMAX-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CANDIMAX 1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-1-DEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANESTEN GYN 1 DEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-3-DNY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANESTEN GYN 3 DNY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-6-DNI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANESTEN GYN 6 DNÍ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-GYN-COMBI-PACK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CANESTEN GYN COMBI PACK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANESTEN-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CANESTEN KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CANIFUG-LOSUNG-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CANIFUG-LÖSUNG 1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CLOTRIMAZOL AL 1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CLOTRIMAZOL AL 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "CLOTRIMAZOL AL 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-AL-SPRAY-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CLOTRIMAZOL AL SPRAY 1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOTRIMAZOL-HBF> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "CLOTRIMAZOL HBF"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMACORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07BA01> ;
+    ns1:title "IMACORT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMAZOL-KREMPASTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC01> ;
+    ns1:title "IMAZOL KRÉMPASTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IMAZOL-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC20> ;
+    ns1:title "IMAZOL PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JENAMAZOL-2-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF02> ;
+    ns1:title "JENAMAZOL 2%"@cs .
+
+

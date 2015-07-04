@@ -1,0 +1,118 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01EE01> a ns1:ATCConcept ;
+    skos:notation "J01EE01" ;
+    skos:prefLabel "Sulfamethoxazol a trimethoprim"@cs,
+        "Sulfamethoxazole and trimethoprim"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020750> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> ;
+    ns1:description "A bacteriostatic antibacterial agent that interferes with folic acid synthesis in susceptible bacteria. Its broad spectrum of activity has been limited by the development of resistance. (From Martindale, The Extra Pharmacopoeia, 30th ed, p208)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009946> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-120>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-480>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/COTRIMOXAZOL-AL-FORTE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SUMETROLIM> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009935> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000622>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000755>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001108>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002188>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002266>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002989>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> ;
+    ns1:title "Sulfamethoxazol"@cs,
+        "Sulfamethoxazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that prevent infectious agents or organisms from spreading or kill infectious agents in order to prevent the spread of infection.     "@en ;
+    ns1:title "Antiinfekční látky"@cs,
+        "Anti-infective agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000755> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the family CHLAMYDIACEAE.     "@en ;
+    ns1:title "Chlamydiaceae - infekce"@cs,
+        "Chlamydiaceae infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001108> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the family ENTEROBACTERIACEAE.     "@en ;
+    ns1:title "Enterobacteriaceae - infekce"@cs,
+        "Enterobacteriaceae infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002188> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus NOCARDIA.     "@en ;
+    ns1:title "Nocardia - infekce"@cs,
+        "Nocardia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002989> a ns1:DiseaseOrFinding ;
+    ns1:description "The acquired form of infection by Toxoplasma gondii in animals and man.     "@en ;
+    ns1:title "Toxoplazmóza"@cs,
+        "Toxoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> a ns1:DiseaseOrFinding ;
+    ns1:description "A child between 1 and 23 months of age.     "@en ;
+    ns1:title "Kojenec"@cs,
+        "Infant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009946> a ns1:MechanismOfAction ;
+    ns1:title "Para-Aminobenzoic Acid Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009935> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Folic Acid Modification"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-120> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01EE01> ;
+    ns1:title "BISEPTOL 120"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BISEPTOL-480> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01EE01> ;
+    ns1:title "BISEPTOL 480"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COTRIMOXAZOL-AL-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01EE01> ;
+    ns1:title "COTRIMOXAZOL AL FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUMETROLIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01EE01> ;
+    ns1:title "SUMETROLIM"@cs .
+
+

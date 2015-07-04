@@ -1,0 +1,312 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A02AD01> a ns1:ATCConcept ;
+    skos:notation "A02AD01" ;
+    skos:prefLabel "Kombinace běžných solí"@cs,
+        "Ordinary salt combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/A02BX> a ns1:ATCConcept ;
+    skos:notation "A02BX" ;
+    skos:prefLabel "Jiná léčiva k terapii peptického vředu a refluxní choroby jícnu"@cs,
+        "Other drugs for peptic ulcer and gastro-oesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ATC/A12AA04> a ns1:ATCConcept ;
+    skos:notation "A12AA04" ;
+    skos:prefLabel "Uhličitan vápenatý"@cs,
+        "Calcium carbonate"@en .
+
+<http://linked.opendata.cz/resource/ATC/A12AA20> a ns1:ATCConcept ;
+    skos:notation "A12AA20" ;
+    skos:prefLabel "Vápník, kombinace různých solí"@cs,
+        "Calcium (different salts in combination)"@en .
+
+<http://linked.opendata.cz/resource/ATC/A12AX> a ns1:ATCConcept ;
+    skos:notation "A12AX" ;
+    skos:prefLabel "Vápník, kombinace s jinými léčivy"@cs,
+        "Calcium, combinations with other drugs"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003155> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001577>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001746>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003617> ;
+    ns1:description "Carbonic acid calcium salt (CaCO3). An odorless, tasteless powder or crystal that occurs in nature. It is used therapeutically as a phosphate buffer in hemodialysis patients and as a calcium supplement.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-200-IU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-LEMON-400-IU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-LEMON-800-IU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCII-CARBONICI-0-5-TBL--MEDICAMENTA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-500-MG-PHARMAVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-CHOLECALCIFEROL-BERES-600-MG-400-IU-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-SANDOZ-FF-1000-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-SANDOZ-FORTE-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-VITAMIN-D3-ACIS-500-MG-400-IU-ZVYKACI-TABLETA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-VITAMIN-D3-SANDOZ-1000-MG-880-IU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-600-MG-400-IU-D3-POTAHOVANA-TABLETA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-PLUS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-DUO-EFEKT-SUSPENZE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-DUO-EFEKT-ZVYKACI-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-SACKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-ZVYKACI-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KOMBI-KALZ-1000-880>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MAXI-KALZ-1000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MAXI-KALZ-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOCARE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE-ICE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE-SPEARMINT-BEZ-CUKRU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VITACALCIN-TABLETY> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008312>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009054>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009557> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002260> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001008>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001028>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001056>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001166>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001319>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001444>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001632>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001750>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002255>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002260>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002326>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002592>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002830>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002916>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> ;
+    ns1:title "Uhličitan vápenatý"@cs,
+        "Calcium carbonate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that counteract or neutralize acidity of the GASTROINTESTINAL TRACT.     "@en ;
+    ns1:title "Antacida"@cs,
+        "Antacids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001008> a ns1:DiseaseOrFinding ;
+    ns1:description "A PEPTIC ULCER located in the DUODENUM.     "@en ;
+    ns1:title "Dvanáctníkové vředy"@cs,
+        "Duodenal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001028> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired digestion, especially after eating.     "@en ;
+    ns1:title "Dyspepsie"@cs,
+        "Dyspepsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001056> a ns1:DiseaseOrFinding ;
+    ns1:description "A pruritic papulovesicular dermatitis occurring as a reaction to many endogenous and exogenous agents (Dorland, 27th ed).     "@en ;
+    ns1:title "Ekzém"@cs,
+        "Eczema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001166> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the ESOPHAGUS that is caused by the reflux of GASTRIC JUICE with contents of the STOMACH and DUODENUM.     "@en ;
+    ns1:title "Peptická ezofagitida"@cs,
+        "Esophagitis, peptic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001319> a ns1:DiseaseOrFinding ;
+    ns1:description "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.     "@en ;
+    ns1:title "Gastroezofageální reflux"@cs,
+        "Gastroesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001444> a ns1:DiseaseOrFinding ;
+    ns1:description "Substernal pain or burning sensation, usually associated with regurgitation of gastric juice into the esophagus.     "@en ;
+    ns1:title "Pyróza"@cs,
+        "Heartburn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001577> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high level of calcium in the blood.     "@en ;
+    ns1:title "Hyperkalcémie"@cs,
+        "Hypercalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001632> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of the blood calcium below normal. Manifestations include hyperactive deep tendon reflexes, Chvostek's sign, muscle and abdominal cramps, and carpopedal spasm. (Dorland, 27th ed)     "@en ;
+    ns1:title "Hypokalcémie"@cs,
+        "Hypocalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001746> a ns1:DiseaseOrFinding ;
+    ns1:description "Stones in the KIDNEY, usually formed in the urine-collecting area of the kidney (KIDNEY PELVIS). Their sizes vary and most contains CALCIUM OXALATE.     "@en ;
+    ns1:title "Ledviny - kameny"@cs,
+        "Kidney calculi"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> a ns1:DiseaseOrFinding ;
+    ns1:description "The end-stage of CHRONIC RENAL INSUFFICIENCY. It is characterized by the severe irreversible kidney damage (as measured by the level of PROTEINURIA) and the reduction in GLOMERULAR FILTRATION RATE to less than 15 ml per min (Kidney Foundation: Kidney Disease Outcome Quality Initiative, 2002). These patients generally require HEMODIALYSIS or KIDNEY TRANSPLANTATION.     "@en ;
+    ns1:title "Chronické selhání ledvin"@cs,
+        "Kidney failure, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002255> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition marked by softening of the bones (due to impaired mineralization, with excess accumulation of osteoid), with pain, tenderness, muscular weakness, anorexia, and loss of weight, resulting from deficiency of vitamin D and calcium. (Dorland, 27th ed)     "@en ;
+    ns1:title "Osteomalacie"@cs,
+        "Osteomalacia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002260> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduction of bone mass without alteration in the composition of bone, leading to fractures. Primary osteoporosis can be of two major types: postmenopausal osteoporosis (OSTEOPOROSIS, POSTMENOPAUSAL) and age-related or senile osteoporosis.     "@en ;
+    ns1:title "Osteoporóza"@cs,
+        "Osteoporosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002326> a ns1:DiseaseOrFinding ;
+    ns1:description "Subjective cutaneous sensations (e.g., cold, warmth, tingling, pressure, etc.) that are experienced spontaneously in the absence of stimulation.     "@en ;
+    ns1:title "Parestézie"@cs,
+        "Paresthesia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002592> a ns1:DiseaseOrFinding ;
+    ns1:description "Decalcification of bone or abnormal bone development due to chronic KIDNEY DISEASES, in which 1,25-DIHYDROXYVITAMIN D3 synthesis by the kidneys is impaired, leading to reduced negative feedback on PARATHYROID HORMONE. The resulting SECONDARY HYPERPARATHYROIDISM eventually leads to bone disorders.     "@en ;
+    ns1:title "Renální osteodystrofie"@cs,
+        "Renal osteodystrophy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002916> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by muscle twitches, cramps, and carpopedal spasm, and when severe, laryngospasm and seizures. This condition is associated with unstable depolarization of axonal membranes, primarily in the peripheral nervous system. Tetany usually results from HYPOCALCEMIA or reduced serum levels of MAGNESIUM that may be associated with HYPERVENTILATION; HYPOPARATHYROIDISM; RICKETS; UREMIA; or other conditions. (From Adams et al., Principles of Neurology, 6th ed, p1490)     "@en ;
+    ns1:title "Tetanie"@cs,
+        "Tetany"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> a ns1:DiseaseOrFinding ;
+    ns1:description "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     "@en ;
+    ns1:title "Osteoporóza postmenopauzální"@cs,
+        "Osteoporosis, postmenopausal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003617> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of an abnormally low level of PHOSPHATES in the blood. Severe hypophosphatemia (below 1 mg/liter) can affect every organ in the body leading to HEMOLYSIS; LASSITUDE; SEIZURES; and COMA. Chronic hypophosphatemia can lead to MUSCLE WEAKNESS; and bone diseases, such as RICKETS and OSTEOMALACIA.     "@en ;
+    ns1:title "Hypofosfatemie"@cs,
+        "Hypophosphatemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220> a ns1:MechanismOfAction ;
+    ns1:title "Electrolyte Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000226> a ns1:MechanismOfAction ;
+    ns1:title "Acid-Base Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008312> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Resorption Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009054> a ns1:PhysiologicEffect ;
+    ns1:title "Gastric Acid Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009557> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal PO4-- Excretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-200-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCICHEW D3 200 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-LEMON-400-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCICHEW D3 LEMON 400 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCICHEW-D3-LEMON-800-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCICHEW D3 LEMON 800 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCII-CARBONICI-0-5-TBL--MEDICAMENTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:title "CALCII CARBONICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-500-MG-PHARMAVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:title "CALCIUM 500 MG PHARMAVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-CHOLECALCIFEROL-BERES-600-MG-400-IU-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCIUM CHOLECALCIFEROL BÉRES 600 MG/400 IU POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-SANDOZ-FF-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA20> ;
+    ns1:title "CALCIUM-SANDOZ FF 1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-SANDOZ-FORTE-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA20> ;
+    ns1:title "CALCIUM-SANDOZ FORTE 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-VITAMIN-D3-ACIS-500-MG-400-IU-ZVYKACI-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCIUM/VITAMIN D3 ACIS 500 MG/400 IU ŽVÝKACÍ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCIUM-VITAMIN-D3-SANDOZ-1000-MG-880-IU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALCIUM/VITAMIN D3 SANDOZ 1000 MG/880 IU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-600-MG-400-IU-D3-POTAHOVANA-TABLETA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALTRATE 600 MG/400 IU D3 POTAHOVANÁ TABLETA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALTRATE-PLUS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "CALTRATE PLUS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-DUO-EFEKT-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BX> ;
+    ns1:title "GAVISCON DUO EFEKT SUSPENZE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-DUO-EFEKT-ZVYKACI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BX> ;
+    ns1:title "GAVISCON DUO EFEKT ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-SACKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BX> ;
+    ns1:title "GAVISCON SÁČKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GAVISCON-ZVYKACI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02BX> ;
+    ns1:title "GAVISCON ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KOMBI-KALZ-1000-880> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "KOMBI-KALZ 1000/880"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAXI-KALZ-1000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:title "MAXI-KALZ 1000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAXI-KALZ-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:title "MAXI-KALZ 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSTEOCARE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AX> ;
+    ns1:title "OSTEOCARE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02AD01> ;
+    ns1:title "RENNIE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE-ICE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02AD01> ;
+    ns1:title "RENNIE ICE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RENNIE-SPEARMINT-BEZ-CUKRU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A02AD01> ;
+    ns1:title "RENNIE SPEARMINT BEZ CUKRU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITACALCIN-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:title "VITACALCIN TABLETY"@cs .
+
+

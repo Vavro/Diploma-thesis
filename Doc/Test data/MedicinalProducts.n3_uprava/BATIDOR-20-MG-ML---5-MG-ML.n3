@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01E> a ns1:ATCConcept ;
+    dcterms:title "Antiglaukomatika a miotika"@cs,
+        "ANTIGLAUCOMA PREPARATIONS AND MIOTICS"@en ;
+    skos:notation "S01E" .
+
+<http://linked.opendata.cz/resource/ATC/S01ED> a ns1:ATCConcept ;
+    dcterms:title "Betablokátory"@cs,
+        "Beta blocking agents"@en ;
+    skos:notation "S01ED" .
+
+<http://linked.opendata.cz/resource/ATC/S01ED51> a ns1:ATCConcept ;
+    dcterms:title "Timolol, kombinace"@cs,
+        "Timolol, combinations"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/S>,
+        <http://linked.opendata.cz/resource/ATC/S01>,
+        <http://linked.opendata.cz/resource/ATC/S01E>,
+        <http://linked.opendata.cz/resource/ATC/S01ED> ;
+    skos:notation "S01ED51" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021551> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000495>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Timolol maleate"@cs,
+        "Timolol maleate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324545> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Dorzolamide hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000495> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate beta-adrenergic receptors thereby blocking the actions of beta-adrenergic agonists. Adrenergic beta-antagonists are used for treatment of hypertension, cardiac arrhythmias, angina pectoris, glaucoma, migraine headaches, and anxiety.     "@en ;
+    ns1:title "Beta-blokátory"@cs,
+        "Adrenergic beta-antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157548> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01ED51> ;
+    ns1:hasIndication """Tento přípravek je určen k léčbě zvýšeného nitroočního tlaku u pacientů s glaukomem s otevřeným úhlem nebo pseudoexfoliativním glaukomem, kde je lokální léčba samotným beta-blokátorem nedostatečná. 
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "265.920013428"^^xsd:float ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "266.809997559"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-06-26"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152380_doc> ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML"@cs ;
+    ns1:title "BATIDOR 20 MG/ML + 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157549> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01ED51> ;
+    ns1:hasIndication """Tento přípravek je určen k léčbě zvýšeného nitroočního tlaku u pacientů s glaukomem s otevřeným úhlem nebo pseudoexfoliativním glaukomem, kde je lokální léčba samotným beta-blokátorem nedostatečná. 
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "800.450012207"^^xsd:float ;
+    ns1:hasPackagingSize "3X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "800.450012207"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152380_doc> ;
+    ns1:hasTitleSupplement "OPH GTT SOL 3X5ML"@cs ;
+    ns1:title "BATIDOR 20 MG/ML + 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157550> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01ED51> ;
+    ns1:hasIndication """Tento přípravek je určen k léčbě zvýšeného nitroočního tlaku u pacientů s glaukomem s otevřeným úhlem nebo pseudoexfoliativním glaukomem, kde je lokální léčba samotným beta-blokátorem nedostatečná. 
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "1600.90002441"^^xsd:float ;
+    ns1:hasPackagingSize "6X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1600.90002441"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152380_doc> ;
+    ns1:hasTitleSupplement "OPH GTT SOL 6X5ML"@cs ;
+    ns1:title "BATIDOR 20 MG/ML + 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BATIDOR-20-MG-ML---5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01ED51> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021551>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0324545> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157548>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157549>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157550> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "BATIDOR 20 MG/ML + 5 MG/ML"@cs .
+
+

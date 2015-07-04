@@ -1,0 +1,104 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01X> a ns1:ATCConcept ;
+    dcterms:title "Jiná cytostatika"@cs,
+        "OTHER ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01X" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA> a ns1:ATCConcept ;
+    dcterms:title "Platinová cytostatika"@cs,
+        "Platinum compounds"@en ;
+    skos:notation "L01XA" .
+
+<http://linked.opendata.cz/resource/ATC/L01XA01> a ns1:ATCConcept ;
+    dcterms:title "Cisplatina"@cs,
+        "Cisplatin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L01>,
+        <http://linked.opendata.cz/resource/ATC/L01X>,
+        <http://linked.opendata.cz/resource/ATC/L01XA> ;
+    skos:notation "L01XA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004505> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An inorganic and water-soluble platinum complex. After undergoing hydrolysis, it reacts with DNA to produce both intra and interstrand crosslinks. These crosslinks appear to impair replication and transcription of DNA. The cytotoxicity of cisplatin correlates with cellular arrest in the G2 phase of the cell cycle.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018388> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Cisplatina"@cs,
+        "Cisplatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349> a ns1:PharmacologicalAction ;
+    ns1:description "Reagents with two reactive groups, usually at opposite ends of the molecule, that are capable of reacting with and thereby forming bridges between side chains of amino acids in proteins; the locations of naturally reactive areas within proteins can thereby be identified; may also be used for other macromolecules, like glycoproteins, nucleic acids, or other.     "@en ;
+    ns1:title "Reagencia zkříženě vázaná"@cs,
+        "Cross-linking reagents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018388> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to potentiate the effectiveness of radiation therapy in destroying unwanted cells.     "@en ;
+    ns1:title "Záření - látky senzibilizující"@cs,
+        "Radiation-sensitizing agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011473> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA01> ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "1X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasStrength "0.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X100ML/50MG"@cs ;
+    ns1:title "CISPLATIN-TEVA 0,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CISPLATIN-TEVA-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004505> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011473> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "CISPLATIN-TEVA 0,5 MG/ML"@cs .
+
+

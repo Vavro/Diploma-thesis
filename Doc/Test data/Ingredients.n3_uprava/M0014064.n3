@@ -1,0 +1,141 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02AA01> a ns1:ATCConcept ;
+    skos:notation "N02AA01" ;
+    skos:prefLabel "Morfin"@cs,
+        "Morphine"@en .
+
+<http://linked.opendata.cz/resource/ATC/N04BC07> a ns1:ATCConcept ;
+    skos:notation "N04BC07" ;
+    skos:prefLabel "Apomorfin"@cs,
+        "Apomorphine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014064> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003945> ;
+    ns1:description "The principal alkaloid in opium and the prototype opiate analgesic and narcotic. Morphine has widespread effects in the central nervous system and on smooth muscle.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BRITAJECT-AMPULE-10-MG-ML-INJEKCNI-INFUZNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BRITAJECT-PEN-10-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DACEPTON-10-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MORPHIN-BIOTIKA-1->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SEVREDOL-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SEVREDOL-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-200-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-30-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-60-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001030>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002279> ;
+    ns1:title "Morfin"@cs,
+        "Morphine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001030> a ns1:DiseaseOrFinding ;
+    ns1:description "Difficult or labored breathing.     "@en ;
+    ns1:title "Dyspnoe"@cs,
+        "Dyspnea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002279> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent pain that is refractory to some or all forms of treatment.     "@en ;
+    ns1:title "Nesnesitelná bolest"@cs,
+        "Pain, intractable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003945> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased pressure within the cranial vault. This may result from several conditions, including HYDROCEPHALUS; BRAIN EDEMA; intracranial masses; severe systemic HYPERTENSION; PSEUDOTUMOR CEREBRI; and other disorders.     "@en ;
+    ns1:title "Intrakraniální hypertenze"@cs,
+        "Intracranial hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRITAJECT-AMPULE-10-MG-ML-INJEKCNI-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC07> ;
+    ns1:title "BRITAJECT AMPULE 10 MG/ML INJEKČNÍ/INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRITAJECT-PEN-10-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC07> ;
+    ns1:title "BRITAJECT PEN 10 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DACEPTON-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC07> ;
+    ns1:title "DACEPTON 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MORPHIN-BIOTIKA-1-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "MORPHIN BIOTIKA 1%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVREDOL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "SEVREDOL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEVREDOL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "SEVREDOL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "VENDAL RETARD 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "VENDAL RETARD 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "VENDAL RETARD 200 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "VENDAL RETARD 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENDAL-RETARD-60-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA01> ;
+    ns1:title "VENDAL RETARD 60 MG"@cs .
+
+

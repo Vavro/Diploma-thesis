@@ -1,0 +1,94 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N07AA01> a ns1:ATCConcept ;
+    skos:notation "N07AA01" ;
+    skos:prefLabel "Neostigmin"@cs,
+        "Neostigmine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014615> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> ;
+    ns1:description "A cholinesterase inhibitor used in the treatment of myasthenia gravis and to reverse the effects of muscle relaxants such as gallamine and tubocurarine. Neostigmine, unlike PHYSOSTIGMINE, does not cross the blood-brain barrier.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000177> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/SYNTOSTIGMIN> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004295>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015925> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009330>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009645>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009819>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009843> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000560>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003353> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000265>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000560>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002070>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003353> ;
+    ns1:title "Neostigmin"@cs,
+        "Neostigmine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004295> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that inhibit cholinesterases. The neurotransmitter ACETYLCHOLINE is rapidly hydrolyzed, and thereby inactivated, by cholinesterases. When cholinesterases are inhibited, the action of endogenously released acetylcholine at cholinergic synapses is potentiated. Cholinesterase inhibitors are widely used clinically for their potentiation of cholinergic inputs to the gastrointestinal tract and urinary bladder, the eye, and skeletal muscles; they are also used for their effects on the heart and the central nervous system.     "@en ;
+    ns1:title "Cholinesterasa - inhibitory"@cs,
+        "Cholinesterase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015925> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of parasympathetic nervous system activity. Included here are drugs that directly stimulate muscarinic receptors and drugs that potentiate cholinergic activity, usually by slowing the breakdown of acetylcholine (CHOLINESTERASE INHIBITORS). Drugs that stimulate both sympathetic and parasympathetic postganglionic neurons (GANGLIONIC STIMULANTS) are not included here.     "@en ;
+    ns1:title "Parasympatomimetika"@cs,
+        "Parasympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000265> a ns1:DiseaseOrFinding ;
+    ns1:description "Congenital abnormalities caused by medicinal substances or drugs of abuse given to or taken by the mother, or to which she is inadvertently exposed during the manufacture of such substances. The concept excludes abnormalities resulting from exposure to non-medicinal chemicals in the environment.     "@en ;
+    ns1:title "Abnormality vyvolané léky"@cs,
+        "Abnormalities, drug-induced"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000560> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nemoci"@cs,
+        "Urinary bladder diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002070> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of neuromuscular transmission characterized by weakness of cranial and skeletal muscles. Autoantibodies directed against acetylcholine receptors damage the motor endplate portion of the NEUROMUSCULAR JUNCTION, impairing the transmission of impulses to skeletal muscles. Clinical manifestations may include diplopia, ptosis, and weakness of facial, bulbar, respiratory, and proximal limb muscles. The disease may remain limited to the ocular muscles. THYMOMA is commonly associated with this condition. (Adams et al., Principles of Neurology, 6th ed, p1459)     "@en ;
+    ns1:title "Myasthenia gravis"@cs,
+        "Myasthenia gravis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003353> a ns1:DiseaseOrFinding ;
+    ns1:description "Inability to empty the URINARY BLADDER with voiding (URINATION).     "@en ;
+    ns1:title "Retence moči"@cs,
+        "Urinary retention"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000177> a ns1:MechanismOfAction ;
+    ns1:title "Cholinesterase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009330> a ns1:PhysiologicEffect ;
+    ns1:title "Increased GI Smooth Muscle Tone"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009645> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Striated Muscle Contraction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009819> a ns1:PhysiologicEffect ;
+    ns1:title "Pupillary Constriction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009843> a ns1:PhysiologicEffect ;
+    ns1:title "Salivation Stimulation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYNTOSTIGMIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07AA01> ;
+    ns1:title "SYNTOSTIGMIN"@cs .
+
+

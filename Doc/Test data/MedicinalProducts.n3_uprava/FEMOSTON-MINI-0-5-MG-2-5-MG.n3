@@ -1,0 +1,151 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03F> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny v kombinaci"@cs,
+        "PROGESTOGENS AND ESTROGENS IN COMBINATION"@en ;
+    skos:notation "G03F" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA> a ns1:ATCConcept ;
+    dcterms:title "Progestiny a estrogeny, fixní kombinace"@cs,
+        "Progestogens and estrogens, combinations"@en ;
+    skos:notation "G03FA" .
+
+<http://linked.opendata.cz/resource/ATC/G03FA14> a ns1:ATCConcept ;
+    dcterms:title "Dydrogesteron a estrogen"@cs,
+        "Dydrogesterone and estrogen"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G03>,
+        <http://linked.opendata.cz/resource/ATC/G03F>,
+        <http://linked.opendata.cz/resource/ATC/G03FA> ;
+    skos:notation "G03FA14" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006900> a ns1:Ingredient ;
+    ns1:description "A synthetic progestational hormone with no androgenic or estrogenic properties. Unlike many other progestational compounds, dydrogesterone produces no increase in temperature and does not inhibit OVULATION.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669> ;
+    ns1:title "Dydrogesteron"@cs,
+        "Dydrogesterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330337> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> ;
+    ns1:title "Estradiol hemihydrate"@cs,
+        "Estradiol hemihydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007795> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with ESTROGEN RECEPTORS in target tissues to bring about the effects similar to those of ESTRADIOL. Estrogens stimulate the female reproductive organs, and the development of secondary female SEX CHARACTERISTICS. Estrogenic chemicals include natural, synthetic, steroidal, or non-steroidal compounds.     "@en ;
+    ns1:title "Estrogeny"@cs,
+        "Estrogens"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017669> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that interact with PROGESTERONE RECEPTORS in target tissues to bring about the effects similar to those of PROGESTERONE. Primary actions of progestins, including natural and synthetic steroids, are on the UTERUS and the MAMMARY GLAND in preparation for and in maintenance of PREGNANCY.     "@en ;
+    ns1:title "Progestiny"@cs,
+        "Progestins"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143597> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "181.949996948"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "63.2999992371"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143598> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 84"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143599> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "10X28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 280"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164548> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200242> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndication """Hormonální substituční terapie (HRT) symptomů nedostatku estrogenu u žen po menopauze, u nichž se poslední menstruace dostavila minimálně před 12 měsíci.
+Zkušenosti s léčbou žen starších než 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasMaximalPrice "181.949996948"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "63.2999992371"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160991_doc> ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200243> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndication """Hormonální substituční terapie (HRT) symptomů nedostatku estrogenu u žen po menopauze, u nichž se poslední menstruace dostavila minimálně před 12 měsíci.
+Zkušenosti s léčbou žen starších než 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160991_doc> ;
+    ns1:hasTitleSupplement "POR TBL FLM 84"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200244> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasIndication """Hormonální substituční terapie (HRT) symptomů nedostatku estrogenu u žen po menopauze, u nichž se poslední menstruace dostavila minimálně před 12 měsíci.
+Zkušenosti s léčbou žen starších než 65 let jsou omezené.
+"""@cs ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "10X28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160991_doc> ;
+    ns1:hasTitleSupplement "POR TBL FLM 280"@cs ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEMOSTON-MINI-0-5-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03FA14> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006900>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330337> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143597>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143598>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0143599>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0164548>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200242>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200243>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200244> ;
+    ns1:title "FEMOSTON MINI 0,5 MG/2,5 MG"@cs .
+
+

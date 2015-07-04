@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N04> a ns1:ATCConcept ;
+    dcterms:title "Antiparkinsonika"@cs,
+        "ANTI-PARKINSON DRUGS"@en ;
+    skos:notation "N04" .
+
+<http://linked.opendata.cz/resource/ATC/N04B> a ns1:ATCConcept ;
+    dcterms:title "Dopaminergní léčiva"@cs,
+        "DOPAMINERGIC AGENTS"@en ;
+    skos:notation "N04B" .
+
+<http://linked.opendata.cz/resource/ATC/N04BC> a ns1:ATCConcept ;
+    dcterms:title "Agonisté dopaminu"@cs,
+        "Dopamine agonists"@en ;
+    skos:notation "N04BC" .
+
+<http://linked.opendata.cz/resource/ATC/N04BC04> a ns1:ATCConcept ;
+    dcterms:title "Ropinirol"@cs,
+        "Ropinirole"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N04>,
+        <http://linked.opendata.cz/resource/ATC/N04B>,
+        <http://linked.opendata.cz/resource/ATC/N04BC> ;
+    skos:notation "N04BC04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0322477> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Ropinirole hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017385> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC04> ;
+    ns1:hasIndication """ADARTREL je indikovaný k symptomatické léčbě středně těžkého až těžkého idiopatického syndromu neklidných nohou (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC136414_doc> ;
+    ns1:hasStrength "0.25MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 2X0.25MG"@cs ;
+    ns1:title "ADARTREL 0,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017386> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC04> ;
+    ns1:hasBreakMarketingDate "2011-04-01"^^xsd:date ;
+    ns1:hasIndication """ADARTREL je indikovaný k symptomatické léčbě středně těžkého až těžkého idiopatického syndromu neklidných nohou (viz bod 5.1). 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPARKINSONICA"@cs ;
+    ns1:hasMaximalPrice "65.8600006104"^^xsd:float ;
+    ns1:hasPackagingSize "12"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "12.3400001526"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC136414_doc> ;
+    ns1:hasStrength "0.25MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 12X0.25MG"@cs ;
+    ns1:title "ADARTREL 0,25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADARTREL-0-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N04BC04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0322477> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017385>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017386> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "ADARTREL 0,25 MG"@cs .
+
+

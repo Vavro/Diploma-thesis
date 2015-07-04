@@ -1,0 +1,396 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C10AA01> a ns1:ATCConcept ;
+    skos:notation "C10AA01" ;
+    skos:prefLabel "Simvastatin"@cs,
+        "Simvastatin"@en .
+
+<http://linked.opendata.cz/resource/ATC/C10BA02> a ns1:ATCConcept ;
+    skos:notation "C10BA02" ;
+    skos:prefLabel "Simvastatin a ezetimib"@cs,
+        "Simvastatin and ezetimibe"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029425> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A derivative of LOVASTATIN and potent competitive inhibitor of 3-hydroxy-3-methylglutaryl coenzyme A reductase (HYDROXYMETHYLGLUTARYL COA REDUCTASES), which is the rate-limiting enzyme in cholesterol biosynthesis. It may also interfere with steroid hormone production. Due to the induction of hepatic LDL RECEPTORS, it increases breakdown of LDL CHOLESTEROL.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000121> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-10-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-20-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-40-MG-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIM-20-GALMED>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-80-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-10-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-20-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-40-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-40-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-10>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-FORTE-40-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028567> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000950>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001580>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001592>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001594>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003210>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003550>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000011076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171661>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171679> ;
+    ns1:title "Simvastatin"@cs,
+        "Simvastatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used to lower plasma cholesterol levels.     "@en ;
+    ns1:title "Anticholesteremika"@cs,
+        "Anticholesteremic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001459> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that lower the levels of certain LIPIDS in the BLOOD. They are used to treat HYPERLIPIDEMIAS.     "@en ;
+    ns1:title "Hypolipidemika"@cs,
+        "Hypolipidemic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028567> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit HMG-CoA reductases. They have been shown to directly lower cholesterol synthesis.     "@en ;
+    ns1:title "Hydroxymethylglutaryl-coa-reduktasa - inhibitory"@cs,
+        "Hydroxymethylglutaryl-coa reductase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of CORONARY ARTERIES that may derive from a congenital abnormality, atherosclerotic, or non-atherosclerotic cause.     "@en ;
+    ns1:title "Koronární artérie - nemoci"@cs,
+        "Coronary artery disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.     "@en ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001580> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.     "@en ;
+    ns1:title "Hypercholesterolémie"@cs,
+        "Hypercholesterolemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001592> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with excess LIPIDS in the blood.     "@en ;
+    ns1:title "Hyperlipidémie"@cs,
+        "Hyperlipidemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001594> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with abnormally elevated levels of LIPOPROTEINS in the blood. They may be inherited, acquired, primary, or secondary. Hyperlipoproteinemias are classified according to the pattern of lipoproteins on electrophoresis or ultracentrifugation.     "@en ;
+    ns1:title "Hyperlipoproteinémie"@cs,
+        "Hyperlipoproteinemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003210> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of elevated levels of TRIGLYCERIDES in the blood.     "@en ;
+    ns1:title "Hypertriglyceridémie"@cs,
+        "Hypertriglyceridemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> a ns1:DiseaseOrFinding ;
+    ns1:description "The mass or quantity of heaviness of an individual. It is expressed by units of pounds or kilograms.     "@en ;
+    ns1:title "Tělesná hmotnost"@cs,
+        "Body weight"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171661> a ns1:DiseaseOrFinding ;
+    ns1:description "A thickening and loss of elasticity of the walls of ARTERIES that occurs with formation of ATHEROSCLEROTIC PLAQUES within the ARTERIAL INTIMA.     "@en ;
+    ns1:title "Ateroskleróza"@cs,
+        "Atherosclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171679> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormalities in the serum levels of LIPIDS, including overproduction or deficiency. Abnormal serum lipid profiles may include high total CHOLESTEROL, high TRIGLYCERIDES, low HIGH DENSITY LIPOPROTEIN CHOLESTEROL, and elevated LOW DENSITY LIPOPROTEIN CHOLESTEROL.     "@en ;
+    ns1:title "Dyslipidémie"@cs,
+        "Dyslipidemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000121> a ns1:MechanismOfAction ;
+    ns1:title "Hydroxymethylglutaryl-CoA Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "APO-SIMVA 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "APO-SIMVA 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/APO-SIMVA-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "APO-SIMVA 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORALIP 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORALIP 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORALIP-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORALIP 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORSIM 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORSIM 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CORSIM-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "CORSIM 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "EGILIPID 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "EGILIPID 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGILIPID-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "EGILIPID 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "GENSI 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "GENSI 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GENSI-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "GENSI 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-10-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10BA02> ;
+    ns1:title "INEGY 10 MG/10 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-20-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10BA02> ;
+    ns1:title "INEGY 10 MG/20 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INEGY-10-MG-40-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10BA02> ;
+    ns1:title "INEGY 10 MG/40 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIM-20-GALMED> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIM 20 GALMED"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMGAL 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMGAL 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMGAL-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMGAL 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVACARD 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVACARD 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVACARD-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVACARD 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN BLUEFISH 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN BLUEFISH 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-BLUEFISH-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN BLUEFISH 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN MYLAN 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN MYLAN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-MYLAN-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN MYLAN 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN ORION 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN ORION 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN ORION 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-ORION-80-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN ORION 80 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN-RATIOPHARM 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN-RATIOPHARM 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-RATIOPHARM-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN-RATIOPHARM 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-10-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN TEVA 10 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-20-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN TEVA 20 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVASTATIN-TEVA-40-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVASTATIN TEVA 40 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVAX 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVAX 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVAX-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVAX 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVOR 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVOR 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIMVOR-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "SIMVOR 40 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-10> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "VASILIP 10"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "VASILIP 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VASILIP-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "VASILIP 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "ZOCOR 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "ZOCOR 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOCOR-FORTE-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA01> ;
+    ns1:title "ZOCOR FORTE 40 MG"@cs .
+
+

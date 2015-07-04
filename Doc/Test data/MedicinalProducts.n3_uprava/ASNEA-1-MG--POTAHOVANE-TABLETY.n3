@@ -1,0 +1,197 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L02> a ns1:ATCConcept ;
+    dcterms:title "Hormonální léčiva používaná v onkologii"@cs,
+        "ENDOCRINE THERAPY"@en ;
+    skos:notation "L02" .
+
+<http://linked.opendata.cz/resource/ATC/L02B> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté hormonů a příbuzná léčiva"@cs,
+        "HORMONE ANTAGONISTS AND RELATED AGENTS"@en ;
+    skos:notation "L02B" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG> a ns1:ATCConcept ;
+    dcterms:title "Enzymové inhibitory"@cs,
+        "Enzyme inhibitors"@en ;
+    skos:notation "L02BG" .
+
+<http://linked.opendata.cz/resource/ATC/L02BG03> a ns1:ATCConcept ;
+    dcterms:title "Anastrozol"@cs,
+        "Anastrozole"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L02>,
+        <http://linked.opendata.cz/resource/ATC/L02B>,
+        <http://linked.opendata.cz/resource/ATC/L02BG> ;
+    skos:notation "L02BG03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0238999> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Anastrozole"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126592> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "20 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126690> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "2127.52001953"^^xsd:float ;
+    ns1:hasPackagingSize "28 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "2127.52001953"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2009-05-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126691> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "30 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126692> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "50 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126693> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "84 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126694> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "98 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126695> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "100 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126696> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasIndication """Přípravek Asnea je indikován k:
+Léčbě pokročilého stádia karcinomu prsu s pozitivními hormonálními receptory u postmenopauzálních žen. 
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory.
+Adjuvantní léčbě časného invazivního karcinomu prsu u postmenopauzálních žen s pozitivními hormonálními receptory, které jsou již adjuvantně léčeny 2-3 roky tamoxifenem.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "300 BLI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC146204_doc> ;
+    ns1:hasStrength "1MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 300X1MG"@cs ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASNEA-1-MG--POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BG03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0238999> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126592>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126690>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126691>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126692>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126693>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126694>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126695>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0126696> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "ASNEA 1 MG, POTAHOVANÉ TABLETY"@cs .
+
+

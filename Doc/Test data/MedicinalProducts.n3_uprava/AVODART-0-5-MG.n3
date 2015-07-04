@@ -1,0 +1,150 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G04> a ns1:ATCConcept ;
+    dcterms:title "Urologika"@cs,
+        "UROLOGICALS"@en ;
+    skos:notation "G04" .
+
+<http://linked.opendata.cz/resource/ATC/G04C> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii benigní hyperplazie prostaty"@cs,
+        "DRUGS USED IN BENIGN PROSTATIC HYPERTROPHY"@en ;
+    skos:notation "G04C" .
+
+<http://linked.opendata.cz/resource/ATC/G04CB> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory testosteron-5-alfa reduktázy"@cs,
+        "Testosterone-5-alpha reductase inhibitors"@en ;
+    skos:notation "G04CB" .
+
+<http://linked.opendata.cz/resource/ATC/G04CB02> a ns1:ATCConcept ;
+    dcterms:title "Dutasterid"@cs,
+        "Dutasteride"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G04>,
+        <http://linked.opendata.cz/resource/ATC/G04C>,
+        <http://linked.opendata.cz/resource/ATC/G04CB> ;
+    skos:notation "G04CB02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0281571> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010200>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Dutasteride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010200> a ns1:DiseaseOrFinding ;
+    ns1:title "Ženské pohlaví"@cs,
+        "Female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> a ns1:DiseaseOrFinding ;
+    ns1:title "Dítě"@cs,
+        "Child"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016902> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasIndication """Terapie středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148507_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 10X0.5MG"@cs ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016903> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasBreakMarketingDate "2012-05-24"^^xsd:date ;
+    ns1:hasIndication """Terapie středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasMaximalPrice "688.349975586"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "300.769989014"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-12-15"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148507_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 30X0.5MG"@cs ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016904> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasIndication """Terapie středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasMaximalPrice "2155.88989258"^^xsd:float ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "902.299987793"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-02-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148507_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 90X0.5MG"@cs ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118330> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasIndication """Terapie středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148507_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 50X0.5MG"@cs ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118331> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasIndication """Terapie středně těžkých až těžkých příznaků benigní hyperplazie prostaty (BHP).
+Snížení rizika akutní retence moči (ARM) a chirurgického výkonu u pacientů se středně těžkými až těžkými příznaky BHP. 
+Pro informace o účincích léčby a souborech pacientů zkoumaných v klinických studiích nahlédněte, prosím, do bodu 5.1.
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC148507_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS MOL 60X0.5MG"@cs ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AVODART-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G04CB02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0281571> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016902>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016903>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016904>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118330>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0118331> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "AVODART 0,5 MG"@cs .
+
+

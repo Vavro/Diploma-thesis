@@ -1,0 +1,119 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D01AA01> a ns1:ATCConcept ;
+    skos:notation "D01AA01" ;
+    skos:prefLabel "Nystatin"@cs,
+        "Nystatin"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AA51> a ns1:ATCConcept ;
+    skos:notation "G01AA51" ;
+    skos:prefLabel "Nystatin, kombinace"@cs,
+        "Nystatin, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015146> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Macrolide antifungal antibiotic complex produced by Streptomyces noursei, S. aureus, and other Streptomyces species. The biologically active components of the complex are nystatin A1, A2, and A3.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FUNGICIDIN-LECIVA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MACMIROR-COMPLEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MACMIROR-COMPLEX-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/POLYGYNAX> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011677>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000652>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000650>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000651>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000652>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000653>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000654>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002330> ;
+    ns1:title "Nystatin"@cs,
+        "Nystatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011677> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical agents that increase the permeability of biological or artificial lipid membranes to specific ions. Most ionophores are relatively small organic molecules that act as mobile carriers within membranes or coalesce to form ion permeable channels across membranes. Many are antibiotics, and many act as uncoupling agents by short-circuiting the proton gradient across mitochondrial membranes.     "@en ;
+    ns1:title "Ionofory"@cs,
+        "Ionophores"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000651> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by development, usually in infancy or childhood, of a chronic, often widespread candidiasis of skin, nails, and mucous membranes. It may be secondary to one of the immunodeficiency syndromes, inherited as an autosomal recessive trait, or associated with defects in cell-mediated immunity, endocrine disorders, dental stomatitis, or malignancy.     "@en ;
+    ns1:title "Kandidóza chronická mukokutánní"@cs,
+        "Candidiasis, chronic mucocutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000652> a ns1:DiseaseOrFinding ;
+    ns1:description "Candidiasis of the skin manifested as eczema-like lesions of the interdigital spaces, perleche, or chronic paronychia. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza kožní"@cs,
+        "Candidiasis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the mucous membranes of the mouth by a fungus of the genus CANDIDA. (Dorland, 27th ed)     "@en ;
+    ns1:title "Orální kandidóza"@cs,
+        "Candidiasis, oral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000654> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the VULVA and VAGINA with a fungus of the genus CANDIDA.     "@en ;
+    ns1:title "Kandidóza vulvovaginální"@cs,
+        "Candidiasis, vulvovaginal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002330> a ns1:DiseaseOrFinding ;
+    ns1:description "An inflammatory reaction involving the folds of the skin surrounding the fingernail. It is characterized by acute or chronic purulent, tender, and painful swellings of the tissues around the nail, caused by an abscess of the nail fold. The pathogenic yeast causing paronychia is most frequently Candida albicans. Saprophytic fungi may also be involved. The causative bacteria are usually Staphylococcus, Pseudomonas aeruginosa, or Streptococcus. (Andrews' Diseases of the Skin, 8th ed, p271)     "@en ;
+    ns1:title "Paronychie"@cs,
+        "Paronychia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009957> a ns1:MechanismOfAction ;
+    ns1:title "Ergosterol Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FUNGICIDIN-LECIVA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AA01> ;
+    ns1:title "FUNGICIDIN LÉČIVA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MACMIROR-COMPLEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AA51> ;
+    ns1:title "MACMIROR COMPLEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MACMIROR-COMPLEX-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AA51> ;
+    ns1:title "MACMIROR COMPLEX 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/POLYGYNAX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AA51> ;
+    ns1:title "POLYGYNAX"@cs .
+
+

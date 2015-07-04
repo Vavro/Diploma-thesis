@@ -1,0 +1,147 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C09AA02> a ns1:ATCConcept ;
+    skos:notation "C09AA02" ;
+    skos:prefLabel "Enalapril"@cs,
+        "Enalapril"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007330> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000415>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "One of the ANGIOTENSIN-CONVERTING ENZYME INHIBITORS that is used to treat hypertension.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000181> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-I-V-> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008423>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008731>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008859>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009826>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000957>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003570>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003826> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000534>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000957>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001434>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001617>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003826> ;
+    ns1:title "Enalapril"@cs,
+        "Enalapril"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs whose main indications are the treatment of hypertension and heart failure. They exert their hemodynamic effect mainly by inhibiting the renin-angiotensin system. They also modulate sympathetic nervous system activity and increase prostaglandin synthesis. They cause mainly vasodilation and mild natriuresis without affecting heart rate and contractility.     "@en ;
+    ns1:title "Inhibitory angiotenzin konvertujícího enzymu"@cs,
+        "Angiotensin-converting enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000415> a ns1:DiseaseOrFinding ;
+    ns1:description "Swelling involving the deep DERMIS, subcutaneous, or submucosal tissues, representing localized EDEMA. Angioedema often occurs in the face, lips, tongue, and larynx.     "@en ;
+    ns1:title "Angioedém"@cs,
+        "Angioedema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000534> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of disorders caused by defective salt reabsorption in the ascending LOOP OF HENLE. It is characterized by severe salt-wasting, HYPOKALEMIA; HYPERCALCIURIA; metabolic ALKALOSIS, and hyper-reninemic HYPERALDOSTERONISM without HYPERTENSION. There are several subtypes including ones due to mutations in the renal specific SODIUM-POTASSIUM-CHLORIDE SYMPORTERS.     "@en ;
+    ns1:title "Bartterův syndrom"@cs,
+        "Bartter syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000957> a ns1:DiseaseOrFinding ;
+    ns1:description "KIDNEY injuries associated with diabetes mellitus and affecting KIDNEY GLOMERULUS; ARTERIOLES; KIDNEY TUBULES; and the interstitium. Clinical signs include persistent PROTEINURIA, from microalbuminuria progressing to ALBUMINURIA of greater than 300 mg/24 h, leading to reduced GLOMERULAR FILTRATION RATE and END-STAGE RENAL DISEASE.     "@en ;
+    ns1:title "Diabetické nefropatie"@cs,
+        "Diabetic nephropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by the overproduction of ALDOSTERONE. It is characterized by sodium retention and potassium excretion with resultant HYPERTENSION and HYPOKALEMIA.     "@en ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001617> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of markedly elevated BLOOD PRESSURE with DIASTOLIC PRESSURE usually greater than 120 mm Hg. Malignant hypertension is characterized by widespread vascular damage, PAPILLEDEMA, retinopathy, HYPERTENSIVE ENCEPHALOPATHY, and renal dysfunction.     "@en ;
+    ns1:title "Hypertenze maligní"@cs,
+        "Hypertension, malignant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003570> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlargement of the LEFT VENTRICLE of the heart. This increase in ventricular mass is attributed to sustained abnormal pressure or volume loads and is a contributor to cardiovascular morbidity and mortality.     "@en ;
+    ns1:title "Srdce - hypertrofie levé komory"@cs,
+        "Hypertrophy, left ventricular"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003826> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which the LEFT VENTRICLE of the heart was functionally impaired. This condition usually leads to HEART FAILURE; MYOCARDIAL INFARCTION; and other cardiovascular complications. Diagnosis is made by measuring the diminished ejection fraction and a depressed level of motility of the left ventricular wall.     "@en ;
+    ns1:title "Komora levá - dysfunkce"@cs,
+        "Ventricular dysfunction, left"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000181> a ns1:MechanismOfAction ;
+    ns1:title "Angiotensin-converting Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008423> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Bradykinin Degradation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008731> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Mineralocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008859> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Renal K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009826> a ns1:PhysiologicEffect ;
+    ns1:title "Renal Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENAP-I-V-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA02> ;
+    ns1:title "ENAP I.V."@cs .
+
+

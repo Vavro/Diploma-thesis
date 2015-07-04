@@ -1,0 +1,75 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G02> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02" .
+
+<http://linked.opendata.cz/resource/ATC/G02B> a ns1:ATCConcept ;
+    dcterms:title "Kontraceptiva lokální"@cs,
+        "CONTRACEPTIVES FOR TOPICAL USE"@en ;
+    skos:notation "G02B" .
+
+<http://linked.opendata.cz/resource/ATC/G02BA> a ns1:ATCConcept ;
+    dcterms:title "Kontraceptiva nitroděložní"@cs,
+        "Intrauterine contraceptives"@en ;
+    skos:notation "G02BA" .
+
+<http://linked.opendata.cz/resource/ATC/G02BA03> a ns1:ATCConcept ;
+    dcterms:title "Nitroděložní tělísko s progestinem"@cs,
+        "Plastic IUD with progestogen"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G02>,
+        <http://linked.opendata.cz/resource/ATC/G02B>,
+        <http://linked.opendata.cz/resource/ATC/G02BA> ;
+    skos:notation "G02BA03" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019633> a ns1:Ingredient ;
+    ns1:title "Mikronizovaný levonorgestrel"@cs,
+        "Levonorgestrelum micronisatum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188127> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02BA03> ;
+    ns1:hasIndication """Kontracepce po dobu až 3 let.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intrauterinní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC159391_doc> ;
+    ns1:hasStrength "13.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "IUT INS 1X13.5MG"@cs ;
+    ns1:title "JAYDESS 13,5 MG INTRAUTERINNÍ INZERT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188128> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02BA03> ;
+    ns1:hasIndication """Kontracepce po dobu až 3 let.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTICONCIPIENTIA"@cs ;
+    ns1:hasPackagingSize "5X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intrauterinní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC159391_doc> ;
+    ns1:hasStrength "13.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "IUT INS 5X13.5MG"@cs ;
+    ns1:title "JAYDESS 13,5 MG INTRAUTERINNÍ INZERT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JAYDESS-13-5-MG-INTRAUTERINNI-INZERT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02BA03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0019633> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188127>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0188128> ;
+    ns1:title "JAYDESS 13,5 MG INTRAUTERINNÍ INZERT"@cs .
+
+

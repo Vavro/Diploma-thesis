@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB> a ns1:ATCConcept ;
+    dcterms:title "Antidota"@cs,
+        "Antidotes"@en ;
+    skos:notation "V03AB" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB15> a ns1:ATCConcept ;
+    dcterms:title "Naloxon"@cs,
+        "Naloxone"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V03>,
+        <http://linked.opendata.cz/resource/ATC/V03A>,
+        <http://linked.opendata.cz/resource/ATC/V03AB> ;
+    skos:notation "V03AB15" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014441> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A specific opiate antagonist that has no agonist activity. It is a competitive antagonist at mu, delta, and kappa opioid receptors.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> ;
+    ns1:title "Naloxon"@cs,
+        "Naloxone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> a ns1:PharmacologicalAction ;
+    ns1:description "Agents inhibiting the effect of narcotics on the central nervous system.     "@en ;
+    ns1:title "Narkotika - antagonisté"@cs,
+        "Narcotic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0130064> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB15> ;
+    ns1:hasIndication """Kompletní nebo částečné zrušení tlumivého účinku na CNS, zvláště respirační deprese vyvolané přírodními nebo syntetickými opiáty a částečnými agonisty/antagonisty opiátů.
+Diagnostika suspektního akutního předávkování opiáty nebo intoxikace.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "10X1ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Subkutánní a intravenózní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157359_doc> ;
+    ns1:hasTitleSupplement "INJ+INF SOL 10X1ML/0.4MG"@cs ;
+    ns1:title "NEXODAL 0,4 MG/ML INJEKČNÍ NEBO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEXODAL-0-4-MG-ML-INJEKCNI-NEBO-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB15> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014441> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0130064> ;
+    ns1:title "NEXODAL 0,4 MG/ML INJEKČNÍ NEBO INFUZNÍ ROZTOK"@cs .
+
+

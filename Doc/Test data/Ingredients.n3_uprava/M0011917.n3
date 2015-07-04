@@ -1,0 +1,85 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01AA24> a ns1:ATCConcept ;
+    skos:notation "S01AA24" ;
+    skos:prefLabel "Kanamycin"@cs,
+        "Kanamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011917> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Antibiotic complex produced by Streptomyces kanamyceticus from Japanese soil. Comprises 3 components: kanamycin A, the major component, and kanamycins B and C, the minor components.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/KANAMYCIN-POS> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001496>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002071>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002603>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003506> ;
+    ns1:title "Kanamycin"@cs,
+        "Kanamycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001496> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by central nervous system dysfunction in association with LIVER FAILURE, including portal-systemic shunts. Clinical features include lethargy and CONFUSION (frequently progressing to COMA); ASTERIXIS; NYSTAGMUS, PATHOLOGIC; brisk oculovestibular reflexes; decorticate and decerebrate posturing; MUSCLE SPASTICITY; and bilateral extensor plantar reflexes (see REFLEX, BABINSKI). ELECTROENCEPHALOGRAPHY may demonstrate triphasic waves. (From Adams et al., Principles of Neurology, 6th ed, pp1117-20; Plum & Posner, Diagnosis of Stupor and Coma, 3rd ed, p222-5)     "@en ;
+    ns1:title "Jaterní encefalopatie"@cs,
+        "Hepatic encephalopathy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002071> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus MYCOBACTERIUM.     "@en ;
+    ns1:title "Mykobakteriózy"@cs,
+        "Mycobacterium infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002603> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.     "@en ;
+    ns1:title "Dýchací systém - infekce"@cs,
+        "Respiratory tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003506> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections caused by bacteria that show up as pink (negative) when treated by the gram-staining method.     "@en ;
+    ns1:title "Gramnegativní bakteriální infekce"@cs,
+        "Gram-negative bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KANAMYCIN-POS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01AA24> ;
+    ns1:title "KANAMYCIN-POS"@cs .
+
+

@@ -1,0 +1,193 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L04> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04" .
+
+<http://linked.opendata.cz/resource/ATC/L04A> a ns1:ATCConcept ;
+    dcterms:title "Imunosupresiva"@cs,
+        "Immunosuppressants "@en ;
+    skos:notation "L04A" .
+
+<http://linked.opendata.cz/resource/ATC/L04AD> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory kalcineurinu"@cs,
+        "Calcineurin inhibitors"@en ;
+    skos:notation "L04AD" .
+
+<http://linked.opendata.cz/resource/ATC/L04AD02> a ns1:ATCConcept ;
+    dcterms:title "Takrolimus"@cs,
+        "Tacrolimus  "@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L04>,
+        <http://linked.opendata.cz/resource/ATC/L04A>,
+        <http://linked.opendata.cz/resource/ATC/L04AD> ;
+    skos:notation "L04AD02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025261> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A macrolide isolated from the culture broth of a strain of Streptomyces tsukubaensis that has strong immunosuppressive activity in vivo and prevents the activation of T-lymphocytes in response to antigenic or mitogenic stimulation in vitro.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Takrolimus"@cs,
+        "Tacrolimus"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145036> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 30X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172194> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 10X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172195> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 50X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172196> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 60X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172197> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 90X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172198> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 100X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176927> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 10X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176928> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 50X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176929> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 60X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176930> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 90X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176931> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 100X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176932> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 30X0.5MG"@cs ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LECRON-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AD02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0025261> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145036>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172194>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172195>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172196>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172197>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0172198>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176927>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176928>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176929>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176930>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176931>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176932> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "LECRON 0,5 MG"@cs .
+
+

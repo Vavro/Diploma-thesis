@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06D> a ns1:ATCConcept ;
+    dcterms:title "Léčiva proti demenci"@cs,
+        "ANTI-DEMENTIA DRUGS"@en ;
+    skos:notation "N06D" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA> a ns1:ATCConcept ;
+    dcterms:title "Anticholinesterázy"@cs,
+        "Anticholinesterases"@en ;
+    skos:notation "N06DA" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA03> a ns1:ATCConcept ;
+    dcterms:title "Rivastigmin"@cs,
+        "Rivastigmine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06D>,
+        <http://linked.opendata.cz/resource/ATC/N06DA> ;
+    skos:notation "N06DA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0398521> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Rivastigmine tartrate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145234> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA03> ;
+    ns1:hasIndication """Symptomatická léčba mírné až středně závažné Alzheimerovy demence.
+Symptomatická léčba mírné až středně závažné demence u pacientů s idiopatickou Parkinsonovou chorobou. 
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC122675_doc> ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 28X1.5MG"@cs ;
+    ns1:title "KERSTIPON 1,5 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145235> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA03> ;
+    ns1:hasIndication """Symptomatická léčba mírné až středně závažné Alzheimerovy demence.
+Symptomatická léčba mírné až středně závažné demence u pacientů s idiopatickou Parkinsonovou chorobou. 
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC122675_doc> ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 56X1.5MG"@cs ;
+    ns1:title "KERSTIPON 1,5 MG TVRDÉ TOBOLKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KERSTIPON-1-5-MG-TVRDE-TOBOLKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0398521> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145234>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0145235> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "KERSTIPON 1,5 MG TVRDÉ TOBOLKY"@cs .
+
+

@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D> a ns1:ATCConcept ;
+    dcterms:title "Dermatologika"@cs,
+        "DERMATOLOGICALS"@en ;
+    skos:notation "D" .
+
+<http://linked.opendata.cz/resource/ATC/D10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii akné"@cs,
+        "ANTI-ACNE PREPARATIONS"@en ;
+    skos:notation "D10" .
+
+<http://linked.opendata.cz/resource/ATC/D10A> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii akné pro lokální aplikaci"@cs,
+        "ANTI-ACNE PREPARATIONS FOR TOPICAL USE"@en ;
+    skos:notation "D10A" .
+
+<http://linked.opendata.cz/resource/ATC/D10AD> a ns1:ATCConcept ;
+    dcterms:title "Retinoidy pro lokální aplikaci k terapii akné"@cs,
+        "Retinoids for topical use in acne"@en ;
+    skos:notation "D10AD" .
+
+<http://linked.opendata.cz/resource/ATC/D10AD03> a ns1:ATCConcept ;
+    dcterms:title "Adapalen"@cs,
+        "Adapalene"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/D>,
+        <http://linked.opendata.cz/resource/ATC/D10>,
+        <http://linked.opendata.cz/resource/ATC/D10A>,
+        <http://linked.opendata.cz/resource/ATC/D10AD> ;
+    skos:notation "D10AD03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0175560> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Adapalene"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148011> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AD03> ;
+    ns1:hasIndication """Belakne 0,1% krém je určen k zevní terapii mírného až středně závažného acne vulgaris, u kterého převažují komedony, papulky a pustulky. Belakne 0,1% krém je zvláště vhodný na suchou světlou pokožku. Přípravek je vhodný při léčbě akné s lokalizací na obličeji, na hrudi a na zádech.
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasMaximalPrice "251.619995117"^^xsd:float ;
+    ns1:hasPackagingSize "30GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "99.0400009155"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-06-26"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC137349_doc> ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X30GM/30MG"@cs ;
+    ns1:title "BELAKNE 0,1% KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BELAKNE-0-1--KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D10AD03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0175560> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148011> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "BELAKNE 0,1% KRÉM"@cs .
+
+

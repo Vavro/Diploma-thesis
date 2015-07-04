@@ -1,0 +1,170 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D01AC08> a ns1:ATCConcept ;
+    skos:notation "D01AC08" ;
+    skos:prefLabel "Ketokonazol"@cs,
+        "Ketoconazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/J02AB02> a ns1:ATCConcept ;
+    skos:notation "J02AB02" ;
+    skos:prefLabel "Ketokonazol"@cs,
+        "Ketoconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011987> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004105> ;
+    ns1:description "Broad spectrum antifungal agent used for long periods at high doses, especially in immunosuppressed patients.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/NIZORAL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000568>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000650>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000651>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000652>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000653>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000654>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000800>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000939>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001546>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001804>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002298>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002712>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002955>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002958>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002960>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003328> ;
+    ns1:title "Ketokonazol"@cs,
+        "Ketoconazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001399> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that destroy fungi by suppressing their ability to grow or reproduce. They differ from FUNGICIDES, INDUSTRIAL because they defend against fungi present in human or animal tissues.     "@en ;
+    ns1:title "Antifungální látky"@cs,
+        "Antifungal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545196> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that specifically inhibit STEROL 14-DEMETHYLASE. A variety of azole-derived ANTIFUNGAL AGENTS act through this mechanism.     "@en ;
+    ns1:title "14-alfa-demethylasa - inhibitory"@cs,
+        "14-alpha demethylase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000568> a ns1:DiseaseOrFinding ;
+    ns1:description "A fungal infection that may appear in two forms: 1, a primary lesion characterized by the formation of a small cutaneous nodule and small nodules along the lymphatics that may heal within several months; and 2, chronic granulomatous lesions characterized by thick crusts, warty growths, and unusual vascularity and infection in the middle or upper lobes of the lung.     "@en ;
+    ns1:title "Blastomykóza"@cs,
+        "Blastomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000650> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus CANDIDA. It is usually a superficial infection of the moist areas of the body and is generally caused by CANDIDA ALBICANS. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza"@cs,
+        "Candidiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000651> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by development, usually in infancy or childhood, of a chronic, often widespread candidiasis of skin, nails, and mucous membranes. It may be secondary to one of the immunodeficiency syndromes, inherited as an autosomal recessive trait, or associated with defects in cell-mediated immunity, endocrine disorders, dental stomatitis, or malignancy.     "@en ;
+    ns1:title "Kandidóza chronická mukokutánní"@cs,
+        "Candidiasis, chronic mucocutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000652> a ns1:DiseaseOrFinding ;
+    ns1:description "Candidiasis of the skin manifested as eczema-like lesions of the interdigital spaces, perleche, or chronic paronychia. (Dorland, 27th ed)     "@en ;
+    ns1:title "Kandidóza kožní"@cs,
+        "Candidiasis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000653> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the mucous membranes of the mouth by a fungus of the genus CANDIDA. (Dorland, 27th ed)     "@en ;
+    ns1:title "Orální kandidóza"@cs,
+        "Candidiasis, oral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000654> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the VULVA and VAGINA with a fungus of the genus CANDIDA.     "@en ;
+    ns1:title "Kandidóza vulvovaginální"@cs,
+        "Candidiasis, vulvovaginal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000800> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with a fungus of the genus COCCIDIOIDES, endemic to the SOUTHWESTERN UNITED STATES. It is sometimes called valley fever but should not be confused with RIFT VALLEY FEVER. Infection is caused by inhalation of airborne, fungal particles known as arthroconidia, a form of FUNGAL SPORES. A primary form is an acute, benign, self-limited respiratory infection. A secondary form is a virulent, severe, chronic, progressive granulomatous disease with systemic involvement. It can be detected by use of COCCIDIOIDIN.     "@en ;
+    ns1:title "Kokcidioidomykóza"@cs,
+        "Coccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001546> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection resulting from inhalation or ingestion of spores of the fungus of the genus HISTOPLASMA, species H. capsulatum. It is worldwide in distribution and particularly common in the midwestern United States. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Histoplazmóza"@cs,
+        "Histoplasmosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001804> a ns1:DiseaseOrFinding ;
+    ns1:description "A disease caused by any of a number of species of protozoa in the genus LEISHMANIA. There are four major clinical types of this infection: cutaneous (Old and New World) (LEISHMANIASIS, CUTANEOUS), diffuse cutaneous (LEISHMANIASIS, DIFFUSE CUTANEOUS), mucocutaneous (LEISHMANIASIS, MUCOCUTANEOUS), and visceral (LEISHMANIASIS, VISCERAL).     "@en ;
+    ns1:title "Leishmanióza"@cs,
+        "Leishmaniasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002298> a ns1:DiseaseOrFinding ;
+    ns1:description "A mycosis affecting the skin, mucous membranes, lymph nodes, and internal organs. It is caused by Paracoccidioides brasiliensis. It is also called paracoccidioidal granuloma. Superficial resemblance of P. brasiliensis to Blastomyces brasiliensis (BLASTOMYCES) may cause misdiagnosis.     "@en ;
+    ns1:title "Parakokcidioidomykóza"@cs,
+        "Paracoccidioidomycosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002712> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory disease of the skin with unknown etiology. It is characterized by moderate ERYTHEMA, dry, moist, or greasy (SEBACEOUS GLAND) scaling and yellow crusted patches on various areas, especially the scalp, that exfoliate as dandruff. Seborrheic dermatitis is common in children and adolescents with HIV INFECTIONS.     "@en ;
+    ns1:title "Dermatitida seboroická"@cs,
+        "Dermatitis, seborrheic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002955> a ns1:DiseaseOrFinding ;
+    ns1:description "Fungal infection of keratinized tissues such as hair, skin and nails. The main causative fungi include MICROSPORUM; TRICHOPHYTON; and EPIDERMOPHYTON.     "@en ;
+    ns1:title "Tinea"@cs,
+        "Tinea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002958> a ns1:DiseaseOrFinding ;
+    ns1:description "Dermatological pruritic lesion in the feet, caused by Trichophyton rubrum, T. mentagrophytes, or Epidermophyton floccosum.     "@en ;
+    ns1:title "Tinea pedis"@cs,
+        "Tinea pedis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002960> a ns1:DiseaseOrFinding ;
+    ns1:description "A common chronic, noninflammatory and usually symptomless disorder, characterized by the occurrence of multiple macular patches of all sizes and shapes, and varying in pigmentation from fawn-colored to brown. It is seen most frequently in hot, humid, tropical regions, and is caused by Pityrosporon orbiculare. (Dorland, 27th ed)     "@en ;
+    ns1:title "Tinea versicolor"@cs,
+        "Tinea versicolor"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003328> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection of the cornea by an ameboid protozoan which may cause corneal ulceration leading to blindness.     "@en ;
+    ns1:title "Acanthamoebová keratitida"@cs,
+        "Acanthamoeba keratitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004105> a ns1:DiseaseOrFinding ;
+    ns1:description "MYCOSES of the brain, spinal cord, and meninges which may result in ENCEPHALITIS; MENINGITIS, FUNGAL; MYELITIS; BRAIN ABSCESS; and EPIDURAL ABSCESS. Certain types of fungi may produce disease in immunologically normal hosts, while others are classified as opportunistic pathogens, causing illness primarily in immunocompromised individuals (e.g., ACQUIRED IMMUNODEFICIENCY SYNDROME).     "@en ;
+    ns1:title "Centrální nervový systém - mykotické infekce"@cs,
+        "Central nervous system fungal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000020025> a ns1:MechanismOfAction ;
+    ns1:title "14-alpha Demethylase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008478> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NIZORAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D01AC08>,
+        <http://linked.opendata.cz/resource/ATC/J02AB02> ;
+    ns1:title "NIZORAL"@cs .
+
+

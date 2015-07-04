@@ -1,0 +1,322 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02AB03> a ns1:ATCConcept ;
+    skos:notation "N02AB03" ;
+    skos:prefLabel "Fentanyl"@cs,
+        "Fentanyl"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008338> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001536>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002602>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A potent narcotic analgesic, abuse of which leads to habituation or addiction. It is primarily a mu-opioid agonist. Fentanyl is also used as an adjunct to general anesthetics, and as an anesthetic for induction and maintenance. (From Martindale, The Extra Pharmacopoeia, 30th ed, p1078)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-100-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-25-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-50-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-100-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-12-5-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-25-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-50-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-75-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-100-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-25-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-50-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-75-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-100-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-12-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-25-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-50-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-75-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-100-MCG-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-12-5-MCG-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-25-MCG-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-50-MCG-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-75-MCG-H-TRANSDERMALNI-NAPLAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-100-MIKROGRAMU-HODINU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-12-MIKROGRAMU-HODINU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-25-MIKROGRAMU-HODINU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-50-MIKROGRAMU-HODINU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-75-MIKROGRAMU-HODINU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-100-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-12-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-25-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-50-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-75-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-100-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-12-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-25-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-50-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-75-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-100-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-12-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-25-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-50-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-75-MCG-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-100-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-25-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-50-MIKROGRAMU-H>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-75-MIKROGRAMU-H> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> ;
+    ns1:title "Fentanyl"@cs,
+        "Fentanyl"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001536> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome related to increased atmospheric pressure and characterized by tremors, nausea, dizziness, decreased motor and mental performance, and SEIZURES. This condition may occur in those who dive deeply (c. 1000 ft) usually while breathing a mixture of oxygen and helium. The condition is associated with a neuroexcitatory effect of helium.     "@en ;
+    ns1:title "Hypertenzní neurologický syndrom"@cs,
+        "High pressure neurological syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002602> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci dýchacího systému"@cs,
+        "Respiratory tract diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe irreversible decline in the ability of kidneys to remove wastes, concentrate URINE, and maintain ELECTROLYTE BALANCE; BLOOD PRESSURE; and CALCIUM metabolism.     "@en ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000174> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-100-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ADOLOR 100 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-25-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ADOLOR 25 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADOLOR-50-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ADOLOR 50 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-100-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ALGOGESIC 100 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-12-5-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ALGOGESIC 12,5 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-25-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ALGOGESIC 25 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-50-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ALGOGESIC 50 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALGOGESIC-75-MIKROGRAMU-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "ALGOGESIC 75 MIKROGRAMŮ/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-100-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DOLFORIN 100 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-25-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DOLFORIN 25 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-50-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DOLFORIN 50 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOLFORIN-75-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DOLFORIN 75 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-100-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DUROGESIC 100 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-12-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DUROGESIC 12 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-25-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DUROGESIC 25 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-50-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DUROGESIC 50 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUROGESIC-75-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "DUROGESIC 75 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-100-MCG-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTALIS 100 MCG/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-12-5-MCG-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTALIS 12,5 MCG/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-25-MCG-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTALIS 25 MCG/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-50-MCG-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTALIS 50 MCG/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTALIS-75-MCG-H-TRANSDERMALNI-NAPLAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTALIS 75 MCG/H TRANSDERMÁLNÍ NÁPLAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-100-MIKROGRAMU-HODINU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL MYLAN 100 MIKROGRAMŮ/HODINU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-12-MIKROGRAMU-HODINU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL MYLAN 12 MIKROGRAMŮ/HODINU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-25-MIKROGRAMU-HODINU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL MYLAN 25 MIKROGRAMŮ/HODINU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-50-MIKROGRAMU-HODINU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL MYLAN 50 MIKROGRAMŮ/HODINU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-MYLAN-75-MIKROGRAMU-HODINU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL MYLAN 75 MIKROGRAMŮ/HODINU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-100-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL ORION 100 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-12-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL ORION 12 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-25-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL ORION 25 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-50-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL ORION 50 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-ORION-75-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL ORION 75 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-100-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL-RATIOPHARM 100 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-12-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL-RATIOPHARM 12 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-25-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL-RATIOPHARM 25 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-50-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL-RATIOPHARM 50 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FENTANYL-RATIOPHARM-75-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "FENTANYL-RATIOPHARM 75 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-100-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "MATRIFEN 100 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-12-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "MATRIFEN 12 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-25-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "MATRIFEN 25 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-50-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "MATRIFEN 50 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MATRIFEN-75-MCG-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "MATRIFEN 75 MCG/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-100-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "OPIODUR 100 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-25-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "OPIODUR 25 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-50-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "OPIODUR 50 MIKROGRAMŮ/H"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OPIODUR-75-MIKROGRAMU-H> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AB03> ;
+    ns1:title "OPIODUR 75 MIKROGRAMŮ/H"@cs .
+
+

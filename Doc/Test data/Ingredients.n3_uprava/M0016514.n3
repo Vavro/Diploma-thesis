@@ -1,0 +1,134 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AA02> a ns1:ATCConcept ;
+    skos:notation "N03AA02" ;
+    skos:prefLabel "Fenobarbital"@cs,
+        "Phenobarbital"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016514> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000346>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A barbituric acid derivative that acts as a nonselective central nervous system depressant. It promotes binding to inhibitory GAMMA-AMINOBUTYRIC ACID subtype receptors, and modulates chloride currents through receptor channels. It also inhibits glutamate induced depolarizations.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000105> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/PHENAEMAL-0-1>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PHENAEMALETTEN> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009027> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000848>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001127>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001129>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001575>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004226> ;
+    ns1:title "Fenobarbital"@cs,
+        "Phenobarbital"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate excitatory amino acid receptors, thereby blocking the actions of agonists.     "@en ;
+    ns1:title "Excitační aminokyseliny - antagonisté"@cs,
+        "Excitatory amino acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000346> a ns1:DiseaseOrFinding ;
+    ns1:description "Any hindrance to the passage of air into and out of the lungs.     "@en ;
+    ns1:title "Dýchací cesty - obstrukce"@cs,
+        "Airway obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000848> a ns1:DiseaseOrFinding ;
+    ns1:description "Seizures that occur during a febrile episode. It is a common condition, affecting 2-5% of children aged 3 months to five years. An autosomal dominant pattern of inheritance has been identified in some families. The majority are simple febrile seizures (generally defined as generalized onset, single seizures with a duration of less than 30 minutes). Complex febrile seizures are characterized by focal onset, duration greater than 30 minutes, and/or more than one seizure in a 24 hour period. The likelihood of developing epilepsy (i.e., a nonfebrile seizure disorder) following simple febrile seizures is low. Complex febrile seizures are associated with a moderately increased incidence of epilepsy. (From Menkes, Textbook of Child Neurology, 5th ed, p784)     "@en ;
+    ns1:title "Záchvaty febrilní"@cs,
+        "Seizures, febrile"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001127> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions characterized by recurrent paroxysmal neuronal discharges which arise from a focal region of the brain. Partial seizures are divided into simple and complex, depending on whether consciousness is unaltered (simple partial seizure) or disturbed (complex partial seizure). Both types may feature a wide variety of motor, sensory, and autonomic symptoms. Partial seizures may be classified by associated clinical features or anatomic location of the seizure focus. A secondary generalized seizure refers to a partial seizure that spreads to involve the brain diffusely. (From Adams et al., Principles of Neurology, 6th ed, pp317)     "@en ;
+    ns1:title "Epilepsie parciální"@cs,
+        "Epilepsies, partial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001129> a ns1:DiseaseOrFinding ;
+    ns1:description "A generalized seizure disorder characterized by recurrent major motor seizures. The initial brief tonic phase is marked by trunk flexion followed by diffuse extension of the trunk and extremities. The clonic phase features rhythmic flexor contractions of the trunk and limbs, pupillary dilation, elevations of blood pressure and pulse, urinary incontinence, and tongue biting. This is followed by a profound state of depressed consciousness (post-ictal state) which gradually improves over minutes to hours. The disorder may be cryptogenic, familial, or symptomatic (caused by an identified disease process). (From Adams et al., Principles of Neurology, 6th ed, p329)     "@en ;
+    ns1:title "Epilepsie tonicko-klonická"@cs,
+        "Epilepsy, tonic-clonic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001575> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by an abnormal increase of BILIRUBIN in the blood, which may result in JAUNDICE. Bilirubin, a breakdown product of HEME, is normally excreted in the BILE or further catabolized before excretion in the urine.     "@en ;
+    ns1:title "Hyperbilirubinémie"@cs,
+        "Hyperbilirubinemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004226> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition marked by recurrent seizures that occur during the first 4-6 weeks of life despite an otherwise benign neonatal course. Autosomal dominant familial and sporadic forms have been identified. Seizures generally consist of brief episodes of tonic posturing and other movements, apnea, eye deviations, and blood pressure fluctuations. These tend to remit after the 6th week of life. The risk of developing epilepsy at an older age is moderately increased in the familial form of this disorder. (Neurologia 1996 Feb;11(2):51-5)     "@en ;
+    ns1:title "Epilepsie benigní neonatální"@cs,
+        "Epilepsy, benign neonatal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000105> a ns1:MechanismOfAction ;
+    ns1:title "Neurotransmitter Transporter Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009027> a ns1:PhysiologicEffect ;
+    ns1:title "Electrical Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PHENAEMAL-0-1> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AA02> ;
+    ns1:title "PHENAEMAL 0,1"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PHENAEMALETTEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AA02> ;
+    ns1:title "PHENAEMALETTEN"@cs .
+
+

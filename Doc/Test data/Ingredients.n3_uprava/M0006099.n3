@@ -1,0 +1,447 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H02AB02> a ns1:ATCConcept ;
+    skos:notation "H02AB02" ;
+    skos:prefLabel "Dexamethason"@cs,
+        "Dexamethasone"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01BA01> a ns1:ATCConcept ;
+    skos:notation "S01BA01" ;
+    skos:prefLabel "Dexamethason"@cs,
+        "Dexamethasone"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01CA01> a ns1:ATCConcept ;
+    skos:notation "S01CA01" ;
+    skos:prefLabel "Dexamethason a antiinfektiva"@cs,
+        "Dexamethasone and antiinfectives"@en .
+
+<http://linked.opendata.cz/resource/ATC/S02BA> a ns1:ATCConcept ;
+    skos:notation "S02BA" ;
+    skos:prefLabel "Kortikosteroidy"@cs,
+        "Corticosteroids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006099> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003044>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003326>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003331> ;
+    ns1:description "An anti-inflammatory 9-fluoro-glucocorticoid.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/DEXA-GENTAMICIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DEXAMETHASONE-WZF-POLFA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FORTECORTIN-4>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MAXITROL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OTOBACID-N>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OZURDEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX-OCNI-MAST> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008384>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008570>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008675>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008759>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002110>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000305>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000387>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000477>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000607>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000808>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000939>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001249>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001459>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001499>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001504>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001671>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001815>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001887>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001905>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002128>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002147>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002153>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002154>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002155>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002165>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002325>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002455>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002526>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002635>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002670>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002731>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003113>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003510>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000011073> ;
+    ns1:title "Dexamethason"@cs,
+        "Dexamethasone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:description "An adrenal disease characterized by the progressive destruction of the ADRENAL CORTEX, resulting in insufficient production of ALDOSTERONE and HYDROCORTISONE. Clinical symptoms include ANOREXIA; NAUSEA; WEIGHT LOSS; MUSCLE WEAKNESS; and HYPERPIGMENTATION of the SKIN due to increase in circulating levels of ACTH precursor hormone which stimulates MELANOCYTES.     "@en ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000387> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of inadequate circulating red blood cells (ANEMIA) or insufficient HEMOGLOBIN due to premature destruction of red blood cells (ERYTHROCYTES).     "@en ;
+    ns1:title "Hemolytická anemie"@cs,
+        "Anemia, hemolytic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000477> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of any ARTERIES.     "@en ;
+    ns1:title "Arteritida"@cs,
+        "Arteritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000607> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased intracellular or extracellular fluid in brain tissue. Cytotoxic brain edema (swelling due to increased intracellular fluid) is indicative of a disturbance in cell metabolism, and is commonly associated with hypoxic or ischemic injuries (see HYPOXIA, BRAIN). An increase in extracellular fluid may be caused by increased brain capillary permeability (vasogenic edema), an osmotic gradient, local blockages in interstitial fluid pathways, or by obstruction of CSF flow (e.g., obstructive HYDROCEPHALUS). (From Childs Nerv Syst 1992 Sep; 8(6):301-6)     "@en ;
+    ns1:title "Edém mozku"@cs,
+        "Brain edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000808> a ns1:DiseaseOrFinding ;
+    ns1:description "Historically, a heterogeneous group of acute and chronic diseases, including rheumatoid arthritis, systemic lupus erythematosus, progressive systemic sclerosis, dermatomyositis, etc. This classification was based on the notion that \"collagen\" was equivalent to \"connective tissue\", but with the present recognition of the different types of collagen and the aggregates derived from them as distinct entities, the term \"collagen diseases\" now pertains exclusively to those inherited conditions in which the primary defect is at the gene level and affects collagen biosynthesis, post-translational modification, or extracellular processing directly. (From Cecil Textbook of Medicine, 19th ed, p1494)     "@en ;
+    ns1:title "Kolagenózy"@cs,
+        "Collagen diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001459> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of the blood and blood forming tissues.     "@en ;
+    ns1:title "Krevní nemoci"@cs,
+        "Hematologic diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001499> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER.     "@en ;
+    ns1:title "Hepatitida"@cs,
+        "Hepatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001504> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the LIVER with ongoing hepatocellular injury for 6 months or more, characterized by NECROSIS of HEPATOCYTES and inflammatory cell (LEUKOCYTES) infiltration. Chronic hepatitis can be caused by viruses, medications, autoimmune diseases, and other unknown factors.     "@en ;
+    ns1:title "Chronická hepatitida"@cs,
+        "Hepatitis, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001671> a ns1:DiseaseOrFinding ;
+    ns1:description "A common superficial bacterial infection caused by STAPHYLOCOCCUS AUREUS or group A beta-hemolytic streptococci. Characteristics include pustular lesions that rupture and discharge a thin, amber-colored fluid that dries and forms a crust. This condition is commonly located on the face, especially about the mouth and nose.     "@en ;
+    ns1:title "Impetigo"@cs,
+        "Impetigo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001887> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, relapsing, inflammatory, and often febrile multisystemic disorder of connective tissue, characterized principally by involvement of the skin, joints, kidneys, and serosal membranes. It is of unknown etiology, but is thought to represent a failure of the regulatory mechanisms of the autoimmune system. The disease is marked by a wide range of system dysfunctions, an elevated erythrocyte sedimentation rate, and the formation of LE cells in the blood or bone marrow.     "@en ;
+    ns1:title "Systémový lupus erythematodes"@cs,
+        "Lupus erythematosus, systemic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002076> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, malignant T-cell lymphoma of the skin. In the late stages, the LYMPH NODES and viscera are affected.     "@en ;
+    ns1:title "Mycosis fungoides"@cs,
+        "Mycosis fungoides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002110> a ns1:DiseaseOrFinding ;
+    ns1:description "Focal accumulations of EDEMA fluid in the NASAL MUCOSA accompanied by HYPERPLASIA of the associated submucosal connective tissue. Polyps may be NEOPLASMS, foci of INFLAMMATION, degenerative lesions, or malformations.     "@en ;
+    ns1:title "Nosní polypy"@cs,
+        "Nasal polyps"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002114> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.     "@en ;
+    ns1:title "Nauzea"@cs,
+        "Nausea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002128> a ns1:DiseaseOrFinding ;
+    ns1:description "New abnormal growth of tissue. Malignant neoplasms show a greater degree of anaplasia and have the properties of invasion and metastasis, compared to benign neoplasms.     "@en ;
+    ns1:title "Nádory"@cs,
+        "Neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002147> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part of the KIDNEY.     "@en ;
+    ns1:title "Nefritida"@cs,
+        "Nephritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002153> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY without inflammatory or neoplastic components. Nephrosis may be a primary disorder or secondary complication of other diseases. It is characterized by the NEPHROTIC SYNDROME indicating the presence of PROTEINURIA and HYPOALBUMINEMIA with accompanying EDEMA.     "@en ;
+    ns1:title "Nefróza"@cs,
+        "Nephrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002154> a ns1:DiseaseOrFinding ;
+    ns1:description "A kidney disease with no or minimal histological glomerular changes on light microscopy and with no immune deposits. It is characterized by lipid accumulation in the epithelial cells of KIDNEY TUBULES and in the URINE. Patients usually show NEPHROTIC SYNDROME indicating the presence of PROTEINURIA with accompanying EDEMA.     "@en ;
+    ns1:title "Lipoidní nefróza"@cs,
+        "Nephrosis, lipoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002155> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition characterized by severe PROTEINURIA, greater than 3.5 g/day in an average adult. The substantial loss of protein in the urine results in complications such as HYPOPROTEINEMIA; generalized EDEMA; HYPERTENSION; and HYPERLIPIDEMIAS. Diseases associated with nephrotic syndrome generally cause chronic kidney dysfunction.     "@en ;
+    ns1:title "Nefrotický syndrom"@cs,
+        "Nephrotic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002165> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term indicating inflammation of a peripheral or cranial nerve. Clinical manifestation may include PAIN; PARESTHESIAS; PARESIS; or HYPESTHESIA.     "@en ;
+    ns1:title "Neuritida"@cs,
+        "Neuritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002325> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term referring to a mild to moderate degree of muscular weakness, occasionally used as a synonym for PARALYSIS (severe or complete loss of motor function). In the older literature, paresis often referred specifically to paretic neurosyphilis (see NEUROSYPHILIS). \"General paresis\" and \"general paralysis\" may still carry that connotation. Bilateral lower extremity paresis is referred to as PARAPARESIS.     "@en ;
+    ns1:title "Paréza"@cs,
+        "Paresis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002455> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome in the elderly characterized by proximal joint and muscle pain, high erythrocyte sedimentation rate, and a self-limiting course. Pain is usually accompanied by evidence of an inflammatory reaction. Women are affected twice as commonly as men and Caucasians more frequently than other groups. The condition is frequently associated with GIANT CELL ARTERITIS and some theories pose the possibility that the two diseases arise from a single etiology or even that they are the same entity.     "@en ;
+    ns1:title "Polymyalgia rheumatica"@cs,
+        "Polymyalgia rheumatica"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002635> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the mucous membrane of the nose similar to that found in hay fever except that symptoms persist throughout the year. The causes are usually air-borne allergens, particularly dusts, feathers, molds, animal fur, etc.     "@en ;
+    ns1:title "Celoroční alergická rýma"@cs,
+        "Rhinitis, allergic, perennial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002670> a ns1:DiseaseOrFinding ;
+    ns1:description "An idiopathic systemic inflammatory granulomatous disorder comprised of epithelioid and multinucleated giant cells with little necrosis. It usually invades the lungs with fibrosis and may also involve lymph nodes, skin, liver, spleen, eyes, phalangeal bones, and parotid glands.     "@en ;
+    ns1:title "Sarkoidóza"@cs,
+        "Sarcoidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002731> a ns1:DiseaseOrFinding ;
+    ns1:description "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include, but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.     "@en ;
+    ns1:title "Septický šok"@cs,
+        "Shock, septic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003044> a ns1:DiseaseOrFinding ;
+    ns1:description "Tuberculous infection of the eye, primarily the iris, ciliary body, and choroid.     "@en ;
+    ns1:title "Tuberkulóza oční"@cs,
+        "Tuberculosis, ocular"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003113> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any one of the blood vessels, including the ARTERIES; VEINS; and rest of the vasculature system in the body.     "@en ;
+    ns1:title "Vaskulitida"@cs,
+        "Vasculitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003326> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection by a variety of fungi, usually through four possible mechanisms: superficial infection producing conjunctivitis, keratitis, or lacrimal obstruction; extension of infection from neighboring structures - skin, paranasal sinuses, nasopharynx; direct introduction during surgery or accidental penetrating trauma; or via the blood or lymphatic routes in patients with underlying mycoses.     "@en ;
+    ns1:title "Oční infekce mykotické"@cs,
+        "Eye infections, fungal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003331> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of the eye caused by minute intracellular agents. These infections may lead to severe inflammation in various parts of the eye - conjunctiva, iris, eyelids, etc. Several viruses have been identified as the causative agents. Among these are Herpesvirus, Adenovirus, Poxvirus, and Myxovirus.     "@en ;
+    ns1:title "Oční infekce virové"@cs,
+        "Eye infections, viral"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003510> a ns1:DiseaseOrFinding ;
+    ns1:description "An aseptic, inflammatory arthritis developing secondary to a primary extra-articular infection, most typically of the GASTROINTESTINAL TRACT or UROGENITAL SYSTEM. The initiating trigger pathogens are usually SHIGELLA; SALMONELLA; YERSINIA; CAMPYLOBACTER; or CHLAMYDIA TRACHOMATIS. Reactive arthritis is strongly associated with HLA-B27 ANTIGEN.     "@en ;
+    ns1:title "Reaktivní artritida"@cs,
+        "Arthritis, reactive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011073> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the joints of the SPINE, the intervertebral articulations.     "@en ;
+    ns1:title "Spondylartritida"@cs,
+        "Spondylarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000134> a ns1:MechanismOfAction ;
+    ns1:title "Lipoxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000159> a ns1:MechanismOfAction ;
+    ns1:title "Glucocorticoid Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008327> a ns1:PhysiologicEffect ;
+    ns1:title "Carbohydrate Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008384> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Adhesion Factor Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008570> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Complement Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008645> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Histamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008675> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Kinin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008700> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lysosomal Function"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008759> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Myeloid Cell Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008834> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009004> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009739> a ns1:PhysiologicEffect ;
+    ns1:title "Lipid Metabolism Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010246> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Polymorphonuclear Leukocyte Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010248> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Fibroblast Migration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000010253> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Capillary Permeability"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEXA-GENTAMICIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "DEXA-GENTAMICIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DEXAMETHASONE-WZF-POLFA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01BA01> ;
+    ns1:title "DEXAMETHASONE WZF POLFA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORTECORTIN-4> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H02AB02> ;
+    ns1:title "FORTECORTIN 4"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAXITROL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "MAXITROL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OTOBACID-N> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S02BA> ;
+    ns1:title "OTOBACID N"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OZURDEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01BA01> ;
+    ns1:title "OZURDEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "TOBRADEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX-OCNI-MAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "TOBRADEX OČNÍ MAST"@cs .
+
+

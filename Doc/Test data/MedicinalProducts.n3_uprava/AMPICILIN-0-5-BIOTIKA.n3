@@ -1,0 +1,111 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J01> a ns1:ATCConcept ;
+    dcterms:title "Antibakteriální léčiva pro systémovou aplikaci"@cs,
+        "ANTIBACTERIALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J01" .
+
+<http://linked.opendata.cz/resource/ATC/J01C> a ns1:ATCConcept ;
+    dcterms:title "Beta-laktamová antibiotika, peniciliny"@cs,
+        "BETA-LACTAM ANTIBACTERIALS, PENICILLINS"@en ;
+    skos:notation "J01C" .
+
+<http://linked.opendata.cz/resource/ATC/J01CA> a ns1:ATCConcept ;
+    dcterms:title "Peniciliny se širokým spektrem"@cs,
+        "Penicillins with extended spectrum"@en ;
+    skos:notation "J01CA" .
+
+<http://linked.opendata.cz/resource/ATC/J01CA01> a ns1:ATCConcept ;
+    dcterms:title "Ampicilin"@cs,
+        "Ampicillin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J01>,
+        <http://linked.opendata.cz/resource/ATC/J01C>,
+        <http://linked.opendata.cz/resource/ATC/J01CA> ;
+    skos:notation "J01CA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330775> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Ampicillin sodium"@cs,
+        "Ampicillin sodium"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0068999> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CA01> ;
+    ns1:hasIndication """Ampicilin je antibiotikem, které se používá v léčbě infekcí vyvolaných mikroby citlivými na ampicilin,   �u infekcí dolních dýchacích cest s hnisavou expektorací, vyvolaných pneumokoky, hemofily nebo smíšenou mikroflórou; při akutní bronchitidě a při zánětech plic u dětí (pokud není důkaz samostatné stafylokokové etiologie, případně v kombinaci s oxacilinem), při akutní epiglotitidě jen v případě že infekční agens neprodukuje beta-laktamázu, při zánětech středního ucha novorozenců a dětí předškolního věku; při sinusitidě. V léčbě akutních exacerbací chronické bronchitidy je ampicilin indikován v první řade při monoinfekci pneumokoky.
+Ampicilin je lékem první volby při infekcích močových cest vyvolaných enterokoky. Při jiných infekcích močových cest se ampicilin ordinuje až v druhé řadě, pokud není vhodnější použít kotrimoxazol. Je-li mikroorganizmus citlivý, je ampicilin indikován na kmeny neprodukující beta-laktamázy u infekcí žlučových cest, zažívacího traktu; u listeriových meningitid je ampicilin lékem 1. volby (především pneumokokové, meningokokové, streptokokové a enterokokové etiologie); při bakteriálních endokarditidách pokud jsou způsobeny enterokoky nebo citlivými gramnegativními bakteriemi; při septikemiích.
+Ampicilin se může také použit k léčbě břišního tyfu nebo paratyfu (pokud nelze použít fluorochinolony, kotrimoxazol a chloramfenikol) a k sanaci bacilonosičů salmonel v žlučníku a žlučových cestách v rámci komplexní antibioticko-chirurgické léčby. 
+U těžkých smíšených infekcí lze ampicilin výhodně kombinovat s gentamicinem.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "166.940002441"^^xsd:float ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "141.240005493"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC107651_doc> ;
+    ns1:hasStrength "500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 10X500MG"@cs ;
+    ns1:title "AMPICILIN 0,5 BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086196> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CA01> ;
+    ns1:hasIndication """Ampicilin je antibiotikem, které se používá v léčbě infekcí vyvolaných mikroby citlivými na ampicilin,   �u infekcí dolních dýchacích cest s hnisavou expektorací, vyvolaných pneumokoky, hemofily nebo smíšenou mikroflórou; při akutní bronchitidě a při zánětech plic u dětí (pokud není důkaz samostatné stafylokokové etiologie, případně v kombinaci s oxacilinem), při akutní epiglotitidě jen v případě že infekční agens neprodukuje beta-laktamázu, při zánětech středního ucha novorozenců a dětí předškolního věku; při sinusitidě. V léčbě akutních exacerbací chronické bronchitidy je ampicilin indikován v první řade při monoinfekci pneumokoky.
+Ampicilin je lékem první volby při infekcích močových cest vyvolaných enterokoky. Při jiných infekcích močových cest se ampicilin ordinuje až v druhé řadě, pokud není vhodnější použít kotrimoxazol. Je-li mikroorganizmus citlivý, je ampicilin indikován na kmeny neprodukující beta-laktamázy u infekcí žlučových cest, zažívacího traktu; u listeriových meningitid je ampicilin lékem 1. volby (především pneumokokové, meningokokové, streptokokové a enterokokové etiologie); při bakteriálních endokarditidách pokud jsou způsobeny enterokoky nebo citlivými gramnegativními bakteriemi; při septikemiích.
+Ampicilin se může také použit k léčbě břišního tyfu nebo paratyfu (pokud nelze použít fluorochinolony, kotrimoxazol a chloramfenikol) a k sanaci bacilonosičů salmonel v žlučníku a žlučových cestách v rámci komplexní antibioticko-chirurgické léčby. 
+U těžkých smíšených infekcí lze ampicilin výhodně kombinovat s gentamicinem.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasPackagingSize "1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC107651_doc> ;
+    ns1:hasStrength "500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 1X500MG"@cs ;
+    ns1:title "AMPICILIN 0,5 BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086197> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CA01> ;
+    ns1:hasBreakMarketingDate "2012-02-03"^^xsd:date ;
+    ns1:hasIndication """Ampicilin je antibiotikem, které se používá v léčbě infekcí vyvolaných mikroby citlivými na ampicilin,   �u infekcí dolních dýchacích cest s hnisavou expektorací, vyvolaných pneumokoky, hemofily nebo smíšenou mikroflórou; při akutní bronchitidě a při zánětech plic u dětí (pokud není důkaz samostatné stafylokokové etiologie, případně v kombinaci s oxacilinem), při akutní epiglotitidě jen v případě že infekční agens neprodukuje beta-laktamázu, při zánětech středního ucha novorozenců a dětí předškolního věku; při sinusitidě. V léčbě akutních exacerbací chronické bronchitidy je ampicilin indikován v první řade při monoinfekci pneumokoky.
+Ampicilin je lékem první volby při infekcích močových cest vyvolaných enterokoky. Při jiných infekcích močových cest se ampicilin ordinuje až v druhé řadě, pokud není vhodnější použít kotrimoxazol. Je-li mikroorganizmus citlivý, je ampicilin indikován na kmeny neprodukující beta-laktamázy u infekcí žlučových cest, zažívacího traktu; u listeriových meningitid je ampicilin lékem 1. volby (především pneumokokové, meningokokové, streptokokové a enterokokové etiologie); při bakteriálních endokarditidách pokud jsou způsobeny enterokoky nebo citlivými gramnegativními bakteriemi; při septikemiích.
+Ampicilin se může také použit k léčbě břišního tyfu nebo paratyfu (pokud nelze použít fluorochinolony, kotrimoxazol a chloramfenikol) a k sanaci bacilonosičů salmonel v žlučníku a žlučových cestách v rámci komplexní antibioticko-chirurgické léčby. 
+U těžkých smíšených infekcí lze ampicilin výhodně kombinovat s gentamicinem.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIBIOTICA (PROTI MIKROB. A VIROVÝM INFEKCÍM)"@cs ;
+    ns1:hasMaximalPrice "589.929992676"^^xsd:float ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "706.179992676"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC107651_doc> ;
+    ns1:hasStrength "500MG/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PLV SOL 50X500MG"@cs ;
+    ns1:title "AMPICILIN 0,5 BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMPICILIN-0-5-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330775> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0068999>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086196>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086197> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "AMPICILIN 0,5 BIOTIKA"@cs .
+
+

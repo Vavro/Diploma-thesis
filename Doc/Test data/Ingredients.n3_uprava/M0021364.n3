@@ -1,0 +1,114 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N01AF03> a ns1:ATCConcept ;
+    skos:notation "N01AF03" ;
+    skos:prefLabel "Thiopental"@cs,
+        "Thiopental"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021364> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000689>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002580>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002821>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003206> ;
+    ns1:description "A barbiturate that is administered intravenously for the induction of general anesthesia or for the production of complete anesthesia of short duration.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/THIOPENTAL-VUAB-INJ--PLV--SOL--0-5-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/THIOPENTAL-VUAB-INJ--PLV--SOL--1-0-G> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008524>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008969> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000003945> ;
+    ns1:title "Thiopental"@cs,
+        "Thiopental"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010885> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to induce drowsiness or sleep or to reduce psychological excitement or anxiety.     "@en ;
+    ns1:title "Hypnotika a sedativa"@cs,
+        "Hypnotics and sedatives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027999> a ns1:PharmacologicalAction ;
+    ns1:description "Ultrashort-acting anesthetics that are used for induction. Loss of consciousness is rapid and induction is pleasant, but there is no muscle relaxation and reflexes frequently are not reduced adequately. Repeated administration results in accumulation and prolongs the recovery time. Since these agents have little if any analgesic activity, they are seldom used alone except in brief minor procedures. (From AMA Drug Evaluations Annual, 1994, p174)     "@en ;
+    ns1:title "Anestetika intravenózní"@cs,
+        "Anesthetics, intravenous"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000689> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological conditions involving the CARDIOVASCULAR SYSTEM including the HEART; the BLOOD VESSELS; or the PERICARDIUM.     "@en ;
+    ns1:title "Kardiovaskulární nemoci"@cs,
+        "Cardiovascular diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002464> a ns1:DiseaseOrFinding ;
+    ns1:description "A diverse group of metabolic diseases characterized by errors in the biosynthetic pathway of HEME in the LIVER, the BONE MARROW, or both. They are classified by the deficiency of specific enzymes, the tissue site of enzyme defect, or the clinical features that include neurological (acute) or cutaneous (skin lesions). Porphyrias can be hereditary or acquired as a result of toxicity to the hepatic or erythropoietic marrow tissues.     "@en ;
+    ns1:title "Porfyrie"@cs,
+        "Porphyrias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002580> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the RECTUM.     "@en ;
+    ns1:title "Nádory rekta"@cs,
+        "Rectal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003206> a ns1:DiseaseOrFinding ;
+    ns1:description "Chronic, non-specific inflammation of the GASTROINTESTINAL TRACT. Etiology may be genetic or environmental. This term includes CROHN DISEASE and ULCERATIVE COLITIS.     "@en ;
+    ns1:title "Idiopatické střevní záněty"@cs,
+        "Inflammatory bowel diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003945> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased pressure within the cranial vault. This may result from several conditions, including HYDROCEPHALUS; BRAIN EDEMA; intracranial masses; severe systemic HYPERTENSION; PSEUDOTUMOR CEREBRI; and other disorders.     "@en ;
+    ns1:title "Intrakraniální hypertenze"@cs,
+        "Intracranial hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008524> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cerebellum Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Medullary Respiratory Drive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sensory-Somatic Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008969> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Striated Muscle Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THIOPENTAL-VUAB-INJ--PLV--SOL--0-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01AF03> ;
+    ns1:title "THIOPENTAL VUAB INJ. PLV. SOL. 0,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THIOPENTAL-VUAB-INJ--PLV--SOL--1-0-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01AF03> ;
+    ns1:title "THIOPENTAL VUAB INJ. PLV. SOL. 1,0 G"@cs .
+
+

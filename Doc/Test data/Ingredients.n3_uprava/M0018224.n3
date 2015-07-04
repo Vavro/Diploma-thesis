@@ -1,0 +1,52 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0018224> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001382>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> ;
+    ns1:description "A pyrazine that is used therapeutically as an antitubercular agent.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> ;
+    ns1:title "Pyrazinamid"@cs,
+        "Pyrazinamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001515> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of tuberculosis. They are divided into two main classes: \"first-line\" agents, those with the greatest efficacy and acceptable degrees of toxicity used successfully in the great majority of cases; and \"second-line\" drugs used in drug-resistant cases or those in which some other patient-related condition has compromised the effectiveness of primary therapy.     "@en ;
+    ns1:title "Antituberkulotika"@cs,
+        "Antitubercular agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001382> a ns1:DiseaseOrFinding ;
+    ns1:description "Hereditary metabolic disorder characterized by recurrent acute arthritis, hyperuricemia and deposition of sodium urate in and around the joints, sometimes with formation of uric acid calculi.     "@en ;
+    ns1:title "Dna (nemoc)"@cs,
+        "Gout"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925> a ns1:PhysiologicEffect ;
+    ns1:title "Unknown Physiological Effect"@en .
+
+

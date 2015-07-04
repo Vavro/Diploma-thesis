@@ -1,0 +1,266 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A10> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii diabetu"@cs,
+        "DRUGS USED IN DIABETES"@en ;
+    skos:notation "A10" .
+
+<http://linked.opendata.cz/resource/ATC/A10B> a ns1:ATCConcept ;
+    dcterms:title "Antidiabetika, kromě inzulinů"@cs,
+        "BLOOD GLUCOSE LOWERING DRUGS, EXCL. INSULINS"@en ;
+    skos:notation "A10B" .
+
+<http://linked.opendata.cz/resource/ATC/A10BD> a ns1:ATCConcept ;
+    dcterms:title "Kombinace perorálních antidiabetik"@cs,
+        "Biguanides and sulfonamides in combination"@en ;
+    skos:notation "A10BD" .
+
+<http://linked.opendata.cz/resource/ATC/A10BD11> a ns1:ATCConcept ;
+    dcterms:title "Metformin a lanagliptin"@cs,
+        "Metformin and linagliptin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/A>,
+        <http://linked.opendata.cz/resource/ATC/A10>,
+        <http://linked.opendata.cz/resource/ATC/A10B>,
+        <http://linked.opendata.cz/resource/ATC/A10BD> ;
+    skos:notation "A10BD11" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013535> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> ;
+    ns1:description "A biguanide hypoglycemic agent used in the treatment of non-insulin-dependent diabetes mellitus not responding to dietary modification. Metformin improves  glycemic control by improving insulin sensitivity and decreasing intestinal absorption of glucose. (From Martindale, The Extra Pharmacopoeia, 30th ed, p289)     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> ;
+    ns1:title "Metformin"@cs,
+        "Metformin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0554626> a ns1:Ingredient ;
+    ns1:title "Linagliptin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185282> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "10X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185283> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "14X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185284> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "28X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185285> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "30X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185286> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "56X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185287> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasMaximalPrice "1521.31994629"^^xsd:float ;
+    ns1:hasPackagingSize "60X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1404.58996582"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185288> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "84X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 84X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185289> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "90X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185290> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "98X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185291> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "100X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185292> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "120X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 120X1"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185293> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185294> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185295> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "180"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 180"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193608> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasMaximalPrice "4349.62011719"^^xsd:float ;
+    ns1:hasPackagingSize "180(2X90X1)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "4213.77978516"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-03-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 180(2X90X1)"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193609> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "200(2X100X1)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 200(2X100X1)"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193612> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasIndicationGroup "ANTIDIABETICA (VČETNĚ INSULINU)"@cs ;
+    ns1:hasPackagingSize "120(2X60X1)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "2.5MG/1000MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 120(2X60X1)"@cs ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/JENTADUETO-2-5-MG-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD11> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013535>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0554626> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185282>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185283>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185284>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185285>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185286>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185287>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185288>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185289>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185290>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185291>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185292>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185293>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185294>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0185295>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193608>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193609>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0193612> ;
+    ns1:title "JENTADUETO 2,5 MG/1000 MG"@cs .
+
+

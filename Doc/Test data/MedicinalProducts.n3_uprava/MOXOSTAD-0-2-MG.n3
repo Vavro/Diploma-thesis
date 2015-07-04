@@ -1,0 +1,219 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C02> a ns1:ATCConcept ;
+    dcterms:title "Antihypertenziva"@cs,
+        "ANTIHYPERTENSIVES"@en ;
+    skos:notation "C02" .
+
+<http://linked.opendata.cz/resource/ATC/C02A> a ns1:ATCConcept ;
+    dcterms:title "Antiadrenergní látky, centrálně působící"@cs,
+        "ANTIADRENERGIC AGENTS, CENTRALLY ACTING"@en ;
+    skos:notation "C02A" .
+
+<http://linked.opendata.cz/resource/ATC/C02AC> a ns1:ATCConcept ;
+    dcterms:title "Agonisté imidazolinových receptorů"@cs,
+        "Imidazoline receptor agonists"@en ;
+    skos:notation "C02AC" .
+
+<http://linked.opendata.cz/resource/ATC/C02AC05> a ns1:ATCConcept ;
+    dcterms:title "Moxonidin"@cs,
+        "Moxonidine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C02>,
+        <http://linked.opendata.cz/resource/ATC/C02A>,
+        <http://linked.opendata.cz/resource/ATC/C02AC> ;
+    skos:notation "C02AC05" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127943> a ns1:Ingredient ;
+    ns1:title "Moxonidine"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016911> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016912> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016913> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "188.429992676"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "110.220001221"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016914> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016915> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016916> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "588.289978027"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "367.410003662"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-10-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016917> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20X20-H"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 400X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016918> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "10X40-H"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 400X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016919> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 10X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0019528> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104996> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104997> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasIndication """Léčba lehké až středně těžké esenciální hypertenze.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140816_doc> ;
+    ns1:hasStrength "0.2MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14X0.2MG"@cs ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOXOSTAD-0-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C02AC05> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0127943> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016911>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016912>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016913>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016914>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016915>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016916>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016917>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016918>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0016919>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0019528>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104996>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0104997> ;
+    ns1:title "MOXOSTAD 0,2 MG"@cs .
+
+

@@ -1,0 +1,747 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01B> a ns1:ATCConcept ;
+    dcterms:title "Antimetabolity"@cs,
+        "ANTIMETABOLITES"@en ;
+    skos:notation "L01B" .
+
+<http://linked.opendata.cz/resource/ATC/L01BA> a ns1:ATCConcept ;
+    dcterms:title "Analogy kyseliny listové"@cs,
+        "Folic acid analogues"@en ;
+    skos:notation "L01BA" .
+
+<http://linked.opendata.cz/resource/ATC/L01BA01> a ns1:ATCConcept ;
+    dcterms:title "Methotrexát"@cs,
+        "Methotrexate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L01>,
+        <http://linked.opendata.cz/resource/ATC/L01B>,
+        <http://linked.opendata.cz/resource/ATC/L01BA> ;
+    skos:notation "L01BA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013595> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000575>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001867>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003302>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antineoplastic antimetabolite with immunosuppressant properties. It is an inhibitor of TETRAHYDROFOLATE DEHYDROGENASE and prevents the formation of tetrahydrofolate, necessary for synthesis of thymidylate, an essential component of DNA.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Methotrexát"@cs,
+        "Methotrexate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022> a ns1:PharmacologicalAction ;
+    ns1:description "Non-steroidal chemical compounds with abortifacient activity.     "@en ;
+    ns1:title "Abortiva nesteroidní"@cs,
+        "Abortifacient agents, nonsteroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to treat or prevent skin disorders or for the routine care of skin.     "@en ;
+    ns1:title "Dermatologické látky"@cs,
+        "Dermatologic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of the enzyme, dihydrofolate reductase (TETRAHYDROFOLATE DEHYDROGENASE), which converts dihydrofolate (FH2) to tetrahydrofolate (FH4). They are frequently used in cancer chemotherapy. (From AMA, Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Kyselina listová - antagonisté"@cs,
+        "Folic acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001867> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkoholické nemoci jater"@cs,
+        "Liver diseases, alcoholic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003302> a ns1:DiseaseOrFinding ;
+    ns1:title "Hiv infekce"@cs,
+        "Hiv infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050705> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasBreakMarketingDate "2010-02-28"^^xsd:date ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasMaximalPrice "575.200012207"^^xsd:float ;
+    ns1:hasPackagingSize "1X0.75ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "408.950012207"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X0.75ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050706> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasBreakMarketingDate "2010-02-28"^^xsd:date ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasMaximalPrice "565.010009766"^^xsd:float ;
+    ns1:hasPackagingSize "1X1ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "460.760009766"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X1ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050707> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasMaximalPrice "582.229980469"^^xsd:float ;
+    ns1:hasPackagingSize "1X1.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "545.280029297"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2013-02-20"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X1.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050708> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X2ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X2ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050709> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X2.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X2.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050710> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X0.75ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X0.75ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050711> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X1ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X1ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050712> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X1.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X1.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050713> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X2ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050714> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X2.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050715> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X0.75ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.75ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050716> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X1ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050717> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X1.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050718> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X2ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X2ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050719> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X2.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X2.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050720> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X0.75ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X0.75ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050721> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X1ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X1ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050722> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X1.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X1.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050723> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X2ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X2ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050724> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X2.5ML+JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X2.5ML+JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052311> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X0.75ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X0.75ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052312> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X0.75ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X0.75ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052313> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X0.75ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.75ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052314> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X0.75ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X0.75ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052315> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X1ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X1ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052316> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X1ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X1ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052317> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X1ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052318> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X1ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X1ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052319> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X1.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X1.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052320> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X1.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X1.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052321> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X1.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X1.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052322> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X1.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X1.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052325> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X2ML BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X2ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052326> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X2ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052328> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X2ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X2ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052329> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X2ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X2ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052330> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "1X2.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X2.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052331> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "5X2.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X2.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052332> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "10X2.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X2.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052333> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Metoject je indikovaný k léčbě:
+těžké, aktivní revmatoidní artritidy u dospělých pacientů, u kterých je indikována léčba pomocí antirevmatik modifikujících průběh onemocnění (DMARD)
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30X2.5ML+BEZ JEH"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC96709_doc> ;
+    ns1:hasStrength "10MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 30X2.5ML+BEZ JEH"@cs ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METOJECT-10-MG-ML-ROZTOK-NA-INJEKCE--PREDPLNENA-INJEKCNI-STRIKACKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013595> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050705>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050706>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050707>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050708>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050709>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050710>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050711>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050712>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050713>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050714>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050715>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050716>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050717>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050718>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050719>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050720>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050721>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050722>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050723>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0050724>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052311>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052312>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052313>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052314>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052315>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052316>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052317>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052318>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052319>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052320>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052321>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052322>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052325>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052326>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052328>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052329>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052330>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052331>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052332>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0052333> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "METOJECT 10 MG/ML ROZTOK NA INJEKCE, PŘEDPLNĚNÁ INJEKČNÍ STŘÍKAČKA"@cs .
+
+

@@ -1,0 +1,153 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L04AX02> a ns1:ATCConcept ;
+    skos:notation "L04AX02" ;
+    skos:prefLabel "Thalidomid"@cs,
+        "Thalidomide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021267> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002375>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A piperidinyl isoindole originally introduced as a non-barbiturate hypnotic, but withdrawn from the market due to teratogenic effects. It has been reintroduced and used for a number of immunological and inflammatory disorders. Thalidomide displays immunosuppresive and anti-angiogenic activity. It inhibits release of TUMOR NECROSIS FACTOR-ALPHA from monocytes, and modulates other cytokine action.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/THALIDOMIDE-CELGENE-50-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0012360>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021173>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328153> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008663> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000539>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000678>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001146>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001147>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001544>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001810>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001886>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001915>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002050>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002833> ;
+    ns1:title "Thalidomid"@cs,
+        "Thalidomide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0012360> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that suppress Mycobacterium leprae, ameliorate the clinical manifestations of leprosy, and/or reduce the incidence and severity of leprous reactions.     "@en ;
+    ns1:title "Leprostatika"@cs,
+        "Leprostatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021173> a ns1:PharmacologicalAction ;
+    ns1:description "An agent that causes the production of physical defects in the developing embryo.     "@en ;
+    ns1:title "Teratogeny"@cs,
+        "Teratogens"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328153> a ns1:PharmacologicalAction ;
+    ns1:description "Agents and endogenous substances that antagonize or inhibit the development of new blood vessels.     "@en ;
+    ns1:title "Angiogeneze - inhibitory"@cs,
+        "Angiogenesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000539> a ns1:DiseaseOrFinding ;
+    ns1:description "Rare chronic inflammatory disease involving the small blood vessels. It is of unknown etiology and characterized by mucocutaneous ulceration in the mouth and genital region and uveitis with hypopyon. The neuro-ocular form may cause blindness and death. SYNOVITIS; THROMBOPHLEBITIS; gastrointestinal ulcerations; RETINAL VASCULITIS; and OPTIC ATROPHY may occur as well.     "@en ;
+    ns1:title "Behcetův syndrom"@cs,
+        "Behcet syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000678> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of sporadic or hereditary carcinoma derived from cells of the KIDNEYS. There are several subtypes including the clear cells, the papillary, the chromophobe, the collecting duct, the spindle cells (sarcomatoid), or mixed cell-type carcinoma.     "@en ;
+    ns1:title "Karcinom z renálních buněk"@cs,
+        "Carcinoma, renal cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000875> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic transmural inflammation that may involve any part of the DIGESTIVE TRACT from MOUTH to ANUS, mostly found in the ILEUM, the CECUM, and the COLON. In Crohn disease, the inflammation, extending through the intestinal wall from the MUCOSA to the serosa, is characteristically asymmetric and segmental. Epithelioid GRANULOMAS may be seen in some patients.     "@en ;
+    ns1:title "Crohnova nemoc"@cs,
+        "Crohn disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001146> a ns1:DiseaseOrFinding ;
+    ns1:description "A skin and mucous membrane disease characterized by an eruption of macules, papules, nodules, vesicles, and/or bullae with characteristic \"bull's-eye\" lesions usually occurring on the dorsal aspect of the hands and forearms.     "@en ;
+    ns1:title "Erythema multiforme"@cs,
+        "Erythema multiforme"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001147> a ns1:DiseaseOrFinding ;
+    ns1:description "An erythematous eruption commonly associated with drug reactions or infection and characterized by inflammatory nodules that are usually tender, multiple, and bilateral. These nodules are located predominantly on the shins with less common occurrence on the thighs and forearms. They undergo characteristic color changes ending in temporary bruise-like areas. This condition usually subsides in 3-6 weeks without scarring or atrophy.     "@en ;
+    ns1:title "Erythema nodosum"@cs,
+        "Erythema nodosum"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001384> a ns1:DiseaseOrFinding ;
+    ns1:description "The clinical entity characterized by anorexia, diarrhea, loss of hair, leukopenia, thrombocytopenia, growth retardation, and eventual death brought about by the GRAFT VS HOST REACTION.     "@en ;
+    ns1:title "Nemoc štěpu proti hostiteli"@cs,
+        "Graft vs host disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001544> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of disorders resulting from the abnormal proliferation of and tissue infiltration by LANGERHANS CELLS which can be detected by their characteristic Birbeck granules (X bodies), or by monoclonal antibody staining for their surface CD1 ANTIGENS. Langerhans-cell granulomatosis can involve a single organ, or can be a systemic disorder.     "@en ;
+    ns1:title "Histiocytóza z langerhansových buněk"@cs,
+        "Histiocytosis, langerhans-cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001810> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic granulomatous infection caused by MYCOBACTERIUM LEPRAE. The granulomatous lesions are manifested in the skin, the mucous membranes, and the peripheral nerves. Two polar or principal types are lepromatous and tuberculoid.     "@en ;
+    ns1:title "Lepra"@cs,
+        "Leprosy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001886> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic form of cutaneous lupus erythematosus (LUPUS ERYTHEMATOSUS, CUTANEOUS) in which the skin lesions mimic those of the systemic form but in which systemic signs are rare. It is characterized by the presence of discoid skin plaques showing varying degrees of edema, erythema, scaliness, follicular plugging, and skin atrophy. Lesions are surrounded by an elevated erythematous border. The condition typically involves the face and scalp, but widespread dissemination may occur.     "@en ;
+    ns1:title "Lupus erythematosus diskoidní"@cs,
+        "Lupus erythematosus, discoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001915> a ns1:DiseaseOrFinding ;
+    ns1:description "A lymphoproliferative disorder characterized by pleomorphic B-LYMPHOCYTES including PLASMA CELLS, with increased levels of monoclonal serum IMMUNOGLOBULIN M. There is lymphoplasmacytic cells infiltration into bone marrow and often other tissues, also known as lymphoplasmacytic lymphoma. Clinical features include ANEMIA; HEMORRHAGES; and hyperviscosity.     "@en ;
+    ns1:title "Waldenströmova makroglobulinémie"@cs,
+        "Waldenstrom macroglobulinemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002050> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignancy of mature PLASMA CELLS engaging in monoclonal immunoglobulin production. It is characterized by hyperglobulinemia, excess Bence-Jones proteins (free monoclonal IMMUNOGLOBULIN LIGHT CHAINS) in the urine, skeletal destruction, bone pain, and fractures. Other features include ANEMIA; HYPERCALCEMIA; and RENAL INSUFFICIENCY.     "@en ;
+    ns1:title "Mnohočetný myelom"@cs,
+        "Multiple myeloma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002375> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the peripheral nerves external to the brain and spinal cord, which includes diseases of the nerve roots, ganglia, plexi, autonomic nerves, sensory nerves, and motor nerves.     "@en ;
+    ns1:title "Periferní nervový systém - nemoci"@cs,
+        "Peripheral nervous system diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002833> a ns1:DiseaseOrFinding ;
+    ns1:description "A recurrent disease of the oral mucosa of unknown etiology. It is characterized by small white ulcerative lesions, single or multiple, round or oval. Two to eight crops of lesions occur per year, lasting for 7 to 14 days and then heal without scarring. (From Jablonski's Dictionary of Dentistry, 1992, p742)     "@en ;
+    ns1:title "Aftózní stomatitida"@cs,
+        "Stomatitis, aphthous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008663> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THALIDOMIDE-CELGENE-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L04AX02> ;
+    ns1:title "THALIDOMIDE CELGENE 50 MG"@cs .
+
+

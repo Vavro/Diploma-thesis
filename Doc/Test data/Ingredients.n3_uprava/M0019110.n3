@@ -1,0 +1,126 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J04AB02> a ns1:ATCConcept ;
+    skos:notation "J04AB02" ;
+    skos:prefLabel "Rifampicin"@cs,
+        "Rifampicin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0019110> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> ;
+    ns1:description "A semisynthetic antibiotic produced from Streptomyces mediterranei. It has a broad antibacterial spectrum, including activity against several forms of Mycobacterium. In susceptible organisms it inhibits DNA-dependent RNA polymerase activity by forming a stable complex with the enzyme. It thus suppresses the initiation of RNA synthesis. Rifampin is bactericidal, and acts on both intracellular and extracellular organisms. (From Gilman et al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 9th ed, p1160)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BENEMICIN-150-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BENEMICIN-300-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001350>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0012360>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008853>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001985>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000627>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001398>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001800>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001810>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002817>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003030>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003512>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> ;
+    ns1:title "Rifampin"@cs,
+        "Rifampin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001350> a ns1:PharmacologicalAction ;
+    ns1:description "Substances obtained from various species of microorganisms that are, alone or in combination with other agents, of use in treating various forms of tuberculosis; most of these agents are merely bacteriostatic, induce resistance in the organisms, and may be toxic.     "@en ;
+    ns1:title "Antibiotika tuberkulostatická"@cs,
+        "Antibiotics, antitubercular"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0012360> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that suppress Mycobacterium leprae, ameliorate the clinical manifestations of leprosy, and/or reduce the incidence and severity of leprous reactions.     "@en ;
+    ns1:title "Leprostatika"@cs,
+        "Leprostatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000627> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection caused by bacteria of the genus BRUCELLA mainly involving the MONONUCLEAR PHAGOCYTE SYSTEM. This condition is characterized by fever, weakness, malaise, and weight loss.     "@en ;
+    ns1:title "Brucelóza"@cs,
+        "Brucellosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001800> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute, sometimes fatal, pneumonia-like bacterial infection characterized by high fever, malaise, muscle aches, respiratory disorders and headache. It is named for an outbreak at the 1976 Philadelphia convention of the American Legion.     "@en ;
+    ns1:title "Legionářská nemoc"@cs,
+        "Legionnaires' disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001810> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic granulomatous infection caused by MYCOBACTERIUM LEPRAE. The granulomatous lesions are manifested in the skin, the mucous membranes, and the peripheral nerves. Two polar or principal types are lepromatous and tuberculoid.     "@en ;
+    ns1:title "Lepra"@cs,
+        "Leprosy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001985> a ns1:DiseaseOrFinding ;
+    ns1:description "A fulminant infection of the meninges and subarachnoid fluid by the bacterium NEISSERIA MENINGITIDIS, producing diffuse inflammation and peri-meningeal venous thromboses. Clinical manifestations include FEVER, nuchal rigidity, SEIZURES, severe HEADACHE, petechial rash, stupor, focal neurologic deficits, HYDROCEPHALUS, and COMA. The organism is usually transmitted via nasopharyngeal secretions and is a leading cause of meningitis in children and young adults. Organisms from Neisseria meningitidis serogroups A, B, C, Y, and W-135 have been reported to cause meningitis. (From Adams et al., Principles of Neurology, 6th ed, pp689-701; Curr Opin Pediatr 1998 Feb;10(1):13-8)     "@en ;
+    ns1:title "Meningitida meningokoková"@cs,
+        "Meningitis, meningococcal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003512> a ns1:DiseaseOrFinding ;
+    ns1:description "Bacterial infections of the leptomeninges and subarachnoid space, frequently involving the cerebral cortex, cranial nerves, cerebral blood vessels, spinal cord, and nerve roots.     "@en ;
+    ns1:title "Meningitida bakteriální"@cs,
+        "Meningitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003524> a ns1:DiseaseOrFinding ;
+    ns1:description "Opportunistic infections found in patients who test positive for human immunodeficiency virus (HIV). The most common include PNEUMOCYSTIS PNEUMONIA, Kaposi's sarcoma, cryptosporidiosis, herpes simplex, toxoplasmosis, cryptococcosis, and infections with Mycobacterium avium complex, Microsporidium, and Cytomegalovirus.     "@en ;
+    ns1:title "Oportunní infekce doprovázející aids"@cs,
+        "Aids-related opportunistic infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008853> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Replication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009011> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Transcription to RNA"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BENEMICIN-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J04AB02> ;
+    ns1:title "BENEMICIN 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BENEMICIN-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J04AB02> ;
+    ns1:title "BENEMICIN 300 MG"@cs .
+
+

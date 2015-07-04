@@ -1,0 +1,166 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C01DA08> a ns1:ATCConcept ;
+    skos:notation "C01DA08" ;
+    skos:prefLabel "Isosorbid-dinitrát"@cs,
+        "Isosorbide dinitrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011788> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001417>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "A vasodilator used in the treatment of ANGINA PECTORIS. Its actions are similar to NITROGLYCERIN but with a slower onset of action.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-120>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-20>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-40>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-ROZTOK-0-1--AMPULE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-ROZTOK-0-1--LAHVICKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-SPRAY> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029737> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009455>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009911> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000408>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000857>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000885>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001319>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001434>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002447>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003190>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> ;
+    ns1:title "Isosorbiddinitrát"@cs,
+        "Isosorbide dinitrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029737> a ns1:PharmacologicalAction ;
+    ns1:description "A diverse group of agents, with unique chemical structures and biochemical requirements, which generate NITRIC OXIDE. These compounds have been used in the treatment of cardiovascular diseases and the management of acute myocardial infarction, acute and chronic congestive heart failure, and surgical control of blood pressure. (Adv Pharmacol 1995;34:361-81)     "@en ;
+    ns1:title "Oxid dusnatý - donory"@cs,
+        "Nitric oxide donors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000408> a ns1:DiseaseOrFinding ;
+    ns1:description "Precordial pain at rest, which may precede a MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Nestabilní angina pectoris"@cs,
+        "Angina, unstable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000857> a ns1:DiseaseOrFinding ;
+    ns1:description "An imbalance between myocardial functional requirements and the capacity of the CORONARY VESSELS to supply sufficient blood flow. It is a form of MYOCARDIAL ISCHEMIA (insufficient blood supply to the heart muscle) caused by a decreased capacity of the coronary vessels.     "@en ;
+    ns1:title "Koronární nemoc"@cs,
+        "Coronary disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000885> a ns1:DiseaseOrFinding ;
+    ns1:description "A bluish or purplish discoloration of the skin and mucous membranes due to an increase in the amount of deoxygenated hemoglobin in the blood or a structural defect in the hemoglobin molecule.     "@en ;
+    ns1:title "Cyanóza"@cs,
+        "Cyanosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001319> a ns1:DiseaseOrFinding ;
+    ns1:description "Retrograde flow of gastric juice (GASTRIC ACID) and/or duodenal contents (BILE ACIDS; PANCREATIC JUICE) into the distal ESOPHAGUS, commonly due to incompetence of the LOWER ESOPHAGEAL SPHINCTER.     "@en ;
+    ns1:title "Gastroezofageální reflux"@cs,
+        "Gastroesophageal reflux"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001417> a ns1:DiseaseOrFinding ;
+    ns1:description "Traumatic injuries involving the cranium and intracranial structures (i.e., BRAIN; CRANIAL NERVES; MENINGES; and other structures). Injuries may be classified by whether or not the skull is penetrated (i.e., penetrating vs. nonpenetrating) or whether there is an associated hemorrhage.     "@en ;
+    ns1:title "Kraniocerebrální poranění"@cs,
+        "Craniocerebral trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002447> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition or physical state produced by the ingestion, injection, inhalation of or exposure to a deleterious agent.     "@en ;
+    ns1:title "Otrava"@cs,
+        "Poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003190> a ns1:DiseaseOrFinding ;
+    ns1:description "A hypermotility disorder of the ESOPHAGUS that is characterized by spastic non-peristaltic responses to SWALLOWING; CHEST PAIN; and DYSPHAGIA.     "@en ;
+    ns1:title "Difúzní jícnový spazmus"@cs,
+        "Esophageal spasm, diffuse"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120> a ns1:MechanismOfAction ;
+    ns1:title "Nitric Oxide Donors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299> a ns1:PhysiologicEffect ;
+    ns1:title "Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009455> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Nitric Oxide Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009911> a ns1:PhysiologicEffect ;
+    ns1:title "Venous Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-120> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "CARDIKET RETARD 120"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-20> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "CARDIKET RETARD 20"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDIKET-RETARD-40> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "CARDIKET RETARD 40"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-ROZTOK-0-1--AMPULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "ISOKET ROZTOK 0,1% AMPULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-ROZTOK-0-1--LAHVICKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "ISOKET ROZTOK 0,1% LAHVIČKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-SPRAY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:title "ISOKET SPRAY"@cs .
+
+

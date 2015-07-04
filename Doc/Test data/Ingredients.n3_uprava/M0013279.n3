@@ -1,0 +1,134 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G03AC06> a ns1:ATCConcept ;
+    skos:notation "G03AC06" ;
+    skos:prefLabel "Medroxyprogesteron"@cs,
+        "Medroxyprogesterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013279> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "(6 alpha)-17-Hydroxy-6-methylpregn-4-ene-3,20-dione. A synthetic progestational hormone used in veterinary practice as an estrus regulator.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/SAYANA-104-MG-0-65-ML-INJEKCNI-SUSPENZE> ;
+    ns1:hasPharmacokinetics <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026>,
+        <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042>,
+        <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000043> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008630>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008632>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009715>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009717>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009857> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000368>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000678>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001101>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001656>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003091>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> ;
+    ns1:title "Medroxyprogesteron"@cs,
+        "Medroxyprogesterone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005120> a ns1:PharmacologicalAction ;
+    ns1:description "Oral contraceptives which owe their effectiveness to synthetic preparations.     "@en ;
+    ns1:title "Antikoncepční látky orální syntetické"@cs,
+        "Contraceptives, oral, synthetic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000368> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of menstruation.     "@en ;
+    ns1:title "Amenorea"@cs,
+        "Amenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000678> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of sporadic or hereditary carcinoma derived from cells of the KIDNEYS. There are several subtypes including the clear cells, the papillary, the chromophobe, the collecting duct, the spindle cells (sarcomatoid), or mixed cell-type carcinoma.     "@en ;
+    ns1:title "Karcinom z renálních buněk"@cs,
+        "Carcinoma, renal cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001101> a ns1:DiseaseOrFinding ;
+    ns1:description "Benign proliferation of the ENDOMETRIUM in the UTERUS. Endometrial hyperplasia is classified by its cytology and glandular tissue. There are simple, complex (adenomatous without atypia), and atypical hyperplasia representing also the ascending risk of becoming malignant.     "@en ;
+    ns1:title "Endometrium - hyperplazie"@cs,
+        "Endometrial hyperplasia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001656> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypoventilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003091> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from blood vessels in the UTERUS, sometimes manifested as vaginal bleeding.     "@en ;
+    ns1:title "Uterus - hemoragie"@cs,
+        "Uterine hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003502> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of ENDOMETRIUM, the mucous lining of the UTERUS. These neoplasms can be benign or malignant. Their classification and grading are based on the various cell types and the percent of undifferentiated cells.     "@en ;
+    ns1:title "Nádory endometria"@cs,
+        "Endometrial neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000185> a ns1:MechanismOfAction ;
+    ns1:title "Progestational Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000043> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008630> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Follicle Stimulating Hormone Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008632> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Growth Hormone Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009715> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibit Ovarian Follicular Phase"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009717> a ns1:PhysiologicEffect ;
+    ns1:title "Inhibit Ovulation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009857> a ns1:PhysiologicEffect ;
+    ns1:title "Stimulate Breast Glandular Development"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SAYANA-104-MG-0-65-ML-INJEKCNI-SUSPENZE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03AC06> ;
+    ns1:title "SAYANA 104 MG/0,65 ML INJEKČNÍ SUSPENZE"@cs .
+
+

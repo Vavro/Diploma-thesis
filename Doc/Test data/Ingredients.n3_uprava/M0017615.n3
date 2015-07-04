@@ -1,0 +1,88 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01CE09> a ns1:ATCConcept ;
+    skos:notation "J01CE09" ;
+    skos:prefLabel "Prokain-benzylpenicilin"@cs,
+        "Procaine penicillin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01HA02> a ns1:ATCConcept ;
+    skos:notation "S01HA02" ;
+    skos:prefLabel "Oxybuprokain"@cs,
+        "Oxybuprocaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017615> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A local anesthetic of the ester type that has a slow onset and a short duration of action. It is mainly used for infiltration anesthesia, peripheral nerve block, and spinal block. (From Martindale, The Extra Pharmacopoeia, 30th ed, p1016).     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BENOXI-0-4---UNIMED-PHARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROKAIN-PENICILIN-G-1-5-BIOTIKA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008369>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002432>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002683>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002855>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> ;
+    ns1:title "Prokain"@cs,
+        "Procaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002683> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with group A streptococci that is characterized by tonsillitis and pharyngitis. An erythematous rash is commonly present.     "@en ;
+    ns1:title "Spála"@cs,
+        "Scarlet fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002855> a ns1:DiseaseOrFinding ;
+    ns1:description "Physiological and psychological symptoms associated with withdrawal from the use of a drug after prolonged administration or habituation. The concept includes withdrawal from smoking or drinking, as well as withdrawal from an administered drug.     "@en ;
+    ns1:title "Abstinenční syndrom"@cs,
+        "Substance withdrawal syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> a ns1:DiseaseOrFinding ;
+    ns1:description "A contagious venereal disease caused by the spirochete TREPONEMA PALLIDUM.     "@en ;
+    ns1:title "Syfilis"@cs,
+        "Syphilis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008369> a ns1:PhysiologicEffect ;
+    ns1:title "Conduction System Depolarization"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BENOXI-0-4---UNIMED-PHARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01HA02> ;
+    ns1:title "BENOXI 0.4 % UNIMED PHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROKAIN-PENICILIN-G-1-5-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE09> ;
+    ns1:title "PROKAIN PENICILIN G 1,5 BIOTIKA"@cs .
+
+

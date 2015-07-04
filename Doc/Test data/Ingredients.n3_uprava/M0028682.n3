@@ -1,0 +1,140 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J05AF05> a ns1:ATCConcept ;
+    skos:notation "J05AF05" ;
+    skos:prefLabel "Lamivudin"@cs,
+        "Lamivudine"@en .
+
+<http://linked.opendata.cz/resource/ATC/J05AR01> a ns1:ATCConcept ;
+    skos:notation "J05AR01" ;
+    skos:prefLabel "Zidovudin a lamivudin"@cs,
+        "Zidovudine and lamivudine"@en .
+
+<http://linked.opendata.cz/resource/ATC/J05AR02> a ns1:ATCConcept ;
+    skos:notation "J05AR02" ;
+    skos:prefLabel "Lamivudin a abakavir"@cs,
+        "Lamivudine and abacavir"@en .
+
+<http://linked.opendata.cz/resource/ATC/J05AR04> a ns1:ATCConcept ;
+    skos:notation "J05AR04" ;
+    skos:prefLabel "Zidovudin, lamivudin a abacavir"@cs,
+        "Zidovudine, lamivudine and abacavir"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028682> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A reverse transcriptase inhibitor and ZALCITABINE analog in which a sulfur atom replaces the 3' carbon of the pentose ring. It is used to treat HIV disease.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/COMBIVIR>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-10-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-150-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-300-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KIVEXA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-PHARMA-B-V--150-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-PHARMA-B-V--300-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-ZIDOVUDIN-MYLAN-150-MG-300-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-ZIDOVUDIN-SANDOZ-150-MG-300-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDINE-ZIDOVUDINE-TEVA-150MG-300MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TRIZIVIR>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZEFFIX-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZEFFIX-5-MG-ML> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> ;
+    ns1:title "Lamivudin"@cs,
+        "Lamivudine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028255> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of reverse transcriptase (RNA-DIRECTED DNA POLYMERASE), an enzyme that synthesizes DNA on an RNA template.     "@en ;
+    ns1:title "Reverzní transkriptasa - inhibitory"@cs,
+        "Reverse transcriptase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028839> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used to treat AIDS and/or stop the spread of the HIV infection. These do not include drugs used to treat symptoms or opportunistic infections associated with AIDS.     "@en ;
+    ns1:title "Látky proti hiv"@cs,
+        "Anti-hiv agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000103> a ns1:MechanismOfAction ;
+    ns1:title "Reverse Transcriptase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008869> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Reverse Transcription to DNA"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009357> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COMBIVIR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR01> ;
+    ns1:title "COMBIVIR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-10-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "EPIVIR 10 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "EPIVIR 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EPIVIR-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "EPIVIR 300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KIVEXA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR02> ;
+    ns1:title "KIVEXA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "LAMIVUDIN TEVA 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-PHARMA-B-V--150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "LAMIVUDIN TEVA PHARMA B.V. 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-TEVA-PHARMA-B-V--300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "LAMIVUDIN TEVA PHARMA B.V. 300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-ZIDOVUDIN-MYLAN-150-MG-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR01> ;
+    ns1:title "LAMIVUDIN/ZIDOVUDIN MYLAN 150 MG/300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDIN-ZIDOVUDIN-SANDOZ-150-MG-300-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR01> ;
+    ns1:title "LAMIVUDIN/ZIDOVUDIN SANDOZ 150 MG/300 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LAMIVUDINE-ZIDOVUDINE-TEVA-150MG-300MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR01> ;
+    ns1:title "LAMIVUDINE/ZIDOVUDINE TEVA 150MG/300MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TRIZIVIR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AR04> ;
+    ns1:title "TRIZIVIR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEFFIX-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "ZEFFIX 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZEFFIX-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF05> ;
+    ns1:title "ZEFFIX 5 MG/ML"@cs .
+
+

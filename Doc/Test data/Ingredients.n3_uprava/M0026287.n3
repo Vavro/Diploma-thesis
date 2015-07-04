@@ -1,0 +1,78 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L02BA02> a ns1:ATCConcept ;
+    skos:notation "L02BA02" ;
+    skos:prefLabel "Toremifen"@cs,
+        "Toremifene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026287> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A first generation selective estrogen receptor modulator (SERM). Like TAMOXIFEN, it is an estrogen agonist for bone tissue and cholesterol metabolism but is antagonistic on mammary and uterine tissue.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000168> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FARESTON> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328354>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008769> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> ;
+    ns1:title "Toremifen"@cs,
+        "Toremifene"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0328354> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally diverse group of compounds distinguished from ESTROGENS by their ability to bind and activate ESTROGEN RECEPTORS but act as either an agonist or antagonist depending on the tissue type and hormonal milieu. They are classified as either first generation because they demonstrate  estrogen agonist properties in the ENDOMETRIUM or second generation based on their patterns of tissue specificity. (Horm Res 1997;48:155-63)     "@en ;
+    ns1:title "Receptory estrogenů - selektivní modulátory"@cs,
+        "Selective estrogen receptor modulators"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     "@en ;
+    ns1:title "Inhibitory kostní resorpce"@cs,
+        "Bone density conservation agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002135> a ns1:DiseaseOrFinding ;
+    ns1:description "Certain tumors that 1, arise in organs that are normally dependent on specific hormones and 2, are stimulated or caused to regress by manipulation of the endocrine environment.     "@en ;
+    ns1:title "Nádory závislé na hormonech"@cs,
+        "Neoplasms, hormone-dependent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000168> a ns1:MechanismOfAction ;
+    ns1:title "Selective Estrogen Receptor Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008769> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Ovarian Estrogen Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FARESTON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L02BA02> ;
+    ns1:title "FARESTON"@cs .
+
+

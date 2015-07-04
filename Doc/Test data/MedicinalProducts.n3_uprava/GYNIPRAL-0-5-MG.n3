@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G02> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02" .
+
+<http://linked.opendata.cz/resource/ATC/G02C> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02C" .
+
+<http://linked.opendata.cz/resource/ATC/G02CA> a ns1:ATCConcept ;
+    dcterms:title "Sympatomimetika - tokolytika"@cs,
+        "Sympathomimetics, labour repressants"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G02>,
+        <http://linked.opendata.cz/resource/ATC/G02C> ;
+    skos:notation "G02CA" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0351214> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982> ;
+    ns1:title "Hexoprenaline sulfate"@cs,
+        "Hexoprenaline sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that prevent preterm labor and immature birth by suppressing uterine contractions (TOCOLYSIS). Agents used to delay premature uterine activity include magnesium sulfate, beta-mimetics, oxytocin antagonists, calcium channel inhibitors, and adrenergic beta-receptor agonists. The use of intravenous alcohol as a tocolytic is now obsolete.     "@en ;
+    ns1:title "Tokolytika"@cs,
+        "Tocolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543982> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds bind to and activate ADRENERGIC BETA-2 RECEPTORS.     "@en ;
+    ns1:title "Beta-2-adrenergní receptory - agonisté"@cs,
+        "Adrenergic beta-2 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0075173> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CA> ;
+    ns1:hasIndication """Zahájení tokolytické terapie po 20. týdnu těhotenství (hrozící potrat a předčasný porod) a především k pokračování parenterální terapie přípravkem GYNIPRAL inj. nebo inf.
+Dlouhodobá tokolýza
+Prevence předčasného porodu při silnějších nebo častěji se opakujících stazích bez zkrácení nebo otevření děložního hrdla.
+Zklidnění dělohy před, během nebo po cerkláži.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasMaximalPrice "74.25"^^xsd:float ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "69.0400009155"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC140546_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 20X0.5MG"@cs ;
+    ns1:title "GYNIPRAL 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GYNIPRAL-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CA> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0351214> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0075173> ;
+    ns1:title "GYNIPRAL 0,5 MG"@cs .
+
+

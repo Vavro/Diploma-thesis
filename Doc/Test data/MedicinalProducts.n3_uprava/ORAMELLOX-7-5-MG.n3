@@ -1,0 +1,122 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M> a ns1:ATCConcept ;
+    dcterms:title "Muskuloskeletární systém"@cs,
+        "MUSCULO-SKELETAL SYSTEM"@en ;
+    skos:notation "M" .
+
+<http://linked.opendata.cz/resource/ATC/M01> a ns1:ATCConcept ;
+    dcterms:title "Protizánětlivá a protirevmatická léčiva"@cs,
+        "ANTIINFLAMMATORY AND ANTIRHEUMATIC PRODUCTS"@en ;
+    skos:notation "M01" .
+
+<http://linked.opendata.cz/resource/ATC/M01A> a ns1:ATCConcept ;
+    dcterms:title "Nesteroidní protizánětlivá a protirevmatická léčiva"@cs,
+        "ANTIINFLAMMATORY AND ANTIRHEUMATIC PRODUCTS, NON-S"@en ;
+    skos:notation "M01A" .
+
+<http://linked.opendata.cz/resource/ATC/M01AC> a ns1:ATCConcept ;
+    dcterms:title "Oxikamy"@cs,
+        "Oxicams"@en ;
+    skos:notation "M01AC" .
+
+<http://linked.opendata.cz/resource/ATC/M01AC06> a ns1:ATCConcept ;
+    dcterms:title "Meloxikam"@cs,
+        "Meloxicam"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/M>,
+        <http://linked.opendata.cz/resource/ATC/M01>,
+        <http://linked.opendata.cz/resource/ATC/M01A>,
+        <http://linked.opendata.cz/resource/ATC/M01AC> ;
+    skos:notation "M01AC06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0180716> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Meloxicam"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160701> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC06> ;
+    ns1:hasIndication """Krátkodobá symptomatická léčba exacerbace osteoartrózy.
+Dlouhodobá symptomatická léčba revmatoidní artritidy nebo ankylozující spondylitidy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC139113_doc> ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X7.5MG"@cs ;
+    ns1:title "ORAMELLOX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160702> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC06> ;
+    ns1:hasIndication """Krátkodobá symptomatická léčba exacerbace osteoartrózy.
+Dlouhodobá symptomatická léčba revmatoidní artritidy nebo ankylozující spondylitidy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasMaximalPrice "108.190002441"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "72.7099990845"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC139113_doc> ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X7.5MG"@cs ;
+    ns1:title "ORAMELLOX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160703> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC06> ;
+    ns1:hasIndication """Krátkodobá symptomatická léčba exacerbace osteoartrózy.
+Dlouhodobá symptomatická léčba revmatoidní artritidy nebo ankylozující spondylitidy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "200"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC139113_doc> ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 200X7.5MG"@cs ;
+    ns1:title "ORAMELLOX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184654> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC06> ;
+    ns1:hasIndication """Krátkodobá symptomatická léčba exacerbace osteoartrózy.
+Dlouhodobá symptomatická léčba revmatoidní artritidy nebo ankylozující spondylitidy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIRHEUMATICA, ANTIPHLOGISTICA, ANTIURATICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC139113_doc> ;
+    ns1:hasStrength "7.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 20X7.5MG"@cs ;
+    ns1:title "ORAMELLOX 7,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ORAMELLOX-7-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AC06> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0180716> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160701>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160702>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0160703>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184654> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "ORAMELLOX 7,5 MG"@cs .
+
+

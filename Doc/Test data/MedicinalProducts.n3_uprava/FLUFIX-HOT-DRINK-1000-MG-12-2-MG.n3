@@ -1,0 +1,142 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N02> a ns1:ATCConcept ;
+    dcterms:title "Analgetika"@cs,
+        "ANALGESICS"@en ;
+    skos:notation "N02" .
+
+<http://linked.opendata.cz/resource/ATC/N02B> a ns1:ATCConcept ;
+    dcterms:title "Jiná analgetika a antipyretika"@cs,
+        "OTHER ANALGESICS AND ANTIPYRETICS"@en ;
+    skos:notation "N02B" .
+
+<http://linked.opendata.cz/resource/ATC/N02BE> a ns1:ATCConcept ;
+    dcterms:title "Anilidy"@cs,
+        "Anilides"@en ;
+    skos:notation "N02BE" .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    dcterms:title "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N02>,
+        <http://linked.opendata.cz/resource/ATC/N02B>,
+        <http://linked.opendata.cz/resource/ATC/N02BE> ;
+    skos:notation "N02BE51" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> ;
+    ns1:description "Analgesic antipyretic derivative of acetanilide. It has weak anti-inflammatory properties and is used as a common analgesic, but may cause liver, blood cell, and kidney damage.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Acetaminofen"@cs,
+        "Acetaminophen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016557> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022552>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543920> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Phenylephrine hydrochloride"@cs,
+        "Phenylephrine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003471> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that have a strengthening effect on the heart or that can increase cardiac output. They may be CARDIAC GLYCOSIDES; SYMPATHOMIMETICS; or other drugs. They are used after MYOCARDIAL INFARCT; CARDIAC SURGICAL PROCEDURES; in SHOCK; or in congestive heart failure (HEART FAILURE).     "@en ;
+    ns1:title "Kardiotonika"@cs,
+        "Cardiotonic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that dilate the pupil. They may be either sympathomimetics or parasympatholytics.     "@en ;
+    ns1:title "Mydriatika"@cs,
+        "Mydriatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0020947> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that mimic the effects of stimulating postganglionic adrenergic sympathetic nerves. Included here are drugs that directly stimulate adrenergic receptors and drugs that act indirectly by provoking the release of adrenergic transmitters.     "@en ;
+    ns1:title "Sympatomimetika"@cs,
+        "Sympathomimetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022551> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause constriction of the blood vessels.     "@en ;
+    ns1:title "Vazokonstriktory"@cs,
+        "Vasoconstrictor agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022552> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs designed to treat inflammation of the nasal passages, generally the result of an infection (more often than not the common cold) or an allergy related condition, e.g., hay fever. The inflammation involves swelling of the mucous membrane that lines the nasal passages and results in inordinate mucus production. The primary class of nasal decongestants are vasoconstrictor agents. (From PharmAssist, The Family Guide to Health and Medicine, 1993)     "@en ;
+    ns1:title "Vasokonstriktiva nosní"@cs,
+        "Nasal decongestants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028037> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to reduce body temperature in fever.     "@en ;
+    ns1:title "Antipyretika"@cs,
+        "Antipyretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028038> a ns1:PharmacologicalAction ;
+    ns1:description "A subclass of analgesic agents that typically do not bind to OPIOID RECEPTORS and are not addictive. Many non-narcotic analgesics are offered as NONPRESCRIPTION DRUGS.     "@en ;
+    ns1:title "Neopioidní analgetika"@cs,
+        "Analgesics, non-narcotic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0543920> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that bind to and activate ADRENERGIC ALPHA-1 RECEPTORS.     "@en ;
+    ns1:title "Alfa-1-adrenergní receptory - agonisté"@cs,
+        "Adrenergic alpha-1 receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001360> a ns1:DiseaseOrFinding ;
+    ns1:title "Glukosafosfátdehydrogenasa - nedostatek"@cs,
+        "Glucosephosphate dehydrogenase deficiency"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0190867> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:hasIndication """K úlevě od symptomů akutních zánětů horních cest dýchacích a chřipky včetně celkových obtíží, bolesti v krku, bolesti hlavy, kongesce nosní sliznice a horečky.
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA,ANTIPYRETICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160333_doc> ;
+    ns1:hasStrength "1000/12.2 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR PLV SOL 10"@cs ;
+    ns1:title "FLUFIX HOT DRINK 1000 MG/12,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0190868> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:hasIndication """K úlevě od symptomů akutních zánětů horních cest dýchacích a chřipky včetně celkových obtíží, bolesti v krku, bolesti hlavy, kongesce nosní sliznice a horečky.
+"""@cs ;
+    ns1:hasIndicationGroup "ANALGETICA,ANTIPYRETICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160333_doc> ;
+    ns1:hasStrength "1000/12.2 MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR PLV SOL 20"@cs ;
+    ns1:title "FLUFIX HOT DRINK 1000 MG/12,2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUFIX-HOT-DRINK-1000-MG-12-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016557> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0190867>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0190868> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "FLUFIX HOT DRINK 1000 MG/12,2 MG"@cs .
+
+

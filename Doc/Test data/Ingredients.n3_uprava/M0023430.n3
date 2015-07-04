@@ -1,0 +1,399 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01MA01> a ns1:ATCConcept ;
+    skos:notation "J01MA01" ;
+    skos:prefLabel "Ofloxacin"@cs,
+        "Ofloxacin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S03AA> a ns1:ATCConcept ;
+    skos:notation "S03AA" ;
+    skos:prefLabel "Antiinfektiva"@cs,
+        "Antiinfectives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023430> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A synthetic fluoroquinolone (FLUOROQUINOLONES) antibacterial agent that inhibits the supercoiling activity of bacterial DNA GYRASE, halting DNA REPLICATION.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FLOXAL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXACIN-0-3--UNIMED-PHARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXACIN-POS-3-MG-ML-OCNI-KAPKY--ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXIN-200>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TAROFLOX-200>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZANOCIN-200-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009531>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009767> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000524>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000622>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000754>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000758>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000833>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000836>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000854>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000890>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000894>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000963>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001106>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001124>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001141>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001154>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001249>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001380>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001398>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001554>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001734>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001758>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001800>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002073>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002265>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002266>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002268>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002432>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002501>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002507>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002519>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002559>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002666>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002817>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002837>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002881>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002969>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003030>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003049>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003062>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003081>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003283>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003323>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003324>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003419>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003546>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003648>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003812>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003823>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> ;
+    ns1:title "Ofloxacin"@cs,
+        "Ofloxacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> a ns1:PharmacologicalAction ;
+    ns1:description "Substances capable of killing agents causing urinary tract infections or of preventing them from spreading.     "@en ;
+    ns1:title "Antiinfekční látky močové"@cs,
+        "Anti-infective agents, urinary"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000622> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the large airways in the lung including any part of the BRONCHI, from the PRIMARY BRONCHI to the TERTIARY BRONCHI.     "@en ;
+    ns1:title "Bronchitida"@cs,
+        "Bronchitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000754> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus CHLAMYDIA.     "@en ;
+    ns1:title "Chlamydiové infekce"@cs,
+        "Chlamydia infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000758> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the biliary ductal system (BILE DUCTS); intrahepatic, extrahepatic, or both.     "@en ;
+    ns1:title "Cholangitida"@cs,
+        "Cholangitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000833> a ns1:DiseaseOrFinding ;
+    ns1:title "Konjunktivitida"@cs,
+        "Conjunctivitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000836> a ns1:DiseaseOrFinding ;
+    ns1:description "Purulent infections of the conjunctiva by several species of gram-negative, gram-positive, or acid-fast organisms. Some of the more commonly found genera causing conjunctival infections are Haemophilus, Streptococcus, Neisseria, and Chlamydia.     "@en ;
+    ns1:title "Konjunktivitida bakteriální"@cs,
+        "Conjunctivitis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000854> a ns1:DiseaseOrFinding ;
+    ns1:description "Loss of epithelial tissue from the surface of the cornea due to progressive erosion and necrosis of the tissue; usually caused by bacterial, fungal, or viral infection.     "@en ;
+    ns1:title "Rohovka - vřed"@cs,
+        "Corneal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000890> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal recessive genetic disease of the EXOCRINE GLANDS. It is caused by mutations in the gene encoding the CYSTIC FIBROSIS TRANSMEMBRANE CONDUCTANCE REGULATOR expressed in several organs including the LUNG, the PANCREAS, the BILIARY SYSTEM, and the SWEAT GLANDS. Cystic fibrosis is characterized by epithelial secretory dysfunction associated with ductal obstruction resulting in AIRWAY OBSTRUCTION; chronic RESPIRATORY INFECTIONS; PANCREATIC INSUFFICIENCY; maldigestion; salt depletion; and HEAT PROSTRATION.     "@en ;
+    ns1:title "Cystická fibróza"@cs,
+        "Cystic fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000894> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the URINARY BLADDER, either from bacterial or non-bacterial causes. Cystitis is usually associated with painful urination (dysuria), increased frequency, urgency, and suprapubic pain.     "@en ;
+    ns1:title "Cystitida"@cs,
+        "Cystitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000963> a ns1:DiseaseOrFinding ;
+    ns1:description "An increased liquidity or decreased consistency of  FECES, such as running stool. Fecal consistency is related to the ratio of water-holding capacity of insoluble solids to total water, rather than the amount of water present. Diarrhea is not hyperdefecation or increased fecal weight.     "@en ;
+    ns1:title "Průjem"@cs,
+        "Diarrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001106> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any segment of the SMALL INTESTINE.     "@en ;
+    ns1:title "Enteritida"@cs,
+        "Enteritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001124> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the EPIDIDYMIS. Its clinical features include enlarged epididymis, a swollen SCROTUM; PAIN; PYURIA; and FEVER. It is usually related to infections in the URINARY TRACT, which likely spread to the EPIDIDYMIS through either the VAS DEFERENS or the lymphatics of the SPERMATIC CORD.     "@en ;
+    ns1:title "Epididymitida"@cs,
+        "Epididymitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001141> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute infection of the skin caused by species of STREPTOCOCCUS. This disease most frequently affects infants, young children, and the elderly. Characteristics include pink-to-red lesions that spread rapidly and are warm to the touch. The commonest site of involvement is the face.     "@en ;
+    ns1:title "Erysipel"@cs,
+        "Erysipelas"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001154> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species ESCHERICHIA COLI.     "@en ;
+    ns1:title "Escherichia coli - infekce"@cs,
+        "Escherichia coli infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001398> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus HAEMOPHILUS.     "@en ;
+    ns1:title "Haemophilus - infekce"@cs,
+        "Haemophilus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001554> a ns1:DiseaseOrFinding ;
+    ns1:description "Purulent infection of one of the sebaceous glands of Zeis along the eyelid margin (external) or of the meibomian gland on the conjunctival side of the eyelid (internal).     "@en ;
+    ns1:title "Hordeolum"@cs,
+        "Hordeolum"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001734> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the cornea.     "@en ;
+    ns1:title "Keratitida"@cs,
+        "Keratitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001758> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus KLEBSIELLA.     "@en ;
+    ns1:title "Klebsiella - infekce"@cs,
+        "Klebsiella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001800> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute, sometimes fatal, pneumonia-like bacterial infection characterized by high fever, malaise, muscle aches, respiratory disorders and headache. It is named for an outbreak at the 1976 Philadelphia convention of the American Legion.     "@en ;
+    ns1:title "Legionářská nemoc"@cs,
+        "Legionnaires' disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002073> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with species of the genus MYCOPLASMA.     "@en ;
+    ns1:title "Mycoplasma - infekce"@cs,
+        "Mycoplasma infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002265> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the OUTER EAR including the external EAR CANAL, cartilages of the auricle (EAR CARTILAGE), and the TYMPANIC MEMBRANE.     "@en ;
+    ns1:title "Otitis externa"@cs,
+        "Otitis externa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002268> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the middle ear with purulent discharge.     "@en ;
+    ns1:title "Otitis media hnisavá"@cs,
+        "Otitis media, suppurative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002501> a ns1:DiseaseOrFinding ;
+    ns1:description "Infiltration of inflammatory cells into the parenchyma of PROSTATE. The subtypes are classified by their varied laboratory analysis, clinical presentation and response to treatment.     "@en ;
+    ns1:title "Prostatitida"@cs,
+        "Prostatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002507> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PROTEUS.     "@en ;
+    ns1:title "Proteus - infekce"@cs,
+        "Proteus infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002559> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the KIDNEY involving the renal parenchyma (the NEPHRONS); KIDNEY PELVIS; and KIDNEY CALICES. It is characterized by ABDOMINAL PAIN; FEVER; NAUSEA; VOMITING; and occasionally DIARRHEA.     "@en ;
+    ns1:title "Pyelonefritida"@cs,
+        "Pyelonephritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002666> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus SALMONELLA.     "@en ;
+    ns1:title "Salmonelóza"@cs,
+        "Salmonella infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> a ns1:DiseaseOrFinding ;
+    ns1:description "A contagious venereal disease caused by the spirochete TREPONEMA PALLIDUM.     "@en ;
+    ns1:title "Syfilis"@cs,
+        "Syphilis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002969> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the tonsils, especially the PALATINE TONSILS but the ADENOIDS (pharyngeal tonsils) and lingual tonsils may also be involved. Tonsillitis usually is caused by bacterial infection. Tonsillitis may be acute, chronic, or recurrent.     "@en ;
+    ns1:title "Tonzilitida"@cs,
+        "Tonsillitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003030> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of the infectious diseases of man and other animals caused by species of MYCOBACTERIUM.     "@en ;
+    ns1:title "Tuberkulóza"@cs,
+        "Tuberculosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003049> a ns1:DiseaseOrFinding ;
+    ns1:description "MYCOBACTERIUM infections of the lung.     "@en ;
+    ns1:title "Plicní tuberkulóza"@cs,
+        "Tuberculosis, pulmonary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003283> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the NASAL MUCOSA in the MAXILLARY SINUS. In many cases, it is caused by an infection of the bacteria HAEMOPHILUS INFLUENZAE; STREPTOCOCCUS PNEUMONIAE; or STAPHYLOCOCCUS AUREUS.     "@en ;
+    ns1:title "Sinusitis maxillaris"@cs,
+        "Maxillary sinusitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003323> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection, moderate to severe, caused by bacteria, fungi, or viruses, which occurs either on the external surface of the eye or intraocularly with probable inflammation, visual impairment, or blindness.     "@en ;
+    ns1:title "Oční infekce"@cs,
+        "Eye infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with organisms of the genus HELICOBACTER, particularly, in humans, HELICOBACTER PYLORI. The clinical manifestations are focused in the stomach, usually the gastric mucosa and antrum, and the upper duodenum. This infection plays a major role in the pathogenesis of type B gastritis and peptic ulcer disease.     "@en ;
+    ns1:title "Helicobacter - infekce"@cs,
+        "Helicobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003648> a ns1:DiseaseOrFinding ;
+    ns1:description "A temporary or persistent opening in the eardrum (TYMPANIC MEMBRANE). Clinical signs depend on the size, location, and associated pathological condition.     "@en ;
+    ns1:title "Perforace bubínku"@cs,
+        "Tympanic membrane perforation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003812> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the lung parenchyma that is caused by bacterial infections.     "@en ;
+    ns1:title "Bakteriální pneumonie"@cs,
+        "Pneumonia, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003823> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections of non-skeletal tissue, i.e., exclusive of bone, ligaments, cartilage, and fibrous tissue. The concept is usually referred to as skin and soft tissue infections and usually subcutaneous and muscle tissue are involved. The predisposing factors in anaerobic infections are trauma, ischemia, and surgery. The organisms often derive from the fecal or oral flora, particularly in wounds associated with intestinal surgery, decubitus ulcer, and human bites. (From Cecil Textbook of Medicine, 19th ed, p1688)     "@en ;
+    ns1:title "Měkké tkáně - infekce"@cs,
+        "Soft tissue infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.     "@en ;
+    ns1:title "Sepse"@cs,
+        "Sepsis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000176> a ns1:MechanismOfAction ;
+    ns1:title "Topoisomerase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009531> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Protein Breakdown"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009767> a ns1:PhysiologicEffect ;
+    ns1:title "Nucleic Acid Transcription Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLOXAL> a ns1:MedicinalProduct ;
+    ns1:title "FLOXAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXACIN-0-3--UNIMED-PHARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S03AA> ;
+    ns1:title "OFLOXACIN 0.3% UNIMED PHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXACIN-POS-3-MG-ML-OCNI-KAPKY--ROZTOK> a ns1:MedicinalProduct ;
+    ns1:title "OFLOXACIN-POS 3 MG/ML OČNÍ KAPKY, ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OFLOXIN-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01MA01> ;
+    ns1:title "OFLOXIN 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TAROFLOX-200> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01MA01> ;
+    ns1:title "TAROFLOX 200"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZANOCIN-200-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01MA01> ;
+    ns1:title "ZANOCIN 200 MG"@cs .
+
+

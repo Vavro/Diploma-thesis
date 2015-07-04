@@ -1,0 +1,146 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H01CB02> a ns1:ATCConcept ;
+    skos:notation "H01CB02" ;
+    skos:prefLabel "Oktreotid"@cs,
+        "Octreotide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023526> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A potent, long-acting synthetic SOMATOSTATIN octapeptide analog that inhibits secretion of GROWTH HORMONE and is used to treat hormone-secreting tumors; DIABETES MELLITUS; HYPOTENSION, ORTHOSTATIC;  HYPERINSULINISM; hypergastrinemia; and small bowel fistula.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000194> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-05-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-1-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-2-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-5-MG-ML> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008632>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008642>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008644>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008666>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009844> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000291>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000295>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000310>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000963>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001635>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001862>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002288>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002408>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002467>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003110> ;
+    ns1:title "Oktreotid"@cs,
+        "Octreotide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their effects on the gastrointestinal system, as to control gastric acidity, regulate gastrointestinal motility and water flow, and improve digestion.     "@en ;
+    ns1:title "Gastrointestinální látky"@cs,
+        "Gastrointestinal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028300> a ns1:PharmacologicalAction ;
+    ns1:description "Antineoplastic agents that are used to treat hormone-sensitive tumors. Hormone-sensitive tumors may be hormone-dependent, hormone-responsive, or both. A hormone-dependent tumor regresses on removal of the hormonal stimulus, by surgery or pharmacological block. Hormone-responsive tumors may regress when pharmacologic amounts of hormones are administered regardless of whether previous signs of hormone sensitivity were observed. The major hormone-responsive cancers include carcinomas of the breast, prostate, and endometrium; lymphomas; and certain leukemias. (From AMA Drug Evaluations Annual 1994, p2079)     "@en ;
+    ns1:title "Antitumorózní látky hormonální"@cs,
+        "Antineoplastic agents, hormonal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000291> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired defect of cellular immunity associated with infection by the human immunodeficiency virus (HIV), a CD4-positive T-lymphocyte count under 200 cells/microliter or less than 14% of total lymphocytes, and increased susceptibility to opportunistic infections and malignant neoplasms. Clinical manifestations also include emaciation (wasting) and dementia. These elements reflect criteria for AIDS as defined by the CDC in 1993.     "@en ;
+    ns1:title "Aids"@cs,
+        "Acquired immunodeficiency syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000295> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by prolonged exposure to excessive HUMAN GROWTH HORMONE in adults. It is characterized by bony enlargement of the FACE; lower jaw (PROGNATHISM); hands; FEET; HEAD; and THORAX. The most common etiology is a GROWTH HORMONE-SECRETING PITUITARY ADENOMA. (From Joynt, Clinical Neurology, 1992, Ch36, pp79-80)     "@en ;
+    ns1:title "Akromegalie"@cs,
+        "Acromegaly"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000310> a ns1:DiseaseOrFinding ;
+    ns1:description "A benign epithelial tumor with a glandular organization.     "@en ;
+    ns1:title "Adenom"@cs,
+        "Adenoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000963> a ns1:DiseaseOrFinding ;
+    ns1:description "An increased liquidity or decreased consistency of  FECES, such as running stool. Fecal consistency is related to the ratio of water-holding capacity of insoluble solids to total water, rather than the amount of water present. Diarrhea is not hyperdefecation or increased fecal weight.     "@en ;
+    ns1:title "Průjem"@cs,
+        "Diarrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001635> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome of abnormally low BLOOD GLUCOSE level. Clinical hypoglycemia has diverse etiologies. Severe hypoglycemia eventually lead to glucose deprivation of the CENTRAL NERVOUS SYSTEM resulting in HUNGER; SWEATING; PARESTHESIA; impaired mental function; SEIZURES; COMA; and even DEATH.     "@en ;
+    ns1:title "Hypoglykemie"@cs,
+        "Hypoglycemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001862> a ns1:DiseaseOrFinding ;
+    ns1:description "Liver disease in which the normal microcirculation, the gross vascular anatomy, and the hepatic architecture have been variably destroyed and altered with fibrous septa surrounding regenerated or regenerating parenchymal nodules.     "@en ;
+    ns1:title "Jaterní cirhóza"@cs,
+        "Liver cirrhosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002288> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PANCREAS. Depending on the types of ISLET CELLS present in the tumors, various hormones can be secreted: GLUCAGON from PANCREATIC ALPHA CELLS; INSULIN from PANCREATIC BETA CELLS; and SOMATOSTATIN from the SOMATOSTATIN-SECRETING CELLS. Most are malignant except the insulin-producing tumors (INSULINOMA).     "@en ;
+    ns1:title "Nádory slinivky břišní"@cs,
+        "Pancreatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002408> a ns1:DiseaseOrFinding ;
+    ns1:description "Neoplasms which arise from or metastasize to the PITUITARY GLAND. The majority of pituitary neoplasms are adenomas, which are divided into non-secreting and secreting forms. Hormone producing forms are further classified by the type of hormone they secrete. Pituitary adenomas may also be characterized by their staining properties (see ADENOMA, BASOPHIL; ADENOMA, ACIDOPHIL; and ADENOMA, CHROMOPHOBE). Pituitary tumors may compress adjacent structures, including the HYPOTHALAMUS, several CRANIAL NERVES, and the OPTIC CHIASM. Chiasmal compression may result in bitemporal HEMIANOPSIA.     "@en ;
+    ns1:title "Nádory hypofýzy"@cs,
+        "Pituitary neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002467> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathologic processes that affect patients after a surgical procedure. They may or may not be related to the disease for which the surgery was done, and they may or may not be direct results of the surgery.     "@en ;
+    ns1:title "Pooperační komplikace"@cs,
+        "Postoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003110> a ns1:DiseaseOrFinding ;
+    ns1:description "Enlarged and tortuous VEINS.     "@en ;
+    ns1:title "Varixy"@cs,
+        "Varicose veins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000194> a ns1:MechanismOfAction ;
+    ns1:title "Somatostatin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008632> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Growth Hormone Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008642> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Gastrin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008644> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glucagon Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008666> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Insulin Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009844> a ns1:PhysiologicEffect ;
+    ns1:title "Serotonin Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-05-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01CB02> ;
+    ns1:title "SANDOSTATIN 0,05 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01CB02> ;
+    ns1:title "SANDOSTATIN 0,1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-2-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01CB02> ;
+    ns1:title "SANDOSTATIN 0,2 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SANDOSTATIN-0-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01CB02> ;
+    ns1:title "SANDOSTATIN 0,5 MG/ML"@cs .
+
+

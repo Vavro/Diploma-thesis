@@ -1,0 +1,84 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N01AB06> a ns1:ATCConcept ;
+    skos:notation "N01AB06" ;
+    skos:prefLabel "Isofluran"@cs,
+        "Isoflurane"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011763> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001928> ;
+    ns1:description "A stable, non-explosive inhalation anesthetic, relatively free from significant side effects.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AERRANE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FORANE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ISOFLURAN-NICHOLAS-PIRAMAL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027998> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008351>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009909> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000938>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> ;
+    ns1:title "Isofluran"@cs,
+        "Isoflurane"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027998> a ns1:PharmacologicalAction ;
+    ns1:description "Gases or volatile liquids that vary in the rate at which they induce anesthesia; potency; the degree of circulation, respiratory, or neuromuscular depression they produce; and analgesic effects. Inhalation anesthetics have advantages over intravenous agents in that the depth of anesthesia can be changed rapidly by altering the inhaled concentration. Because of their rapid elimination, any postoperative respiratory depression is of relatively short duration. (From AMA Drug Evaluations Annual, 1994, p173)     "@en ;
+    ns1:title "Anestetika inhalační"@cs,
+        "Anesthetics, inhalation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000938> a ns1:DiseaseOrFinding ;
+    ns1:description "An affective disorder manifested by either a dysphoric mood or loss of interest or pleasure in usual activities. The mood disturbance is prominent and relatively persistent.     "@en ;
+    ns1:title "Depresivní poruchy"@cs,
+        "Depressive disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001928> a ns1:DiseaseOrFinding ;
+    ns1:description "Rapid and excessive rise of temperature accompanied by muscular rigidity following general anesthesia.     "@en ;
+    ns1:title "Maligní hypertermie"@cs,
+        "Malignant hyperthermia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008351> a ns1:PhysiologicEffect ;
+    ns1:title "Cerebral Arterial Vasoconstriction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Medullary Respiratory Drive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009909> a ns1:PhysiologicEffect ;
+    ns1:title "Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AERRANE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01AB06> ;
+    ns1:title "AERRANE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORANE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01AB06> ;
+    ns1:title "FORANE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOFLURAN-NICHOLAS-PIRAMAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01AB06> ;
+    ns1:title "ISOFLURAN NICHOLAS PIRAMAL"@cs .
+
+

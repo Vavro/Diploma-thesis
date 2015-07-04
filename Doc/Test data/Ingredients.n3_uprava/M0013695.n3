@@ -1,0 +1,271 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D06BX01> a ns1:ATCConcept ;
+    skos:notation "D06BX01" ;
+    skos:prefLabel "Metronidazol"@cs,
+        "Metronidazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AF01> a ns1:ATCConcept ;
+    skos:notation "G01AF01" ;
+    skos:prefLabel "Metronidazol"@cs,
+        "Metronidazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/G01AF20> a ns1:ATCConcept ;
+    skos:notation "G01AF20" ;
+    skos:prefLabel "Imidazolové deriváty, kombinace"@cs,
+        "Combinations of imidazole derivatives"@en .
+
+<http://linked.opendata.cz/resource/ATC/J01XD01> a ns1:ATCConcept ;
+    skos:notation "J01XD01" ;
+    skos:prefLabel "Metronidazol"@cs,
+        "Metronidazole"@en .
+
+<http://linked.opendata.cz/resource/ATC/P01AB01> a ns1:ATCConcept ;
+    skos:notation "P01AB01" ;
+    skos:prefLabel "Metronidazol"@cs,
+        "Metronidazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013695> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A nitroimidazole used to treat AMEBIASIS; VAGINITIS; TRICHOMONAS INFECTIONS; GIARDIASIS; ANAEROBIC BACTERIA; and TREPONEMAL INFECTIONS. It has also been proposed as a radiation sensitizer for hypoxic cells. According to the Fourth Annual Report on Carcinogens (NTP 85-002, 1985, p133), this substance may reasonably be anticipated to be a carcinogen (Merck, 11th ed).     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/EFLORAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ENTIZOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KLION-D-100>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOL-B--BRAUN-5-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOL-SERAG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOLE-0-5--POLPHARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROSALOX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ROZEX-KREM> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001497>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018388> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008379>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000276>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000365>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000526>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000710>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001096>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001103>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001110>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001242>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001331>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001878>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001981>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002256>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002379>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002432>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002433>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002653>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002716>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002865>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002935>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003009>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003010>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003419>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003443>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> ;
+    ns1:title "Metronidazol"@cs,
+        "Metronidazole"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001329> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that prevent infectious agents or organisms from spreading or kill infectious agents in order to prevent the spread of infection.     "@en ;
+    ns1:title "Antiinfekční látky"@cs,
+        "Anti-infective agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001497> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that are destructive to protozoans.     "@en ;
+    ns1:title "Antiprotozoální látky"@cs,
+        "Antiprotozoal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018388> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to potentiate the effectiveness of radiation therapy in destroying unwanted cells.     "@en ;
+    ns1:title "Záření - látky senzibilizující"@cs,
+        "Radiation-sensitizing agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000276> a ns1:DiseaseOrFinding ;
+    ns1:description "Accumulation of purulent material in tissues, organs, or circumscribed spaces, usually associated with signs of infection.     "@en ;
+    ns1:title "Absces"@cs,
+        "Abscess"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000365> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection with any of various amebae. It is an asymptomatic carrier state in most individuals, but diseases ranging from chronic, mild diarrhea to fulminant dysentery may occur.     "@en ;
+    ns1:title "Amébiáza"@cs,
+        "Amebiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000526> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus BACTEROIDES.     "@en ;
+    ns1:title "Bacteroides - infekce"@cs,
+        "Bacteroides infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000710> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathogenic infections of the brain, spinal cord, and meninges. DNA VIRUS INFECTIONS; RNA VIRUS INFECTIONS; BACTERIAL INFECTIONS; MYCOPLASMA INFECTIONS; SPIROCHAETALES INFECTIONS; fungal infections; PROTOZOAN INFECTIONS; HELMINTHIASIS; and PRION DISEASES may involve the central nervous system as a primary or secondary process.     "@en ;
+    ns1:title "Infekce centrálního nervového systému"@cs,
+        "Central nervous system infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001096> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the inner lining of the heart (ENDOCARDIUM), the continuous membrane lining the four chambers and HEART VALVES. It is often caused by microorganisms including bacteria, viruses, fungi, and rickettsiae. Left untreated, endocarditis can damage heart valves and become life-threatening.     "@en ;
+    ns1:title "Endokarditida"@cs,
+        "Endocarditis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001103> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the ENDOMETRIUM, usually caused by intrauterine infections. Endometritis is the most common cause of postpartum fever.     "@en ;
+    ns1:title "Endometritida"@cs,
+        "Endometritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001110> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute inflammation of the INTESTINAL MUCOSA that is characterized by the presence of pseudomembranes or plaques in the SMALL INTESTINE (pseudomembranous enteritis) and the LARGE INTESTINE (pseudomembranous colitis). It is commonly associated with antibiotic therapy and CLOSTRIDIUM DIFFICILE colonization.     "@en ;
+    ns1:title "Pseudomembranózní enterokolitida"@cs,
+        "Enterocolitis, pseudomembranous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001331> a ns1:DiseaseOrFinding ;
+    ns1:description "An infection of the SMALL INTESTINE caused by the flagellated protozoan GIARDIA LAMBLIA. It is spread via contaminated food and water and by direct person-to-person contact.     "@en ;
+    ns1:title "Giardióza"@cs,
+        "Giardiasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001878> a ns1:DiseaseOrFinding ;
+    ns1:description "Solitary or multiple collections of PUS within the lung parenchyma as a result of infection by bacteria, protozoa, or other agents.     "@en ;
+    ns1:title "Plicní absces"@cs,
+        "Lung abscess"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001981> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the coverings of the brain and/or spinal cord, which consist of the PIA MATER; ARACHNOID; and DURA MATER. Infections (viral, bacterial, and fungal) are the most common causes of this condition, but subarachnoid hemorrhage (HEMORRHAGES, SUBARACHNOID), chemical irritation (chemical MENINGITIS), granulomatous conditions, neoplastic conditions (CARCINOMATOUS MENINGITIS), and other inflammatory conditions may produce this syndrome. (From Joynt, Clinical Neurology, 1994, Ch24, p6)     "@en ;
+    ns1:title "Meningitida"@cs,
+        "Meningitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002256> a ns1:DiseaseOrFinding ;
+    ns1:title "Osteomyelitida"@cs,
+        "Osteomyelitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002379> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PERITONEUM lining the ABDOMINAL CAVITY as the result of infectious, autoimmune, or chemical processes. Primary peritonitis is due to infection of the PERITONEAL CAVITY via hematogenous or lymphatic spread and without intra-abdominal source. Secondary peritonitis arises from the ABDOMINAL CAVITY itself through RUPTURE or ABSCESS of intra-abdominal organs.     "@en ;
+    ns1:title "Peritonitida"@cs,
+        "Peritonitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002432> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of any part, segment or lobe, of the lung parenchyma.     "@en ;
+    ns1:title "Pneumonie"@cs,
+        "Pneumonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002433> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of lung inflammation resulting from the aspiration of food, liquid, or gastric contents into the upper RESPIRATORY TRACT.     "@en ;
+    ns1:title "Aspirační pneumonie"@cs,
+        "Pneumonia, aspiration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002653> a ns1:DiseaseOrFinding ;
+    ns1:description "A cutaneous disorder primarily of convexities of the central part of the FACE, such as FOREHEAD; CHEEK; NOSE; and CHIN. It is characterized by FLUSHING; ERYTHEMA; EDEMA; RHINOPHYMA; papules; and ocular symptoms. It may occur at any age but typically after age 30. There are various subtypes of rosacea: erythematotelangiectatic, papulopustular, phymatous, and ocular (National Rosacea Society's Expert Committee on the Classification and Staging of Rosacea, J Am Acad Dermatol 2002; 46:584-7).     "@en ;
+    ns1:title "Rosacea"@cs,
+        "Rosacea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002716> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic disease associated with the presence of pathogenic microorganisms or their toxins in the blood.     "@en ;
+    ns1:title "Septikémie"@cs,
+        "Septicemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002865> a ns1:DiseaseOrFinding ;
+    ns1:description "Infection occurring at the site of a surgical incision.     "@en ;
+    ns1:title "Chirurgická rána - infekce"@cs,
+        "Surgical wound infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002935> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a vein associated with a blood clot (THROMBUS).     "@en ;
+    ns1:title "Tromboflebitida"@cs,
+        "Thrombophlebitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003009> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in birds and mammals produced by various species of Trichomonas.     "@en ;
+    ns1:title "Trichomoniáza"@cs,
+        "Trichomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003010> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the vagina, marked by a purulent discharge. This disease is caused by the protozoan TRICHOMONAS VAGINALIS.     "@en ;
+    ns1:title "Trichomonádová vaginitida"@cs,
+        "Trichomonas vaginitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003419> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with organisms of the genus HELICOBACTER, particularly, in humans, HELICOBACTER PYLORI. The clinical manifestations are focused in the stomach, usually the gastric mucosa and antrum, and the upper duodenum. This infection plays a major role in the pathogenesis of type B gastritis and peptic ulcer disease.     "@en ;
+    ns1:title "Helicobacter - infekce"@cs,
+        "Helicobacter infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003443> a ns1:DiseaseOrFinding ;
+    ns1:description "Polymicrobial, nonspecific vaginitis associated with positive cultures of Gardnerella vaginalis and other anaerobic organisms and a decrease in lactobacilli. It remains unclear whether the initial pathogenic event is caused by the growth of anaerobes or a primary decrease in lactobacilli.     "@en ;
+    ns1:title "Bakteriální vaginóza"@cs,
+        "Vaginosis, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003861> a ns1:DiseaseOrFinding ;
+    ns1:description "Systemic inflammatory response syndrome with a proven or suspected infectious etiology. When sepsis is associated with organ dysfunction distant from the site of infection, it is called severe sepsis. When sepsis is accompanied by HYPOTENSION despite adequate fluid infusion, it is called SEPTIC SHOCK.     "@en ;
+    ns1:title "Sepse"@cs,
+        "Sepsis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008379> a ns1:PhysiologicEffect ;
+    ns1:title "DNA Integrity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EFLORAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01XD01> ;
+    ns1:title "EFLORAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ENTIZOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF01>,
+        <http://linked.opendata.cz/resource/ATC/P01AB01> ;
+    ns1:title "ENTIZOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KLION-D-100> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G01AF20> ;
+    ns1:title "KLION-D 100"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOL-B--BRAUN-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01XD01> ;
+    ns1:title "METRONIDAZOL B. BRAUN 5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOL-SERAG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01XD01> ;
+    ns1:title "METRONIDAZOL-SERAG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METRONIDAZOLE-0-5--POLPHARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01XD01> ;
+    ns1:title "METRONIDAZOLE 0.5%-POLPHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROSALOX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D06BX01> ;
+    ns1:title "ROSALOX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ROZEX-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D06BX01> ;
+    ns1:title "ROZEX KRÉM"@cs .
+
+

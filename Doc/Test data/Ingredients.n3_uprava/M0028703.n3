@@ -1,0 +1,160 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M03AX01> a ns1:ATCConcept ;
+    skos:notation "M03AX01" ;
+    skos:prefLabel "Botulotoxin"@cs,
+        "Botulinum toxin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028703> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A serotype of botulinum toxins that has specificity for cleavage of SYNAPTOSOMAL-ASSOCIATED PROTEIN 25.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009955> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AZZALURE-10-SPEYWOOD-JEDNOTEK-0-05-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BOCOUTURE-4-JEDNOTKY-0-1-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX-200-ALLERGAN-UNITS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX-50-ALLERGAN-UNITS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT-300-SPEYWOOD-JEDNOTEK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT-500-SPEYWOOD-JEDNOTEK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROBLOC-5-000-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VISTABEL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014721>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014777> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008735> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000571>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000725>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001033>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001257>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002060>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002763>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002785>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002836>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> ;
+    ns1:title "Botulotoxiny typ a"@cs,
+        "Botulinum toxins, type a"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014721> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their actions on skeletal muscle. Included are agents that act directly on skeletal muscle, those that alter neuromuscular transmission (NEUROMUSCULAR BLOCKING AGENTS), and drugs that act centrally as skeletal muscle relaxants (MUSCLE RELAXANTS, CENTRAL). Drugs used in the treatment of movement disorders are ANTI-DYSKINESIA AGENTS.     "@en ;
+    ns1:title "Nervosvalové látky"@cs,
+        "Neuromuscular agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014777> a ns1:PharmacologicalAction ;
+    ns1:description "Toxic substances from microorganisms, plants or animals that interfere with the functions of the nervous system. Most venoms contain neurotoxic substances. Myotoxins are included in this concept.     "@en ;
+    ns1:title "Neurotoxiny"@cs,
+        "Neurotoxins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000571> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive winking; tonic or clonic spasm of the orbicularis oculi muscle.     "@en ;
+    ns1:title "Blefarospazmus"@cs,
+        "Blepharospasm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000725> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of nonprogressive motor disorders caused by chronic brain injuries that originate in the prenatal period, perinatal period, or first few years of life. The four major subtypes are spastic, athetoid, ataxic, and mixed cerebral palsy, with spastic forms being the most common. The motor disorder may range from difficulties with fine motor control to severe spasticity (see MUSCLE SPASTICITY) in all limbs. Spastic diplegia (Little disease) is the most common subtype, and is characterized by spasticity that is more prominent in the legs than in the arms. Pathologically, this condition may be associated with LEUKOMALACIA, PERIVENTRICULAR. (From Dev Med Child Neurol 1998 Aug;40(8):520-7)     "@en ;
+    ns1:title "Mozková obrna"@cs,
+        "Cerebral palsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001033> a ns1:DiseaseOrFinding ;
+    ns1:description "An attitude or posture due to the co-contraction of agonists and antagonist muscles in one region of the body. It most often affects the large axial muscles of the trunk and limb girdles. Conditions which feature persistent or recurrent episodes of dystonia as a primary manifestation of disease are referred to as DYSTONIC DISORDERS. (Adams et al., Principles of Neurology, 6th ed, p77)     "@en ;
+    ns1:title "Dystonie"@cs,
+        "Dystonia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001257> a ns1:DiseaseOrFinding ;
+    ns1:description "A painful linear ulcer at the margin of the anus. It appears as a crack or slit in the mucous membrane of the anus and is very painful and difficult to heal. (Dorland, 27th ed & Stedman, 25th ed)     "@en ;
+    ns1:title "Fissura ani"@cs,
+        "Fissure in ano"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002060> a ns1:DiseaseOrFinding ;
+    ns1:description "Continuous involuntary sustained muscle contraction which is often a manifestation of BASAL GANGLIA DISEASES. When an affected muscle is passively stretched, the degree of resistance remains constant regardless of the rate at which the muscle is stretched. This feature helps to distinguish rigidity from MUSCLE SPASTICITY. (From Adams et al., Principles of Neurology, 6th ed, p73)     "@en ;
+    ns1:title "Svaly - rigidita"@cs,
+        "Muscle rigidity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002763> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the skin with a genetic component, usually the result of various inborn errors of metabolism.     "@en ;
+    ns1:title "Kůže - nemoci genetické"@cs,
+        "Skin diseases, genetic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002785> a ns1:DiseaseOrFinding ;
+    ns1:description "An involuntary contraction of a muscle or group of muscles. Spasms may involve SKELETAL MUSCLE or SMOOTH MUSCLE.     "@en ;
+    ns1:title "Spasmus"@cs,
+        "Spasm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002836> a ns1:DiseaseOrFinding ;
+    ns1:description "Misalignment of the visual axes of the eyes. In comitant strabismus the degree of ocular misalignment does not vary with the direction of gaze. In noncomitant strabismus the degree of misalignment varies depending on direction of gaze or which eye is fixating on the target. (Miller, Walsh & Hoyt's Clinical Neuro-Ophthalmology, 4th ed, p641)     "@en ;
+    ns1:title "Strabismus"@cs,
+        "Strabismus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004160> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of pathological conditions characterized by sudden, non-convulsive loss of neurological function due to BRAIN ISCHEMIA or INTRACRANIAL HEMORRHAGES. Stroke is classified by the type of tissue NECROSIS, such as the anatomic location, vasculature involved, etiology, age of the affected individual, and hemorrhagic vs. non-hemorrhagic nature. (From Adams et al., Principles of Neurology, 6th ed, pp777-810)     "@en ;
+    ns1:title "Cévní mozková příhoda"@cs,
+        "Stroke"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009955> a ns1:MechanismOfAction ;
+    ns1:title "Acetylcholine Transporter Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008735> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Muscular System Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AZZALURE-10-SPEYWOOD-JEDNOTEK-0-05-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "AZZALURE 10 SPEYWOOD JEDNOTEK/0,05 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOCOUTURE-4-JEDNOTKY-0-1-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "BOCOUTURE 4 JEDNOTKY/0,1 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "BOTOX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX-200-ALLERGAN-UNITS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "BOTOX 200 ALLERGAN UNITS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BOTOX-50-ALLERGAN-UNITS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "BOTOX 50 ALLERGAN UNITS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "DYSPORT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT-300-SPEYWOOD-JEDNOTEK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "DYSPORT 300 SPEYWOOD JEDNOTEK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DYSPORT-500-SPEYWOOD-JEDNOTEK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "DYSPORT 500 SPEYWOOD JEDNOTEK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEUROBLOC-5-000-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "NEUROBLOC 5 000 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VISTABEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03AX01> ;
+    ns1:title "VISTABEL"@cs .
+
+

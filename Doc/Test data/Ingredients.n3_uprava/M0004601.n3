@@ -1,0 +1,167 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AE01> a ns1:ATCConcept ;
+    skos:notation "N03AE01" ;
+    skos:prefLabel "Klonazepam"@cs,
+        "Clonazepam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004601> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An anticonvulsant used for several types of seizures, including myotonic or atonic seizures, photosensitive epilepsy, and absence seizures, although tolerance may develop. It is seldom effective in generalized tonic-clonic or partial seizures. The mechanism of action appears to involve the enhancement of GAMMA-AMINOBUTYRIC ACID receptor responses.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-2-5-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-2-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009325> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000340>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000553>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001014>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001126>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001130>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001131>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002162>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002605>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002690>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002785>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002950>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003442> ;
+    ns1:title "Klonazepam"@cs,
+        "Clonazepam"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028093> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that do not act as agonists or antagonists but do affect the GAMMA-AMINOBUTYRIC ACID receptor-ionophore complex. GABA-A receptors (RECEPTORS, GABA-A) appear to have at least three allosteric sites at which modulators act: a site at which BENZODIAZEPINES act by increasing the opening frequency of GAMMA-AMINOBUTYRIC ACID-activated chloride channels; a site at which BARBITURATES act to prolong the duration of channel opening; and a site at which some steroids may act. GENERAL ANESTHETICS probably act at least partly by potentiating GABAergic responses, but they are not included here.     "@en ;
+    ns1:title "Gaba modulátory"@cs,
+        "Gaba modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000340> a ns1:DiseaseOrFinding ;
+    ns1:description "Obsessive, persistent, intense fear of open places.     "@en ;
+    ns1:title "Agorafobie"@cs,
+        "Agoraphobia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000553> a ns1:DiseaseOrFinding ;
+    ns1:description "A major affective disorder marked by severe mood swings (manic or major depressive episodes) and a tendency to remission and recurrence.     "@en ;
+    ns1:title "Bipolární poruchy"@cs,
+        "Bipolar disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001014> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders of speech articulation caused by imperfect coordination of pharynx, larynx, tongue, or face muscles. This may result from CRANIAL NERVE DISEASES; NEUROMUSCULAR DISEASES; CEREBELLAR DISEASES; BASAL GANGLIA DISEASES; BRAIN STEM diseases; or diseases of the corticobulbar tracts (see PYRAMIDAL TRACTS). The cortical language centers are intact in this condition. (From Adams et al., Principles of Neurology, 6th ed, p489)     "@en ;
+    ns1:title "Dysartrie"@cs,
+        "Dysarthria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001126> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by recurrent episodes of paroxysmal brain dysfunction due to a sudden, disorderly, and excessive neuronal discharge. Epilepsy classification systems are generally based upon: (1) clinical features of the seizure episodes (e.g., motor seizure), (2) etiology (e.g., post-traumatic), (3) anatomic site of seizure origin (e.g., frontal lobe seizure), (4) tendency to spread to other structures in the brain, and (5) temporal patterns (e.g., nocturnal epilepsy). (From Adams et al., Principles of Neurology, 6th ed, p313)     "@en ;
+    ns1:title "Epilepsie"@cs,
+        "Epilepsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001130> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinically diverse group of epilepsy syndromes characterized either by myoclonic seizures or by myoclonus in association with other seizure types. Myoclonic epilepsy syndromes are divided into three subtypes based on etiology: familial, cryptogenic, and symptomatic (i.e., occurring secondary to known disease processes such as infections, hypoxic-ischemic injuries, trauma, etc.).     "@en ;
+    ns1:title "Epilepsie myoklonické"@cs,
+        "Epilepsies, myoclonic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001131> a ns1:DiseaseOrFinding ;
+    ns1:description "A childhood seizure disorder characterized by rhythmic electrical brain discharges of generalized onset. Clinical features include a sudden cessation of ongoing activity usually without loss of postural tone. Rhythmic blinking of the eyelids or lip smacking frequently accompanies the SEIZURES. The usual duration is 5-10 seconds, and multiple episodes may occur daily. Juvenile absence epilepsy is characterized by the juvenile onset of absence seizures and an increased incidence of myoclonus and tonic-clonic seizures. (Menkes, Textbook of Child Neurology, 5th ed, p736)     "@en ;
+    ns1:title "Epilepsie petit mal"@cs,
+        "Epilepsy, absence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002162> a ns1:DiseaseOrFinding ;
+    ns1:description "Intense or aching pain that occurs along the course or distribution of a peripheral or cranial nerve.     "@en ;
+    ns1:title "Neuralgie"@cs,
+        "Neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002605> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by aching or burning sensations in the lower and rarely the upper extremities that occur prior to sleep or may awaken the patient from sleep. Complying with an irresistible urge to move the affected limbs brings temporary relief. Sleep may become disrupted, resulting in excessive daytime hypersomnolence. This condition may be associated with UREMIA; DIABETES MELLITUS; and rheumatoid arthritis. Restless Legs Syndrome differs from NOCTURNAL MYOCLONUS SYNDROME in that in the latter condition the individual does not report adverse sensory stimuli and it is primarily a sleep-associated movement disorder. (Adams et al., Principles of Neurology, 6th ed, p387; Schweiz Rundsch Med Prax 1997 Apr 30;86(18):732-736)     "@en ;
+    ns1:title "Syndrom neklidných nohou"@cs,
+        "Restless legs syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.     "@en ;
+    ns1:title "Schizofrenie"@cs,
+        "Schizophrenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002785> a ns1:DiseaseOrFinding ;
+    ns1:description "An involuntary contraction of a muscle or group of muscles. Spasms may involve SKELETAL MUSCLE or SMOOTH MUSCLE.     "@en ;
+    ns1:title "Spasmus"@cs,
+        "Spasm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002950> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders characterized by recurrent TICS that may interfere with speech and other activities. Tics are sudden, rapid, nonrhythmic, stereotyped motor movements or vocalizations which may be exacerbated by stress and are generally attenuated during absorbing activities. Tic disorders are distinguished from conditions which feature other types of abnormal movements that may accompany general medical conditions. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Tikové poruchy"@cs,
+        "Tic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003442> a ns1:DiseaseOrFinding ;
+    ns1:description "A type of anxiety disorder characterized by unexpected panic attacks that last minutes or, rarely, hours. Panic attacks begin with intense apprehension, fear or terror and, often, a feeling of impending doom. Symptoms experienced during a panic attack include dyspnea or sensations of being smothered; dizziness, loss of balance or faintness; choking sensations; palpitations or accelerated heart rate; shakiness; sweating; nausea or other form of abdominal distress; depersonalization or derealization; paresthesias; hot flashes or chills; chest discomfort or pain; fear of dying and fear of not being in control of oneself or going crazy. Agoraphobia may also develop. Similar to other anxiety disorders, it may be inherited as an autosomal dominant trait.     "@en ;
+    ns1:title "Panická porucha"@cs,
+        "Panic disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000118> a ns1:MechanismOfAction ;
+    ns1:title "GABA A Modulators"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009325> a ns1:PhysiologicEffect ;
+    ns1:title "Increased GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AE01> ;
+    ns1:title "RIVOTRIL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AE01> ;
+    ns1:title "RIVOTRIL 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-2-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AE01> ;
+    ns1:title "RIVOTRIL 2,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RIVOTRIL-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AE01> ;
+    ns1:title "RIVOTRIL 2 MG"@cs .
+
+

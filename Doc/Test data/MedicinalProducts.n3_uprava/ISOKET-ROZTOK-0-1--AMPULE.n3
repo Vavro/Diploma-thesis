@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C01> a ns1:ATCConcept ;
+    dcterms:title "Kardiaka"@cs,
+        "CARDIAC THERAPY"@en ;
+    skos:notation "C01" .
+
+<http://linked.opendata.cz/resource/ATC/C01D> a ns1:ATCConcept ;
+    dcterms:title "Vazodilatancia používaná u onemocnění srdce"@cs,
+        "VASODILATORS USED IN CARDIAC DISEASES"@en ;
+    skos:notation "C01D" .
+
+<http://linked.opendata.cz/resource/ATC/C01DA> a ns1:ATCConcept ;
+    dcterms:title "Organické nitráty"@cs,
+        "Organic nitrates"@en ;
+    skos:notation "C01DA" .
+
+<http://linked.opendata.cz/resource/ATC/C01DA08> a ns1:ATCConcept ;
+    dcterms:title "Isosorbid-dinitrát"@cs,
+        "Isosorbide dinitrate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C01>,
+        <http://linked.opendata.cz/resource/ATC/C01D>,
+        <http://linked.opendata.cz/resource/ATC/C01DA> ;
+    skos:notation "C01DA08" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011788> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001417>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "A vasodilator used in the treatment of ANGINA PECTORIS. Its actions are similar to NITROGLYCERIN but with a slower onset of action.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029737> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Isosorbiddinitrát"@cs,
+        "Isosorbide dinitrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029737> a ns1:PharmacologicalAction ;
+    ns1:description "A diverse group of agents, with unique chemical structures and biochemical requirements, which generate NITRIC OXIDE. These compounds have been used in the treatment of cardiovascular diseases and the management of acute myocardial infarction, acute and chronic congestive heart failure, and surgical control of blood pressure. (Adv Pharmacol 1995;34:361-81)     "@en ;
+    ns1:title "Oxid dusnatý - donory"@cs,
+        "Nitric oxide donors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001417> a ns1:DiseaseOrFinding ;
+    ns1:title "Kraniocerebrální poranění"@cs,
+        "Craniocerebral trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0085733> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:hasIndication """- nestabilní angina pectoris a vazospastická forma anginy pectoris
+- akutní infarkt myokardu
+- akutní levostranné srdeční selhání. 
+Přípravek je určen k léčbě dospělých pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasPackagingSize "10X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC160637_doc> ;
+    ns1:hasStrength "1MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF SOL 10X10ML/10MG"@cs ;
+    ns1:title "ISOKET ROZTOK 0,1% AMPULE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ISOKET-ROZTOK-0-1--AMPULE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA08> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011788> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0085733> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "ISOKET ROZTOK 0,1% AMPULE"@cs .
+
+

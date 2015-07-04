@@ -1,0 +1,97 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N02AA55> a ns1:ATCConcept ;
+    skos:notation "N02AA55" ;
+    skos:prefLabel "Oxykodon, kombinace"@cs,
+        "Oxycodone, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/N07BC51> a ns1:ATCConcept ;
+    skos:notation "N07BC51" ;
+    skos:prefLabel "Buprenorfin, kombinace"@cs,
+        "Buprenorphine, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/V03AB15> a ns1:ATCConcept ;
+    skos:notation "V03AB15" ;
+    skos:prefLabel "Naloxon"@cs,
+        "Naloxone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014441> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A specific opiate antagonist that has no agonist activity. It is a competitive antagonist at mu, delta, and kappa opioid receptors.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000154> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/NEXODAL-0-4-MG-ML-INJEKCNI-NEBO-INFUZNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SUBOXONE-2-MG-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SUBOXONE-8-MG-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-10-5-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-20-10-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-40-20-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-5-2-5-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002109>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002595>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002731> ;
+    ns1:title "Naloxon"@cs,
+        "Naloxone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> a ns1:PharmacologicalAction ;
+    ns1:description "Agents inhibiting the effect of narcotics on the central nervous system.     "@en ;
+    ns1:title "Narkotika - antagonisté"@cs,
+        "Narcotic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002109> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders related or resulting from abuse or mis-use of opioids.     "@en ;
+    ns1:title "Poruchy spojené s užíváním opiátů"@cs,
+        "Opioid-related disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002595> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases of the respiratory system in general or unspecified or for a specific respiratory disease not available.     "@en ;
+    ns1:title "Dýchání - poruchy"@cs,
+        "Respiration disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002731> a ns1:DiseaseOrFinding ;
+    ns1:description "Sepsis associated with HYPOTENSION or hypoperfusion despite adequate fluid resuscitation. Perfusion abnormalities may include, but are not limited to LACTIC ACIDOSIS; OLIGURIA; or acute alteration in mental status.     "@en ;
+    ns1:title "Septický šok"@cs,
+        "Shock, septic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000154> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEXODAL-0-4-MG-ML-INJEKCNI-NEBO-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB15> ;
+    ns1:title "NEXODAL 0,4 MG/ML INJEKČNÍ NEBO INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUBOXONE-2-MG-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC51> ;
+    ns1:title "SUBOXONE 2 MG/0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SUBOXONE-8-MG-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC51> ;
+    ns1:title "SUBOXONE 8 MG/2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-10-5-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA55> ;
+    ns1:title "TARGIN 10/5 MG TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-20-10-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA55> ;
+    ns1:title "TARGIN 20/10 MG TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-40-20-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA55> ;
+    ns1:title "TARGIN 40/20 MG TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARGIN-5-2-5-MG-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA55> ;
+    ns1:title "TARGIN 5/2,5 MG TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+

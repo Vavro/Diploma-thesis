@@ -1,0 +1,122 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D> a ns1:ATCConcept ;
+    dcterms:title "Dermatologika"@cs,
+        "DERMATOLOGICALS"@en ;
+    skos:notation "D" .
+
+<http://linked.opendata.cz/resource/ATC/D07> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, dermatologické přípravky"@cs,
+        "CORTICOSTEROIDS, DERMATOLOGICAL PREPARATIONS"@en ;
+    skos:notation "D07" .
+
+<http://linked.opendata.cz/resource/ATC/D07C> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, kombinace s antibiotiky"@cs,
+        "CORTICOSTEROIDS, COMBINATIONS WITH ANTIBIOTICS"@en ;
+    skos:notation "D07C" .
+
+<http://linked.opendata.cz/resource/ATC/D07CC> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, silně účinné, kombinace s antibiotiky"@cs,
+        "Corticosteroids, potent, combinations with antibiotics"@en ;
+    skos:notation "D07CC" .
+
+<http://linked.opendata.cz/resource/ATC/D07CC01> a ns1:ATCConcept ;
+    dcterms:title "Betamethason a antibiotika"@cs,
+        "Betamethasone and antibiotics"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/D>,
+        <http://linked.opendata.cz/resource/ATC/D07>,
+        <http://linked.opendata.cz/resource/ATC/D07C>,
+        <http://linked.opendata.cz/resource/ATC/D07CC> ;
+    skos:notation "D07CC01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002437> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> ;
+    ns1:description "A glucocorticoid given orally, parenterally, by local injection, by inhalation, or applied topically in the management of various disorders in which corticosteroids are indicated. Its lack of mineralocorticoid properties makes betamethasone particularly suitable for treating cerebral edema and congenital adrenal hyperplasia. (From Martindale, The Extra Pharmacopoeia, 30th ed, p724)     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Betamethason"@cs,
+        "Betamethasone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009170> a ns1:Ingredient ;
+    ns1:description "A complex antibiotic substance produced by MICROMONOSPORA purpurea, with three components: gentamicin C1 (Gentamicin sulfate (salt)); gentamicin C2 (Gentamicin sulfate); and gentamicin C1A.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Gentamicin sulfate (usp)"@cs,
+        "Gentamicin sulfate (usp)"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat asthma.     "@en ;
+    ns1:title "Antiastmatika"@cs,
+        "Anti-asthmatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002075> a ns1:DiseaseOrFinding ;
+    ns1:title "Mykózy"@cs,
+        "Mycoses"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157603> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07CC01> ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X15GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasTitleSupplement "DRM UNG 1X15GM"@cs ;
+    ns1:title "BEDIJELF (0,5 MG + 1 MG)/G MAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184282> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07CC01> ;
+    ns1:hasIndication """Léčba suchých forem zánětlivých onemocnění kůže (dermatitid), zvláště s alergickým podkladem, komplikovaných sekundární bakteriální infekcí a spojených s hyperkeratózou, při svědění, prudké alergické reakci a zvláště při: atopické dermatitidě, seboroické dermatititě, lichen simplex chronicus, hyperkeratotickém ekzému, psoriáze, alergické kontaktní dermatitidě, kožních projevech lupus erytematodes, při multiformním erytému. 
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X15GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC137606_doc> ;
+    ns1:hasTitleSupplement "DRM UNG 1X15GM"@cs ;
+    ns1:title "BEDIJELF (0,5 MG + 1 MG)/G MAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BEDIJELF--0-5-MG---1-MG--G-MAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07CC01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002437>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009170> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0157603>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0184282> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "BEDIJELF (0,5 MG + 1 MG)/G MAST"@cs .
+
+

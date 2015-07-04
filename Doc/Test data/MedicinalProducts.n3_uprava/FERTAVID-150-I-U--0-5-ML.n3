@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G03> a ns1:ATCConcept ;
+    dcterms:title "Pohlavní hormony a modulátory genitálního systému"@cs,
+        "SEX HORMONES AND MODULATORS OF THE GENITAL SYSTEM"@en ;
+    skos:notation "G03" .
+
+<http://linked.opendata.cz/resource/ATC/G03G> a ns1:ATCConcept ;
+    dcterms:title "Gonadotropiny a jiné látky stimulující ovulaci"@cs,
+        "GONADOTROPINS AND OTHER OVULATION STIMULANTS"@en ;
+    skos:notation "G03G" .
+
+<http://linked.opendata.cz/resource/ATC/G03GA> a ns1:ATCConcept ;
+    dcterms:title "Gonadotropiny"@cs,
+        "Gonadotropins"@en ;
+    skos:notation "G03GA" .
+
+<http://linked.opendata.cz/resource/ATC/G03GA06> a ns1:ATCConcept ;
+    dcterms:title "Folitropin beta"@cs,
+        "Follitropin beta"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G03>,
+        <http://linked.opendata.cz/resource/ATC/G03G>,
+        <http://linked.opendata.cz/resource/ATC/G03GA> ;
+    skos:notation "G03GA06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0573063> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Follitropin beta"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149052> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03GA06> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "1X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Subkutánní a intramuskulární použití"@cs ;
+    ns1:hasStrength "300IU/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X0.5ML"@cs ;
+    ns1:title "FERTAVID 150 I.U./0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149053> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03GA06> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "5X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Subkutánní a intramuskulární použití"@cs ;
+    ns1:hasStrength "300IU/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X0.5ML"@cs ;
+    ns1:title "FERTAVID 150 I.U./0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149054> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03GA06> ;
+    ns1:hasIndicationGroup "HORMONA (LÉČIVA S HORMONÁLNÍ AKTIVITOU)"@cs ;
+    ns1:hasPackagingSize "10X0.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Subkutánní a intramuskulární použití"@cs ;
+    ns1:hasStrength "300IU/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X0.5ML"@cs ;
+    ns1:title "FERTAVID 150 I.U./0,5 ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FERTAVID-150-I-U--0-5-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G03GA06> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0573063> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149052>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149053>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0149054> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "FERTAVID 150 I.U./0,5 ML"@cs .
+
+

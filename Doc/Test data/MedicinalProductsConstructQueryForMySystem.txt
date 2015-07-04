@@ -1,0 +1,138 @@
+PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+           
+CONSTRUCT
+{
+  @thingURI a enc:MedicinalProduct ;
+    enc:title ?title ;
+    enc:hasActiveIngredient ?ai ;
+    enc:hasATCConcept ?atc ;
+    enc:hasMedicinalProductPackaging ?mpp ;
+    enc:hasPregnancyCategory ?aiPregnancyCategory .
+  ?mpp a enc:MedicinalProductPackaging ;
+    enc:title ?mppTitle ;
+    enc:hasTitleSupplement ?mppTitleSupplementWithLanguage ;
+    enc:hasStrength ?mppStrength ;
+    enc:hasPackagingSize ?mppPackagingSize ;
+    enc:hasRouteOfAdministration ?mppRouteOfAdministrationLabel ;
+    enc:hasRegistrationState ?mppState ;
+    enc:hasATCConcept ?mppAtc ;
+    enc:hasReimbursementAmount ?mppReimbursementAmount ;
+    enc:hasMaximalPrice ?mppMaximalPrice ;
+    enc:hasAveragePrice ?mppAveragePrice ;
+    enc:isOnMarket ?mppIsOnMarket ;
+    enc:hasResumedMarketingDate ?mppResumedMarketingDate ;
+    enc:hasBreakMarketingDate ?mppBreakMarketingDate ;
+    enc:hasSPCDocument ?spcDocument ;
+    enc:hasIndication ?indicationText ;
+    enc:hasIndicationGroup ?indicationGroup .
+  ?mppAtc a enc:ATCConcept ;
+    dcterms:title ?atcTitle ;
+    skos:notation ?atcNotation .
+  ?ai a enc:MasterIngredient ;
+    enc:title ?aiTitle ;
+    enc:description ?aiDescription ;
+    enc:hasPregnancyCategory ?aiPregnancyCategory ;
+    enc:hasPharmacologicalAction ?aiPa ;
+    enc:contraindicatedWith ?ciWith .
+  ?ciWith a enc:DiseaseOrFinding ;
+    enc:title ?ciWithTitle .
+  ?aiPa a enc:PharmacologicalAction ;
+    enc:title ?aiPaTitle ;
+    enc:description ?aiPaDescription .
+  ?atc a enc:ATCConcept ;
+    dcterms:title ?atcTitle ;
+    skos:notation ?atcNotation ;
+    skos:broaderTransitive ?atc1 .
+  ?atc1 a enc:ATCConcept ;
+    dcterms:title ?atc1Title ;
+    skos:notation ?atc1Notation .
+}
+WHERE
+{
+  {
+    @thingURI
+      enc:title ?title ;
+      enc:hasMedicinalProductPackaging ?mpp .
+    ?mpp
+      dcterms:title ?mppTitle ;
+      sukl:hasTitleSupplement ?mppTitleSupplement .
+    BIND (STRLANG(?mppTitleSupplement, 'cs') AS ?mppTitleSupplementWithLanguage)
+    {
+         ?mpp sukl:hasStrength ?mppStrength .
+       } UNION {
+         ?mpp sukl:hasPackagingSize ?mppPackagingSize .
+       } UNION {
+         ?mpp sukl:hasRouteOfAdministration/skos:prefLabel ?mppRouteOfAdministrationLabel .
+       } UNION {
+         ?mpp sukl:hasRegistrationState ?mppState .
+       } UNION {
+         ?mpp sukl:hasATCCode ?mppAtc .
+         ?mppAtc
+           dcterms:title ?mppAtcTitle ;
+           skos:notation ?mppAtcNotation .
+       } UNION {
+         ?mpp spc:hasSPC/spc:hasDocument ?spcDocument .
+       } UNION {
+         ?mpp sukl:hasResumedMarketingDate ?mppResumedMarketingDate .
+       } UNION {
+         ?mpp sukl:hasBreakMarketingDate ?mppBreakMarketingDate .
+       } UNION {
+         ?mpp sukl:hasMaximalPrice ?mppMaximalPrice .
+       } UNION {
+         ?mpp sukl:hasAveragePrice ?mppAveragePrice .
+       } UNION {
+         ?mpp sukl:isOnMarket ?mppIsOnMarket .
+       } UNION {
+         ?mpp sukl:hasReimbursement/sukl:hasAmount ?mppReimbursementAmount .
+   	 } UNION {
+  ?mpp sukl:hasIndicationGroup/skos:prefLabel ?indicationGroup .
+ UNION {
+  ?mpp spc:hasSPC/spc:hasDocument ?spcDocument .
+  ?spcDocument sdo:hasSection ?indicationSection .
+  ?indicationSection sdo:hasOrderNumber ?indicationOrderNumber .
+   FILTER (?indicationOrderNumber = "004.001")
+  ?indicationSection sdo:hasText ?indicationText .
+
+  } UNION {
+    @thingURI
+      enc:hasATCConcept ?atc .
+    ?atc
+      dcterms:title ?atcTitle ;
+      skos:notation ?atcNotation ;
+      skos:broaderTransitive+ ?atc1 .
+    ?atc1
+      dcterms:title ?atc1Title ;
+      skos:notation ?atc1Notation .
+  } UNION {
+    ?ai a enc:MasterIngredient ;
+      enc:hasMedicinalProduct @thingURI ;
+      enc:title ?aiTitle .
+    OPTIONAL {
+      ?ai
+        enc:description ?aiDescription .
+    }
+    OPTIONAL {
+      ?ai
+        enc:hasPregnancyCategory ?aiPregnancyCategory .
+    }
+	OPTIONAL {
+      ?ai
+        enc:contraindicatedWith ?ciWith .
+      ?ciWith
+        enc:title ?ciWithTitle .
+    }
+    OPTIONAL {
+      ?ai
+        enc:hasPharmacologicalAction ?aiPa .
+      ?aiPa
+        enc:title ?aiPaTitle .
+      OPTIONAL {
+        ?aiPa
+          enc:description ?aiPaDescription .
+      }
+    }
+  }
+}";

@@ -1,0 +1,80 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01BB04> a ns1:ATCConcept ;
+    skos:notation "L01BB04" ;
+    skos:prefLabel "Kladribin"@cs,
+        "Cladribine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026332> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antineoplastic agent used in the treatment of lymphoproliferative diseases including hairy-cell leukemia.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/LITAK> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001820>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001910>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002052>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003248> ;
+    ns1:title "2-chlorodeoxyadenosin"@cs,
+        "Cladribine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001820> a ns1:DiseaseOrFinding ;
+    ns1:description "A neoplastic disease of the lymphoreticular cells which is considered to be a rare type of chronic leukemia; it is characterized by an insidious onset, splenomegaly, anemia, granulocytopenia, thrombocytopenia, little or no lymphadenopathy, and the presence of \"hairy\" or \"flagellated\" cells in the blood and bone marrow.     "@en ;
+    ns1:title "Trichocelulární leukemie"@cs,
+        "Leukemia, hairy cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001910> a ns1:DiseaseOrFinding ;
+    ns1:description "Any of a group of malignant tumors of lymphoid tissue that differ from HODGKIN DISEASE, being more heterogeneous with respect to malignant cell lineage, clinical course, prognosis, and therapy. The only common feature among these tumors is the absence of giant REED-STERNBERG CELLS, a characteristic of Hodgkin's disease.     "@en ;
+    ns1:title "Lymfom non-hodgkinův"@cs,
+        "Lymphoma, non-hodgkin"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003248> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic leukemia characterized by abnormal B-lymphocytes and often generalized lymphadenopathy. In patients presenting predominately with blood and bone marrow involvement it is called chronic lymphocytic leukemia (CLL); in those predominately with enlarged lymph nodes it is called small lymphocytic lymphoma. These terms represent spectrums of the same disease.     "@en ;
+    ns1:title "Chronická b-lymfatická leukemie"@cs,
+        "Leukemia, lymphocytic, chronic, b-cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LITAK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BB04> ;
+    ns1:title "LITAK"@cs .
+
+

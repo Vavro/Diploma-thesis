@@ -1,0 +1,89 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G02AD02> a ns1:ATCConcept ;
+    skos:notation "G02AD02" ;
+    skos:prefLabel "Dinoproston"@cs,
+        "Dinoprostone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0023405> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001234>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003091>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "The most common and most biologically active of the mammalian prostaglandins. It exhibits most biological activities characteristic of prostaglandins and has been used extensively as an oxytocic agent. The compound also displays a protective effect on the intestinal mucosa.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000106> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/PREPIDIL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PROSTIN-E2> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015702> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009247>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009705> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000268>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003093> ;
+    ns1:title "Dinoproston"@cs,
+        "Dinoprostone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015702> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that stimulate contraction of the myometrium. They are used to induce LABOR, OBSTETRIC at term, to prevent or control postpartum or postabortion hemorrhage, and to assess fetal status in high risk pregnancies. They may also be used alone or with other drugs to induce abortions (ABORTIFACIENTS). Oxytocics used clinically include the neurohypophyseal hormone OXYTOCIN and certain prostaglandins and ergot alkaloids. (From AMA Drug Evaluations, 1994, p1157)     "@en ;
+    ns1:title "Oxytocika"@cs,
+        "Oxytocics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000268> a ns1:DiseaseOrFinding ;
+    ns1:description "Expulsion of the product of FERTILIZATION before completing the term of GESTATION and without deliberate interference.     "@en ;
+    ns1:title "Potrat spontánní"@cs,
+        "Abortion, spontaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001234> a ns1:DiseaseOrFinding ;
+    ns1:description "A nonreassuring fetal status (NRFS) indicating that the FETUS is compromised (American College of Obstetricians and Gynecologists 1988). It can be identified by sub-optimal values in FETAL HEART RATE; oxygenation of FETAL BLOOD; and other parameters.     "@en ;
+    ns1:title "Fétus - distres"@cs,
+        "Fetal distress"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003091> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding from blood vessels in the UTERUS, sometimes manifested as vaginal bleeding.     "@en ;
+    ns1:title "Uterus - hemoragie"@cs,
+        "Uterine hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003093> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the UTERUS.     "@en ;
+    ns1:title "Uterus - nádory"@cs,
+        "Uterine neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000106> a ns1:MechanismOfAction ;
+    ns1:title "Prostaglandin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009247> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Cervical Dilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009705> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Uterine Smooth Muscle Contraction or Tone"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PREPIDIL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02AD02> ;
+    ns1:title "PREPIDIL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PROSTIN-E2> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02AD02> ;
+    ns1:title "PROSTIN E2"@cs .
+
+

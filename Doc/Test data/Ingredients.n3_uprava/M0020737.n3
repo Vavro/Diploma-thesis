@@ -1,0 +1,90 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S01AB04> a ns1:ATCConcept ;
+    skos:notation "S01AB04" ;
+    skos:prefLabel "Sulfacetamid"@cs,
+        "Sulfacetamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020737> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010204> ;
+    ns1:description "An anti-infective agent that is used topically to treat skin infections and orally for urinary tract infections.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009946> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/SULPHACETAMIDE-10--POLPHARMA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008344>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009935> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000854>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001036>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002712>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> ;
+    ns1:title "Sulfacetamid"@cs,
+        "Sulfacetamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001330> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used on humans and other animals that destroy harmful microorganisms or inhibit their activity. They are distinguished from DISINFECTANTS, which are used on inanimate objects.     "@en ;
+    ns1:title "Antiinfekční látky lokální"@cs,
+        "Anti-infective agents, local"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001331> a ns1:PharmacologicalAction ;
+    ns1:description "Substances capable of killing agents causing urinary tract infections or of preventing them from spreading.     "@en ;
+    ns1:title "Antiinfekční látky močové"@cs,
+        "Anti-infective agents, urinary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000854> a ns1:DiseaseOrFinding ;
+    ns1:description "Loss of epithelial tissue from the surface of the cornea due to progressive erosion and necrosis of the tissue; usually caused by bacterial, fungal, or viral infection.     "@en ;
+    ns1:title "Rohovka - vřed"@cs,
+        "Corneal ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001036> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the ear, the hearing, and the equilibrium system of the body.     "@en ;
+    ns1:title "Nemoci ucha"@cs,
+        "Ear diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002712> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory disease of the skin with unknown etiology. It is characterized by moderate ERYTHEMA, dry, moist, or greasy (SEBACEOUS GLAND) scaling and yellow crusted patches on various areas, especially the scalp, that exfoliate as dandruff. Seborrheic dermatitis is common in children and adolescents with HIV INFECTIONS.     "@en ;
+    ns1:title "Dermatitida seboroická"@cs,
+        "Dermatitis, seborrheic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002999> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic infection of the CONJUNCTIVA and CORNEA caused by CHLAMYDIA TRACHOMATIS.     "@en ;
+    ns1:title "Trachom"@cs,
+        "Trachoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003546> a ns1:DiseaseOrFinding ;
+    ns1:description "Skin diseases caused by bacteria.     "@en ;
+    ns1:title "Kůže - nemoci bakteriální"@cs,
+        "Skin diseases, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010204> a ns1:DiseaseOrFinding ;
+    ns1:description "An infant during the first month after birth.     "@en ;
+    ns1:title "Novorozenec"@cs,
+        "Infant, newborn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009946> a ns1:MechanismOfAction ;
+    ns1:title "Para-Aminobenzoic Acid Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008344> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Growth Phase Arrest"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009935> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Folic Acid Modification"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SULPHACETAMIDE-10--POLPHARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01AB04> ;
+    ns1:title "SULPHACETAMIDE 10%-POLPHARMA"@cs .
+
+

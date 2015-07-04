@@ -1,0 +1,101 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M01CC01> a ns1:ATCConcept ;
+    skos:notation "M01CC01" ;
+    skos:prefLabel "Penicilamin"@cs,
+        "Penicillamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016122> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001748>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "3-Mercapto-D-valine. The most characteristic degradation product of the penicillin antibiotics. It is used as an antirheumatic and as a chelating agent in Wilson's disease.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000087> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/METALCAPTASE-150>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/METALCAPTASE-300> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004002>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008663> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000893>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001791>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001864>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001996> ;
+    ns1:title "Penicilamin"@cs,
+        "Penicillamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001390> a ns1:PharmacologicalAction ;
+    ns1:description "Agents counteracting or neutralizing the action of POISONS.     "@en ;
+    ns1:title "Antidota"@cs,
+        "Antidotes"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0004002> a ns1:PharmacologicalAction ;
+    ns1:description "Chemicals that bind to and remove ions from solutions. Many chelating agents function through the formation of COORDINATION COMPLEXES with METALS.     "@en ;
+    ns1:title "Chelátotvorné látky"@cs,
+        "Chelating agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000893> a ns1:DiseaseOrFinding ;
+    ns1:description "An inherited disorder due to defective reabsorption of CYSTINE and other BASIC AMINO ACIDS by the PROXIMAL RENAL TUBULES. This form of aminoaciduria is characterized by the abnormally high urinary levels of cystine; LYSINE; ARGININE; and ORNITHINE. Mutations involve the amino acid transport protein gene SLC3A1.     "@en ;
+    ns1:title "Cystinurie"@cs,
+        "Cystinuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001791> a ns1:DiseaseOrFinding ;
+    ns1:title "Olovo - otrava"@cs,
+        "Lead poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001864> a ns1:DiseaseOrFinding ;
+    ns1:description "FIBROSIS of the hepatic parenchyma due to obstruction of BILE flow (CHOLESTASIS) in the intrahepatic or extrahepatic bile ducts (BILE DUCTS, INTRAHEPATIC; BILE DUCTS, EXTRAHEPATIC). Primary biliary cirrhosis involves the destruction of small intra-hepatic bile ducts and bile secretion. Secondary biliary cirrhosis is produced by prolonged obstruction of large intrahepatic or extrahepatic bile ducts from a variety of causes.     "@en ;
+    ns1:title "Biliární cirhóza"@cs,
+        "Liver cirrhosis, biliary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001996> a ns1:DiseaseOrFinding ;
+    ns1:title "Rtuť - otrava"@cs,
+        "Mercury poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000087> a ns1:MechanismOfAction ;
+    ns1:title "Chelating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008663> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Immunologically Active Molecule Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METALCAPTASE-150> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01CC01> ;
+    ns1:title "METALCAPTASE 150"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METALCAPTASE-300> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01CC01> ;
+    ns1:title "METALCAPTASE 300"@cs .
+
+

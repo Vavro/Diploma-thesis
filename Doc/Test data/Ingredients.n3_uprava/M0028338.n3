@@ -1,0 +1,342 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05AX08> a ns1:ATCConcept ;
+    skos:notation "N05AX08" ;
+    skos:prefLabel "Risperidon"@cs,
+        "Risperidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028338> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A selective blocker of DOPAMINE D2 RECEPTORS and SEROTONIN 5-HT2 RECEPTORS that acts as an atypical antipsychotic agent. It has been shown to improve both positive and negative symptoms in the treatment of SCHIZOPHRENIA.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000099>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000130>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-6-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-1>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-2>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-3>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-4>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-25-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-37-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-50-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ACTAVIS-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ACTAVIS-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-1-MG--ML-PERORALNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-2-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-3-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-1-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-2-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-3-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-4-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-2-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008893> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000513>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000553>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000751>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000914>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001334>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001995>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> ;
+    ns1:title "Risperidon"@cs,
+        "Risperidone"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate serotonin receptors, thereby blocking the actions of serotonin or SEROTONIN RECEPTOR AGONISTS.     "@en ;
+    ns1:title "Serotonin - antagonisté"@cs,
+        "Serotonin antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000513> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder beginning in childhood. It is marked by the presence of markedly abnormal or impaired development in social interaction and communication and a markedly restricted repertoire of activity and interest. Manifestations of the disorder vary greatly depending on the developmental level and chronological age of the individual. (DSM-IV)     "@en ;
+    ns1:title "Autistická porucha"@cs,
+        "Autistic disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000553> a ns1:DiseaseOrFinding ;
+    ns1:description "A major affective disorder marked by severe mood swings (manic or major depressive episodes) and a tendency to remission and recurrence.     "@en ;
+    ns1:title "Bipolární poruchy"@cs,
+        "Bipolar disorder"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000751> a ns1:DiseaseOrFinding ;
+    ns1:description "Disturbances considered to be pathological based on age and stage appropriateness, e.g., conduct disturbances and anaclitic depression. This concept does not include psychoneuroses, psychoses, or personality disorders with fixed patterns.     "@en ;
+    ns1:title "Poruchy chování u dětí"@cs,
+        "Child behavior disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000914> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired organic mental disorder with loss of intellectual abilities of sufficient severity to interfere with social or occupational functioning. The dysfunction is multifaceted and involves memory, behavior, personality, judgment, attention, spatial relations, language, abstract thought, and other executive functions. The intellectual decline is usually progressive, and initially spares the level of consciousness.     "@en ;
+    ns1:title "Demence"@cs,
+        "Dementia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001334> a ns1:DiseaseOrFinding ;
+    ns1:description "A neuropsychological disorder related to alterations in DOPAMINE metabolism and neurotransmission involving frontal-subcortical neuronal circuits. Both multiple motor and one or more vocal tics need to be present with TICS occurring many times a day, nearly daily, over a period of more than one year. The onset is before age 18 and the disturbance is not due to direct physiological effects of a substance or a general medical condition. The disturbance causes marked distress or significant impairment in social, occupational, or other important areas of functioning. (From DSM-IV, 1994; Neurol Clin 1997 May;15(2):357-79)     "@en ;
+    ns1:title "Tourettův syndrom"@cs,
+        "Tourette syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001995> a ns1:DiseaseOrFinding ;
+    ns1:description "Subnormal intellectual functioning which originates during the developmental period. This has multiple potential etiologies, including genetic defects and perinatal insults. Intelligence quotient (IQ) scores are commonly used to determine whether an individual has an intellectual disability. IQ scores between 70 and 79 are in the borderline range. Scores below 67 are in the disabiled range. (from Joynt, Clinical Neurology, 1992, Ch55, p28)     "@en ;
+    ns1:title "Mentální retardace"@cs,
+        "Intellectual disability"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.     "@en ;
+    ns1:title "Schizofrenie"@cs,
+        "Schizophrenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000099> a ns1:MechanismOfAction ;
+    ns1:title "Adrenergic alpha-Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000130> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190> a ns1:MechanismOfAction ;
+    ns1:title "Histamine H1 Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008588> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Histamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008893> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "MEDORISPER 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "MEDORISPER 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "MEDORISPER 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDORISPER-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "MEDORISPER 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RILEPTID 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RILEPTID 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RILEPTID 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RILEPTID-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RILEPTID 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISEPRO 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISEPRO 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISEPRO 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISEPRO 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISEPRO-6-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISEPRO 6 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-1> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPEN 1"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-2> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPEN 2"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-3> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPEN 3"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPEN-4> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPEN 4"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERA 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERA 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERA 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERA-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERA 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL CONSTA 25 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-37-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL CONSTA 37,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERDAL-CONSTA-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERDAL CONSTA 50 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ACTAVIS-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ACTAVIS 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ACTAVIS-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ACTAVIS 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ORION 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-1-MG--ML-PERORALNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ORION 1 MG/ ML PERORÁLNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ORION 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-ORION-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON ORION 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON VIPHARM 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON VIPHARM 2 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPERIDON-VIPHARM-3-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPERIDON VIPHARM 3 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-1-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPOLUX 1 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-2-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPOLUX 2 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-3-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPOLUX 3 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RISPOLUX-4-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RISPOLUX 4 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RORENDO ORO TAB 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RORENDO ORO TAB 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/RORENDO-ORO-TAB-2-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AX08> ;
+    ns1:title "RORENDO ORO TAB 2 MG"@cs .
+
+

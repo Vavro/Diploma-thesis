@@ -1,0 +1,220 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A06> a ns1:ATCConcept ;
+    dcterms:title "Laxativa"@cs,
+        "DRUGS FOR CONSTIPATION"@en ;
+    skos:notation "A06" .
+
+<http://linked.opendata.cz/resource/ATC/A06A> a ns1:ATCConcept ;
+    dcterms:title "Laxativa"@cs,
+        "DRUGS FOR CONSTIPATION"@en ;
+    skos:notation "A06A" .
+
+<http://linked.opendata.cz/resource/ATC/A06AD> a ns1:ATCConcept ;
+    dcterms:title "Osmoticky působící laxativa"@cs,
+        "Osmotically acting laxatives"@en ;
+    skos:notation "A06AD" .
+
+<http://linked.opendata.cz/resource/ATC/A06AD65> a ns1:ATCConcept ;
+    dcterms:title "Makrogol, kombinace"@cs,
+        "Macrogol, combinations"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/A>,
+        <http://linked.opendata.cz/resource/ATC/A06>,
+        <http://linked.opendata.cz/resource/ATC/A06A>,
+        <http://linked.opendata.cz/resource/ATC/A06AD> ;
+    skos:notation "A06AD65" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004225> a ns1:Ingredient ;
+    ns1:title "Makrogol 3350"@cs,
+        "Macrogol 3350"@en,
+        "Macrogolum 3350"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000305>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000911>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001590>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004155> ;
+    ns1:description "A white crystal or crystalline powder used in BUFFERS; FERTILIZERS; and EXPLOSIVES. It can be used to replenish ELECTROLYTES and restore WATER-ELECTROLYTE BALANCE in treating HYPOKALEMIA.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid draselný"@cs,
+        "Potassium chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026757> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001632>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A white, crystalline powder that is commonly used as a pH buffering agent, an electrolyte replenisher, systemic alkalizer and in topical cleansing solutions.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Hydrouhličitan sodný"@cs,
+        "Sodium bicarbonate"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000911> a ns1:DiseaseOrFinding ;
+    ns1:title "Dehydratace"@cs,
+        "Dehydration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001590> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemie"@cs,
+        "Hyperkalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001632> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypokalcémie"@cs,
+        "Hypocalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004155> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemická periodická paralýza"@cs,
+        "Paralysis, hyperkalemic periodic"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158253> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "8"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 8"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158254> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 10"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158255> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 20"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158256> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 30"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158258> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 50"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158260> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasIndication """K léčbě chronické zácpy. 
+Řešení fekální impakce, která je definována jako úporná zácpa s nahromaděním zatvrdlé stolice v ampule rekta a/nebo tlustého střeva.
+"""@cs ;
+    ns1:hasIndicationGroup "LAXANTIA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC130919_doc> ;
+    ns1:hasTitleSupplement "POR PLV SOL 100"@cs ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAXELLAX-13-7-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0004225>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026757> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158253>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158254>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158255>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158256>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158258>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0158260> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "MAXELLAX 13,7 G"@cs .
+
+

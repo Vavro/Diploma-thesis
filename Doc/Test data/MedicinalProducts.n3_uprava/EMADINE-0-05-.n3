@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01G> a ns1:ATCConcept ;
+    dcterms:title "Dekongesční léčiva a antialergika"@cs,
+        "DECONGESTANTS AND ANTIALLERGICS"@en ;
+    skos:notation "S01G" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antialergika"@cs,
+        "Other antiallergics"@en ;
+    skos:notation "S01GX" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX06> a ns1:ATCConcept ;
+    dcterms:title "Emedastin"@cs,
+        "Emedastine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/S>,
+        <http://linked.opendata.cz/resource/ATC/S01>,
+        <http://linked.opendata.cz/resource/ATC/S01G>,
+        <http://linked.opendata.cz/resource/ATC/S01GX> ;
+    skos:notation "S01GX06" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0321892> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Emedastine difumarate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026510> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX06> ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasStrength "0.5 MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "GTT OPH 1X10ML/5MG"@cs ;
+    ns1:title "EMADINE 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026511> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX06> ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasMaximalPrice "257.309997559"^^xsd:float ;
+    ns1:hasPackagingSize "5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "71.9499969482"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2000-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasStrength "0.5 MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "GTT OPH 1X5ML/2.5MG"@cs ;
+    ns1:title "EMADINE 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026512> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX06> ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "30X0.35ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasStrength "0.5 MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "GTT OPH 30X0.35ML"@cs ;
+    ns1:title "EMADINE 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026513> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX06> ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "60X0.35ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasStrength "0.5 MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "GTT OPH 60X0.35ML"@cs ;
+    ns1:title "EMADINE 0,05%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMADINE-0-05-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX06> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0321892> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026510>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026511>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026512>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0026513> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "EMADINE 0,05%"@cs .
+
+

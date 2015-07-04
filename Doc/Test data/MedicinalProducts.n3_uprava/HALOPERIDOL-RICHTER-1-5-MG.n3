@@ -1,0 +1,139 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N05> a ns1:ATCConcept ;
+    dcterms:title "Psycholeptika"@cs,
+        "PSYCHOLEPTICS"@en ;
+    skos:notation "N05" .
+
+<http://linked.opendata.cz/resource/ATC/N05A> a ns1:ATCConcept ;
+    dcterms:title "Antipsychotika, neuroleptika"@cs,
+        "ANTIPSYCHOTICS"@en ;
+    skos:notation "N05A" .
+
+<http://linked.opendata.cz/resource/ATC/N05AD> a ns1:ATCConcept ;
+    dcterms:title "Deriváty butyrofenonu"@cs,
+        "Butyrophenone derivatives"@en ;
+    skos:notation "N05AD" .
+
+<http://linked.opendata.cz/resource/ATC/N05AD01> a ns1:ATCConcept ;
+    dcterms:title "Haloperidol"@cs,
+        "Haloperidol"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N05>,
+        <http://linked.opendata.cz/resource/ATC/N05A>,
+        <http://linked.opendata.cz/resource/ATC/N05AD> ;
+    skos:notation "N05AD01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009771> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000589>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000819>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000857>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> ;
+    ns1:description "A phenyl-piperidinyl-butyrophenone that is used primarily to treat SCHIZOPHRENIA and other PSYCHOSES. It is also used in schizoaffective disorder, DELUSIONAL DISORDERS, ballism, and TOURETTE SYNDROME (a drug of choice) and occasionally as adjunctive therapy in INTELLECTUAL DISABILITY and the chorea of HUNTINGTON DISEASE. It is a potent antiemetic and is used in the treatment of intractable HICCUPS. (From AMA Drug Evaluations Annual, 1994, p279)     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028056> ;
+    ns1:title "Haloperidol"@cs,
+        "Haloperidol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028056> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of movement disorders. Most of these act centrally on dopaminergic or cholinergic systems. Among the most important clinically are those used for the treatment of Parkinson disease (ANTIPARKINSON AGENTS) and those for the tardive dyskinesias.     "@en ;
+    ns1:title "Látky proti dyskinézím"@cs,
+        "Anti-dyskinesia agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000589> a ns1:DiseaseOrFinding ;
+    ns1:title "Kostní dřeň - nemoci"@cs,
+        "Bone marrow diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000819> a ns1:DiseaseOrFinding ;
+    ns1:title "Kóma"@cs,
+        "Coma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000857> a ns1:DiseaseOrFinding ;
+    ns1:title "Koronární nemoc"@cs,
+        "Coronary disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> a ns1:DiseaseOrFinding ;
+    ns1:title "Parkinsonova nemoc"@cs,
+        "Parkinson disease"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0002537> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AD01> ;
+    ns1:hasIndication """Perorální kapky i tablety s léčivou látkou haloperidol se používají v těchto indikacích: 
+Dospělí:
+Jako neuroleptikum při následujících stavech:
+Bludy a halucinace při  
+akutní a chronické schizofrenii
+paranoe
+akutní zmatenosti,  alkoholismu (Korsakovův syndrom).
+Poruchy osobnosti: paranoidní, schizoidní, „hraniční“ osobnosti.
+Jako psychomotorická antiagitační látka při následujících stavech:
+Mánie, hypománie.
+Mentální a behaviorální poruchy jako je agresivita, hyperaktivita, sebepoškozování u mentálně retardovaných osob a u osob s organickým poškozením mozku.
+Poruchy osobnosti: kompulzívní, paranoidní, histrionské a hraniční.
+Agitovanost, agresivita a nutkání na toulání ve starším věku.
+Jako doplněk ke krátkodobé léčbě středně těžké až těžké psychomotorické agitovanosti, excitace, násilného nebo nebezpečného impulzivního chování.
+Choreatické pohyby.
+Singultus (škytavka), pokud úlevu nepřinášejí jiné prostředky.
+Gilles de la Touretteův syndrom, těžké tiky
+Děti:
+Poruchy chování, zvláště spojené s hyperaktivitou a agresí.
+Gilles de la Touretteův syndrom.
+Dětská schizofrenie.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIPSYCHOTICA (NEUROLEPTICA)"@cs ;
+    ns1:hasMaximalPrice "50.9500007629"^^xsd:float ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "65.6699981689"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2008-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC124656_doc> ;
+    ns1:hasStrength "1.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X1.5MG"@cs ;
+    ns1:title "HALOPERIDOL-RICHTER 1,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HALOPERIDOL-RICHTER-1-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AD01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009771> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0002537> ;
+    ns1:title "HALOPERIDOL-RICHTER 1,5 MG"@cs .
+
+

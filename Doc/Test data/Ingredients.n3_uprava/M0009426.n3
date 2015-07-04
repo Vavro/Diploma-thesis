@@ -1,0 +1,177 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C01DA02> a ns1:ATCConcept ;
+    skos:notation "C01DA02" ;
+    skos:prefLabel "Glycerol-trinitrát"@cs,
+        "Glyceryl trinitrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009426> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001417>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "A volatile vasodilator which relieves ANGINA PECTORIS by stimulating GUANYLATE CYCLASE and lowering cytosolic calcium. It is also sometimes used for TOCOLYSIS and explosives.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/NITRO-POHL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NITROGLYCERIN-SLOVAKOFARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NITROMINT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NITROMINT-2-6-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PERLINGANIT-ROZTOK> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0496773> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009455>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009911>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000406>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001047>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001257>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001434>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001619>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001706>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003190> ;
+    ns1:title "Nitroglycerin"@cs,
+        "Nitroglycerin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0496773> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that are energetically unstable and can produce a sudden expansion of the material, called an explosion, which is accompanied by heat, pressure and noise. Other things which have been described as explosive that are not included here are explosive action of laser heating, human performance, sudden epidemiological outbreaks, or fast cell growth.     "@en ;
+    ns1:title "Výbušné látky"@cs,
+        "Explosive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000406> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of paroxysmal pain consequent to MYOCARDIAL ISCHEMIA usually of distinctive character, location and radiation. It is thought to be provoked by a transient stressful situation during which the oxygen requirements of the MYOCARDIUM exceed that supplied by the CORONARY CIRCULATION.     "@en ;
+    ns1:title "Angina pectoris"@cs,
+        "Angina pectoris"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001047> a ns1:DiseaseOrFinding ;
+    ns1:description "Onset of HYPERREFLEXIA; SEIZURES; or COMA in a previously diagnosed pre-eclamptic patient (PRE-ECLAMPSIA).     "@en ;
+    ns1:title "Eklampsie"@cs,
+        "Eclampsia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001257> a ns1:DiseaseOrFinding ;
+    ns1:description "A painful linear ulcer at the margin of the anus. It appears as a crack or slit in the mucous membrane of the anus and is very painful and difficult to heal. (Dorland, 27th ed & Stedman, 25th ed)     "@en ;
+    ns1:title "Fissura ani"@cs,
+        "Fissure in ano"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001417> a ns1:DiseaseOrFinding ;
+    ns1:description "Traumatic injuries involving the cranium and intracranial structures (i.e., BRAIN; CRANIAL NERVES; MENINGES; and other structures). Injuries may be classified by whether or not the skull is penetrated (i.e., penetrating vs. nonpenetrating) or whether there is an associated hemorrhage.     "@en ;
+    ns1:title "Kraniocerebrální poranění"@cs,
+        "Craniocerebral trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001619> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased VASCULAR RESISTANCE in the PULMONARY CIRCULATION, usually secondary to HEART DISEASES or LUNG DISEASES.     "@en ;
+    ns1:title "Plicní hypertenze"@cs,
+        "Hypertension, pulmonary"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001706> a ns1:DiseaseOrFinding ;
+    ns1:description "Complications that affect patients during surgery. They may or may not be associated with the disease for which the surgery is done, or within the same surgical procedure.     "@en ;
+    ns1:title "Peroperační komplikace"@cs,
+        "Intraoperative complications"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003190> a ns1:DiseaseOrFinding ;
+    ns1:description "A hypermotility disorder of the ESOPHAGUS that is characterized by spastic non-peristaltic responses to SWALLOWING; CHEST PAIN; and DYSPHAGIA.     "@en ;
+    ns1:title "Difúzní jícnový spazmus"@cs,
+        "Esophageal spasm, diffuse"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000120> a ns1:MechanismOfAction ;
+    ns1:title "Nitric Oxide Donors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008299> a ns1:PhysiologicEffect ;
+    ns1:title "Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009455> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Nitric Oxide Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009911> a ns1:PhysiologicEffect ;
+    ns1:title "Venous Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NITRO-POHL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:title "NITRO POHL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NITROGLYCERIN-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:title "NITROGLYCERIN-SLOVAKOFARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NITROMINT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:title "NITROMINT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NITROMINT-2-6-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:title "NITROMINT 2,6 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERLINGANIT-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:title "PERLINGANIT ROZTOK"@cs .
+
+

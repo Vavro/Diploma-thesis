@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R> a ns1:ATCConcept ;
+    dcterms:title "Respirační systém"@cs,
+        "RESPIRATORY SYSTEM"@en ;
+    skos:notation "R" .
+
+<http://linked.opendata.cz/resource/ATC/R03> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii onemocnění spojených s obstrukcí dýchacích cest"@cs,
+        "DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03" .
+
+<http://linked.opendata.cz/resource/ATC/R03D> a ns1:ATCConcept ;
+    dcterms:title "Jiná systémová léčiva onemocnění spojen. s obstrukcí dých. cest"@cs,
+        "OTHER SYSTEMIC DRUGS FOR OBSTRUCTIVE AIRWAY DISEASES"@en ;
+    skos:notation "R03D" .
+
+<http://linked.opendata.cz/resource/ATC/R03DC> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté leukotrienových receptorů"@cs,
+        "Leukotriene receptor antagonists"@en ;
+    skos:notation "R03DC" .
+
+<http://linked.opendata.cz/resource/ATC/R03DC03> a ns1:ATCConcept ;
+    dcterms:title "Montelukast"@cs,
+        "Montelukast"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/R>,
+        <http://linked.opendata.cz/resource/ATC/R03>,
+        <http://linked.opendata.cz/resource/ATC/R03D>,
+        <http://linked.opendata.cz/resource/ATC/R03DC> ;
+    skos:notation "R03DC03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0326949> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Montelukast sodium"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135543> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 10X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135544> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 20X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135545> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "320.019989014"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "533.260009766"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 28X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135546> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 30X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135547> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 50X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135548> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 90X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135549> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasMaximalPrice "2541.44995117"^^xsd:float ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "1866.40002441"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 98X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135550> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasIndicationGroup "BRONCHODILATANTIA, ANTIASTHMATICA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL MND 100X5MG"@cs ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MONTELUKAST-SYNTHON-5-MG--ZVYKACI-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R03DC03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0326949> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135543>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135544>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135545>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135546>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135547>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135548>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135549>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0135550> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "MONTELUKAST SYNTHON 5 MG, ŽVÝKACÍ TABLETY"@cs .
+
+

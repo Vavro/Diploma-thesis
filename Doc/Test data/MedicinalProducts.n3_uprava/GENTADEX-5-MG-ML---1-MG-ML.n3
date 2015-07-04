@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01C> a ns1:ATCConcept ;
+    dcterms:title "Protizánětlivá léčiva a antiinfektiva v kombinaci"@cs,
+        "ANTIINFLAMMATORY AGENTS AND ANTIINFECTIVES IN COMBINATION"@en ;
+    skos:notation "S01C" .
+
+<http://linked.opendata.cz/resource/ATC/S01CA> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy a antiinfektiva v kombinaci"@cs,
+        "Corticosteroids and antiinfectives in combination"@en ;
+    skos:notation "S01CA" .
+
+<http://linked.opendata.cz/resource/ATC/S01CA01> a ns1:ATCConcept ;
+    dcterms:title "Dexamethason a antiinfektiva"@cs,
+        "Dexamethasone and antiinfectives"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/S>,
+        <http://linked.opendata.cz/resource/ATC/S01>,
+        <http://linked.opendata.cz/resource/ATC/S01C>,
+        <http://linked.opendata.cz/resource/ATC/S01CA> ;
+    skos:notation "S01CA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009170> a ns1:Ingredient ;
+    ns1:description "A complex antibiotic substance produced by MICROMONOSPORA purpurea, with three components: gentamicin C1 (Gentamicin sulfate (salt)); gentamicin C2 (Gentamicin sulfate); and gentamicin C1A.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Gentamicin sulfate (usp)"@cs,
+        "Gentamicin sulfate (usp)"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0045153> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Dexamethasone sodium phosphate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0017875> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit the synthesis of proteins. They are usually ANTI-BACTERIAL AGENTS or toxins. Mechanism of the action of inhibition includes the interruption of peptide-chain elongation, the blocking the A site of ribosomes, the misreading of the genetic code or the prevention of the attachment of oligosaccharide side chains to glycoproteins.     "@en ;
+    ns1:title "Proteiny - inhibitory syntézy"@cs,
+        "Protein synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147612> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML"@cs ;
+    ns1:title "GENTADEX 5 MG/ML + 1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180988> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:hasIndication """Oční kapky Gentadex se používají k léčbě zánětu přední části oka s infekcí způsobenou bakteriemi citlivými na gentamicin. Mezi ně patří konjunktivitida, keratitida a blefaritida, hordeolum a sekundárně infikované alergické záněty, u nichž lze akceptovat příslušné riziko použití steroidů ke zmenšení otoku a zmírnění zánětu.
+Je třeba zohlednit oficiální doporučení týkající se správného použití antibakteriálních látek.
+"""@cs ;
+    ns1:hasIndicationGroup "OPHTHALMOLOGICA"@cs ;
+    ns1:hasPackagingSize "1X5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Oční podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC136235_doc> ;
+    ns1:hasTitleSupplement "OPH GTT SOL 1X5ML"@cs ;
+    ns1:title "GENTADEX 5 MG/ML + 1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GENTADEX-5-MG-ML---1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009170>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0045153> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0147612>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0180988> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "GENTADEX 5 MG/ML + 1 MG/ML"@cs .
+
+

@@ -1,0 +1,96 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V03AF05> a ns1:ATCConcept ;
+    skos:notation "V03AF05" ;
+    skos:prefLabel "Amifostin"@cs,
+        "Amifostine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007867> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A phosphorothioate proposed as a radiation-protective agent. It causes splenic vasodilation and may block autonomic ganglia.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ETHYOL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009794> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000001000>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001749>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001242>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002569>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003179> ;
+    ns1:title "Amifostin"@cs,
+        "Amifostine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to protect against ionizing radiation. They are usually of interest for use in radiation therapy but have been considered for other, e.g. military, purposes.     "@en ;
+    ns1:title "Záření - látky ochranné"@cs,
+        "Radiation-protective agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001749> a ns1:DiseaseOrFinding ;
+    ns1:title "Akutní selhání ledvin"@cs,
+        "Kidney failure, acute"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001750> a ns1:DiseaseOrFinding ;
+    ns1:description "The end-stage of CHRONIC RENAL INSUFFICIENCY. It is characterized by the severe irreversible kidney damage (as measured by the level of PROTEINURIA) and the reduction in GLOMERULAR FILTRATION RATE to less than 15 ml per min (Kidney Foundation: Kidney Disease Outcome Quality Initiative, 2002). These patients generally require HEMODIALYSIS or KIDNEY TRANSPLANTATION.     "@en ;
+    ns1:title "Chronické selhání ledvin"@cs,
+        "Kidney failure, chronic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002569> a ns1:DiseaseOrFinding ;
+    ns1:description "Experimentally produced harmful effects of ionizing or non-ionizing RADIATION in CHORDATA animals.     "@en ;
+    ns1:title "Záření - poranění experimentální"@cs,
+        "Radiation injuries, experimental"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003179> a ns1:DiseaseOrFinding ;
+    ns1:description "Decreased salivary flow.     "@en ;
+    ns1:title "Xerostomie"@cs,
+        "Xerostomia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> a ns1:MechanismOfAction ;
+    ns1:title "Free Radical Scavenging Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009794> a ns1:PhysiologicEffect ;
+    ns1:title "Parathyroid Gland Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ETHYOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AF05> ;
+    ns1:title "ETHYOL"@cs .
+
+

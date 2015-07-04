@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D> a ns1:ATCConcept ;
+    dcterms:title "Dermatologika"@cs,
+        "DERMATOLOGICALS"@en ;
+    skos:notation "D" .
+
+<http://linked.opendata.cz/resource/ATC/D07> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, dermatologické přípravky"@cs,
+        "CORTICOSTEROIDS, DERMATOLOGICAL PREPARATIONS"@en ;
+    skos:notation "D07" .
+
+<http://linked.opendata.cz/resource/ATC/D07A> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, samotné"@cs,
+        "CORTICOSTEROIDS, PLAIN"@en ;
+    skos:notation "D07A" .
+
+<http://linked.opendata.cz/resource/ATC/D07AD> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, velmi silně účinné (skupina IV)"@cs,
+        "Corticosteroids, very potent (group IV)"@en ;
+    skos:notation "D07AD" .
+
+<http://linked.opendata.cz/resource/ATC/D07AD01> a ns1:ATCConcept ;
+    dcterms:title "Klobetasol"@cs,
+        "Clobetasol"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/D>,
+        <http://linked.opendata.cz/resource/ATC/D07>,
+        <http://linked.opendata.cz/resource/ATC/D07A>,
+        <http://linked.opendata.cz/resource/ATC/D07AD> ;
+    skos:notation "D07AD01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0069222> a ns1:Ingredient ;
+    ns1:description "This is the form in trademark preparations.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Clobetasol propionate"@cs,
+        "Clobetasol propionate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001333> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce or suppress INFLAMMATION.     "@en ;
+    ns1:title "Antiflogistika"@cs,
+        "Anti-inflammatory agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009322> a ns1:PharmacologicalAction ;
+    ns1:description "A group of CORTICOSTEROIDS that affect carbohydrate metabolism (GLUCONEOGENESIS, liver glycogen deposition, elevation of BLOOD SUGAR), inhibit ADRENOCORTICOTROPIC HORMONE secretion, and possess pronounced anti-inflammatory activity. They also play a role in fat and protein metabolism, maintenance of arterial blood pressure, alteration of the connective tissue response to injury, reduction in the number of circulating lymphocytes, and functioning of the central nervous system.     "@en ;
+    ns1:title "Glukokortikoidy"@cs,
+        "Glucocorticoids"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148920> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AD01> ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasMaximalPrice "74.5999984741"^^xsd:float ;
+    ns1:hasPackagingSize "1X25GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "95.3300018311"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasStrength "0.5MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X25GM"@cs ;
+    ns1:title "CLOVATE 0,5 MG/G KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176268> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AD01> ;
+    ns1:hasIndication """Clobetasolpropionát je velmi účinný topický kortikosteroid vhodný zejména ke krátkodobé léčbě rezistentních dermatóz, jako je psoriáza (s výjimkou rozsáhlých plošných forem), úporné ekzémy, lichen planus, diskoidní lupus erythematodes a jiné choroby, jejichž léčba jinými kortikosteroidy není úspěšná.
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasMaximalPrice "74.5999984741"^^xsd:float ;
+    ns1:hasPackagingSize "1X25GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "95.3300018311"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC128701_doc> ;
+    ns1:hasStrength "0.5MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X25GM"@cs ;
+    ns1:title "CLOVATE 0,5 MG/G KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CLOVATE-0-5-MG-G-KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AD01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0069222> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148920>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176268> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CLOVATE 0,5 MG/G KRÉM"@cs .
+
+

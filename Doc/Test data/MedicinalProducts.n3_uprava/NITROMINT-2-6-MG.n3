@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C01> a ns1:ATCConcept ;
+    dcterms:title "Kardiaka"@cs,
+        "CARDIAC THERAPY"@en ;
+    skos:notation "C01" .
+
+<http://linked.opendata.cz/resource/ATC/C01D> a ns1:ATCConcept ;
+    dcterms:title "Vazodilatancia používaná u onemocnění srdce"@cs,
+        "VASODILATORS USED IN CARDIAC DISEASES"@en ;
+    skos:notation "C01D" .
+
+<http://linked.opendata.cz/resource/ATC/C01DA> a ns1:ATCConcept ;
+    dcterms:title "Organické nitráty"@cs,
+        "Organic nitrates"@en ;
+    skos:notation "C01DA" .
+
+<http://linked.opendata.cz/resource/ATC/C01DA02> a ns1:ATCConcept ;
+    dcterms:title "Glycerol-trinitrát"@cs,
+        "Glyceryl trinitrate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C01>,
+        <http://linked.opendata.cz/resource/ATC/C01D>,
+        <http://linked.opendata.cz/resource/ATC/C01DA> ;
+    skos:notation "C01DA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009426> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000721>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001417>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "A volatile vasodilator which relieves ANGINA PECTORIS by stimulating GUANYLATE CYCLASE and lowering cytosolic calcium. It is also sometimes used for TOCOLYSIS and explosives.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0496773> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Nitroglycerin"@cs,
+        "Nitroglycerin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0496773> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that are energetically unstable and can produce a sudden expansion of the material, called an explosion, which is accompanied by heat, pressure and noise. Other things which have been described as explosive that are not included here are explosive action of laser heating, human performance, sudden epidemiological outbreaks, or fast cell growth.     "@en ;
+    ns1:title "Výbušné látky"@cs,
+        "Explosive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000721> a ns1:DiseaseOrFinding ;
+    ns1:title "Cerebral hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001417> a ns1:DiseaseOrFinding ;
+    ns1:title "Kraniocerebrální poranění"@cs,
+        "Craniocerebral trauma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031089> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:hasIndication """Profylaxe a léčba námahové a variantní (vazospastické) anginy pectoris.
+Lék není doporučován pro léčbu akutních záchvatů anginy pectoris.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC83977_doc> ;
+    ns1:hasStrength "2.6MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL RET 60X2.6MG"@cs ;
+    ns1:title "NITROMINT 2,6 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NITROMINT-2-6-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C01DA02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009426> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031089> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "NITROMINT 2,6 MG"@cs .
+
+

@@ -1,0 +1,64 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A10BB07> a ns1:ATCConcept ;
+    skos:notation "A10BB07" ;
+    skos:prefLabel "Glipizid"@cs,
+        "Glipizide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009278> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000952>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An oral hypoglycemic agent which is rapidly absorbed and completely metabolized.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/MINIDIAB> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008652>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009360> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> ;
+    ns1:title "Glipizid"@cs,
+        "Glipizide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000952> a ns1:DiseaseOrFinding ;
+    ns1:description "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.     "@en ;
+    ns1:title "Diabetes mellitus 1. typu"@cs,
+        "Diabetes mellitus, type 1"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> a ns1:DiseaseOrFinding ;
+    ns1:description "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.     "@en ;
+    ns1:title "Diabetes mellitus 2. typu"@cs,
+        "Diabetes mellitus, type 2"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> a ns1:MechanismOfAction ;
+    ns1:title "Insulin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008652> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glycolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glucose Transport into Cells"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009360> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Insulin Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MINIDIAB> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BB07> ;
+    ns1:title "MINIDIAB"@cs .
+
+

@@ -1,0 +1,353 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05D> a ns1:ATCConcept ;
+    dcterms:title "Peritoneální dialýza"@cs,
+        "PERITONEAL DIALYTICS"@en ;
+    skos:notation "B05D" .
+
+<http://linked.opendata.cz/resource/ATC/B05DB> a ns1:ATCConcept ;
+    dcterms:title "Hypertonické roztoky"@cs,
+        "Hypertonic solutions"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B05>,
+        <http://linked.opendata.cz/resource/ATC/B05D> ;
+    skos:notation "B05DB" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000856> a ns1:Ingredient ;
+    ns1:title "Hexahydrát chloridu hořečnatého"@cs,
+        "Magnesium chloride hexahydrate"@en,
+        "Magnesii chloridum hexahydricum"@la .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000619> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A non-essential amino acid that occurs in high levels in its free state in plasma. It is produced from pyruvate by transamination. It is involved in sugar and acid metabolism, increases IMMUNITY, and provides energy for muscle tissue, BRAIN, and the CENTRAL NERVOUS SYSTEM.     "@en ;
+    ns1:title "Alanin"@cs,
+        "Alanine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001683> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An essential amino acid that is physiologically active in the L-form.     "@en ;
+    ns1:title "Arginin"@cs,
+        "Arginine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009451> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000431>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A non-essential amino acid. It is found primarily in gelatin and silk fibroin and used therapeutically as a nutrient. It is also a fast inhibitory neurotransmitter.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027996> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Glycin"@cs,
+        "Glycine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010400> a ns1:Ingredient ;
+    ns1:description "An essential amino acid that is required for the production of HISTAMINE.     "@en ;
+    ns1:title "Histidin"@cs,
+        "Histidine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011766> a ns1:Ingredient ;
+    ns1:description "An essential branched-chain aliphatic amino acid found in many proteins. It is an isomer of LEUCINE. It is important in hemoglobin synthesis and regulation of blood sugar and energy levels.     "@en ;
+    ns1:title "Isoleucin"@cs,
+        "Isoleucine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012372> a ns1:Ingredient ;
+    ns1:description "An essential branched-chain amino acid important for hemoglobin formation.     "@en ;
+    ns1:title "Leucin"@cs,
+        "Leucine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013575> a ns1:Ingredient ;
+    ns1:description "A sulfur containing essential amino acid that is important in many body functions. It is a chelating agent for heavy metals.     "@en ;
+    ns1:title "Methionin"@cs,
+        "Methionine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016544> a ns1:Ingredient ;
+    ns1:description "An essential aromatic amino acid that is a precursor of MELANIN; DOPAMINE; noradrenalin (NOREPINEPHRINE), and THYROXINE.     "@en ;
+    ns1:title "Fenylalanin"@cs,
+        "Phenylalanine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017693> a ns1:Ingredient ;
+    ns1:description "A non-essential amino acid that is synthesized from GLUTAMIC ACID. It is an essential component of COLLAGEN and is important for proper functioning of joints and tendons.     "@en ;
+    ns1:title "Prolin"@cs,
+        "Proline"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0019675> a ns1:Ingredient ;
+    ns1:description "A non-essential amino acid occurring in natural form as the L-isomer. It is synthesized from GLYCINE or THREONINE. It is involved in the biosynthesis of PURINES; PYRIMIDINES; and other amino acids.     "@en ;
+    ns1:title "Serin"@cs,
+        "Serine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000355>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001598>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> ;
+    ns1:description "A ubiquitous sodium salt that is commonly used to season food.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid sodný"@cs,
+        "Sodium chloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021415> a ns1:Ingredient ;
+    ns1:description "An essential amino acid occurring naturally in the L-form, which is the active form. It is found in eggs, milk, gelatin, and other proteins.     "@en ;
+    ns1:title "Threonin"@cs,
+        "Threonine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022088> a ns1:Ingredient ;
+    ns1:description "An essential amino acid that is necessary for normal growth in infants and for NITROGEN balance in adults. It is a precursor of INDOLE ALKALOIDS in plants. It is a precursor of SEROTONIN (hence its use as an antidepressant and sleep aid). It can be a precursor to NIACIN, albeit inefficiently, in mammals.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> ;
+    ns1:title "Tryptofan"@cs,
+        "Tryptophan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022203> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A non-essential amino acid. In animals it is synthesized from PHENYLALANINE. It is also the precursor of EPINEPHRINE; THYROID HORMONES; and melanin.     "@en ;
+    ns1:title "Tyrosin"@cs,
+        "Tyrosine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022497> a ns1:Ingredient ;
+    ns1:description "A branched-chain essential amino acid that has stimulant activity. It promotes muscle growth and tissue repair. It is a precursor in the penicillin biosynthetic pathway.     "@en ;
+    ns1:title "Valin"@cs,
+        "Valine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028809> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "The sodium salt of racemic or inactive lactic acid. It is a hygroscopic agent used intravenously as a systemic and urinary alkalizer.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Natriumlaktát"@cs,
+        "Sodium lactate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330098> a ns1:Ingredient ;
+    ns1:title "Lysine hydrochloride"@cs,
+        "Lysine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330895> a ns1:Ingredient ;
+    ns1:title "Calcium chloride dihydrate"@cs,
+        "Calcium chloride dihydrate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027996> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used for their pharmacological actions on glycinergic systems. Glycinergic agents include agonists, antagonists, degradation or uptake inhibitors, depleters, precursors, and modulators of receptor function.     "@en ;
+    ns1:title "Glycinové látky"@cs,
+        "Glycine agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028000> a ns1:PharmacologicalAction ;
+    ns1:description "A structurally and mechanistically diverse group of drugs that are not tricyclics or monoamine oxidase inhibitors. The most clinically important appear to act selectively on serotonergic systems, especially by inhibiting serotonin reuptake.     "@en ;
+    ns1:title "Antidepresiva druhé generace"@cs,
+        "Antidepressive agents, second-generation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000355> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkalóza"@cs,
+        "Alkalosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001598> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypernatriémie"@cs,
+        "Hypernatremia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002540> a ns1:DiseaseOrFinding ;
+    ns1:title "Plíce - edém"@cs,
+        "Pulmonary edema"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011481> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6X1500ML-1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "SINGLE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 6X1500ML-1"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011482> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X2500ML-1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "SINGLE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X2500ML-1"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011483> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6X1500ML-2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 2"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 6X1500ML-2"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011484> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X2000ML-2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 2"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 5X2000ML-2"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0056064> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X2000ML-1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "SINGLE"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 5X2000ML-1"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0059059> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X2500ML-2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 2"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X2500ML-2"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083902> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "4X2500ML-3"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 3"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 4X2500ML-3"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083903> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "5X2000ML-3"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 3"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 5X2000ML-3"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083907> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6X1500ML-3"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 3"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 6X1500ML-3"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187296> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "6X2000ML-2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 2"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 6X2000ML-2"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187297> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasIndication """Přípravek NUTRINEAL je na glukóze nezaložený roztok pro peritoneální dialýzu a je doporučován jako součást režimu peritoneální dialýzy pro léčbu pacientů s chronickým renálním selháním. Obzvláště je doporučován podvyživeným pacientům léčených peritoneální dialýzou. 
+"""@cs ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "8X2000ML-2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Přípravek pro dialýzu"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC158631_doc> ;
+    ns1:hasStrength "TWIN 2"^^xsd:string ;
+    ns1:hasTitleSupplement "DLP PRN SOL 8X2000ML-2"@cs ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NUTRINEAL-PD4-WITH-1-1--AMINOACIDS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05DB> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0000856>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000619>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001683>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009451>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010400>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011766>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012372>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013575>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016544>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017693>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0019675>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0020094>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021415>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022088>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022203>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0022497>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028809>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330098>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330895> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011481>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011482>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011483>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0011484>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0056064>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0059059>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083902>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083903>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083907>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187296>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0187297> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "NUTRINEAL PD4 WITH 1,1% AMINOACIDS"@cs .
+
+

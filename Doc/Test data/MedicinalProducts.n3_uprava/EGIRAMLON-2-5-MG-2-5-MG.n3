@@ -1,0 +1,173 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09B> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, kombinace"@cs,
+        "ACE INHIBITORS, COMBINATIONS"@en ;
+    skos:notation "C09B" .
+
+<http://linked.opendata.cz/resource/ATC/C09BB> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory a blokátory kalciových kanálů"@cs,
+        "ACE inhibitors and calcium channel blockers"@en ;
+    skos:notation "C09BB" .
+
+<http://linked.opendata.cz/resource/ATC/C09BB07> a ns1:ATCConcept ;
+    dcterms:title "Ramipril a amlodipin"@cs,
+        "Ramipril and amlodipine "@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C09>,
+        <http://linked.opendata.cz/resource/ATC/C09B>,
+        <http://linked.opendata.cz/resource/ATC/C09BB> ;
+    skos:notation "C09BB07" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026184> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000415>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A long-acting angiotensin-converting enzyme inhibitor. It is a prodrug that is transformed in the liver to its active metabolite ramiprilat.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> ;
+    ns1:title "Ramipril"@cs,
+        "Ramipril"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> ;
+    ns1:description "A long-acting dihydropyridine calcium channel blocker. It is effective in the treatment of ANGINA PECTORIS and HYPERTENSION.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Amlodipin"@cs,
+        "Amlodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001207> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs whose main indications are the treatment of hypertension and heart failure. They exert their hemodynamic effect mainly by inhibiting the renin-angiotensin system. They also modulate sympathetic nervous system activity and increase prostaglandin synthesis. They cause mainly vasodilation and mild natriuresis without affecting heart rate and contractility.     "@en ;
+    ns1:title "Inhibitory angiotenzin konvertujícího enzymu"@cs,
+        "Angiotensin-converting enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000415> a ns1:DiseaseOrFinding ;
+    ns1:title "Angioedém"@cs,
+        "Angioedema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177272> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasIndication """Egiramlon je indikován k léčbě hypertenze jako substituční léčba u dospělých pacientů dostatečně léčených jednotlivými přípravky podávanými souběžně ve stejných dávkách jako v kombinovaném přípravku, ale ve formě samostatných tablet.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "4X7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156709_doc> ;
+    ns1:hasTitleSupplement "POR CPS DUR 28"@cs ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177273> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasIndication """Egiramlon je indikován k léčbě hypertenze jako substituční léčba u dospělých pacientů dostatečně léčených jednotlivými přípravky podávanými souběžně ve stejných dávkách jako v kombinovaném přípravku, ale ve formě samostatných tablet.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "8X7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156709_doc> ;
+    ns1:hasTitleSupplement "POR CPS DUR 56"@cs ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177274> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasIndication """Egiramlon je indikován k léčbě hypertenze jako substituční léčba u dospělých pacientů dostatečně léčených jednotlivými přípravky podávanými souběžně ve stejných dávkách jako v kombinovaném přípravku, ale ve formě samostatných tablet.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "3X10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156709_doc> ;
+    ns1:hasTitleSupplement "POR CPS DUR 30"@cs ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177275> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasIndication """Egiramlon je indikován k léčbě hypertenze jako substituční léčba u dospělých pacientů dostatečně léčených jednotlivými přípravky podávanými souběžně ve stejných dávkách jako v kombinovaném přípravku, ale ve formě samostatných tablet.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "6X10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156709_doc> ;
+    ns1:hasTitleSupplement "POR CPS DUR 60"@cs ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177276> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasIndication """Egiramlon je indikován k léčbě hypertenze jako substituční léčba u dospělých pacientů dostatečně léčených jednotlivými přípravky podávanými souběžně ve stejných dávkách jako v kombinovaném přípravku, ale ve formě samostatných tablet.
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "9X10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC156709_doc> ;
+    ns1:hasTitleSupplement "POR CPS DUR 90"@cs ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EGIRAMLON-2-5-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09BB07> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026184>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177272>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177273>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177274>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177275>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0177276> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "EGIRAMLON 2,5 MG/2,5 MG"@cs .
+
+

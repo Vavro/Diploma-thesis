@@ -1,0 +1,137 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G02CB01> a ns1:ATCConcept ;
+    skos:notation "G02CB01" ;
+    skos:prefLabel "Bromokryptin"@cs,
+        "Bromocriptine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002948> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003422>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003550>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A semisynthetic ergotamine alkaloid that is a dopamine D2 agonist. It suppresses prolactin secretion.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000117> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOCRIPTINE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PARLODEL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010537>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027733> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008833>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009282> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000295>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000310>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000368>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001609>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001636>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001684>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002172>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> ;
+    ns1:title "Bromokriptin"@cs,
+        "Bromocriptine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the treatment of Parkinson's disease. The most commonly used drugs act on the dopaminergic system in the striatum and basal ganglia or are centrally acting muscarinic antagonists.     "@en ;
+    ns1:title "Antiparkinsonika"@cs,
+        "Antiparkinson agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010537> a ns1:PharmacologicalAction ;
+    ns1:description "Chemical substances which inhibit the function of the endocrine glands, the biosynthesis of their secreted hormones, or the action of hormones upon their specific sites.     "@en ;
+    ns1:title "Hormony - antagonisté"@cs,
+        "Hormone antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027733> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to and activate dopamine receptors.     "@en ;
+    ns1:title "Dopamin agonisté"@cs,
+        "Dopamine agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000295> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by prolonged exposure to excessive HUMAN GROWTH HORMONE in adults. It is characterized by bony enlargement of the FACE; lower jaw (PROGNATHISM); hands; FEET; HEAD; and THORAX. The most common etiology is a GROWTH HORMONE-SECRETING PITUITARY ADENOMA. (From Joynt, Clinical Neurology, 1992, Ch36, pp79-80)     "@en ;
+    ns1:title "Akromegalie"@cs,
+        "Acromegaly"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000310> a ns1:DiseaseOrFinding ;
+    ns1:description "A benign epithelial tumor with a glandular organization.     "@en ;
+    ns1:title "Adenom"@cs,
+        "Adenoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000368> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of menstruation.     "@en ;
+    ns1:title "Amenorea"@cs,
+        "Amenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001609> a ns1:DiseaseOrFinding ;
+    ns1:description "Increased levels of PROLACTIN in the BLOOD, which may be associated with AMENORRHEA and GALACTORRHEA. Relatively common etiologies include PROLACTINOMA, medication effect, KIDNEY FAILURE, granulomatous diseases of the PITUITARY GLAND, and disorders which interfere with the hypothalamic inhibition of prolactin release. Ectopic (non-pituitary) production of prolactin may also occur. (From Joynt, Clinical Neurology, 1992, Ch36, pp77-8)     "@en ;
+    ns1:title "Hyperprolaktinémie"@cs,
+        "Hyperprolactinemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001636> a ns1:DiseaseOrFinding ;
+    ns1:description "Condition resulting from deficient gonadal functions, such as GAMETOGENESIS and the production of GONADAL STEROID HORMONES. It is characterized by delay in GROWTH, germ cell maturation, and development of secondary sex characteristics. Hypogonadism can be due to a deficiency of GONADOTROPINS (hypogonadotropic hypogonadism) or due to primary gonadal failure (hypergonadotropic hypogonadism).     "@en ;
+    ns1:title "Hypogonadismus"@cs,
+        "Hypogonadism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001684> a ns1:DiseaseOrFinding ;
+    ns1:description "Inability to reproduce after a specified period of unprotected intercourse. Reproductive sterility is permanent infertility.     "@en ;
+    ns1:title "Infertilita"@cs,
+        "Infertility"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002172> a ns1:DiseaseOrFinding ;
+    ns1:description "A potentially fatal syndrome associated primarily with the use of neuroleptic agents (see ANTIPSYCHOTIC AGENTS) which are in turn associated with dopaminergic receptor blockade (see RECEPTORS, DOPAMINE) in the BASAL GANGLIA and HYPOTHALAMUS, and sympathetic dysregulation. Clinical features include diffuse MUSCLE RIGIDITY; TREMOR; high FEVER; diaphoresis; labile blood pressure; cognitive dysfunction; and autonomic disturbances. Serum CPK level elevation and a leukocytosis may also be present. (From Adams et al., Principles of Neurology, 6th ed, p1199; Psychiatr Serv 1998 Sep;49(9):1163-72)     "@en ;
+    ns1:title "Neuroleptický maligní syndrom"@cs,
+        "Neuroleptic malignant syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002327> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative neurologic disease characterized by a TREMOR that is maximal at rest, retropulsion (i.e. a tendency to fall backwards), rigidity, stooped posture, slowness of voluntary movements, and a masklike facial expression. Pathologic features include loss of melanin containing neurons in the substantia nigra and other pigmented nuclei of the brainstem. LEWY BODIES are present in the substantia nigra and locus coeruleus but may also be found in a related condition (LEWY BODY DISEASE, DIFFUSE) characterized by dementia in combination with varying degrees of parkinsonism. (Adams et al., Principles of Neurology, 6th ed, p1059, pp1067-75)     "@en ;
+    ns1:title "Parkinsonova nemoc"@cs,
+        "Parkinson disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003422> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes involving any one of the BLOOD VESSELS in the vasculature outside the HEART.     "@en ;
+    ns1:title "Onemocnění periferních cév"@cs,
+        "Peripheral vascular diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003550> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of cardiac function caused by insufficient blood flow to the muscle tissue of the heart. The decreased blood flow may be due to narrowing of the coronary arteries (CORONARY ARTERY DISEASE), to obstruction by a thrombus (CORONARY THROMBOSIS), or less commonly, to diffuse narrowing of arterioles and other small vessels within the heart. Severe interruption of the blood supply to the myocardial tissue may result in necrosis of cardiac muscle (MYOCARDIAL INFARCTION).     "@en ;
+    ns1:title "Ischemická choroba srdeční"@cs,
+        "Myocardial ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000117> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008833> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prolactin Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009282> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Dopamine Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOCRIPTINE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CB01> ;
+    ns1:title "MEDOCRIPTINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARLODEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CB01> ;
+    ns1:title "PARLODEL"@cs .
+
+

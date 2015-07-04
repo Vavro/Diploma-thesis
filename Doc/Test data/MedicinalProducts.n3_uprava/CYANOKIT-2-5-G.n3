@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB> a ns1:ATCConcept ;
+    dcterms:title "Antidota"@cs,
+        "Antidotes"@en ;
+    skos:notation "V03AB" .
+
+<http://linked.opendata.cz/resource/ATC/V03AB33> a ns1:ATCConcept ;
+    dcterms:title "Hydroxokobalamin"@cs,
+        "Hydroxocobalamin"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V03>,
+        <http://linked.opendata.cz/resource/ATC/V03A>,
+        <http://linked.opendata.cz/resource/ATC/V03AB> ;
+    skos:notation "V03AB33" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010744> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Injectable form of VITAMIN B 12 that has been used therapeutically to treat VITAMIN B 12 DEFICIENCY.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Hydroxokobalamin"@cs,
+        "Hydroxocobalamin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039> a ns1:PharmacologicalAction ;
+    ns1:description "Agents which improve the quality of the blood, increasing the hemoglobin level and the number of erythrocytes. They are used in the treatment of anemias.     "@en ;
+    ns1:title "Hematinika"@cs,
+        "Hematinics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029976> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB33> ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "2X2.5GM+SET"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Intravenózní podání"@cs ;
+    ns1:hasStrength "2.5GM/LAH"^^xsd:string ;
+    ns1:hasTitleSupplement "INF PLV SOL 2X2.5GM+SET"@cs ;
+    ns1:title "CYANOKIT 2,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYANOKIT-2-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB33> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010744> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029976> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CYANOKIT 2,5 G"@cs .
+
+

@@ -1,0 +1,100 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N05AD08> a ns1:ATCConcept ;
+    skos:notation "N05AD08" ;
+    skos:prefLabel "Droperidol"@cs,
+        "Droperidol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0006807> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A butyrophenone with general properties similar to those of HALOPERIDOL. It is used in conjunction with an opioid analgesic such as FENTANYL to maintain the patient in a calm state of neuroleptanalgesia with indifference to surroundings but still able to cooperate with the surgeon. It is also used as a premedicant, as an antiemetic, and for the control of agitation in acute psychoses. (From Martindale, The Extra  Pharmacopoeia, 29th ed, p593)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/XOMOLIX-2-5-MG-ML-INJEKCNI-ROZTOK> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008623>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009816>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009883> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002532>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> ;
+    ns1:title "Droperidol"@cs,
+        "Droperidol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027734> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate DOPAMINE RECEPTORS, thereby blocking the actions of dopamine or exogenous agonists. Many drugs used in the treatment of psychotic disorders (ANTIPSYCHOTIC AGENTS) are dopamine antagonists, although their therapeutic effects may be due to long-term adjustments of the brain rather than to the acute effects of blocking dopamine receptors. Dopamine antagonists have been used for several other clinical purposes including as ANTIEMETICS, in the treatment of Tourette syndrome, and for hiccup. Dopamine receptor blockade is associated with NEUROLEPTIC MALIGNANT SYNDROME.     "@en ;
+    ns1:title "Dopamin - antagonisté"@cs,
+        "Dopamine antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002114> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.     "@en ;
+    ns1:title "Nauzea"@cs,
+        "Nausea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002532> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders in which there is a loss of ego boundaries or a gross impairment in reality testing with delusions or prominent hallucinations. (From DSM-IV, 1994)     "@en ;
+    ns1:title "Psychotické poruchy"@cs,
+        "Psychotic disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000230> a ns1:MechanismOfAction ;
+    ns1:title "Dopamine Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008623> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Epinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008764> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Norepinephrine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009816> a ns1:PhysiologicEffect ;
+    ns1:title "Pulmonary Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009883> a ns1:PhysiologicEffect ;
+    ns1:title "Systemic Venous Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/XOMOLIX-2-5-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N05AD08> ;
+    ns1:title "XOMOLIX 2,5 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+

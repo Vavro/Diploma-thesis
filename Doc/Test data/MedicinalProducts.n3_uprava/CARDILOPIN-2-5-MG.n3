@@ -1,0 +1,116 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C08> a ns1:ATCConcept ;
+    dcterms:title "Blokátory kalciových kanálů"@cs,
+        "CALCIUM CHANNEL BLOCKERS"@en ;
+    skos:notation "C08" .
+
+<http://linked.opendata.cz/resource/ATC/C08C> a ns1:ATCConcept ;
+    dcterms:title "Selektivní blokátory kalciových kanálů s přev. vaskulár. účinkem"@cs,
+        "SELECTIVE CALCIUM CHANNEL BLOCKERS WITH MAINLY VASCULAR EFECT"@en ;
+    skos:notation "C08C" .
+
+<http://linked.opendata.cz/resource/ATC/C08CA> a ns1:ATCConcept ;
+    dcterms:title "Dihypropyridinové deriváty"@cs,
+        "Dihydropyridine derivatives"@en ;
+    skos:notation "C08CA" .
+
+<http://linked.opendata.cz/resource/ATC/C08CA01> a ns1:ATCConcept ;
+    dcterms:title "Amlodipin"@cs,
+        "Amlodipine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C08>,
+        <http://linked.opendata.cz/resource/ATC/C08C>,
+        <http://linked.opendata.cz/resource/ATC/C08CA> ;
+    skos:notation "C08CA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> ;
+    ns1:description "A long-acting dihydropyridine calcium channel blocker. It is effective in the treatment of ANGINA PECTORIS and HYPERTENSION.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Amlodipin"@cs,
+        "Amlodipine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003165> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that act by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools. Since they are inducers of vascular and other smooth muscle relaxation, they are used in the drug therapy of hypertension and cerebrovascular spasms, as myocardial protective agents, and in the relaxation of uterine spasms.     "@en ;
+    ns1:title "Blokátory kalciových kanálů"@cs,
+        "Calcium channel blockers"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003997> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C08CA01> ;
+    ns1:hasIndication """Amlodipin je indikován k léčbě hypertenze a u většiny pacientů může být pro kontrolu krevního tlaku užíván v monoterapii. Přidání amlodipinu může být prospěšné i u těch pacientů, u nichž se nepodařilo dosáhnout adekvátní kontroly krevního tlaku jednotlivým antihypertenzivem; amlodipin lze užít v kombinaci s thiazidovými diuretiky, alfa-blokátory, blokátory beta-adrenergních receptorů nebo inhibitory angiotensin konvertujícího enzymu.
+Amlodipin je indikován rovněž k profylaktické léčbě stabilní anginy pectoris nebo Prinzmetalovy (variantní) anginy pectoris. Amlodipin lze užít i v těch případech, kdy na vazospastickou/ vazokonstrikční komponentu lze usuzovat na základě klinického stavu, aniž by vazospasmus či vazokonstrikce byly prokázány. Amlodipin lze užít jako monoterapii nebo v kombinaci s dalšími antianginózními přípravky i u pacientů s anginou pectoris refrakterní vůči nitrátům anebo vůči blokátorům beta-adrenergních receptorů v adekvátních dávkách.
+Přípravek je určen k léčbě dospělých pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasMaximalPrice "44.1899986267"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "45.6899986267"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC126962_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "CARDILOPIN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150655> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C08CA01> ;
+    ns1:hasBreakMarketingDate "2013-02-01"^^xsd:date ;
+    ns1:hasIndication """Amlodipin je indikován k léčbě hypertenze a u většiny pacientů může být pro kontrolu krevního tlaku užíván v monoterapii. Přidání amlodipinu může být prospěšné i u těch pacientů, u nichž se nepodařilo dosáhnout adekvátní kontroly krevního tlaku jednotlivým antihypertenzivem; amlodipin lze užít v kombinaci s thiazidovými diuretiky, alfa-blokátory, blokátory beta-adrenergních receptorů nebo inhibitory angiotensin konvertujícího enzymu.
+Amlodipin je indikován rovněž k profylaktické léčbě stabilní anginy pectoris nebo Prinzmetalovy (variantní) anginy pectoris. Amlodipin lze užít i v těch případech, kdy na vazospastickou/ vazokonstrikční komponentu lze usuzovat na základě klinického stavu, aniž by vazospasmus či vazokonstrikce byly prokázány. Amlodipin lze užít jako monoterapii nebo v kombinaci s dalšími antianginózními přípravky i u pacientů s anginou pectoris refrakterní vůči nitrátům anebo vůči blokátorům beta-adrenergních receptorů v adekvátních dávkách.
+Přípravek je určen k léčbě dospělých pacientů.
+"""@cs ;
+    ns1:hasIndicationGroup "VASODILATANTIA"@cs ;
+    ns1:hasMaximalPrice "368.790008545"^^xsd:float ;
+    ns1:hasPackagingSize "90"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "137.080001831"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-04-19"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC126962_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 90X2.5MG"@cs ;
+    ns1:title "CARDILOPIN 2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CARDILOPIN-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C08CA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026284> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003997>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150655> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CARDILOPIN 2,5 MG"@cs .
+
+

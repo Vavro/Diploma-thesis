@@ -10,8 +10,9 @@ namespace VirtuosoBulkInsertn3
 {
     class Program
     {
-        const string IngredientsPath = @"..\..\..\..\Ingredients.n3";
-        const string MedicinalProductsPath = @"..\..\..\..\MedicinalProducts.n3";
+        //path that is accessible to the virtuoso server
+        const string IngredientsPath = @"d:\School\Diplomka\Instalatory\virtuoso-opensource\database\Ingredients.n3_uprava";
+        const string MedicinalProductsPath = @"d:\School\Diplomka\Instalatory\virtuoso-opensource\database\MedicinalProducts.n3_uprava";
 
         static void Main(string[] args)
         {
@@ -50,20 +51,13 @@ namespace VirtuosoBulkInsertn3
 
         private static int InsertN3File(FileInfo inputFile, string graph, VirtuosoConnection connection)
         {
-            string fileContent;
-            using (var reader = new StreamReader(inputFile.FullName, Encoding.UTF8))
-            {
-                fileContent = reader.ReadToEnd();
-            }
-
-
             var insertTripleCommandString =
-                @"DB.DBA.TTLP_MT (@fileContent, '', @graph)";
+                @"DB.DBA.TTLP_MT (file_to_string_output(@fileName), '', @graph)";
 
             var cmd = new VirtuosoCommand();
             cmd.CommandText = insertTripleCommandString;
-            cmd.Parameters.Add("fileContent", VirtDbType.VarChar);
-            cmd.Parameters["fileContent"].Value = fileContent;
+            cmd.Parameters.Add("fileName", VirtDbType.VarChar);
+            cmd.Parameters["fileName"].Value = inputFile.FullName;
             cmd.Parameters.Add("graph", VirtDbType.VarChar);
             cmd.Parameters["graph"].Value = graph;
             cmd.Connection = connection;

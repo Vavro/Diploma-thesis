@@ -1,0 +1,151 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R02AA06> a ns1:ATCConcept ;
+    skos:notation "R02AA06" ;
+    skos:prefLabel "Cetylpyridin"@cs,
+        "Cetylpyridinium"@en .
+
+<http://linked.opendata.cz/resource/ATC/R02AA20> a ns1:ATCConcept ;
+    skos:notation "R02AA20" ;
+    skos:prefLabel "Různá jiná krční antiseptika"@cs,
+        "Various"@en .
+
+<http://linked.opendata.cz/resource/ATC/V11> a ns1:ATCConcept ;
+    skos:notation "V11" ;
+    skos:prefLabel "Fytofarmaka a živočišné produkty (česká ATC skupina)"@cs,
+        "PHYTOPHARMATIC"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002353> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000524>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A surface anesthetic that acts by preventing transmission of impulses along nerve fibers and at nerve endings.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/HERBADENT-MASAZNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HEXORAL-PASTILKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-JAHODY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-MED-A-CITRON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-MENTHOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-SPRAY> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000635>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001038>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001257>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001493>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001530>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002265>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002266>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002512>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002984>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003905> ;
+    ns1:title "Benzokain"@cs,
+        "Benzocaine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000524> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections by bacteria, general or unspecified.     "@en ;
+    ns1:title "Bakteriální infekce"@cs,
+        "Bacterial infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000635> a ns1:DiseaseOrFinding ;
+    ns1:description "Injuries to tissues caused by contact with heat, steam, chemicals (BURNS, CHEMICAL), electricity (BURNS, ELECTRIC), or the like.     "@en ;
+    ns1:title "Popálení"@cs,
+        "Burns"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001038> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the ear.     "@en ;
+    ns1:title "Bolest ucha"@cs,
+        "Earache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001257> a ns1:DiseaseOrFinding ;
+    ns1:description "A painful linear ulcer at the margin of the anus. It appears as a crack or slit in the mucous membrane of the anus and is very painful and difficult to heal. (Dorland, 27th ed & Stedman, 25th ed)     "@en ;
+    ns1:title "Fissura ani"@cs,
+        "Fissure in ano"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001493> a ns1:DiseaseOrFinding ;
+    ns1:description "Swollen veins in the lower part of the RECTUM or ANUS. Hemorrhoids can be inside the anus (internal), under the skin around the anus (external), or protruding from inside to outside of the anus. People with hemorrhoids may or may not exhibit symptoms which include bleeding, itching, and pain.     "@en ;
+    ns1:title "Hemoroidy"@cs,
+        "Hemorrhoids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001530> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of acute infections caused by herpes simplex virus type 1 or type 2 that is characterized by the development of one or more small fluid-filled vesicles with a raised erythematous base on the skin or mucous membrane. It occurs as a primary infection or recurs due to a reactivation of a latent infection. (Dorland, 27th ed.)     "@en ;
+    ns1:title "Herpes simplex"@cs,
+        "Herpes simplex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002265> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the OUTER EAR including the external EAR CANAL, cartilages of the auricle (EAR CARTILAGE), and the TYMPANIC MEMBRANE.     "@en ;
+    ns1:title "Otitis externa"@cs,
+        "Otitis externa"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002266> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the MIDDLE EAR including the AUDITORY OSSICLES and the EUSTACHIAN TUBE.     "@en ;
+    ns1:title "Otitis media"@cs,
+        "Otitis media"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002512> a ns1:DiseaseOrFinding ;
+    ns1:description "An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.     "@en ;
+    ns1:title "Pruritus"@cs,
+        "Pruritus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003905> a ns1:DiseaseOrFinding ;
+    ns1:description "A loss of mucous substance of the mouth showing local excavation of the surface, resulting from the sloughing of inflammatory necrotic tissue. It is the result of a variety of causes, e.g., denture irritation, aphthous stomatitis (STOMATITIS, APHTHOUS); NOMA; necrotizing gingivitis (GINGIVITIS, NECROTIZING ULCERATIVE); TOOTHBRUSHING; and various irritants. (From Jablonski, Dictionary of Dentistry, 1992, p842)     "@en ;
+    ns1:title "Ústa - vředy"@cs,
+        "Oral ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000180> a ns1:MechanismOfAction ;
+    ns1:title "Sodium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sensory-Somatic Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HERBADENT-MASAZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V11> ;
+    ns1:title "HERBADENT MASÁŽNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HEXORAL-PASTILKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "HEXORAL PASTILKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-JAHODY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA06> ;
+    ns1:title "NEOSEPTOLETE DUO JAHODY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-MED-A-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA06> ;
+    ns1:title "NEOSEPTOLETE DUO MED A CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-MENTHOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA06> ;
+    ns1:title "NEOSEPTOLETE DUO MENTHOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEOSEPTOLETE-DUO-SPRAY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA06> ;
+    ns1:title "NEOSEPTOLETE DUO SPRAY"@cs .
+
+

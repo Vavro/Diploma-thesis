@@ -1,0 +1,146 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A07EC02> a ns1:ATCConcept ;
+    skos:notation "A07EC02" ;
+    skos:prefLabel "Mesalazin"@cs,
+        "Mesalazine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029386> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An anti-inflammatory agent, structurally related to the SALICYLATES, which is active in INFLAMMATORY BOWEL DISEASE. It is considered to be the active moiety of SULPHASALAZINE. (From Martindale, The Extra Pharmacopoeia, 30th ed)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-400>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-800>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-ENEMA-4-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEZAVANT-1200-MG-ENTEROSOLVENTNI-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-1-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SACHET-2-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SLOW-RELEASE-TABLETS-1-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SLOW-RELEASE-TABLETS-500-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-1-G-CIPKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-4-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SALOZINAL-500-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000806>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002493>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002746> ;
+    ns1:title "Mesalamin"@cs,
+        "Mesalamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000806> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON section of the large intestine (INTESTINE, LARGE), usually with symptoms such as DIARRHEA (often with blood and mucus), ABDOMINAL PAIN, and FEVER.     "@en ;
+    ns1:title "Kolitida"@cs,
+        "Colitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002493> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the MUCOUS MEMBRANE of the RECTUM, the distal end of the large intestine (INTESTINE, LARGE).     "@en ;
+    ns1:title "Proktitida"@cs,
+        "Proctitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002746> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes in the SIGMOID COLON region of the large intestine (INTESTINE, LARGE).     "@en ;
+    ns1:title "Sigmoideum - nemoci"@cs,
+        "Sigmoid diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008681> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Leukotriene Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008832> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Aggregation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "ASACOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "ASACOL 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-800> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "ASACOL 800"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASACOL-ENEMA-4-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "ASACOL ENEMA 4 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEZAVANT-1200-MG-ENTEROSOLVENTNI-TABLETY-S-PRODLOUZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "MEZAVANT 1200 MG ENTEROSOLVENTNÍ TABLETY S PRODLOUŽENÝM UVOLŇOVÁNÍM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "PENTASA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "PENTASA 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SACHET-2-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "PENTASA SACHET 2 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SLOW-RELEASE-TABLETS-1-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "PENTASA SLOW RELEASE TABLETS 1 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENTASA-SLOW-RELEASE-TABLETS-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "PENTASA SLOW RELEASE TABLETS 500 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-1-G-CIPKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "SALOFALK 1 G ČÍPKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-4-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "SALOFALK 4 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SALOFALK-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "SALOFALK 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SALOZINAL-500-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07EC02> ;
+    ns1:title "SALOZINAL 500 MG"@cs .
+
+

@@ -1,0 +1,152 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09A> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE INHIBITORS, PLAIN"@en ;
+    skos:notation "C09A" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA> a ns1:ATCConcept ;
+    dcterms:title "ACE inhibitory, samotné"@cs,
+        "ACE inhibitors, plain"@en ;
+    skos:notation "C09AA" .
+
+<http://linked.opendata.cz/resource/ATC/C09AA10> a ns1:ATCConcept ;
+    dcterms:title "Trandolapril"@cs,
+        "Trandolapril"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C09>,
+        <http://linked.opendata.cz/resource/ATC/C09A>,
+        <http://linked.opendata.cz/resource/ATC/C09AA> ;
+    skos:notation "C09AA10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0147889> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000415>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Trandolapril"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000415> a ns1:DiseaseOrFinding ;
+    ns1:title "Angioedém"@cs,
+        "Angioedema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083729> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA10> ;
+    ns1:hasIndication """Esenciální hypertenze  
+Dysfunkce levé komory po infarktu myokardu
+	Bylo prokázáno, že trandolapril zlepšuje přežívání po infarktu myokardu u pacientů s dysfunkcí levé komory (ejekční frakce ( 35%) s projevy srdečního selhávání i bez nich a/s reziduální ischemií i bez ní.  
+	Dlouhodobá léčba trandolaprilem významně snižuje celkovou kardiovaskulární mortalitu.  
+	Významně se snižuje riziko náhlé smrti a výskyt těžkého či rezistentního srdečního selhání. 
+Symptomatická léčba městnavého srdečního selhávání  
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152960_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 20X0.5MG"@cs ;
+    ns1:title "GOPTEN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083934> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA10> ;
+    ns1:hasIndication """Esenciální hypertenze  
+Dysfunkce levé komory po infarktu myokardu
+	Bylo prokázáno, že trandolapril zlepšuje přežívání po infarktu myokardu u pacientů s dysfunkcí levé komory (ejekční frakce ( 35%) s projevy srdečního selhávání i bez nich a/s reziduální ischemií i bez ní.  
+	Dlouhodobá léčba trandolaprilem významně snižuje celkovou kardiovaskulární mortalitu.  
+	Významně se snižuje riziko náhlé smrti a výskyt těžkého či rezistentního srdečního selhání. 
+Symptomatická léčba městnavého srdečního selhávání  
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152960_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 50X0.5MG"@cs ;
+    ns1:title "GOPTEN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083935> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA10> ;
+    ns1:hasIndication """Esenciální hypertenze  
+Dysfunkce levé komory po infarktu myokardu
+	Bylo prokázáno, že trandolapril zlepšuje přežívání po infarktu myokardu u pacientů s dysfunkcí levé komory (ejekční frakce ( 35%) s projevy srdečního selhávání i bez nich a/s reziduální ischemií i bez ní.  
+	Dlouhodobá léčba trandolaprilem významně snižuje celkovou kardiovaskulární mortalitu.  
+	Významně se snižuje riziko náhlé smrti a výskyt těžkého či rezistentního srdečního selhání. 
+Symptomatická léčba městnavého srdečního selhávání  
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152960_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 100X0.5MG"@cs ;
+    ns1:title "GOPTEN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0100480> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA10> ;
+    ns1:hasIndication """Esenciální hypertenze  
+Dysfunkce levé komory po infarktu myokardu
+	Bylo prokázáno, že trandolapril zlepšuje přežívání po infarktu myokardu u pacientů s dysfunkcí levé komory (ejekční frakce ( 35%) s projevy srdečního selhávání i bez nich a/s reziduální ischemií i bez ní.  
+	Dlouhodobá léčba trandolaprilem významně snižuje celkovou kardiovaskulární mortalitu.  
+	Významně se snižuje riziko náhlé smrti a výskyt těžkého či rezistentního srdečního selhání. 
+Symptomatická léčba městnavého srdečního selhávání  
+"""@cs ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasMaximalPrice "89.4599990845"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "53.1500015259"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2012-12-13"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC152960_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR CPS DUR 28X0.5MG"@cs ;
+    ns1:title "GOPTEN 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GOPTEN-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09AA10> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0147889> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083729>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083934>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0083935>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0100480> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "GOPTEN 0,5 MG"@cs .
+
+

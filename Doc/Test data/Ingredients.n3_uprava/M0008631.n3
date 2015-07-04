@@ -1,0 +1,175 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D11AF> a ns1:ATCConcept ;
+    skos:notation "D11AF" ;
+    skos:prefLabel "Přípravky pro léčbu bradavic a kuřích ok"@cs,
+        "Wart and anti-corn preparations"@en .
+
+<http://linked.opendata.cz/resource/ATC/L01BC02> a ns1:ATCConcept ;
+    skos:notation "L01BC02" ;
+    skos:prefLabel "Fluorouracil"@cs,
+        "Fluorouracil"@en .
+
+<http://linked.opendata.cz/resource/ATC/L01BC52> a ns1:ATCConcept ;
+    skos:notation "L01BC52" ;
+    skos:prefLabel "Fluorouracil, kombinace"@cs,
+        "Fluorouracil, combinations"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0008631> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002196>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A pyrimidine analog that is an antineoplastic antimetabolite. It interferes with DNA synthesis by blocking the THYMIDYLATE SYNTHETASE conversion of deoxyuridylic acid to thymidylic acid.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000098> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/5-FLUOROURACIL-EBEWE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACTIKERALL-5-MG-G---100-MG-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROURACIL-ACCORD-50-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROURACIL-HOSPIRA-50-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VERRUMAL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000612>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000664>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000667>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000813>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001416>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001741>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002288>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002580>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002828> ;
+    ns1:title "Fluorouracil"@cs,
+        "Fluorouracil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001470> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are chemically similar to naturally occurring metabolites, but differ enough to interfere with normal metabolic pathways. (From AMA Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Antimetabolity"@cs,
+        "Antimetabolites"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000612> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the human BREAST.     "@en ;
+    ns1:title "Nádory prsu"@cs,
+        "Breast neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000664> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm made up of epithelial cells tending to infiltrate the surrounding tissues and give rise to metastases. It is a histological type of neoplasm but is often wrongly used as a synonym for \"cancer.\" (From Dorland, 27th ed)     "@en ;
+    ns1:title "Karcinom"@cs,
+        "Carcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000667> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant skin neoplasm that seldom metastasizes but has potentialities for local invasion and destruction. Clinically it is divided into types: nodular, cicatricial, morphaic, and erythematoid (pagetoid). They develop on hair-bearing skin, most commonly on sun-exposed areas. Approximately 85% are found on the head and neck area and the remaining 15% on the trunk and limbs. (From DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, p1471)     "@en ;
+    ns1:title "Karcinom bazocelulární"@cs,
+        "Carcinoma, basal cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000813> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the COLON.     "@en ;
+    ns1:title "Kolon - nádory"@cs,
+        "Colonic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001416> a ns1:DiseaseOrFinding ;
+    ns1:description "Soft tissue tumors or cancer arising from the mucosal surfaces of the LIP; oral cavity; PHARYNX; LARYNX; and cervical esophagus. Other sites included are the NOSE and PARANASAL SINUSES; SALIVARY GLANDS; THYROID GLAND and PARATHYROID GLANDS; and MELANOMA and non-melanoma skin cancers of the head and neck. (from Holland et al., Cancer Medicine, 4th ed, p1651)     "@en ;
+    ns1:title "Nádory hlavy a krku"@cs,
+        "Head and neck neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001741> a ns1:DiseaseOrFinding ;
+    ns1:description "Any horny growth such as a wart or callus.     "@en ;
+    ns1:title "Keratóza"@cs,
+        "Keratosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002196> a ns1:DiseaseOrFinding ;
+    ns1:description "Disorders caused by nutritional imbalance, either overnutrition or undernutrition.     "@en ;
+    ns1:title "Poruchy výživy"@cs,
+        "Nutrition disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002288> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PANCREAS. Depending on the types of ISLET CELLS present in the tumors, various hormones can be secreted: GLUCAGON from PANCREATIC ALPHA CELLS; INSULIN from PANCREATIC BETA CELLS; and SOMATOSTATIN from the SOMATOSTATIN-SECRETING CELLS. Most are malignant except the insulin-producing tumors (INSULINOMA).     "@en ;
+    ns1:title "Nádory slinivky břišní"@cs,
+        "Pancreatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002580> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the RECTUM.     "@en ;
+    ns1:title "Nádory rekta"@cs,
+        "Rectal neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002828> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the STOMACH.     "@en ;
+    ns1:title "Nádory žaludku"@cs,
+        "Stomach neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000098> a ns1:MechanismOfAction ;
+    ns1:title "Thymidylate Synthetase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008852> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased RNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/5-FLUOROURACIL-EBEWE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BC02> ;
+    ns1:title "5-FLUOROURACIL \"EBEWE\""@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACTIKERALL-5-MG-G---100-MG-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BC52> ;
+    ns1:title "ACTIKERALL 5 MG/G + 100 MG/G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROURACIL-ACCORD-50-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BC02> ;
+    ns1:title "FLUOROURACIL ACCORD 50 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FLUOROURACIL-HOSPIRA-50-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BC02> ;
+    ns1:title "FLUOROURACIL HOSPIRA 50 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VERRUMAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AF> ;
+    ns1:title "VERRUMAL"@cs .
+
+

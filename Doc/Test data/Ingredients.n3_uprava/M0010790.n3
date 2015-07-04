@@ -1,0 +1,180 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01XX05> a ns1:ATCConcept ;
+    skos:notation "L01XX05" ;
+    skos:prefLabel "Hydroxymočovina"@cs,
+        "Hydroxycarbamide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010790> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antineoplastic agent that inhibits DNA synthesis through the inhibition of ribonucleoside diphosphate reductase.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000212> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/LITALIR>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIKLOS-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SIKLOS-1000-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001501>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000609>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000676>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000678>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001416>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001832>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001969>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002274>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002454>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002500>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002526>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002931>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003093>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003261>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003620> ;
+    ns1:title "Hydroxymočovina"@cs,
+        "Hydroxyurea"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001501> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used to prevent or reverse the pathological events leading to sickling of erythrocytes in sickle cell conditions.     "@en ;
+    ns1:title "Antianemika"@cs,
+        "Antisickling agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000609> a ns1:DiseaseOrFinding ;
+    ns1:description "Neoplasms of the intracranial components of the central nervous system, including the cerebral hemispheres, basal ganglia, hypothalamus, thalamus, brain stem, and cerebellum. Brain neoplasms are subdivided into primary (originating from brain tissue) and secondary (i.e., metastatic) forms. Primary neoplasms are subdivided into benign and malignant forms. In general, brain tumors may also be classified by age of onset, histologic type, or presenting location in the brain.     "@en ;
+    ns1:title "Nádory mozku"@cs,
+        "Brain neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000676> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous aggregate of at least three distinct histological types of lung cancer, including SQUAMOUS CELL CARCINOMA; ADENOCARCINOMA; and LARGE CELL CARCINOMA. They are dealt with collectively because of their shared treatment strategy.     "@en ;
+    ns1:title "Karcinom plic nemalobuněčný"@cs,
+        "Carcinoma, non-small-cell lung"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000678> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of sporadic or hereditary carcinoma derived from cells of the KIDNEYS. There are several subtypes including the clear cells, the papillary, the chromophobe, the collecting duct, the spindle cells (sarcomatoid), or mixed cell-type carcinoma.     "@en ;
+    ns1:title "Karcinom z renálních buněk"@cs,
+        "Carcinoma, renal cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001416> a ns1:DiseaseOrFinding ;
+    ns1:description "Soft tissue tumors or cancer arising from the mucosal surfaces of the LIP; oral cavity; PHARYNX; LARYNX; and cervical esophagus. Other sites included are the NOSE and PARANASAL SINUSES; SALIVARY GLANDS; THYROID GLAND and PARATHYROID GLANDS; and MELANOMA and non-melanoma skin cancers of the head and neck. (from Holland et al., Cancer Medicine, 4th ed, p1651)     "@en ;
+    ns1:title "Nádory hlavy a krku"@cs,
+        "Head and neck neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001832> a ns1:DiseaseOrFinding ;
+    ns1:description "A transient increase in the number of leukocytes in a body fluid.     "@en ;
+    ns1:title "Leukocytóza"@cs,
+        "Leukocytosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001969> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant neoplasm derived from cells that are capable of forming melanin, which may occur in the skin of any part of the body, in the eye, or, rarely, in the mucous membranes of the genitalia, anus, oral cavity, or other sites. It occurs mostly in adults and may originate de novo or from a pigmented nevus or malignant lentigo. Melanomas frequently metastasize widely, and the regional lymph nodes, liver, lungs, and brain are likely to be involved. The incidence of malignant skin melanomas is rising rapidly in all parts of the world. (Stedman, 25th ed; from Rook et al., Textbook of Dermatology, 4th ed, p2445)     "@en ;
+    ns1:title "Melanom"@cs,
+        "Melanoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002274> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the OVARY. These neoplasms can be benign or malignant. They are classified according to the tissue of origin, such as the surface EPITHELIUM, the stromal endocrine cells, and the totipotent GERM CELLS.     "@en ;
+    ns1:title "Nádory vaječníků"@cs,
+        "Ovarian neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002454> a ns1:DiseaseOrFinding ;
+    ns1:description "A myeloproliferative disorder of unknown etiology, characterized by abnormal proliferation of all hematopoietic bone marrow elements and an absolute increase in red cell mass and total blood volume, associated frequently with splenomegaly, leukocytosis, and thrombocythemia. Hematopoiesis is also reactive in extramedullary sites (liver and spleen). In time myelofibrosis occurs.     "@en ;
+    ns1:title "Polycythemia vera"@cs,
+        "Polycythemia vera"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002500> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the PROSTATE.     "@en ;
+    ns1:title "Prostata - nádory"@cs,
+        "Prostatic neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002931> a ns1:DiseaseOrFinding ;
+    ns1:description "A clinical syndrome characterized by repeated spontaneous hemorrhages and a remarkable increase in the number of circulating platelets.     "@en ;
+    ns1:title "Esenciální trombocytemie"@cs,
+        "Thrombocythemia, essential"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003093> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the UTERUS.     "@en ;
+    ns1:title "Uterus - nádory"@cs,
+        "Uterine neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003261> a ns1:DiseaseOrFinding ;
+    ns1:description "Clonal hematopoetic disorder caused by an acquired genetic defect in PLURIPOTENT STEM CELLS. It starts in MYELOID CELLS of the bone marrow, invades the blood and then other organs. The condition progresses from a stable, more indolent, chronic phase (LEUKEMIA, MYELOID, CHRONIC PHASE) lasting up to 7 years, to an advanced phase composed of an accelerated phase (LEUKEMIA, MYELOID, ACCELERATED PHASE) and BLAST CRISIS.     "@en ;
+    ns1:title "Chronická myeloidní leukemie"@cs,
+        "Leukemia, myelogenous, chronic, bcr-abl positive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003620> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders with the common feature of prolonged eosinophilia of unknown cause and associated organ system dysfunction, including the heart, central nervous system, kidneys, lungs, gastrointestinal tract, and skin. There is a massive increase in the number of EOSINOPHILS in the blood, mimicking leukemia, and extensive eosinophilic infiltration of the various organs. It is often referred to as idiopathic.     "@en ;
+    ns1:title "Hypereozinofilní syndrom"@cs,
+        "Hypereosinophilic syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000212> a ns1:MechanismOfAction ;
+    ns1:title "Ribonucleotide Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LITALIR> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XX05> ;
+    ns1:title "LITALIR"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIKLOS-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XX05> ;
+    ns1:title "SIKLOS 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SIKLOS-1000-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XX05> ;
+    ns1:title "SIKLOS 1000 MG"@cs .
+
+

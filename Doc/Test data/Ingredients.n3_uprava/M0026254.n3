@@ -1,0 +1,162 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A04AA01> a ns1:ATCConcept ;
+    skos:notation "A04AA01" ;
+    skos:prefLabel "Ondansetron"@cs,
+        "Ondansetron"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026254> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A competitive serotonin type 3 receptor antagonist. It is effective in the treatment of nausea and vomiting caused by cytotoxic chemotherapy drugs, including cisplatin, and has reported anxiolytic and neuroleptic properties.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000090> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/NOVETRON-8-MG-DISPERGOVATELNE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-ACCORD-2MG-ML-INJEKCNI-INFUZNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-ARDEZ>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-B--BRAUN-2-MG-ML-INJEKCNI-ROZTOK>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-KABI-2-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-RATIOPHARM-RAPID-8-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-SANDOZ-8-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-TEVA-8-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-8-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-ZYDIS-4-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-ZYDIS-8-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008502>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008822>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009034> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000353>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002114>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003141>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004075> ;
+    ns1:title "Ondansetron"@cs,
+        "Ondansetron"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001391> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent NAUSEA or VOMITING.     "@en ;
+    ns1:title "Antiemetika"@cs,
+        "Antiemetics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> a ns1:PharmacologicalAction ;
+    ns1:description "Agents, usually topical, that relieve itching (pruritus).     "@en ;
+    ns1:title "Antipruritika"@cs,
+        "Antipruritics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate serotonin receptors, thereby blocking the actions of serotonin or SEROTONIN RECEPTOR AGONISTS.     "@en ;
+    ns1:title "Serotonin - antagonisté"@cs,
+        "Serotonin antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021770> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect. They are used in SCHIZOPHRENIA; senile dementia; transient psychosis following surgery; or MYOCARDIAL INFARCTION; etc. These drugs are often referred to as neuroleptics alluding to the tendency to produce neurological side effects, but not all antipsychotics are likely to produce such effects. Many of these drugs may also be effective against nausea, emesis, and pruritus.     "@en ;
+    ns1:title "Antipsychotika"@cs,
+        "Antipsychotic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021771> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that alleviate ANXIETY, tension, and ANXIETY DISORDERS, promote sedation, and have a calming effect without affecting clarity of consciousness or neurologic conditions. ADRENERGIC BETA-ANTAGONISTS are commonly used in the symptomatic treatment of anxiety but are not included here.     "@en ;
+    ns1:title "Trankvilizéry malé"@cs,
+        "Anti-anxiety agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000353> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary, chronic disease with genetic, psychosocial, and environmental factors influencing its development and manifestations. The disease is often progressive and fatal. It is characterized by impaired control over drinking, preoccupation with the drug alcohol, use of alcohol despite adverse consequences, and distortions in thinking, most notably denial. Each of these symptoms may be continuous or periodic. (Morse & Flavin for the Joint Commission of the National Council on Alcoholism and Drug Dependence and the American Society of Addiction Medicine to Study the Definition and Criteria for the Diagnosis of Alcoholism: in JAMA 1992;268:1012-4)     "@en ;
+    ns1:title "Alkoholismus"@cs,
+        "Alcoholism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002114> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation in the stomach usually accompanied by the urge to vomit. Common causes are early pregnancy, sea and motion sickness, emotional stress, intense pain, food poisoning, and various enteroviruses.     "@en ;
+    ns1:title "Nauzea"@cs,
+        "Nausea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003141> a ns1:DiseaseOrFinding ;
+    ns1:description "The forcible expulsion of the contents of the STOMACH through the MOUTH.     "@en ;
+    ns1:title "Zvracení"@cs,
+        "Vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004075> a ns1:DiseaseOrFinding ;
+    ns1:description "Emesis and queasiness occurring after anesthesia.     "@en ;
+    ns1:title "Pooperační nevolnost a zvracení"@cs,
+        "Postoperative nausea and vomiting"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000090> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin 5HT-3 Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008502> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Central Nervous System Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008822> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Peripheral Nervous System Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009034> a ns1:PhysiologicEffect ;
+    ns1:title "Emesis Suppression"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NOVETRON-8-MG-DISPERGOVATELNE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "NOVETRON 8 MG DISPERGOVATELNÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-ACCORD-2MG-ML-INJEKCNI-INFUZNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON ACCORD 2MG/ML INJEKČNÍ/INFUZNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-ARDEZ> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON ARDEZ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-B--BRAUN-2-MG-ML-INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON B. BRAUN 2 MG/ML INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-KABI-2-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON KABI 2 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-RATIOPHARM-RAPID-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON-RATIOPHARM RAPID 8 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-SANDOZ-8-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON SANDOZ 8 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ONDANSETRON-TEVA-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ONDANSETRON-TEVA 8 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ZOFRAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ZOFRAN 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ZOFRAN 8 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-ZYDIS-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ZOFRAN ZYDIS 4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ZOFRAN-ZYDIS-8-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AA01> ;
+    ns1:title "ZOFRAN ZYDIS 8 MG"@cs .
+
+

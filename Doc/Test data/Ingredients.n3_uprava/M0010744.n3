@@ -1,0 +1,85 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V03AB33> a ns1:ATCConcept ;
+    skos:notation "V03AB33" ;
+    skos:prefLabel "Hydroxokobalamin"@cs,
+        "Hydroxocobalamin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010744> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Injectable form of VITAMIN B 12 that has been used therapeutically to treat VITAMIN B 12 DEFICIENCY.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CYANOKIT-2-5-G>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYANOKIT-5-G> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003133> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000396>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000958>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002052>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004089> ;
+    ns1:title "Hydroxokobalamin"@cs,
+        "Hydroxocobalamin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010039> a ns1:PharmacologicalAction ;
+    ns1:description "Agents which improve the quality of the blood, increasing the hemoglobin level and the number of erythrocytes. They are used in the treatment of anemias.     "@en ;
+    ns1:title "Hematinika"@cs,
+        "Hematinics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022792> a ns1:PharmacologicalAction ;
+    ns1:description "A group of water-soluble vitamins, some of which are COENZYMES.     "@en ;
+    ns1:title "Vitamin b komplex"@cs,
+        "Vitamin b complex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000396> a ns1:DiseaseOrFinding ;
+    ns1:description "A megaloblastic anemia occurring in children but more commonly in later life, characterized by histamine-fast achlorhydria, in which the laboratory and clinical manifestations are based on malabsorption of vitamin B 12 due to a failure of the gastric mucosa to secrete adequate and potent intrinsic factor. (Dorland, 27th ed)     "@en ;
+    ns1:title "Perniciózní anémie"@cs,
+        "Anemia, pernicious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000958> a ns1:DiseaseOrFinding ;
+    ns1:description "Peripheral, autonomic, and cranial nerve disorders that are associated with DIABETES MELLITUS. These conditions usually result from diabetic microvascular injury involving small blood vessels that supply nerves (VASA NERVORUM). Relatively common conditions which may be associated with diabetic neuropathy include third nerve palsy (see OCULOMOTOR NERVE DISEASES); MONONEUROPATHY; mononeuropathy multiplex; diabetic amyotrophy; a painful POLYNEUROPATHY; autonomic neuropathy; and thoracoabdominal neuropathy. (From Adams et al., Principles of Neurology, 6th ed, p1325)     "@en ;
+    ns1:title "Diabetické neuropatie"@cs,
+        "Diabetic neuropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003133> a ns1:DiseaseOrFinding ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN B 12 in the diet, characterized by megaloblastic anemia. Since vitamin B 12 is not present in plants, humans have obtained their supply from animal products, from multivitamin supplements in the form of pills, and as additives to food preparations. A wide variety of neuropsychiatric abnormalities is also seen in vitamin B 12 deficiency and appears to be due to an undefined defect involving myelin synthesis. (From Cecil Textbook of Medicine, 19th ed, p848)     "@en ;
+    ns1:title "Nedostatek vitaminu b12"@cs,
+        "Vitamin b 12 deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004089> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition where damage to the peripheral nervous system (including the peripheral elements of the autonomic nervous system) is associated with chronic ingestion of alcoholic beverages. The disorder may be caused by a direct effect of alcohol, an associated nutritional deficiency, or a combination of factors. Clinical manifestations include variable degrees of weakness; ATROPHY; PARESTHESIAS; pain; loss of reflexes; sensory loss; diaphoresis; and postural hypotension. (From Arch Neurol 1995;52(1):45-51; Adams et al., Principles of Neurology, 6th ed, p1146)     "@en ;
+    ns1:title "Alkoholická neuropatie"@cs,
+        "Alcoholic neuropathy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYANOKIT-2-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB33> ;
+    ns1:title "CYANOKIT 2,5 G"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYANOKIT-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AB33> ;
+    ns1:title "CYANOKIT 5 G"@cs .
+
+

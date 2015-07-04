@@ -1,0 +1,192 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01B> a ns1:ATCConcept ;
+    dcterms:title "Antimetabolity"@cs,
+        "ANTIMETABOLITES"@en ;
+    skos:notation "L01B" .
+
+<http://linked.opendata.cz/resource/ATC/L01BA> a ns1:ATCConcept ;
+    dcterms:title "Analogy kyseliny listové"@cs,
+        "Folic acid analogues"@en ;
+    skos:notation "L01BA" .
+
+<http://linked.opendata.cz/resource/ATC/L01BA01> a ns1:ATCConcept ;
+    dcterms:title "Methotrexát"@cs,
+        "Methotrexate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L01>,
+        <http://linked.opendata.cz/resource/ATC/L01B>,
+        <http://linked.opendata.cz/resource/ATC/L01BA> ;
+    skos:notation "L01BA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013595> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000575>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001867>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003302>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antineoplastic antimetabolite with immunosuppressant properties. It is an inhibitor of TETRAHYDROFOLATE DEHYDROGENASE and prevents the formation of tetrahydrofolate, necessary for synthesis of thymidylate, an essential component of DNA.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "Methotrexát"@cs,
+        "Methotrexate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0000022> a ns1:PharmacologicalAction ;
+    ns1:description "Non-steroidal chemical compounds with abortifacient activity.     "@en ;
+    ns1:title "Abortiva nesteroidní"@cs,
+        "Abortifacient agents, nonsteroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001471> a ns1:PharmacologicalAction ;
+    ns1:description "Antimetabolites that are useful in cancer chemotherapy.     "@en ;
+    ns1:title "Antimetabolity antitumorózní"@cs,
+        "Antimetabolites, antineoplastic"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to treat or prevent skin disorders or for the routine care of skin.     "@en ;
+    ns1:title "Dermatologické látky"@cs,
+        "Dermatologic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0007520> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction.     "@en ;
+    ns1:title "Enzymy - inhibitory"@cs,
+        "Enzyme inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008662> a ns1:PharmacologicalAction ;
+    ns1:description "Inhibitors of the enzyme, dihydrofolate reductase (TETRAHYDROFOLATE DEHYDROGENASE), which converts dihydrofolate (FH2) to tetrahydrofolate (FH4). They are frequently used in cancer chemotherapy. (From AMA, Drug Evaluations Annual, 1994, p2033)     "@en ;
+    ns1:title "Kyselina listová - antagonisté"@cs,
+        "Folic acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0011171> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress immune function by one of several mechanisms of action. Classical cytotoxic immunosuppressants act by inhibiting DNA synthesis. Others may act through activation of T-CELLS or by inhibiting the activation of HELPER CELLS. While immunosuppression has been brought about in the past primarily to prevent rejection of transplanted organs, new applications involving mediation of the effects of INTERLEUKINS and other CYTOKINES are emerging.     "@en ;
+    ns1:title "Imunosupresiva"@cs,
+        "Immunosuppressive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0027742> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat RHEUMATOID ARTHRITIS.     "@en ;
+    ns1:title "Antirevmatika"@cs,
+        "Antirheumatic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028850> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit cell production of DNA or RNA.     "@en ;
+    ns1:title "Inhibitory syntézy nukleových kyselin"@cs,
+        "Nucleic acid synthesis inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000575> a ns1:DiseaseOrFinding ;
+    ns1:title "Koagulopatie"@cs,
+        "Blood coagulation disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001867> a ns1:DiseaseOrFinding ;
+    ns1:title "Alkoholické nemoci jater"@cs,
+        "Liver diseases, alcoholic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003302> a ns1:DiseaseOrFinding ;
+    ns1:title "Hiv infekce"@cs,
+        "Hiv infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163331> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Přípravek Methotrexate Hospira je indikován k léčbě gestačního choriokarcinomu, destruujícího chorioadenomu a mola hydatidosa. 
+Dále je přípravek Methotrexate Hospira užíván jako monoterapie anebo v kombinaci s dalšími cytostatiky k léčbě akutní lymfoblastické leukémie (udržovací terapie leukémie), pokročilých stadií non-hodgkinských lymfomů, Burkittova lymfomu, epidermoidních karcinomů hlavy a krku a pokročilých stádií mycosis fungoides. 
+Přípravek Methotrexate Hospira je indikován také pro symptomatickou léčbu psoriázy u dospělých, ale vzhledem k závažnému riziku léčby pouze v případech těžké, špatně zvládnutelné psoriázy, která neodpovídá dostatečně na jiné typy léčby. Diagnóza musí být potvrzena biopsií a dermatologickým vyšetřením. Zároveň je důležité vyloučit koincidenci psoriázy s jiným onemocněním ovlivňujícím imunitní odpověď.
+Dále se přípravek Methotrexate Hospira se používá v terapii závažné aktivní revmatoidní artritidy, která neodpovídá na léčbu antirevmatiky první volby, podávanými samostatně nebo v kombinaci s inhibitory prostaglandinsyntetázy. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC115070_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "METHOTREXATE HOSPIRA 2,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163332> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Přípravek Methotrexate Hospira je indikován k léčbě gestačního choriokarcinomu, destruujícího chorioadenomu a mola hydatidosa. 
+Dále je přípravek Methotrexate Hospira užíván jako monoterapie anebo v kombinaci s dalšími cytostatiky k léčbě akutní lymfoblastické leukémie (udržovací terapie leukémie), pokročilých stadií non-hodgkinských lymfomů, Burkittova lymfomu, epidermoidních karcinomů hlavy a krku a pokročilých stádií mycosis fungoides. 
+Přípravek Methotrexate Hospira je indikován také pro symptomatickou léčbu psoriázy u dospělých, ale vzhledem k závažnému riziku léčby pouze v případech těžké, špatně zvládnutelné psoriázy, která neodpovídá dostatečně na jiné typy léčby. Diagnóza musí být potvrzena biopsií a dermatologickým vyšetřením. Zároveň je důležité vyloučit koincidenci psoriázy s jiným onemocněním ovlivňujícím imunitní odpověď.
+Dále se přípravek Methotrexate Hospira se používá v terapii závažné aktivní revmatoidní artritidy, která neodpovídá na léčbu antirevmatiky první volby, podávanými samostatně nebo v kombinaci s inhibitory prostaglandinsyntetázy. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC115070_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 30X2.5MG"@cs ;
+    ns1:title "METHOTREXATE HOSPIRA 2,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163333> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasIndication """Přípravek Methotrexate Hospira je indikován k léčbě gestačního choriokarcinomu, destruujícího chorioadenomu a mola hydatidosa. 
+Dále je přípravek Methotrexate Hospira užíván jako monoterapie anebo v kombinaci s dalšími cytostatiky k léčbě akutní lymfoblastické leukémie (udržovací terapie leukémie), pokročilých stadií non-hodgkinských lymfomů, Burkittova lymfomu, epidermoidních karcinomů hlavy a krku a pokročilých stádií mycosis fungoides. 
+Přípravek Methotrexate Hospira je indikován také pro symptomatickou léčbu psoriázy u dospělých, ale vzhledem k závažnému riziku léčby pouze v případech těžké, špatně zvládnutelné psoriázy, která neodpovídá dostatečně na jiné typy léčby. Diagnóza musí být potvrzena biopsií a dermatologickým vyšetřením. Zároveň je důležité vyloučit koincidenci psoriázy s jiným onemocněním ovlivňujícím imunitní odpověď.
+Dále se přípravek Methotrexate Hospira se používá v terapii závažné aktivní revmatoidní artritidy, která neodpovídá na léčbu antirevmatiky první volby, podávanými samostatně nebo v kombinaci s inhibitory prostaglandinsyntetázy. 
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "281.579986572"^^xsd:float ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "597.760009766"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2011-01-01"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC115070_doc> ;
+    ns1:hasStrength "2.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X2.5MG"@cs ;
+    ns1:title "METHOTREXATE HOSPIRA 2,5 MG TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/METHOTREXATE-HOSPIRA-2-5-MG-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01BA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013595> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163331>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163332>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163333> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:title "METHOTREXATE HOSPIRA 2,5 MG TABLETY"@cs .
+
+

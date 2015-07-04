@@ -1,0 +1,110 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C10AA02> a ns1:ATCConcept ;
+    skos:notation "C10AA02" ;
+    skos:prefLabel "Lovastatin"@cs,
+        "Lovastatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0012707> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003527>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> ;
+    ns1:description "A fungal metabolite isolated from cultures of Aspergillus terreus. The compound is a potent anticholesteremic agent. It inhibits 3-hydroxy-3-methylglutaryl coenzyme A reductase (HYDROXYMETHYLGLUTARYL COA REDUCTASES), which is the rate-limiting enzyme in cholesterol biosynthesis. It also stimulates the production of low-density lipoprotein receptors in the liver.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000121> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOSTATIN-20-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOSTATIN-40-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028567> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008555> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001580>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001592>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001594>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003210>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> ;
+    ns1:title "Lovastatin"@cs,
+        "Lovastatin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used to lower plasma cholesterol levels.     "@en ;
+    ns1:title "Anticholesteremika"@cs,
+        "Anticholesteremic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028567> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that inhibit HMG-CoA reductases. They have been shown to directly lower cholesterol synthesis.     "@en ;
+    ns1:title "Hydroxymethylglutaryl-coa-reduktasa - inhibitory"@cs,
+        "Hydroxymethylglutaryl-coa reductase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of CORONARY ARTERIES that may derive from a congenital abnormality, atherosclerotic, or non-atherosclerotic cause.     "@en ;
+    ns1:title "Koronární artérie - nemoci"@cs,
+        "Coronary artery disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001580> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.     "@en ;
+    ns1:title "Hypercholesterolémie"@cs,
+        "Hypercholesterolemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001592> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with excess LIPIDS in the blood.     "@en ;
+    ns1:title "Hyperlipidémie"@cs,
+        "Hyperlipidemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001594> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with abnormally elevated levels of LIPOPROTEINS in the blood. They may be inherited, acquired, primary, or secondary. Hyperlipoproteinemias are classified according to the pattern of lipoproteins on electrophoresis or ultracentrifugation.     "@en ;
+    ns1:title "Hyperlipoproteinémie"@cs,
+        "Hyperlipoproteinemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003210> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of elevated levels of TRIGLYCERIDES in the blood.     "@en ;
+    ns1:title "Hypertriglyceridémie"@cs,
+        "Hypertriglyceridemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003527> a ns1:DiseaseOrFinding ;
+    ns1:description "Severe inability of the LIVER to perform its normal metabolic functions, as evidenced by severe JAUNDICE and abnormal serum levels of AMMONIA; BILIRUBIN; ALKALINE PHOSPHATASE; ASPARTATE AMINOTRANSFERASE; LACTATE DEHYDROGENASES; and albumin/globulin ratio. (Blakiston's Gould Medical Dictionary, 4th ed)     "@en ;
+    ns1:title "Selhání jater"@cs,
+        "Liver failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000011076> a ns1:DiseaseOrFinding ;
+    ns1:description "The mass or quantity of heaviness of an individual. It is expressed by units of pounds or kilograms.     "@en ;
+    ns1:title "Tělesná hmotnost"@cs,
+        "Body weight"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000121> a ns1:MechanismOfAction ;
+    ns1:title "Hydroxymethylglutaryl-CoA Reductase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008555> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cholesterol Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOSTATIN-20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA02> ;
+    ns1:title "MEDOSTATIN 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MEDOSTATIN-40-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C10AA02> ;
+    ns1:title "MEDOSTATIN 40 MG"@cs .
+
+

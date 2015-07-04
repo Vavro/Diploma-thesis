@@ -1,0 +1,101 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R02AA20> a ns1:ATCConcept ;
+    skos:notation "R02AA20" ;
+    skos:prefLabel "Různá jiná krční antiseptika"@cs,
+        "Various"@en .
+
+<http://linked.opendata.cz/resource/ATC/V11> a ns1:ATCConcept ;
+    skos:notation "V11" ;
+    skos:prefLabel "Fytofarmaka a živočišné produkty (česká ATC skupina)"@cs,
+        "PHYTOPHARMATIC"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013417> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An alcohol produced from mint oils or prepared synthetically.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/AMOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-ANGIN-BEZ-CUKRU>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-ANGIN-SPRAY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTISAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTOLETE> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008297>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001786>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002512>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002761>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002969> ;
+    ns1:title "Menthol"@cs,
+        "Menthol"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> a ns1:PharmacologicalAction ;
+    ns1:description "Agents, usually topical, that relieve itching (pruritus).     "@en ;
+    ns1:title "Antipruritika"@cs,
+        "Antipruritics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001786> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the LARYNGEAL MUCOSA, including the VOCAL CORDS. Laryngitis is characterized by irritation, edema, and reduced pliability of the mucosa leading to VOICE DISORDERS such as APHONIA and HOARSENESS.     "@en ;
+    ns1:title "Laryngitida"@cs,
+        "Laryngitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002512> a ns1:DiseaseOrFinding ;
+    ns1:description "An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.     "@en ;
+    ns1:title "Pruritus"@cs,
+        "Pruritus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002761> a ns1:DiseaseOrFinding ;
+    ns1:title "Kožní nemoci"@cs,
+        "Skin diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002969> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the tonsils, especially the PALATINE TONSILS but the ADENOIDS (pharyngeal tonsils) and lingual tonsils may also be involved. Tonsillitis usually is caused by bacterial infection. Tonsillitis may be acute, chronic, or recurrent.     "@en ;
+    ns1:title "Tonzilitida"@cs,
+        "Tonsillitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008297> a ns1:PhysiologicEffect ;
+    ns1:title "Antipruritic Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008889> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Sensory-Somatic Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AMOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V11> ;
+    ns1:title "AMOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-ANGIN-BEZ-CUKRU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "NEO-ANGIN BEZ CUKRU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-ANGIN-SPRAY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "NEO-ANGIN SPRAY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTISAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "SEPTISAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SEPTOLETE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "SEPTOLETE"@cs .
+
+

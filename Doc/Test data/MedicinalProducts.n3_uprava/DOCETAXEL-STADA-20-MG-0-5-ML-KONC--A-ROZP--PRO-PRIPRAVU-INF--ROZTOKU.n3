@@ -1,0 +1,99 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika a imunomodulační léčiva"@cs,
+        "ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"@en ;
+    skos:notation "L" .
+
+<http://linked.opendata.cz/resource/ATC/L01> a ns1:ATCConcept ;
+    dcterms:title "Cytostatika"@cs,
+        "ANTINEOPLASTIC AGENTS"@en ;
+    skos:notation "L01" .
+
+<http://linked.opendata.cz/resource/ATC/L01C> a ns1:ATCConcept ;
+    dcterms:title "Rostlinné alkaloidy a jiná přírodní léčiva"@cs,
+        "PLANT ALKALOIDS AND OTHER NATURAL PRODUCTS"@en ;
+    skos:notation "L01C" .
+
+<http://linked.opendata.cz/resource/ATC/L01CD> a ns1:ATCConcept ;
+    dcterms:title "Taxany"@cs,
+        "Taxanes"@en ;
+    skos:notation "L01CD" .
+
+<http://linked.opendata.cz/resource/ATC/L01CD02> a ns1:ATCConcept ;
+    dcterms:title "Docetaxel"@cs,
+        "Docetaxel"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/L>,
+        <http://linked.opendata.cz/resource/ATC/L01>,
+        <http://linked.opendata.cz/resource/ATC/L01C>,
+        <http://linked.opendata.cz/resource/ATC/L01CD> ;
+    skos:notation "L01CD02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184558> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "Docetaxel"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176465> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD02> ;
+    ns1:hasIndication """Karcinom prsu
+Docetaxel STADA v kombinaci s doxorubicinem a cyklofosfamidem je indikován k adjuvantní léčbě
+nemocných s operabilním karcinomem prsu s pozitivními uzlinami.
+Docetaxel STADA v kombinaci s doxorubicinem je indikován k léčbě nemocných s lokálně pokročilým nebo metastazujícím karcinomem prsu, kteří nebyli pro toto onemocnění dosud léčení cytotoxickou léčbou.
+Docetaxel STADA v monoterapii je indikován k léčbě nemocných s lokálně pokročilým nebo metastazujícím karcinomem prsu po selhání předchozí cytotoxické léčby. Předchozí léčba by měla zahrnovat antracyklin nebo alkylační látku.
+Docetaxel STADA v kombinaci s trastuzumabem je indikován k léčbě nemocných s metastatickým karcinomem prsu, u něhož je prokázána overexprese HER2 a kteří dosud nebyli léčeni chemoterapií pro metastatické onemocnění.
+Docetaxel STADA v kombinaci s capecitabinem je indikován k léčbě nemocných s lokálně pokročilým nebo metastazujícím karcinomem prsu po selhání předchozí cytotoxické léčby. Předchozí léčba by měla zahrnovat antracyklin.
+Nemalobuněčný karcinom plic
+Docetaxel STADA je indikován k léčbě nemocných s lokálně pokročilým nebo metastazujícím nemalobuněčným karcinomem plic po selhání předchozí chemoterapie.
+Docetaxel STADA v kombinaci s cisplatinou je indikován k léčbě nemocných s neresekovatelným, lokálně pokročilým nebo metastazujícím nemalobuněčným karcinomem plic, kteří dosud pro toto onemocnění nebyli léčení chemoterapií.
+Karcinom prostaty
+Docetaxel STADA v kombinaci s prednizonem nebo prednizolonem je indikován k léčbě nemocných s metastatickým karcinomem prostaty neodpovídajícím na hormonální léčbu.
+Adenokarcinom žaludku
+Docetaxel STADA v kombinaci s cisplatinou a 5-fluorouracilem je indikován k léčbě nemocných s metastatickým adenokarcinomem žaludku včetně adenokarcinomu gastroesofageálního spojení, kteří dosud pro metastatické onemocnění nebyli léčeni chemoterapií.
+Karcinom hlavy a krku
+Docetaxel STADA je v kombinaci s cisplatinou a 5-fluorouracilem indikován k indukční léčbě pacientů s lokálně pokročilým dlaždicobuněčným karcinomem hlavy a krku.
+"""@cs ;
+    ns1:hasIndicationGroup "CYTOSTATICA"@cs ;
+    ns1:hasMaximalPrice "7006.06982422"^^xsd:float ;
+    ns1:hasPackagingSize "1X0.5ML+1.5ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "2265.15991211"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC134259_doc> ;
+    ns1:hasStrength "20MG+1.5ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INF CSL LQF 1X0.5ML/20MG+1.5ML"@cs ;
+    ns1:title "DOCETAXEL STADA 20 MG/0,5 ML KONC. A ROZP. PRO PŘÍPRAVU INF. ROZTOKU"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOCETAXEL-STADA-20-MG-0-5-ML-KONC--A-ROZP--PRO-PRIPRAVU-INF--ROZTOKU> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01CD02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0184558> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0176465> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:title "DOCETAXEL STADA 20 MG/0,5 ML KONC. A ROZP. PRO PŘÍPRAVU INF. ROZTOKU"@cs .
+
+

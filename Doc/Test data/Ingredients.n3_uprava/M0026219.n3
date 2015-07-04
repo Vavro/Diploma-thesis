@@ -1,0 +1,66 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H01CA02> a ns1:ATCConcept ;
+    skos:notation "H01CA02" ;
+    skos:prefLabel "Nafarelin"@cs,
+        "Nafarelin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0026219> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A potent synthetic agonist of GONADOTROPIN-RELEASING HORMONE with 3-(2-naphthyl)-D-alanine substitution at residue 6. Nafarelin has been used in the treatments of central PRECOCIOUS PUBERTY and ENDOMETRIOSIS.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/SYNAREL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009324>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009931> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/X> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001102>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002535> ;
+    ns1:title "Nafarelin"@cs,
+        "Nafarelin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0008372> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which increase the capacity to conceive in females.     "@en ;
+    ns1:title "Fertilizující látky ženské"@cs,
+        "Fertility agents, female"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001102> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which functional endometrial tissue is present outside the UTERUS. It is often confined to the PELVIS involving the OVARY, the ligaments, cul-de-sac, and the uterovesical peritoneum.     "@en ;
+    ns1:title "Endometrióza"@cs,
+        "Endometriosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002535> a ns1:DiseaseOrFinding ;
+    ns1:description "Development of SEXUAL MATURATION in boys and girls at a chronological age that is 2.5 standard deviations below the mean age at onset of PUBERTY in the population. This early maturation of the hypothalamic-pituitary-gonadal axis results in sexual precocity, elevated serum levels of GONADOTROPINS and GONADAL STEROID HORMONES such as ESTRADIOL and TESTOSTERONE.     "@en ;
+    ns1:title "Puberta předčasná"@cs,
+        "Puberty, precocious"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149> a ns1:MechanismOfAction ;
+    ns1:title "Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009324> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Follicle Stimulating Hormone Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009931> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Luteinizing Hormone Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SYNAREL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H01CA02> ;
+    ns1:title "SYNAREL"@cs .
+
+

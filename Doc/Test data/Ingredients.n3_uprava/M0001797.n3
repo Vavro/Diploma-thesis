@@ -1,0 +1,357 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A06AD65> a ns1:ATCConcept ;
+    skos:notation "A06AD65" ;
+    skos:prefLabel "Makrogol, kombinace"@cs,
+        "Macrogol, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11AA02> a ns1:ATCConcept ;
+    skos:notation "A11AA02" ;
+    skos:prefLabel "Multivitaminy a vápník"@cs,
+        "Multivitamins and calcium"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11AA03> a ns1:ATCConcept ;
+    skos:notation "A11AA03" ;
+    skos:prefLabel "Multivitaminy a jiné minerály, včetně kombinací"@cs,
+        "Multivitamins and other minerals, incl. combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11AB> a ns1:ATCConcept ;
+    skos:notation "A11AB" ;
+    skos:prefLabel "Multivitaminy, jiné kombinace"@cs,
+        "Multivitamins, other combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11GA01> a ns1:ATCConcept ;
+    skos:notation "A11GA01" ;
+    skos:prefLabel "Kyselina askorbová (vitamin C)"@cs,
+        "Ascorbic acid (vit C)"@en .
+
+<http://linked.opendata.cz/resource/ATC/A12CC30> a ns1:ATCConcept ;
+    skos:notation "A12CC30" ;
+    skos:prefLabel "Hořčík (různé sole v kombinaci)"@cs,
+        "Magnesium (different salts in combination)"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AE10> a ns1:ATCConcept ;
+    skos:notation "B03AE10" ;
+    skos:prefLabel "Různé jiné kombinace železa"@cs,
+        "Various combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/B05XC> a ns1:ATCConcept ;
+    skos:notation "B05XC" ;
+    skos:prefLabel "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/ATC/C05CA51> a ns1:ATCConcept ;
+    skos:notation "C05CA51" ;
+    skos:prefLabel "Rutosid, kombinace"@cs,
+        "Rutoside, combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA51> a ns1:ATCConcept ;
+    skos:notation "N02BA51" ;
+    skos:prefLabel "Kyselina acetylsalicylová, kombinace kromě psycholeptik"@cs,
+        "Acetylsalicylic acid, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/R02AA20> a ns1:ATCConcept ;
+    skos:notation "R02AA20" ;
+    skos:prefLabel "Různá jiná krční antiseptika"@cs,
+        "Various"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001797> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A six carbon compound related to glucose. It is found naturally in citrus fruits and many vegetables. Ascorbic acid is an essential nutrient in human diets, and necessary to maintain connective tissue and bone. Its biologically active form, vitamin C, functions as a reducing agent and coenzyme in several metabolic pathways. Vitamin C is considered an antioxidant.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ACIDUM-ASCORBICUM-BIOTIKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN---C>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADDITIVA-VITAMIN-C-BLUTORANGE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ADDITIVA-VITAMIN-C-ZITRONE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASCORUTIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-C>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/C-VITAMIN-1000-PHARMAVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-100-MG-OCHUCENE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-500-MG-CERVENY-POMERANC>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-500-MG-MANDARINKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-LONG-EFFECT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-TABLETY-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-TABLETY-250-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CERNEVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-JUNIOR-CITRON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-CITRON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-LESNI-OVOCE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLO-3-FORT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FEBRISAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-250-MG-PHARMAVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MOVIPREP>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MULTI-SANOSTOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PHARMATON-GERIAVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SORBIFER-DURULES>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/STREPSILS-POMERANC-S-VITAMINEM-C>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-C-INJEKTOPAS-7-5-G> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000519>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000762>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000824>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000825>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000845>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001216>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001464>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001480>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001481>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002008>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002165>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002447>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002708>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003172>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004017>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171673> ;
+    ns1:title "Kyselina askorbová"@cs,
+        "Ascorbic acid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001491> a ns1:PharmacologicalAction ;
+    ns1:description "Naturally occurring or synthetic substances that inhibit or retard the oxidation of a substance to which it is added. They counteract the harmful and damaging effects of oxidation in animal tissues.     "@en ;
+    ns1:title "Antioxidancia"@cs,
+        "Antioxidants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022811> a ns1:PharmacologicalAction ;
+    ns1:description "Organic substances that are required in small amounts for maintenance and growth, but which cannot be manufactured by the human body.     "@en ;
+    ns1:title "Vitaminy"@cs,
+        "Vitamins"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000519> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition due to a deficiency of one or more essential vitamins. (Dorland, 27th ed)     "@en ;
+    ns1:title "Avitaminóza"@cs,
+        "Avitaminosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000762> a ns1:DiseaseOrFinding ;
+    ns1:description "Impairment of bile flow due to obstruction in small bile ducts (INTRAHEPATIC CHOLESTASIS) or obstruction in large bile ducts (EXTRAHEPATIC CHOLESTASIS).     "@en ;
+    ns1:title "Cholestáza"@cs,
+        "Cholestasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000824> a ns1:DiseaseOrFinding ;
+    ns1:description "A catarrhal disorder of the upper respiratory tract, which may be viral or a mixed infection. It generally involves a runny nose, nasal congestion, and sneezing.     "@en ;
+    ns1:title "Nachlazení"@cs,
+        "Common cold"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000825> a ns1:DiseaseOrFinding ;
+    ns1:title "Infekční nemoci"@cs,
+        "Communicable diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000845> a ns1:DiseaseOrFinding ;
+    ns1:description "The period of recovery following an illness.     "@en ;
+    ns1:title "Rekonvalescence"@cs,
+        "Convalescence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001216> a ns1:DiseaseOrFinding ;
+    ns1:description "The state of weariness following a period of exertion, mental or physical, characterized by a decreased capacity for work and reduced efficiency to respond to stimuli.     "@en ;
+    ns1:title "Únava"@cs,
+        "Fatigue"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001464> a ns1:DiseaseOrFinding ;
+    ns1:description "Presence of blood in the urine.     "@en ;
+    ns1:title "Hematurie"@cs,
+        "Hematuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001480> a ns1:DiseaseOrFinding ;
+    ns1:description "Expectoration or spitting of blood originating from any part of the RESPIRATORY TRACT, usually from hemorrhage in the lung parenchyma (PULMONARY ALVEOLI) and the BRONCHIAL ARTERIES.     "@en ;
+    ns1:title "Hemoptýza"@cs,
+        "Hemoptysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001481> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding or escape of blood from a vessel.     "@en ;
+    ns1:title "Hemoragie"@cs,
+        "Hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002008> a ns1:DiseaseOrFinding ;
+    ns1:description "The presence of methemoglobin in the blood, resulting in cyanosis. A small amount of methemoglobin is present in the blood normally, but injury or toxic agents convert a larger proportion of hemoglobin into methemoglobin, which does not function reversibly as an oxygen carrier. Methemoglobinemia may be due to a defect in the enzyme NADH methemoglobin reductase (an autosomal recessive trait) or to an abnormality in hemoglobin M (an autosomal dominant trait). (Dorland, 27th ed)     "@en ;
+    ns1:title "Methemoglobinémie"@cs,
+        "Methemoglobinemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002165> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term indicating inflammation of a peripheral or cranial nerve. Clinical manifestation may include PAIN; PARESTHESIAS; PARESIS; or HYPESTHESIA.     "@en ;
+    ns1:title "Neuritida"@cs,
+        "Neuritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002447> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition or physical state produced by the ingestion, injection, inhalation of or exposure to a deleterious agent.     "@en ;
+    ns1:title "Otrava"@cs,
+        "Poisoning"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002708> a ns1:DiseaseOrFinding ;
+    ns1:description "An acquired blood vessel disorder caused by severe deficiency of vitamin C (ASCORBIC ACID) in the diet leading to defective collagen formation in small blood vessels. Scurvy is characterized by bleeding in any tissue, weakness, ANEMIA, spongy gums, and a brawny induration of the muscles of the calves and legs.     "@en ;
+    ns1:title "Kurděje"@cs,
+        "Scurvy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003172> a ns1:DiseaseOrFinding ;
+    ns1:description "Wounds caused by objects penetrating the skin.     "@en ;
+    ns1:title "Penetrující rány"@cs,
+        "Wounds, penetrating"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004017> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of disorders which have in common elevations of tyrosine in the blood and urine secondary to an enzyme deficiency. Type I tyrosinemia features episodic weakness, self-mutilation, hepatic necrosis, renal tubular injury, and seizures and is caused by a deficiency of the enzyme fumarylacetoacetase. Type II tyrosinemia features INTELLECTUAL DISABILITY, painful corneal ulcers, and keratoses of the palms and plantar surfaces and is caused by a deficiency of the enzyme TYROSINE TRANSAMINASE. Type III tyrosinemia features INTELLECTUAL DISABILITY and is caused by a deficiency of the enzyme 4-HYDROXYPHENYLPYRUVATE DIOXYGENASE. (Menkes, Textbook of Child Neurology, 5th ed, pp42-3)     "@en ;
+    ns1:title "Tyrosinémie"@cs,
+        "Tyrosinemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171673> a ns1:DiseaseOrFinding ;
+    ns1:description "An ulceration caused by prolonged pressure on the SKIN and TISSUES when one stays in one position for a long period of time, such as lying in bed. The bony areas of the body are the most frequently affected sites which become ischemic (ISCHEMIA) under sustained and constant pressure.     "@en ;
+    ns1:title "Dekubitus"@cs,
+        "Pressure ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000170> a ns1:MechanismOfAction ;
+    ns1:title "Free Radical Scavenging Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008337> a ns1:PhysiologicEffect ;
+    ns1:title "Cellular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACIDUM-ASCORBICUM-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "ACIDUM ASCORBICUM BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLPYRIN---C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ACYLPYRIN + C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADDITIVA-VITAMIN-C-BLUTORANGE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "ADDITIVA VITAMIN C BLUTORANGE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ADDITIVA-VITAMIN-C-ZITRONE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "ADDITIVA VITAMIN C ZITRONE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASCORUTIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C05CA51> ;
+    ns1:title "ASCORUTIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ASPIRIN-C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ASPIRIN C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/C-VITAMIN-1000-PHARMAVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "C-VITAMIN 1000 PHARMAVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-100-MG-OCHUCENE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON 100 MG OCHUCENÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-500-MG-CERVENY-POMERANC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON 500 MG ČERVENÝ POMERANČ"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-500-MG-MANDARINKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON 500 MG MANDARINKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-LONG-EFFECT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON LONG EFFECT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-TABLETY-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON TABLETY 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CELASKON-TABLETY-250-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "CELASKON TABLETY 250 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CERNEVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XC> ;
+    ns1:title "CERNEVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-JUNIOR-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "COLDREX JUNIOR CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-CITRON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "COLDREX MAXGRIP CITRON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-MAXGRIP-LESNI-OVOCE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "COLDREX MAXGRIP LESNÍ OVOCE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYCLO-3-FORT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C05CA51> ;
+    ns1:title "CYCLO 3 FORT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11AA03> ;
+    ns1:title "DUOVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FEBRISAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "FEBRISAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "GRIPPOSTAD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MAGNESIUM-250-MG-PHARMAVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12CC30> ;
+    ns1:title "MAGNESIUM 250 MG PHARMAVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOVIPREP> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A06AD65> ;
+    ns1:title "MOVIPREP"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MULTI-SANOSTOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11AA02> ;
+    ns1:title "MULTI-SANOSTOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PHARMATON-GERIAVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11AB> ;
+    ns1:title "PHARMATON GERIAVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SORBIFER-DURULES> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AE10> ;
+    ns1:title "SORBIFER DURULES"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/STREPSILS-POMERANC-S-VITAMINEM-C> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R02AA20> ;
+    ns1:title "STREPSILS POMERANČ S VITAMINEM C"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VITAMIN-C-INJEKTOPAS-7-5-G> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11GA01> ;
+    ns1:title "VITAMIN C-INJEKTOPAS 7.5 G"@cs .
+
+

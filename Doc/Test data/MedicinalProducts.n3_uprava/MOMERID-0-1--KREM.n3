@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D> a ns1:ATCConcept ;
+    dcterms:title "Dermatologika"@cs,
+        "DERMATOLOGICALS"@en ;
+    skos:notation "D" .
+
+<http://linked.opendata.cz/resource/ATC/D07> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, dermatologické přípravky"@cs,
+        "CORTICOSTEROIDS, DERMATOLOGICAL PREPARATIONS"@en ;
+    skos:notation "D07" .
+
+<http://linked.opendata.cz/resource/ATC/D07A> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, samotné"@cs,
+        "CORTICOSTEROIDS, PLAIN"@en ;
+    skos:notation "D07A" .
+
+<http://linked.opendata.cz/resource/ATC/D07AC> a ns1:ATCConcept ;
+    dcterms:title "Kortikosteroidy, silně účinné (skupina III)"@cs,
+        "Corticosteroids, potent (group III)"@en ;
+    skos:notation "D07AC" .
+
+<http://linked.opendata.cz/resource/ATC/D07AC13> a ns1:ATCConcept ;
+    dcterms:title "Mometason"@cs,
+        "Mometasone"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/D>,
+        <http://linked.opendata.cz/resource/ATC/D07>,
+        <http://linked.opendata.cz/resource/ATC/D07A>,
+        <http://linked.opendata.cz/resource/ATC/D07AC> ;
+    skos:notation "D07AC13" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0152540> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000945>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001530>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001531>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003034> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Mometasone furoate"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000945> a ns1:DiseaseOrFinding ;
+    ns1:title "Dermatomykózy"@cs,
+        "Dermatomycoses"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001530> a ns1:DiseaseOrFinding ;
+    ns1:title "Herpes simplex"@cs,
+        "Herpes simplex"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001531> a ns1:DiseaseOrFinding ;
+    ns1:title "Herpes zoster"@cs,
+        "Herpes zoster"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003034> a ns1:DiseaseOrFinding ;
+    ns1:title "Tuberkulóza kůže"@cs,
+        "Tuberculosis, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148676> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AC13> ;
+    ns1:hasIndication """Přípravek Momerid 0,1% krém je určen k symptomatické léčbě kožních zánětlivých stavů, jež odpovídají na vnější léčbu glukokortikoidy, např. atopické dermatitidy a psoriázy (kromě rozšířené plakové psoriázy).
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasPackagingSize "15GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157049_doc> ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X15GM"@cs ;
+    ns1:title "MOMERID 0,1% KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148677> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AC13> ;
+    ns1:hasIndication """Přípravek Momerid 0,1% krém je určen k symptomatické léčbě kožních zánětlivých stavů, jež odpovídají na vnější léčbu glukokortikoidy, např. atopické dermatitidy a psoriázy (kromě rozšířené plakové psoriázy).
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasPackagingSize "20GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157049_doc> ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X20GM"@cs ;
+    ns1:title "MOMERID 0,1% KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148678> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AC13> ;
+    ns1:hasIndication """Přípravek Momerid 0,1% krém je určen k symptomatické léčbě kožních zánětlivých stavů, jež odpovídají na vnější léčbu glukokortikoidy, např. atopické dermatitidy a psoriázy (kromě rozšířené plakové psoriázy).
+"""@cs ;
+    ns1:hasIndicationGroup "DERMATOLOGICA"@cs ;
+    ns1:hasPackagingSize "30GM"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Kožní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC157049_doc> ;
+    ns1:hasStrength "1MG/GM"^^xsd:string ;
+    ns1:hasTitleSupplement "DRM CRM 1X30GM"@cs ;
+    ns1:title "MOMERID 0,1% KRÉM"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MOMERID-0-1--KREM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D07AC13> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0152540> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148676>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148677>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148678> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "MOMERID 0,1% KRÉM"@cs .
+
+

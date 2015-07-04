@@ -1,0 +1,171 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A03EA> a ns1:ATCConcept ;
+    skos:notation "A03EA" ;
+    skos:prefLabel "Spazmolytika, psycholeptika a analgetika v kombinaci"@cs,
+        "Antispasmodics, psycholeptics and analgesics in combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02AA08> a ns1:ATCConcept ;
+    skos:notation "N02AA08" ;
+    skos:prefLabel "Dihydrokodein"@cs,
+        "Dihydrocodeine"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02AA59> a ns1:ATCConcept ;
+    skos:notation "N02AA59" ;
+    skos:prefLabel "Kodein, kombinace kromě psycholeptik"@cs,
+        "Codeine, combinations excl. psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05DA04> a ns1:ATCConcept ;
+    skos:notation "R05DA04" ;
+    skos:prefLabel "Kodein"@cs,
+        "Codeine"@en .
+
+<http://linked.opendata.cz/resource/ATC/R05FA01> a ns1:ATCConcept ;
+    skos:notation "R05FA01" ;
+    skos:prefLabel "Opiové deriváty a mukolytika"@cs,
+        "Opium derivatives and mucolytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004700> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An opioid analgesic related to MORPHINE but with less potent analgesic properties and mild sedative effects. It also acts centrally to suppress cough.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000200> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CODEIN-SLOVAKOFARMA-15-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CODEIN-SLOVAKOFARMA-30-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-120-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-60-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-90-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KORYLAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PLEUMOLYSIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SPASMOPAN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN-FORTE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ULTRACOD> ;
+    ns1:hasPharmacokinetics <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026>,
+        <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001516>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000863>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002280> ;
+    ns1:title "Kodein"@cs,
+        "Codeine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001516> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that suppress cough. They act centrally on the medullary cough center. EXPECTORANTS, also used in the treatment of cough, act locally.     "@en ;
+    ns1:title "Antitusika"@cs,
+        "Antitussive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000863> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden, audible expulsion of air from the lungs through a partially closed glottis, preceded by inhalation. It is a protective response that serves to clear the trachea, bronchi, and/or lungs of irritants and secretions, or to prevent aspiration of foreign materials into the lungs.     "@en ;
+    ns1:title "Kašel"@cs,
+        "Cough"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002280> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain during the period after surgery.     "@en ;
+    ns1:title "Pooperační bolest"@cs,
+        "Pain, postoperative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000200> a ns1:MechanismOfAction ;
+    ns1:title "Opioid Receptor Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000026> a ns1:Pharmacokinetics ;
+    ns1:title "Hepatic Metabolism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008701> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Medullary Respiratory Drive"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CODEIN-SLOVAKOFARMA-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA04> ;
+    ns1:title "CODEIN SLOVAKOFARMA 15 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CODEIN-SLOVAKOFARMA-30-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05DA04> ;
+    ns1:title "CODEIN SLOVAKOFARMA 30 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-120-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA08> ;
+    ns1:title "DHC CONTINUS 120 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-60-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA08> ;
+    ns1:title "DHC CONTINUS 60 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DHC-CONTINUS-90-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA08> ;
+    ns1:title "DHC CONTINUS 90 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KORYLAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA59> ;
+    ns1:title "KORYLAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL ULTRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL ULTRA RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PLEUMOLYSIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R05FA01> ;
+    ns1:title "PLEUMOLYSIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SPASMOPAN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A03EA> ;
+    ns1:title "SPASMOPAN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TALVOSILEN-FORTE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA59> ;
+    ns1:title "TALVOSILEN FORTE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ULTRACOD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02AA59> ;
+    ns1:title "ULTRACOD"@cs .
+
+

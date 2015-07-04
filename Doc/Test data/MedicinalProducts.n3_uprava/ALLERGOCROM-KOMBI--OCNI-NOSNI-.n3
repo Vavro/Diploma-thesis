@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/S> a ns1:ATCConcept ;
+    dcterms:title "Smyslové orgány"@cs,
+        "SENSORY ORGANS"@en ;
+    skos:notation "S" .
+
+<http://linked.opendata.cz/resource/ATC/S01> a ns1:ATCConcept ;
+    dcterms:title "Oftalmologika"@cs,
+        "OPHTHALMOLOGICALS"@en ;
+    skos:notation "S01" .
+
+<http://linked.opendata.cz/resource/ATC/S01G> a ns1:ATCConcept ;
+    dcterms:title "Dekongesční léčiva a antialergika"@cs,
+        "DECONGESTANTS AND ANTIALLERGICS"@en ;
+    skos:notation "S01G" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antialergika"@cs,
+        "Other antiallergics"@en ;
+    skos:notation "S01GX" .
+
+<http://linked.opendata.cz/resource/ATC/S01GX01> a ns1:ATCConcept ;
+    dcterms:title "Kyselina chromoglykanová"@cs,
+        "Cromoglicic acid"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/S>,
+        <http://linked.opendata.cz/resource/ATC/S01>,
+        <http://linked.opendata.cz/resource/ATC/S01G>,
+        <http://linked.opendata.cz/resource/ATC/S01GX> ;
+    skos:notation "S01GX01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330463> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296> ;
+    ns1:title "Cromolyn"@cs,
+        "Cromolyn"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028296> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are used to treat asthma.     "@en ;
+    ns1:title "Antiastmatika"@cs,
+        "Anti-asthmatic agents"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0054241> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX01> ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasPackagingSize "10ML+15ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Oční a nosní podání"@cs ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL10ML+NAS SPRSOL15ML"@cs ;
+    ns1:title "ALLERGOCROM KOMBI (OČNÍ+NOSNÍ)"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163321> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX01> ;
+    ns1:hasIndication """Přípravek Allergocrom nosní sprej se používá k léčbě a prevenci celoroční i sezónní alergické 
+rinitidy.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIHISTAMINICA, HISTAMIN"@cs ;
+    ns1:hasMaximalPrice "179.210006714"^^xsd:float ;
+    ns1:hasPackagingSize "10ML+15ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "116.370002747"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Oční a nosní podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC109173_doc> ;
+    ns1:hasStrength "20MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "OPH GTT SOL10ML+NAS SPRSOL15ML"@cs ;
+    ns1:title "ALLERGOCROM KOMBI (OČNÍ+NOSNÍ)"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALLERGOCROM-KOMBI--OCNI-NOSNI-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01GX01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330463> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0054241>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0163321> ;
+    ns1:title "ALLERGOCROM KOMBI (OČNÍ+NOSNÍ)"@cs .
+
+

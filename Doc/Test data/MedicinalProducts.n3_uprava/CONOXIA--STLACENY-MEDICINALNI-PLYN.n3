@@ -1,0 +1,1398 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V03> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03" .
+
+<http://linked.opendata.cz/resource/ATC/V03A> a ns1:ATCConcept ;
+    dcterms:title "Všechny jiné terapeutické přípravky"@cs,
+        "ALL OTHER THERAPEUTIC PRODUCTS"@en ;
+    skos:notation "V03A" .
+
+<http://linked.opendata.cz/resource/ATC/V03AN> a ns1:ATCConcept ;
+    dcterms:title "Medicinální plyny"@cs,
+        "Medical gases"@en ;
+    skos:notation "V03AN" .
+
+<http://linked.opendata.cz/resource/ATC/V03AN01> a ns1:ATCConcept ;
+    dcterms:title "Kyslík"@cs,
+        "OXYGEN"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V03>,
+        <http://linked.opendata.cz/resource/ATC/V03A>,
+        <http://linked.opendata.cz/resource/ATC/V03AN> ;
+    skos:notation "V03AN01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015671> a ns1:Ingredient ;
+    ns1:description "An element with atomic symbol O, atomic number 8, and atomic weight [15.99903; 15.99977]. It is the most abundant element on earth and essential for respiration.     "@en ;
+    ns1:title "Kyslík"@cs,
+        "Oxygen"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0105921> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/300L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/300L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125142> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/1600L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/1600L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125143> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "40L/6500L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 40L/6500L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125144> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/300L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/300L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125145> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/1600L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/1600L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125146> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "40L/6500L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 40L/6500L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125147> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/400L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/400L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125148> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/1100L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 5L/1100L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125149> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/2200L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/2200L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125150> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/4300L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 20L/4300L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125151> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "50L/10800L I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 50L/10800L I"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125152> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "50L/10800L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 50L/10800L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125153> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "20L/4300L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 20L/4300L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125154> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/2200L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/2200L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125155> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/1100L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 5L/1100L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125156> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/400L II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/400L II"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125157> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/400L III"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/400L III"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125158> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/400L IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/400L IV"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125159> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "2L/400L V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 2L/400L V"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125160> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/2200L IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/2200L IV"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125161> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "10L/2200L V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 10L/2200L V"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125162> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "12X50L/129600L VI"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 12X50L/129600L VI"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162570> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "4.75L/1050L III"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 4.75L/1050L III"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162571> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/1100L IV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 5L/1100L IV"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162572> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasIndication """ 
+Normobarická oxygenoterapie
+Léčba nebo prevence akutní nebo chronické hypoxie, bez ohledu na původ.  
+Jako součást anestézie nebo intenzivní péče.
+V nebulizační terapii.
+Léčba akutního záchvatu u pacientů se stanovenou diagnózou hnízdovité bolesti hlavy (cluster headache – Hortonův syndrom). 
+Hyperbarická oxygenoterapie 
+-   K léčbě dekompresní nemoci, vzduchové/plynové embolie jiného původu a otravy oxidem uhelnatým. 
+U otravy oxidem uhelnatým je hyperbarická oxygenoterapie indikovaná nezbytně u pacientů, kteří jsou nebo byli v bezvědomí, vykazovali neurologické symptomy, kardiovaskulární dysfunkci nebo závažnou acidosu a u těhotných žen, u všech bez ohledu na jejich COHb.
+Jako adjuvantní léčba osteoradionekrosy a clostridiální myonekrosy (plynaté sněti). 
+Způsob podání a dávkování ,
+Způsob podání
+Kyslík se podává prostřednictvím vdechovaného vzduchu.
+Kyslík může být také podávaný takzvaným oxygenátorem přímo do krve, mimo jiné, při srdeční chirurgii s kardiopulmonárním by-pass systémem, a za dalších podmínek, které vyžadují mimotělní oběh.
+Kyslík je (přednostně) podáván prostřednictvím speciálního zařízení. Pomocí tohoto zařízení se kyslík podává společně s vdechovaným vzduchem a s výdechem opouští vydechovaný plyn s přebytečným kyslíkem pacienta a je smíchán s okolním vzduchem (otevřený systém).
+Při anestézii, je často používáno speciální zařízení, kdy je vydechovaný plyn recirkulován a může být znovu vdechnut. (cirkulární systém s opakovaným dýcháním). 
+K podávání kyslíku je určeno velké množství zařízení. Zařízení, jejichž prostřednictvím je kyslík podáván, by měla splňovat standardy EU (CE marked).
+Nízko průtokové systémy
+Nejjednodušší systémy, které dodávají směs kyslíku a inspirovaného vzduchu, např. systém kterým je kyslík podáván jednoduchým rotametrem spojeným s nosním katétrem nebo obličejovou maskou. 
+Vysoko průtokové systémy
+Tyto systémy jsou určené k dodávce směsi plynů korespondující s úplným vdechovaným prostředím pacienta. Tyto systémy  jsou určené k dodávce fixní koncentrace kyslíku, která není ovlivněná – ředěná okolním vzduchem, např. Venturiho maska se stabilním průtokem kyslíku,  tak aby byla podávaná fixní koncentrace kyslíku ve vdechovaném vzduchu.
+Hyperbarická oxygenoterapie
+Hyperbarická oxygenoterapie (HBO) se aplikuje ve speciálně konstruovaných tlakových komorách určených k léčbě hyperbarickým kyslíkem, ve kterých mohou být udržovány tlaky až do výše trojnásobku atmosférického tlaku.
+HBO může být rovněž aplikována velmi těsně nasedající obličejovou maskou, kuklou, která je těsně kolem hlavy, nebo tracheální kanylou.
+Dávkování
+Smyslem kyslíkové terapie je zajistit, že parciální arteriální tlak kyslíku (PaO2) není menší než 8.0 kPa (60 mmHg) nebo saturace hemoglobinu kyslíkem v arteriální krvi není nižší než 90 %, nastavením frakce kyslíku v inspirovaném vzduchu (FIO2).  
+Dávkování musí být regulováno podle potřeb pacienta. Frakce kyslíku musí být přizpůsobena specifickým požadavků každého jednotlivého pacienta vzhledem k riziku intoxikace kyslíkem. (Viz 4.9.)
+Všeobecně se doporučuje, že nejnižší dávka FiO2 musí být cílem k dosažení žádoucích výsledků terapie, bezpečného PaO2. U závažné hypoxie by měla být určena frakce kyslíku, které již může znamenat riziko intoxikace kyslíkem. 
+Terapie musí být vyhodnocována kontinuálně a účinek léčby musí být měřen PaO2 nebo alternativně arteriální kyslíkovou saturací (SpO2).
+Pro krátkodobou kyslíkovou terapii musí být frakce kyslíku v inspirovaném vzduchu (FIO2) (vyvarovat se FiO2 > 0,6 % = 60 % O2 v inhalované směsi plynů) držena tak, že s nebo bez pozitivního konečného expiračního tlaku v dýchacích cestách  (PEEP)  nebo kontinuálního positivního tlaku v dýchacích cestách (CPAP) je udržován parciální arteriální tlak kyslíku (PaO2) > 8 kPa.
+Krátkodobá kyslíková terapie musí být monitorována opakovaným měřením arteriálních krevních plynů (PaO2) nebo pulzní oximetrií, která poskytuje číselné hodnoty saturace hemoglobinu kyslíkem (SpO2). Nicméně, tyto ukazatele měří oxygenaci tkání jen nepřímo. Nejdůležitější je klinické zhodnocení léčby.
+Pro dlouhodobou léčbu by měla být potřeba dodatečného kyslíku určena na základě získaných hodnot krevních plynů. Krevní plyny by měly být monitorovány, aby se zamezilo nadbytečné retenci oxidu uhličitého v krvi,  a u pacientů s hyperkapnií terapie kyslíkem přizpůsobena. 
+Pokud je kyslík smíchán s jinými plyny, jeho koncentrace ve směsi inhalovaných plynů (FiO2) musí být udržována na nejméně 21 %. Podíl kyslíku může být zvýšen až na 100%.
+Novorozencům může být podáváno až 100% kyslíku, pokud je to vyžadováno. Nicméně, je nezbytné zajistit pečlivý monitoring průběhu léčby. Doporučuje se vyvarovat se koncentracím kyslíku přesahujícím 40% , z důvodu poškození oční čočky nebo kolapsu plic.
+Měl by být monitorován tlak kyslíku v arteriální krvi (PaO2), riziko poškození očí je sníženo pokud je (PaO2) udržován  pod 13,3 kPa (100 mmHg), a zabrání se velkým změnám v oxygenaci.
+K indikaci akutního záchvatu akutní hnízdovité bolesti hlavy (cluster headache) by měl být kyslík podáván obličejovou maskou v otevřeném systému. 
+Kyslíková terapie o průtoku 7 až 15 l/min. by měla být zahájena co nejdříve po vzniku ataky a měla by trvat asi 15 minut nebo dokud bolest nepřejde. Obvykle je dostatečný průtok 7 až 10 l/ min., ale u některých pacientů je nutný k dosažení účinku průtok až do 15 l / min. 
+Hyperbarická oxygenace (HBO) znamená podávání 100% kyslíku při tlaku nad 1.4 násobkem atmosférického tlaku u hladiny moře (1 atmosféra = 101,.3 kPa = 760 mmHg). Z bezpečnostních důvodů by tlak používaný v HBO neměl přesáhnout 3 atmosféry. 
+Trvání jedné terapie HBO při tlaku 2 až 3 atmosféry se pohybuje mezi 60 minutami a 4 - 6 hodinami v závislosti na indikaci. Pokud je to nutné, léčba může být opakována 2 krát až 3 krát denně, v závislosti na indikaci a klinickém stavu pacienta. Vícenásobná terapie je často nezbytná k léčbě infekcí měkkých tkání a hypoxických ran, které neodpovídají na obvyklou tradiční léčbu.  
+HBO by měla být podávána personálem kvalifikovaným pro tuto léčbu. 
+Komprese a dekomprese by měla být pomalá, v souladu s běžnou praxí, aby se zabránilo riziku poškození tlakem (barotrauma).
+"""@cs ;
+    ns1:hasIndicationGroup "MEDICINÁLNÍ PLYNY"@cs ;
+    ns1:hasPackagingSize "5L/1100L V"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Inhalační podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC151359_doc> ;
+    ns1:hasStrength "100%"^^xsd:string ;
+    ns1:hasTitleSupplement "INH GAS 5L/1100L V"@cs ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CONOXIA--STLACENY-MEDICINALNI-PLYN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V03AN01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0015671> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0105921>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125142>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125143>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125144>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125145>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125146>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125147>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125148>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125149>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125150>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125151>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125152>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125153>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125154>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125155>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125156>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125157>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125158>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125159>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125160>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125161>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0125162>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162570>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162571>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0162572> ;
+    ns1:title "CONOXIA, STLAČENÝ MEDICINÁLNÍ PLYN"@cs .
+
+

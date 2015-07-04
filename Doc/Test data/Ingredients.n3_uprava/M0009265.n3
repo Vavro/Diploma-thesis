@@ -1,0 +1,110 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A10BB01> a ns1:ATCConcept ;
+    skos:notation "A10BB01" ;
+    skos:prefLabel "Glibenklamid"@cs,
+        "Glibenclamide"@en .
+
+<http://linked.opendata.cz/resource/ATC/A10BD02> a ns1:ATCConcept ;
+    skos:notation "A10BD02" ;
+    skos:prefLabel "Metformin a sulfonamidy"@cs,
+        "Metformin and sulfonamides"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0009265> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000952>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> ;
+    ns1:description "An antidiabetic sulfonylurea derivative with actions similar to those of chlorpropamide.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000211>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FORMAGLYBEN-500-MG-2-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FORMAGLYBEN-500-MG-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLIBOMET>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBENE-3-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOVANCE-500-MG-2-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOVANCE-500-MG-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MANINIL-5> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008652>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009360> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> ;
+    ns1:title "Glibenklamid"@cs,
+        "Glyburide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000952> a ns1:DiseaseOrFinding ;
+    ns1:description "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.     "@en ;
+    ns1:title "Diabetes mellitus 1. typu"@cs,
+        "Diabetes mellitus, type 1"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> a ns1:DiseaseOrFinding ;
+    ns1:description "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.     "@en ;
+    ns1:title "Diabetes mellitus 2. typu"@cs,
+        "Diabetes mellitus, type 2"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003499> a ns1:DiseaseOrFinding ;
+    ns1:description "A life-threatening complication of diabetes mellitus, primarily of TYPE 1 DIABETES MELLITUS with severe INSULIN deficiency and extreme HYPERGLYCEMIA. It is characterized by KETOSIS; DEHYDRATION; and depressed consciousness leading to COMA.     "@en ;
+    ns1:title "Diabetická ketoacidóza"@cs,
+        "Diabetic ketoacidosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000211> a ns1:MechanismOfAction ;
+    ns1:title "Potassium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> a ns1:MechanismOfAction ;
+    ns1:title "Insulin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008652> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glycolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glucose Transport into Cells"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009360> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Insulin Secretion"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORMAGLYBEN-500-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD02> ;
+    ns1:title "FORMAGLYBEN 500 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORMAGLYBEN-500-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD02> ;
+    ns1:title "FORMAGLYBEN 500 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLIBOMET> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD02> ;
+    ns1:title "GLIBOMET"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOBENE-3-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BB01> ;
+    ns1:title "GLUCOBENE 3,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOVANCE-500-MG-2-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD02> ;
+    ns1:title "GLUCOVANCE 500 MG/2,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GLUCOVANCE-500-MG-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BD02> ;
+    ns1:title "GLUCOVANCE 500 MG/5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MANINIL-5> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10BB01> ;
+    ns1:title "MANINIL 5"@cs .
+
+

@@ -1,0 +1,67 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A16AA04> a ns1:ATCConcept ;
+    skos:notation "A16AA04" ;
+    skos:prefLabel "Merkaptamin"@cs,
+        "Mercaptamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0005535> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> ;
+    ns1:description "A radiation-protective agent that oxidizes in air to form CYSTAMINE. It can be given intravenously or orally to treat radiation sickness. The bitartrate has been used for the oral treatment of nephropathic cystinosis.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/CYSTAGON-150-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/CYSTAGON-50-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000892> ;
+    ns1:title "Cysteamin"@cs,
+        "Cysteamine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0018387> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to protect against ionizing radiation. They are usually of interest for use in radiation therapy but have been considered for other, e.g. military, purposes.     "@en ;
+    ns1:title "Záření - látky ochranné"@cs,
+        "Radiation-protective agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000892> a ns1:DiseaseOrFinding ;
+    ns1:description "A metabolic disease characterized by the defective transport of CYSTINE across the lysosomal membrane due to mutation of a membrane protein cystinosin. This results in cystine accumulation and crystallization in the cells causing widespread tissue damage. In the KIDNEY, nephropathic cystinosis is a common cause of RENAL FANCONI SYNDROME.     "@en ;
+    ns1:title "Cystinóza"@cs,
+        "Cystinosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009925> a ns1:PhysiologicEffect ;
+    ns1:title "Unknown Physiological Effect"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYSTAGON-150-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A16AA04> ;
+    ns1:title "CYSTAGON 150 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CYSTAGON-50-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A16AA04> ;
+    ns1:title "CYSTAGON 50 MG"@cs .
+
+

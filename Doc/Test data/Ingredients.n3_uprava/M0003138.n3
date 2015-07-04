@@ -1,0 +1,174 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A04AD> a ns1:ATCConcept ;
+    skos:notation "A04AD" ;
+    skos:prefLabel "Jiná antiemetika"@cs,
+        "Other antiemetics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BA51> a ns1:ATCConcept ;
+    skos:notation "N02BA51" ;
+    skos:prefLabel "Kyselina acetylsalicylová, kombinace kromě psycholeptik"@cs,
+        "Acetylsalicylic acid, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/ATC/N02BE51> a ns1:ATCConcept ;
+    skos:notation "N02BE51" ;
+    skos:prefLabel "Paracetamol, kombinace kromě psycholeptik"@cs,
+        "Paracetamol, combinations excluding psycholeptics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003138> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A methylxanthine naturally occurring in some beverages and also used as a pharmacological agent. Caffeine's most notable pharmacological effect is as a central nervous system stimulant, increasing alertness and producing agitation. It also relaxes SMOOTH MUSCLE, stimulates CARDIAC MUSCLE, stimulates DIURESIS, and appears to be useful in the treatment of some types of headache. Several cellular actions of caffeine have been observed, but it is not entirely clear how each contributes to its pharmacological profile. Among the most important are inhibition of cyclic nucleotide PHOSPHODIESTERASES, antagonism of ADENOSINE RECEPTORS, and modulation of intracellular calcium handling.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLCOFFIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ATARALGIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/KINEDRYL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-CEPHYL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA-RAPIDE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-EXTRA-PROTI-BOLESTI>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-BOLEST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-COMBI-500-MG-65-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/SARIDON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VALETOL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001063>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545362> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008331>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008567>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009197> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000454> ;
+    ns1:title "Kofein"@cs,
+        "Caffeine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001063> a ns1:PharmacologicalAction ;
+    ns1:description "A loosely defined group of drugs that tend to increase behavioral alertness, agitation, or excitation. They work by a variety of mechanisms, but usually not by direct excitation of neurons. The many drugs that have such actions as side effects to their main therapeutic use are not included here.     "@en ;
+    ns1:title "Analeptika"@cs,
+        "Central nervous system stimulants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0016659> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds which inhibit or antagonize the biosynthesis or actions of phosphodiesterases.     "@en ;
+    ns1:title "Fosfodiesterasa - inhibitory"@cs,
+        "Phosphodiesterase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0545362> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds that bind to and block the stimulation of PURINERGIC P1 RECEPTORS.     "@en ;
+    ns1:title "Purinergní receptory p1 - antagonisté"@cs,
+        "Purinergic p1 receptor antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000454> a ns1:DiseaseOrFinding ;
+    ns1:description "A transient absence of spontaneous respiration.     "@en ;
+    ns1:title "Apnoe"@cs,
+        "Apnea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000133> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008322> a ns1:PhysiologicEffect ;
+    ns1:title "Bronchodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008331> a ns1:PhysiologicEffect ;
+    ns1:title "Cardiovascular Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008567> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Collecting Duct Water Permeability"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009197> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Central Nervous System Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACIFEIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "ACIFEIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ACYLCOFFIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "ACYLCOFFIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATARALGIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "ATARALGIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/COLDREX-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "COLDREX TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EXCEDRINIL-250-MG-250-MG-65-MG-POTAHOVANE-TABLETY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "EXCEDRINIL 250 MG/250 MG/65 MG POTAHOVANÉ TABLETY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/GRIPPOSTAD> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "GRIPPOSTAD"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KINEDRYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A04AD> ;
+    ns1:title "KINEDRYL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MIGRALGIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "MIGRALGIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEO-CEPHYL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BA51> ;
+    ns1:title "NEO-CEPHYL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL EXTRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-EXTRA-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL EXTRA RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL ULTRA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PANADOL-ULTRA-RAPIDE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PANADOL ULTRA RAPIDE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-EXTRA-PROTI-BOLESTI> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PARALEN EXTRA PROTI BOLESTI"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARALEN-GRIP-CHRIPKA-A-BOLEST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PARALEN GRIP CHŘIPKA A BOLEST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PARAMAX-COMBI-500-MG-65-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "PARAMAX COMBI 500 MG/65 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/SARIDON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "SARIDON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/THOMAPYRIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "THOMAPYRIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VALETOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N02BE51> ;
+    ns1:title "VALETOL"@cs .
+
+

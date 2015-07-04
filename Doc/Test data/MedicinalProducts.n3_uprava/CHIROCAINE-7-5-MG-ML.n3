@@ -1,0 +1,242 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N01> a ns1:ATCConcept ;
+    dcterms:title "Anestetika"@cs,
+        "ANESTHETICS"@en ;
+    skos:notation "N01" .
+
+<http://linked.opendata.cz/resource/ATC/N01B> a ns1:ATCConcept ;
+    dcterms:title "Anestetika lokální"@cs,
+        "ANESTHETICS, LOCAL"@en ;
+    skos:notation "N01B" .
+
+<http://linked.opendata.cz/resource/ATC/N01BB> a ns1:ATCConcept ;
+    dcterms:title "Amidy"@cs,
+        "Amides"@en ;
+    skos:notation "N01BB" .
+
+<http://linked.opendata.cz/resource/ATC/N01BB10> a ns1:ATCConcept ;
+    dcterms:title "Levobupivakain"@cs,
+        "Levobupivacaine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N01>,
+        <http://linked.opendata.cz/resource/ATC/N01B>,
+        <http://linked.opendata.cz/resource/ATC/N01BB> ;
+    skos:notation "N01BB10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0463378> a ns1:Ingredient ;
+    ns1:title "Levobupivacaine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003775> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "5X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003776> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasMaximalPrice "1058"^^xsd:float ;
+    ns1:hasPackagingSize "10X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasReimbursementAmount "592.289978027"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003777> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "20X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003778> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "5X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003779> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "10X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003780> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "20X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200357> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "5X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200358> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasMaximalPrice "1058"^^xsd:float ;
+    ns1:hasPackagingSize "10X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "592.289978027"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200359> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "20X10ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200360> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "5X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 5X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200361> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "10X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200362> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasIndication """U dospělých:
+Chirurgická anestezie
+svodná, např. epidurální (včetně císařského řezu), intratékální anestezie, blokáda periferního nervu
+lokální, např. lokální infiltrace, peribulbární blokáda v oční chirurgii
+Léčba bolesti
+cestou kontinuální epidurální infuze nebo jako jednorázově či opakovaně podaný epidurální bolus při pooperační a porodní analgezii nebo při chronické bolesti.
+U dětí:
+Levobupivakain je u dětí indikován k regionální analgezii (ilioinguinální/iliohypogastrická blokáda).
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "20X10ML AP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC161916_doc> ;
+    ns1:hasStrength "7.5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 20X10ML"@cs ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHIROCAINE-7-5-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BB10> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0463378> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003775>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003776>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003777>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003778>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003779>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0003780>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200357>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200358>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200359>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200360>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200361>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0200362> ;
+    ns1:title "CHIROCAINE 7,5 MG/ML"@cs .
+
+

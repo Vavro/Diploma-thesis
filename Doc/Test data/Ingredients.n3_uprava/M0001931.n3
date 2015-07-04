@@ -1,0 +1,254 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A03BA01> a ns1:ATCConcept ;
+    skos:notation "A03BA01" ;
+    skos:prefLabel "Atropin"@cs,
+        "Atropine"@en .
+
+<http://linked.opendata.cz/resource/ATC/A07DA> a ns1:ATCConcept ;
+    skos:notation "A07DA" ;
+    skos:prefLabel "Antipropulziva"@cs,
+        "Antipropulsives"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01FA01> a ns1:ATCConcept ;
+    skos:notation "S01FA01" ;
+    skos:prefLabel "Atropin"@cs,
+        "Atropine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001931> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000316>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001430>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001709>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001748>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001807>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001866>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001966>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002070>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002888>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002948>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003070>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> ;
+    ns1:description "An alkaloid, originally from Atropa belladonna, but found in other plants, mainly SOLANACEAE.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-BIOTIKA-0-5-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-BIOTIKA-1-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-POS-0-5->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/REASEC> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008868>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009820>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009842> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000498>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000600>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001000>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001429>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002754>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002830>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003062>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003099>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003233> ;
+    ns1:title "Atropin"@cs,
+        "Atropine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001144> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are administered in association with anesthetics to increase effectiveness, improve delivery, or decrease required dosage.     "@en ;
+    ns1:title "Adjuvancia anestetická"@cs,
+        "Adjuvants, anesthesia"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0002975> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that cause an increase in the expansion of a bronchus or bronchial tubes.     "@en ;
+    ns1:title "Bronchodilatancia"@cs,
+        "Bronchodilator agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014317> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that dilate the pupil. They may be either sympathomimetics or parasympatholytics.     "@en ;
+    ns1:title "Mydriatika"@cs,
+        "Mydriatics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0015923> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit the actions of the parasympathetic nervous system. The major group of drugs used therapeutically for this purpose is the MUSCARINIC ANTAGONISTS.     "@en ;
+    ns1:title "Parasympatolytika"@cs,
+        "Parasympatholytics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028057> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate MUSCARINIC RECEPTORS, thereby blocking the actions of endogenous ACETYLCHOLINE or exogenous agonists. Muscarinic antagonists have widespread effects including actions on the iris and ciliary muscle of the eye, the heart and blood vessels, secretions of the respiratory tract, GI system, and salivary glands, GI motility, urinary bladder tone, and the central nervous system.     "@en ;
+    ns1:title "Muskarin - antagonisté"@cs,
+        "Muscarinic antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000316> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes consisting of the union of the opposing surfaces of a wound.     "@en ;
+    ns1:title "Tkáně - adheze"@cs,
+        "Tissue adhesions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000498> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of bronchial disorder with three distinct components: airway hyper-responsiveness (RESPIRATORY HYPERSENSITIVITY), airway INFLAMMATION, and intermittent AIRWAY OBSTRUCTION. It is characterized by spasmodic contraction of airway smooth muscle, WHEEZING, and dyspnea (DYSPNEA, PAROXYSMAL).     "@en ;
+    ns1:title "Astma"@cs,
+        "Asthma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000600> a ns1:DiseaseOrFinding ;
+    ns1:description "Cardiac arrhythmias that are characterized by excessively slow HEART RATE, usually below 50 beats per minute in human adults. They can be classified broadly into SINOATRIAL NODE dysfunction and ATRIOVENTRICULAR BLOCK.     "@en ;
+    ns1:title "Bradykardie"@cs,
+        "Bradycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000807> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the COLON that is predominantly confined to the MUCOSA. Its major symptoms include DIARRHEA, rectal BLEEDING, the passage of MUCUS, and ABDOMINAL PAIN.     "@en ;
+    ns1:title "Ulcerózní kolitida"@cs,
+        "Colitis, ulcerative"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001000> a ns1:DiseaseOrFinding ;
+    ns1:description "Manifestations of the adverse effects of drugs administered therapeutically or in the course of diagnostic techniques. It does not include accidental or intentional poisoning for which specific headings are available.     "@en ;
+    ns1:title "Léky - toxicita"@cs,
+        "Drug toxicity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001429> a ns1:DiseaseOrFinding ;
+    ns1:description "Cessation of heart beat or MYOCARDIAL CONTRACTION. If it is treated within a few minutes, heart arrest can be reversed in most cases to normal cardiac rhythm and effective circulation.     "@en ;
+    ns1:title "Srdce - zástava"@cs,
+        "Heart arrest"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001430> a ns1:DiseaseOrFinding ;
+    ns1:description "Impaired conduction of cardiac impulse that can occur anywhere along the conduction pathway, such as between the SINOATRIAL NODE and the right atrium (SA block) or between atria and ventricles (AV block). Heart blocks can be classified by the duration, frequency, or completeness of conduction block. Reversibility depends on the degree of structural or functional defects.     "@en ;
+    ns1:title "Srdce - blokáda"@cs,
+        "Heart block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001709> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases, dysfunctions, or disorders of or located in the iris.     "@en ;
+    ns1:title "Iris - nemoci"@cs,
+        "Iris diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001807> a ns1:DiseaseOrFinding ;
+    ns1:title "Čočka oční - nemoci"@cs,
+        "Lens diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001866> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the LIVER.     "@en ;
+    ns1:title "Nemoci jater"@cs,
+        "Liver diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001966> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute form of MEGACOLON, severe pathological dilatation of the COLON. It is associated with clinical conditions such as ULCERATIVE COLITIS; CROHN DISEASE; AMEBIC DYSENTERY; or CLOSTRIDIUM ENTEROCOLITIS.     "@en ;
+    ns1:title "Megakolon toxické"@cs,
+        "Megacolon, toxic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002070> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder of neuromuscular transmission characterized by weakness of cranial and skeletal muscles. Autoantibodies directed against acetylcholine receptors damage the motor endplate portion of the NEUROMUSCULAR JUNCTION, impairing the transmission of impulses to skeletal muscles. Clinical manifestations may include diplopia, ptosis, and weakness of facial, bulbar, respiratory, and proximal limb muscles. The disease may remain limited to the ocular muscles. THYMOMA is commonly associated with this condition. (Adams et al., Principles of Neurology, 6th ed, p1459)     "@en ;
+    ns1:title "Myasthenia gravis"@cs,
+        "Myasthenia gravis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002754> a ns1:DiseaseOrFinding ;
+    ns1:description "Disturbance in the atrial activation that is caused by transient failure of impulse conduction from the SINOATRIAL NODE to the HEART ATRIA. It is characterized by a delayed in heartbeat and pauses between P waves in an ELECTROCARDIOGRAM.     "@en ;
+    ns1:title "Sinoatriální blokáda"@cs,
+        "Sinoatrial block"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002830> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulceration of the GASTRIC MUCOSA due to contact with GASTRIC JUICE. It is often associated with HELICOBACTER PYLORI infection or consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Žaludeční vředy"@cs,
+        "Stomach ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002888> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally rapid heartbeat, usually with a HEART RATE above 100 beats per minute for adults. Tachycardia accompanied by disturbance in the cardiac depolarization (cardiac arrhythmia) is called tachyarrhythmia.     "@en ;
+    ns1:title "Tachykardie"@cs,
+        "Tachycardia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002948> a ns1:DiseaseOrFinding ;
+    ns1:description "A hypermetabolic syndrome caused by excess THYROID HORMONES which may come from endogenous or exogenous sources. The endogenous source of hormone may be thyroid HYPERPLASIA; THYROID NEOPLASMS; or hormone-producing extrathyroidal tissue. Thyrotoxicosis is characterized by NERVOUSNESS; TACHYCARDIA; FATIGUE; WEIGHT LOSS; heat intolerance; and excessive SWEATING.     "@en ;
+    ns1:title "Tyreotoxikóza"@cs,
+        "Thyrotoxicosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003062> a ns1:DiseaseOrFinding ;
+    ns1:description "A lesion on the surface of the skin or a mucous surface, produced by the sloughing of inflammatory necrotic tissue.     "@en ;
+    ns1:title "Vřed"@cs,
+        "Ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003070> a ns1:DiseaseOrFinding ;
+    ns1:description "Blockage in any part of the URETER causing obstruction of urine flow from the kidney to the URINARY BLADDER. The obstruction may be congenital, acquired, unilateral, bilateral, complete, partial, acute, or chronic. Depending on the degree and duration of the obstruction, clinical features vary greatly such as HYDRONEPHROSIS and obstructive nephropathy.     "@en ;
+    ns1:title "Ureter - obstrukce"@cs,
+        "Ureteral obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003099> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of part or all of the uvea, the middle (vascular) tunic of the eye, and commonly involving the other tunics (sclera and cornea, and the retina). (Dorland, 27th ed)     "@en ;
+    ns1:title "Uveitida"@cs,
+        "Uveitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003233> a ns1:DiseaseOrFinding ;
+    ns1:description "Refers to any inflammation of the sclera including episcleritis, a benign condition affecting only the episclera, which is generally short-lived and easily treated. Classic scleritis, on the other hand, affects deeper tissue and is characterized by higher rates of visual acuity loss and even mortality, particularly in necrotizing form. Its characteristic symptom is severe and general head pain. Scleritis has also been associated with systemic collagen disease. Etiology is unknown but is thought to involve a local immune response. Treatment is difficult and includes administration of anti-inflammatory and immunosuppressive agents such as corticosteroids. Inflammation of the sclera may also be secondary to inflammation of adjacent tissues, such as the conjunctiva.     "@en ;
+    ns1:title "Skleritida"@cs,
+        "Scleritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000125> a ns1:MechanismOfAction ;
+    ns1:title "Cholinergic Muscarinic Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008779> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Parasympathetic Acetylcholine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008868> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Respiratory Secretions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009808> a ns1:PhysiologicEffect ;
+    ns1:title "Positive Chronotropy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009820> a ns1:PhysiologicEffect ;
+    ns1:title "Pupillary Dilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009842> a ns1:PhysiologicEffect ;
+    ns1:title "Salivation Inhibition"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-BIOTIKA-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A03BA01> ;
+    ns1:title "ATROPIN BIOTIKA 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-BIOTIKA-1-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A03BA01> ;
+    ns1:title "ATROPIN BIOTIKA 1 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATROPIN-POS-0-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01FA01> ;
+    ns1:title "ATROPIN-POS 0,5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REASEC> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A07DA> ;
+    ns1:title "REASEC"@cs .
+
+

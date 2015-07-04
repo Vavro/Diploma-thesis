@@ -1,0 +1,207 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A10AB04> a ns1:ATCConcept ;
+    skos:notation "A10AB04" ;
+    skos:prefLabel "Inzulin lispro"@cs,
+        "Insulin lispro"@en .
+
+<http://linked.opendata.cz/resource/ATC/A10AC04> a ns1:ATCConcept ;
+    skos:notation "A10AC04" ;
+    skos:prefLabel "Inzulin lispro"@cs,
+        "Insulin lispro"@en .
+
+<http://linked.opendata.cz/resource/ATC/A10AD04> a ns1:ATCConcept ;
+    skos:notation "A10AD04" ;
+    skos:prefLabel "Inzulin lispro"@cs,
+        "Insulin lispro"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0556909> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "Insulin that has been modified so that the B-chain contains a LYSINE at position 28 instead of a PROLINE and a PROLINE at position 29 instead of a LYSINE.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-100-IU-ML-PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-KWIKPEN-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-KWIKPEN-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-100-IU-ML-PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-KWIKPEN-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-100-IU-ML-PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-KWIKPEN-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-PEN-100-IU-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG---PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL-KWIKPEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL-PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-KWIKPEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25-KWIKPEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25-PEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50-KWIKPEN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50-PEN> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008651>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009344>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009379>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000952>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000954>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001586> ;
+    ns1:title "Inzulin lispro"@cs,
+        "Insulin lispro"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010903> a ns1:PharmacologicalAction ;
+    ns1:description "Substances which lower blood glucose levels.     "@en ;
+    ns1:title "Hypoglykemika"@cs,
+        "Hypoglycemic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000952> a ns1:DiseaseOrFinding ;
+    ns1:description "A subtype of DIABETES MELLITUS that is characterized by INSULIN deficiency. It is manifested by the sudden onset of severe HYPERGLYCEMIA, rapid progression to DIABETIC KETOACIDOSIS, and DEATH unless treated with insulin. The disease may occur at any age, but is most common in childhood or adolescence.     "@en ;
+    ns1:title "Diabetes mellitus 1. typu"@cs,
+        "Diabetes mellitus, type 1"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000954> a ns1:DiseaseOrFinding ;
+    ns1:description "A subclass of DIABETES MELLITUS that is not INSULIN-responsive or dependent (NIDDM). It is characterized initially by INSULIN RESISTANCE and HYPERINSULINEMIA; and eventually by GLUCOSE INTOLERANCE; HYPERGLYCEMIA; and overt diabetes. Type II diabetes mellitus is no longer considered a disease exclusively found in adults. Patients seldom develop KETOSIS but often exhibit OBESITY.     "@en ;
+    ns1:title "Diabetes mellitus 2. typu"@cs,
+        "Diabetes mellitus, type 2"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001586> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally high BLOOD GLUCOSE level.     "@en ;
+    ns1:title "Hyperglykemie"@cs,
+        "Hyperglycemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000225> a ns1:MechanismOfAction ;
+    ns1:title "Insulin Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008651> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Glycogenolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008688> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Lipolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009341> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glucose Transport into Cells"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009344> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Glycogenesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009379> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Lipogenesis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009533> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "HUMALOG 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "HUMALOG BASAL 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-100-IU-ML-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "HUMALOG BASAL 100 IU/ML PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-BASAL-KWIKPEN-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "HUMALOG BASAL KWIKPEN 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-KWIKPEN-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "HUMALOG KWIKPEN 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 25 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-100-IU-ML-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 25 100 IU/ML PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-25-KWIKPEN-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 25 KWIKPEN 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 50 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-100-IU-ML-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 50 100 IU/ML PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-MIX-50-KWIKPEN-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "HUMALOG MIX 50 KWIKPEN 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/HUMALOG-PEN-100-IU-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "HUMALOG PEN 100 IU/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "LIPROLOG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG---PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "LIPROLOG - PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "LIPROLOG BASAL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL-KWIKPEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "LIPROLOG BASAL KWIKPEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-BASAL-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AC04> ;
+    ns1:title "LIPROLOG BASAL PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-KWIKPEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AB04> ;
+    ns1:title "LIPROLOG KWIKPEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 25"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25-KWIKPEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 25 KWIKPEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-25-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 25 PEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 50"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50-KWIKPEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 50 KWIKPEN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LIPROLOG-MIX-50-PEN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A10AD04> ;
+    ns1:title "LIPROLOG MIX 50 PEN"@cs .
+
+

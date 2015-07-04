@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J05> a ns1:ATCConcept ;
+    dcterms:title "Antivirotika pro systémovou aplikaci"@cs,
+        "ANTIVIRALS FOR SYSTEMIC USE"@en ;
+    skos:notation "J05" .
+
+<http://linked.opendata.cz/resource/ATC/J05A> a ns1:ATCConcept ;
+    dcterms:title "Přímo působící antivirotika"@cs,
+        "DIRECT ACTING ANTIVIRALS"@en ;
+    skos:notation "J05A" .
+
+<http://linked.opendata.cz/resource/ATC/J05AF> a ns1:ATCConcept ;
+    dcterms:title "Nukleosidové a nukleotidové inhibitory reverzní transkriptázy"@cs,
+        "Nucleoside and nucleotide reverse transcriptase inhibitors"@en ;
+    skos:notation "J05AF" .
+
+<http://linked.opendata.cz/resource/ATC/J05AF10> a ns1:ATCConcept ;
+    dcterms:title "Entekavir"@cs,
+        "Entecavir"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J05>,
+        <http://linked.opendata.cz/resource/ATC/J05A>,
+        <http://linked.opendata.cz/resource/ATC/J05AF> ;
+    skos:notation "J05AF10" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0370336> a ns1:Ingredient ;
+    ns1:title "Entecavir"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027171> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF10> ;
+    ns1:hasIndicationGroup "CHEMOTHERAPEUTICA (VČETNĚ TUBERKULOSTATIK)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X0.5MG"@cs ;
+    ns1:title "BARACLUDE 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027174> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF10> ;
+    ns1:hasIndicationGroup "CHEMOTHERAPEUTICA (VČETNĚ TUBERKULOSTATIK)"@cs ;
+    ns1:hasMaximalPrice "12122.6904297"^^xsd:float ;
+    ns1:hasPackagingSize "30X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "12190.4003906"^^xsd:float ;
+    ns1:hasResumedMarketingDate "2010-09-24"^^xsd:date ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X1X0.5MG"@cs ;
+    ns1:title "BARACLUDE 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029362> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF10> ;
+    ns1:hasIndicationGroup "CHEMOTHERAPEUTICA (VČETNĚ TUBERKULOSTATIK)"@cs ;
+    ns1:hasPackagingSize "90X1"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90X1X0.5MG"@cs ;
+    ns1:title "BARACLUDE 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BARACLUDE-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J05AF10> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0370336> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027171>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027174>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0029362> ;
+    ns1:title "BARACLUDE 0,5 MG"@cs .
+
+

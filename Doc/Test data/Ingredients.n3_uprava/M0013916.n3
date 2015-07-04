@@ -1,0 +1,98 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/D11AX01> a ns1:ATCConcept ;
+    skos:notation "D11AX01" ;
+    skos:prefLabel "Minoxidil"@cs,
+        "Minoxidil for local use"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013916> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000437>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002085>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002390> ;
+    ns1:description "A potent direct-acting peripheral vasodilator (VASODILATOR AGENTS) that reduces peripheral resistance and produces a fall in BLOOD PRESSURE. (From Martindale, The Extra Pharmacopoeia, 30th ed, p371)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000211> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BELOHAIR-2->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BELOHAIR-5->,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEOCAPIL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/REGAINE-5-> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008377>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000358>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001617> ;
+    ns1:title "Minoxidil"@cs,
+        "Minoxidil"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0022559> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to cause dilation of the blood vessels.     "@en ;
+    ns1:title "Vasodilatancia"@cs,
+        "Vasodilator agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000358> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of hair from areas where it is normally present.     "@en ;
+    ns1:title "Alopecie"@cs,
+        "Alopecia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000437> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal balloon- or sac-like dilatation in the wall of AORTA.     "@en ;
+    ns1:title "Aortální aneurysma"@cs,
+        "Aortic aneurysm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001617> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of markedly elevated BLOOD PRESSURE with DIASTOLIC PRESSURE usually greater than 120 mm Hg. Malignant hypertension is characterized by widespread vascular damage, PAPILLEDEMA, retinopathy, HYPERTENSIVE ENCEPHALOPATHY, and renal dysfunction.     "@en ;
+    ns1:title "Hypertenze maligní"@cs,
+        "Hypertension, malignant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002085> a ns1:DiseaseOrFinding ;
+    ns1:description "NECROSIS of the MYOCARDIUM caused by an obstruction of the blood supply to the heart (CORONARY CIRCULATION).     "@en ;
+    ns1:title "Infarkt myokardu"@cs,
+        "Myocardial infarction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002390> a ns1:DiseaseOrFinding ;
+    ns1:description "A usually benign, well-encapsulated, lobular, vascular tumor of chromaffin tissue of the ADRENAL MEDULLA or sympathetic paraganglia. The cardinal symptom, reflecting the increased secretion of EPINEPHRINE and NOREPINEPHRINE, is HYPERTENSION, which may be persistent or intermittent. During severe attacks, there may be HEADACHE; SWEATING, palpitation, apprehension, TREMOR; PALLOR or FLUSHING of the face, NAUSEA and VOMITING, pain in the CHEST and ABDOMEN, and paresthesias of the extremities. The incidence of malignancy is as low as 5% but the pathologic distinction between benign and malignant pheochromocytomas is not clear. (Dorland, 27th ed; DeVita Jr et al., Cancer: Principles & Practice of Oncology, 3d ed, p1298)     "@en ;
+    ns1:title "Feochromocytom"@cs,
+        "Pheochromocytoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000211> a ns1:MechanismOfAction ;
+    ns1:title "Potassium Channel Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008377> a ns1:PhysiologicEffect ;
+    ns1:title "Cutaneous Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BELOHAIR-2-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX01> ;
+    ns1:title "BELOHAIR 2%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BELOHAIR-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX01> ;
+    ns1:title "BELOHAIR 5%"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEOCAPIL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX01> ;
+    ns1:title "NEOCAPIL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REGAINE-5-> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/D11AX01> ;
+    ns1:title "REGAINE 5%"@cs .
+
+

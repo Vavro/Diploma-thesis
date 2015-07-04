@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N07> a ns1:ATCConcept ;
+    dcterms:title "Jiná léčiva nervového systému"@cs,
+        "OTHER NERVOUS SYSTEM DRUGS"@en ;
+    skos:notation "N07" .
+
+<http://linked.opendata.cz/resource/ATC/N07B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislostí"@cs,
+        "DRUGS USED IN ADDICTIVE DISORDERS"@en ;
+    skos:notation "N07B" .
+
+<http://linked.opendata.cz/resource/ATC/N07BC> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislosti na opioidech"@cs,
+        "Drugs used in opioid dependence"@en ;
+    skos:notation "N07BC" .
+
+<http://linked.opendata.cz/resource/ATC/N07BC01> a ns1:ATCConcept ;
+    dcterms:title "Buprenorfin"@cs,
+        "Buprenorphine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N07>,
+        <http://linked.opendata.cz/resource/ATC/N07B>,
+        <http://linked.opendata.cz/resource/ATC/N07BC> ;
+    skos:notation "N07BC01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330887> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> ;
+    ns1:title "Buprenorphine hydrochloride"@cs,
+        "Buprenorphine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001068> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds with activity like OPIATE ALKALOIDS, acting at OPIOID RECEPTORS. Properties include induction of ANALGESIA or NARCOSIS.     "@en ;
+    ns1:title "Opioidní analgetika"@cs,
+        "Analgesics, opioid"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014474> a ns1:PharmacologicalAction ;
+    ns1:description "Agents inhibiting the effect of narcotics on the central nervous system.     "@en ;
+    ns1:title "Narkotika - antagonisté"@cs,
+        "Narcotic antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014481> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that induce NARCOSIS. This term is considered outdated due to imprecision but continues to be widely used. Originally, agents that caused somnolence or induced sleep (STUPOR); now, any derivative, natural or synthetic, of OPIUM or MORPHINE or any substance that has their effects. Narcotics are potent inducers of ANALGESIA and OPIOID-RELATED DISORDERS.     "@en ;
+    ns1:title "Narkotika"@cs,
+        "Narcotics"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0137729> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC01> ;
+    ns1:hasIndication """Substituční léčba závislosti na opioidech v rámci specializované medicínské, sociální a psychologické péče.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC145005_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM TBL SLG 7X0.4MG"@cs ;
+    ns1:title "BUPRENORPHINE ALKALOID 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0138344> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC01> ;
+    ns1:hasIndication """Substituční léčba závislosti na opioidech v rámci specializované medicínské, sociální a psychologické péče.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC145005_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM TBL SLG 28X0.4MG"@cs ;
+    ns1:title "BUPRENORPHINE ALKALOID 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0138345> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC01> ;
+    ns1:hasIndication """Substituční léčba závislosti na opioidech v rámci specializované medicínské, sociální a psychologické péče.
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDOTA,DETOXICANTIA"@cs ;
+    ns1:hasPackagingSize "70"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Orální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC145005_doc> ;
+    ns1:hasStrength "0.4MG"^^xsd:string ;
+    ns1:hasTitleSupplement "ORM TBL SLG 70X0.4MG"@cs ;
+    ns1:title "BUPRENORPHINE ALKALOID 0,4 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BUPRENORPHINE-ALKALOID-0-4-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BC01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0330887> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0137729>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0138344>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0138345> ;
+    ns1:title "BUPRENORPHINE ALKALOID 0,4 MG"@cs .
+
+

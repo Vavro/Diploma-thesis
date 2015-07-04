@@ -1,0 +1,72 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01XX02> a ns1:ATCConcept ;
+    skos:notation "L01XX02" ;
+    skos:prefLabel "Asparagináza"@cs,
+        "Asparaginase"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0001815> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002290> ;
+    ns1:description "A hydrolase enzyme that converts L-asparagine and water to L-aspartate and NH3.  EC 3.5.1.1.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/KIDROLASE> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001815>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001905>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000181267> ;
+    ns1:title "Asparaginasa"@cs,
+        "Asparaginase"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001483> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that inhibit or prevent the proliferation of NEOPLASMS.     "@en ;
+    ns1:title "Antitumorózní látky"@cs,
+        "Antineoplastic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001815> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. Leukemias were originally termed acute or chronic based on life expectancy but now are classified according to cellular maturity. Acute leukemias consist of predominately immature cells; chronic leukemias are composed of more mature cells. (From The Merck Manual, 2006)     "@en ;
+    ns1:title "Leukemie"@cs,
+        "Leukemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002290> a ns1:DiseaseOrFinding ;
+    ns1:description "INFLAMMATION of the PANCREAS. Pancreatitis is classified as acute unless there are computed tomographic or endoscopic retrograde cholangiopancreatographic findings of CHRONIC PANCREATITIS (International Symposium on Acute Pancreatitis, Atlanta, 1992). The two most common forms of acute pancreatitis are ALCOHOLIC PANCREATITIS and gallstone pancreatitis.     "@en ;
+    ns1:title "Pankreatitida"@cs,
+        "Pancreatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000181267> a ns1:DiseaseOrFinding ;
+    ns1:description "A neoplasm characterized by abnormalities of the lymphoid cell precursors leading to excessive lymphoblasts in the marrow and other organs. It is the most common cancer in children and accounts for the vast majority of all childhood leukemias.     "@en ;
+    ns1:title "Akutní lymfatická leukemie"@cs,
+        "Precursor cell lymphoblastic leukemia-lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088> a ns1:MechanismOfAction ;
+    ns1:title "Excitatory Amino Acid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000163> a ns1:MechanismOfAction ;
+    ns1:title "Enzyme Interactions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/KIDROLASE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01XX02> ;
+    ns1:title "KIDROLASE"@cs .
+
+

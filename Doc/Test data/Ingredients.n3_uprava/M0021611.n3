@@ -1,0 +1,163 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01GB01> a ns1:ATCConcept ;
+    skos:notation "J01GB01" ;
+    skos:prefLabel "Tobramycin"@cs,
+        "Tobramycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01AA12> a ns1:ATCConcept ;
+    skos:notation "S01AA12" ;
+    skos:prefLabel "Tobramycin"@cs,
+        "Tobramycin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01CA01> a ns1:ATCConcept ;
+    skos:notation "S01CA01" ;
+    skos:prefLabel "Dexamethason a antiinfektiva"@cs,
+        "Dexamethasone and antiinfectives"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021611> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An aminoglycoside, broad-spectrum antibiotic produced by Streptomyces tenebrarius. It is effective against gram-negative bacteria, especially the PSEUDOMONAS species. It is a 10% component of the antibiotic complex, NEBRAMYCIN, produced by the same species.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BRAMITOB>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NEBRIS>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBI-300-MG-5-ML-NEBULISER-SOLUTION>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBI-PODHALER-28-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX-OCNI-MAST>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-B--BRAUN-1-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-B--BRAUN-3-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-TEVA-300MG-5ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBREX>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TOBREX-LA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008334>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000890>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001249>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002519>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002603>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002817>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003081>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> ;
+    ns1:title "Tobramycin"@cs,
+        "Tobramycin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000890> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal recessive genetic disease of the EXOCRINE GLANDS. It is caused by mutations in the gene encoding the CYSTIC FIBROSIS TRANSMEMBRANE CONDUCTANCE REGULATOR expressed in several organs including the LUNG, the PANCREAS, the BILIARY SYSTEM, and the SWEAT GLANDS. Cystic fibrosis is characterized by epithelial secretory dysfunction associated with ductal obstruction resulting in AIRWAY OBSTRUCTION; chronic RESPIRATORY INFECTIONS; PANCREATIC INSUFFICIENCY; maldigestion; salt depletion; and HEAT PROSTRATION.     "@en ;
+    ns1:title "Cystická fibróza"@cs,
+        "Cystic fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001249> a ns1:DiseaseOrFinding ;
+    ns1:description "Any pathological condition where fibrous connective tissue invades any organ, usually as a consequence of inflammation or other injury.     "@en ;
+    ns1:title "Fibróza"@cs,
+        "Fibrosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002519> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus PSEUDOMONAS.     "@en ;
+    ns1:title "Pseudomonas - infekce"@cs,
+        "Pseudomonas infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002603> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host RESPIRATORY SYSTEM by microorganisms, usually leading to pathological processes or diseases.     "@en ;
+    ns1:title "Dýchací systém - infekce"@cs,
+        "Respiratory tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002817> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STAPHYLOCOCCUS.     "@en ;
+    ns1:title "Stafylokoky - infekce"@cs,
+        "Staphylococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003081> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammatory responses of the epithelium of the URINARY TRACT to microbial invasions. They are often bacterial infections with associated BACTERIURIA and PYURIA.     "@en ;
+    ns1:title "Infekce močového ústrojí"@cs,
+        "Urinary tract infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003324> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections in the inner or external eye caused by microorganisms belonging to several families of bacteria. Some of the more common genera found are Haemophilus, Neisseria, Staphylococcus, Streptococcus, and Chlamydia.     "@en ;
+    ns1:title "Oční infekce bakteriální"@cs,
+        "Eye infections, bacterial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000150> a ns1:MechanismOfAction ;
+    ns1:title "Protein Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008334> a ns1:PhysiologicEffect ;
+    ns1:title "Cell Membrane Alteration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008841> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Protein Synthesis"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BRAMITOB> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "BRAMITOB"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NEBRIS> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "NEBRIS"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBI-300-MG-5-ML-NEBULISER-SOLUTION> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "TOBI 300 MG/5 ML NEBULISER SOLUTION"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBI-PODHALER-28-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "TOBI PODHALER 28 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "TOBRADEX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRADEX-OCNI-MAST> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01CA01> ;
+    ns1:title "TOBRADEX OČNÍ MAST"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-B--BRAUN-1-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "TOBRAMYCIN B. BRAUN 1 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-B--BRAUN-3-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "TOBRAMYCIN B. BRAUN 3 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBRAMYCIN-TEVA-300MG-5ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01GB01> ;
+    ns1:title "TOBRAMYCIN TEVA 300MG/5ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBREX> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01AA12> ;
+    ns1:title "TOBREX"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TOBREX-LA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01AA12> ;
+    ns1:title "TOBREX LA"@cs .
+
+

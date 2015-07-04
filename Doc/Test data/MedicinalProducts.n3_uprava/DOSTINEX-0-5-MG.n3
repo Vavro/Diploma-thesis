@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/G> a ns1:ATCConcept ;
+    dcterms:title "Urogenitální trakt a pohlavní hormony"@cs,
+        "GENITO URINARY SYSTEM AND SEX HORMONES"@en ;
+    skos:notation "G" .
+
+<http://linked.opendata.cz/resource/ATC/G02> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02" .
+
+<http://linked.opendata.cz/resource/ATC/G02C> a ns1:ATCConcept ;
+    dcterms:title "Jiná gynekologika"@cs,
+        "OTHER GYNECOLOGICALS"@en ;
+    skos:notation "G02C" .
+
+<http://linked.opendata.cz/resource/ATC/G02CB> a ns1:ATCConcept ;
+    dcterms:title "Inhibitory prolaktinu"@cs,
+        "Prolactine inhibitors"@en ;
+    skos:notation "G02CB" .
+
+<http://linked.opendata.cz/resource/ATC/G02CB03> a ns1:ATCConcept ;
+    dcterms:title "Kabergolin"@cs,
+        "Cabergoline"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/G>,
+        <http://linked.opendata.cz/resource/ATC/G02>,
+        <http://linked.opendata.cz/resource/ATC/G02C>,
+        <http://linked.opendata.cz/resource/ATC/G02CB> ;
+    skos:notation "G02CB03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136060> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Cabergoline"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025273> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CB03> ;
+    ns1:hasIndication """Inhibice/potlačení fyziologického procesu laktace.
+DOSTINEX je indikován k zábraně nástupu fyziologického procesu laktace (pokud je podán těsně po porodu) nebo k potlačení laktace již rozvinuté:
+1) Po porodu, rozhodne li se matka dítě nekojit nebo v případech, kdy je kojení kontraindikováno pro lékařsky opodstatněné překážky na straně matky nebo novorozence.
+2) V případech narození mrtvého dítěte nebo po potratu.
+DOSTINEX předchází rozvoji procesu laktace nebo jej potlačuje tím, že inhibuje sekreci prolaktinu. V provedených kontrolovaných klinických pokusech se DOSTINEX, podaný v jediné dávce 1 mg během prvního dne po porodu, u 70-90% žen ukázal jako účinný prostředek k dosažení inhibice sekrece mléka a také k potlačení puerperálního překrvení a bolestivosti prsů. Symptomy tzv. rebound-fenoménu ve třetím poporodním týdnu se vyskytly u prsů méně než 5% žen (a vesměs jen v lehké intenzitě).
+Terapie poruch spojených s hyperprolaktinémií
+DOSTINEX je indikován k léčbě dysfunkcí souvisejících s hyperprolaktinémií, zahrnující amenoreu, oligomenoreu, anovulaci a galaktoreu.
+DOSTINEX je indikován u pacientů s hypofyzárními adenomy secernujícími prolaktin (mikro- a makroprolaktinadenomy), u stavů idiopatické hyperprolaktinémie nebo u syndromu prázdné selly spojené s hyperprolaktinémií, která představuje základní patologický substrát všech výše zmíněných klinických projevů.
+Při dlouhodobé aplikaci byl DOSTINEX v dávkovém rozmezí 1-2 mg týdně účinný v normalizaci sérové prolaktinémie u asi 84% hyperprolaktinémických pacientů. U 83% žen, trpících amenoreou, se podařilo dosáhnout návratu pravidelného menstruačního krvácení.
+U 89% žen, u nichž byly během luteální fáze monitorovány hladiny progesteronu, bylo prokázáno úspěšné obnovení ovulačních cyklů. U 90% žen, trpících galaktoreou, bylo dosaženo terapeutického efektu. U 50-90% žen i mužů s mikro nebo makroprolaktinomy se podařilo léčbou redukovat nádorovou masu.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasMaximalPrice "810.210021973"^^xsd:float ;
+    ns1:hasPackagingSize "8"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "681.570007324"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138762_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 8X0.5MG"@cs ;
+    ns1:title "DOSTINEX 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025274> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CB03> ;
+    ns1:hasIndication """Inhibice/potlačení fyziologického procesu laktace.
+DOSTINEX je indikován k zábraně nástupu fyziologického procesu laktace (pokud je podán těsně po porodu) nebo k potlačení laktace již rozvinuté:
+1) Po porodu, rozhodne li se matka dítě nekojit nebo v případech, kdy je kojení kontraindikováno pro lékařsky opodstatněné překážky na straně matky nebo novorozence.
+2) V případech narození mrtvého dítěte nebo po potratu.
+DOSTINEX předchází rozvoji procesu laktace nebo jej potlačuje tím, že inhibuje sekreci prolaktinu. V provedených kontrolovaných klinických pokusech se DOSTINEX, podaný v jediné dávce 1 mg během prvního dne po porodu, u 70-90% žen ukázal jako účinný prostředek k dosažení inhibice sekrece mléka a také k potlačení puerperálního překrvení a bolestivosti prsů. Symptomy tzv. rebound-fenoménu ve třetím poporodním týdnu se vyskytly u prsů méně než 5% žen (a vesměs jen v lehké intenzitě).
+Terapie poruch spojených s hyperprolaktinémií
+DOSTINEX je indikován k léčbě dysfunkcí souvisejících s hyperprolaktinémií, zahrnující amenoreu, oligomenoreu, anovulaci a galaktoreu.
+DOSTINEX je indikován u pacientů s hypofyzárními adenomy secernujícími prolaktin (mikro- a makroprolaktinadenomy), u stavů idiopatické hyperprolaktinémie nebo u syndromu prázdné selly spojené s hyperprolaktinémií, která představuje základní patologický substrát všech výše zmíněných klinických projevů.
+Při dlouhodobé aplikaci byl DOSTINEX v dávkovém rozmezí 1-2 mg týdně účinný v normalizaci sérové prolaktinémie u asi 84% hyperprolaktinémických pacientů. U 83% žen, trpících amenoreou, se podařilo dosáhnout návratu pravidelného menstruačního krvácení.
+U 89% žen, u nichž byly během luteální fáze monitorovány hladiny progesteronu, bylo prokázáno úspěšné obnovení ovulačních cyklů. U 90% žen, trpících galaktoreou, bylo dosaženo terapeutického efektu. U 50-90% žen i mužů s mikro nebo makroprolaktinomy se podařilo léčbou redukovat nádorovou masu.
+"""@cs ;
+    ns1:hasIndicationGroup "GYNAECOLOGICA"@cs ;
+    ns1:hasMaximalPrice "272.799987793"^^xsd:float ;
+    ns1:hasPackagingSize "2"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "170.38999939"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC138762_doc> ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 2X0.5MG"@cs ;
+    ns1:title "DOSTINEX 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DOSTINEX-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/G02CB03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0136060> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025273>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0025274> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "DOSTINEX 0,5 MG"@cs .
+
+

@@ -1,0 +1,88 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0004278> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000546>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> ;
+    ns1:description "A strongly basic anion exchange resin whose main constituent is polystyrene trimethylbenzylammonium Cl(-) anion.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000175355> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001247>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008553> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000856>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000963>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001110>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001580>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001594>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003210> ;
+    ns1:title "Cholestyraminová pryskyřice"@cs,
+        "Cholestyramine resin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001247> a ns1:PharmacologicalAction ;
+    ns1:description "High-molecular-weight insoluble polymers that contain functional cationic groups capable of undergoing exchange reactions with anions.     "@en ;
+    ns1:title "Aniontoměniče"@cs,
+        "Anion exchange resins"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001378> a ns1:PharmacologicalAction ;
+    ns1:description "Substances used to lower plasma cholesterol levels.     "@en ;
+    ns1:title "Anticholesteremika"@cs,
+        "Anticholesteremic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000546> a ns1:DiseaseOrFinding ;
+    ns1:description "Impairment of bile flow in the large BILE DUCTS by mechanical obstruction or stricture due to benign or malignant processes.     "@en ;
+    ns1:title "Cholestáza extrahepatická"@cs,
+        "Cholestasis, extrahepatic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000856> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of CORONARY ARTERIES that may derive from a congenital abnormality, atherosclerotic, or non-atherosclerotic cause.     "@en ;
+    ns1:title "Koronární artérie - nemoci"@cs,
+        "Coronary artery disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000963> a ns1:DiseaseOrFinding ;
+    ns1:description "An increased liquidity or decreased consistency of  FECES, such as running stool. Fecal consistency is related to the ratio of water-holding capacity of insoluble solids to total water, rather than the amount of water present. Diarrhea is not hyperdefecation or increased fecal weight.     "@en ;
+    ns1:title "Průjem"@cs,
+        "Diarrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001110> a ns1:DiseaseOrFinding ;
+    ns1:description "An acute inflammation of the INTESTINAL MUCOSA that is characterized by the presence of pseudomembranes or plaques in the SMALL INTESTINE (pseudomembranous enteritis) and the LARGE INTESTINE (pseudomembranous colitis). It is commonly associated with antibiotic therapy and CLOSTRIDIUM DIFFICILE colonization.     "@en ;
+    ns1:title "Pseudomembranózní enterokolitida"@cs,
+        "Enterocolitis, pseudomembranous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001580> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition with abnormally high levels of CHOLESTEROL in the blood. It is defined as a cholesterol value exceeding the 95th percentile for the population.     "@en ;
+    ns1:title "Hypercholesterolémie"@cs,
+        "Hypercholesterolemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001594> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions with abnormally elevated levels of LIPOPROTEINS in the blood. They may be inherited, acquired, primary, or secondary. Hyperlipoproteinemias are classified according to the pattern of lipoproteins on electrophoresis or ultracentrifugation.     "@en ;
+    ns1:title "Hyperlipoproteinémie"@cs,
+        "Hyperlipoproteinemias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:description "Any impairment, arrest, or reversal of the normal flow of INTESTINAL CONTENTS toward the ANAL CANAL.     "@en ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003210> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of elevated levels of TRIGLYCERIDES in the blood.     "@en ;
+    ns1:title "Hypertriglyceridémie"@cs,
+        "Hypertriglyceridemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000175355> a ns1:MechanismOfAction ;
+    ns1:title "Binding Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008553> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cholesterol Absorption"@en .
+
+

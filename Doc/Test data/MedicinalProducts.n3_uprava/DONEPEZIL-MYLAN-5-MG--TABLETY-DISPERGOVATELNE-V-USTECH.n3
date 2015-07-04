@@ -1,0 +1,232 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06D> a ns1:ATCConcept ;
+    dcterms:title "Léčiva proti demenci"@cs,
+        "ANTI-DEMENTIA DRUGS"@en ;
+    skos:notation "N06D" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA> a ns1:ATCConcept ;
+    dcterms:title "Anticholinesterázy"@cs,
+        "Anticholinesterases"@en ;
+    skos:notation "N06DA" .
+
+<http://linked.opendata.cz/resource/ATC/N06DA02> a ns1:ATCConcept ;
+    dcterms:title "Donepezil"@cs,
+        "Donepezil"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06D>,
+        <http://linked.opendata.cz/resource/ATC/N06DA> ;
+    skos:notation "N06DA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0206791> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Donepezil hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148720> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "10"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 10X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148721> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "7"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 7X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148722> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "14"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 14X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148724> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasMaximalPrice "1068.48999023"^^xsd:float ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "552.359985352"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 28X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148726> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 30X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148728> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 50X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148730> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 56X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148732> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 60X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148734> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "84"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 84X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148736> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "98"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 98X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148738> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 100X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148740> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "120"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 120X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148742> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasIndication """Přípravek Donepezil Mylan je indikován k symptomatické léčbě mírné až středně těžké formy Alzheimerovy demence.
+"""@cs ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "180"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC154926_doc> ;
+    ns1:hasStrength "5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL DIS 180X5MG"@cs ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DONEPEZIL-MYLAN-5-MG--TABLETY-DISPERGOVATELNE-V-USTECH> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DA02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0206791> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148720>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148721>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148722>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148724>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148726>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148728>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148730>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148732>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148734>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148736>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148738>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148740>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0148742> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "DONEPEZIL MYLAN 5 MG, TABLETY DISPERGOVATELNÉ V ÚSTECH"@cs .
+
+

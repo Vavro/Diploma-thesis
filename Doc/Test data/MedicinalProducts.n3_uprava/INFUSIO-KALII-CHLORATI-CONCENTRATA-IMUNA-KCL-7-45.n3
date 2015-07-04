@@ -1,0 +1,150 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/B> a ns1:ATCConcept ;
+    dcterms:title "Krev a krvetvorné orgány"@cs,
+        "BLOOD AND BLOOD FORMING ORGANS"@en ;
+    skos:notation "B" .
+
+<http://linked.opendata.cz/resource/ATC/B05> a ns1:ATCConcept ;
+    dcterms:title "Krevní náhrady, infuzní a perfuzní roztoky"@cs,
+        "BLOOD SUBSTITUTES AND PERFUSION SOLUTIONS"@en ;
+    skos:notation "B05" .
+
+<http://linked.opendata.cz/resource/ATC/B05X> a ns1:ATCConcept ;
+    dcterms:title "Aditiva k intravenózním roztokům"@cs,
+        "I.V. SOLUTION ADDITIVES"@en ;
+    skos:notation "B05X" .
+
+<http://linked.opendata.cz/resource/ATC/B05XA> a ns1:ATCConcept ;
+    dcterms:title "Roztoky elektrolytů"@cs,
+        "Electrolyte solutions"@en ;
+    skos:notation "B05XA" .
+
+<http://linked.opendata.cz/resource/ATC/B05XA01> a ns1:ATCConcept ;
+    dcterms:title "Chlorid draselný"@cs,
+        "Potassium chloride"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/B>,
+        <http://linked.opendata.cz/resource/ATC/B05>,
+        <http://linked.opendata.cz/resource/ATC/B05X>,
+        <http://linked.opendata.cz/resource/ATC/B05XA> ;
+    skos:notation "B05XA01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000305>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000911>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001590>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001702>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004155> ;
+    ns1:description "A white crystal or crystalline powder used in BUFFERS; FERTILIZERS; and EXPLOSIVES. It can be used to replenish ELECTROLYTES and restore WATER-ELECTROLYTE BALANCE in treating HYPOKALEMIA.     "@en ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Chlorid draselný"@cs,
+        "Potassium chloride"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000305> a ns1:DiseaseOrFinding ;
+    ns1:title "Addisonova nemoc"@cs,
+        "Addison disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000911> a ns1:DiseaseOrFinding ;
+    ns1:title "Dehydratace"@cs,
+        "Dehydration"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001590> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemie"@cs,
+        "Hyperkalemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001702> a ns1:DiseaseOrFinding ;
+    ns1:title "Střeva - obstrukce"@cs,
+        "Intestinal obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004155> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalemická periodická paralýza"@cs,
+        "Paralysis, hyperkalemic periodic"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084087> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasIndication """Prevence a léčba hypokalemie, zejména spojené s hypochloremickou alkalózou, zvýšené ztráty  kalia při průjmových onemocněních, nefrotickém syndromu, diuretické léčbě, dlouhodobé léčbě kortikoidy, ileózním stavu, hyperaldosteronismu a traumatech, iontové rozvraty jakékoliv jiné příčiny.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "1X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106190_doc> ;
+    ns1:hasTitleSupplement "INF CNC SOL 1X100ML"@cs ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084088> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasIndication """Prevence a léčba hypokalemie, zejména spojené s hypochloremickou alkalózou, zvýšené ztráty  kalia při průjmových onemocněních, nefrotickém syndromu, diuretické léčbě, dlouhodobé léčbě kortikoidy, ileózním stavu, hyperaldosteronismu a traumatech, iontové rozvraty jakékoliv jiné příčiny.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "10X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106190_doc> ;
+    ns1:hasTitleSupplement "INF CNC SOL 10X100ML"@cs ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084089> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasIndication """Prevence a léčba hypokalemie, zejména spojené s hypochloremickou alkalózou, zvýšené ztráty  kalia při průjmových onemocněních, nefrotickém syndromu, diuretické léčbě, dlouhodobé léčbě kortikoidy, ileózním stavu, hyperaldosteronismu a traumatech, iontové rozvraty jakékoliv jiné příčiny.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "12X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106190_doc> ;
+    ns1:hasTitleSupplement "INF CNC SOL 12X100ML"@cs ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086110> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasIndication """Prevence a léčba hypokalemie, zejména spojené s hypochloremickou alkalózou, zvýšené ztráty  kalia při průjmových onemocněních, nefrotickém syndromu, diuretické léčbě, dlouhodobé léčbě kortikoidy, ileózním stavu, hyperaldosteronismu a traumatech, iontové rozvraty jakékoliv jiné příčiny.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "20X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106190_doc> ;
+    ns1:hasTitleSupplement "INF CNC SOL 20X100ML"@cs ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086111> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasIndication """Prevence a léčba hypokalemie, zejména spojené s hypochloremickou alkalózou, zvýšené ztráty  kalia při průjmových onemocněních, nefrotickém syndromu, diuretické léčbě, dlouhodobé léčbě kortikoidy, ileózním stavu, hyperaldosteronismu a traumatech, iontové rozvraty jakékoliv jiné příčiny.
+"""@cs ;
+    ns1:hasIndicationGroup "INFUNDIBILIA"@cs ;
+    ns1:hasPackagingSize "30X100ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Infuze"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106190_doc> ;
+    ns1:hasTitleSupplement "INF CNC SOL 30X100ML"@cs ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INFUSIO-KALII-CHLORATI-CONCENTRATA-IMUNA-KCL-7-45> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B05XA01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0017376> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084087>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084088>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0084089>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086110>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0086111> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "INFUSIO KALII CHLORATI CONCENTRATA IMUNA KCL 7,45"@cs .
+
+

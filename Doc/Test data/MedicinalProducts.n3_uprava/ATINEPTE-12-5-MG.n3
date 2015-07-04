@@ -1,0 +1,110 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06A> a ns1:ATCConcept ;
+    dcterms:title "Antidepresiva"@cs,
+        "ANTIDEPRESSANTS"@en ;
+    skos:notation "N06A" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX> a ns1:ATCConcept ;
+    dcterms:title "Jiná antidepresiva"@cs,
+        "Other antidepressants"@en ;
+    skos:notation "N06AX" .
+
+<http://linked.opendata.cz/resource/ATC/N06AX14> a ns1:ATCConcept ;
+    dcterms:title "Tianeptin"@cs,
+        "Tianeptine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06A>,
+        <http://linked.opendata.cz/resource/ATC/N06AX> ;
+    skos:notation "N06AX14" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0012794> a ns1:Ingredient ;
+    ns1:title "Sodná sůl tianeptinu"@cs,
+        "Tianeptine sodium"@en,
+        "Tianeptinum natricum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179570> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX14> ;
+    ns1:hasIndication """Léčba epizod deprese.
+Tianeptin je možné podávat u mírných, středně těžkých i závažných depresí. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "28"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150966_doc> ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X12.5MG"@cs ;
+    ns1:title "ATINEPTE 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179571> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX14> ;
+    ns1:hasIndication """Léčba epizod deprese.
+Tianeptin je možné podávat u mírných, středně těžkých i závažných depresí. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasMaximalPrice "203.130004883"^^xsd:float ;
+    ns1:hasPackagingSize "30"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "72.0599975586"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150966_doc> ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30X12.5MG"@cs ;
+    ns1:title "ATINEPTE 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179572> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX14> ;
+    ns1:hasIndication """Léčba epizod deprese.
+Tianeptin je možné podávat u mírných, středně těžkých i závažných depresí. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150966_doc> ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X12.5MG"@cs ;
+    ns1:title "ATINEPTE 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179573> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX14> ;
+    ns1:hasIndication """Léčba epizod deprese.
+Tianeptin je možné podávat u mírných, středně těžkých i závažných depresí. 
+"""@cs ;
+    ns1:hasIndicationGroup "ANTIDEPRESSIVA"@cs ;
+    ns1:hasPackagingSize "60"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC150966_doc> ;
+    ns1:hasStrength "12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60X12.5MG"@cs ;
+    ns1:title "ATINEPTE 12,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ATINEPTE-12-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06AX14> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0012794> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179570>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179571>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179572>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0179573> ;
+    ns1:title "ATINEPTE 12,5 MG"@cs .
+
+

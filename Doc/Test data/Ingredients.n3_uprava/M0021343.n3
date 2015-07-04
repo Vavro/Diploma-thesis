@@ -1,0 +1,101 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L01AC01> a ns1:ATCConcept ;
+    skos:notation "L01AC01" ;
+    skos:prefLabel "Thiotepa"@cs,
+        "Thiotepa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0021343> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002182>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A very toxic alkylating antineoplastic agent also used as an insect sterilant. It causes skin, gastrointestinal, CNS, and bone marrow damage. According to the Fourth Annual Report on Carcinogens (NTP 85-002, 1985), thiotepa may reasonably be anticipated to be a carcinogen (Merck Index, 11th ed).     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/TEPADINA-100-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TEPADINA-15-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000306>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000564>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001905>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002671> ;
+    ns1:title "Thiotepa"@cs,
+        "Thiotepa"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028268> a ns1:PharmacologicalAction ;
+    ns1:description "A class of drugs that differs from other alkylating agents used clinically in that they are monofunctional and thus unable to cross-link cellular macromolecules. Among their common properties are a requirement for metabolic activation to intermediates with antitumor efficacy and the presence in their chemical structures of N-methyl groups, that after metabolism, can covalently modify cellular DNA. The precise mechanisms by which each of these drugs acts to kill tumor cells are not completely understood. (From AMA, Drug Evaluations Annual, 1994, p2026)     "@en ;
+    ns1:title "Antitumorózní látky alkylující"@cs,
+        "Antineoplastic agents, alkylating"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0029156> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that destroy bone marrow activity. They are used to prepare patients for BONE MARROW TRANSPLANTATION or STEM CELL TRANSPLANTATION.     "@en ;
+    ns1:title "Myeloablativní agonisté"@cs,
+        "Myeloablative agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000306> a ns1:DiseaseOrFinding ;
+    ns1:description "A malignant epithelial tumor with a glandular organization.     "@en ;
+    ns1:title "Adenokarcinom"@cs,
+        "Adenocarcinoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000564> a ns1:DiseaseOrFinding ;
+    ns1:description "Tumors or cancer of the URINARY BLADDER.     "@en ;
+    ns1:title "Močový měchýř - nádory"@cs,
+        "Urinary bladder neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002182> a ns1:DiseaseOrFinding ;
+    ns1:description "A decrease in the number of NEUTROPHILS found in the blood.     "@en ;
+    ns1:title "Neutropenie"@cs,
+        "Neutropenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002671> a ns1:DiseaseOrFinding ;
+    ns1:description "A connective tissue neoplasm formed by proliferation of mesodermal cells; it is usually highly malignant.     "@en ;
+    ns1:title "Sarkom"@cs,
+        "Sarcoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000236> a ns1:MechanismOfAction ;
+    ns1:title "Alkylating Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008577> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Replication"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEPADINA-100-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01AC01> ;
+    ns1:title "TEPADINA 100 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TEPADINA-15-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L01AC01> ;
+    ns1:title "TEPADINA 15 MG"@cs .
+
+

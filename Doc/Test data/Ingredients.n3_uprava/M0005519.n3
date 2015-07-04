@@ -1,0 +1,244 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/R06AX02> a ns1:ATCConcept ;
+    skos:notation "R06AX02" ;
+    skos:prefLabel "Cyproheptadin"@cs,
+        "Cyproheptadine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0005519> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000563>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002351>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002821>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003321>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003555>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010204>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> ;
+    ns1:description "A serotonin antagonist and a histamine H1 blocker used as antipruritic, appetite stimulant, antiallergic, and for the post-gastrectomy dumping syndrome, etc.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000130>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/PERITOL> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010395>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008893> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000421>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000571>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000798>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000845>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000939>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001056>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001057>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001170>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001418>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001622>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001681>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002118>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002512>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002635>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002690>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002719>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002875>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003088>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004117>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004204>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> ;
+    ns1:title "Cyproheptadin"@cs,
+        "Cyproheptadine"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001498> a ns1:PharmacologicalAction ;
+    ns1:description "Agents, usually topical, that relieve itching (pruritus).     "@en ;
+    ns1:title "Antipruritika"@cs,
+        "Antipruritics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009027> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used for their effects on the gastrointestinal system, as to control gastric acidity, regulate gastrointestinal motility and water flow, and improve digestion.     "@en ;
+    ns1:title "Gastrointestinální látky"@cs,
+        "Gastrointestinal agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0010395> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that selectively bind to but do not activate histamine H1 receptors, thereby blocking the actions of endogenous histamine. Included here are the classical antihistaminics that antagonize or prevent the action of histamine mainly in immediate hypersensitivity. They act in the bronchi, capillaries, and some other smooth muscles, and are used to prevent or allay motion sickness, seasonal rhinitis, and allergic dermatitis and to induce somnolence. The effects of blocking central nervous system H1 receptors are not as well understood.     "@en ;
+    ns1:title "Histamin h1 - antagonisté"@cs,
+        "Histamine h1 antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0019685> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate serotonin receptors, thereby blocking the actions of serotonin or SEROTONIN RECEPTOR AGONISTS.     "@en ;
+    ns1:title "Serotonin - antagonisté"@cs,
+        "Serotonin antagonists"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028295> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that are used to treat allergic reactions. Most of these drugs act by preventing the release of inflammatory mediators or inhibiting the actions of released mediators on their target cells. (From AMA Drug Evaluations Annual, 1994, p475)     "@en ;
+    ns1:title "Antialergika"@cs,
+        "Anti-allergic agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000421> a ns1:DiseaseOrFinding ;
+    ns1:description "The lack or loss of APPETITE accompanied by an aversion to food and the inability to eat. It is the defining characteristic of the disorder ANOREXIA NERVOSA.     "@en ;
+    ns1:title "Anorexie"@cs,
+        "Anorexia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000563> a ns1:DiseaseOrFinding ;
+    ns1:description "Blocked urine flow through the bladder neck, the narrow internal urethral opening at the base of the URINARY BLADDER. Narrowing or strictures of the URETHRA can be congenital or acquired. It is often observed in males with enlarged PROSTATE glands.     "@en ;
+    ns1:title "Močový měchýř - obstrukce"@cs,
+        "Urinary bladder neck obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000571> a ns1:DiseaseOrFinding ;
+    ns1:description "Excessive winking; tonic or clonic spasm of the orbicularis oculi muscle.     "@en ;
+    ns1:title "Blefarospazmus"@cs,
+        "Blepharospasm"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000798> a ns1:DiseaseOrFinding ;
+    ns1:description "A primary headache disorder that is characterized by severe, strictly unilateral PAIN which is orbital, supraorbital, temporal or in any combination of these sites, lasting 15-180 min. occurring 1 to 8 times a day. The attacks are associated with one or more of the following, all of which are ipsilateral: conjunctival injection, lacrimation, nasal congestion, rhinorrhea, facial SWEATING, eyelid EDEMA, and miosis. (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Cluster headache"@cs,
+        "Cluster headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000845> a ns1:DiseaseOrFinding ;
+    ns1:description "The period of recovery following an illness.     "@en ;
+    ns1:title "Rekonvalescence"@cs,
+        "Convalescence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000939> a ns1:DiseaseOrFinding ;
+    ns1:description "Any inflammation of the skin.     "@en ;
+    ns1:title "Dermatitida"@cs,
+        "Dermatitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001056> a ns1:DiseaseOrFinding ;
+    ns1:description "A pruritic papulovesicular dermatitis occurring as a reaction to many endogenous and exogenous agents (Dorland, 27th ed).     "@en ;
+    ns1:title "Ekzém"@cs,
+        "Eczema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001057> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal fluid accumulation in TISSUES or body cavities. Most cases of edema are present under the SKIN in SUBCUTANEOUS TISSUE.     "@en ;
+    ns1:title "Edém"@cs,
+        "Edema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001170> a ns1:DiseaseOrFinding ;
+    ns1:description "Diseases in which skin eruptions or rashes are a prominent manifestation. Classically, six such diseases were described with similar rashes; they were numbered in the order in which they were reported. Only the fourth (Duke's disease), fifth (ERYTHEMA INFECTIOSUM), and sixth (EXANTHEMA SUBITUM) numeric designations survive as occasional synonyms in current terminology.     "@en ;
+    ns1:title "Exantém"@cs,
+        "Exanthema"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001418> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.     "@en ;
+    ns1:title "Bolesti hlavy"@cs,
+        "Headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001622> a ns1:DiseaseOrFinding ;
+    ns1:description "Hypersecretion of THYROID HORMONES from the THYROID GLAND. Elevated levels of thyroid hormones increase BASAL METABOLIC RATE.     "@en ;
+    ns1:title "Hypertyreóza"@cs,
+        "Hyperthyroidism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001681> a ns1:DiseaseOrFinding ;
+    ns1:description "Invasion of the host organism by microorganisms that can cause pathological conditions or diseases.     "@en ;
+    ns1:title "Infekce"@cs,
+        "Infection"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002118> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by HYPERPIGMENTATION, enlarging pituitary mass, visual defects secondary to compression of the OPTIC CHIASM, and elevated serum ACTH. It is caused by the expansion of an underlying ACTH-SECRETING PITUITARY ADENOMA that grows in the absence of feedback inhibition by adrenal CORTICOSTEROIDS, usually after ADRENALECTOMY.     "@en ;
+    ns1:title "Nelsonův syndrom"@cs,
+        "Nelson syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002512> a ns1:DiseaseOrFinding ;
+    ns1:description "An intense itching sensation that produces the urge to rub or scratch the skin to obtain relief.     "@en ;
+    ns1:title "Pruritus"@cs,
+        "Pruritus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002635> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the mucous membrane of the nose similar to that found in hay fever except that symptoms persist throughout the year. The causes are usually air-borne allergens, particularly dusts, feathers, molds, animal fur, etc.     "@en ;
+    ns1:title "Celoroční alergická rýma"@cs,
+        "Rhinitis, allergic, perennial"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002690> a ns1:DiseaseOrFinding ;
+    ns1:description "A severe emotional disorder of psychotic depth characteristically marked by a retreat from reality with delusion formation, HALLUCINATIONS, emotional disharmony, and regressive behavior.     "@en ;
+    ns1:title "Schizofrenie"@cs,
+        "Schizophrenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002719> a ns1:DiseaseOrFinding ;
+    ns1:description "Immune complex disease caused by the administration of foreign serum or serum proteins and characterized by fever, lymphadenopathy, arthralgia, and urticaria. When they are complexed to protein carriers, some drugs can also cause serum sickness when they act as haptens inducing antibody responses.     "@en ;
+    ns1:title "Sérová nemoc"@cs,
+        "Serum sickness"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002821> a ns1:DiseaseOrFinding ;
+    ns1:description "A sudden intense and continuous aggravation of a state of asthma, marked by dyspnea to the point of exhaustion and collapse and not responding to the usual therapeutic efforts.     "@en ;
+    ns1:title "Status asthmaticus"@cs,
+        "Status asthmaticus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002875> a ns1:DiseaseOrFinding ;
+    ns1:description "A characteristic symptom complex.     "@en ;
+    ns1:title "Syndrom"@cs,
+        "Syndrome"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003088> a ns1:DiseaseOrFinding ;
+    ns1:description "A vascular reaction of the skin characterized by erythema and wheal formation due to localized increase of vascular permeability. The causative mechanism may be allergy, infection, or stress.     "@en ;
+    ns1:title "Urtikarie"@cs,
+        "Urticaria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003321> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of glaucoma in which the intraocular pressure increases because the angle of the anterior chamber is blocked and the aqueous humor cannot drain from the anterior chamber.     "@en ;
+    ns1:title "Glaukom s uzavřeným úhlem"@cs,
+        "Glaucoma, angle-closure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003555> a ns1:DiseaseOrFinding ;
+    ns1:description "The hindering of output from the STOMACH into the SMALL INTESTINE. This obstruction may be of mechanical or functional origin such as EDEMA from PEPTIC ULCER; NEOPLASMS; FOREIGN BODIES; or AGING.     "@en ;
+    ns1:title "Žaludek - obstrukce vyprazdňování"@cs,
+        "Gastric outlet obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004117> a ns1:DiseaseOrFinding ;
+    ns1:description "Mild or moderate loss of motor function accompanied by spasticity in the lower extremities. This condition is a manifestation of CENTRAL NERVOUS SYSTEM DISEASES that cause injury to the motor cortex or descending motor pathways.     "@en ;
+    ns1:title "Paraparéza spastická"@cs,
+        "Paraparesis, spastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004204> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormal involuntary movements which primarily affect the extremities, trunk, or jaw that occur as a manifestation of an underlying disease process. Conditions which feature recurrent or persistent episodes of dyskinesia as a primary manifestation of disease may be referred to as dyskinesia syndromes (see MOVEMENT DISORDERS). Dyskinesias are also a relatively common manifestation of BASAL GANGLIA DISEASES.     "@en ;
+    ns1:title "Dyskinézy"@cs,
+        "Dyskinesias"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010204> a ns1:DiseaseOrFinding ;
+    ns1:description "An infant during the first month after birth.     "@en ;
+    ns1:title "Novorozenec"@cs,
+        "Infant, newborn"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010216> a ns1:DiseaseOrFinding ;
+    ns1:description "The processes of milk secretion by the maternal MAMMARY GLANDS after PARTURITION. The proliferation of the mammary glandular tissue, milk synthesis, and milk expulsion or let down are regulated by the interactions of several hormones including ESTRADIOL; PROGESTERONE; PROLACTIN; and OXYTOCIN.     "@en ;
+    ns1:title "Laktace"@cs,
+        "Lactation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of disabling primary headache disorders, characterized by recurrent unilateral pulsatile headaches. The two major subtypes are common migraine (without aura) and classic migraine (with aura or neurological symptoms). (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Migréna"@cs,
+        "Migraine disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000130> a ns1:MechanismOfAction ;
+    ns1:title "Serotonin Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000190> a ns1:MechanismOfAction ;
+    ns1:title "Histamine H1 Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008657> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Histamine Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008893> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Serotonin Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PERITOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/R06AX02> ;
+    ns1:title "PERITOL"@cs .
+
+

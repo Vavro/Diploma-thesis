@@ -1,0 +1,161 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A11AA03> a ns1:ATCConcept ;
+    skos:notation "A11AA03" ;
+    skos:prefLabel "Multivitaminy a jiné minerály, včetně kombinací"@cs,
+        "Multivitamins and other minerals, incl. combination"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11AB> a ns1:ATCConcept ;
+    skos:notation "A11AB" ;
+    skos:prefLabel "Multivitaminy, jiné kombinace"@cs,
+        "Multivitamins, other combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/A11JC> a ns1:ATCConcept ;
+    skos:notation "A11JC" ;
+    skos:prefLabel "Vitaminy, jiné kombinace"@cs,
+        "Vitamins, other combinations"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AA07> a ns1:ATCConcept ;
+    skos:notation "B03AA07" ;
+    skos:prefLabel "Síran železnatý"@cs,
+        "Ferrous sulfate"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AC02> a ns1:ATCConcept ;
+    skos:notation "B03AC02" ;
+    skos:prefLabel "Oxid železitý se sacharózou"@cs,
+        "Saccharated iron oxide"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AC07> a ns1:ATCConcept ;
+    skos:notation "B03AC07" ;
+    skos:prefLabel "Glukonan sodno-železitý"@cs,
+        "Ferric sodium gluconate complex"@en .
+
+<http://linked.opendata.cz/resource/ATC/B03AD03> a ns1:ATCConcept ;
+    skos:notation "B03AD03" ;
+    skos:prefLabel "Síran železnatý a kyselina listová"@cs,
+        "Ferrous sulfate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011718> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000387>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000393>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001469>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001494> ;
+    ns1:description "A metallic element with atomic symbol Fe, atomic number 26, and atomic weight 55.85. It is an essential constituent of HEMOGLOBINS; CYTOCHROMES; and IRON-BINDING PROTEINS. It plays a role in cellular redox reactions and in the transport of OXYGEN.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FERION-20-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FERRLECIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/FERROLOGIC-20-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/IRON-SUCROSE-PHARMABIDE-20-MG-ML>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PHARMATON-GERIAVIT>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/REVALID>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON-FOL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VENOFER> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021742> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009319> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000003859> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000384>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002480>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003859> ;
+    ns1:title "Železo"@cs,
+        "Iron"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0021742> a ns1:PharmacologicalAction ;
+    ns1:description "A group of chemical elements that are needed in minute quantities for the proper growth, development, and physiology of an organism. (From McGraw-Hill Dictionary of Scientific and Technical Terms, 4th ed)     "@en ;
+    ns1:title "Stopové prvky"@cs,
+        "Trace elements"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000384> a ns1:DiseaseOrFinding ;
+    ns1:description "A reduction in the number of circulating erythrocytes or in the quantity of hemoglobin.     "@en ;
+    ns1:title "Anemie"@cs,
+        "Anemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000387> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition of inadequate circulating red blood cells (ANEMIA) or insufficient HEMOGLOBIN due to premature destruction of red blood cells (ERYTHROCYTES).     "@en ;
+    ns1:title "Hemolytická anemie"@cs,
+        "Anemia, hemolytic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000393> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder characterized by the presence of ANEMIA, abnormally large red blood cells (megalocytes or macrocytes), and MEGALOBLASTS.     "@en ;
+    ns1:title "Megaloblastová anémie"@cs,
+        "Anemia, megaloblastic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001469> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder due to the deposition of hemosiderin in the parenchymal cells, causing tissue damage and dysfunction of the liver, pancreas, heart, and pituitary. Full development of the disease in women is restricted by menstruation, pregnancy, and lower dietary intake of iron. Acquired hemochromatosis may be the result of blood transfusions, excessive dietary iron, or secondary to other disease. Idiopathic or genetic hemochromatosis is an autosomal recessive disorder of metabolism associated with a gene tightly linked to the A locus of the HLA complex on chromosome 6. (From Dorland, 27th ed)     "@en ;
+    ns1:title "Hemochromatóza"@cs,
+        "Hemochromatosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001494> a ns1:DiseaseOrFinding ;
+    ns1:description "Conditions in which there is a generalized increase in the iron stores of body tissues, particularly of liver and the MONONUCLEAR PHAGOCYTE SYSTEM, without demonstrable tissue damage. The name refers to the presence of stainable iron in the tissue in the form of hemosiderin.     "@en ;
+    ns1:title "Hemosideróza"@cs,
+        "Hemosiderosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002480> a ns1:DiseaseOrFinding ;
+    ns1:description "The co-occurrence of pregnancy and a blood disease (HEMATOLOGIC DISEASES) which involves BLOOD CELLS or COAGULATION FACTORS. The hematologic disease may precede or follow FERTILIZATION and it may or may not have a deleterious effect on the pregnant woman or FETUS.     "@en ;
+    ns1:title "Těhotenství - komplikace hematologické"@cs,
+        "Pregnancy complications, hematologic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003859> a ns1:DiseaseOrFinding ;
+    ns1:description "Anemia characterized by decreased or absent iron stores, low serum iron concentration, low transferrin saturation, and low hemoglobin concentration or hematocrit value. The erythrocytes are hypochromic and microcytic and the iron binding capacity is increased.     "@en ;
+    ns1:title "Anémie z nedostatku železa"@cs,
+        "Anemia, iron-deficiency"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000220> a ns1:MechanismOfAction ;
+    ns1:title "Electrolyte Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009319> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Erythroid Cell Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/DUOVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11AA03> ;
+    ns1:title "DUOVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FERION-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AC02> ;
+    ns1:title "FERION 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FERRLECIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AC07> ;
+    ns1:title "FERRLECIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FERROLOGIC-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AC02> ;
+    ns1:title "FERROLOGIC 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRON-SUCROSE-PHARMABIDE-20-MG-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AC02> ;
+    ns1:title "IRON SUCROSE PHARMABIDE 20 MG/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PHARMATON-GERIAVIT> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11AB> ;
+    ns1:title "PHARMATON GERIAVIT"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/REVALID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A11JC> ;
+    ns1:title "REVALID"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AA07> ;
+    ns1:title "TARDYFERON"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/TARDYFERON-FOL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AD03> ;
+    ns1:title "TARDYFERON-FOL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VENOFER> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/B03AC02> ;
+    ns1:title "VENOFER"@cs .
+
+

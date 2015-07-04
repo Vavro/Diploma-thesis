@@ -1,0 +1,194 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M01AE02> a ns1:ATCConcept ;
+    skos:notation "M01AE02" ;
+    skos:prefLabel "Naproxen"@cs,
+        "Naproxen"@en .
+
+<http://linked.opendata.cz/resource/ATC/M01AE52> a ns1:ATCConcept ;
+    skos:notation "M01AE52" ;
+    skos:prefLabel "naproxen a esomeprazol"@cs,
+        "Naproxen and esomeprazol"@en .
+
+<http://linked.opendata.cz/resource/ATC/M02AA12> a ns1:ATCConcept ;
+    skos:notation "M02AA12" ;
+    skos:prefLabel "Naproxen"@cs,
+        "Naproxen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0014467> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> ;
+    ns1:description "An anti-inflammatory agent with analgesic and antipyretic properties. Both the acid and its sodium salt are used in the treatment of rheumatoid arthritis and other rheumatic or musculoskeletal disorders, dysmenorrhea, and acute gout.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ALEVE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/EMOXEN-GEL>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/NALGESIN-S>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/VIMOVO-500-MG-20-MG-TABLETY-S-RIZENYM-UVOLNOVANIM> ;
+    ns1:hasPharmacokinetics <http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009558>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> ;
+    ns1:mayPrevent <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000481>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000522>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000639>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001025>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001242>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001382>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001418>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002244>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002809>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002810>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002984>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> ;
+    ns1:title "Naproxen"@cs,
+        "Naproxen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009558> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that increase uric acid excretion by the kidney (URICOSURIC AGENTS), decrease uric acid production (antihyperuricemics), or alleviate the pain and inflammation of acute attacks of gout.     "@en ;
+    ns1:title "Antiuratika"@cs,
+        "Gout suppressants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000522> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute or chronic pain located in the posterior regions of the THORAX; LUMBOSACRAL REGION; or the adjacent regions.     "@en ;
+    ns1:title "Bolesti zad"@cs,
+        "Back pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000639> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation or irritation of a bursa, the fibrous sac that acts as a cushion between moving structures of bones, muscles, tendons or skin.     "@en ;
+    ns1:title "Bursitida"@cs,
+        "Bursitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001025> a ns1:DiseaseOrFinding ;
+    ns1:description "Painful menstruation.     "@en ;
+    ns1:title "Dysmenorea"@cs,
+        "Dysmenorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001242> a ns1:DiseaseOrFinding ;
+    ns1:description "An abnormal elevation of body temperature, usually as a result of a pathologic process.     "@en ;
+    ns1:title "Horečka"@cs,
+        "Fever"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001382> a ns1:DiseaseOrFinding ;
+    ns1:description "Hereditary metabolic disorder characterized by recurrent acute arthritis, hyperuricemia and deposition of sodium urate in and around the joints, sometimes with formation of uric acid calculi.     "@en ;
+    ns1:title "Dna (nemoc)"@cs,
+        "Gout"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001418> a ns1:DiseaseOrFinding ;
+    ns1:description "The symptom of PAIN in the cranial region. It may be an isolated benign occurrence or manifestation of a wide variety of HEADACHE DISORDERS.     "@en ;
+    ns1:title "Bolesti hlavy"@cs,
+        "Headache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002809> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of the SPINE. This includes both arthritic and non-arthritic conditions.     "@en ;
+    ns1:title "Spondylitida"@cs,
+        "Spondylitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002810> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic inflammatory condition affecting the axial joints, such as the SACROILIAC JOINT and other intervertebral or costovertebral joints. It occurs predominantly in young males and is characterized by pain and stiffness of joints (ANKYLOSIS) with inflammation at tendon insertions.     "@en ;
+    ns1:title "Ankylózující spondylitida"@cs,
+        "Spondylitis, ankylosing"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002984> a ns1:DiseaseOrFinding ;
+    ns1:description "Pain in the adjacent areas of the teeth.     "@en ;
+    ns1:title "Bolesti zubů"@cs,
+        "Toothache"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010245> a ns1:DiseaseOrFinding ;
+    ns1:description "The last third of a human PREGNANCY, from the beginning of the 29th through the 42nd completed week (197 to 294 days) of gestation.     "@en ;
+    ns1:title "Těhotenství - třetí trimestr"@cs,
+        "Pregnancy trimester, third"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000171630> a ns1:DiseaseOrFinding ;
+    ns1:description "A class of disabling primary headache disorders, characterized by recurrent unilateral pulsatile headaches. The two major subtypes are common migraine (without aura) and classic migraine (with aura or neurological symptoms). (International Classification of Headache Disorders, 2nd ed. Cephalalgia 2004: suppl 1)     "@en ;
+    ns1:title "Migréna"@cs,
+        "Migraine disorders"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/pharmacokinetics/N0000000042> a ns1:Pharmacokinetics ;
+    ns1:title "Renal Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008831> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Platelet Activating Factor Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009006> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Thromboxane Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ALEVE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AE02> ;
+    ns1:title "ALEVE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EMOXEN-GEL> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M02AA12> ;
+    ns1:title "EMOXEN GEL"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/NALGESIN-S> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AE02> ;
+    ns1:title "NALGESIN S"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/VIMOVO-500-MG-20-MG-TABLETY-S-RIZENYM-UVOLNOVANIM> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AE52> ;
+    ns1:title "VIMOVO 500 MG/20 MG TABLETY S ŘÍZENÝM UVOLŇOVÁNÍM"@cs .
+
+

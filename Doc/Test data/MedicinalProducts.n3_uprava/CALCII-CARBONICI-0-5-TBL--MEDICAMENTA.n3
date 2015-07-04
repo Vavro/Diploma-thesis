@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/A> a ns1:ATCConcept ;
+    dcterms:title "Trávicí trakt a metabolismus"@cs,
+        "ALIMENTARY TRACT AND METABOLISM"@en ;
+    skos:notation "A" .
+
+<http://linked.opendata.cz/resource/ATC/A12> a ns1:ATCConcept ;
+    dcterms:title "Minerální doplňky"@cs,
+        "MINERAL SUPPLEMENTS"@en ;
+    skos:notation "A12" .
+
+<http://linked.opendata.cz/resource/ATC/A12A> a ns1:ATCConcept ;
+    dcterms:title "Vápník"@cs,
+        "CALCIUM, PLAIN"@en ;
+    skos:notation "A12A" .
+
+<http://linked.opendata.cz/resource/ATC/A12AA> a ns1:ATCConcept ;
+    dcterms:title "Vápník"@cs,
+        "Calcium"@en ;
+    skos:notation "A12AA" .
+
+<http://linked.opendata.cz/resource/ATC/A12AA04> a ns1:ATCConcept ;
+    dcterms:title "Uhličitan vápenatý"@cs,
+        "Calcium carbonate"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/A>,
+        <http://linked.opendata.cz/resource/ATC/A12>,
+        <http://linked.opendata.cz/resource/ATC/A12A>,
+        <http://linked.opendata.cz/resource/ATC/A12AA> ;
+    skos:notation "A12AA04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003155> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001577>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001746>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003617> ;
+    ns1:description "Carbonic acid calcium salt (CaCO3). An odorless, tasteless powder or crystal that occurs in nature. It is used therapeutically as a phosphate buffer in hemodialysis patients and as a calcium supplement.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289> ;
+    ns1:title "Uhličitan vápenatý"@cs,
+        "Calcium carbonate"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001289> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that counteract or neutralize acidity of the GASTROINTESTINAL TRACT.     "@en ;
+    ns1:title "Antacida"@cs,
+        "Antacids"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001577> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperkalcémie"@cs,
+        "Hypercalcemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001746> a ns1:DiseaseOrFinding ;
+    ns1:title "Ledviny - kameny"@cs,
+        "Kidney calculi"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003617> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypofosfatemie"@cs,
+        "Hypophosphatemia"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017994> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:hasIndication """Nutriční hypokalcémie, zvýšená potřeba vápníku  v závislosti na věku.
+Přípravek je indikován k preventivnímu i terapeutickému použití při těchto stavech a poruchách: těhotenství a kojení,  hojení fraktur, zmírnění traumatických stavů při nedostatečném přívodu vápníku. Dále  prevence  fraktur u starších osob (současné podávání vitamínu D), dlouhodobé podávání kortikoidů, poruchy vápníkového metabolismu, osteoporóza, osteomalacie, rachitis, renální osteodystrofie, alergické choroby zakódované geneticky (atopický ekzém, zvýšená nervosvalová dráždivost), alergická nasofaryngitis, dermatózy, parestézie, tetanie, laryngospasmus.
+Přípravek je indikován u dospělých, dětí i adolescentů.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "100"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC118521_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 100X0.5GM"@cs ;
+    ns1:title "CALCII CARBONICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0070536> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:hasIndication """Nutriční hypokalcémie, zvýšená potřeba vápníku  v závislosti na věku.
+Přípravek je indikován k preventivnímu i terapeutickému použití při těchto stavech a poruchách: těhotenství a kojení,  hojení fraktur, zmírnění traumatických stavů při nedostatečném přívodu vápníku. Dále  prevence  fraktur u starších osob (současné podávání vitamínu D), dlouhodobé podávání kortikoidů, poruchy vápníkového metabolismu, osteoporóza, osteomalacie, rachitis, renální osteodystrofie, alergické choroby zakódované geneticky (atopický ekzém, zvýšená nervosvalová dráždivost), alergická nasofaryngitis, dermatózy, parestézie, tetanie, laryngospasmus.
+Přípravek je indikován u dospělých, dětí i adolescentů.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasMaximalPrice "801.969970703"^^xsd:float ;
+    ns1:hasPackagingSize "1000"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "1033.76000977"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC118521_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 1000X0.5GM"@cs ;
+    ns1:title "CALCII CARBONICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0089775> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:hasIndication """Nutriční hypokalcémie, zvýšená potřeba vápníku  v závislosti na věku.
+Přípravek je indikován k preventivnímu i terapeutickému použití při těchto stavech a poruchách: těhotenství a kojení,  hojení fraktur, zmírnění traumatických stavů při nedostatečném přívodu vápníku. Dále  prevence  fraktur u starších osob (současné podávání vitamínu D), dlouhodobé podávání kortikoidů, poruchy vápníkového metabolismu, osteoporóza, osteomalacie, rachitis, renální osteodystrofie, alergické choroby zakódované geneticky (atopický ekzém, zvýšená nervosvalová dráždivost), alergická nasofaryngitis, dermatózy, parestézie, tetanie, laryngospasmus.
+Přípravek je indikován u dospělých, dětí i adolescentů.
+"""@cs ;
+    ns1:hasIndicationGroup "SOLI A IONTY PRO P.O. I PARENT.APLIKACI"@cs ;
+    ns1:hasPackagingSize "50"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC118521_doc> ;
+    ns1:hasStrength "0.5GM"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL NOB 50X0.5GM"@cs ;
+    ns1:title "CALCII CARBONICI 0,5 TBL. MEDICAMENTA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CALCII-CARBONICI-0-5-TBL--MEDICAMENTA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/A12AA04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0003155> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0017994>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0070536>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0089775> ;
+    ns1:title "CALCII CARBONICI 0,5 TBL. MEDICAMENTA"@cs .
+
+

@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J> a ns1:ATCConcept ;
+    dcterms:title "Antiinfektiva pro systémovou aplikaci"@cs,
+        "ANTIINFECTIVES FOR SYSTEMIC USE"@en ;
+    skos:notation "J" .
+
+<http://linked.opendata.cz/resource/ATC/J07> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny"@cs,
+        "VACCINES"@en ;
+    skos:notation "J07" .
+
+<http://linked.opendata.cz/resource/ATC/J07A> a ns1:ATCConcept ;
+    dcterms:title "Bakteriální vakcíny"@cs,
+        "BACTERIAL VACCINES"@en ;
+    skos:notation "J07A" .
+
+<http://linked.opendata.cz/resource/ATC/J07AH> a ns1:ATCConcept ;
+    dcterms:title "Vakcíny proti meningokokovým infekcím"@cs,
+        "Meningococcal vaccines"@en ;
+    skos:notation "J07AH" .
+
+<http://linked.opendata.cz/resource/ATC/J07AH03> a ns1:ATCConcept ;
+    dcterms:title "Meningokoková bivalentní vakcína, purif.polysacharidové antigeny"@cs,
+        "Meningococcus, bivalent purified polysaccharides antigen"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/J>,
+        <http://linked.opendata.cz/resource/ATC/J07>,
+        <http://linked.opendata.cz/resource/ATC/J07A>,
+        <http://linked.opendata.cz/resource/ATC/J07AH> ;
+    skos:notation "J07AH03" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013892> a ns1:Ingredient ;
+    ns1:title "Polysacharid z neisseria meningitidis a"@cs,
+        "Polysaccharide of n. meningitidis group a"@en,
+        "Neisseriae meningitidis a polysaccharidum"@la .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013893> a ns1:Ingredient ;
+    ns1:title "Polysacharid z neisseria meningitidis c"@cs,
+        "Polysaccharide of n. meningitidis group c"@en,
+        "Neisseriae meningitidis c polysaccharidum"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0065340> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07AH03> ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "10X10DÁV+10X5 ML+ST"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PSU LQF 10X10DAV+SO"@cs ;
+    ns1:title "MENINGOCOCCAL POLYSACCHARIDE A+C VACCINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0076063> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07AH03> ;
+    ns1:hasIndication """Vakcína se používá k aktivní imunizaci proti invazivním formám meningokokových infekcí ze skupiny A nebo C u dospělých a dětí od 2 let věku (viz bod 4.4).
+Použití MENINGOCOCCAL POLYSACCHARIDE A+C VACCINE má být v souladu s oficiálními doporučeními. 
+"""@cs ;
+    ns1:hasIndicationGroup "IMMUNOPRAEPARATA"@cs ;
+    ns1:hasPackagingSize "1+0.5ML+ST"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC155450_doc> ;
+    ns1:hasStrength "0.5ML/DÁV"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ PSU LQF 1X1DAV+STR"@cs ;
+    ns1:title "MENINGOCOCCAL POLYSACCHARIDE A+C VACCINE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/MENINGOCOCCAL-POLYSACCHARIDE-A-C-VACCINE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J07AH03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013892>,
+        <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0013893> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0065340>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0076063> ;
+    ns1:title "MENINGOCOCCAL POLYSACCHARIDE A+C VACCINE"@cs .
+
+

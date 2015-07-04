@@ -1,0 +1,426 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V08> a ns1:ATCConcept ;
+    dcterms:title "Kontrastní látky"@cs,
+        "CONTRAST MEDIA"@en ;
+    skos:notation "V08" .
+
+<http://linked.opendata.cz/resource/ATC/V08C> a ns1:ATCConcept ;
+    dcterms:title "Kontrastní látky pro vyšetření magnetickou rezonancí"@cs,
+        "MAGNETIC RESONANCE IMAGING CONTRAST MEDIA"@en ;
+    skos:notation "V08C" .
+
+<http://linked.opendata.cz/resource/ATC/V08CA> a ns1:ATCConcept ;
+    dcterms:title "Paramagnetické kontrastní látky"@cs,
+        "Paramagnetic contrast media"@en ;
+    skos:notation "V08CA" .
+
+<http://linked.opendata.cz/resource/ATC/V08CA03> a ns1:ATCConcept ;
+    dcterms:title "Gadodiamid"@cs,
+        "Gadodiamide"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V08>,
+        <http://linked.opendata.cz/resource/ATC/V08C>,
+        <http://linked.opendata.cz/resource/ATC/V08CA> ;
+    skos:notation "V08CA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0178725> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Gadodiamide"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031411> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X10ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X10ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031412> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X10ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031413> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X15ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X15ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031414> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X15ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X15ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031415> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X20ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X20ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031416> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X20ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X20ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031417> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X40ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X40ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031418> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X40ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X40ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031419> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X50ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X50ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031420> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X50ML PP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/B> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X50ML-PP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032265> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X10ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X10ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032266> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "13763.9902344"^^xsd:float ;
+    ns1:hasPackagingSize "10X10ML ST"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "9752.09960938"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032267> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X15ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X15ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032268> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasBreakMarketingDate "2012-03-01"^^xsd:date ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "14025.0996094"^^xsd:float ;
+    ns1:hasPackagingSize "10X15ML ST"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "14628.1601562"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X15ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032269> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X20ML STŘ"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X20ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032270> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X20ML ST"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X20ML-STŘ"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055822> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X5ML SKL"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X5ML-SKL"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078815> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "10216.7001953"^^xsd:float ;
+    ns1:hasPackagingSize "10X10ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "9752.09960938"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML-SKL"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078816> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasBreakMarketingDate "2012-03-01"^^xsd:date ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "20587.0996094"^^xsd:float ;
+    ns1:hasPackagingSize "10X15ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "14628.1601562"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X15ML-SKL"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078817> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasMaximalPrice "21647.5390625"^^xsd:float ;
+    ns1:hasPackagingSize "10X20ML SK"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "19504.2109375"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X20ML-SKL"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150454> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X10ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X10ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150455> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X15ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X15ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150456> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "1X20ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X20ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150457> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X10ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X10ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150458> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X15ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X15ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150459> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasIndication """Přípravek je používán jako kontrastní látka pro vyšetření hlavy a páteře pomocí magnetické rezonance (MRI ) a pro celotělové vyšetření  MRI  po intravenózní aplikaci.
+V indikaci magnetické rezonance CNS je indikován  pro děti od  4 týdnů věku , mladistvé a dospělé. V indikaci celotělové magnetické rezonance je určen pro děti od 6 měsíců věku, mladistvé a dospělé.
+Dále je přípravek používán jako kontrastní látka pro vyšetření cév pomocí magnetické rezonance u dospělých(MRI angiografie).
+"""@cs ;
+    ns1:hasIndicationGroup "DIAGNOSTICA"@cs ;
+    ns1:hasPackagingSize "10X20ML CCP"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC131980_doc> ;
+    ns1:hasStrength "287MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 10X20ML CCP"@cs ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OMNISCAN-0-5-MMOL-ML> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V08CA03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0178725> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031411>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031412>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031413>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031414>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031415>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031416>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031417>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031418>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031419>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0031420>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032265>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032266>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032267>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032268>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032269>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0032270>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0055822>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078815>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078816>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0078817>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150454>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150455>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150456>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150457>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150458>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0150459> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "OMNISCAN 0,5 MMOL/ML"@cs .
+
+

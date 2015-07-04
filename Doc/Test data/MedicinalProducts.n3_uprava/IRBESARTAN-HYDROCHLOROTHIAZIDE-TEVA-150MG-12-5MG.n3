@@ -1,0 +1,362 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C> a ns1:ATCConcept ;
+    dcterms:title "Kardiovaskulární systém"@cs,
+        "CARDIOVASCULAR SYSTEM"@en ;
+    skos:notation "C" .
+
+<http://linked.opendata.cz/resource/ATC/C09> a ns1:ATCConcept ;
+    dcterms:title "Léčiva ovlivňující renin-angiotenzinový systém"@cs,
+        "AGENTS ACTING ON THE RENIN-ANGIOTENSIN SYSTEM"@en ;
+    skos:notation "C09" .
+
+<http://linked.opendata.cz/resource/ATC/C09D> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II, kombinace"@cs,
+        "ANGIOTENSIN II ANTAGONISTS, COMBINATIONS"@en ;
+    skos:notation "C09D" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA> a ns1:ATCConcept ;
+    dcterms:title "Antagonisté angiotensinu II a diuretika"@cs,
+        "Angiotensin II antagonists and diuretics"@en ;
+    skos:notation "C09DA" .
+
+<http://linked.opendata.cz/resource/ATC/C09DA04> a ns1:ATCConcept ;
+    dcterms:title "Irbesartan a diuretika"@cs,
+        "Irbesartan and diuretics"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/C>,
+        <http://linked.opendata.cz/resource/ATC/C09>,
+        <http://linked.opendata.cz/resource/ATC/C09D>,
+        <http://linked.opendata.cz/resource/ATC/C09DA> ;
+    skos:notation "C09DA04" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000431>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003529>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A thiazide diuretic often considered the prototypical member of this class. It reduces the reabsorption of electrolytes from the renal tubules. This results in increased excretion of water and electrolytes, including sodium, potassium, chloride, and magnesium. It is used in the treatment of several disorders including edema, hypertension, diabetes insipidus, and hypoparathyroidism.     "@en ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Hydrochlorthiazid"@cs,
+        "Hydrochlorothiazide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0216909> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002591>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:title "Irbesartan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0006624> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that promote the excretion of urine through their effects on kidney function.     "@en ;
+    ns1:title "Diuretika"@cs,
+        "Diuretics"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0471877> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit SODIUM CHLORIDE SYMPORTERS. They act as DIURETICS. Excess use is associated with HYPOKALEMIA.     "@en ;
+    ns1:title "Symportéry pro chlorid sodný - inhibitory"@cs,
+        "Sodium chloride symporter inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000431> a ns1:DiseaseOrFinding ;
+    ns1:title "Anurie"@cs,
+        "Anuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002591> a ns1:DiseaseOrFinding ;
+    ns1:title "Arteria renalis - obstrukce"@cs,
+        "Renal artery obstruction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003529> a ns1:DiseaseOrFinding ;
+    ns1:title "Selhání ledvin"@cs,
+        "Kidney failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167277> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "7 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167278> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167279> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "15 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 15"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167280> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167281> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167282> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167283> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167284> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167285> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167286> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167287> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100 I"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167289> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "7 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 7"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167290> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "14 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 14"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167291> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "15 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 15"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167292> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "20 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 20"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167293> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "28 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167294> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "30 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 30"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167295> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "56 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167296> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "60 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 60"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167297> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "90 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 90"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167298> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "98 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 98"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167299> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "100 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 100"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167300> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasIndicationGroup "HYPOTENSIVA"@cs ;
+    ns1:hasPackagingSize "50X1 II"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "150MG/12.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 50X1"@cs ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/IRBESARTAN-HYDROCHLOROTHIAZIDE-TEVA-150MG-12-5MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09DA04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0010703>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0216909> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167277>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167278>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167279>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167280>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167281>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167282>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167283>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167284>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167285>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167286>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167287>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167289>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167290>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167291>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167292>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167293>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167294>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167295>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167296>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167297>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167298>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167299>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0167300> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "IRBESARTAN/HYDROCHLOROTHIAZIDE TEVA 150MG/12,5MG"@cs .
+
+

@@ -1,0 +1,87 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N06> a ns1:ATCConcept ;
+    dcterms:title "Psychoanaleptika"@cs,
+        "PSYCHOANALEPTICS"@en ;
+    skos:notation "N06" .
+
+<http://linked.opendata.cz/resource/ATC/N06D> a ns1:ATCConcept ;
+    dcterms:title "Léčiva proti demenci"@cs,
+        "ANTI-DEMENTIA DRUGS"@en ;
+    skos:notation "N06D" .
+
+<http://linked.opendata.cz/resource/ATC/N06DX> a ns1:ATCConcept ;
+    dcterms:title "Ostatní léčiva proti demenci"@cs,
+        "Other anti-dementia drugs"@en ;
+    skos:notation "N06DX" .
+
+<http://linked.opendata.cz/resource/ATC/N06DX01> a ns1:ATCConcept ;
+    dcterms:title "Memantin"@cs,
+        "Memantine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N06>,
+        <http://linked.opendata.cz/resource/ATC/N06D>,
+        <http://linked.opendata.cz/resource/ATC/N06DX> ;
+    skos:notation "N06DX01" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0464878> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "Memantine hydrochloride"@cs,
+        "Memantine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001494> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used in the treatment of Parkinson's disease. The most commonly used drugs act on the dopaminergic system in the striatum and basal ganglia or are centrally acting muscarinic antagonists.     "@en ;
+    ns1:title "Antiparkinsonika"@cs,
+        "Antiparkinson agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023499> a ns1:PharmacologicalAction ;
+    ns1:description "Any drugs that are used for their effects on dopamine receptors, on the life cycle of dopamine, or on the survival of dopaminergic neurons.     "@en ;
+    ns1:title "Dopaminové látky"@cs,
+        "Dopamine agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0028006> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that bind to but do not activate excitatory amino acid receptors, thereby blocking the actions of agonists.     "@en ;
+    ns1:title "Excitační aminokyseliny - antagonisté"@cs,
+        "Excitatory amino acid antagonists"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500004> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DX01> ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "7X(5+10+15+20MG)"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X(5+10+15+20MG)"@cs ;
+    ns1:title "AXURA 5 MG + 10 MG + 15 MG + 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500011> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DX01> ;
+    ns1:hasIndicationGroup "PSYCHOSTIMULANTIA (NOOTROPNÍ LÉČIVA, ANALEPTIKA)"@cs ;
+    ns1:hasPackagingSize "7X(5+10+15+20MG)PV"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasTitleSupplement "POR TBL FLM 7X(5+10+15+20MG)PV"@cs ;
+    ns1:title "AXURA 5 MG + 10 MG + 15 MG + 20 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/AXURA-5-MG---10-MG---15-MG---20-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N06DX01> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0464878> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500004>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0500011> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:title "AXURA 5 MG + 10 MG + 15 MG + 20 MG"@cs .
+
+

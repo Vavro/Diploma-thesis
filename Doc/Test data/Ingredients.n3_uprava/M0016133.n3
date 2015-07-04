@@ -1,0 +1,128 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/J01CE02> a ns1:ATCConcept ;
+    skos:notation "J01CE02" ;
+    skos:prefLabel "Fenoxymethylpenicilin"@cs,
+        "Phenoxymethylpenicillin"@en .
+
+<http://linked.opendata.cz/resource/ATC/J01CE10> a ns1:ATCConcept ;
+    skos:notation "J01CE10" ;
+    skos:prefLabel "Benzathin-fenoxymethylpenicilin"@cs,
+        "Benzathine phenoxymethylpenicillin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0016133> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> ;
+    ns1:description "A penicillin derivative commonly used in the form of its sodium or potassium salts in the treatment of a variety of infections. It is effective against most gram-positive bacteria and against gram-negative cocci. It has also been used as an experimental convulsant because of its actions on GAMMA-AMINOBUTYRIC ACID mediated synaptic transmission.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-400>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-500>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-750-KRKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-000-000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-500-000>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-0-8-MEGA-BIOTIKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-1-2-MEGA-BIOTIKA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-250-MG-SLOVAKOFARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-500-MG-SLOVAKOFARMA>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-750MG-SLOVAKOFARMA> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/B> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001380>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001989>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002837>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> ;
+    ns1:title "Penicilin g"@cs,
+        "Penicillin g"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0448397> a ns1:PharmacologicalAction ;
+    ns1:description "Substances that reduce the growth or reproduction of BACTERIA.     "@en ;
+    ns1:title "Antibakteriální látky"@cs,
+        "Anti-bacterial agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001380> a ns1:DiseaseOrFinding ;
+    ns1:description "Acute infectious disease characterized by primary invasion of the urogenital tract. The etiologic agent, NEISSERIA GONORRHOEAE, was isolated by Neisser in 1879.     "@en ;
+    ns1:title "Gonorea"@cs,
+        "Gonorrhea"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001610> a ns1:DiseaseOrFinding ;
+    ns1:description "Altered reactivity to an antigen, which can result in pathologic reactions upon subsequent exposure to that particular antigen.     "@en ;
+    ns1:title "Alergie"@cs,
+        "Hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001989> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the species NEISSERIA MENINGITIDIS.     "@en ;
+    ns1:title "Meningococcus - infekce"@cs,
+        "Meningococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002837> a ns1:DiseaseOrFinding ;
+    ns1:description "Infections with bacteria of the genus STREPTOCOCCUS.     "@en ;
+    ns1:title "Streptokoky - infekce"@cs,
+        "Streptococcal infections"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002881> a ns1:DiseaseOrFinding ;
+    ns1:description "A contagious venereal disease caused by the spirochete TREPONEMA PALLIDUM.     "@en ;
+    ns1:title "Syfilis"@cs,
+        "Syphilis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000010215> a ns1:MechanismOfAction ;
+    ns1:title "Transpeptidase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008479> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Cell Wall Synthesis & Repair"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "OSPEN 1000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-1500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "OSPEN 1500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-400> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE10> ;
+    ns1:title "OSPEN 400"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-500> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "OSPEN 500"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/OSPEN-750-KRKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE10> ;
+    ns1:title "OSPEN 750 KRKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-000-000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "PENBENE 1 000 000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PENBENE-1-500-000> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "PENBENE 1 500 000"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-0-8-MEGA-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "V-PENICILIN 0,8 MEGA BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-1-2-MEGA-BIOTIKA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "V-PENICILIN 1,2 MEGA BIOTIKA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-250-MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "V-PENICILIN 250 MG SLOVAKOFARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-500-MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "V-PENICILIN 500 MG SLOVAKOFARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/V-PENICILIN-750MG-SLOVAKOFARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/J01CE02> ;
+    ns1:title "V-PENICILIN 750MG SLOVAKOFARMA"@cs .
+
+

@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/V> a ns1:ATCConcept ;
+    dcterms:title "Různé přípravky"@cs,
+        "VARIOUS"@en ;
+    skos:notation "V" .
+
+<http://linked.opendata.cz/resource/ATC/V09> a ns1:ATCConcept ;
+    dcterms:title "Diagnostická radiofarmaka"@cs,
+        "DIAGNOSTIC RADIOPHARMACEUTICALS"@en ;
+    skos:notation "V09" .
+
+<http://linked.opendata.cz/resource/ATC/V09I> a ns1:ATCConcept ;
+    dcterms:title "Detekce nádorů"@cs,
+        "TUMOUR DETECTION"@en ;
+    skos:notation "V09I" .
+
+<http://linked.opendata.cz/resource/ATC/V09IX> a ns1:ATCConcept ;
+    dcterms:title "Detekce nádorů, jiná diagnostická radiofarmaka"@cs,
+        "Other diagnostic radiopharmaceuticals for tumour diagnostic"@en ;
+    skos:notation "V09IX" .
+
+<http://linked.opendata.cz/resource/ATC/V09IX04> a ns1:ATCConcept ;
+    dcterms:title "Fludeoxyglukosa-(18F)"@cs,
+        "Fludeoxylglucose (18F)"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/V>,
+        <http://linked.opendata.cz/resource/ATC/V09>,
+        <http://linked.opendata.cz/resource/ATC/V09I>,
+        <http://linked.opendata.cz/resource/ATC/V09IX> ;
+    skos:notation "V09IX04" .
+
+<http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0010981> a ns1:Ingredient ;
+    ns1:title "Fludeoxyglukosa-(18f)"@cs,
+        "Fludeoxyglucose (18f)"@en,
+        "Fludeoxyglucosum (18f)"@la .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0095412> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09IX04> ;
+    ns1:hasIndication """Tento přípravek je určen pouze k diagnostickým účelům. 
+Fludeoxyglukosa-(18F) je určena pro použití při pozitronové emisní tomografii.
+Přípravek EFDEGE je indikován jako zobrazovací metoda u pacientů podstupujících onkologická diagnostická vyšetření nebo u onemocnění, u kterých je diagnostickým cílem zvýšená spotřeba glukózy ve specifických orgánech nebo tkáních. Následující indikace jsou dostatečně dokumentovány:
+Diagnóza
+Charakteristika solitárních plicních ložisek
+Metastatická cervikální adenopatie neznámého původu
+�
+Sledování stadia onemocnění
+Primární karcinom plic, včetně detekce vzdálených plicních metastáz (viz také bod 4.4)
+Nádory v oblasti hlavy a krku včetně řízené biopsie
+Recidivující kolorektální karcinom
+Maligní lymfom (viz také bod 4.4)
+Maligní melanom: Breslow > 1,5 mm nebo metastázy lymfatických uzlin při první diagnóze (pokud se týká metastáz do mozku a zobrazování pomocí koincidenčních kamer viz také bod 4.4)
+Monitorování efektu léčby
+Karcinomy v oblasti hlavy a krku (viz také bod 4.4)
+Maligní lymfom (viz také bod 4.4)
+Detekce v případě důvodného podezření z recidivy
+Karcinomy v oblasti hlavy a krku
+Primární karcinom plic
+Kolorektálního karcinom
+Maligní lymfom (viz také bod 4.4)
+Maligní melanom (pokud se týká metastáz do mozku a zobrazování pomocí koincidenčních kamer viz bod 4.4)
+"""@cs ;
+    ns1:hasIndicationGroup "RADIOPHARMACA"@cs ;
+    ns1:hasPackagingSize "11ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC123974_doc> ;
+    ns1:hasStrength "1GB/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 11ML 1GB/ML EXP:H"@cs ;
+    ns1:title "EFDEGE 1 GBQ/ML, INJEKČNÍ ROZTOK"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/EFDEGE-1-GBQ-ML--INJEKCNI-ROZTOK> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/V09IX04> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/datamart/drug-encyclopedia/ingredient/sukl/0010981> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0095412> ;
+    ns1:title "EFDEGE 1 GBQ/ML, INJEKČNÍ ROZTOK"@cs .
+
+

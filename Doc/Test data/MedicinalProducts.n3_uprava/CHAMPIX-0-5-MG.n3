@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N07> a ns1:ATCConcept ;
+    dcterms:title "Jiná léčiva nervového systému"@cs,
+        "OTHER NERVOUS SYSTEM DRUGS"@en ;
+    skos:notation "N07" .
+
+<http://linked.opendata.cz/resource/ATC/N07B> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislostí"@cs,
+        "DRUGS USED IN ADDICTIVE DISORDERS"@en ;
+    skos:notation "N07B" .
+
+<http://linked.opendata.cz/resource/ATC/N07BA> a ns1:ATCConcept ;
+    dcterms:title "Léčiva k terapii závislosti na nikotinu"@cs,
+        "Drugs used in nicotine dependence"@en ;
+    skos:notation "N07BA" .
+
+<http://linked.opendata.cz/resource/ATC/N07BA03> a ns1:ATCConcept ;
+    dcterms:title "Vareniklin"@cs,
+        "Varenicline"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N07>,
+        <http://linked.opendata.cz/resource/ATC/N07B>,
+        <http://linked.opendata.cz/resource/ATC/N07BA> ;
+    skos:notation "N07BA03" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0540610> a ns1:Ingredient ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "Varenicline tartrate"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027852> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BA03> ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "56"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X0.5MG"@cs ;
+    ns1:title "CHAMPIX 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027853> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BA03> ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "56 PO"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 56X0.5MG PO"@cs ;
+    ns1:title "CHAMPIX 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027854> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BA03> ;
+    ns1:hasIndicationGroup "VARIA"@cs ;
+    ns1:hasPackagingSize "28 PO"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Perorální podání"@cs ;
+    ns1:hasStrength "0.5MG"^^xsd:string ;
+    ns1:hasTitleSupplement "POR TBL FLM 28X0.5MG PO"@cs ;
+    ns1:title "CHAMPIX 0,5 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/CHAMPIX-0-5-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N07BA03> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0540610> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027852>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027853>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0027854> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:title "CHAMPIX 0,5 MG"@cs .
+
+

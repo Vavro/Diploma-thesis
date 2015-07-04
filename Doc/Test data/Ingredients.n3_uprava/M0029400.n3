@@ -1,0 +1,129 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/C09CA01> a ns1:ATCConcept ;
+    skos:notation "C09CA01" ;
+    skos:prefLabel "Losartan"@cs,
+        "Losartan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0029400> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001573>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001649>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "An antagonist of ANGIOTENSIN TYPE 1 RECEPTOR with antihypertensive activity due to the reduced pressor effect of ANGIOTENSIN II.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000070> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-50> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0456879> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008731>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008859>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009826>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000950>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000957>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001434>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001616>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002506>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003826> ;
+    ns1:title "Losartan"@cs,
+        "Losartan"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001326> a ns1:PharmacologicalAction ;
+    ns1:description "Agents used for the treatment or prevention of cardiac arrhythmias. They may affect the polarization-repolarization phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibers. Anti-arrhythmia agents are often classed into four main groups according to their mechanism of action: sodium channel blockade, beta-adrenergic blockade, repolarization prolongation, or calcium channel blockade.     "@en ;
+    ns1:title "Antiarytmika"@cs,
+        "Anti-arrhythmia agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001456> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used in the treatment of acute or chronic vascular HYPERTENSION regardless of pharmacological mechanism. Among the antihypertensive agents are DIURETICS; (especially DIURETICS, THIAZIDE); ADRENERGIC BETA-ANTAGONISTS; ADRENERGIC ALPHA-ANTAGONISTS; ANGIOTENSIN-CONVERTING ENZYME INHIBITORS; CALCIUM CHANNEL BLOCKERS; GANGLIONIC BLOCKERS; and VASODILATOR AGENTS.     "@en ;
+    ns1:title "Antihypertenzíva"@cs,
+        "Antihypertensive agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0456879> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that antagonize ANGIOTENSIN II TYPE 1 RECEPTOR. Included are ANGIOTENSIN II analogs such as SARALASIN and biphenylimidazoles such as LOSARTAN. Some are used as ANTIHYPERTENSIVE AGENTS.     "@en ;
+    ns1:title "Blokátory receptoru 1 pro angiotenzin ii"@cs,
+        "Angiotensin ii type 1 receptor blockers"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000950> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of disorders characterized by HYPERGLYCEMIA and GLUCOSE INTOLERANCE.     "@en ;
+    ns1:title "Diabetes mellitus"@cs,
+        "Diabetes mellitus"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000957> a ns1:DiseaseOrFinding ;
+    ns1:description "KIDNEY injuries associated with diabetes mellitus and affecting KIDNEY GLOMERULUS; ARTERIOLES; KIDNEY TUBULES; and the interstitium. Clinical signs include persistent PROTEINURIA, from microalbuminuria progressing to ALBUMINURIA of greater than 300 mg/24 h, leading to reduced GLOMERULAR FILTRATION RATE and END-STAGE RENAL DISEASE.     "@en ;
+    ns1:title "Diabetické nefropatie"@cs,
+        "Diabetic nephropathies"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001434> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous condition in which the heart is unable to pump out sufficient blood to meet the metabolic need of the body. Heart failure can be caused by structural defects, functional abnormalities (VENTRICULAR DYSFUNCTION), or a sudden overload beyond its capacity. Chronic heart failure is more common than acute heart failure which results from sudden insult to cardiac function, such as MYOCARDIAL INFARCTION.     "@en ;
+    ns1:title "Srdeční selhání"@cs,
+        "Heart failure"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001573> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition caused by the overproduction of ALDOSTERONE. It is characterized by sodium retention and potassium excretion with resultant HYPERTENSION and HYPOKALEMIA.     "@en ;
+    ns1:title "Hyperaldosteronismus"@cs,
+        "Hyperaldosteronism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001616> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistently high systemic arterial BLOOD PRESSURE. Based on multiple readings (BLOOD PRESSURE DETERMINATION), hypertension is currently defined as when SYSTOLIC PRESSURE is consistently greater than 140 mm Hg or when DIASTOLIC PRESSURE is consistently 90 mm Hg or more.     "@en ;
+    ns1:title "Hypertenze"@cs,
+        "Hypertension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001649> a ns1:DiseaseOrFinding ;
+    ns1:description "Abnormally low BLOOD PRESSURE that can result in inadequate blood flow to the brain and other vital organs. Common symptom is DIZZINESS but greater negative impacts on the body occur when there is prolonged depravation of oxygen and nutrients.     "@en ;
+    ns1:title "Hypotenze"@cs,
+        "Hypotension"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002506> a ns1:DiseaseOrFinding ;
+    ns1:description "The presence of proteins in the urine, an indicator of KIDNEY DISEASES.     "@en ;
+    ns1:title "Proteinurie"@cs,
+        "Proteinuria"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003826> a ns1:DiseaseOrFinding ;
+    ns1:description "A condition in which the LEFT VENTRICLE of the heart was functionally impaired. This condition usually leads to HEART FAILURE; MYOCARDIAL INFARCTION; and other cardiovascular complications. Diagnosis is made by measuring the diminished ejection fraction and a depressed level of motility of the left ventricular wall.     "@en ;
+    ns1:title "Komora levá - dysfunkce"@cs,
+        "Ventricular dysfunction, left"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000070> a ns1:MechanismOfAction ;
+    ns1:title "Angiotensin 2 Receptor Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008669> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Intravascular Volume"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008731> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Mineralocorticoid Secretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008859> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Renal K+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009553> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Renal Na+ Excretion"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009826> a ns1:PhysiologicEffect ;
+    ns1:title "Renal Arterial Vasodilation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000178477> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Blood Pressure"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/LORISTA-50> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/C09CA01> ;
+    ns1:title "LORISTA 50"@cs .
+
+

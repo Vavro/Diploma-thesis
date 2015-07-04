@@ -1,0 +1,50 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/H05AA02> a ns1:ATCConcept ;
+    skos:notation "H05AA02" ;
+    skos:prefLabel "Teriparatid"@cs,
+        "Teriparatide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0028836> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A polypeptide that consists of the 1-34 amino-acid fragment of human PARATHYROID HORMONE, the biologically active N-terminal region. The acetate form is given by intravenous infusion in the differential diagnosis of HYPOPARATHYROIDISM and PSEUDOHYPOPARATHYROIDISM. (Reynolds JEF(Ed): Martindale: The Extra Pharmacopoeia (electronic version). Micromedex, Inc, Englewood, CO, 1995)     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/FORSTEO> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> ;
+    ns1:title "Teriparatid"@cs,
+        "Teriparatide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0472480> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that inhibit BONE RESORPTION and/or favor BONE MINERALIZATION and BONE REGENERATION. They are used to heal BONE FRACTURES and to treat METABOLIC BONE DISEASES such as OSTEOPOROSIS.     "@en ;
+    ns1:title "Inhibitory kostní resorpce"@cs,
+        "Bone density conservation agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003303> a ns1:DiseaseOrFinding ;
+    ns1:description "Metabolic disorder associated with fractures of the femoral neck, vertebrae, and distal forearm. It occurs commonly in women within 15-20 years after menopause, and is caused by factors associated with menopause including estrogen deficiency.     "@en ;
+    ns1:title "Osteoporóza postmenopauzální"@cs,
+        "Osteoporosis, postmenopausal"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000149> a ns1:MechanismOfAction ;
+    ns1:title "Hormone Receptor Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008311> a ns1:PhysiologicEffect ;
+    ns1:title "Bone Formation Stimulation"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/FORSTEO> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/H05AA02> ;
+    ns1:title "FORSTEO"@cs .
+
+

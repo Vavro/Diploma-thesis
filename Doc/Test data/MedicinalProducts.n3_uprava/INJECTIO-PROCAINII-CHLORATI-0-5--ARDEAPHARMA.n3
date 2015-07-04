@@ -1,0 +1,111 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N> a ns1:ATCConcept ;
+    dcterms:title "Nervový systém"@cs,
+        "NERVOUS SYSTEM"@en ;
+    skos:notation "N" .
+
+<http://linked.opendata.cz/resource/ATC/N01> a ns1:ATCConcept ;
+    dcterms:title "Anestetika"@cs,
+        "ANESTHETICS"@en ;
+    skos:notation "N01" .
+
+<http://linked.opendata.cz/resource/ATC/N01B> a ns1:ATCConcept ;
+    dcterms:title "Anestetika lokální"@cs,
+        "ANESTHETICS, LOCAL"@en ;
+    skos:notation "N01B" .
+
+<http://linked.opendata.cz/resource/ATC/N01BA> a ns1:ATCConcept ;
+    dcterms:title "Estery kyseliny aminobenzoové"@cs,
+        "Esters of aminobenzoic acid"@en ;
+    skos:notation "N01BA" .
+
+<http://linked.opendata.cz/resource/ATC/N01BA02> a ns1:ATCConcept ;
+    dcterms:title "Prokain"@cs,
+        "Procaine"@en ;
+    skos:broaderTransitive <http://linked.opendata.cz/resource/ATC/N>,
+        <http://linked.opendata.cz/resource/ATC/N01>,
+        <http://linked.opendata.cz/resource/ATC/N01B>,
+        <http://linked.opendata.cz/resource/ATC/N01BA> ;
+    skos:notation "N01BA02" .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0475887> a ns1:Ingredient ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> ;
+    ns1:title "Procaine hydrochloride"@cs,
+        "Procaine hydrochloride"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001169> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that block nerve conduction when applied locally to nerve tissue in appropriate concentrations. They act on any part of the nervous system and on every type of nerve fiber. In contact with a nerve trunk, these anesthetics can cause both sensory and motor paralysis in the innervated area. Their action is completely reversible. (From Gilman AG, et. al., Goodman and Gilman's The Pharmacological Basis of Therapeutics, 8th ed) Nearly all local anesthetics act by reducing the tendency of voltage-dependent sodium channels to activate.     "@en ;
+    ns1:title "Anestetika lokální"@cs,
+        "Anesthetics, local"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069672> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BA02> ;
+    ns1:hasIndication """Místní infiltrační anestézie, svodná anestézie tenkých nervů, nitrožilní analgézie.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasMaximalPrice "59.4000015259"^^xsd:float ;
+    ns1:hasPackagingSize "1X80ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasReimbursementAmount "113.650001526"^^xsd:float ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106692_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X80ML/400MG"@cs ;
+    ns1:title "INJECTIO PROCAINII CHLORATI 0,5% ARDEAPHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069673> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BA02> ;
+    ns1:hasIndication """Místní infiltrační anestézie, svodná anestézie tenkých nervů, nitrožilní analgézie.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "1X250ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106692_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X250ML/1.25GM"@cs ;
+    ns1:title "INJECTIO PROCAINII CHLORATI 0,5% ARDEAPHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069674> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BA02> ;
+    ns1:hasIndication """Místní infiltrační anestézie, svodná anestézie tenkých nervů, nitrožilní analgézie.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "1X500ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106692_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X500ML/2.5GM"@cs ;
+    ns1:title "INJECTIO PROCAINII CHLORATI 0,5% ARDEAPHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0089214> a ns1:MedicinalProductPackaging ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BA02> ;
+    ns1:hasIndication """Místní infiltrační anestézie, svodná anestézie tenkých nervů, nitrožilní analgézie.
+"""@cs ;
+    ns1:hasIndicationGroup "ANAESTHETICA (LOKÁLNÍ)"@cs ;
+    ns1:hasPackagingSize "1X200ML"^^xsd:string ;
+    ns1:hasRegistrationState <http://linked.opendata.cz/resource/sukl/registration-state/R> ;
+    ns1:hasRouteOfAdministration "Injekce"@cs ;
+    ns1:hasSPCDocument <http://linked.opendata.cz/resource/sukl/spc/document/SPC106692_doc> ;
+    ns1:hasStrength "5MG/ML"^^xsd:string ;
+    ns1:hasTitleSupplement "INJ SOL 1X200ML"@cs ;
+    ns1:title "INJECTIO PROCAINII CHLORATI 0,5% ARDEAPHARMA"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INJECTIO-PROCAINII-CHLORATI-0-5--ARDEAPHARMA> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N01BA02> ;
+    ns1:hasActiveIngredient <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0475887> ;
+    ns1:hasMedicinalProductPackaging <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069672>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069673>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0069674>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product-packaging/0089214> ;
+    ns1:title "INJECTIO PROCAINII CHLORATI 0,5% ARDEAPHARMA"@cs .
+
+

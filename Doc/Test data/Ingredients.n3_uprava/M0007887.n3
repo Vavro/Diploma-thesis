@@ -1,0 +1,55 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/N03AD01> a ns1:ATCConcept ;
+    skos:notation "N03AD01" ;
+    skos:prefLabel "Ethosuximid"@cs,
+        "Ethosuximide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0007887> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "An anticonvulsant especially useful in the treatment of absence seizures unaccompanied by other types of seizures.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/PETINIMID> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009761> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001131>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> ;
+    ns1:title "Ethosuximid"@cs,
+        "Ethosuximide"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001382> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs used to prevent SEIZURES or reduce their severity.     "@en ;
+    ns1:title "Antikonvulzíva"@cs,
+        "Anticonvulsants"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001131> a ns1:DiseaseOrFinding ;
+    ns1:description "A childhood seizure disorder characterized by rhythmic electrical brain discharges of generalized onset. Clinical features include a sudden cessation of ongoing activity usually without loss of postural tone. Rhythmic blinking of the eyelids or lip smacking frequently accompanies the SEIZURES. The usual duration is 5-10 seconds, and multiple episodes may occur daily. Juvenile absence epilepsy is characterized by the juvenile onset of absence seizures and an increased incidence of myoclonus and tonic-clonic seizures. (Menkes, Textbook of Child Neurology, 5th ed, p736)     "@en ;
+    ns1:title "Epilepsie petit mal"@cs,
+        "Epilepsy, absence"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002713> a ns1:DiseaseOrFinding ;
+    ns1:description "Clinical or subclinical disturbances of cortical function due to a sudden, abnormal, excessive, and disorganized discharge of brain cells. Clinical manifestations include abnormal motor, sensory and psychic phenomena. Recurrent seizures are usually referred to as EPILEPSY or \"seizure disorder.\"     "@en ;
+    ns1:title "Záchvaty"@cs,
+        "Seizures"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009761> a ns1:PhysiologicEffect ;
+    ns1:title "Neurotransmitter & Neuromuscular Transmitter Activity Alteration"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/PETINIMID> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/N03AD01> ;
+    ns1:title "PETINIMID"@cs .
+
+

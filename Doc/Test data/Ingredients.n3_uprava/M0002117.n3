@@ -1,0 +1,148 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M03BX01> a ns1:ATCConcept ;
+    skos:notation "M03BX01" ;
+    skos:prefLabel "Baklofen"@cs,
+        "Baclofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0002117> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> ;
+    ns1:description "A GAMMA-AMINOBUTYRIC ACID derivative that is a specific agonist of GABA-B RECEPTORS. It is used in the treatment of MUSCLE SPASTICITY, especially that due to SPINAL CORD INJURIES. Its therapeutic effects result from actions at spinal and supraspinal sites, generally the reduction of excitatory transmission.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000116>,
+        <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/BACLOFEN-POLPHARMA-10-MG>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/BACLOFEN-POLPHARMA-25-MG> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014240>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544561> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008953>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009628> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000565>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000725>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001534>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001558>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002052>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002061>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002078>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002279>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002794>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002795>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002812>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003018>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000004176> ;
+    ns1:title "Baklofen"@cs,
+        "Baclofen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0014240> a ns1:PharmacologicalAction ;
+    ns1:description "A heterogeneous group of drugs used to produce muscle relaxation, excepting the neuromuscular blocking agents. They have their primary clinical and therapeutic uses in the treatment of muscle spasm and immobility associated with strains, sprains, and injuries of the back and, to a lesser degree, injuries to the neck. They have been used also for the treatment of a variety of clinical conditions that have in common only the presence of skeletal muscle hyperactivity, for example, the muscle spasms that can occur in MULTIPLE SCLEROSIS. (From Smith and Reynard, Textbook of Pharmacology, 1991, p358)     "@en ;
+    ns1:title "Myorelaxancia centrální"@cs,
+        "Muscle relaxants, central"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0544561> a ns1:PharmacologicalAction ;
+    ns1:description "Endogenous compounds and drugs that bind to and activate GABA-B RECEPTORS.     "@en ;
+    ns1:title "Receptory gaba-b - agonisté"@cs,
+        "Gaba-b receptor agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000565> a ns1:DiseaseOrFinding ;
+    ns1:description "Dysfunction of the URINARY BLADDER due to disease of the central or peripheral nervous system pathways involved in the control of URINATION. This is often associated with SPINAL CORD DISEASES, but may also be caused by BRAIN DISEASES or PERIPHERAL NERVE DISEASES.     "@en ;
+    ns1:title "Neurogenní močový měchýř"@cs,
+        "Urinary bladder, neurogenic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000725> a ns1:DiseaseOrFinding ;
+    ns1:description "A heterogeneous group of nonprogressive motor disorders caused by chronic brain injuries that originate in the prenatal period, perinatal period, or first few years of life. The four major subtypes are spastic, athetoid, ataxic, and mixed cerebral palsy, with spastic forms being the most common. The motor disorder may range from difficulties with fine motor control to severe spasticity (see MUSCLE SPASTICITY) in all limbs. Spastic diplegia (Little disease) is the most common subtype, and is characterized by spasticity that is more prominent in the legs than in the arms. Pathologically, this condition may be associated with LEUKOMALACIA, PERIVENTRICULAR. (From Dev Med Child Neurol 1998 Aug;40(8):520-7)     "@en ;
+    ns1:title "Mozková obrna"@cs,
+        "Cerebral palsy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001534> a ns1:DiseaseOrFinding ;
+    ns1:description "A spasm of the diaphragm that causes a sudden inhalation followed by rapid closure of the glottis which produces a sound.     "@en ;
+    ns1:title "Škytavka"@cs,
+        "Hiccup"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001558> a ns1:DiseaseOrFinding ;
+    ns1:description "A familial disorder inherited as an autosomal dominant trait and characterized by the onset of progressive CHOREA and DEMENTIA in the fourth or fifth decade of life. Common initial manifestations include paranoia; poor impulse control; DEPRESSION; HALLUCINATIONS; and DELUSIONS. Eventually intellectual impairment; loss of fine motor control; ATHETOSIS; and diffuse chorea involving axial and limb musculature develops, leading to a vegetative state within 10-15 years of disease onset. The juvenile variant has a more fulminant course including SEIZURES; ATAXIA; dementia; and chorea. (From Adams et al., Principles of Neurology, 6th ed, pp1060-4)     "@en ;
+    ns1:title "Huntingtonova nemoc"@cs,
+        "Huntington disease"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002052> a ns1:DiseaseOrFinding ;
+    ns1:description "An autoimmune disorder mainly affecting young adults and characterized by destruction of myelin in the central nervous system. Pathologic findings include multiple sharply demarcated areas of demyelination throughout the white matter of the central nervous system. Clinical manifestations include visual loss, extra-ocular movement disorders, paresthesias, loss of sensation, weakness, dysarthria, spasticity, ataxia, and bladder dysfunction. The usual pattern is one of recurrent attacks followed by partial recovery (see MULTIPLE SCLEROSIS, RELAPSING-REMITTING), but acute fulminating and chronic progressive forms (see MULTIPLE SCLEROSIS, CHRONIC PROGRESSIVE) also occur. (Adams et al., Principles of Neurology, 6th ed, p903)     "@en ;
+    ns1:title "Roztroušená skleróza"@cs,
+        "Multiple sclerosis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002061> a ns1:DiseaseOrFinding ;
+    ns1:description "A form of muscle hypertonia associated with upper MOTOR NEURON DISEASE. Resistance to passive stretch of a spastic muscle results in minimal initial resistance (a \"free interval\") followed by an incremental increase in muscle tone. Tone increases in proportion to the velocity of stretch. Spasticity is usually accompanied by HYPERREFLEXIA and variable degrees of MUSCLE WEAKNESS. (From Adams et al., Principles of Neurology, 6th ed, p54)     "@en ;
+    ns1:title "Svalová spasticita"@cs,
+        "Muscle spasticity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002078> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation of a transverse portion of the spinal cord characterized by acute or subacute segmental demyelination or necrosis. The condition may occur sporadically, follow an infection or vaccination, or present as a paraneoplastic syndrome (see also ENCEPHALOMYELITIS, ACUTE DISSEMINATED). Clinical manifestations include motor weakness, sensory loss, and incontinence. (Adams et al., Principles of Neurology, 6th ed, pp1242-6)     "@en ;
+    ns1:title "Myelitida z příčné léze"@cs,
+        "Myelitis, transverse"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002279> a ns1:DiseaseOrFinding ;
+    ns1:description "Persistent pain that is refractory to some or all forms of treatment.     "@en ;
+    ns1:title "Nesnesitelná bolest"@cs,
+        "Pain, intractable"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002794> a ns1:DiseaseOrFinding ;
+    ns1:description "Penetrating and non-penetrating injuries to the spinal cord resulting from traumatic external forces (e.g., WOUNDS, GUNSHOT; WHIPLASH INJURIES; etc.).     "@en ;
+    ns1:title "Mícha - poranění"@cs,
+        "Spinal cord injuries"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002795> a ns1:DiseaseOrFinding ;
+    ns1:description "Benign and malignant neoplasms which occur within the substance of the spinal cord (intramedullary neoplasms) or in the space between the dura and spinal cord (intradural extramedullary neoplasms). The majority of intramedullary spinal tumors are primary CNS neoplasms including ASTROCYTOMA; EPENDYMOMA; and LIPOMA. Intramedullary neoplasms are often associated with SYRINGOMYELIA. The most frequent histologic types of intradural-extramedullary tumors are MENINGIOMA and NEUROFIBROMA.     "@en ;
+    ns1:title "Nádory míchy"@cs,
+        "Spinal cord neoplasms"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002812> a ns1:DiseaseOrFinding ;
+    ns1:description "Deficient development or degeneration of a portion of the VERTEBRA, usually in the pars interarticularis (the bone bridge between the superior and inferior facet joints of the LUMBAR VERTEBRAE) leading to SPONDYLOLISTHESIS.     "@en ;
+    ns1:title "Spondylolýza"@cs,
+        "Spondylolysis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003018> a ns1:DiseaseOrFinding ;
+    ns1:description "A syndrome characterized by recurrent episodes of excruciating pain lasting several seconds or longer in the sensory distribution of the TRIGEMINAL NERVE. Pain may be initiated by stimulation of trigger points on the face, lips, or gums or by movement of facial muscles or chewing. Associated conditions include MULTIPLE SCLEROSIS, vascular anomalies, ANEURYSMS, and neoplasms. (Adams et al., Principles of Neurology, 6th ed, p187)     "@en ;
+    ns1:title "Neuralgie trigeminu"@cs,
+        "Trigeminal neuralgia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000004176> a ns1:DiseaseOrFinding ;
+    ns1:description "Reduced blood flow to the spinal cord which is supplied by the anterior spinal artery and the paired posterior spinal arteries. This condition may be associated with ARTERIOSCLEROSIS, trauma, emboli, diseases of the aorta, and other disorders. Prolonged ischemia may lead to INFARCTION of spinal cord tissue.     "@en ;
+    ns1:title "Mícha - ischémie"@cs,
+        "Spinal cord ischemia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000088> a ns1:MechanismOfAction ;
+    ns1:title "Excitatory Amino Acid Antagonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000116> a ns1:MechanismOfAction ;
+    ns1:title "GABA B Agonists"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000009915> a ns1:MechanismOfAction ;
+    ns1:title "Unknown Cellular or Molecular Interaction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008768> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Organized Electrical Activity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008953> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Striated Muscle Contraction"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009628> a ns1:PhysiologicEffect ;
+    ns1:title "Increased Spinal Cord GABA Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BACLOFEN-POLPHARMA-10-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03BX01> ;
+    ns1:title "BACLOFEN-POLPHARMA 10 MG"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/BACLOFEN-POLPHARMA-25-MG> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M03BX01> ;
+    ns1:title "BACLOFEN-POLPHARMA 25 MG"@cs .
+
+

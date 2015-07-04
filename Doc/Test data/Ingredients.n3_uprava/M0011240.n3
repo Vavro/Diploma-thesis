@@ -1,0 +1,187 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/M01AB01> a ns1:ATCConcept ;
+    skos:notation "M01AB01" ;
+    skos:prefLabel "Indometacin"@cs,
+        "Indometacin"@en .
+
+<http://linked.opendata.cz/resource/ATC/M02AA23> a ns1:ATCConcept ;
+    skos:notation "M02AA23" ;
+    skos:prefLabel "Indometacin"@cs,
+        "Indometacin"@en .
+
+<http://linked.opendata.cz/resource/ATC/S01BC01> a ns1:ATCConcept ;
+    skos:notation "S01BC01" ;
+    skos:prefLabel "Indometacin"@cs,
+        "Indometacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0011240> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001748>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002351>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002932>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> ;
+    ns1:description "A non-steroidal anti-inflammatory agent (NSAID) that inhibits the enzyme cyclooxygenase necessary for the formation of prostaglandins and other autacoids. It also inhibits the motility of polymorphonuclear leukocytes.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/ELMETACIN>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INDOBENE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INDOCOLLYRE-0-1--OCNI-KAPKY>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INDOMETACIN-100-BERLIN-CHEMIE>,
+        <http://linked.opendata.cz/resource/sukl/medicinal-product/INDOMETACIN-50-BERLIN-CHEMIE> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003472>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009558>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000000478>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000481>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000482>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000639>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000844>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001003>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001687>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002244>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002278>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003204> ;
+    ns1:title "Indomethacin"@cs,
+        "Indomethacin"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0001335> a ns1:PharmacologicalAction ;
+    ns1:description "Anti-inflammatory agents that are not steroids. In addition to anti-inflammatory actions, they have analgesic, antipyretic, and platelet-inhibitory actions. They are used primarily in the treatment of chronic arthritic conditions and certain soft tissue disorders associated with pain and inflammation. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins. Inhibition of prostaglandin synthesis accounts for their analgesic, antipyretic, and platelet-inhibitory actions; other mechanisms may contribute to their anti-inflammatory effects. Certain NSAIDs also may inhibit lipoxygenase enzymes or TYPE C PHOSPHOLIPASES or may modulate T-cell function. (AMA Drug Evaluations Annual, 1994, p 1814-5)     "@en ;
+    ns1:title "Antiflogistika nesteroidní"@cs,
+        "Anti-inflammatory agents, non-steroidal"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0003472> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that affect the rate or intensity of cardiac contraction, blood vessel diameter, or blood volume.     "@en ;
+    ns1:title "Kardiovaskulární látky"@cs,
+        "Cardiovascular agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0009558> a ns1:PharmacologicalAction ;
+    ns1:description "Agents that increase uric acid excretion by the kidney (URICOSURIC AGENTS), decrease uric acid production (antihyperuricemics), or alleviate the pain and inflammation of acute attacks of gout.     "@en ;
+    ns1:title "Antiuratika"@cs,
+        "Gout suppressants"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0023285> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that prevent preterm labor and immature birth by suppressing uterine contractions (TOCOLYSIS). Agents used to delay premature uterine activity include magnesium sulfate, beta-mimetics, oxytocin antagonists, calcium channel inhibitors, and adrenergic beta-receptor agonists. The use of intravenous alcohol as a tocolytic is now obsolete.     "@en ;
+    ns1:title "Tokolytika"@cs,
+        "Tocolytic agents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0025664> a ns1:PharmacologicalAction ;
+    ns1:description "Compounds or agents that combine with cyclooxygenase (PROSTAGLANDIN-ENDOPEROXIDE SYNTHASES) and thereby prevent its substrate-enzyme combination with arachidonic acid and the formation of eicosanoids, prostaglandins, and thromboxanes.     "@en ;
+    ns1:title "Cyklooxygenasa - inhibitory"@cs,
+        "Cyclooxygenase inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000478> a ns1:DiseaseOrFinding ;
+    ns1:title "Artritida"@cs,
+        "Arthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000481> a ns1:DiseaseOrFinding ;
+    ns1:description "Rheumatoid arthritis of children occurring in three major subtypes defined by the symptoms present during the first six months following onset: systemic-onset (Still's Disease, Juvenile-Onset), polyarticular-onset, and pauciarticular-onset. Adult-onset cases of Still's disease (STILL'S DISEASE, ADULT-ONSET) are also known. Only one subtype of juvenile rheumatoid arthritis (polyarticular-onset, rheumatoid factor-positive) clinically resembles adult rheumatoid arthritis and is considered its childhood equivalent.     "@en ;
+    ns1:title "Juvenilní revmatoidní artritida"@cs,
+        "Arthritis, juvenile rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000482> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic systemic disease, primarily of the joints, marked by inflammatory changes in the synovial membranes and articular structures, widespread fibrinoid degeneration of the collagen fibers in mesenchymal tissues, and by atrophy and rarefaction of bony structures. Etiology is unknown, but autoimmune mechanisms have been implicated.     "@en ;
+    ns1:title "Revmatoidní artritida"@cs,
+        "Arthritis, rheumatoid"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000639> a ns1:DiseaseOrFinding ;
+    ns1:description "Inflammation or irritation of a bursa, the fibrous sac that acts as a cushion between moving structures of bones, muscles, tendons or skin.     "@en ;
+    ns1:title "Bursitida"@cs,
+        "Bursitis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000844> a ns1:DiseaseOrFinding ;
+    ns1:description "Injuries resulting in hemorrhage, usually manifested in the skin.     "@en ;
+    ns1:title "Zhmoždění"@cs,
+        "Contusions"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000999> a ns1:DiseaseOrFinding ;
+    ns1:description "Immunologically mediated adverse reactions to medicinal substances used legally or illegally.     "@en ;
+    ns1:title "Léková alergie"@cs,
+        "Drug hypersensitivity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001003> a ns1:DiseaseOrFinding ;
+    ns1:description "A congenital heart defect characterized by the persistent opening of fetal DUCTUS ARTERIOSUS that connects the PULMONARY ARTERY to the descending aorta (AORTA, DESCENDING) allowing unoxygenated blood to bypass the lung and flow to the PLACENTA. Normally, the ductus is closed shortly after birth.     "@en ;
+    ns1:title "Ductus arteriosus patens"@cs,
+        "Ductus arteriosus, patent"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001482> a ns1:DiseaseOrFinding ;
+    ns1:description "Bleeding in any segment of the GASTROINTESTINAL TRACT from ESOPHAGUS to RECTUM.     "@en ;
+    ns1:title "Gastrointestinální hemoragie"@cs,
+        "Gastrointestinal hemorrhage"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001687> a ns1:DiseaseOrFinding ;
+    ns1:description "A pathological process characterized by injury or destruction of tissues caused by a variety of cytologic and chemical reactions. It is usually manifested by typical signs of pain, heat, redness, swelling, and loss of function.     "@en ;
+    ns1:title "Zánět"@cs,
+        "Inflammation"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001748> a ns1:DiseaseOrFinding ;
+    ns1:description "Pathological processes of the KIDNEY or its component tissues.     "@en ;
+    ns1:title "Ledviny - nemoci"@cs,
+        "Kidney diseases"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002244> a ns1:DiseaseOrFinding ;
+    ns1:description "A progressive, degenerative joint disease, the most common form of arthritis, especially in older persons. The disease is thought to result not from the aging process but from biochemical changes and biomechanical stresses affecting articular cartilage. In the foreign literature it is often called osteoarthrosis deformans.     "@en ;
+    ns1:title "Osteoartritida"@cs,
+        "Osteoarthritis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002278> a ns1:DiseaseOrFinding ;
+    ns1:description "An unpleasant sensation induced by noxious stimuli which are detected by NERVE ENDINGS of NOCICEPTIVE NEURONS.     "@en ;
+    ns1:title "Bolest"@cs,
+        "Pain"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002351> a ns1:DiseaseOrFinding ;
+    ns1:description "Ulcer that occurs in the regions of the GASTROINTESTINAL TRACT which come into contact with GASTRIC JUICE containing PEPSIN and GASTRIC ACID. It occurs when there are defects in the MUCOSA barrier. The common forms of peptic ulcers are associated with HELICOBACTER PYLORI and the consumption of nonsteroidal anti-inflammatory drugs (NSAIDS).     "@en ;
+    ns1:title "Peptický vřed"@cs,
+        "Peptic ulcer"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002932> a ns1:DiseaseOrFinding ;
+    ns1:description "A subnormal level of BLOOD PLATELETS.     "@en ;
+    ns1:title "Trombocytopenie"@cs,
+        "Thrombocytopenia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003204> a ns1:DiseaseOrFinding ;
+    ns1:description "Arthritis, especially of the great toe, as a result of gout. Acute gouty arthritis often is precipitated by trauma, infection, surgery, etc. The initial attacks are usually monoarticular but later attacks are often polyarticular.     "@en ;
+    ns1:title "Dnavá artritida"@cs,
+        "Arthritis, gouty"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010195> a ns1:DiseaseOrFinding ;
+    ns1:description "The status during which female mammals carry their developing young (EMBRYOS or FETUSES) in utero before birth, beginning from FERTILIZATION to BIRTH.     "@en ;
+    ns1:title "Těhotenství"@cs,
+        "Pregnancy"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000160> a ns1:MechanismOfAction ;
+    ns1:title "Cyclooxygenase Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008836> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased Prostaglandin Production"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/ELMETACIN> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M02AA23> ;
+    ns1:title "ELMETACIN"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INDOBENE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M02AA23> ;
+    ns1:title "INDOBENE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INDOCOLLYRE-0-1--OCNI-KAPKY> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/S01BC01> ;
+    ns1:title "INDOCOLLYRE 0,1% OČNÍ KAPKY"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INDOMETACIN-100-BERLIN-CHEMIE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AB01> ;
+    ns1:title "INDOMETACIN 100 BERLIN-CHEMIE"@cs .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/INDOMETACIN-50-BERLIN-CHEMIE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/M01AB01> ;
+    ns1:title "INDOMETACIN 50 BERLIN-CHEMIE"@cs .
+
+

@@ -1,0 +1,133 @@
+@prefix ns1: <http://linked.opendata.cz/ontology/drug-encyclopedia/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.opendata.cz/resource/ATC/L03AX> a ns1:ATCConcept ;
+    skos:notation "L03AX" ;
+    skos:prefLabel "Jiná imunostimulancia"@cs,
+        "Other immunostimulants "@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0013600> a ns1:Ingredient ;
+    ns1:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000348>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000448>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000680>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000000698>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000001887>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003177>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003537>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010203>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> ;
+    ns1:description "A naturally occurring furocoumarin compound found in several species of plants, including Psoralea corylifolia. It is a photoactive substance that forms DNA ADDUCTS in the presence of ultraviolet A irradiation.     "@en ;
+    ns1:hasMechanismOfAction <http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> ;
+    ns1:hasMedicinalProduct <http://linked.opendata.cz/resource/sukl/medicinal-product/UVADEX-20-MIKROGRAMU-ML--ROZTOK-PRO-UPRAVU-KREVNI-FRAKCE> ;
+    ns1:hasPharmacologicalAction <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349>,
+        <http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026299> ;
+    ns1:hasPhysiologicEffect <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576>,
+        <http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009801> ;
+    ns1:hasPregnancyCategory <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/C>,
+        <http://linked.opendata.cz/resource/fda-spl/pregnancy-category/D> ;
+    ns1:mayTreat <http://linked.opendata.cz/resource/ndfrt/disease/N0000001905>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002076>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000002526>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003137>,
+        <http://linked.opendata.cz/resource/ndfrt/disease/N0000003409> ;
+    ns1:title "Methoxsalen"@cs,
+        "Methoxsalen"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0005349> a ns1:PharmacologicalAction ;
+    ns1:description "Reagents with two reactive groups, usually at opposite ends of the molecule, that are capable of reacting with and thereby forming bridges between side chains of amino acids in proteins; the locations of naturally reactive areas within proteins can thereby be identified; may also be used for other macromolecules, like glycoproteins, nucleic acids, or other.     "@en ;
+    ns1:title "Reagencia zkříženě vázaná"@cs,
+        "Cross-linking reagents"@en .
+
+<http://linked.opendata.cz/resource/drug-encyclopedia/pharmacological-action/M0026299> a ns1:PharmacologicalAction ;
+    ns1:description "Drugs that are pharmacologically inactive but when exposed to ultraviolet radiation or sunlight are converted to their active metabolite to produce a beneficial reaction affecting the diseased tissue. These compounds can be administered topically or systemically and have been used therapeutically to treat psoriasis and various types of neoplasms.     "@en ;
+    ns1:title "Fotosenzibilizující látky"@cs,
+        "Photosensitizing agents"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000348> a ns1:DiseaseOrFinding ;
+    ns1:description "General term for a number of inherited defects of amino acid metabolism in which there is a deficiency or absence of pigment in the eyes, skin, or hair.     "@en ;
+    ns1:title "Albinismus"@cs,
+        "Albinism"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000448> a ns1:DiseaseOrFinding ;
+    ns1:description "Absence of crystalline lens totally or partially from field of vision, from any cause except after cataract extraction. Aphakia is mainly congenital or as result of LENS DISLOCATION AND SUBLUXATION.     "@en ;
+    ns1:title "Afakie"@cs,
+        "Aphakia"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000680> a ns1:DiseaseOrFinding ;
+    ns1:description "A carcinoma derived from stratified squamous epithelium. It may also occur in sites where glandular or columnar epithelium is normally present. (From Stedman, 25th ed)     "@en ;
+    ns1:title "Dlaždicobuněčný karcinom"@cs,
+        "Carcinoma, squamous cell"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000000698> a ns1:DiseaseOrFinding ;
+    ns1:description "Partial or complete opacity on or in the lens or capsule of one or both eyes, impairing vision or causing blindness. The many kinds of cataract are classified by their morphology (size, shape, location) or etiology (cause and time of occurrence). (Dorland, 27th ed)     "@en ;
+    ns1:title "Katarakta"@cs,
+        "Cataract"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001887> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, relapsing, inflammatory, and often febrile multisystemic disorder of connective tissue, characterized principally by involvement of the skin, joints, kidneys, and serosal membranes. It is of unknown etiology, but is thought to represent a failure of the regulatory mechanisms of the autoimmune system. The disease is marked by a wide range of system dysfunctions, an elevated erythrocyte sedimentation rate, and the formation of LE cells in the blood or bone marrow.     "@en ;
+    ns1:title "Systémový lupus erythematodes"@cs,
+        "Lupus erythematosus, systemic"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000001905> a ns1:DiseaseOrFinding ;
+    ns1:description "A general term for various neoplastic diseases of the lymphoid tissue.     "@en ;
+    ns1:title "Lymfom"@cs,
+        "Lymphoma"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002076> a ns1:DiseaseOrFinding ;
+    ns1:description "A chronic, malignant T-cell lymphoma of the skin. In the late stages, the LYMPH NODES and viscera are affected.     "@en ;
+    ns1:title "Mycosis fungoides"@cs,
+        "Mycosis fungoides"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000002526> a ns1:DiseaseOrFinding ;
+    ns1:description "A common genetically determined, chronic, inflammatory skin disease characterized by rounded erythematous, dry, scaling patches. The lesions have a predilection for nails, scalp, genitalia, extensor surfaces, and the lumbosacral region. Accelerated epidermopoiesis is considered to be the fundamental pathologic feature in psoriasis.     "@en ;
+    ns1:title "Psoriáza"@cs,
+        "Psoriasis"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003137> a ns1:DiseaseOrFinding ;
+    ns1:description "A disorder consisting of areas of macular depigmentation, commonly on extensor aspects of extremities, on the face or neck, and in skin folds. Age of onset is often in young adulthood and the condition tends to progress gradually with lesions enlarging and extending until a quiescent state is reached.     "@en ;
+    ns1:title "Vitiligo"@cs,
+        "Vitiligo"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003177> a ns1:DiseaseOrFinding ;
+    ns1:description "A rare, pigmentary, and atrophic autosomal recessive disease. It is manifested as an extreme photosensitivity to ULTRAVIOLET RAYS as the result of a deficiency in the enzyme that permits excisional repair of ultraviolet-damaged DNA.     "@en ;
+    ns1:title "Xeroderma pigmentosum"@cs,
+        "Xeroderma pigmentosum"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003409> a ns1:DiseaseOrFinding ;
+    ns1:description "A group of lymphomas exhibiting clonal expansion of malignant T-lymphocytes arrested at varying stages of differentiation as well as malignant infiltration of the skin. MYCOSIS FUNGOIDES; SEZARY SYNDROME; LYMPHOMATOID PAPULOSIS; and PRIMARY CUTANEOUS ANAPLASTIC LARGE CELL LYMPHOMA are the best characterized of these disorders.     "@en ;
+    ns1:title "Kožní t-buněčný lymfom"@cs,
+        "Lymphoma, t-cell, cutaneous"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000003537> a ns1:DiseaseOrFinding ;
+    ns1:description "An autosomal dominant or acquired porphyria due to a deficiency of UROPORPHYRINOGEN DECARBOXYLASE in the LIVER. It is characterized by photosensitivity and cutaneous lesions with little or no neurologic symptoms. Type I is the acquired form and is strongly associated with liver diseases and hepatic toxicities caused by alcohol or estrogenic steroids. Type II is the familial form.     "@en ;
+    ns1:title "Porphyria cutanea tarda"@cs,
+        "Porphyria cutanea tarda"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010203> a ns1:DiseaseOrFinding ;
+    ns1:description "A child between 1 and 23 months of age.     "@en ;
+    ns1:title "Kojenec"@cs,
+        "Infant"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/disease/N0000010205> a ns1:DiseaseOrFinding ;
+    ns1:description "A person 6 to 12 years of age. An individual 2 to 5 years old is CHILD, PRESCHOOL.     "@en ;
+    ns1:title "Dítě"@cs,
+        "Child"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/mechanism-of-action/N0000000233> a ns1:MechanismOfAction ;
+    ns1:title "Nucleic Acid Synthesis Inhibitors"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000008576> a ns1:PhysiologicEffect ;
+    ns1:title "Decreased DNA Integrity"@en .
+
+<http://linked.opendata.cz/resource/ndfrt/physiologic-effect/N0000009801> a ns1:PhysiologicEffect ;
+    ns1:title "Photosensitizing Activity"@en .
+
+<http://linked.opendata.cz/resource/sukl/medicinal-product/UVADEX-20-MIKROGRAMU-ML--ROZTOK-PRO-UPRAVU-KREVNI-FRAKCE> a ns1:MedicinalProduct ;
+    ns1:hasATCConcept <http://linked.opendata.cz/resource/ATC/L03AX> ;
+    ns1:title "UVADEX 20 MIKROGRAMŮ/ML, ROZTOK PRO ÚPRAVU KREVNÍ FRAKCE"@cs .
+
+
