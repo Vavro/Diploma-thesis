@@ -12,15 +12,15 @@ namespace DragqnLD.Core.UnitTests
 {
     class TestQueries
     {
-        public const string IngredientsQueryParamaterName = @"@thingURI";
+        public const string IngredientsQueryParamaterName = @"?thingURI";
 
         public const string IngredientsQuery = 
 @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 CONSTRUCT
 {
-  @thingURI a enc:Ingredient ;
+  ?thingURI a enc:Ingredient ;
     enc:title ?title ;
     enc:description ?description ;
     enc:indication ?indication ;
@@ -64,18 +64,18 @@ CONSTRUCT
 WHERE
 {
   {
-    @thingURI
+    ?thingURI
       enc:title ?title .
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:description ?description .
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:indication ?indication .
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:hasPharmacologicalAction ?pa .
       ?pa enc:title ?paTitle .
       OPTIONAL {
@@ -83,28 +83,28 @@ WHERE
       }
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:hasMechanismOfAction ?moa .
       ?moa enc:title ?moaTitle .
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:hasPhysiologicEffect ?pe .
       ?pe enc:title ?peTitle .
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:hasPharmacokinetics ?pk .
       ?pk enc:title ?pkTitle .
     }
     OPTIONAL {
-      @thingURI
+      ?thingURI
         enc:hasPregnancyCategory ?pc .
     }
   }
   UNION
   {
-    @thingURI
+    ?thingURI
       enc:hasMedicinalProductGroup ?mpg .
     ?mpg enc:title ?mpgTitle .
     OPTIONAL {
@@ -126,7 +126,7 @@ WHERE
   }
   UNION
   {
-    @thingURI
+    ?thingURI
       enc:mayTreat ?mt .
     ?mt enc:title ?mtTitle .
     OPTIONAL {
@@ -135,7 +135,7 @@ WHERE
   }
   UNION
   {
-    @thingURI
+    ?thingURI
       enc:mayPrevent ?mp .
     ?mp enc:title ?mpTitle .
     OPTIONAL {
@@ -144,7 +144,7 @@ WHERE
   }
   UNION
   {
-    @thingURI
+    ?thingURI
       enc:contraindicatedWith ?ci .
     ?ci enc:title ?ciTitle .
     OPTIONAL {
