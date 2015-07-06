@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,17 @@ namespace DragqnLD.Core.Implementations
                 private const char ZeroChar = '0';
                 private readonly char[] Numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
                 private readonly Dictionary<string,List<int>> _abbreviations = new Dictionary<string, List<int>>();
+                private IReadOnlyDictionary<string, string> _readOnlyPrefixFormToAbbreviationDic;
+
+                public AbbreviationsStore()
+                {
+                    _readOnlyPrefixFormToAbbreviationDic = new ReadOnlyDictionary<string, string>(_prefixFormToAbbreviationDict);
+                }
+
+                public IReadOnlyDictionary<string, string> PrefixFormToAbbreviation { get
+                {
+                    return _readOnlyPrefixFormToAbbreviationDic;
+                } }
 
                 public bool ContainsAbbreviationFor(string prefixedForm)
                 {
@@ -127,6 +140,25 @@ namespace DragqnLD.Core.Implementations
             private readonly UniquePrefixCreater _prefixCreater = new UniquePrefixCreater();
             private readonly AbbreviationsStore _abbreviationsStore = new AbbreviationsStore();
 
+            private readonly IReadOnlyDictionary<string, string> _readonlyUriToPrefixes;
+            public Abbreviations()
+            {
+                _readonlyUriToPrefixes = new ReadOnlyDictionary<string, string>(_uriToPrefixDict);
+            }
+
+            public IReadOnlyDictionary<string, string> UriToPrefixes
+            {
+                get
+                {
+                    return _readonlyUriToPrefixes;
+                }
+            }
+
+            public IReadOnlyDictionary<string, string> PrefixFormToAbbreviation
+            {
+                get { return _abbreviationsStore.PrefixFormToAbbreviation; }
+            }
+
             public void AddPrefix(string prefix, Uri namespaceUri)
             {
                 _uriToPrefixDict.Add(namespaceUri.AbsoluteUri, prefix);
@@ -171,9 +203,10 @@ namespace DragqnLD.Core.Implementations
                 return prefixedForm;
             }
 
+            private static readonly Uri TypeUri = new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
             public static bool ShouldBeSkipped(Uri uri)
             {
-                return false;
+                return uri == TypeUri;
             }
 
             public void AddRenameIfNeeded(string prefixedForm)
@@ -247,17 +280,33 @@ namespace DragqnLD.Core.Implementations
                 abbreviations.AddRenameIfNeeded(prefixedForm);
             }
 
-
             var constructVariables = sparqlQuery.ConstructTemplate.Variables;
-
-
-
-            //todo: for hierarchi model 
+            
+            //todo: for hierarchi model ?
             // - hierarchical class that will handle this
             // --- might be used by the flatGraphNester
             // --- Detect usage of same variable in multiple branches
             // - enumarate ConstructTemplate.TripplePattern collection according to starting parameter and continue by scheduling further probes
-            return new Context();
+            return CreateContextForAbbreviations(abbreviations);
+
+        }
+
+        private Context CreateContextForAbbreviations(Abbreviations abbreviations)
+        {
+            var context = new Context();
+            context.Remove("@base");
+            foreach (var uriToPrefixPair in abbreviations.UriToPrefixes)
+            {
+                context.Add(uriToPrefixPair.Value, new JValue(uriToPrefixPair.Key));
+            }
+
+            foreach (var prefixedFormToAbbreviationPair in abbreviations.PrefixFormToAbbreviation)
+            {
+                context.Add(prefixedFormToAbbreviationPair.Value, new JValue(prefixedFormToAbbreviationPair.Key));
+            }
+
+
+            return context;
         }
     }
 
