@@ -24,7 +24,7 @@ namespace DragqnLD.Core.Implementations
                 private readonly Dictionary<string, string> _prefixFormToAbbreviationDict = new Dictionary<string, string>();
                 private const char ZeroChar = '0';
                 private readonly char[] Numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-                private readonly Dictionary<string,List<int>> _abbreviations;
+                private readonly Dictionary<string,List<int>> _abbreviations = new Dictionary<string, List<int>>();
 
                 public bool ContainsAbbreviationFor(string prefixedForm)
                 {
@@ -38,7 +38,7 @@ namespace DragqnLD.Core.Implementations
                 /// <param name="prefixedForm">The prefixed form. cant be in the abbreviations already</param>
                 public void CheckAndAddIndexIfNeed(string newName, string prefixedForm)
                 {
-                    if (_prefixFormToAbbreviationDict.ContainsKey(prefixedForm))
+                    if (ContainsAbbreviationFor(prefixedForm))
                     {
                         throw new ArgumentException("prefixed form already abbreviated, it makes no sense to call this");
                     }
@@ -101,11 +101,10 @@ namespace DragqnLD.Core.Implementations
 
                 private static string AddNewIndex(List<int> indexes, string baseName)
                 {
-                    string finalName;
                     var newIndex = indexes.LastOrDefault();
                     newIndex++;
                     indexes.Add(newIndex);
-                    finalName = baseName + newIndex;
+                    string finalName = baseName + newIndex;
                     return finalName;
                 }
             }
@@ -166,7 +165,7 @@ namespace DragqnLD.Core.Implementations
                 var namespaceToAbbreviate = uriToPrefix.Substring(0, splitIndex + 1);
                 var newPrefix = _prefixCreater.GetNewPrefix();
 
-                _uriToPrefixDict.Add(newPrefix, namespaceToAbbreviate);
+                _uriToPrefixDict.Add(namespaceToAbbreviate, newPrefix);
                 var prefixedForm = uriToPrefix.ReplaceNamespaceWithPrefix(namespaceToAbbreviate, newPrefix);
 
                 return prefixedForm;
@@ -185,7 +184,6 @@ namespace DragqnLD.Core.Implementations
                     return;
                 }
 
-                string abbreviation;
                 var succ = _abbreviationsStore.ContainsAbbreviationFor(prefixedForm);
                 if (succ)
                 {
@@ -193,7 +191,7 @@ namespace DragqnLD.Core.Implementations
                     return;
                 }
 
-                var newName = prefixedForm.Substring(renameReasonIndex);
+                var newName = prefixedForm.Substring(renameReasonIndex + 1);
 
                 _abbreviationsStore.CheckAndAddIndexIfNeed(newName, prefixedForm);
             }
