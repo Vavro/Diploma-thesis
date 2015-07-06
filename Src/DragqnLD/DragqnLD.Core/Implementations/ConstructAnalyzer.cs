@@ -19,20 +19,157 @@ namespace DragqnLD.Core.Implementations
     {
         class Abbreviations
         {
-            public void AddPrefix(string prefix, Uri getNamespaceUri)
+            private class AbbreviationsStore
             {
-                
+                private readonly Dictionary<string, string> _prefixFormToAbbreviationDict = new Dictionary<string, string>();
+                private const char ZeroChar = '0';
+                private readonly char[] Numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+                private readonly Dictionary<string,List<int>> _abbreviations;
+
+                public bool ContainsAbbreviationFor(string prefixedForm)
+                {
+                    return _prefixFormToAbbreviationDict.ContainsKey(prefixedForm);
+                }
+
+                /// <summary>
+                /// Checks the and add index if need.
+                /// </summary>
+                /// <param name="newName">The new name.</param>
+                /// <param name="prefixedForm">The prefixed form. cant be in the abbreviations already</param>
+                public void CheckAndAddIndexIfNeed(string newName, string prefixedForm)
+                {
+                    if (_prefixFormToAbbreviationDict.ContainsKey(prefixedForm))
+                    {
+                        throw new ArgumentException("prefixed form already abbreviated, it makes no sense to call this");
+                    }
+
+                    string finalName;
+                    //check for tailing numbers
+                    var lastChar = newName[newName.Length - 1];
+                    var numberCheck = lastChar - ZeroChar;
+                    //if tailing numbers -> get base without numbers -> add base to abbreviations and add the specified number
+                    if (numberCheck >= 0 && numberCheck <= 9)
+                    {
+                        //tailing number
+                        var lastIndexOfNumber = newName.LastIndexOfAny(Numbers);
+                        var baseName = newName.Substring(0, lastIndexOfNumber - 1);
+                        var tailingNumber = int.Parse(newName.Substring(lastIndexOfNumber));
+
+                        List<int> indexes;
+                        var succ = _abbreviations.TryGetValue(baseName, out indexes);
+                        if (succ)
+                        {
+                            if (indexes.Contains(tailingNumber))
+                            {
+                                finalName = AddNewIndex(indexes, baseName);
+                            }
+                            else
+                            {
+                                indexes.Add(tailingNumber);
+                                //ineffective, but keeps the index list in sorted order
+                                indexes.Sort();
+                                finalName = newName;
+                            }
+                        }
+                        else
+                        {
+                            _abbreviations.Add(baseName, new List<int>() {tailingNumber});
+                            finalName = newName;
+                        }
+                    }
+                    //else check abbreviations for existing same string
+                    //  not existing -> add abbreviation with empty list
+                    //  exists -> check list and get a new number
+                    else
+                    {
+                        List<int> indexes;
+                        var succ = _abbreviations.TryGetValue(newName, out indexes);
+                        if (succ)
+                        {
+                            finalName = AddNewIndex(indexes, newName);
+                        }
+                        else
+                        {
+                            _abbreviations.Add(newName, new List<int>());
+                            finalName = newName;
+                        }
+                    }
+                    
+                    //final name is checked by compiler to be assigned :)
+                    _prefixFormToAbbreviationDict.Add(prefixedForm, finalName);
+                }
+
+                private static string AddNewIndex(List<int> indexes, string baseName)
+                {
+                    string finalName;
+                    var newIndex = indexes.LastOrDefault();
+                    newIndex++;
+                    indexes.Add(newIndex);
+                    finalName = baseName + newIndex;
+                    return finalName;
+                }
             }
 
-            public bool TryGetPrefixedForm(Uri uri, out string prefix)
+            private class UniquePrefixCreater
             {
-                prefix = "n";
+                private int index = 0;
+
+                public string GetNewPrefix()
+                {
+                    var prefix = "n" + index;
+                    index++;
+                    return prefix;
+                }
+            }
+            
+            private readonly Dictionary<string, string> _uriToPrefixDict = new Dictionary<string, string>();
+            private readonly char[] _uriPrefixSplitCharacters = { '#', '/' };
+            private readonly char[] _renameReasonCharacters = { ':' };
+            private readonly UniquePrefixCreater _prefixCreater = new UniquePrefixCreater();
+            private readonly AbbreviationsStore _abbreviationsStore = new AbbreviationsStore();
+
+            public void AddPrefix(string prefix, Uri namespaceUri)
+            {
+                _uriToPrefixDict.Add(namespaceUri.AbsoluteUri, prefix);
+            }
+
+            public bool TryGetPrefixedForm(Uri uri, out string prefixedForm)
+            {
+                //this will be slow, could be improved with aho-corasick and the like
+                //but probably sufficient
+                var searchedUri = uri.AbsoluteUri;
+
+                foreach (var uriPrefixPair in _uriToPrefixDict)
+                {
+                    if (searchedUri.StartsWith(uriPrefixPair.Key))
+                    {
+                        prefixedForm = searchedUri.ReplaceNamespaceWithPrefix(uriPrefixPair.Key, uriPrefixPair.Value);
+                        return true;
+                    }
+                }
+
+                prefixedForm = null;
                 return false;
             }
 
             public string CreatePrefixedFormFor(Uri uri)
             {
-                return "n";
+                var uriToPrefix = uri.AbsoluteUri;
+                //take last "/" or "#" and make it a prefix
+                var splitIndex = uriToPrefix.LastIndexOfAny(_uriPrefixSplitCharacters);
+
+                if (splitIndex == -1)
+                {
+                    //shouldn't happen....
+                    throw new ArgumentException("Couldn't abbreviate uri");
+                }
+                var namespaceToAbbreviate = uriToPrefix.Substring(0, splitIndex + 1);
+                var newPrefix = _prefixCreater.GetNewPrefix();
+
+                _uriToPrefixDict.Add(newPrefix, namespaceToAbbreviate);
+                var prefixedForm = uriToPrefix.ReplaceNamespaceWithPrefix(namespaceToAbbreviate, newPrefix);
+
+                return prefixedForm;
             }
 
             public static bool ShouldBeSkipped(Uri uri)
@@ -42,7 +179,23 @@ namespace DragqnLD.Core.Implementations
 
             public void AddRenameIfNeeded(string prefixedForm)
             {
-                
+                var renameReasonIndex = prefixedForm.LastIndexOfAny(_renameReasonCharacters);
+                if (renameReasonIndex == -1)
+                {
+                    return;
+                }
+
+                string abbreviation;
+                var succ = _abbreviationsStore.ContainsAbbreviationFor(prefixedForm);
+                if (succ)
+                {
+                    //already abbreviated and will get into the created context
+                    return;
+                }
+
+                var newName = prefixedForm.Substring(renameReasonIndex);
+
+                _abbreviationsStore.CheckAndAddIndexIfNeed(newName, prefixedForm);
             }
         }
 
@@ -50,12 +203,12 @@ namespace DragqnLD.Core.Implementations
         {
             var constructQuery = queryDefinition.ConstructQuery.Query;
             var constructParameterName = queryDefinition.ConstructQueryUriParameterName;
-            
+
             var parser = new SparqlQueryParser();
-            var sparqlQuery =parser.ParseFromString(constructQuery);
+            var sparqlQuery = parser.ParseFromString(constructQuery);
 
             var abbreviations = new Abbreviations();
-            
+
             //todo: for context abbreviations - enumerate ConstructTemplate.TripplePattern - Predicate
             var namespaceMap = sparqlQuery.NamespaceMap;
             foreach (var prefix in namespaceMap.Prefixes)
@@ -95,10 +248,10 @@ namespace DragqnLD.Core.Implementations
                 //now there should be max a ":" character that will get abbreviated
                 abbreviations.AddRenameIfNeeded(prefixedForm);
             }
-            
+
 
             var constructVariables = sparqlQuery.ConstructTemplate.Variables;
-            
+
 
 
             //todo: for hierarchi model 
@@ -107,6 +260,14 @@ namespace DragqnLD.Core.Implementations
             // --- Detect usage of same variable in multiple branches
             // - enumarate ConstructTemplate.TripplePattern collection according to starting parameter and continue by scheduling further probes
             return new Context();
+        }
+    }
+
+    public static class UriStringExtensions
+    {
+        public static string ReplaceNamespaceWithPrefix(this string searchedUri, string namespaceToAbbreviate, string prefix)
+        {
+            return searchedUri.Replace(namespaceToAbbreviate, prefix + ":");
         }
     }
 }
