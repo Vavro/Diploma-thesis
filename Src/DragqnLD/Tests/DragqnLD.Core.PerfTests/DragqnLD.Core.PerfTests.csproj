@@ -40,6 +40,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JsonLD, Version=1.0.4.0, Culture=neutral, PublicKeyToken=2e465378e3b1a8dd, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\json-ld.net.1.0.4\lib\net40-Client\JsonLD.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Raven.Abstractions">
       <HintPath>..\..\packages\RavenDB.Tests.Helpers.3.0.3690\lib\net45\Raven.Abstractions.dll</HintPath>
       <Private>True</Private>

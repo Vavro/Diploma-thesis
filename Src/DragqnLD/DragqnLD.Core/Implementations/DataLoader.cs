@@ -16,13 +16,15 @@ namespace DragqnLD.Core.Implementations
         private readonly ISparqlEnpointClient _sparqlEnpointClient;
         private readonly IDataFormatter _dataFormatter;
         private readonly IDataStore _dataStore;
+        private readonly IConstructAnalyzer _constructAnalyzer;
 
-        public DataLoader(IQueryStore queryStore, ISparqlEnpointClient sparqlEnpointClient, IDataFormatter dataFormatter, IDataStore dataStore)
+        public DataLoader(IQueryStore queryStore, ISparqlEnpointClient sparqlEnpointClient, IDataFormatter dataFormatter, IDataStore dataStore, IConstructAnalyzer constructAnalyzer)
         {
             _queryStore = queryStore;
             _sparqlEnpointClient = sparqlEnpointClient;
             _dataFormatter = dataFormatter;
             _dataStore = dataStore;
+            _constructAnalyzer = constructAnalyzer;
         }
 
         //todo: according to first architecture, should also store the querydefinition
@@ -52,6 +54,9 @@ namespace DragqnLD.Core.Implementations
                 progress.Report(status);
             }
 
+            //todo: store context somewhere? 
+            var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(qd);
+
             status.DocumentLoadProgress.CurrentItem = 0;
             PropertyMappings allMappings = new PropertyMappings();
             //done: start processing selects .. :)
@@ -76,7 +81,7 @@ namespace DragqnLD.Core.Implementations
                 PropertyMappings mappings;
                 //todo: discovering mappings here should be used only for Describe queries - Constructs should have static mappings
                 //  - construct query mappings should be discovered from the query
-                _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
+                _dataFormatter.Format(reader, writer, selectResult.ToString(), compactionContext, out mappings);
                 allMappings.Merge(mappings);
                 var result = writer.ToString();
 

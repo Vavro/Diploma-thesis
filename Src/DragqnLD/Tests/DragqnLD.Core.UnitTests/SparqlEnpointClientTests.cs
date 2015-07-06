@@ -62,7 +62,7 @@ namespace DragqnLD.Core.UnitTests
             Assert.True(!String.IsNullOrWhiteSpace(result));
 
             //from downloaded data on my server - not really reliable..
-            const string expectedHash = "40-03-FC-71-98-75-13-E4-67-FB-D6-8C-00-F0-1D-07";
+            const string expectedHash = "80-18-1D-0F-EF-41-33-55-44-BB-8D-68-7D-17-66-98";
             
             using (var md5 = MD5.Create())
             {

@@ -152,7 +152,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public void Format(TextReader input, TextWriter output, string rootObjectId, out PropertyMappings mappings)
+        public void Format(TextReader input, TextWriter output, string rootObjectId, Context compactionContext, out PropertyMappings mappings)
         {
             //might be faster by using the strings via JsonTextReader, instead of Deserializing to JObject
 
@@ -169,20 +169,17 @@ namespace DragqnLD.Core.Implementations
             flatGraphNester.NestEverythingIntoRootObject();
 
             var rootJObject = flatGraphNester.RootJObject;
-            ////todo: base iri as parameter?
-            //var c = new JsonLD.Core.Context();
-            //c.Parse(JObject.Parse(@" { }"));
-            //var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, c, new JsonLdOptions() {});
+            
+            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, new JsonLdOptions() {});
 
-            //todo: escape property names before reformat (better perf), but will need to handle keywords (@type, @id, @context etc.) to not be reformatted
             var propertyEscaper = new DocumentPropertyEscaper();
-            propertyEscaper.EscapeDocumentProperies(rootJObject);
+            propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
             mappings = propertyEscaper.PropertyMappings;
 
-            var o = rootJObject.ToString(Formatting.Indented);
+            var o = compactedRootJObjecc.ToString(Formatting.Indented);
 
             var jsonWriter = new JsonTextWriter(output);
-            rootJObject.WriteTo(jsonWriter);
+            compactedRootJObjecc.WriteTo(jsonWriter);
         }
 
 

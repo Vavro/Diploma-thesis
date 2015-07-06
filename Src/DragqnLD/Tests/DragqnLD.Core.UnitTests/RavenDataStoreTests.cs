@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
+using DragqnLD.Core.UnitTests.Utils;
+using JsonLD.Core;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
@@ -172,7 +174,7 @@ namespace DragqnLD.Core.UnitTests
             const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
-            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label,_value : ""Tim Berners-Lee""");
+            var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, @"http___www_w3_org_2000_01_rdf_schema_label : ""Tim Berners-Lee""");
 
             Assert.Equal(results.Count(), 1);
         }
@@ -184,7 +186,7 @@ namespace DragqnLD.Core.UnitTests
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
             var results = await RavenDataStore.QueryDocumentProperties(dataToStore.QueryId, 
-                @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""));
+                @"http://www.w3.org/2000/01/rdf-schema#label".AsCondition(@"""Tim Berners-Lee"""));
 
             Assert.Equal(results.Count(), 1);
         }
@@ -195,7 +197,9 @@ namespace DragqnLD.Core.UnitTests
             var formatter = new ExpandedJsonLDDataFormatter();
             var writer = new StringWriter();
             PropertyMappings mappings;
-            formatter.Format(reader, writer, rootId, out mappings);
+            //todo: Context?
+            var context = ContextTestHelper.EmptyContext();
+            formatter.Format(reader, writer, rootId, context, out mappings);
 
             var parsed = RavenJObject.Parse(writer.ToString());
             var dataToStore = new ConstructResult
@@ -214,9 +218,9 @@ namespace DragqnLD.Core.UnitTests
         {
             const string queryId = "QueryDefinitions/1";
             var dataToStore = await EscapeAndStoreDocument(JsonBernersLeeFileName, JsonBersersLeeId, queryId);
-            //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(this.DocumentStore);
             var results = await RavenDataStore.QueryDocumentProperties(dataToStore.QueryId,
-                @"http://www.w3.org/2000/01/rdf-schema#label,@value".AsCondition(@"""Tim Berners-Lee"""),
+                @"http://www.w3.org/2000/01/rdf-schema#label".AsCondition(@"""Tim Berners-Lee"""),
                 @"@type".AsCondition(@"""http://www.w3.org/2000/10/swap/pim/contact#Male"""));
             
             Assert.Equal(results.Count(), 1);
@@ -243,7 +247,7 @@ namespace DragqnLD.Core.UnitTests
 
             var results = await RavenDataStore.QueryDocumentEscapedLuceneQuery(dataToStore.QueryId, "name:Petr");
 
-            RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
+            //RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             Assert.Equal(results.Count(), 1);
         }
