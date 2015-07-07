@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
+using Raven.Tests.Helpers;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -37,6 +38,8 @@ namespace DragqnLD.Core.PerfTests.PerfTests.DynamicIndex
         public async Task RandomIngredientDescription() 
         {
             var descriptions = TestUtilities.ReadValuesFromFile(TestDataConstants.IngredientsDescriptionsFile);
+
+            //RavenTestBase.WaitForUserToContinueTheTest(DocumentStore);
 
             await Profile("Random ingredients description", 100, async () =>
             {

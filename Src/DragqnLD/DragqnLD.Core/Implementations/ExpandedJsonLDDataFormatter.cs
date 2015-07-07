@@ -169,8 +169,13 @@ namespace DragqnLD.Core.Implementations
             flatGraphNester.NestEverythingIntoRootObject();
 
             var rootJObject = flatGraphNester.RootJObject;
-            
-            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, new JsonLdOptions() {});
+
+            var jsonLdOptions = new JsonLdOptions();
+            jsonLdOptions.SetCompactArrays(false);
+            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, jsonLdOptions);
+            //if the arrays dont get compacted the processor adds { @graph [ { to the root of the doc - delete it
+            compactedRootJObjecc = (JObject)compactedRootJObjecc.First.First.First;
+
 
             var propertyEscaper = new DocumentPropertyEscaper();
             propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
