@@ -18,7 +18,7 @@ namespace DragqnLD.Core.UnitTests
     [Trait("Category", "Basic")]
     //todo: get rid of Content property
     //todo: make all simple test data work with a contained @id property
-    public class RavenDataStoreTests : DataStoreTestsBase
+    public class RavenDataStoreTests : DataStoreTestsBase, IClassFixture<DataStoreFixture>
     {
         
         public RavenDataStoreTests(ITestOutputHelper output, DataStoreFixture dataStoreFixture) : base(output, dataStoreFixture)
