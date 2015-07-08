@@ -313,7 +313,7 @@ namespace DragqnLD.Core.Implementations
             }
 
 
-            return contextContent;
+            return context;
         }
     }
 

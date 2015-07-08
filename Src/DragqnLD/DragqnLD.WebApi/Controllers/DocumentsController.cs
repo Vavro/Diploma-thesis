@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -62,7 +63,7 @@ namespace DragqnLD.WebApi.Controllers
             var document = documentsWithMaps.Item1;
             var mappings = documentsWithMaps.Item2;
 
-            //todo: add context link to response
+            //done: add context link to response -- would be better if it would be first but its not against the syntax
             var contextUrl = _contextUrlProvider.GetUrlFor(DefinitionId, Url);
             document.Content.Add("@context", new RavenJValue(contextUrl));
 
@@ -72,9 +73,6 @@ namespace DragqnLD.WebApi.Controllers
             //done: Unescape document!
             //done: create cache for mappings
             var response = CreateUnescapedJsonResponse(document.Content, mappings);
-
-
-            
 
             return response;
         }

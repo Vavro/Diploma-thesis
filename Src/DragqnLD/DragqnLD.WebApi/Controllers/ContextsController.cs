@@ -32,7 +32,7 @@ namespace DragqnLD.WebApi.Controllers
         {
             var context = await _queryStore.GetContext(DefinitionId);
 
-            var response = CreateResponseWithObject(context);
+            var response = CreateJsonResponse(context);
             return response;
         }
 

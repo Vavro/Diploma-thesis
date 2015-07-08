@@ -22,9 +22,9 @@ namespace DragqnLD.WebApi.Services
         /// <returns></returns>
         public string GetUrlFor(string definitionId, UrlHelper url)
         {
-            var intId = definitionId.Substring(Prefixes.Query.Length - 1);
+            var intId = definitionId.Substring(Prefixes.Query.Length);
 
-            var link = url.Link(RouteNames.Contexts, intId);
+            var link = url.Link(RouteNames.Contexts, new { definitionId = intId });
 
             return link;
         }

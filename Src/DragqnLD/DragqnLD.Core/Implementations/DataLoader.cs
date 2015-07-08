@@ -8,6 +8,7 @@ using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Annotations;
 using JsonLD.Core;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Raven.Json.Linq;
 
@@ -65,10 +66,12 @@ namespace DragqnLD.Core.Implementations
 
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(qd);
             //Has to be stored and retrieved as ravenJObject, so lets convert in here for comapction purpuses to Context
-            
-            var convertedCompactionContext = new Context();
+
+            var compactionContextString = compactionContext.ToString();
+            var parsed = JObject.Parse(compactionContextString);
+            var convertedCompactionContext = new Context(parsed);
             convertedCompactionContext.Remove("@base");
-            convertedCompactionContext.Add(compactionContext);
+
 
 
             //todo: store any additional info? date produced etc.
