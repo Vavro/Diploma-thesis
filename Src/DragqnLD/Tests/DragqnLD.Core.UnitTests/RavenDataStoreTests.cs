@@ -7,6 +7,7 @@ using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
 using JsonLD.Core;
+using Newtonsoft.Json.Linq;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;

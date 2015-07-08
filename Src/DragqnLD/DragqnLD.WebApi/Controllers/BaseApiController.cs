@@ -11,6 +11,7 @@ using System.Web.Http.Routing;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Connection;
+using DragqnLD.WebApi.Constants;
 using log4net;
 using Microsoft.Practices.Unity;
 using Raven.Client;
@@ -72,7 +73,7 @@ namespace DragqnLD.WebApi.Controllers
 
                 if (selectedData != null)
                 {
-                    selectedData.Values["definitionId"] = "Query/" + selectedData.Values["definitionId"];
+                    selectedData.Values["definitionId"] = Prefixes.Query + selectedData.Values["definitionId"];
                     DefinitionId = selectedData.Values["definitionId"] as string;
                 }
                 else
@@ -84,7 +85,7 @@ namespace DragqnLD.WebApi.Controllers
             {
                 if (values.ContainsKey("definitionId"))
                 {
-                    values["definitionId"] = "Query/" + values["definitionId"];
+                    values["definitionId"] = Prefixes.Query + values["definitionId"];
                     DefinitionId = values["definitionId"] as string;
                 }
                 else

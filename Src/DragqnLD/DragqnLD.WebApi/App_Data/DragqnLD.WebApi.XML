@@ -915,6 +915,26 @@
             <param name="stream">The stream.</param>
             <returns></returns>
         </member>
+        <member name="T:DragqnLD.WebApi.Constants.Prefixes">
+            <summary>
+            Prefixes used around code
+            </summary>
+        </member>
+        <member name="F:DragqnLD.WebApi.Constants.Prefixes.Query">
+            <summary>
+            The query definiton Id prefix
+            </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.Constants.RouteNames">
+            <summary>
+            Constants with route names
+            </summary>
+        </member>
+        <member name="F:DragqnLD.WebApi.Constants.RouteNames.Contexts">
+            <summary>
+            The contexts route
+            </summary>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.BaseApiController">
             <summary>
             Base api controller
@@ -1007,16 +1027,34 @@
             The definition identifier.
             </value>
         </member>
+        <member name="T:DragqnLD.WebApi.Controllers.ContextsController">
+            <summary>
+            Returns contexts for 
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.ContextsController.#ctor(DragqnLD.Core.Abstraction.IQueryStore)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.ContextsController"/> class.
+            </summary>
+            <param name="queryStore">The query store.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.ContextsController.Get">
+            <summary>
+            Gets the context for the specified definition identifier.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.DocumentsController">
             <summary>
             Controller for reading Documents stored for a Query Definition
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.#ctor(DragqnLD.Core.Abstraction.IDataStore)">
+        <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.#ctor(DragqnLD.Core.Abstraction.IDataStore,DragqnLD.WebApi.Services.IContextUrlProvider)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.DocumentsController"/> class.
             </summary>
             <param name="dataStore">The data store.</param>
+            <param name="contextUrlProvider">the context url provider for injecting @context urls into the documents</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.DocumentsController.Get(System.Int32,System.Int32)">
             <summary>
@@ -1739,6 +1777,32 @@
             Use this attribute for custom wrappers similar to 
             <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>
             </summary>
+        </member>
+        <member name="T:DragqnLD.WebApi.Services.IContextUrlProvider">
+            <summary>
+            Provides urls of context for the core, as it could be run in another container
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Services.IContextUrlProvider.GetUrlFor(System.String,System.Web.Http.Routing.UrlHelper)">
+            <summary>
+            Gets the URL of the Context of the specified definiton.
+            </summary>
+            <param name="definitionId">The definition identifier.</param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Services.WebApiContextUrlProvider">
+            <summary>
+            Provides urls of context for the core, soecificaly to the WEB API in which this is run
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Services.WebApiContextUrlProvider.GetUrlFor(System.String,System.Web.Http.Routing.UrlHelper)">
+            <summary>
+            Gets the URL of the Context of the specified definiton.
+            </summary>
+            <param name="definitionId">The definition identifier.</param>
+            <param name="url"></param>
+            <returns></returns>
         </member>
         <member name="T:DragqnLD.WebApi.Validation.UrlExAttribute">
             <summary>

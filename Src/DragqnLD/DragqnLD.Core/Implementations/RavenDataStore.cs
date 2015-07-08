@@ -108,6 +108,7 @@ namespace DragqnLD.Core.Implementations
                 PropertyMapForUnescape mappings = null;
                 if (loadMappings)
                 {
+                    //todo: invalidate cache when qd mappings get updated
                     mappings = await _propertyUnescapesCache.GetMapForUnescape(queryId, async () =>
                         {
                             // function has to be awaited if run, should access after using block

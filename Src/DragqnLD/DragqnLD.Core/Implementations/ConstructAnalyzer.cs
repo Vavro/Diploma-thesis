@@ -9,6 +9,7 @@ using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using JsonLD.Core;
 using Newtonsoft.Json.Linq;
+using Raven.Json.Linq;
 using VDS.RDF;
 using VDS.RDF.Nodes;
 using VDS.RDF.Parsing;
@@ -230,7 +231,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public Context CreateCompactionContextForQuery(QueryDefinition queryDefinition)
+        public RavenJObject CreateCompactionContextForQuery(QueryDefinition queryDefinition)
         {
             var constructQuery = queryDefinition.ConstructQuery.Query;
             var constructParameterName = queryDefinition.ConstructQueryUriParameterName;
@@ -294,22 +295,25 @@ namespace DragqnLD.Core.Implementations
 
         }
 
-        private Context CreateContextForAbbreviations(Abbreviations abbreviations)
+        private RavenJObject CreateContextForAbbreviations(Abbreviations abbreviations)
         {
-            var context = new Context();
-            context.Remove("@base");
+            var context = new RavenJObject();
+
+            var contextContent = new RavenJObject();
+            context.Add("@context", contextContent);
+
             foreach (var uriToPrefixPair in abbreviations.UriToPrefixes)
             {
-                context.Add(uriToPrefixPair.Value, new JValue(uriToPrefixPair.Key));
+                contextContent.Add(uriToPrefixPair.Value, new RavenJValue(uriToPrefixPair.Key));
             }
 
             foreach (var prefixedFormToAbbreviationPair in abbreviations.PrefixFormToAbbreviation)
             {
-                context.Add(prefixedFormToAbbreviationPair.Value, new JValue(prefixedFormToAbbreviationPair.Key));
+                contextContent.Add(prefixedFormToAbbreviationPair.Value, new RavenJValue(prefixedFormToAbbreviationPair.Key));
             }
 
 
-            return context;
+            return contextContent;
         }
     }
 

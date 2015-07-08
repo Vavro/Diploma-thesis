@@ -5,6 +5,7 @@ using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.App_Start;
 using DragqnLD.WebApi.Configuration;
 using DragqnLD.WebApi.Controllers;
+using DragqnLD.WebApi.Services;
 using Microsoft.Practices.Unity;
 using System.Web.Http;
 using Raven.Client;
@@ -46,7 +47,9 @@ namespace DragqnLD.WebApi
             container.RegisterType<IConstructAnalyzer, ConstructAnalyzer>(new ContainerControlledLifetimeManager());
             container.RegisterType<IDocumentPropertyEscaper, DocumentPropertyEscaper>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPropertyUnescapesCache, PropertyUnescapesCache>(new ContainerControlledLifetimeManager());
-            
+
+            //this is enough to be singleton
+            container.RegisterType<IContextUrlProvider, WebApiContextUrlProvider>(new ContainerControlledLifetimeManager());
             
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

@@ -172,10 +172,13 @@ namespace DragqnLD.Core.Implementations
 
             var jsonLdOptions = new JsonLdOptions();
             jsonLdOptions.SetCompactArrays(false);
+            jsonLdOptions.SetEmbed(true);
             var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, jsonLdOptions);
+            
             //if the arrays dont get compacted the processor adds { @graph [ { to the root of the doc - delete it
             compactedRootJObjecc = (JObject)compactedRootJObjecc.First.First.First;
-
+            
+            //todo: write in @context - where it can be found
 
             var propertyEscaper = new DocumentPropertyEscaper();
             propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
