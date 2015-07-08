@@ -37,10 +37,11 @@ namespace DragqnLD.Core.UnitTests
             QueryStore = new QueryStore(docStore);
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
+
+            base.Dispose();
         }
 
         private void Dispose(bool disposing)

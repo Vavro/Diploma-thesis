@@ -34,10 +34,11 @@ namespace DragqnLD.Core.UnitTests
             RavenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper(), new PropertyUnescapesCache());
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
+            
+            base.Dispose();
         }
 
         private void Dispose(bool disposing)
