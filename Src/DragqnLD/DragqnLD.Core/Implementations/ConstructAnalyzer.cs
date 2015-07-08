@@ -234,9 +234,12 @@ namespace DragqnLD.Core.Implementations
         {
             var constructQuery = queryDefinition.ConstructQuery.Query;
             var constructParameterName = queryDefinition.ConstructQueryUriParameterName;
+            //contsruct query contains @Variable that has to be substituted for ?Variable for the parser
 
+            var replacedParamQuery = constructQuery.Replace('@' + constructParameterName, '?' + constructParameterName);
+            
             var parser = new SparqlQueryParser();
-            var sparqlQuery = parser.ParseFromString(constructQuery);
+            var sparqlQuery = parser.ParseFromString(replacedParamQuery);
 
             var abbreviations = new Abbreviations();
 
