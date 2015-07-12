@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Indexes;
+using JsonLD.Core;
+using Microsoft.Win32;
 using Raven.Client;
-using Raven.Imports.Newtonsoft.Json.Utilities;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -85,6 +87,38 @@ namespace DragqnLD.Core.Implementations
                 qd.Mappings = mappings.AsList();
                 
                 await session.SaveChangesAsync();
+            }
+        }
+
+        public async Task<string> StoreContext(string definitionId, RavenJObject compactionContext)
+        {
+            //ravendb removes @properties - top one is @context, so remove the nesting and ad it in getContext
+            var contextToStore = compactionContext.First().Value;
+            var contextId = definitionId + "/Context";
+
+            using (var session = _store.OpenAsyncSession())
+            {
+                await session.StoreAsync(contextToStore, contextId);
+
+                var metadata = session.Advanced.GetMetadataFor(contextToStore);
+                metadata["Raven-Entity-Name"] = "Contexts";
+                await session.SaveChangesAsync().ConfigureAwait(false);
+
+                await session.SaveChangesAsync();
+            }
+
+            return contextId;
+        }
+
+        public async Task<RavenJObject> GetContext(string definitionId)
+        {
+            var contextId = definitionId + "/Context";
+            using (var session = _store.OpenAsyncSession())
+            {
+                var contextContent = await session.LoadAsync<RavenJObject>(contextId).ConfigureAwait(false);
+                var context = new RavenJObject();
+                context.Add("@context", contextContent ?? new RavenJObject());
+                return context;
             }
         }
     }

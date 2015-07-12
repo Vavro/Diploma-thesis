@@ -4,15 +4,32 @@ import viewModelBase = require("viewmodels/viewModelBase");
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
 import getQueryDefinitionWithStatusCommand = require("commands/getQueryDefinitionWithStatusCommand");
 import getQueryDocumentsCommand = require("commands/getQueryDocumentsCommand");
+import getQueryContextCommand = require("commands/getQueryContextCommand");
 import processQueryCommand = require("commands/processQueryCommand");
 
 import documentMetadata = require("models/documentMetadata");
 
+
+enum Tabs {
+    Documents,
+    Context,
+    Indexes
+}
+
 class viewQueryDefinition extends viewModelBase {
+
 
     queryDefinition: KnockoutObservable<queryDefinitionWithStatus> = ko.observable<queryDefinitionWithStatus>();
     queryId: KnockoutComputed<string>;
     canRun: KnockoutComputed<boolean>;
+
+    isShowingDocuments: KnockoutComputed<Boolean>;
+    isShowingContext : KnockoutComputed<Boolean>;
+    isShowingIndexes : KnockoutComputed<Boolean>;
+
+    activeTab = ko.observable(Tabs.Documents);
+
+    context = ko.observable<any>();
 
     documentsList: KnockoutObservableArray<documentMetadata> = ko.observableArray<documentMetadata>();
     idTemplate = $("#viewDocumentIdTemplate").html();
@@ -27,7 +44,8 @@ class viewQueryDefinition extends viewModelBase {
         currentPage: ko.observable(1)
     };
 
-    isShowingDocuments = ko.observable(true);
+    
+
 
     constructor() {
         super();
@@ -35,7 +53,11 @@ class viewQueryDefinition extends viewModelBase {
         this.canRun = ko.computed((): boolean =>
             this.queryDefinition() ?
             this.queryDefinition().status().status() === queryStatus.ReadyToRun :
-            false);
+                false);
+
+        this.isShowingContext = ko.computed((): boolean => this.activeTab() === Tabs.Context);
+        this.isShowingDocuments = ko.computed((): boolean => this.activeTab() === Tabs.Documents);
+        this.isShowingIndexes = ko.computed((): boolean => this.activeTab() === Tabs.Indexes);
 
         this.documentsListPagingOptions.pageSize.subscribe(newValue => {
             this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
@@ -114,8 +136,9 @@ class viewQueryDefinition extends viewModelBase {
                     canActivateResult.reject(response);
                 });
 
-        });
+            });
 
+        this.getContextAsync(idToLoad);
 
         return canActivateResult;
     }
@@ -136,12 +159,28 @@ class viewQueryDefinition extends viewModelBase {
             });
     }
 
+    private getContextAsync(id: string): void {
+        var command = new getQueryContextCommand(id);
+        command
+            .execute()
+            .done(result => {
+                this.context(this.stringify(result));
+        });
+    }
+
+
     public activateDocs(): void {
-        this.isShowingDocuments(true);
+        this.activeTab(Tabs.Documents);
+        $(window).trigger("resize");
     }
 
     public activateIndexes(): void {
-        this.isShowingDocuments(false);
+        this.activeTab(Tabs.Indexes);
+        $(window).trigger("resize");
+    }
+
+    public activateContext(): void {
+        this.activeTab(Tabs.Context);
     }
 }
 

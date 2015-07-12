@@ -14,6 +14,11 @@ class viewModelBase {
     public notifySuccess(message: string): void {
         ko.postbox.publish(this.c.topics.success, message);
     }
+
+    public stringify(obj: any): string {
+        var prettifySpacing = 4;
+        return JSON.stringify(obj, null, prettifySpacing);
+    }
 }
 
 export = viewModelBase;

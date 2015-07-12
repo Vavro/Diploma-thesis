@@ -9,7 +9,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -1036,6 +1035,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\commands\getDocumentCommand.ts" />
+    <TypeScriptCompile Include="App\commands\getQueryContextCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionWithStatusCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDocumentsCommand.ts" />
     <TypeScriptCompile Include="App\commands\processQueryCommand.ts" />

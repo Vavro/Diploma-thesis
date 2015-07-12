@@ -6,27 +6,39 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Annotations;
+using JsonLD.Core;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Implementations
 {
+    [UsedImplicitly]
     public class DataLoader : IDataLoader
     {
         private readonly IQueryStore _queryStore;
         private readonly ISparqlEnpointClient _sparqlEnpointClient;
         private readonly IDataFormatter _dataFormatter;
         private readonly IDataStore _dataStore;
+        private readonly IConstructAnalyzer _constructAnalyzer;
 
-        public DataLoader(IQueryStore queryStore, ISparqlEnpointClient sparqlEnpointClient, IDataFormatter dataFormatter, IDataStore dataStore)
+        public DataLoader(IQueryStore queryStore,
+            ISparqlEnpointClient sparqlEnpointClient,
+            IDataFormatter dataFormatter,
+            IDataStore dataStore,
+            IConstructAnalyzer constructAnalyzer)
         {
             _queryStore = queryStore;
             _sparqlEnpointClient = sparqlEnpointClient;
             _dataFormatter = dataFormatter;
             _dataStore = dataStore;
+            _constructAnalyzer = constructAnalyzer;
         }
 
         //todo: according to first architecture, should also store the querydefinition
-        public async Task Load(string definitionId, CancellationToken cancellationToken, IProgress<QueryDefinitionStatus> progress)
+        public async Task Load(string definitionId, CancellationToken cancellationToken,
+            IProgress<QueryDefinitionStatus> progress)
         {
             //todo: do some statistics
             // -- could be just in form 
@@ -41,7 +53,7 @@ namespace DragqnLD.Core.Implementations
             }
 
             var qd = await _queryStore.Get(definitionId).ConfigureAwait(false);
-            
+
             var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery).ConfigureAwait(false);
             var selectResultCount = selectResults.Count();
 
@@ -52,6 +64,19 @@ namespace DragqnLD.Core.Implementations
                 progress.Report(status);
             }
 
+            var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(qd);
+            //Has to be stored and retrieved as ravenJObject, so lets convert in here for comapction purpuses to Context
+
+            var compactionContextString = compactionContext.ToString();
+            var parsed = JObject.Parse(compactionContextString);
+            var convertedCompactionContext = new Context(parsed);
+            convertedCompactionContext.Remove("@base");
+
+
+
+            //todo: store any additional info? date produced etc.
+            var contextId = await _queryStore.StoreContext(definitionId, compactionContext);
+            
             status.DocumentLoadProgress.CurrentItem = 0;
             PropertyMappings allMappings = new PropertyMappings();
             //done: start processing selects .. :)
@@ -76,7 +101,7 @@ namespace DragqnLD.Core.Implementations
                 PropertyMappings mappings;
                 //todo: discovering mappings here should be used only for Describe queries - Constructs should have static mappings
                 //  - construct query mappings should be discovered from the query
-                _dataFormatter.Format(reader, writer, selectResult.ToString(), out mappings);
+                _dataFormatter.Format(reader, writer, selectResult.ToString(), convertedCompactionContext, out mappings);
                 allMappings.Merge(mappings);
                 var result = writer.ToString();
 
@@ -84,7 +109,7 @@ namespace DragqnLD.Core.Implementations
                 {
                     QueryId = qd.Id,
                     DocumentId = selectResult,
-                    Document = new Document { Content = RavenJObject.Parse(result) }
+                    Document = new Document {Content = RavenJObject.Parse(result)}
                 };
 
                 //done: store select results for viewing

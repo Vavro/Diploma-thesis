@@ -2,6 +2,7 @@
 using System.IO;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.UnitTests.Utils;
+using JsonLD.Core;
 using Xunit;
 using Xunit.Abstractions;
 using Xunit.Extensions;
@@ -45,7 +46,7 @@ namespace DragqnLD.Core.UnitTests
             var expectedOutputReader = new StreamReader(expectedOutputJsonFileName);
             var expectedOutput = expectedOutputReader.ReadToEnd();
 
-            Assert.Equal(output, expectedOutput);
+            Assert.Equal(expectedOutput, output);
         }
 
         private static string GetFormatted(string inputJsonFileName, string id, TextWriter writer)
@@ -54,7 +55,9 @@ namespace DragqnLD.Core.UnitTests
             var reader = new StreamReader(inputJsonFileName);
 
             PropertyMappings mappings;
-            formatter.Format(reader, writer, id, out mappings);
+            //todo: Context?
+            var context = ContextTestHelper.EmptyContext();
+            formatter.Format(reader, writer, id, context,  out mappings);
 
             var output = writer.ToString();
             return output;

@@ -2,40 +2,43 @@
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Implementations;
 using Raven.Client.Embedded;
+using Raven.Database.Config;
 using Raven.Database.Server;
+using Raven.Tests.Helpers;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
 
-    public class DataStoreFixture : IDisposable
+    public class DataStoreFixture : RavenTestBase, IDisposable
     {
         public readonly IDataStore RavenDataStore;
         public readonly EmbeddableDocumentStore DocumentStore;
         
         protected const int RavenWebUiPort = 8081;
 
+        protected override void ModifyConfiguration(InMemoryRavenConfiguration configuration)
+        {
+            configuration.Storage.Voron.AllowOn32Bits = true;
+            
+            base.ModifyConfiguration(configuration);
+        }
+
         public DataStoreFixture()
         {
-            var docStore = new EmbeddableDocumentStore
-            {
-                RunInMemory = true,
-                Configuration = { Port = RavenWebUiPort }
-            };
-            docStore.Configuration.Storage.Voron.AllowOn32Bits = true;
-            NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
-
-            docStore.Initialize();
-
+            //NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(RavenWebUiPort);
+            var docStore = NewDocumentStore(port: RavenWebUiPort);
+            
             DocumentStore = docStore;
             RavenDataStore = new RavenDataStore(docStore, new DocumentPropertyEscaper(), new PropertyUnescapesCache());
         }
 
-        public void Dispose()
+        public override void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize(this);
+            
+            base.Dispose();
         }
 
         private void Dispose(bool disposing)
@@ -49,7 +52,7 @@ namespace DragqnLD.Core.UnitTests
             }
         }
     }
-    public abstract class DataStoreTestsBase : TestsBase, IClassFixture<DataStoreFixture>
+    public abstract class DataStoreTestsBase : TestsBase
     {
         protected readonly IDataStore RavenDataStore;
         protected readonly EmbeddableDocumentStore DocumentStore;

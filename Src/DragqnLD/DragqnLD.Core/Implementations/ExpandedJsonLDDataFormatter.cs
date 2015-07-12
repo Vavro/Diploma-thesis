@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using DragqnLD.Core.Abstraction;
+using JsonLD.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -151,7 +152,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public void Format(TextReader input, TextWriter output, string rootObjectId, out PropertyMappings mappings)
+        public void Format(TextReader input, TextWriter output, string rootObjectId, Context compactionContext, out PropertyMappings mappings)
         {
             //might be faster by using the strings via JsonTextReader, instead of Deserializing to JObject
 
@@ -169,15 +170,24 @@ namespace DragqnLD.Core.Implementations
 
             var rootJObject = flatGraphNester.RootJObject;
 
-            //todo: escape property names before reformat (better perf), but will need to handle keywords (@type, @id, @context etc.) to not be reformatted
+            var jsonLdOptions = new JsonLdOptions();
+            jsonLdOptions.SetCompactArrays(false);
+            jsonLdOptions.SetEmbed(true);
+            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, jsonLdOptions);
+            
+            //if the arrays dont get compacted the processor adds { @graph [ { to the root of the doc - delete it
+            compactedRootJObjecc = (JObject)compactedRootJObjecc.First.First.First;
+            
+            //todo: write in @context - where it can be found
+
             var propertyEscaper = new DocumentPropertyEscaper();
-            propertyEscaper.EscapeDocumentProperies(rootJObject);
+            propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
             mappings = propertyEscaper.PropertyMappings;
 
-            var o = rootJObject.ToString(Formatting.Indented);
+            var o = compactedRootJObjecc.ToString(Formatting.Indented);
 
             var jsonWriter = new JsonTextWriter(output);
-            rootJObject.WriteTo(jsonWriter);
+            compactedRootJObjecc.WriteTo(jsonWriter);
         }
 
 

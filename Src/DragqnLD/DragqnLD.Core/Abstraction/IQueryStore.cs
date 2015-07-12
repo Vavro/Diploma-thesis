@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
+using JsonLD.Core;
+using Newtonsoft.Json.Linq;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction
 {
@@ -49,7 +52,24 @@ namespace DragqnLD.Core.Abstraction
         /// <summary>
         /// Stores the mappings.
         /// </summary>
-        /// <param name="mappings">The mappings.</param>s
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <param name="mappings">The mappings.</param>
+        /// <returns></returns>
         Task StoreMappings(string definitionId, PropertyMappings mappings);
+
+        /// <summary>
+        /// Stores the context.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <param name="compactionContext">The compaction context.</param>
+        /// <returns></returns>
+        Task<string> StoreContext(string definitionId, RavenJObject compactionContext);
+
+        /// <summary>
+        /// Gets the context.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
+        Task<RavenJObject> GetContext(string definitionId);
     }
 }

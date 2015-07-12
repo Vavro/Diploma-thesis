@@ -8,6 +8,7 @@ using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.UnitTests;
 using DragqnLD.Core.UnitTests.Utils;
+using JsonLD.Core;
 using Raven.Json.Linq;
 using Xunit;
 using Xunit.Abstractions;
@@ -63,7 +64,9 @@ namespace DragqnLD.Core.PerfTests.PerfTests
                 using (var writer = new StringWriter())
                 {
                     PropertyMappings mappings;
-                    Formatter.Format(input, writer, id, out mappings);
+                    //todo: context?
+                    var context = ContextTestHelper.EmptyContext();
+                    Formatter.Format(input, writer, id, context, out mappings);
                     document = RavenJObject.Parse(writer.ToString());
                 }
                 yield return new ConstructResult { QueryId = queryId, DocumentId = uriId, Document = new Document { Content = document } };

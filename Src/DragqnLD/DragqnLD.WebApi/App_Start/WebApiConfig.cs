@@ -1,7 +1,9 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Cors;
 using DragqnLD.WebApi.App_Start;
+using DragqnLD.WebApi.Constants;
 using DragqnLD.WebApi.Filters;
+using Raven.Abstractions;
 
 namespace DragqnLD.WebApi
 {
@@ -32,6 +34,12 @@ namespace DragqnLD.WebApi
                 name: "Process query",
                 routeTemplate: "api/process/{definitionId}",
                 defaults: new {controller = "Tasks", action = "Process"}
+            );
+
+            config.Routes.MapHttpRoute(
+                name: RouteNames.Contexts,
+                routeTemplate: "api/query/{definitionId}/context",
+                defaults: new {controller = "Contexts", action = "Get"}
             );
 
             config.Routes.MapHttpRoute(

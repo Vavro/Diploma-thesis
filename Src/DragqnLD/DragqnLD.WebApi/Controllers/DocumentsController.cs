@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using AutoMapper;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.WebApi.Models;
+using DragqnLD.WebApi.Services;
 using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
@@ -19,14 +21,17 @@ namespace DragqnLD.WebApi.Controllers
     public class DocumentsController : BaseApiController
     {
         private readonly IDataStore _dataStore;
+        private IContextUrlProvider _contextUrlProvider ;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentsController"/> class.
         /// </summary>
         /// <param name="dataStore">The data store.</param>
-        public DocumentsController(IDataStore dataStore)
+        /// <param name="contextUrlProvider">the context url provider for injecting @context urls into the documents</param>
+        public DocumentsController(IDataStore dataStore, IContextUrlProvider contextUrlProvider)
         {
             _dataStore = dataStore;
+            _contextUrlProvider = contextUrlProvider;
         }
 
         /// <summary>
@@ -58,12 +63,18 @@ namespace DragqnLD.WebApi.Controllers
             var document = documentsWithMaps.Item1;
             var mappings = documentsWithMaps.Item2;
 
+            //done: add context link to response -- would be better if it would be first but its not against the syntax
+            var contextUrl = _contextUrlProvider.GetUrlFor(DefinitionId, Url);
+            document.Content.Add("@context", new RavenJValue(contextUrl));
+
             //done: get rid of Content property write raw json to response
-            //todo: leaks the mapping and escaping from the core library
+            //todo: leaks the mapping and escaping from the core library - but is the only performant way?
 
             //done: Unescape document!
             //done: create cache for mappings
-            return CreateUnescapedJsonResponse(document.Content, mappings);
+            var response = CreateUnescapedJsonResponse(document.Content, mappings);
+
+            return response;
         }
     }
 }
