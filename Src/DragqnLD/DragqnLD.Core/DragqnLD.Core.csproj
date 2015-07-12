@@ -71,6 +71,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstraction\ConstructAnalyzer\IndexableObjectProperty.cs" />
+    <Compile Include="Abstraction\ConstructAnalyzer\ConstructQueryAccessibleProperties.cs" />
+    <Compile Include="Abstraction\ConstructAnalyzer\IIndexableProperty.cs" />
+    <Compile Include="Abstraction\ConstructAnalyzer\IndexableValueProperty.cs" />
+    <Compile Include="Abstraction\ConstructAnalyzer\ValuePropertyType.cs" />
     <Compile Include="Abstraction\Data\ConstructResult.cs" />
     <Compile Include="Abstraction\Data\PropertyCondition.cs" />
     <Compile Include="Abstraction\IConstructAnalyzer.cs" />

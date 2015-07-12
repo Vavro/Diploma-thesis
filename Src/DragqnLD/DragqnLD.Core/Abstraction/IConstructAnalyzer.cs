@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Query;
 using Raven.Json.Linq;
 
@@ -27,6 +28,6 @@ namespace DragqnLD.Core.Abstraction
     public interface IConstructAnalyzer
     {
         CompactionContext CreateCompactionContextForQuery(IParsedSparqlQuery queryDefinition);
-        void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext);
+        ConstructQueryAccessibleProperties CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext);
     }
 }

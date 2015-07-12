@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Annotations;
 using JsonLD.Core;
@@ -337,43 +338,6 @@ namespace DragqnLD.Core.Implementations
 
         }
 
-        public class ConstructQueryAccessibleProperties
-        {
-            public IIndexableProperty RootProperty;
-        }
-
-        public enum ValuePropertyType
-        {
-            ObjectId,
-            Value,
-            LanguageString,
-            ArrayOfValue,
-            ArrayOfLanguageString
-        }
-
-        public class IndexableValueProperty : IIndexableProperty
-        {
-            //can be filled only by inspecting data (the predicate doesn't contain array info)
-            ValuePropertyType? Type = null;
-        }
-
-        public interface IIndexableProperty
-        {
-        }
-        
-        public class IndexableObjectProperty : IIndexableProperty
-        { 
-            private Dictionary<string, IIndexableProperty> _childPropertiesByFullName = new Dictionary<string, IIndexableProperty>();
-            private Dictionary<string, IIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, IIndexableProperty>();
-
-
-            public void AddProperty(string abbreviatedName, string fullUriName, IIndexableProperty property)
-            {
-                _childPropertiesByFullName.Add(fullUriName, property);
-                _childPropertiesByAbbreviatedName.Add(abbreviatedName, property);
-            }
-        }
-
         private class HierarchyBuilder
         {
             private readonly Dictionary<string, List<IMatchTriplePattern>> _triplePatternsBySubjectParameter;
@@ -444,7 +408,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext)
+        public ConstructQueryAccessibleProperties CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext)
         {
             var sparqlQuery = parsedSparqlQuery.Query;
 
@@ -494,7 +458,7 @@ namespace DragqnLD.Core.Implementations
             var hierarchyBuilder = new HierarchyBuilder(tripplePatternsBySubjectParameter, compactionContext);
             var hierarchy = hierarchyBuilder.BuildHierarchyFrom(startingParameter);
 
-
+            return hierarchy;
         }
 
         private RavenJObject CreateContextForAbbreviations(Abbreviations abbreviations)
