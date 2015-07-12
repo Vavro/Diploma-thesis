@@ -164,22 +164,25 @@ WHERE
 
         private readonly IConstructAnalyzer _constructAnalyzer;
 
+        private static readonly QueryDefinition TestQueryDefinition = new QueryDefinition
+        {
+            ConstructQuery = new SparqlQueryInfo()
+            {
+                DefaultDataSet = new Uri("http://test"),
+                Query = TestQueries.IngredientsQuery,
+                SparqlEndpoint = new Uri("http://test")
+            },
+            ConstructQueryUriParameterName = TestQueries.IngredientsQueryParamaterName
+            //rest of the properties isn't read in this test
+        };
+
         [Fact]
         public void CanAnalyzeQuery()
         {
-            var queryDefinition = new QueryDefinition
-            {
-                ConstructQuery = new SparqlQueryInfo()
-                {
-                    DefaultDataSet = new Uri("http://test"),
-                    Query = TestQueries.IngredientsQuery,
-                    SparqlEndpoint = new Uri("http://test")
-                },
-                ConstructQueryUriParameterName = TestQueries.IngredientsQueryParamaterName
-                //rest of the properties isn't read in this test
-            };
+            var queryDefinition = TestQueryDefinition;
 
-            var context = _constructAnalyzer.CreateCompactionContextForQuery(queryDefinition);
+            var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
+            var context = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
 
             var contextContent = (RavenJObject)context.First().Value;
             var contextContentValues = contextContent.Values();
@@ -188,6 +191,15 @@ WHERE
             Assert.Contains("enc", contextContent.Keys);
             Assert.Contains("skos", contextContent.Keys);
             Assert.Contains("enc:title", contextContentValues);
+        }
+
+        [Fact]
+        public void CanExtractPropertyPaths()
+        {
+            var queryDefinition = TestQueryDefinition;
+
+            var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
+            _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery);
         }
     }
 }

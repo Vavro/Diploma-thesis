@@ -76,6 +76,7 @@
     <Compile Include="Abstraction\IConstructAnalyzer.cs" />
     <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
+    <Compile Include="Abstraction\IParsedSparqlQuery.cs" />
     <Compile Include="Abstraction\IPropertyUnescapesCache.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
     <Compile Include="Abstraction\Query\Progress.cs" />

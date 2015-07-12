@@ -10,6 +10,7 @@ namespace DragqnLD.Core.Abstraction
 {
     public interface IConstructAnalyzer
     {
-        RavenJObject CreateCompactionContextForQuery(QueryDefinition queryDefinition);
+        RavenJObject CreateCompactionContextForQuery(IParsedSparqlQuery queryDefinition);
+        void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery);
     }
 }

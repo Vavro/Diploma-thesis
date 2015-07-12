@@ -64,7 +64,8 @@ namespace DragqnLD.Core.Implementations
                 progress.Report(status);
             }
 
-            var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(qd);
+            var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(qd);
+            var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
             //Has to be stored and retrieved as ravenJObject, so lets convert in here for comapction purpuses to Context
 
             var compactionContextString = compactionContext.ToString();
