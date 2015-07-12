@@ -38,7 +38,7 @@ namespace DragqnLD.WebApi
 
             config.Routes.MapHttpRoute(
                 name: RouteNames.Contexts,
-                routeTemplate: "api/queries/{definitionId}/context",
+                routeTemplate: "api/query/{definitionId}/context",
                 defaults: new {controller = "Contexts", action = "Get"}
             );
 

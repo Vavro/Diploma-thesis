@@ -33,12 +33,6 @@ class viewDocument extends viewModelBase {
 
         return can;
     }
-
-
-    private stringify(obj: any) : string {
-        var prettifySpacing = 4;
-        return JSON.stringify(obj, null, prettifySpacing);
-    }
 }
 
 export = viewDocument;
