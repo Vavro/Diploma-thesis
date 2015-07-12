@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
+using Raven.Json.Linq;
 using Xunit;
 
 namespace DragqnLD.Core.UnitTests
@@ -179,6 +180,14 @@ WHERE
             };
 
             var context = _constructAnalyzer.CreateCompactionContextForQuery(queryDefinition);
+
+            var contextContent = (RavenJObject)context.First().Value;
+            var contextContentValues = contextContent.Values();
+
+            Assert.Equal(19, contextContent.Count);
+            Assert.Contains("enc", contextContent.Keys);
+            Assert.Contains("skos", contextContent.Keys);
+            Assert.Contains("enc:title", contextContentValues);
         }
     }
 }
