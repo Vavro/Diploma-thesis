@@ -121,7 +121,9 @@ namespace DragqnLD.Core.UnitTests
 
             const string definitionId = "Query/1";
 
-            await _queryStore.StoreContext(definitionId, context);
+            var compactionContext = new CompactionContext(context, null); //uri mappings to abbreviations not needed
+
+            await _queryStore.StoreContext(definitionId, compactionContext);
 
             //RavenTestBase.WaitForUserToContinueTheTest(_documentStore);
 

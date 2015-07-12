@@ -63,7 +63,7 @@ namespace DragqnLD.Core.Abstraction
         /// <param name="definitionId">The definition identifier.</param>
         /// <param name="compactionContext">The compaction context.</param>
         /// <returns></returns>
-        Task<string> StoreContext(string definitionId, RavenJObject compactionContext);
+        Task<string> StoreContext(string definitionId, CompactionContext compactionContext);
 
         /// <summary>
         /// Gets the context.

@@ -184,7 +184,7 @@ WHERE
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var context = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
 
-            var contextContent = (RavenJObject)context.First().Value;
+            var contextContent = (RavenJObject)context.BuildContext.First().Value;
             var contextContentValues = contextContent.Values();
 
             Assert.Equal(19, contextContent.Count);
@@ -199,7 +199,11 @@ WHERE
             var queryDefinition = TestQueryDefinition;
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
-            _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery);
+            var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
+            
+            _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
+
+
         }
     }
 }

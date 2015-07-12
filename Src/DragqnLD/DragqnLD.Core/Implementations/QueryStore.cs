@@ -90,10 +90,11 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public async Task<string> StoreContext(string definitionId, RavenJObject compactionContext)
+        public async Task<string> StoreContext(string definitionId, CompactionContext compactionContext)
         {
+            //todo: store the uri mappings?
             //ravendb removes @properties - top one is @context, so remove the nesting and ad it in getContext
-            var contextToStore = compactionContext.First().Value;
+            var contextToStore = compactionContext.BuildContext.First().Value;
             var contextId = definitionId + "/Context";
 
             using (var session = _store.OpenAsyncSession())

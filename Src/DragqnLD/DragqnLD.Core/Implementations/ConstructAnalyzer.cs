@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Annotations;
 using JsonLD.Core;
 using Newtonsoft.Json.Linq;
 using Raven.Json.Linq;
@@ -72,9 +74,17 @@ namespace DragqnLD.Core.Implementations
                     }
                 }
 
-                public bool ContainsAbbreviationFor(string prefixedForm)
+                public string TryGetAbbreviationFor(string prefixedForm)
                 {
-                    return _prefixFormToAbbreviationDict.ContainsKey(prefixedForm);
+                    string abbreviation;
+                    var succ = _prefixFormToAbbreviationDict.TryGetValue(prefixedForm, out abbreviation);
+
+                    return succ ? abbreviation : null;
+                }
+
+                private bool ContainsAbbreviationFor(string prefixedForm)
+                {
+                    return TryGetAbbreviationFor(prefixedForm) != null;
                 }
 
                 /// <summary>
@@ -144,6 +154,8 @@ namespace DragqnLD.Core.Implementations
                     //final name is checked by compiler to be assigned :)
                     _prefixFormToAbbreviationDict.Add(prefixedForm, finalName);
                 }
+
+                
 
                 private static string AddNewIndex(List<int> indexes, string baseName)
                 {
@@ -242,28 +254,30 @@ namespace DragqnLD.Core.Implementations
                 return uri == TypeUri;
             }
 
-            public void AddRenameIfNeeded(string prefixedForm)
+            public string AddRenameIfNeeded(string prefixedForm)
             {
                 var renameReasonIndex = prefixedForm.LastIndexOfAny(_renameReasonCharacters);
                 if (renameReasonIndex == -1)
                 {
-                    return;
+                    return prefixedForm;
                 }
 
-                var succ = _abbreviationsStore.ContainsAbbreviationFor(prefixedForm);
-                if (succ)
+                var abbreviation = _abbreviationsStore.TryGetAbbreviationFor(prefixedForm);
+                if (abbreviation != null)
                 {
                     //already abbreviated and will get into the created context
-                    return;
+                    return abbreviation;
                 }
 
                 var newName = prefixedForm.Substring(renameReasonIndex + 1);
 
                 _abbreviationsStore.CheckAndAddIndexIfNeed(newName, prefixedForm);
+
+                return newName;
             }
         }
 
-        public RavenJObject CreateCompactionContextForQuery(IParsedSparqlQuery parsedSparqlQuery)
+        public CompactionContext CreateCompactionContextForQuery(IParsedSparqlQuery parsedSparqlQuery)
         {
             var sparqlQuery = parsedSparqlQuery.Query;
 
@@ -284,6 +298,8 @@ namespace DragqnLD.Core.Implementations
                     .Select(match => match.Node)
                     .Cast<UriNode>()
                     .Select(uriNode => uriNode.Uri);
+
+            var uriToAbbreviationDict = new Dictionary<string, string>();
 
             foreach (var uri in predicatesAsUris)
             {
@@ -306,10 +322,18 @@ namespace DragqnLD.Core.Implementations
                 }
 
                 //now there should be max a ":" character that will get abbreviated
-                abbreviations.AddRenameIfNeeded(prefixedForm);
+                var abbreviation = abbreviations.AddRenameIfNeeded(prefixedForm);
+                if (!uriToAbbreviationDict.ContainsKey(uri.ToString()))
+                {
+                    uriToAbbreviationDict.Add(uri.ToString(), abbreviation);
+                }
             }
 
-            return CreateContextForAbbreviations(abbreviations);
+            var buildContext = CreateContextForAbbreviations(abbreviations);
+
+            var context = new CompactionContext(buildContext, uriToAbbreviationDict);
+
+            return context;
 
         }
 
@@ -333,25 +357,32 @@ namespace DragqnLD.Core.Implementations
             ValuePropertyType? Type = null;
         }
 
-        public interface IIndexableProperty { }
-
-        public class IndexableObjectProperty : IIndexableProperty
+        public interface IIndexableProperty
         {
-            private Dictionary<string, IIndexableProperty> _childProperties = new Dictionary<string, IIndexableProperty>();
+        }
+        
+        public class IndexableObjectProperty : IIndexableProperty
+        { 
+            private Dictionary<string, IIndexableProperty> _childPropertiesByFullName = new Dictionary<string, IIndexableProperty>();
+            private Dictionary<string, IIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, IIndexableProperty>();
 
-            public void AddProperty(string propertyName, IIndexableProperty property)
+
+            public void AddProperty(string abbreviatedName, string fullUriName, IIndexableProperty property)
             {
-                _childProperties.Add(propertyName, property);
+                _childPropertiesByFullName.Add(fullUriName, property);
+                _childPropertiesByAbbreviatedName.Add(abbreviatedName, property);
             }
         }
 
         private class HierarchyBuilder
         {
             private readonly Dictionary<string, List<IMatchTriplePattern>> _triplePatternsBySubjectParameter;
+            private readonly CompactionContext _compactionContext;
 
-            public HierarchyBuilder(Dictionary<string, List<IMatchTriplePattern>> triplePatternsBySubjectParameter)
+            public HierarchyBuilder(Dictionary<string, List<IMatchTriplePattern>> triplePatternsBySubjectParameter, CompactionContext compactionContext)
             {
                 _triplePatternsBySubjectParameter = triplePatternsBySubjectParameter;
+                _compactionContext = compactionContext;
             }
 
             public ConstructQueryAccessibleProperties BuildHierarchyFrom(string startingParameter)
@@ -362,17 +393,17 @@ namespace DragqnLD.Core.Implementations
                 return accessibleProps;
             }
 
-            private IIndexableProperty ConstructPropertyFrom(string propertyName, bool first)
+            private IIndexableProperty ConstructPropertyFrom(string propertyVariableName, bool first)  
             {
                 List<IMatchTriplePattern> properties;
-                var succ = _triplePatternsBySubjectParameter.TryGetValue(propertyName, out properties);
+
+                var succ = _triplePatternsBySubjectParameter.TryGetValue(propertyVariableName, out properties);
                 if (!succ)
                 {
                     if (first) //the first property has to be there
                     {
-                        throw new ArgumentException(String.Format("Starting parameter {0} is not present in the ConstructTemplate", propertyName));
+                        throw new ArgumentException(String.Format("Starting parameter {0} is not present in the ConstructTemplate", propertyVariableName));
                     }
-                    
                     return new IndexableValueProperty();
                 }
 
@@ -381,8 +412,8 @@ namespace DragqnLD.Core.Implementations
                 foreach (var matchTriplePattern in properties)
                 {
                     var patternObject = matchTriplePattern.Object;
-                    var variableName = patternObject.VariableName;
-                    if (variableName == null) // null if it isn't a variable
+                    var objectVariableName = patternObject.VariableName;
+                    if (objectVariableName == null) // null if it isn't a variable
                     {
                         //will be always the same value in the object, there shouldn't be a reason to index it - or is there?
                         //i.e. should be the type triples in the Construct Template
@@ -391,31 +422,40 @@ namespace DragqnLD.Core.Implementations
 
                     //object is a variable - bound or unbound, so could be an answer that will require indexing (unbound), or it's an object (bound)
                     //if that variable is in the triplePatternBySubjectParameter dictionary, than its bound
-                    var property = ConstructPropertyFrom(variableName, false);
 
                     var patternPredicate = matchTriplePattern.Predicate;
+                    var propertyFullUriName = patternPredicate.ToString();
+                    //delete <> from start and end of the pattern
+                    propertyFullUriName = propertyFullUriName.Trim('<', '>');
 
-                    thisObject.AddProperty(patternPredicate.ToString(), property);
+                    var property = ConstructPropertyFrom(objectVariableName, false);
+
+                    //get abbreviation
+                    string abbreviatedName;
+                    if (!_compactionContext.UriToAbbreviation.TryGetValue(propertyFullUriName, out abbreviatedName))
+                    {
+                        throw new Exception(String.Format("Missing abbreviation for uri {0}", propertyFullUriName));
+                    }
+
+                    thisObject.AddProperty(abbreviatedName, propertyFullUriName, property);
                 }
 
                 return thisObject;
             }
         }
 
-        public void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery)
+        public void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext)
         {
             var sparqlQuery = parsedSparqlQuery.Query;
 
             var startingParameter = parsedSparqlQuery.StartingParameterName.Substring(1); //String the ? as variable names provided by the parser don't contain it
 
-            var constructVariables = sparqlQuery.ConstructTemplate.Variables;
-
-            //todo: for hierarchi model ?
+            // - enumarate ConstructTemplate.TripplePattern collection according to starting parameter and continue by scheduling further probes
             // - hierarchical class that will handle this
             // --- might be used by the flatGraphNester
-            // --- Detect usage of same variable in multiple branches
-            // - enumarate ConstructTemplate.TripplePattern collection according to starting parameter and continue by scheduling further probes
-
+            // --- todo: Detect usage of same variable in multiple branches
+            //          var constructVariables = sparqlQuery.ConstructTemplate.Variables;
+            
             var constructTemplate = sparqlQuery.ConstructTemplate;
 
             var tripplePatternsBySubjectParameter = new Dictionary<string, List<IMatchTriplePattern>>();
@@ -451,7 +491,7 @@ namespace DragqnLD.Core.Implementations
                 }
             }
 
-            var hierarchyBuilder = new HierarchyBuilder(tripplePatternsBySubjectParameter);
+            var hierarchyBuilder = new HierarchyBuilder(tripplePatternsBySubjectParameter, compactionContext);
             var hierarchy = hierarchyBuilder.BuildHierarchyFrom(startingParameter);
 
 

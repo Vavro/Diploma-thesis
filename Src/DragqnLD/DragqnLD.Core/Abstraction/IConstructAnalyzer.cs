@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,24 @@ using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction
 {
+    public class CompactionContext
+    {
+        private Dictionary<string, string> _uriToAbbreviation;
+
+        public CompactionContext(RavenJObject buildContext, Dictionary<string, string> uriToAbbreviation)
+        {
+            BuildContext = buildContext;
+            _uriToAbbreviation = uriToAbbreviation;
+            UriToAbbreviation = new ReadOnlyDictionary<string, string>(_uriToAbbreviation);
+        }
+
+        public RavenJObject BuildContext { get; private set; }
+        public IReadOnlyDictionary<string, string> UriToAbbreviation { get; private set; }
+    }
+
     public interface IConstructAnalyzer
     {
-        RavenJObject CreateCompactionContextForQuery(IParsedSparqlQuery queryDefinition);
-        void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery);
+        CompactionContext CreateCompactionContextForQuery(IParsedSparqlQuery queryDefinition);
+        void CreatePropertyPathsForQuery(IParsedSparqlQuery parsedSparqlQuery, CompactionContext compactionContext);
     }
 }
