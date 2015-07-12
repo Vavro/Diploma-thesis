@@ -117,7 +117,7 @@ namespace DragqnLD.Core.Implementations
             {
                 var contextContent = await session.LoadAsync<RavenJObject>(contextId).ConfigureAwait(false);
                 var context = new RavenJObject();
-                context.Add("@context", contextContent);
+                context.Add("@context", contextContent ?? new RavenJObject());
                 return context;
             }
         }
