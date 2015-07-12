@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Query;
@@ -121,7 +122,7 @@ namespace DragqnLD.Core.UnitTests
 
             const string definitionId = "Query/1";
 
-            var compactionContext = new CompactionContext(context, null); //uri mappings to abbreviations not needed
+            var compactionContext = new CompactionContext(context, new Dictionary<string, string>()); //uri mappings to abbreviations not needed
 
             await _queryStore.StoreContext(definitionId, compactionContext);
 
