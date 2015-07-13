@@ -12,7 +12,7 @@ using Xunit;
 
 namespace DragqnLD.Core.UnitTests
 {
-    class TestQueries
+    public class TestQueries
     {
         public const string IngredientsQueryParamaterName = @"thingURI";
 
@@ -154,6 +154,17 @@ WHERE
     }
   }
 }";
+        public static readonly QueryDefinition TestQueryDefinition = new QueryDefinition
+        {
+            ConstructQuery = new SparqlQueryInfo()
+            {
+                DefaultDataSet = new Uri("http://test"),
+                Query = IngredientsQuery,
+                SparqlEndpoint = new Uri("http://test")
+            },
+            ConstructQueryUriParameterName = IngredientsQueryParamaterName
+            //rest of the properties isn't read in this test
+        };
     }
 
     public class ConstructAnalyzerTests
@@ -165,22 +176,11 @@ WHERE
 
         private readonly IConstructAnalyzer _constructAnalyzer;
 
-        private static readonly QueryDefinition TestQueryDefinition = new QueryDefinition
-        {
-            ConstructQuery = new SparqlQueryInfo()
-            {
-                DefaultDataSet = new Uri("http://test"),
-                Query = TestQueries.IngredientsQuery,
-                SparqlEndpoint = new Uri("http://test")
-            },
-            ConstructQueryUriParameterName = TestQueries.IngredientsQueryParamaterName
-            //rest of the properties isn't read in this test
-        };
 
         [Fact]
         public void CanAnalyzeQuery()
         {
-            var queryDefinition = TestQueryDefinition;
+            var queryDefinition = TestQueries.TestQueryDefinition;
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var context = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
@@ -197,7 +197,7 @@ WHERE
         [Fact]
         public void CanExtractPropertyPaths()
         {
-            var queryDefinition = TestQueryDefinition;
+            var queryDefinition = TestQueries.TestQueryDefinition;
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);

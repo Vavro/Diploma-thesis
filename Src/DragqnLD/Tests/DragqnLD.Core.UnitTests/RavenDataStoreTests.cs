@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
@@ -200,7 +201,12 @@ namespace DragqnLD.Core.UnitTests
             PropertyMappings mappings;
             //todo: Context?
             var context = ContextTestHelper.EmptyContext();
-            formatter.Format(reader, writer, rootId, context, out mappings);
+            //todo: hierarchy?
+            var hierarchy = new ConstructQueryAccessibleProperties()
+            {
+                RootProperty = new IndexableObjectProperty()
+            };
+            formatter.Format(reader, writer, rootId, context, hierarchy, out mappings);
 
             var parsed = RavenJObject.Parse(writer.ToString());
             var dataToStore = new ConstructResult

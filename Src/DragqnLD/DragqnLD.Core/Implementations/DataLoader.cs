@@ -55,6 +55,8 @@ namespace DragqnLD.Core.Implementations
             var qd = await _queryStore.Get(definitionId).ConfigureAwait(false);
 
             var selectResults = await _sparqlEnpointClient.QueryForUris(qd.SelectQuery).ConfigureAwait(false);
+            //todo: store select results? 
+
             var selectResultCount = selectResults.Count();
 
             status.Status = QueryStatus.LoadingDocuments;
@@ -66,19 +68,16 @@ namespace DragqnLD.Core.Implementations
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(qd);
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
-            
+
             //Has to be stored and retrieved as ravenJObject, so lets convert in here for comapction purpuses to Context
-            var compactionContextString = compactionContext.ToString();
-            var parsed = JObject.Parse(compactionContextString);
-            var convertedCompactionContext = new Context(parsed);
-            convertedCompactionContext.Remove("@base");
+            var convertedCompactionContext = DataLoaderHelper.ConvertCompactionContext(compactionContext);
 
             //todo: store any additional info? date produced etc.
             var contextId = await _queryStore.StoreContext(definitionId, compactionContext);
 
             //get property hiearchies and save them after getting their types
             var hierarchy = _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
-            
+
             status.DocumentLoadProgress.CurrentItem = 0;
             PropertyMappings allMappings = new PropertyMappings();
             //done: start processing selects .. :)
@@ -101,9 +100,12 @@ namespace DragqnLD.Core.Implementations
 
                 var writer = new StringWriter();
                 PropertyMappings mappings;
-                //todo: discovering mappings here should be used only for Describe queries - Constructs should have static mappings
-                //  - construct query mappings should be discovered from the query
-                _dataFormatter.Format(reader, writer, selectResult.ToString(), convertedCompactionContext, out mappings);
+
+                //todo: formatting could throw - add just an error on this id
+
+                //done: discovering mappings here should be used only for Describe queries - Constructs should have static mappings
+                //  - construct query mappings should be discovered from the query - is done here, because the mappings might come from the data
+                _dataFormatter.Format(reader, writer, selectResult.ToString(), convertedCompactionContext, hierarchy, out mappings);
                 allMappings.Merge(mappings);
                 var result = writer.ToString();
 
@@ -111,7 +113,7 @@ namespace DragqnLD.Core.Implementations
                 {
                     QueryId = qd.Id,
                     DocumentId = selectResult,
-                    Document = new Document {Content = RavenJObject.Parse(result)}
+                    Document = new Document { Content = RavenJObject.Parse(result) }
                 };
 
                 //done: store select results for viewing
@@ -132,6 +134,18 @@ namespace DragqnLD.Core.Implementations
             }
 
             await _queryStore.UpdateLastRun(definitionId, DateTime.Now);
+        }
+    }
+
+    public static class DataLoaderHelper
+    {
+        public static Context ConvertCompactionContext(CompactionContext compactionContext)
+        {
+            var compactionContextString = compactionContext.BuildContext.ToString();
+            var parsed = JObject.Parse(compactionContextString);
+            var convertedCompactionContext = new Context(parsed);
+            convertedCompactionContext.Remove("@base");
+            return convertedCompactionContext;
         }
     }
 }

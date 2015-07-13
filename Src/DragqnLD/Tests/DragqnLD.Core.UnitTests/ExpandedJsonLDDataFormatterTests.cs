@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Implementations;
 using DragqnLD.Core.UnitTests.Utils;
 using JsonLD.Core;
@@ -13,17 +15,18 @@ namespace DragqnLD.Core.UnitTests
     //todo: logging
     //todo: handle special characters in lucene queries (i.e. collon in value)
     //todo: handle inserted document for reserved properties
-        //possible solutions: 
-            //wrap into another property
-            //exchange the @ character on start of property
-        //change queries accordingly   
+    //possible solutions: 
+    //wrap into another property
+    //exchange the @ character on start of property
+    //change queries accordingly   
     //todo: batch update of documents
     //todo: metrics of querying
 
     [Trait("Category", "Basic")]
     public class ExpandedJsonLDDataFormatterTests : TestsBase
     {
-        public ExpandedJsonLDDataFormatterTests(ITestOutputHelper output) : base(output)
+        public ExpandedJsonLDDataFormatterTests(ITestOutputHelper output)
+            : base(output)
         {
         }
 
@@ -49,15 +52,20 @@ namespace DragqnLD.Core.UnitTests
             Assert.Equal(expectedOutput, output);
         }
 
-        private static string GetFormatted(string inputJsonFileName, string id, TextWriter writer)
+        private static string GetFormatted(string inputJsonFileName, string id, TextWriter writer, Context contextParam = null, ConstructQueryAccessibleProperties hierarchyParam = null)
         {
             var formatter = new ExpandedJsonLDDataFormatter();
             var reader = new StreamReader(inputJsonFileName);
 
             PropertyMappings mappings;
             //todo: Context?
-            var context = ContextTestHelper.EmptyContext();
-            formatter.Format(reader, writer, id, context,  out mappings);
+            var context = contextParam ?? ContextTestHelper.EmptyContext();
+            //todo: hierarchy?
+            var hierarchy = hierarchyParam ?? new ConstructQueryAccessibleProperties()
+            {
+                RootProperty = new IndexableObjectProperty()
+            };
+            formatter.Format(reader, writer, id, context, hierarchy, out mappings);
 
             var output = writer.ToString();
             return output;
@@ -101,7 +109,7 @@ namespace DragqnLD.Core.UnitTests
         {
             var inputDirectoryInfo = new DirectoryInfo(inputFolder);
             var inputFiles = inputDirectoryInfo.GetFiles();
-            
+
             Directory.CreateDirectory(outputFolder);
 
             foreach (var inputFile in inputFiles)
@@ -133,6 +141,29 @@ namespace DragqnLD.Core.UnitTests
                     }
                 }
             }
+        }
+
+
+        [Fact]
+        void CanAddTypesToHierarchy()
+        {
+            var inputDirectoryInfo = new DirectoryInfo(TestDataConstants.IngredientsFolder);
+            var inputFiles = inputDirectoryInfo.GetFiles();
+            var firstFile = inputFiles.First(file => file.Name == "M0000115.json");
+            const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
+
+            var queryDefinition = TestQueries.TestQueryDefinition;
+            var constructAnalyzer = new ConstructAnalyzer();
+            var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
+            var compactionContext = constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
+
+            var hierarchy = constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
+            var convertedContext = DataLoaderHelper.ConvertCompactionContext(compactionContext);
+            var writer = new StringWriter();
+            
+            var output = GetFormatted(firstFile.FullName, id, writer, convertedContext, hierarchy);
+
+
 
         }
 

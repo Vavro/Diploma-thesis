@@ -4,9 +4,11 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using JsonLD.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Raven.Abstractions.Data;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -18,7 +20,7 @@ namespace DragqnLD.Core.Implementations
             private readonly JEnumerable<JToken> _graphObjects;
             private readonly string _rootObjectId;
             private JObject _rootJObject;
-            private Stack<string> _recursiveIds; 
+            private Stack<string> _recursiveIds;
 
             public JObject RootJObject { get { return _rootJObject; } }
 
@@ -35,7 +37,7 @@ namespace DragqnLD.Core.Implementations
             {
                 ReplaceReferencePropertiesInJObject(_rootJObject);
             }
-            
+
             private void ReplaceReferencePropertiesInJObject(JObject obj)
             {
                 //check recursive path
@@ -58,7 +60,7 @@ namespace DragqnLD.Core.Implementations
                     {
                         continue;
                     }
-                    
+
                     // go throught nested object and replace ids
                     JObject asJObject;
                     JValue asJValue;
@@ -68,7 +70,7 @@ namespace DragqnLD.Core.Implementations
                         ReplaceReferencePropertiesInJObject(asJObject);
                     }
                     //go throught and detect whether it contains more objects, or ids
-                    else if ((asJArray= property.Value as JArray) != null)
+                    else if ((asJArray = property.Value as JArray) != null)
                     {
                         for (int i = 0; i < asJArray.Count; i++)
                         {
@@ -94,7 +96,7 @@ namespace DragqnLD.Core.Implementations
                         }
                     }
                     // replace if it is an id? - not presented in sample data
-                    else if ((asJValue  = property.Value as JValue) != null)
+                    else if ((asJValue = property.Value as JValue) != null)
                     {
                         //maybe detect whether value is an IRI
                         //lookup id in dictionary of objects, if id is found, replace
@@ -119,7 +121,7 @@ namespace DragqnLD.Core.Implementations
                     _recursiveIds.Pop();
                 }
             }
-            
+
             public void ReadObjectsFromGraph()
             {
                 var objects = new Dictionary<string, JObject>();
@@ -152,14 +154,212 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public void Format(TextReader input, TextWriter output, string rootObjectId, Context compactionContext, out PropertyMappings mappings)
+        public void Format(TextReader input, TextWriter output, string rootObjectId, Context compactionContext, ConstructQueryAccessibleProperties accessibleProperties, out PropertyMappings mappings)
         {
             //might be faster by using the strings via JsonTextReader, instead of Deserializing to JObject
 
+            var rootJObject = NestObjects(input, rootObjectId);
+
+            var compactedRootJObjecc = Compact(compactionContext, rootJObject);
+
+            //now traverse properties for their type
+            var accessiblePropertiesWithTypes = TraverseForTypes(accessibleProperties, compactedRootJObjecc);
+
+            mappings = CreateMappings(compactedRootJObjecc);
+
+            //for debugging purpusses only
+            //var o = compactedRootJObjecc.ToString(Formatting.Indented);
+
+            WriteOutput(output, compactedRootJObjecc);
+        }
+
+        private object TraverseForTypes(ConstructQueryAccessibleProperties accessibleProperties, JObject rootJObject)
+        {
+            var rootObjectProperty = accessibleProperties.RootProperty as IndexableObjectProperty;
+            if (rootObjectProperty == null)
+            {
+                return null;
+                //couldn't the root be just a value?
+            }
+            CheckObjectPropertyTypes(rootJObject, rootObjectProperty);
+
+            return new object();
+        }
+
+        private void CheckObjectPropertyTypes(JObject jObject, IndexableObjectProperty checkedObjectProperty)
+        {
+            foreach (var namedIndexableProperty in checkedObjectProperty.ChildProperties)
+            {
+                var isValueProperty = namedIndexableProperty.Property is IndexableValueProperty;
+
+                var propertyValue = jObject[namedIndexableProperty.AbbreviatedName];
+                if (propertyValue == null)
+                {
+                    //this data vas optional, not present here, skip
+                    continue;
+                }
+
+                if (isValueProperty)
+                {
+                    var valueProp = (IndexableValueProperty)namedIndexableProperty.Property;
+                    //todo: write the type somewhere
+                    var type = DetectTypeOfValueProperty(propertyValue);
+                    if (valueProp.Type == null)
+                    {
+                        valueProp.Type = type;
+                    }
+                    else if (valueProp.Type != type)
+                    {
+                        throw new NotSupportedException(String.Format("Data isn't homogenous, previous detected type {0}, current detected type {1}, {2}", valueProp.Type, type, propertyValue));
+                    }
+                }
+                else //is ObjectProperty
+                {
+                    var objectProperty = (IndexableObjectProperty)namedIndexableProperty.Property;
+                    if (propertyValue is JArray)
+                    {
+                        var array = (JArray)propertyValue;
+                        foreach (var item in array)
+                        {
+                            var itemAsJObject = item as JObject;
+                            if (itemAsJObject == null)
+                            {
+                                throw new NotSupportedException(String.Format("Array values of the object property may contain only objects {0}", propertyValue));
+                            }
+                            CheckObjectPropertyTypes(itemAsJObject, objectProperty);
+                        }
+                    }
+                    else if (propertyValue is JObject)
+                    {
+                        var propertyValueAsJObject = (JObject)propertyValue;
+                        CheckObjectPropertyTypes(propertyValueAsJObject, objectProperty);
+                    }
+                    else
+                    {
+                        throw new NotSupportedException(
+                            "other JTokens than JArray and JObject aren't supported as a object proerty in data");
+                    }
+                }
+            }
+        }
+
+        private ValuePropertyType DetectTypeOfValueProperty(JToken propertyValue)
+        {
+            if (propertyValue is JValue)
+            {
+                return ValuePropertyType.Value;
+            }
+            else if (propertyValue is JArray)
+            {
+                var asArray = (JArray)propertyValue;
+                ValuePropertyType? elementType = null;
+                foreach (var token in asArray)
+                {
+                    var thisElementType = DetectTypeOfArrayValueProperty(token);
+                    if (elementType == null)
+                    {
+                        elementType = thisElementType;
+                    }
+                    else if (elementType != thisElementType)
+                    {
+                        throw new NotSupportedException(String.Format("Data arent homogenous previous type {0}, this type {1}, on token {2}", elementType, thisElementType, propertyValue));
+                    }
+                }
+                switch (elementType)
+                {
+                    case ValuePropertyType.Value:
+                        return ValuePropertyType.ArrayOfValue;
+                    case ValuePropertyType.LanguageString:
+                        return ValuePropertyType.ArrayOfLanguageString;
+                    default:
+                        throw new NotSupportedException("Array had no items, couldn't detect its type");
+                }
+            }
+            else if (propertyValue is JObject)
+            {
+                if (IsLangTaggedString((JObject)propertyValue))
+                {
+                    return ValuePropertyType.LanguageString;
+                }
+                else
+                {
+                    throw new NotSupportedException(String.Format("Unsupported JObject in a Value property type {0}", propertyValue));
+                }
+            }
+            else
+            {
+                throw new NotSupportedException("other JTokens than JValue, JArray and JObject aren't supported as a value property in data");
+            }
+        }
+
+        private ValuePropertyType DetectTypeOfArrayValueProperty(JToken token)
+        {
+            //might return directly ArrayOfTypes
+            if (token is JValue) //any value
+            {
+                return ValuePropertyType.Value;
+            }
+            else if (token is JObject) //should be a lang tagged string
+            {
+                if (IsLangTaggedString((JObject)token))
+                {
+                    return ValuePropertyType.LanguageString;
+                };
+                throw new NotSupportedException("Other than language tagged strings aren't supported as objects in an array in a value property");
+            }
+            else
+            {
+                throw new NotSupportedException(
+                    "other JTokens than JValue and JObject dont make sense to be a part of a value property array");
+            }
+        }
+
+        private static bool IsLangTaggedString(JObject obj)
+        {
+            var lang = obj["@language"] as JValue;
+            var val = obj["@value"] as JValue;
+            if (lang != null && val != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private static void WriteOutput(TextWriter output, JObject compactedRootJObjecc)
+        {
+            var jsonWriter = new JsonTextWriter(output);
+            compactedRootJObjecc.WriteTo(jsonWriter);
+        }
+
+        private static PropertyMappings CreateMappings(JObject compactedRootJObjecc)
+        {
+            var propertyEscaper = new DocumentPropertyEscaper();
+            propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
+            PropertyMappings mappings = propertyEscaper.PropertyMappings;
+            return mappings;
+        }
+
+        private static JObject Compact(Context compactionContext, JObject rootJObject)
+        {
+            var jsonLdOptions = new JsonLdOptions();
+            jsonLdOptions.SetCompactArrays(false);
+            jsonLdOptions.SetEmbed(true);
+            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, jsonLdOptions);
+
+            //if the arrays dont get compacted the processor adds { @graph [ { to the root of the doc - delete it
+            compactedRootJObjecc = (JObject)compactedRootJObjecc.First.First.First;
+
+            //done: write in @context - where it can be found
+            //solved by injecting in document retrieval
+            return compactedRootJObjecc;
+        }
+
+        private static JObject NestObjects(TextReader input, string rootObjectId)
+        {
             var inputString = input.ReadToEnd(); //TODO: to async input reader might come from web? 
 
             var originalObject = JObject.Parse(inputString);
-            
+
             var graphObjects = originalObject["@graph"].Children();
 
             var flatGraphNester = new FlatGraphNester(graphObjects, rootObjectId);
@@ -169,27 +369,7 @@ namespace DragqnLD.Core.Implementations
             flatGraphNester.NestEverythingIntoRootObject();
 
             var rootJObject = flatGraphNester.RootJObject;
-
-            var jsonLdOptions = new JsonLdOptions();
-            jsonLdOptions.SetCompactArrays(false);
-            jsonLdOptions.SetEmbed(true);
-            var compactedRootJObjecc = JsonLdProcessor.Compact(rootJObject, compactionContext, jsonLdOptions);
-            
-            //if the arrays dont get compacted the processor adds { @graph [ { to the root of the doc - delete it
-            compactedRootJObjecc = (JObject)compactedRootJObjecc.First.First.First;
-            
-            //todo: write in @context - where it can be found
-
-            var propertyEscaper = new DocumentPropertyEscaper();
-            propertyEscaper.EscapeDocumentProperies(compactedRootJObjecc);
-            mappings = propertyEscaper.PropertyMappings;
-
-            var o = compactedRootJObjecc.ToString(Formatting.Indented);
-
-            var jsonWriter = new JsonTextWriter(output);
-            compactedRootJObjecc.WriteTo(jsonWriter);
+            return rootJObject;
         }
-
-
     }
 }

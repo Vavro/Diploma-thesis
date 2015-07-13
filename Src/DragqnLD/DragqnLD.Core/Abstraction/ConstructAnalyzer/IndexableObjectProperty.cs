@@ -26,6 +26,8 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
         private readonly Dictionary<string, IIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, IIndexableProperty>();
 
         public List<NamedIndexableProperty> ChildProperties { get; private set; }
+        public bool? HasId { get; set; }
+        public bool? HasType { get; set; }
 
         public IndexableObjectProperty()
         {
