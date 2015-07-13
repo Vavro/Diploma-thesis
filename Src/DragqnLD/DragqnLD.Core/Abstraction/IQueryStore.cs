@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using JsonLD.Core;
@@ -71,5 +72,20 @@ namespace DragqnLD.Core.Abstraction
         /// <param name="definitionId">The definition identifier.</param>
         /// <returns></returns>
         Task<RavenJObject> GetContext(string definitionId);
+
+        /// <summary>
+        /// Stores the hierarchy.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <param name="hierarchy">The hierarchy.</param>
+        /// <returns></returns>
+        Task<string> StoreHierarchy(string definitionId, ConstructQueryAccessibleProperties hierarchy);
+
+        /// <summary>
+        /// Gets the hierarchy.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <returns></returns>
+        Task<ConstructQueryAccessibleProperties> GetHierarchy(string definitionId);
     }
 }

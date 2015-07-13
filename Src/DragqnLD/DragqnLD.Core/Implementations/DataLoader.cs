@@ -66,17 +66,18 @@ namespace DragqnLD.Core.Implementations
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(qd);
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
+            
             //Has to be stored and retrieved as ravenJObject, so lets convert in here for comapction purpuses to Context
-
             var compactionContextString = compactionContext.ToString();
             var parsed = JObject.Parse(compactionContextString);
             var convertedCompactionContext = new Context(parsed);
             convertedCompactionContext.Remove("@base");
 
-
-
             //todo: store any additional info? date produced etc.
             var contextId = await _queryStore.StoreContext(definitionId, compactionContext);
+
+            //get property hiearchies and save them after getting their types
+            var hierarchy = _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
             
             status.DocumentLoadProgress.CurrentItem = 0;
             PropertyMappings allMappings = new PropertyMappings();
@@ -119,6 +120,8 @@ namespace DragqnLD.Core.Implementations
                 //todo: document count could be a raven index - should it? :) 
             }
 
+            //save hierachy after it has value types added
+            var hierarchyId = await _queryStore.StoreHierarchy(definitionId, hierarchy);
             // todo: if this was one session, this wouldn't be necessary.. but then i'd rely on ravens tracking
             await _queryStore.StoreMappings(definitionId, allMappings);
 

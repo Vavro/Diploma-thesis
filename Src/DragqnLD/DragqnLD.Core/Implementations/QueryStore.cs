@@ -4,11 +4,13 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Indexes;
 using JsonLD.Core;
 using Microsoft.Win32;
 using Raven.Client;
+using Raven.Client.Document;
 using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Implementations
@@ -92,10 +94,9 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<string> StoreContext(string definitionId, CompactionContext compactionContext)
         {
-            //todo: store the uri mappings?
             //ravendb removes @properties - top one is @context, so remove the nesting and ad it in getContext
             var contextToStore = compactionContext.BuildContext.First().Value;
-            var contextId = definitionId + "/Context";
+            var contextId = GetContextId(definitionId);
 
             using (var session = _store.OpenAsyncSession())
             {
@@ -104,8 +105,6 @@ namespace DragqnLD.Core.Implementations
                 var metadata = session.Advanced.GetMetadataFor(contextToStore);
                 metadata["Raven-Entity-Name"] = "Contexts";
                 await session.SaveChangesAsync().ConfigureAwait(false);
-
-                await session.SaveChangesAsync();
             }
 
             return contextId;
@@ -113,13 +112,54 @@ namespace DragqnLD.Core.Implementations
 
         public async Task<RavenJObject> GetContext(string definitionId)
         {
-            var contextId = definitionId + "/Context";
+            var contextId = GetContextId(definitionId);
             using (var session = _store.OpenAsyncSession())
             {
                 var contextContent = await session.LoadAsync<RavenJObject>(contextId).ConfigureAwait(false);
                 var context = new RavenJObject();
                 context.Add("@context", contextContent ?? new RavenJObject());
                 return context;
+            }
+        }
+
+        private static string GetContextId(string definitionId)
+        {
+            return definitionId + "/Context";
+        }
+
+        private static string GetHierarchyId(string definitionId)
+        {
+            return definitionId + "/Hierarchy";
+        }
+
+        public async Task<string> StoreHierarchy(string definitionId, ConstructQueryAccessibleProperties hierarchy)
+        {
+            var hierarchyId = GetHierarchyId(definitionId);
+
+            using (var session = _store.OpenAsyncSession())
+            {
+                await session.StoreAsync(hierarchy, hierarchyId);
+
+                var metadata = session.Advanced.GetMetadataFor(hierarchy);
+                metadata["Raven-Entity-Name"] = "Hierarchy";
+                await session.SaveChangesAsync().ConfigureAwait(false);
+            }
+
+            return hierarchyId;
+        }
+
+        public async Task<ConstructQueryAccessibleProperties> GetHierarchy(string definitionId)
+        {
+            var hierarchyId = GetHierarchyId(definitionId);
+            using (var session = _store.OpenAsyncSession())
+            {
+                var hierarchy = await session.LoadAsync<ConstructQueryAccessibleProperties>(hierarchyId).ConfigureAwait(false);
+                var hierarchyRootAsObject = hierarchy.RootProperty as IndexableObjectProperty;
+                if (hierarchyRootAsObject != null)
+                {
+                    hierarchyRootAsObject.InitializeDictionaries();
+                }
+                return hierarchy;
             }
         }
     }

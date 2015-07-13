@@ -1,4 +1,5 @@
 ﻿using System;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Indexes;
 using DragqnLD.WebApi.Configuration;
 using Raven.Client;
@@ -19,7 +20,6 @@ namespace DragqnLD.WebApi.App_Start
                 Url = DragqnLdConfig.Instance.DatabaseUrl,
                 DefaultDatabase = DragqnLdConfig.Instance.DatabaseName
             };
-
             docStore.Initialize();
 
             IndexCreation.CreateIndexes(typeof(Documents_CountByCollection).Assembly, docStore);

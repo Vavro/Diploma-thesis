@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Raven.Client.Listeners;
+using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
 {
@@ -23,13 +25,11 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
         private readonly Dictionary<string, IIndexableProperty> _childPropertiesByFullName = new Dictionary<string, IIndexableProperty>();
         private readonly Dictionary<string, IIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, IIndexableProperty>();
 
-        private readonly List<NamedIndexableProperty> _childProperties = new List<NamedIndexableProperty>();
-
-        public IReadOnlyList<NamedIndexableProperty> ChildProperties { get; private set; }
+        public List<NamedIndexableProperty> ChildProperties { get; private set; }
 
         public IndexableObjectProperty()
         {
-            ChildProperties = new ReadOnlyCollection<NamedIndexableProperty>(_childProperties);
+            ChildProperties = new List<NamedIndexableProperty>();
         }
 
         public void AddProperty(string abbreviatedName, string fullUriName, IIndexableProperty property)
@@ -43,7 +43,7 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
             _childPropertiesByFullName.Add(fullUriName, property);
             _childPropertiesByAbbreviatedName.Add(abbreviatedName, property);
 
-            _childProperties.Add(namedProperty);
+            ChildProperties.Add(namedProperty);
         }
 
         public IIndexableProperty GetPropertyByFullName(string fullName)
@@ -54,6 +54,26 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
         public IIndexableProperty GetPropertyByAbbreviatedName(string abbreviatedName)
         {
             return _childPropertiesByAbbreviatedName[abbreviatedName];
+        }
+
+        public void InitializeDictionaries()
+        {
+            if (_childPropertiesByAbbreviatedName.Count != 0 || _childPropertiesByFullName.Count != 0)
+            {
+                throw new Exception("InitializeDictionaries can be called only if the internal dictioanries havent been initializeed");
+            }
+
+            foreach (var namedIndexableProperty in ChildProperties)
+            {
+                _childPropertiesByAbbreviatedName.Add(namedIndexableProperty.AbbreviatedName, namedIndexableProperty.Property);
+                _childPropertiesByFullName.Add(namedIndexableProperty.FullName, namedIndexableProperty.Property);
+                //if the hierarchy is a graph, this will fail
+                var propertyAsObject = namedIndexableProperty.Property as IndexableObjectProperty;
+                if (propertyAsObject != null)
+                {
+                    propertyAsObject.InitializeDictionaries();
+                }
+            }
         }
     }
 }
