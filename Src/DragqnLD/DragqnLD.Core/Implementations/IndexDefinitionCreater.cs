@@ -60,19 +60,12 @@ namespace DragqnLD.Core.Implementations
         private class UniqueVarProvider
         {
             private int _index = 0;
-            private string _lastVar = null;
 
             public string GetNewVar()
             {
                 var prefix = "x" + _index;
                 _index++;
-                _lastVar = prefix;
                 return prefix;
-            }
-
-            public string CurrentVar()
-            {
-                return _lastVar;
             }
         }
 
