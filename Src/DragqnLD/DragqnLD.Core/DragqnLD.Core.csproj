@@ -81,6 +81,7 @@
     <Compile Include="Abstraction\IConstructAnalyzer.cs" />
     <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
+    <Compile Include="Abstraction\IIndexDefinitionCreatercs.cs" />
     <Compile Include="Abstraction\IParsedSparqlQuery.cs" />
     <Compile Include="Abstraction\IPropertyUnescapesCache.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Implementations\ConstructAnalyzer.cs" />
     <Compile Include="Implementations\DocumentPropertyEscaper.cs" />
     <Compile Include="Implementations\ExpandedJsonLDDataFormatter.cs" />
+    <Compile Include="Implementations\IndexDefinitionCreater.cs" />
     <Compile Include="Implementations\PropertyMappings.cs" />
     <Compile Include="Implementations\PropertyUnescapesCache.cs" />
     <Compile Include="Implementations\QueryStore.cs" />

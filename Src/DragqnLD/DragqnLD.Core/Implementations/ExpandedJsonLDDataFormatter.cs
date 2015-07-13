@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using JsonLD.Core;
@@ -175,14 +176,15 @@ namespace DragqnLD.Core.Implementations
 
         private object TraverseForTypes(ConstructQueryAccessibleProperties accessibleProperties, JObject rootJObject)
         {
-            var rootObjectProperty = accessibleProperties.RootProperty as IndexableObjectProperty;
+            var rootObjectProperty = accessibleProperties.RootProperty;
             if (rootObjectProperty == null)
             {
                 return null;
-                //couldn't the root be just a value?
+                //couldn't the root be just a value? no couldn't as per creation code..
             }
             CheckObjectPropertyTypes(rootJObject, rootObjectProperty);
 
+            //todo: return something usable.. :D
             return new object();
         }
 
@@ -204,8 +206,13 @@ namespace DragqnLD.Core.Implementations
                 if (isValueProperty)
                 {
                     var valueProp = (IndexableValueProperty)namedIndexableProperty.Property;
-                    
-                    var detectedValueType = DetectTypeOfValueProperty(propertyValue);
+
+                    bool isArray;
+                    ValuePropertyType detectedValueType;
+                    DetectTypeOfValueProperty(propertyValue, out isArray, out detectedValueType);
+                    const bool isWrappedInArray = true;
+
+                    SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, propertyValue);
                     SetOrCheckDetectedValueType(valueProp, detectedValueType, propertyValue);
                 }
                 else //is ObjectProperty
@@ -224,14 +231,14 @@ namespace DragqnLD.Core.Implementations
                             CheckObjectPropertyTypes(itemAsJObject, objectProperty);
                         }
                         const bool isWrappedInArray = true;
-                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, objectProperty);
+                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, propertyValue);
                     }
                     else if (propertyValue is JObject)
                     {
                         var propertyValueAsJObject = (JObject)propertyValue;
                         CheckObjectPropertyTypes(propertyValueAsJObject, objectProperty);
                         const bool isWrappedInArray = false;
-                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, objectProperty);
+                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, propertyValue);
                     }
                     else
                     {
@@ -294,7 +301,7 @@ namespace DragqnLD.Core.Implementations
         }
 
         private static void SetOrCheckWrappedInArrayNotChanged(NamedIndexableProperty namedIndexableProperty, bool isWrappedInArray,
-            IndexableObjectProperty objectProperty)
+            JToken objectProperty)
         {
             if (namedIndexableProperty.WrappedInArray == null)
             {
@@ -311,11 +318,13 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        private ValuePropertyType DetectTypeOfValueProperty(JToken propertyValue)
+        private void DetectTypeOfValueProperty(JToken propertyValue, out bool isArray, out ValuePropertyType valueType)
         {
             if (propertyValue is JValue)
             {
-                return ValuePropertyType.Value;
+                isArray = false;
+                valueType = ValuePropertyType.Value;
+                return;
             }
             else if (propertyValue is JArray)
             {
@@ -333,21 +342,21 @@ namespace DragqnLD.Core.Implementations
                         throw new NotSupportedException(String.Format("Data arent homogenous previous type {0}, this type {1}, on token {2}", elementType, thisElementType, propertyValue));
                     }
                 }
-                switch (elementType)
+                if (!elementType.HasValue)
                 {
-                    case ValuePropertyType.Value:
-                        return ValuePropertyType.ArrayOfValue;
-                    case ValuePropertyType.LanguageString:
-                        return ValuePropertyType.ArrayOfLanguageString;
-                    default:
-                        throw new NotSupportedException("Array had no items, couldn't detect its type");
+                    throw new NotSupportedException("Array had no items, couldn't detect its type");
                 }
+                isArray = true;
+                valueType = elementType.Value;
+                return;
             }
             else if (propertyValue is JObject)
             {
                 if (IsLangTaggedString((JObject)propertyValue))
                 {
-                    return ValuePropertyType.LanguageString;
+                    isArray = false;
+                    valueType = ValuePropertyType.LanguageString;
+                    return;
                 }
                 else
                 {

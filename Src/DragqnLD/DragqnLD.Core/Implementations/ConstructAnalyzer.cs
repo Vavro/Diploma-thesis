@@ -351,7 +351,7 @@ namespace DragqnLD.Core.Implementations
 
             public ConstructQueryAccessibleProperties BuildHierarchyFrom(string startingParameter)
             {
-                var rootProperty = ConstructPropertyFrom(startingParameter, true);
+                var rootProperty = (IndexableObjectProperty)ConstructPropertyFrom(startingParameter, true);
                 var accessibleProps = new ConstructQueryAccessibleProperties() { RootProperty = rootProperty };
 
                 return accessibleProps;

@@ -9,6 +9,7 @@ using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using Raven.Json.Linq;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
@@ -16,7 +17,7 @@ namespace DragqnLD.Core.UnitTests
     {
         public const string IngredientsQueryParamaterName = @"thingURI";
 
-        public const string IngredientsQuery = 
+        public const string IngredientsQuery =
 @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
@@ -25,7 +26,6 @@ CONSTRUCT
   @thingURI a enc:Ingredient ;
     enc:title ?title ;
     enc:description ?description ;
-    enc:indication ?indication ;
     enc:hasPharmacologicalAction ?pa ;
     enc:hasMechanismOfAction ?moa ;
     enc:hasPhysiologicEffect ?pe ;
@@ -34,7 +34,7 @@ CONSTRUCT
     enc:mayTreat ?mt ;
     enc:mayPrevent ?mp ;
     enc:contraindicatedWith ?ci ;
-    enc:hasMedicinalProductGroup ?mpg .
+    enc:hasMedicinalProduct ?mpg .
   ?pa a enc:PharmacologicalAction ;
     enc:title ?paTitle ;
     enc:description ?paDescription .
@@ -53,7 +53,7 @@ CONSTRUCT
   ?ci a enc:DiseaseOrFinding ;
     enc:title ?ciTitle ;
     enc:description ?ciDescription .
-  ?mpg a enc:MedicinalProductGroup ;
+  ?mpg a enc:MedicinalProduct ;
     enc:title ?mpgTitle ;
     enc:description ?mpgDescription ;
     enc:hasRouteOfAdministration ?mpgRoALabel ;
@@ -107,7 +107,7 @@ WHERE
   UNION
   {
     @thingURI
-      enc:hasMedicinalProductGroup ?mpg .
+      enc:MedicinalProduct ?mpg .
     ?mpg enc:title ?mpgTitle .
     OPTIONAL {
       ?mpg enc:description ?mpgDescription .
@@ -154,7 +154,7 @@ WHERE
     }
   }
 }";
-        public static readonly QueryDefinition TestQueryDefinition = new QueryDefinition
+        public static readonly QueryDefinition TestQueryDefinitionIngredients = new QueryDefinition
         {
             ConstructQuery = new SparqlQueryInfo()
             {
@@ -167,9 +167,9 @@ WHERE
         };
     }
 
-    public class ConstructAnalyzerTests
+    public class ConstructAnalyzerTests : TestsBase
     {
-        public ConstructAnalyzerTests()
+        public ConstructAnalyzerTests(ITestOutputHelper output) : base(output)
         {
             _constructAnalyzer = new ConstructAnalyzer();
         }
@@ -180,7 +180,7 @@ WHERE
         [Fact]
         public void CanAnalyzeQuery()
         {
-            var queryDefinition = TestQueries.TestQueryDefinition;
+            var queryDefinition = TestQueries.TestQueryDefinitionIngredients;
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var context = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
@@ -188,7 +188,7 @@ WHERE
             var contextContent = (RavenJObject)context.BuildContext.First().Value;
             var contextContentValues = contextContent.Values();
 
-            Assert.Equal(19, contextContent.Count);
+            Assert.Equal(18, contextContent.Count);
             Assert.Contains("enc", contextContent.Keys);
             Assert.Contains("skos", contextContent.Keys);
             Assert.Contains("enc:title", contextContentValues);
@@ -197,7 +197,7 @@ WHERE
         [Fact]
         public void CanExtractPropertyPaths()
         {
-            var queryDefinition = TestQueries.TestQueryDefinition;
+            var queryDefinition = TestQueries.TestQueryDefinitionIngredients;
 
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
@@ -205,13 +205,13 @@ WHERE
             var hierarchy = _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
 
             var root = ((IndexableObjectProperty) hierarchy.RootProperty);
-            Assert.Equal(12, root.ChildProperties.Count);
-            var pharmacologicalAction = (IndexableObjectProperty)root.GetPropertyByAbbreviatedName("hasPharmacologicalAction");
+            Assert.Equal(11, root.ChildProperties.Count);
+            var pharmacologicalAction = (IndexableObjectProperty)root.GetPropertyByAbbreviatedName("hasPharmacologicalAction").Property;
             Assert.Equal(2, pharmacologicalAction.ChildProperties.Count);
             var medicinalProductGroup =
-                (IndexableObjectProperty) root.GetPropertyByAbbreviatedName("hasMedicinalProductGroup");
+                (IndexableObjectProperty) root.GetPropertyByAbbreviatedName("hasMedicinalProductGroup").Property;
             Assert.Equal(5, medicinalProductGroup.ChildProperties.Count);
-            var mpgAtc = (IndexableObjectProperty) medicinalProductGroup.GetPropertyByAbbreviatedName("hasATCConcept");
+            var mpgAtc = (IndexableObjectProperty) medicinalProductGroup.GetPropertyByAbbreviatedName("hasATCConcept").Property;
             Assert.Equal(2, mpgAtc.ChildProperties.Count);
         }
     }

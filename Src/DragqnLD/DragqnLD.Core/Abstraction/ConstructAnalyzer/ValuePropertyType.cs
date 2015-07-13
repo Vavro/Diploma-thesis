@@ -4,8 +4,6 @@
     {
         ObjectId,
         Value,
-        LanguageString,
-        ArrayOfValue,
-        ArrayOfLanguageString
+        LanguageString
     }
 }

@@ -52,7 +52,7 @@ namespace DragqnLD.Core.UnitTests
             Assert.Equal(expectedOutput, output);
         }
 
-        private static string GetFormatted(string inputJsonFileName, string id, TextWriter writer, Context contextParam = null, ConstructQueryAccessibleProperties hierarchyParam = null)
+        public static string GetFormatted(string inputJsonFileName, string id, TextWriter writer, Context contextParam = null, ConstructQueryAccessibleProperties hierarchyParam = null)
         {
             var formatter = new ExpandedJsonLDDataFormatter();
             var reader = new StreamReader(inputJsonFileName);
@@ -152,7 +152,7 @@ namespace DragqnLD.Core.UnitTests
             var firstFile = inputFiles.First(file => file.Name == "M0000115.json");
             const string id = @"http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115";
 
-            var queryDefinition = TestQueries.TestQueryDefinition;
+            var queryDefinition = TestQueries.TestQueryDefinitionIngredients;
             var constructAnalyzer = new ConstructAnalyzer();
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var compactionContext = constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);

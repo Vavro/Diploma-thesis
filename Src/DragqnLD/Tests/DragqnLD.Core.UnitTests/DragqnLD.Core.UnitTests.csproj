@@ -101,6 +101,7 @@
     <Compile Include="ConstructAnalyzerTests.cs" />
     <Compile Include="DataStoreTestsBase.cs" />
     <Compile Include="ExpandedJsonLDDataFormatterTests.cs" />
+    <Compile Include="IndexDefinitionCreaterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryStoreTests.cs" />
     <Compile Include="RavenDataStoreTests.cs" />

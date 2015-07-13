@@ -23,8 +23,8 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
 
     public class IndexableObjectProperty : IIndexableProperty
     {
-        private readonly Dictionary<string, IIndexableProperty> _childPropertiesByFullName = new Dictionary<string, IIndexableProperty>();
-        private readonly Dictionary<string, IIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, IIndexableProperty>();
+        private readonly Dictionary<string, NamedIndexableProperty> _childPropertiesByFullName = new Dictionary<string, NamedIndexableProperty>();
+        private readonly Dictionary<string, NamedIndexableProperty> _childPropertiesByAbbreviatedName = new Dictionary<string, NamedIndexableProperty>();
 
         public List<NamedIndexableProperty> ChildProperties { get; private set; }
         public bool? HasId { get; set; }
@@ -43,18 +43,18 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
                 FullName = fullUriName,
                 Property = property
             };
-            _childPropertiesByFullName.Add(fullUriName, property);
-            _childPropertiesByAbbreviatedName.Add(abbreviatedName, property);
+            _childPropertiesByFullName.Add(fullUriName, namedProperty);
+            _childPropertiesByAbbreviatedName.Add(abbreviatedName, namedProperty);
 
             ChildProperties.Add(namedProperty);
         }
 
-        public IIndexableProperty GetPropertyByFullName(string fullName)
+        public NamedIndexableProperty GetPropertyByFullName(string fullName)
         {
             return _childPropertiesByFullName[fullName];
         }
 
-        public IIndexableProperty GetPropertyByAbbreviatedName(string abbreviatedName)
+        public NamedIndexableProperty GetPropertyByAbbreviatedName(string abbreviatedName)
         {
             return _childPropertiesByAbbreviatedName[abbreviatedName];
         }
@@ -68,8 +68,8 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
 
             foreach (var namedIndexableProperty in ChildProperties)
             {
-                _childPropertiesByAbbreviatedName.Add(namedIndexableProperty.AbbreviatedName, namedIndexableProperty.Property);
-                _childPropertiesByFullName.Add(namedIndexableProperty.FullName, namedIndexableProperty.Property);
+                _childPropertiesByAbbreviatedName.Add(namedIndexableProperty.AbbreviatedName, namedIndexableProperty);
+                _childPropertiesByFullName.Add(namedIndexableProperty.FullName, namedIndexableProperty);
                 //if the hierarchy is a graph, this will fail
                 var propertyAsObject = namedIndexableProperty.Property as IndexableObjectProperty;
                 if (propertyAsObject != null)
