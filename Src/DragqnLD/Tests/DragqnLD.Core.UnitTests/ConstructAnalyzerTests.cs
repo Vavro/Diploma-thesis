@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using Raven.Json.Linq;
@@ -201,9 +202,17 @@ WHERE
             var parsedSparqlQuery = ConstructAnalyzerHelper.ReplaceParamAndParseConstructQuery(queryDefinition);
             var compactionContext = _constructAnalyzer.CreateCompactionContextForQuery(parsedSparqlQuery);
             
-            _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
+            var hierarchy = _constructAnalyzer.CreatePropertyPathsForQuery(parsedSparqlQuery, compactionContext);
 
-
+            var root = ((IndexableObjectProperty) hierarchy.RootProperty);
+            Assert.Equal(12, root.ChildProperties.Count);
+            var pharmacologicalAction = (IndexableObjectProperty)root.GetPropertyByAbbreviatedName("hasPharmacologicalAction");
+            Assert.Equal(2, pharmacologicalAction.ChildProperties.Count);
+            var medicinalProductGroup =
+                (IndexableObjectProperty) root.GetPropertyByAbbreviatedName("hasMedicinalProductGroup");
+            Assert.Equal(5, medicinalProductGroup.ChildProperties.Count);
+            var mpgAtc = (IndexableObjectProperty) medicinalProductGroup.GetPropertyByAbbreviatedName("hasATCConcept");
+            Assert.Equal(2, mpgAtc.ChildProperties.Count);
         }
     }
 }
