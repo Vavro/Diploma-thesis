@@ -16,6 +16,7 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
 
         public string FullName { get; set; }
 
+        public bool? WrappedInArray { get; set; }
 
         public IIndexableProperty Property { get; set; }
     }

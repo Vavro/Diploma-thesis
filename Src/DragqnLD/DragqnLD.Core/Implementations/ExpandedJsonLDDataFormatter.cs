@@ -188,6 +188,8 @@ namespace DragqnLD.Core.Implementations
 
         private void CheckObjectPropertyTypes(JObject jObject, IndexableObjectProperty checkedObjectProperty)
         {
+            SetOrCheckObjectHasIdAndType(jObject, checkedObjectProperty);
+
             foreach (var namedIndexableProperty in checkedObjectProperty.ChildProperties)
             {
                 var isValueProperty = namedIndexableProperty.Property is IndexableValueProperty;
@@ -202,16 +204,9 @@ namespace DragqnLD.Core.Implementations
                 if (isValueProperty)
                 {
                     var valueProp = (IndexableValueProperty)namedIndexableProperty.Property;
-                    //todo: write the type somewhere
-                    var type = DetectTypeOfValueProperty(propertyValue);
-                    if (valueProp.Type == null)
-                    {
-                        valueProp.Type = type;
-                    }
-                    else if (valueProp.Type != type)
-                    {
-                        throw new NotSupportedException(String.Format("Data isn't homogenous, previous detected type {0}, current detected type {1}, {2}", valueProp.Type, type, propertyValue));
-                    }
+                    
+                    var detectedValueType = DetectTypeOfValueProperty(propertyValue);
+                    SetOrCheckDetectedValueType(valueProp, detectedValueType, propertyValue);
                 }
                 else //is ObjectProperty
                 {
@@ -228,17 +223,90 @@ namespace DragqnLD.Core.Implementations
                             }
                             CheckObjectPropertyTypes(itemAsJObject, objectProperty);
                         }
+                        const bool isWrappedInArray = true;
+                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, objectProperty);
                     }
                     else if (propertyValue is JObject)
                     {
                         var propertyValueAsJObject = (JObject)propertyValue;
                         CheckObjectPropertyTypes(propertyValueAsJObject, objectProperty);
+                        const bool isWrappedInArray = false;
+                        SetOrCheckWrappedInArrayNotChanged(namedIndexableProperty, isWrappedInArray, objectProperty);
                     }
                     else
                     {
                         throw new NotSupportedException(
                             "other JTokens than JArray and JObject aren't supported as a object proerty in data");
                     }
+                }
+            }
+        }
+
+        private static void SetOrCheckDetectedValueType(IndexableValueProperty valueProp, ValuePropertyType detectedValueType,
+            JToken propertyValue)
+        {
+            if (valueProp.Type == null)
+            {
+                valueProp.Type = detectedValueType;
+            }
+            else if (valueProp.Type != detectedValueType)
+            {
+                throw new NotSupportedException(
+                    String.Format("Data isn't homogenous, previous detected type {0}, current detected type {1}, {2}",
+                        valueProp.Type, detectedValueType, propertyValue));
+            }
+        }
+
+        private static void SetOrCheckObjectHasIdAndType(JObject jObject, IndexableObjectProperty checkedObjectProperty)
+        {
+            var id = jObject["@id"];
+            var hasId = id != null;
+            if (checkedObjectProperty.HasId == null)
+            {
+                checkedObjectProperty.HasId = hasId;
+            }
+            else
+            {
+                if (checkedObjectProperty.HasId != hasId)
+                {
+                    throw new NotSupportedException(
+                        String.Format(
+                            "Not homogenous looking data - id property appearnce mismatch previously {0}, now {1} on {2}",
+                            checkedObjectProperty.HasId, hasId, jObject));
+                }
+            }
+            var type = jObject["@type"];
+            var hasType = type != null;
+            if (checkedObjectProperty.HasType == null)
+            {
+                checkedObjectProperty.HasType = hasType;
+            }
+            else
+            {
+                if (checkedObjectProperty.HasType != hasType)
+                {
+                    throw new NotSupportedException(
+                        String.Format(
+                            "Not homogenous looking data - type property appearnce mismatch previously {0}, now {1} on {2}",
+                            checkedObjectProperty.HasType, hasType, jObject));
+                }
+            }
+        }
+
+        private static void SetOrCheckWrappedInArrayNotChanged(NamedIndexableProperty namedIndexableProperty, bool isWrappedInArray,
+            IndexableObjectProperty objectProperty)
+        {
+            if (namedIndexableProperty.WrappedInArray == null)
+            {
+                namedIndexableProperty.WrappedInArray = isWrappedInArray;
+            }
+            else
+            {
+                if (namedIndexableProperty.WrappedInArray != isWrappedInArray)
+                {
+                    throw new NotSupportedException(
+                        String.Format("Property wrapped in array mismatch, previusly {0}, now {1}, on {2}",
+                            namedIndexableProperty.WrappedInArray, isWrappedInArray, objectProperty));
                 }
             }
         }
