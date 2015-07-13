@@ -156,6 +156,7 @@ WHERE
 }";
         public static readonly QueryDefinition TestQueryDefinitionIngredients = new QueryDefinition
         {
+            Id = "Query/1",
             ConstructQuery = new SparqlQueryInfo()
             {
                 DefaultDataSet = new Uri("http://test"),
@@ -209,7 +210,7 @@ WHERE
             var pharmacologicalAction = (IndexableObjectProperty)root.GetPropertyByAbbreviatedName("hasPharmacologicalAction").Property;
             Assert.Equal(2, pharmacologicalAction.ChildProperties.Count);
             var medicinalProductGroup =
-                (IndexableObjectProperty) root.GetPropertyByAbbreviatedName("hasMedicinalProductGroup").Property;
+                (IndexableObjectProperty) root.GetPropertyByAbbreviatedName("hasMedicinalProduct").Property;
             Assert.Equal(5, medicinalProductGroup.ChildProperties.Count);
             var mpgAtc = (IndexableObjectProperty) medicinalProductGroup.GetPropertyByAbbreviatedName("hasATCConcept").Property;
             Assert.Equal(2, mpgAtc.ChildProperties.Count);

@@ -20,7 +20,7 @@ namespace DragqnLD.Core.UnitTests.Utils
         public const string PropertyNameIngredientsPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
         public const string PropertyNameIngredientMayTreat = @"http://linked.opendata.cz/ontology/drug-encyclopedia/mayTreat,http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
         public const string PropertyNameIngredientPregnancyCategory = @"http://linked.opendata.cz/ontology/drug-encyclopedia/hasPregnancyCategory,";
-        public const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
+        
         public const string PropertyNameIngredientsTitle = @"http://linked.opendata.cz/ontology/drug-encyclopedia/title,@value";
     }
 }

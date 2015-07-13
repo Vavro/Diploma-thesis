@@ -17,6 +17,11 @@ namespace DragqnLD.Core.Implementations
         None
     }
 
+    public static class KnownRavenDBAnalyzers
+    {
+        public const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
+    }
+
     public class FieldDefinition
     {
         public DragqnLDIndexAnalyzer Analyzer { get; set; }
@@ -34,16 +39,22 @@ namespace DragqnLD.Core.Implementations
             mapBuilder.AppendLine();
             mapBuilder.AppendLine("select new { ");
 
+            var analyzers = new Dictionary<string, string>();
+
             foreach (var propertyToIndex in propertiesToIndex.PropertiesToIndex)
             {
-                var mapLine = CreateIndexedFieldNameMapLine(propertyPaths, propertyToIndex);
-                mapBuilder.AppendLine(mapLine);
-                mapBuilder.AppendLine();
+                var mapLine = CreateIndexedFieldNameAndAccess(propertyPaths, propertyToIndex);
+                mapBuilder.Append(mapLine.Item1 + " = " + mapLine.Item2);
+                mapBuilder.AppendLine(",");
+                if (propertyToIndex.Fulltext)
+                {
+                    analyzers.Add(mapLine.Item1, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
+                }
             }
             mapBuilder.AppendLine(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
 
             var map = mapBuilder.ToString();
-            var indexDefintion = new IndexDefinition() { Map = map };
+            var indexDefintion = new IndexDefinition() { Map = map, Analyzers = analyzers};
             return indexDefintion;
         }
         private class UniqueVarProvider
@@ -65,7 +76,7 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public string CreateIndexedFieldNameMapLine(ConstructQueryAccessibleProperties propertyPaths, PropertiesToIndex propertyToIndex)
+        public Tuple<string,string> CreateIndexedFieldNameAndAccess(ConstructQueryAccessibleProperties propertyPaths, PropertiesToIndex propertyToIndex)
         {
             var pathNames = propertyToIndex.AbbreviatedName.Split('.');
             IIndexableProperty currentProperty = propertyPaths.RootProperty;
@@ -78,6 +89,13 @@ namespace DragqnLD.Core.Implementations
 
             for (int i = 0; i < pathNames.Length; i++)
             {
+                if (i == 0)
+                {
+                    fieldAccessNoArrayBuilder.Append("doc");
+                }
+
+                fieldAccessNoArrayBuilder.Append(".");
+
                 var searchedPropName = pathNames[i];
 
                 var objectProp = currentProperty as IndexableObjectProperty;
@@ -89,12 +107,14 @@ namespace DragqnLD.Core.Implementations
                             {
                                 CheckCanIndexId(objectProp);
                                 fieldNameBuilder.Append("_id");
+                                fieldAccessNoArrayBuilder.Append("_id");
                                 break;
                             }
                         case "@type":
                             {
                                 CheckCanIndexType(objectProp);
                                 fieldNameBuilder.Append("_type");
+                                fieldAccessNoArrayBuilder.Append("_type");
                                 break;
                             }
                         default:
@@ -112,12 +132,6 @@ namespace DragqnLD.Core.Implementations
                                 var isWrappedInArray = nestedProperty.WrappedInArray.HasValue &&
                                                        (bool)nestedProperty.WrappedInArray;
 
-                                if (i == 0)
-                                {
-                                    fieldAccessNoArrayBuilder.Append("doc");
-                                }
-
-                                fieldAccessNoArrayBuilder.Append(".");
                                 fieldAccessNoArrayBuilder.Append(nestedProperty.AbbreviatedName);
 
                                 if (isWrappedInArray)
@@ -160,7 +174,7 @@ namespace DragqnLD.Core.Implementations
                 fieldAccessBuilder.Append(")");
             }
 
-            return fieldNameBuilder + " = " + fieldAccessBuilder;
+            return new Tuple<string, string>(fieldNameBuilder.ToString(),fieldAccessBuilder.ToString());
         }
 
         private void CheckCanIndexType(IndexableObjectProperty property)
@@ -168,7 +182,7 @@ namespace DragqnLD.Core.Implementations
             if (!(property.HasId.HasValue
                   && (bool)property.HasId))
             {
-                throw new ArgumentException("Cannot index Id");
+                throw new ArgumentException("Cannot index Type");
             }
         }
 
@@ -177,7 +191,7 @@ namespace DragqnLD.Core.Implementations
             if (!(property.HasId.HasValue
                   && (bool)property.HasId))
             {
-                throw new ArgumentException("Cannot index type");
+                throw new ArgumentException("Cannot index Id");
             }
         }
     }

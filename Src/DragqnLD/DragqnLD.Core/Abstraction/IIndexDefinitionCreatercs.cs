@@ -17,6 +17,7 @@ namespace DragqnLD.Core.Abstraction
     public class PropertiesToIndex
     {
         public string AbbreviatedName { get; set; }
+        public bool Fulltext { get; set; }
     }
 
     interface IIndexDefinitionCreater

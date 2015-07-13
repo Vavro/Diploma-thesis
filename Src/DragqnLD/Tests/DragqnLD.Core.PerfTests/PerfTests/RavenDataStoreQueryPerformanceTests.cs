@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DragqnLD.Core.Implementations;
 using DragqnLD.Core.Implementations.Utils;
 using DragqnLD.Core.UnitTests.Utils;
 using Raven.Abstractions.Indexing;
@@ -186,7 +187,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                             Analyzers =
                                 new Dictionary<string, string>
                                 {
-                            {propertyNameMedicalProductsTitleEscaped, TestDataConstants.AnalyzerLuceneStandard}
+                            {propertyNameMedicalProductsTitleEscaped, KnownRavenDBAnalyzers.AnalyzerLuceneStandard}
                         }
                         }, true);
                 });
@@ -228,7 +229,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
                         Analyzers =
                             new Dictionary<string, string>
                             {
-                            {propertyNameMedicalProductsDescriptionEscaped, TestDataConstants.AnalyzerLuceneStandard}
+                            {propertyNameMedicalProductsDescriptionEscaped, KnownRavenDBAnalyzers.AnalyzerLuceneStandard}
                         }
                     }, true);
             });
