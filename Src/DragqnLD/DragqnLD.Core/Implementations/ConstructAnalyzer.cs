@@ -392,7 +392,7 @@ namespace DragqnLD.Core.Implementations
                     //delete <> from start and end of the pattern
                     propertyFullUriName = propertyFullUriName.Trim('<', '>');
 
-                    var property = ConstructPropertyFrom(objectVariableName, false);
+                    var property = ConstructPropertyFrom(objectVariableName, false, propertyFullUriName);
 
                     //get abbreviation
                     string abbreviatedName;
