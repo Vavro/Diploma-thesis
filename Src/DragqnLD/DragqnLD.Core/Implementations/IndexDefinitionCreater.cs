@@ -148,11 +148,17 @@ namespace DragqnLD.Core.Implementations
                     continue;
                 }
 
-                var valueProp = (IndexableValueProperty)currentProperty;
                 if (i != pathNames.Length - 1) //has to be the end of the path
                 {
                     throw new ArgumentException(String.Format("Path is pointing to a non existing property, finished at {0}, whole path {1}", searchedPropName, propertyToIndex.AbbreviatedName));
                 }
+                break;                
+            }
+
+            //at the end could be a value property of type languagaString we need to handle
+            var valueProp = currentProperty as IndexableValueProperty;
+            if (valueProp != null)
+            {
                 //name of this value property is already added, from traversing the above value, now only add _value access if needed - thats needed only on langTaggedString
                 if (valueProp.Type == ValuePropertyType.LanguageString)
                 {

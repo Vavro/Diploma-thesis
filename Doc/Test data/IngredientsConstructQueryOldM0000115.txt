@@ -1,5 +1,5 @@
 PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 CONSTRUCT
 {
@@ -15,7 +15,7 @@ CONSTRUCT
     enc:mayTreat ?mt ;
     enc:mayPrevent ?mp ;
     enc:contraindicatedWith ?ci ;
-    enc:hasMedicinalProductGroup ?mpg .
+    enc:hasMedicinalProduct ?mpg .
   ?pa a enc:PharmacologicalAction ;
     enc:title ?paTitle ;
     enc:description ?paDescription .
@@ -34,7 +34,7 @@ CONSTRUCT
   ?ci a enc:DiseaseOrFinding ;
     enc:title ?ciTitle ;
     enc:description ?ciDescription .
-  ?mpg a enc:MedicinalProductGroup ;
+  ?mpg a enc:MedicinalProduct ;
     enc:title ?mpgTitle ;
     enc:description ?mpgDescription ;
     enc:hasRouteOfAdministration ?mpgRoALabel ;
@@ -88,7 +88,7 @@ WHERE
   UNION
   {
     <http://linked.opendata.cz/resource/drug-encyclopedia/ingredient/M0000115>
-      enc:hasMedicinalProductGroup ?mpg .
+      enc:hasMedicinalProduct ?mpg .
     ?mpg enc:title ?mpgTitle .
     OPTIONAL {
       ?mpg enc:description ?mpgDescription .
