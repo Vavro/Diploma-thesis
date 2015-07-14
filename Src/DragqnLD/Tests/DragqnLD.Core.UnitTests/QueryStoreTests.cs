@@ -285,14 +285,14 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
         [Fact]
         public async Task CanAddMultipleIndexesToDifferentQueryDefinitoin()
         {
-            const string definitionId = "Query/1";
+            const string definitionId = "Query/3";
 
             const string indexId = definitionId + "/_id";
             var indexDefinition = new DragqnLDIndexDefiniton()
             {
                 Name = indexId,
                 RavenMap = @"from doc in docs
-where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/3""
 select new { 
 _id = doc._id,
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
