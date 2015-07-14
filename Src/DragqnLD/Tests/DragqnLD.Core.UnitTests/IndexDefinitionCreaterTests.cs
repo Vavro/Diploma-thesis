@@ -57,6 +57,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             propertiesToIndex.PropertiesToIndex.Add(new PropertiesToIndex() { AbbreviatedName = "@id" });
             propertiesToIndex.PropertiesToIndex.Add(new PropertiesToIndex() {AbbreviatedName = "title"});
             propertiesToIndex.PropertiesToIndex.Add(new PropertiesToIndex() { AbbreviatedName = "hasMedicinalProduct.hasATCConcept.prefLabel" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertiesToIndex() { AbbreviatedName = "hasMedicinalProduct.hasATCConcept.notation" });
             propertiesToIndex.PropertiesToIndex.Add(new PropertiesToIndex() { AbbreviatedName = "hasMechanismOfAction.@id" });
 
             var indexDefiniton = _indexDefinitionCreater.CreateIndexDefinitionFor(ingredientsQd, propertyPaths, propertiesToIndex);
@@ -70,6 +71,10 @@ hasMedicinalProduct_hasATCConcept_prefLabel = ((IEnumerable<dynamic>)doc.hasMedi
 ((IEnumerable<dynamic>)x0.hasATCConcept).DefaultIfEmpty().Select(x1 => 
 ((IEnumerable<dynamic>)x1.prefLabel).DefaultIfEmpty().Select(x2 => 
 x2._value))),
+hasMedicinalProduct_hasATCConcept_notation = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => 
+((IEnumerable<dynamic>)x0.hasATCConcept).DefaultIfEmpty().Select(x1 => 
+((IEnumerable<dynamic>)x1.notation).DefaultIfEmpty().Select(x2 => 
+x2))),
 hasMechanismOfAction__id = ((IEnumerable<dynamic>)doc.hasMechanismOfAction).DefaultIfEmpty().Select(x0 => 
 x0._id),
 _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
