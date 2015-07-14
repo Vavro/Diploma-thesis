@@ -15,6 +15,7 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
+    [Trait("Category", "Basic")]
     public class IndexDefinitionCreaterTests : TestsBase, IClassFixture<QueryStoreFixture>
     {
         private IndexDefinitionCreater _indexDefinitionCreater;

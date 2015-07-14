@@ -84,6 +84,7 @@
     <Compile Include="Abstraction\IIndexDefinitionCreatercs.cs" />
     <Compile Include="Abstraction\IParsedSparqlQuery.cs" />
     <Compile Include="Abstraction\IPropertyUnescapesCache.cs" />
+    <Compile Include="Abstraction\ISelectAnalyzer.cs" />
     <Compile Include="Abstraction\ISparqlEnpointClient.cs" />
     <Compile Include="Abstraction\Query\Progress.cs" />
     <Compile Include="Abstraction\Query\PropertyEscape.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Abstraction\IQueryAnswerer.cs" />
     <Compile Include="Abstraction\IQueryStore.cs" />
     <Compile Include="Implementations\RavenDataStore.cs" />
+    <Compile Include="Implementations\SelectAnalyzer.cs" />
     <Compile Include="Implementations\SparqlEnpointClient.cs" />
     <Compile Include="Implementations\Utils\LuceneQueryStringExtensions.cs" />
     <Compile Include="Implementations\Utils\SpecialCharacters.cs" />

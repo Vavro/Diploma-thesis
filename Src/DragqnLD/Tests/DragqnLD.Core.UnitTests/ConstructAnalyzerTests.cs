@@ -168,6 +168,7 @@ WHERE
         };
     }
 
+    [Trait("Category", "Basic")]
     public class ConstructAnalyzerTests : TestsBase
     {
         public ConstructAnalyzerTests(ITestOutputHelper output) : base(output)
