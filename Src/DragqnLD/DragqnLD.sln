@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{097BFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Core.PerfTests", "Tests\DragqnLD.Core.PerfTests\DragqnLD.Core.PerfTests.csproj", "{F7662897-E196-44EF-BD1A-8998B5377D18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragqnLD.Analyzers", "DragqnLD.Analyzers\DragqnLD.Analyzers.csproj", "{C4AF549B-3420-47AB-848E-8BFCDF1BD70B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{F7662897-E196-44EF-BD1A-8998B5377D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7662897-E196-44EF-BD1A-8998B5377D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7662897-E196-44EF-BD1A-8998B5377D18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AF549B-3420-47AB-848E-8BFCDF1BD70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AF549B-3420-47AB-848E-8BFCDF1BD70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AF549B-3420-47AB-848E-8BFCDF1BD70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AF549B-3420-47AB-848E-8BFCDF1BD70B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -144,6 +144,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DragqnLD.Analyzers\DragqnLD.Analyzers.csproj">
+      <Project>{c4af549b-3420-47ab-848e-8bfcdf1bd70b}</Project>
+      <Name>DragqnLD.Analyzers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DragqnLD.Core\DragqnLD.Core.csproj">
       <Project>{D8A0E344-3F64-4F69-83AC-156D8CE1FBD5}</Project>
       <Name>DragqnLD.Core</Name>

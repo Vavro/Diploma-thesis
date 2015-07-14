@@ -10,6 +10,7 @@ using DragqnLD.Core.Implementations;
 using Raven.Json.Linq;
 using Xunit;
 using Xunit.Abstractions;
+using DragqnLD.Analyzers;
 
 namespace DragqnLD.Core.UnitTests
 {
