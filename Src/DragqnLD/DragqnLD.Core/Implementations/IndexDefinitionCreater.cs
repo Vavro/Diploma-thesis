@@ -51,7 +51,7 @@ namespace DragqnLD.Core.Implementations
                     analyzers.Add(mapLine.Item1, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
                 }
             }
-            mapBuilder.AppendLine(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
+            mapBuilder.Append(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
 
             var map = mapBuilder.ToString();
             var indexDefintion = new IndexDefinition() { Map = map, Analyzers = analyzers};
