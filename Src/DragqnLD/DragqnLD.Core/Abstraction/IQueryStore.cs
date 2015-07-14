@@ -6,6 +6,7 @@ using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using JsonLD.Core;
 using Newtonsoft.Json.Linq;
+using Raven.Abstractions.Indexing;
 using Raven.Json.Linq;
 
 namespace DragqnLD.Core.Abstraction
@@ -87,5 +88,15 @@ namespace DragqnLD.Core.Abstraction
         /// <param name="definitionId">The definition identifier.</param>
         /// <returns></returns>
         Task<ConstructQueryAccessibleProperties> GetHierarchy(string definitionId);
+
+        /// <summary>
+        /// Creates the index.
+        /// </summary>
+        /// <param name="definitionId">The definition identifier.</param>
+        /// <param name="indexDefinition">The index definition.</param>
+        /// <returns></returns>
+        Task<string> StoreIndex(string definitionId, DragqnLDIndexDefiniton indexDefinition);
+
+        Task<QueryIndexDefinitions> GetIndexes(string definitionId);
     }
 }

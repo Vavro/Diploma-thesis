@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
@@ -7,9 +8,12 @@ using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using JsonLD.Core;
 using Newtonsoft.Json.Linq;
+using Raven.Abstractions.Indexing;
 using Raven.Client.Document;
 using Raven.Client.Embedded;
+using Raven.Client.Linq;
 using Raven.Database.Config;
+using Raven.Database.Indexing;
 using Raven.Json.Linq;
 using Raven.Tests.Helpers;
 using Xunit;
@@ -147,16 +151,16 @@ namespace DragqnLD.Core.UnitTests
                 RootProperty = root
             };
 
-            root.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title", 
-                new IndexableValueProperty() {Type = ValuePropertyType.LanguageString} );
+            root.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title",
+                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
             var medicinalProductGroup = new IndexableObjectProperty();
             root.AddProperty("hasMedicinalProductGroup", "http://linked.opendata.cz/ontology/drug-encyclopedia/hasMedicinalProductGroup", medicinalProductGroup);
-            medicinalProductGroup.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title", new IndexableValueProperty() {Type = ValuePropertyType.LanguageString});
-            medicinalProductGroup.AddProperty("description", "http://linked.opendata.cz/ontology/drug-encyclopedia/description", new IndexableValueProperty() {Type = ValuePropertyType.Value});
+            medicinalProductGroup.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title", new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
+            medicinalProductGroup.AddProperty("description", "http://linked.opendata.cz/ontology/drug-encyclopedia/description", new IndexableValueProperty() { Type = ValuePropertyType.Value });
             var atc = new IndexableObjectProperty();
-            medicinalProductGroup.AddProperty("hasATCConcept", "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept", atc);    
-            atc.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title", new IndexableValueProperty() {Type = ValuePropertyType.LanguageString});
-            
+            medicinalProductGroup.AddProperty("hasATCConcept", "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept", atc);
+            atc.AddProperty("title", "http://linked.opendata.cz/ontology/drug-encyclopedia/title", new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
+
             const string definitionId = "Query/1";
 
             await _queryStore.StoreHierarchy(definitionId, hierarchy);
@@ -166,6 +170,163 @@ namespace DragqnLD.Core.UnitTests
             var loadedHierarchy = await _queryStore.GetHierarchy(definitionId);
 
             Assert.NotNull(loadedHierarchy);
+        }
+
+        [Fact]
+        public async Task CanStoreNewIndex()
+        {
+            const string definitionId = "Query/1";
+
+            const string indexId = definitionId + "/_id";
+
+            var indexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = indexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>() { { "_id", KnownRavenDBAnalyzers.AnalyzerLuceneStandard } }
+            };
+
+            await _queryStore.StoreIndex(definitionId, indexDefinition);
+
+            RavenTestBase.WaitForUserToContinueTheTest(this._documentStore);
+            var loadedIndex = await this._documentStore.AsyncDatabaseCommands.GetIndexAsync(indexDefinition.Name);
+            Assert.NotNull(loadedIndex);
+
+            var indexDefinitions = await _queryStore.GetIndexes(definitionId);
+            Assert.True(indexDefinitions.Indexes.ContainsKey(indexId));
+        }
+
+        [Fact]
+        public async Task CanRewriteCurrentIndex()
+        {
+            const string definitionId = "Query/1";
+
+            const string indexId = definitionId + "/_id";
+            var indexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = indexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>() { { "_id", KnownRavenDBAnalyzers.AnalyzerLuceneStandard } }
+            };
+
+            await _queryStore.StoreIndex(definitionId, indexDefinition);
+
+            var newIndexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = indexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>()
+            };
+            await _queryStore.StoreIndex(definitionId, newIndexDefinition);
+
+            //RavenTestBase.WaitForUserToContinueTheTest(this._documentStore);
+            var loadedIndex = await this._documentStore.AsyncDatabaseCommands.GetIndexAsync(indexId);
+            Assert.NotNull(loadedIndex);
+
+            var indexDefinitions = await _queryStore.GetIndexes(definitionId);
+            Assert.True(indexDefinitions.Indexes.ContainsKey(indexId));
+            Assert.True(!indexDefinitions.Indexes[indexId].RavenAnalyzers.Any());
+        }
+
+        [Fact]
+        public async Task CanAddMultipleIndexesToSameQueryDefinitoin()
+        {
+            const string definitionId = "Query/1";
+
+            const string indexId = definitionId + "/_id";
+            var indexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = indexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>() { { "_id", KnownRavenDBAnalyzers.AnalyzerLuceneStandard } }
+            };
+
+            await _queryStore.StoreIndex(definitionId, indexDefinition);
+
+            const string newIndexId = indexId + "_type";
+            var newIndexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = newIndexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_type = doc._type,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>()
+            };
+            await _queryStore.StoreIndex(definitionId, newIndexDefinition);
+
+            //RavenTestBase.WaitForUserToContinueTheTest(this._documentStore);
+            var loadedIndex = await this._documentStore.AsyncDatabaseCommands.GetIndexAsync(indexId);
+            Assert.NotNull(loadedIndex);
+
+            var indexDefinitions = await _queryStore.GetIndexes(definitionId);
+            Assert.True(indexDefinitions.Indexes.ContainsKey(indexId));
+            Assert.True(indexDefinitions.Indexes.ContainsKey(newIndexId));
+        }
+
+        [Fact]
+        public async Task CanAddMultipleIndexesToDifferentQueryDefinitoin()
+        {
+            const string definitionId = "Query/1";
+
+            const string indexId = definitionId + "/_id";
+            var indexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = indexId,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/1""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>() { { "_id", KnownRavenDBAnalyzers.AnalyzerLuceneStandard } }
+            };
+
+            await _queryStore.StoreIndex(definitionId, indexDefinition);
+
+            const string definitionId2 = "Query/2";
+            const string index2Id = definitionId2 + "/_id";
+            var newIndexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = index2Id,
+                RavenMap = @"from doc in docs
+where doc[""@metadata""][""Raven-Entity-Name""] == ""Query/2""
+select new { 
+_id = doc._id,
+_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}",
+                RavenAnalyzers = new Dictionary<string, string>()
+            };
+            await _queryStore.StoreIndex(definitionId2, newIndexDefinition);
+
+            //RavenTestBase.WaitForUserToContinueTheTest(this._documentStore);
+            var loadedIndex = await this._documentStore.AsyncDatabaseCommands.GetIndexAsync(indexId);
+            var loadedIndex2 = await _documentStore.AsyncDatabaseCommands.GetIndexAsync(index2Id);
+            Assert.NotNull(loadedIndex);
+            Assert.NotNull(loadedIndex2);
+
+            var indexDefinitions = await _queryStore.GetIndexes(definitionId);
+            Assert.True(indexDefinitions.Indexes.ContainsKey(indexId));
+            Assert.Equal(1, indexDefinitions.Indexes.Count);
+            var indexDefinitions2 = await _queryStore.GetIndexes(definitionId2);
+            Assert.True(indexDefinitions2.Indexes.ContainsKey(index2Id));
+            Assert.Equal(1, indexDefinitions2.Indexes.Count);
         }
     }
 }

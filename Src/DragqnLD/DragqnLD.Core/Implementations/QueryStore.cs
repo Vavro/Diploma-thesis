@@ -9,6 +9,7 @@ using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Indexes;
 using JsonLD.Core;
 using Microsoft.Win32;
+using Raven.Abstractions.Indexing;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Json.Linq;
@@ -122,16 +123,6 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        private static string GetContextId(string definitionId)
-        {
-            return definitionId + "/Context";
-        }
-
-        private static string GetHierarchyId(string definitionId)
-        {
-            return definitionId + "/Hierarchy";
-        }
-
         public async Task<string> StoreHierarchy(string definitionId, ConstructQueryAccessibleProperties hierarchy)
         {
             var hierarchyId = GetHierarchyId(definitionId);
@@ -162,5 +153,73 @@ namespace DragqnLD.Core.Implementations
                 return hierarchy;
             }
         }
+
+        public async Task<string> StoreIndex(string definitionId, DragqnLDIndexDefiniton indexDefinition)
+        {
+            var definitionIndexesId = GetIndexId(definitionId);
+            var indexRavenName = GetIndexRavenName(definitionId, indexDefinition.Name);
+            using (var session = _store.OpenAsyncSession())
+            {
+                var currentIndexes = await session.LoadAsync<QueryIndexDefinitions>(definitionIndexesId);
+                if (currentIndexes == null)
+                {
+                    currentIndexes = new QueryIndexDefinitions();
+                }
+                currentIndexes.Indexes.Remove(indexDefinition.Name);
+                currentIndexes.Indexes.Add(indexDefinition.Name, indexDefinition);
+
+                await session.StoreAsync(currentIndexes, definitionIndexesId);
+                
+                var ravenIndexDefinition = new IndexDefinition()
+                {
+                    Map = indexDefinition.RavenMap,
+                    Analyzers = indexDefinition.RavenAnalyzers
+                };
+
+                await session.Advanced.DocumentStore.AsyncDatabaseCommands.PutIndexAsync(indexRavenName,
+                    ravenIndexDefinition, true);
+
+                await session.SaveChangesAsync();
+            }
+            return indexRavenName;
+        }
+
+        private string GetIndexRavenName(string definitionId, string indexName)
+        {
+            if (indexName.StartsWith(definitionId))
+            {
+                return indexName;
+            }
+            throw new ArgumentException("Index name has to start with the definiton id");
+        }
+
+        private string GetIndexId(string definitionId)
+        {
+            return definitionId + "/Indexes";
+        }
+        private static string GetContextId(string definitionId)
+        {
+            return definitionId + "/Context";
+        }
+
+        private static string GetHierarchyId(string definitionId)
+        {
+            return definitionId + "/Hierarchy";
+        }
+
+        public async Task<QueryIndexDefinitions> GetIndexes(string definitionId)
+        {
+            var definitionIndexesId = GetIndexId(definitionId);
+            using (var session = _store.OpenAsyncSession())
+            {
+                var currentIndexes = await session.LoadAsync<QueryIndexDefinitions>(definitionIndexesId);
+                return currentIndexes;
+            }
+        }
+    }
+
+    public class QueryIndexDefinitions
+    {
+        public Dictionary<string, DragqnLDIndexDefiniton> Indexes = new Dictionary<string, DragqnLDIndexDefiniton>();
     }
 }

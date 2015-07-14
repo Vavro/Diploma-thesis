@@ -9,12 +9,21 @@ using Raven.Abstractions.Indexing;
 
 namespace DragqnLD.Core.Abstraction
 {
-    public class DragqnLDIndexDefinition
+    public class DragqnLDIndexRequirements
     {
-        public readonly List<PropertiesToIndex> PropertiesToIndex = new List<PropertiesToIndex>();
+        public readonly List<PropertyToIndex> PropertiesToIndex = new List<PropertyToIndex>();
     }
 
-    public class PropertiesToIndex
+    public class DragqnLDIndexDefiniton
+    {
+        public string Name { get; set; }
+        public DragqnLDIndexRequirements Requirements { get; set; }
+
+        public string RavenMap { get; set; }
+        public IDictionary<string, string> RavenAnalyzers { get; set; }
+    }
+
+    public class PropertyToIndex
     {
         public string AbbreviatedName { get; set; }
         public bool Fulltext { get; set; }
@@ -22,6 +31,6 @@ namespace DragqnLD.Core.Abstraction
 
     interface IIndexDefinitionCreater
     {
-        IndexDefinition CreateIndexDefinitionFor(QueryDefinition ingredientsQd, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexDefinition propertiesToIndex);
+        DragqnLDIndexDefiniton CreateIndexDefinitionFor(QueryDefinition ingredientsQd, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexRequirements requirements);
     }
 }

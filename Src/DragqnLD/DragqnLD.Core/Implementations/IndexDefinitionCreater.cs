@@ -9,6 +9,7 @@ using DragqnLD.Core.Abstraction.Data;
 using DragqnLD.Core.Abstraction.Query;
 using Newtonsoft.Json.Serialization;
 using Raven.Abstractions.Indexing;
+using VDS.RDF.Query.Algebra;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -30,7 +31,9 @@ namespace DragqnLD.Core.Implementations
 
     public class IndexDefinitionCreater : IIndexDefinitionCreater
     {
-        public IndexDefinition CreateIndexDefinitionFor(QueryDefinition ingredientsQd, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexDefinition propertiesToIndex)
+
+
+        public DragqnLDIndexDefiniton CreateIndexDefinitionFor(QueryDefinition ingredientsQd, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexRequirements requirements)
         {
             var mapBuilder = new StringBuilder();
             mapBuilder.AppendLine("from doc in docs");
@@ -38,25 +41,46 @@ namespace DragqnLD.Core.Implementations
             mapBuilder.Append('"' + ingredientsQd.Id + '"');
             mapBuilder.AppendLine();
             mapBuilder.AppendLine("select new { ");
+            var createdPropNames = new List<string>();
 
             var analyzers = new Dictionary<string, string>();
 
-            foreach (var propertyToIndex in propertiesToIndex.PropertiesToIndex)
+            foreach (var propertyToIndex in requirements.PropertiesToIndex)
             {
                 var mapLine = CreateIndexedFieldNameAndAccess(propertyPaths, propertyToIndex);
-                mapBuilder.Append(mapLine.Item1 + " = " + mapLine.Item2);
+                mapBuilder.Append(mapLine.Name + " = " + mapLine.Access);
                 mapBuilder.AppendLine(",");
                 if (propertyToIndex.Fulltext)
                 {
-                    analyzers.Add(mapLine.Item1, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
+                    analyzers.Add(mapLine.Name, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
                 }
+                createdPropNames.Add(mapLine.Name);
             }
             mapBuilder.Append(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
 
             var map = mapBuilder.ToString();
-            var indexDefintion = new IndexDefinition() { Map = map, Analyzers = analyzers};
-            return indexDefintion;
+            var ravenIndexDefinition = new IndexDefinition() { Map = map, Analyzers = analyzers};
+            
+            DragqnLDIndexDefiniton indexDefinition = new DragqnLDIndexDefiniton()
+            {
+                Name = CreateNameFor(ingredientsQd, createdPropNames),
+                Requirements = requirements,
+                RavenMap = ravenIndexDefinition.Map,
+                RavenAnalyzers = ravenIndexDefinition.Analyzers
+            };
+
+            return indexDefinition;
         }
+
+        private static string CreateNameFor(QueryDefinition ingredientsQd, IEnumerable<string> propNames)
+        {
+            const string delimiter = "_";
+            var concatenatedReplacedPropNames = propNames.Aggregate((str1, str2) => str1 + delimiter + str2);
+            
+            return ingredientsQd.Id + "/" + concatenatedReplacedPropNames;
+            
+        }
+
         private class UniqueVarProvider
         {
             private int _index = 0;
@@ -69,7 +93,19 @@ namespace DragqnLD.Core.Implementations
             }
         }
 
-        public Tuple<string,string> CreateIndexedFieldNameAndAccess(ConstructQueryAccessibleProperties propertyPaths, PropertiesToIndex propertyToIndex)
+        public class FieldNameAndAccess
+        {
+            public FieldNameAndAccess(string name, string access)
+            {
+                Name = name;
+                Access = access;
+            }
+
+            public string Name { get; set; }
+            public string Access { get; set; }
+        }
+
+        public FieldNameAndAccess CreateIndexedFieldNameAndAccess(ConstructQueryAccessibleProperties propertyPaths, PropertyToIndex propertyToIndex)
         {
             var pathNames = propertyToIndex.AbbreviatedName.Split('.');
             IIndexableProperty currentProperty = propertyPaths.RootProperty;
@@ -173,7 +209,7 @@ namespace DragqnLD.Core.Implementations
                 fieldAccessBuilder.Append(")");
             }
 
-            return new Tuple<string, string>(fieldNameBuilder.ToString(),fieldAccessBuilder.ToString());
+            return new FieldNameAndAccess(fieldNameBuilder.ToString(), fieldAccessBuilder.ToString());
         }
 
         private void CheckCanIndexType(IndexableObjectProperty property)
