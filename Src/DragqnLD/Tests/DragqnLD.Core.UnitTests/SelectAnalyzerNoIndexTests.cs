@@ -11,11 +11,11 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    public class SelectAnalyzerTests : TestsBase
+    public class SelectAnalyzerNoIndexTests : TestsBase
     {
         private SelectAnalyzer _selectAnalyzer;
 
-        public SelectAnalyzerTests(ITestOutputHelper output) : base(output)
+        public SelectAnalyzerNoIndexTests(ITestOutputHelper output) : base(output)
         {
             _selectAnalyzer = new SelectAnalyzer();
         }
