@@ -265,13 +265,13 @@ WHERE
             var atcConcept = new IndexableObjectProperty() {HasId = true, HasType = true};
             medicinalProduct.AddProperty("hasATCConcept",
                 "http://linked.opendata.cz/ontology/drug-encyclopedia/hasATCConcept",
-                atcConcept);
+                atcConcept,true);
             atcConcept.AddProperty("prefLabel",
                 "http://www.w3.org/2004/02/skos/core#prefLabel",
                 new IndexableValueProperty() { Type = ValuePropertyType.LanguageString }, true);
             atcConcept.AddProperty("notation",
                "http://www.w3.org/2004/02/skos/core#notation",
-               new IndexableValueProperty() { Type = ValuePropertyType.LanguageString }, true);
+               new IndexableValueProperty() { Type = ValuePropertyType.Value }, true);
 
             return hierarchy;
         }

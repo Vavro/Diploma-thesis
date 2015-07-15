@@ -95,7 +95,8 @@ WHERE
 
             var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
 
-            const string expectedLuceneQuery = @"+contraindicatedWith,title,_value: (""Léková alergie"") +hasPharmacologicalAction,title,_value: (""Neopioidní analgetika"")";
+            const string expectedLuceneQuery = 
+@"+contraindicatedWith,title,_value: (""Léková alergie"") +hasPharmacologicalAction,title,_value: (""Neopioidní analgetika"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
@@ -117,6 +118,55 @@ WHERE
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
 
+        }
+
+        [Fact]
+        public void CanConvertNestedQuery()
+        {
+            var query = @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?s
+WHERE 
+{ 
+  ?s enc:hasMedicinalProduct ?mp.
+  ?mp enc:hasATCConcept ?mpatc.
+  ?mpatc skos:notation ""A03EA""
+}";
+            var hierarchy = TestQueries.IngredientsQueryHierarchy();
+
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+
+            const string expectedLuceneQuery = @"+hasMedicinalProduct,hasATCConcept,notation: (""A03EA"")";
+
+            Assert.Equal(expectedLuceneQuery, convertedQuery);
+        }
+
+        [Fact]
+        public void CanConvertVeryComplexQuery()
+        {
+            var query = @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?s
+WHERE 
+{ 
+  ?s enc:hasMedicinalProduct ?mp ;
+     enc:contraindicatedWith ?cw ;
+     enc:hasPharmacologicalAction ?pa.
+  ?pa enc:title ""Antitusika""@cs.
+  ?cw enc:title ""Léková alergie""@cs.
+  ?mp enc:hasATCConcept ?mpatc;
+      enc:title ""SPASMOPAN""@cs.
+  ?mpatc skos:notation ""A03EA""
+}";
+            var hierarchy = TestQueries.IngredientsQueryHierarchy();
+
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+
+            const string expectedLuceneQuery = @"+contraindicatedWith,title,_value: (""Léková alergie"") +hasMedicinalProduct,title,_value: (""SPASMOPAN"") +hasMedicinalProduct,hasATCConcept,notation: (""A03EA"") +hasPharmacologicalAction,title,_value: (""Antitusika"")";
+
+            Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
     }
 }
