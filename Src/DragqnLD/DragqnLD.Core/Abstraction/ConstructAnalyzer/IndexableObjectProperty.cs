@@ -35,13 +35,14 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
             ChildProperties = new List<NamedIndexableProperty>();
         }
 
-        public void AddProperty(string abbreviatedName, string fullUriName, IIndexableProperty property)
+        public void AddProperty(string abbreviatedName, string fullUriName, IIndexableProperty property, bool? wrappedInArray = null)
         {
             var namedProperty = new NamedIndexableProperty()
             {
                 AbbreviatedName = abbreviatedName,
                 FullName = fullUriName,
-                Property = property
+                Property = property,
+                WrappedInArray = wrappedInArray
             };
             _childPropertiesByFullName.Add(fullUriName, namedProperty);
             _childPropertiesByAbbreviatedName.Add(abbreviatedName, namedProperty);

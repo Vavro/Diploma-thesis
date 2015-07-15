@@ -54,8 +54,6 @@ WHERE { ?s enc:title ""Nitrous oxide"" }";
         [Fact]
         public void CanConvertQueryWithLangTagNoIndex()
         {
-
-
             var languageTaggedString =
                 @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
 SELECT ?s
@@ -72,12 +70,32 @@ WHERE { ?s enc:title ""Nitrous oxide""@en }";
             };
             root.AddProperty("title",
                 "http://linked.opendata.cz/ontology/drug-encyclopedia/title",
-                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
-            root.GetPropertyByAbbreviatedName("title").WrappedInArray = true;
+                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString }, true);
 
             var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(languageTaggedString, hierarchy);
-
+            
             const string expectedLuceneQuery = @"+title,_value: (""Nitrous oxide"")";
+
+            Assert.Equal(expectedLuceneQuery, convertedQuery);
+        }
+
+        [Fact]
+        public void CanConvertComplexQuery()
+        {
+            var query = @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+SELECT ?s
+WHERE 
+{ 
+  ?s enc:contraindicatedWith ?cw.
+  ?s enc:hasPharmacologicalAction ?pa.
+  ?pa enc:title ""Neopioidní analgetika""@cs.
+  ?cw enc:title ""Léková alergie""@cs.
+}";
+            var hierarchy = TestQueries.IngredientsQueryHierarchy();
+
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+
+            const string expectedLuceneQuery = "";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
