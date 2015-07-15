@@ -22,6 +22,47 @@ namespace DragqnLD.Core.Implementations
     {
         public string ConvertSparqlToLuceneNoIndex(string sparql, ConstructQueryAccessibleProperties hierarchy)
         {
+            var parsedSparql = ParseAndCheck(sparql);
+
+            var rootVariable = parsedSparql.Variables.Single(var => var.IsResultVariable);
+
+            //find all property paths that are getting queried
+            //  enumerate triples start from variable and traverse down all possible paths
+            //  end of a path is designated by a literal, or by finding the variable in the FILTER clause
+
+            var accessedPropertyPaths = CreateAccessedPropertyPaths(hierarchy, parsedSparql, rootVariable);
+
+            CheckAccessedPropertyPaths(accessedPropertyPaths);
+
+            //consult hierarchy for abbrevieted names and array wrapping 
+            //  to construct correct lucene title name for each identified path, dont forget possible "_value" at the end
+            //if path points to a objectProp -> add _id
+            var luceneQuery = CreateLuceneQueryNoIndexFor(accessedPropertyPaths,hierarchy);
+
+            return luceneQuery;
+        }
+
+        private static void CheckAccessedPropertyPaths(List<SelectPropertyPathsBuilder.PathWithValue> accessedPropertyPaths)
+        {
+//for now filters arent supported
+            if (!accessedPropertyPaths.TrueForAll(path => path.VariableName == null))
+            {
+                throw new NotSupportedException("Filter expressions arent supported");
+            }
+        }
+
+        private static List<SelectPropertyPathsBuilder.PathWithValue> CreateAccessedPropertyPaths(ConstructQueryAccessibleProperties hierarchy, SparqlQuery parsedSparql,
+            SparqlVariable rootVariable)
+        {
+            var tripplePatternsBySubjectParameter = SortPatternsBySubjectParamName(parsedSparql);
+
+            var propertyPathsBuidler = new SelectPropertyPathsBuilder(tripplePatternsBySubjectParameter, hierarchy);
+            var accessedPropertyPaths = propertyPathsBuidler.CreateAccessedPropertyPaths(rootVariable.Name);
+            return accessedPropertyPaths;
+        }
+
+        private static SparqlQuery ParseAndCheck(string sparql)
+        {
             var parser = new SparqlQueryParser();
             var parsedSparql = parser.ParseFromString(sparql);
 
@@ -30,30 +71,36 @@ namespace DragqnLD.Core.Implementations
                 throw new NotSupportedException("only one variable, that will be bound to the resulting ids is supported");
             }
 
+            if (parsedSparql.RootGraphPattern.HasChildGraphPatterns)
+                throw new NotSupportedException("Child graph patterns are not supported");
+
+            return parsedSparql;
+        }
+
+        public string ConvertSparqlToLuceneWithIndex(string sparql, ConstructQueryAccessibleProperties hierarchy,
+            DragqnLDIndexDefiniton indexDefinition)
+        {
+            var parsedSparql = ParseAndCheck(sparql);
+
             var rootVariable = parsedSparql.Variables.Single(var => var.IsResultVariable);
 
-            //find all property paths that are getting queried
-            //  enumerate triples start from variable and traverse down all possible paths
-            //  end of a path is designated by a literal, or by finding the variable in the FILTER clause
+            var accessedPropertyPaths = CreateAccessedPropertyPaths(hierarchy, parsedSparql, rootVariable);
 
-            //consult hierarchy for abbrevieted names and array wrapping 
-            //  to construct correct lucene title name for each identified path, dont forget possible "_value" at the end
-            //if path points to a objectProp -> add _id
-            if (parsedSparql.RootGraphPattern.HasChildGraphPatterns)
-                throw  new NotSupportedException("Child graph patterns are not supported");
+            CheckAccessedPropertyPaths(accessedPropertyPaths);
 
-            var tripplePatternsBySubjectParameter = SortPatternsBySubjectParamName(parsedSparql);
+            //consult the index definition for the required paths
+            var luceneQuery = CreateLuceneQueryWithIndexFor(accessedPropertyPaths, indexDefinition);
 
-            var propertyPathsBuidler = new SelectPropertyPathsBuilder(tripplePatternsBySubjectParameter, hierarchy);
-            var accessedPropertyPaths = propertyPathsBuidler.CreateAccessedPropertyPaths(rootVariable.Name);
+            return luceneQuery;
+        }
 
-            //for now filters arent supported
-            if (!accessedPropertyPaths.TrueForAll(path => path.VariableName == null))
-            {
-                throw new NotSupportedException("Filter expressions arent supported");
-            }
+        private string CreateLuceneQueryWithIndexFor(List<SelectPropertyPathsBuilder.PathWithValue> accessedPropertyPaths, DragqnLDIndexDefiniton indexDefinition)
+        {
+            var convertedPaths = accessedPropertyPaths.Select(
+                path => new {Value = path.ExpectedValue, luceneField = indexDefinition.PropertyNameMap[path.Path]});
 
-            var luceneQuery = CreateLuceneQueryNoIndexFor(accessedPropertyPaths,hierarchy);
+            var luceneFieldQueries = convertedPaths.Select(path => "+" + path.luceneField + ": (" + path.Value + ")");
+            var luceneQuery = luceneFieldQueries.Aggregate((str1, str2) => str1 + " " + str2);
 
             return luceneQuery;
         }
