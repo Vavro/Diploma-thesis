@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Implementations;
-using Raven.Abstractions.Data;
+using Raven.Abstractions.Indexing;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
-    [Trait("Category","Basic")]
-    public class SelectAnalyzerNoIndexTests : TestsBase
+    public class SelectAnalyzerWithIndexTests : TestsBase
     {
-        private SelectAnalyzer _selectAnalyzer;
+        private readonly SelectAnalyzer _selectAnalyzer;
 
-        public SelectAnalyzerNoIndexTests(ITestOutputHelper output) : base(output)
+        private readonly DragqnLDIndexDefiniton _ingredientsAllPropsIndexDefinition =
+            TestQueries.IngredientsAllPropertiesIndexDefinition();
+
+        public SelectAnalyzerWithIndexTests(ITestOutputHelper output) : base(output)
         {
             _selectAnalyzer = new SelectAnalyzer();
         }
@@ -24,13 +27,11 @@ namespace DragqnLD.Core.UnitTests
         [Fact]
         public void CanConvertSimpleQueryNoIndex()
         {
-
-
             var simpleSparql =
                 @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
 SELECT ?s
 WHERE { ?s enc:title ""Nitrous oxide"" }";
-            
+
             //todo: need two versions 
             //- one for no index - will have to add proper , and .
             //- second for indexed - will have to query the existing fields in the index
@@ -40,18 +41,18 @@ WHERE { ?s enc:title ""Nitrous oxide"" }";
             {
                 RootProperty = root
             };
-            root.AddProperty("title", 
-                "http://linked.opendata.cz/ontology/drug-encyclopedia/title", 
-                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString});
+            root.AddProperty("title",
+                "http://linked.opendata.cz/ontology/drug-encyclopedia/title",
+                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
             root.GetPropertyByAbbreviatedName("title").WrappedInArray = true;
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(simpleSparql, hierarchy);
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(simpleSparql, hierarchy, _ingredientsAllPropsIndexDefinition);
 
-            const string expectedLuceneQuery = @"+title,_value: (""Nitrous oxide"")";
+            const string expectedLuceneQuery = @"+title: (""Nitrous oxide"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
-        
+
         [Fact]
         public void CanConvertQueryWithLangTagNoIndex()
         {
@@ -73,9 +74,9 @@ WHERE { ?s enc:title ""Nitrous oxide""@en }";
                 "http://linked.opendata.cz/ontology/drug-encyclopedia/title",
                 new IndexableValueProperty() { Type = ValuePropertyType.LanguageString }, true);
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(languageTaggedString, hierarchy);
-            
-            const string expectedLuceneQuery = @"+title,_value: (""Nitrous oxide"")";
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(languageTaggedString, hierarchy, _ingredientsAllPropsIndexDefinition);
+
+            const string expectedLuceneQuery = @"+title: (""Nitrous oxide"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
@@ -94,10 +95,10 @@ WHERE
 }";
             var hierarchy = TestQueries.IngredientsQueryHierarchy();
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(query, hierarchy, _ingredientsAllPropsIndexDefinition);
 
-            const string expectedLuceneQuery = 
-@"+contraindicatedWith,title,_value: (""Léková alergie"") +hasPharmacologicalAction,title,_value: (""Neopioidní analgetika"")";
+            const string expectedLuceneQuery =
+@"+contraindicatedWith_title: (""Léková alergie"") +hasPharmacologicalAction_title: (""Neopioidní analgetika"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
@@ -113,9 +114,9 @@ WHERE
 }";
             var hierarchy = TestQueries.IngredientsQueryHierarchy();
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(query, hierarchy, _ingredientsAllPropsIndexDefinition);
 
-            const string expectedLuceneQuery = @"+contraindicatedWith,_id: (""http://linked.opendata.cz/resource/ndfrt/disease/N0000000999"")";
+            const string expectedLuceneQuery = @"+contraindicatedWith__id: (""http://linked.opendata.cz/resource/ndfrt/disease/N0000000999"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
 
@@ -136,9 +137,9 @@ WHERE
 }";
             var hierarchy = TestQueries.IngredientsQueryHierarchy();
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(query, hierarchy, _ingredientsAllPropsIndexDefinition);
 
-            const string expectedLuceneQuery = @"+hasMedicinalProduct,hasATCConcept,notation: (""A03EA"")";
+            const string expectedLuceneQuery = @"+hasMedicinalProduct_hasATCConcept_notation: (""A03EA"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }
@@ -163,9 +164,9 @@ WHERE
 }";
             var hierarchy = TestQueries.IngredientsQueryHierarchy();
 
-            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(query, hierarchy, _ingredientsAllPropsIndexDefinition);
 
-            const string expectedLuceneQuery = @"+contraindicatedWith,title,_value: (""Léková alergie"") +hasMedicinalProduct,title,_value: (""SPASMOPAN"") +hasMedicinalProduct,hasATCConcept,notation: (""A03EA"") +hasPharmacologicalAction,title,_value: (""Antitusika"")";
+            const string expectedLuceneQuery = @"+contraindicatedWith_title: (""Léková alergie"") +hasMedicinalProduct_title: (""SPASMOPAN"") +hasMedicinalProduct_hasATCConcept_notation: (""A03EA"") +hasPharmacologicalAction_title: (""Antitusika"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }

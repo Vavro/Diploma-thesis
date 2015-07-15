@@ -17,6 +17,7 @@ namespace DragqnLD.Core.UnitTests
     {
         public const string IngredientsQueryParamaterName = @"thingURI";
 
+        #region IngredientsQuery
         public const string IngredientsQuery =
 @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -154,6 +155,61 @@ WHERE
     }
   }
 }";
+        #endregion
+
+        public static DragqnLDIndexRequirements IngredientsAllPropertiesToIndex()
+        {
+            var propertiesToIndex = new DragqnLDIndexRequirements();
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacologicalAction.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacologicalAction.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasPharmacologicalAction.description"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMechanismOfAction.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMechanismOfAction.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPhysiologicEffect.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPhysiologicEffect.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacokinetics.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacokinetics.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPregnancyCategory" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasMedicinalProduct.hasRouteOfAdministration"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasMedicinalProduct.hasDosageForm"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.@id"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.prefLabel"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.notation"
+            });
+            return propertiesToIndex;
+        }
 
         public static ConstructQueryAccessibleProperties IngredientsQueryHierarchy()
         {
@@ -274,6 +330,51 @@ WHERE
                new IndexableValueProperty() { Type = ValuePropertyType.Value }, true);
 
             return hierarchy;
+        }
+
+        public static DragqnLDIndexDefiniton IngredientsAllPropertiesIndexDefinition()
+        {
+            var definition = new DragqnLDIndexDefiniton()
+            {
+                Name = "Query/1/AllProps",
+                PropertyNameMap = new Dictionary<string, string>()
+                {
+                    {"@id", "_id"},
+                    {"title", "title"},
+                    {"description", "description"},
+                    {"hasPharmacologicalAction.@id", "hasPharmacologicalAction__id"},
+                    {"hasPharmacologicalAction.title", "hasPharmacologicalAction_title"},
+                    {"hasPharmacologicalAction.description", "hasPharmacologicalAction_description"},
+                    {"hasMechanismOfAction.@id", "hasMechanismOfAction__id"},
+                    {"hasMechanismOfAction.title", "hasMechanismOfAction_title"},
+                    {"hasPhysiologicEffect.@id", "hasPhysiologicEffect__id"},
+                    {"hasPhysiologicEffect.title", "hasPhysiologicEffect_title"},
+                    {"hasPharmacokinetics.@id", "hasPharmacokinetics__id"},
+                    {"hasPharmacokinetics.title", "hasPharmacokinetics_title"},
+                    {"hasPregnancyCategory", "hasPregnancyCategory"},
+                    {"mayTreat.@id", "mayTreat__id"},
+                    {"mayTreat.title", "mayTreat_title"},
+                    {"mayTreat.description", "mayTreat_description"},
+                    {"mayPrevent.@id", "mayPrevent__id"},
+                    {"mayPrevent.title", "mayPrevent_title"},
+                    {"mayPrevent.description", "mayPrevent_description"},
+                    {"contraindicatedWith.@id", "contraindicatedWith__id"},
+                    {"contraindicatedWith.title", "contraindicatedWith_title"},
+                    {"contraindicatedWith.description", "contraindicatedWith_description"},
+                    {"hasMedicinalProduct.@id", "hasMedicinalProduct__id"},
+                    {"hasMedicinalProduct.title", "hasMedicinalProduct_title"},
+                    {"hasMedicinalProduct.description", "hasMedicinalProduct_description"},
+                    {"hasMedicinalProduct.hasRouteOfAdministration", "hasMedicinalProduct_hasRouteOfAdministration"},
+                    {"hasMedicinalProduct.hasDosageForm", "hasMedicinalProduct_hasDosageForm"},
+                    {"hasMedicinalProduct.hasATCConcept.@id", "hasMedicinalProduct_hasATCConcept__id"},
+                    {"hasMedicinalProduct.hasATCConcept.prefLabel", "hasMedicinalProduct_hasATCConcept_prefLabel"},
+                    {"hasMedicinalProduct.hasATCConcept.notation", "hasMedicinalProduct_hasATCConcept_notation"}
+                },
+                RavenAnalyzers = new Dictionary<string, string>(),
+                RavenMap = "from doc in docs\r\nwhere doc[\"@metadata\"][\"Raven-Entity-Name\"] == \"Query/1\"\r\nselect new { \r\n_id = doc._id,\r\ntitle = ((IEnumerable<dynamic>)doc.title).DefaultIfEmpty().Select(x0 => \r\nx0._value),\r\ndescription = ((IEnumerable<dynamic>)doc.description).DefaultIfEmpty().Select(x0 => \r\nx0._value),\r\nhasPharmacologicalAction__id = ((IEnumerable<dynamic>)doc.hasPharmacologicalAction).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nhasPharmacologicalAction_title = ((IEnumerable<dynamic>)doc.hasPharmacologicalAction).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasPharmacologicalAction_description = ((IEnumerable<dynamic>)doc.hasPharmacologicalAction).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.description).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasMechanismOfAction__id = ((IEnumerable<dynamic>)doc.hasMechanismOfAction).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nhasMechanismOfAction_title = ((IEnumerable<dynamic>)doc.hasMechanismOfAction).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasPhysiologicEffect__id = ((IEnumerable<dynamic>)doc.hasPhysiologicEffect).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nhasPhysiologicEffect_title = ((IEnumerable<dynamic>)doc.hasPhysiologicEffect).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasPharmacokinetics__id = ((IEnumerable<dynamic>)doc.hasPharmacokinetics).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nhasPharmacokinetics_title = ((IEnumerable<dynamic>)doc.hasPharmacokinetics).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasPregnancyCategory = ((IEnumerable<dynamic>)doc.hasPregnancyCategory).DefaultIfEmpty().Select(x0 => \r\nx0),\r\nmayTreat__id = ((IEnumerable<dynamic>)doc.mayTreat).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nmayTreat_title = ((IEnumerable<dynamic>)doc.mayTreat).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nmayTreat_description = ((IEnumerable<dynamic>)doc.mayTreat).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.description).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nmayPrevent__id = ((IEnumerable<dynamic>)doc.mayPrevent).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nmayPrevent_title = ((IEnumerable<dynamic>)doc.mayPrevent).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nmayPrevent_description = ((IEnumerable<dynamic>)doc.mayPrevent).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.description).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\ncontraindicatedWith__id = ((IEnumerable<dynamic>)doc.contraindicatedWith).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\ncontraindicatedWith_title = ((IEnumerable<dynamic>)doc.contraindicatedWith).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\ncontraindicatedWith_description = ((IEnumerable<dynamic>)doc.contraindicatedWith).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.description).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasMedicinalProduct__id = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\nx0._id),\r\nhasMedicinalProduct_title = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.title).DefaultIfEmpty().Select(x1 => \r\nx1._value)),\r\nhasMedicinalProduct_description = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\nx0.description),\r\nhasMedicinalProduct_hasRouteOfAdministration = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\nx0.hasRouteOfAdministration),\r\nhasMedicinalProduct_hasDosageForm = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\nx0.hasDosageForm),\r\nhasMedicinalProduct_hasATCConcept__id = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.hasATCConcept).DefaultIfEmpty().Select(x1 => \r\nx1._id)),\r\nhasMedicinalProduct_hasATCConcept_prefLabel = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.hasATCConcept).DefaultIfEmpty().Select(x1 => \r\n((IEnumerable<dynamic>)x1.prefLabel).DefaultIfEmpty().Select(x2 => \r\nx2._value))),\r\nhasMedicinalProduct_hasATCConcept_notation = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => \r\n((IEnumerable<dynamic>)x0.hasATCConcept).DefaultIfEmpty().Select(x1 => \r\n((IEnumerable<dynamic>)x1.notation).DefaultIfEmpty().Select(x2 => \r\nx2))),\r\n_metadata_Raven_Entity_Name = doc[\"@metadata\"][\"Raven-Entity-Name\"]}",
+                Requirements = IngredientsAllPropertiesToIndex()
+            };
+            return definition;
         }
 
         public static readonly QueryDefinition TestQueryDefinitionIngredients = new QueryDefinition
