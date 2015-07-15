@@ -259,8 +259,8 @@ WHERE
             medicinalProduct.AddProperty("hasRouteOfAdministration",
                 "http://linked.opendata.cz/ontology/drug-encyclopedia/hasRouteOfAdministration",
                 hasRouteOfAdministration);
-            medicinalProduct.AddProperty("hasRouteOfAdministration",
-                "http://linked.opendata.cz/ontology/drug-encyclopedia/hasRouteOfAdministration",
+            medicinalProduct.AddProperty("hasDosageForm",
+                "http://linked.opendata.cz/ontology/drug-encyclopedia/hasDosageForm",
                 new IndexableValueProperty() {Type = ValuePropertyType.LanguageString});
             var atcConcept = new IndexableObjectProperty() {HasId = true, HasType = true};
             medicinalProduct.AddProperty("hasATCConcept",

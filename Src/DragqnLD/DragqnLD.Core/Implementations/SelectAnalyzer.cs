@@ -25,12 +25,12 @@ namespace DragqnLD.Core.Implementations
             var parser = new SparqlQueryParser();
             var parsedSparql = parser.ParseFromString(sparql);
 
-            if (parsedSparql.Variables.Count() > 1)
+            if (parsedSparql.Variables.Where(var => var.IsResultVariable).Count() > 1)
             {
                 throw new NotSupportedException("only one variable, that will be bound to the resulting ids is supported");
             }
 
-            var rootVariable = parsedSparql.Variables.Single();
+            var rootVariable = parsedSparql.Variables.Single(var => var.IsResultVariable);
 
             //find all property paths that are getting queried
             //  enumerate triples start from variable and traverse down all possible paths
@@ -272,6 +272,8 @@ namespace DragqnLD.Core.Implementations
                         {
                             //the bound value is an ID
                             abbreviatedPredicateWithAccess = abbreviatedPredicate + ".@id";
+                            //delete the <> from the value
+                            boundValue = '"' + boundValue.Trim('<', '>') + '"';
                         }
 
                         if (!predicateTargetIsObject)

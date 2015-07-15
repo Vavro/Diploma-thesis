@@ -95,9 +95,28 @@ WHERE
 
             var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
 
-            const string expectedLuceneQuery = "";
+            const string expectedLuceneQuery = @"+contraindicatedWith,title,_value: (""Léková alergie"") +hasPharmacologicalAction,title,_value: (""Neopioidní analgetika"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
+        }
+
+        [Fact]
+        public void CanOnvertQueryForId()
+        {
+            var query = @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+SELECT ?s
+WHERE 
+{ 
+  ?s enc:contraindicatedWith <http://linked.opendata.cz/resource/ndfrt/disease/N0000000999>.
+}";
+            var hierarchy = TestQueries.IngredientsQueryHierarchy();
+
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(query, hierarchy);
+
+            const string expectedLuceneQuery = @"+contraindicatedWith,_id: (""http://linked.opendata.cz/resource/ndfrt/disease/N0000000999"")";
+
+            Assert.Equal(expectedLuceneQuery, convertedQuery);
+
         }
     }
 }
