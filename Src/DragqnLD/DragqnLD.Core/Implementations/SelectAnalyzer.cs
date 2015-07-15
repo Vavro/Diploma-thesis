@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using Raven.Abstractions.Data;
+using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
 using VDS.RDF.Query.Expressions.Functions.Sparql.Boolean;
 using VDS.RDF.Query.Patterns;
+using VDS.RDF.Update.Commands;
 
 namespace DragqnLD.Core.Implementations
 {
@@ -43,7 +47,104 @@ namespace DragqnLD.Core.Implementations
             var propertyPathsBuidler = new SelectPropertyPathsBuilder(tripplePatternsBySubjectParameter, hierarchy);
             var accessedPropertyPaths = propertyPathsBuidler.CreateAccessedPropertyPaths(rootVariable.Name);
 
-            throw new NotImplementedException();
+            //for now filters arent supported
+            if (!accessedPropertyPaths.TrueForAll(path => path.VariableName == null))
+            {
+                throw new NotSupportedException("Filter expressions arent supported");
+            }
+
+            var luceneQuery = CreateLuceneQueryNoIndexFor(accessedPropertyPaths,hierarchy);
+
+            return luceneQuery;
+        }
+
+        public string CreateLuceneQueryNoIndexFor(List<SelectPropertyPathsBuilder.PathWithValue> accessedPropertyPaths, ConstructQueryAccessibleProperties hierarchy)
+        {
+            var luceneQuery = new StringBuilder();
+            if (!accessedPropertyPaths.Any())
+            {
+                throw new ArgumentException("We have to query at least one property", "accessedPropertyPaths");
+            }
+
+            foreach (var accessedPropertyPath in accessedPropertyPaths)
+            {
+                if (luceneQuery.Length != 0)
+                {
+                    luceneQuery.Append(" ");
+                }
+                var luceneFieldQuery = CreateLuceneFieldQueryNoIndexForPath(accessedPropertyPath, hierarchy);
+                luceneQuery.Append("+").Append(luceneFieldQuery); //for now all selects equal to a big AND lucene query
+            }
+
+            return luceneQuery.ToString();
+        }
+
+        private string CreateLuceneFieldQueryNoIndexForPath(SelectPropertyPathsBuilder.PathWithValue accessedPropertyPath, ConstructQueryAccessibleProperties hierarchy)
+        {
+            var fieldName = new StringBuilder();
+            var currentProp = hierarchy.RootProperty;
+            NamedIndexableProperty lastFoundNamedProp = null;
+            //this is an abbrevieted path
+            var pathNames = accessedPropertyPath.Path.Split('.');
+            for (int i = 0; i < pathNames.Length; i++)
+            {
+                var s = pathNames[i];
+                if (s == "@id")
+                {
+                    fieldName.Append("_id");
+                    break;  
+                }
+
+                NamedIndexableProperty namedProp;
+                try
+                {
+                    namedProp = currentProp.GetPropertyByAbbreviatedName(s);
+                }
+                catch (KeyNotFoundException exception)
+                {
+                    throw new ArgumentException(String.Format("Field: {0} in path {1} is not part of the hierarchy", s, accessedPropertyPath.Path), exception);
+                }
+                fieldName.Append(s);
+                if (i < pathNames.Length - 1)
+                {
+                    if (namedProp.WrappedInArray.HasValue && (bool)namedProp.WrappedInArray)
+                    {
+                        fieldName.Append(",");
+                    }
+                    else
+                    {
+                        fieldName.Append(".");
+                    }
+                }
+                lastFoundNamedProp = namedProp;
+                var asObject = namedProp.Property as IndexableObjectProperty;
+                if (asObject != null)
+                {
+                    currentProp = asObject;
+                    continue;
+                }
+                break;
+            }
+            
+            if (lastFoundNamedProp != null && lastFoundNamedProp.Property is IndexableValueProperty) //might have to append _value prop, otherwise we should be done
+            {
+                var asValue = (IndexableValueProperty) lastFoundNamedProp.Property;
+                if (asValue.Type == ValuePropertyType.LanguageString)
+                {
+                    if (lastFoundNamedProp.WrappedInArray.HasValue && (bool) lastFoundNamedProp.WrappedInArray)
+                    {
+                        fieldName.Append(",");
+                    }
+                    else
+                    {
+                        fieldName.Append(".");
+                    }
+                    fieldName.Append("_value");
+                }
+            }
+
+            //for now dont have to care for filters
+            return fieldName + ": (" + accessedPropertyPath.ExpectedValue + ")";
         }
 
         public class SelectPropertyPathsBuilder
@@ -119,8 +220,12 @@ namespace DragqnLD.Core.Implementations
                             String.Format("Variable predicates aren't supported {0}",
                             matchTriplePattern));
                     }
+                    var asNodeMatch = predicate as NodeMatchPattern;
+                    Debug.Assert(asNodeMatch != null, "predicate is not a NodeMatchPattern");
+                    var uriNode = asNodeMatch.Node as UriNode;
                     //find predicate in current property
-                    var predicateTarget = currentProperty.GetPropertyByFullName(predicate.ToString());
+                    Debug.Assert(uriNode != null, "predicetes node is not a UriNode");
+                    var predicateTarget = currentProperty.GetPropertyByFullName(uriNode.Uri.AbsoluteUri);
                     var abbreviatedPredicate = predicateTarget.AbbreviatedName;
 
                     var predicateTargetIsObject = predicateTarget.Property is IndexableObjectProperty;
@@ -161,23 +266,45 @@ namespace DragqnLD.Core.Implementations
                     }
                     else //its bound to a value
                     {
+                        var boundValue = @object.ToString();
                         string abbreviatedPredicateWithAccess = abbreviatedPredicate;
                         if (predicateTargetIsObject)
                         {
                             //the bound value is an ID
                             abbreviatedPredicateWithAccess = abbreviatedPredicate + ".@id";
                         }
+
+                        if (!predicateTargetIsObject)
+                        {
+                            var asValue = (IndexableValueProperty) predicateTarget.Property;
+                            //language tagged strings are not supported so try to 
+                            if (asValue.Type == ValuePropertyType.LanguageString)
+                            {
+                                boundValue = DeleteLangTagIfPresent(boundValue);
+                            }
+                        }
                         //if the is a value, the access is added in the index creation
 
                         var identifiedPath = new PathWithValue()
                         {
                             Path = abbreviatedPredicateWithAccess,
-                            ExpectedValue = @object.ToString()
+                            ExpectedValue = boundValue
                         };
                         identifiedPathsWithExpectedValues.Add(identifiedPath);
                     }
                 }
                 return identifiedPathsWithExpectedValues;
+            }
+
+            private static string DeleteLangTagIfPresent(string boundValue)
+            {
+                var stringEnd = boundValue.LastIndexOf("\"");
+                var langDelimiter = boundValue.LastIndexOf("@");
+                if (langDelimiter > stringEnd)
+                {
+                    boundValue = boundValue.Substring(0, langDelimiter);
+                }
+                return boundValue;
             }
         }
         

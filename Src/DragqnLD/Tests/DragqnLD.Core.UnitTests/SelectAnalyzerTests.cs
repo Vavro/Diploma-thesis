@@ -46,7 +46,38 @@ WHERE { ?s enc:title ""Nitrous oxide"" }";
 
             var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(simpleSparql, hierarchy);
 
-            const string expectedLuceneQuery = @"title,_value: ""Nitrous oxide""";
+            const string expectedLuceneQuery = @"+title,_value: (""Nitrous oxide"")";
+
+            Assert.Equal(expectedLuceneQuery, convertedQuery);
+        }
+        
+        [Fact]
+        public void CanConvertQueryWithLangTagNoIndex()
+        {
+
+
+            var languageTaggedString =
+                @"PREFIX enc: <http://linked.opendata.cz/ontology/drug-encyclopedia/>
+SELECT ?s
+WHERE { ?s enc:title ""Nitrous oxide""@en }";
+
+            //todo: need two versions 
+            //- one for no index - will have to add proper , and .
+            //- second for indexed - will have to query the existing fields in the index
+            // ---- for indexed need to store path to field name map
+            var root = new IndexableObjectProperty();
+            var hierarchy = new ConstructQueryAccessibleProperties()
+            {
+                RootProperty = root
+            };
+            root.AddProperty("title",
+                "http://linked.opendata.cz/ontology/drug-encyclopedia/title",
+                new IndexableValueProperty() { Type = ValuePropertyType.LanguageString });
+            root.GetPropertyByAbbreviatedName("title").WrappedInArray = true;
+
+            var convertedQuery = _selectAnalyzer.ConvertSparqlToLuceneNoIndex(languageTaggedString, hierarchy);
+
+            const string expectedLuceneQuery = @"+title,_value: (""Nitrous oxide"")";
 
             Assert.Equal(expectedLuceneQuery, convertedQuery);
         }

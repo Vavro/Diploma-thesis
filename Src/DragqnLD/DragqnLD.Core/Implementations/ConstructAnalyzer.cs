@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
@@ -388,9 +389,13 @@ namespace DragqnLD.Core.Implementations
                     //if that variable is in the triplePatternBySubjectParameter dictionary, than its bound
 
                     var patternPredicate = matchTriplePattern.Predicate;
-                    var propertyFullUriName = patternPredicate.ToString();
-                    //delete <> from start and end of the pattern
-                    propertyFullUriName = propertyFullUriName.Trim('<', '>');
+                    //retype to uri node so that we dont have to delete <> from start and end of the pattern
+                    var asNodeMatch = patternPredicate as NodeMatchPattern;
+                    Debug.Assert(asNodeMatch != null, "ConstructPropertyFrom: pattern predicate is not a NodeMatchPattern");
+                    var asUriNode = asNodeMatch.Node as UriNode;
+                    Debug.Assert(asUriNode != null, "ConstructPropertyFrom: pattern predicate doesn't contain a UriNode");
+                    var propertyFullUriName = asUriNode.Uri.AbsoluteUri;
+                    
 
                     var property = ConstructPropertyFrom(objectVariableName, false);
 

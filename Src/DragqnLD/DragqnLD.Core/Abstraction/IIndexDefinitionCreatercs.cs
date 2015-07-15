@@ -21,6 +21,7 @@ namespace DragqnLD.Core.Abstraction
 
         public string RavenMap { get; set; }
         public IDictionary<string, string> RavenAnalyzers { get; set; }
+        public Dictionary<string, string> PropertyNameMap { get; set; }
     }
 
     public class PropertyToIndex

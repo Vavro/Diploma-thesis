@@ -42,6 +42,7 @@ namespace DragqnLD.Core.Implementations
             mapBuilder.AppendLine();
             mapBuilder.AppendLine("select new { ");
             var createdPropNames = new List<string>();
+            var createdPropNamesMap = new Dictionary<string, string>();
 
             var analyzers = new Dictionary<string, string>();
 
@@ -55,6 +56,7 @@ namespace DragqnLD.Core.Implementations
                     analyzers.Add(mapLine.Name, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
                 }
                 createdPropNames.Add(mapLine.Name);
+                createdPropNamesMap.Add(propertyToIndex.AbbreviatedName, mapLine.Name);
             }
             mapBuilder.Append(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
 
@@ -65,6 +67,7 @@ namespace DragqnLD.Core.Implementations
             {
                 Name = CreateNameFor(ingredientsQd, createdPropNames),
                 Requirements = requirements,
+                PropertyNameMap = createdPropNamesMap,
                 RavenMap = ravenIndexDefinition.Map,
                 RavenAnalyzers = ravenIndexDefinition.Analyzers
             };
