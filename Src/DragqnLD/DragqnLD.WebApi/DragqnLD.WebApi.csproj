@@ -227,6 +227,7 @@
     <Compile Include="Controllers\ContextsController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexesController.cs" />
     <Compile Include="Controllers\QueriesController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\TasksController.cs" />
@@ -235,6 +236,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DocumentMetadataDto.cs" />
+    <Compile Include="Models\IndexDefinitionDto.cs" />
     <Compile Include="Models\ProgressDto.cs" />
     <Compile Include="Models\QueryDefinitionDto.cs" />
     <Compile Include="Models\QueryDefinitionStatusDto.cs" />

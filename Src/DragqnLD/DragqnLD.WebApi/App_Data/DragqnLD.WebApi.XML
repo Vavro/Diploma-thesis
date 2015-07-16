@@ -1082,6 +1082,66 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:DragqnLD.WebApi.Controllers.IndexesController">
+            <summary>
+            Indexes controller for index manipulation tasks
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.#ctor(DragqnLD.Core.Abstraction.IQueryStore)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.SearchController"/> class.
+            </summary>
+            <param name="dataStore">The data store.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndexes">
+            <summary>
+            Gets the indexes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndex(System.String)">
+            <summary>
+            Gets the index definition.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.StoreIndex(DragqnLD.WebApi.Models.IndexDefinitionDto)">
+            <summary>
+            Stores the index.
+            </summary>
+            <param name="indexDefinition">The index definition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.StoreOrUpdateIndex(System.String,DragqnLD.WebApi.Models.IndexDefinitionDto)">
+            <summary>
+            Stores or updates the index.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <param name="indexDefinition">The index definition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.DeleteIndex(System.String)">
+            <summary>
+            Deletes the index.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.ProposeIndexForProperties(DragqnLD.WebApi.Models.PropertiesToIndexDto)">
+            <summary>
+            Proposes the index for properties.
+            </summary>
+            <param name="propertiesToIndex">Index of the properties to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.ProposeIndexForSparql(DragqnLD.WebApi.Models.SparqlDto)">
+            <summary>
+            Proposes the index for sparql.
+            </summary>
+            <param name="sparql">The sparql.</param>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.QueriesController">
             <summary>
             Basic operations for Query Definitions - store, load, delete, update
@@ -1182,6 +1242,62 @@
             <param name="escapedQuery">The escapted query.</param>
             <returns></returns>
         </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexByLuceneQuery(System.String)">
+            <summary>
+            Searchs the index by lucene query.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexByLuceneQuery">
+            <summary>
+            Searchs the dynamic index by lucene query.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexBySparqlQuery(System.String)">
+            <summary>
+            Searchs the index by sparql query.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexBySparql">
+            <summary>
+            Searchs the dynamic index by sparql.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexByLuceneQuery(System.String,System.String)">
+            <summary>
+            Searchs the index by lucene query.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexByLuceneQuery(System.String)">
+            <summary>
+            Searchs the dynamic index by lucene query.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexBySparqlQuery(System.String,System.String)">
+            <summary>
+            Searchs the index by sparql query.
+            </summary>
+            <param name="indexId">The index identifier.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexBySparql(System.String)">
+            <summary>
+            Searchs the dynamic index by sparql.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
         <member name="T:DragqnLD.WebApi.Controllers.TasksController">
             <summary>
             Manages backgrounds tasks availible for QueryDefinitions
@@ -1266,6 +1382,79 @@
             </summary>
             <value>
             The total documents.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.IndexDefinitionDto">
+            <summary>
+            Data transfer object for DragqnLD index definitions in RavenDB
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Models.IndexDefinitionDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Models.IndexDefinitionDto"/> class.
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionDto.RavenMap">
+            <summary>
+            Gets or sets the raven map.
+            </summary>
+            <value>
+            The raven map.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionDto.RavenAnalyzers">
+            <summary>
+            Gets or sets the raven analyzers.
+            </summary>
+            <value>
+            The raven analyzers.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionDto.PropertyNameMap">
+            <summary>
+            Gets or sets the property name map.
+            </summary>
+            <value>
+            The property name map.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.PropertiesToIndexDto">
+            <summary>
+            Properties to index data transfer object for index creation
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Models.PropertiesToIndexDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Models.PropertiesToIndexDto"/> class.
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.PropertiesToIndexDto.PropertyPaths">
+            <summary>
+            Gets or sets the property paths that will be part of the index.
+            </summary>
+            <value>
+            The property paths.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.SparqlDto">
+            <summary>
+            Data transfer object for transporting sparql select queries
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.SparqlDto.SparqlSelectQuery">
+            <summary>
+            Gets or sets the sparql select query.
+            </summary>
+            <value>
+            The sparql select query.
             </value>
         </member>
         <member name="T:DragqnLD.WebApi.Models.ProgressDto">

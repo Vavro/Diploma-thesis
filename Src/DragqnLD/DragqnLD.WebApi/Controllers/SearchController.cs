@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
@@ -60,6 +61,102 @@ namespace DragqnLD.WebApi.Controllers
                 Log.Fatal("exception", e);
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Searchs the index by lucene query.
+        /// </summary>
+        /// <param name="indexId">The index identifier.</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/searchLucene/{*indexId}")]
+        public async Task<HttpResponseMessage> SearchIndexByLuceneQuery(string indexId)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the dynamic index by lucene query.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/searchDynamicLucene")]
+        public async Task<HttpResponseMessage> SearchDynamicIndexByLuceneQuery()
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the index by sparql query.
+        /// </summary>
+        /// <param name="indexId">The index identifier.</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/searchSparql/{*indexId}")]
+        public async Task<HttpResponseMessage> SearchIndexBySparqlQuery(string indexId)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the dynamic index by sparql.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/searchDynamicSparql")]
+        public async Task<HttpResponseMessage> SearchDynamicIndexBySparql()
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the index by lucene query.
+        /// </summary>
+        /// <param name="indexId">The index identifier.</param>
+        /// <param name="query">The query.</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/query/{definitionId}/searchLucene/{*indexId}")]
+        public async Task<HttpResponseMessage> SearchIndexByLuceneQuery(string indexId, [FromBody] string query)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the dynamic index by lucene query.
+        /// </summary>
+        /// <param name="query">The query.</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/query/{definitionId}/searchDynamicLucene")]
+        public async Task<HttpResponseMessage> SearchDynamicIndexByLuceneQuery([FromBody] string query)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the index by sparql query.
+        /// </summary>
+        /// <param name="indexId">The index identifier.</param>
+        /// <param name="query">The query.</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/query/{definitionId}/searchSparql/{*indexId}")]
+        public async Task<HttpResponseMessage> SearchIndexBySparqlQuery(string indexId, [FromBody] string query)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
+        }
+
+        /// <summary>
+        /// Searchs the dynamic index by sparql.
+        /// </summary>
+        /// <param name="query">The query.</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("api/query/{definitionId}/searchDynamicSparql")]
+        public async Task<HttpResponseMessage> SearchDynamicIndexBySparql([FromBody] string query)
+        {
+            return CreateResponse(HttpStatusCode.NotImplemented);
         }
     }
 }
