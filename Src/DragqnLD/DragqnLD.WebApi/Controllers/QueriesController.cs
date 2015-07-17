@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using AutoMapper;
 using DragqnLD.Core.Abstraction;
@@ -188,7 +189,7 @@ namespace DragqnLD.WebApi.Controllers
 
             return response;
         }
-
+        
         // DELETE api/queries/5
         /// <summary>
         /// Deletes the query definition with the specified identifier.

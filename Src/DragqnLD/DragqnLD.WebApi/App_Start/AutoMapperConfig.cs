@@ -1,7 +1,12 @@
-﻿using AutoMapper;
+﻿using System.Linq;
+using AutoMapper;
+using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Abstraction.Query;
+using DragqnLD.Core.Implementations;
 using DragqnLD.WebApi.Models;
+using Raven.Abstractions.Indexing;
 
 // ReSharper disable once CheckNamespace
 namespace DragqnLD.WebApi.App_Start
@@ -32,6 +37,16 @@ namespace DragqnLD.WebApi.App_Start
 
                 Mapper.CreateMap<DocumentMetadata, DocumentMetadataDto>();
                 Mapper.CreateMap<PagedDocumentMetadata, PagedDocumentMetadataDto>();
+
+                Mapper.CreateMap<DragqnLDIndexDefinitions, IndexDefinitionsDto>();
+                Mapper.CreateMap<DragqnLDIndexDefiniton, IndexDefinitionMetadataDto>()
+                    .ConvertUsing(id => new IndexDefinitionMetadataDto()
+                    {
+                        Name = id.Name,
+                        IndexedFields = id.Requirements.PropertiesToIndex.Select(prop => prop.AbbreviatedName).ToList()
+                    });
+
+
             }
         }
 

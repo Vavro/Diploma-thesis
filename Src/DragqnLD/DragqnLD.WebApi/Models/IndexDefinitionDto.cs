@@ -6,6 +6,59 @@ using System.Web;
 namespace DragqnLD.WebApi.Models
 {
     /// <summary>
+    /// Data transfer object for indexes
+    /// </summary>
+    public class IndexDefinitionsDto
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IndexDefinitionsDto"/> class.
+        /// </summary>
+        public IndexDefinitionsDto()
+        {
+            Indexes = new List<IndexDefinitionMetadataDto>();
+        }
+
+        /// <summary>
+        /// Gets or sets the indexes.
+        /// </summary>
+        /// <value>
+        /// The indexes.
+        /// </value>
+        public List<IndexDefinitionMetadataDto> Indexes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the definition identifier.
+        /// </summary>
+        /// <value>
+        /// The definition identifier.
+        /// </value>
+        public string DefinitionId { get; set; }
+
+    }
+
+    /// <summary>
+    /// Data transfer object for index definition metadata
+    /// </summary>
+    public class IndexDefinitionMetadataDto
+    {
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the indexed fields.
+        /// </summary>
+        /// <value>
+        /// The indexed fields.
+        /// </value>
+        public List<string> IndexedFields { get; set; }
+    }
+
+    /// <summary>
     /// Data transfer object for DragqnLD index definitions in RavenDB
     /// </summary>
     public class IndexDefinitionDto
@@ -86,5 +139,28 @@ namespace DragqnLD.WebApi.Models
         /// The sparql select query.
         /// </value>
         public string SparqlSelectQuery { get; set; }
+    }
+
+
+    /// <summary>
+    /// Data transfer object for transporting indexable properties list
+    /// </summary>
+    public class IndexablePropertiesDto
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IndexablePropertiesDto"/> class.
+        /// </summary>
+        public IndexablePropertiesDto()
+        {
+            Properties = new List<string>();
+        }
+
+        /// <summary>
+        /// Gets or sets the properties.
+        /// </summary>
+        /// <value>
+        /// The properties.
+        /// </value>
+        public IEnumerable<string> Properties { get; set; }
     }
 }

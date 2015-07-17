@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Indexes;
 using JsonLD.Core;
@@ -21,7 +22,7 @@ namespace DragqnLD.Core.Implementations
         //todo: Inject session from current call - Raven session will be tied to one REST call?
 
         private readonly IDocumentStore _store;
-        
+
         public QueryStore(IDocumentStore store)
         {
             _store = store;
@@ -42,7 +43,7 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 var queryDefinition = await session.LoadAsync<QueryDefinition>(key).ConfigureAwait(false);
-                
+
                 return queryDefinition;
             }
         }
@@ -86,9 +87,9 @@ namespace DragqnLD.Core.Implementations
             using (var session = _store.OpenAsyncSession())
             {
                 var qd = await session.LoadAsync<QueryDefinition>(definitionId);
-                
+
                 qd.Mappings = mappings.AsList();
-                
+
                 await session.SaveChangesAsync();
             }
         }
@@ -160,16 +161,16 @@ namespace DragqnLD.Core.Implementations
             var indexRavenName = GetIndexRavenName(definitionId, indexDefinition.Name);
             using (var session = _store.OpenAsyncSession())
             {
-                var currentIndexes = await session.LoadAsync<QueryIndexDefinitions>(definitionIndexesId);
+                var currentIndexes = await session.LoadAsync<DragqnLDIndexDefinitions>(definitionIndexesId);
                 if (currentIndexes == null)
                 {
-                    currentIndexes = new QueryIndexDefinitions();
+                    currentIndexes = new DragqnLDIndexDefinitions() { DefinitionId = definitionId };
                 }
                 currentIndexes.Indexes.Remove(indexDefinition.Name);
                 currentIndexes.Indexes.Add(indexDefinition.Name, indexDefinition);
 
                 await session.StoreAsync(currentIndexes, definitionIndexesId);
-                
+
                 var ravenIndexDefinition = new IndexDefinition()
                 {
                     Map = indexDefinition.RavenMap,
@@ -207,19 +208,15 @@ namespace DragqnLD.Core.Implementations
             return definitionId + "/Hierarchy";
         }
 
-        public async Task<QueryIndexDefinitions> GetIndexes(string definitionId)
+        public async Task<DragqnLDIndexDefinitions> GetIndexes(string definitionId)
         {
             var definitionIndexesId = GetIndexId(definitionId);
             using (var session = _store.OpenAsyncSession())
             {
-                var currentIndexes = await session.LoadAsync<QueryIndexDefinitions>(definitionIndexesId);
-                return currentIndexes;
+                var currentIndexes = await session.LoadAsync<DragqnLDIndexDefinitions>(definitionIndexesId);
+                return currentIndexes ?? new DragqnLDIndexDefinitions() { DefinitionId = definitionId };
             }
         }
     }
 
-    public class QueryIndexDefinitions
-    {
-        public Dictionary<string, DragqnLDIndexDefiniton> Indexes = new Dictionary<string, DragqnLDIndexDefiniton>();
-    }
 }

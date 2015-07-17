@@ -5,7 +5,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AutoMapper;
 using DragqnLD.Core.Abstraction;
+using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.WebApi.Models;
 
 namespace DragqnLD.WebApi.Controllers
@@ -15,26 +18,31 @@ namespace DragqnLD.WebApi.Controllers
     /// </summary>
     public class IndexesController : BaseApiController
     {
-        private readonly IQueryStore _dataStore;
+        private readonly IQueryStore _queryStore;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchController"/> class.
         /// </summary>
-        /// <param name="dataStore">The data store.</param>
-        public IndexesController(IQueryStore dataStore)
+        /// <param name="queryStore">The data store.</param>
+        public IndexesController(IQueryStore queryStore)
         {
-            _dataStore = dataStore;
+            _queryStore = queryStore;
         }
 
         /// <summary>
         /// Gets the indexes.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of IndexMetadataDto</returns>
         [HttpGet]
         [Route("api/query/{definitionId}/indexes")]
         public async Task<HttpResponseMessage> GetIndexes()
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var definitionId = DefinitionId;
+            var indexes = await _queryStore.GetIndexes(definitionId);
+
+            var indexMetaDto = Mapper.Map<DragqnLDIndexDefinitions, IndexDefinitionsDto>(indexes);
+
+            return CreateResponseWithObject(indexMetaDto);
         }
 
         /// <summary>
@@ -109,5 +117,24 @@ namespace DragqnLD.WebApi.Controllers
         {
             return CreateResponse(HttpStatusCode.NotImplemented);
         }
+
+        /// <summary>
+        /// Gets the indexes.
+        /// </summary>
+        /// <returns>List of IndexMetadataDto</returns>
+        [HttpGet]
+        [Route("api/query/{definitionId}/indexableProperties")]
+        public async Task<HttpResponseMessage> GetIndexableProperties()
+        {
+            var definitionId = DefinitionId;
+            var hierarchy = await _queryStore.GetHierarchy(definitionId);
+
+            var indexableProperties = hierarchy.RootProperty.GetPropertyPaths();
+
+            var indexablePropertiesDto = new IndexablePropertiesDto() { Properties = indexableProperties };
+
+            return CreateResponseWithObject(indexablePropertiesDto);
+        }
+
     }
 }

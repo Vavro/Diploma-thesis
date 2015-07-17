@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Markup;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using Raven.Abstractions.Data;
 using VDS.RDF;
 using VDS.RDF.Parsing;

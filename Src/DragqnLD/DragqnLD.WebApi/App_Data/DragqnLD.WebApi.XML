@@ -1091,13 +1091,13 @@
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.SearchController"/> class.
             </summary>
-            <param name="dataStore">The data store.</param>
+            <param name="queryStore">The data store.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndexes">
             <summary>
             Gets the indexes.
             </summary>
-            <returns></returns>
+            <returns>List of IndexMetadataDto</returns>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndex(System.String)">
             <summary>
@@ -1141,6 +1141,12 @@
             </summary>
             <param name="sparql">The sparql.</param>
             <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndexableProperties">
+            <summary>
+            Gets the indexes.
+            </summary>
+            <returns>List of IndexMetadataDto</returns>
         </member>
         <member name="T:DragqnLD.WebApi.Controllers.QueriesController">
             <summary>
@@ -1384,6 +1390,53 @@
             The total documents.
             </value>
         </member>
+        <member name="T:DragqnLD.WebApi.Models.IndexDefinitionsDto">
+            <summary>
+            Data transfer object for indexes
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Models.IndexDefinitionsDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Models.IndexDefinitionsDto"/> class.
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionsDto.Indexes">
+            <summary>
+            Gets or sets the indexes.
+            </summary>
+            <value>
+            The indexes.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionsDto.DefinitionId">
+            <summary>
+            Gets or sets the definition identifier.
+            </summary>
+            <value>
+            The definition identifier.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.IndexDefinitionMetadataDto">
+            <summary>
+            Data transfer object for index definition metadata
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionMetadataDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexDefinitionMetadataDto.IndexedFields">
+            <summary>
+            Gets or sets the indexed fields.
+            </summary>
+            <value>
+            The indexed fields.
+            </value>
+        </member>
         <member name="T:DragqnLD.WebApi.Models.IndexDefinitionDto">
             <summary>
             Data transfer object for DragqnLD index definitions in RavenDB
@@ -1455,6 +1508,24 @@
             </summary>
             <value>
             The sparql select query.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.IndexablePropertiesDto">
+            <summary>
+            Data transfer object for transporting indexable properties list
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Models.IndexablePropertiesDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Models.IndexablePropertiesDto"/> class.
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.IndexablePropertiesDto.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
             </value>
         </member>
         <member name="T:DragqnLD.WebApi.Models.ProgressDto">

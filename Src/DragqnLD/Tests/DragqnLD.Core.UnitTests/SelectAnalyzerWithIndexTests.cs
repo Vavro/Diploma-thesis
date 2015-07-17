@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Implementations;
 using Raven.Abstractions.Indexing;
 using Xunit;
@@ -12,6 +13,7 @@ using Xunit.Abstractions;
 
 namespace DragqnLD.Core.UnitTests
 {
+    [Trait("Category","Basic")]
     public class SelectAnalyzerWithIndexTests : TestsBase
     {
         private readonly SelectAnalyzer _selectAnalyzer;

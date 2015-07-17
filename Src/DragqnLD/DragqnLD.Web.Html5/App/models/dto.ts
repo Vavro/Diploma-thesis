@@ -1,4 +1,8 @@
 ﻿// ReSharper disable InconsistentNaming
+interface dictionary<TValue> {
+    [key: string]: TValue;
+}
+
 interface queryDefinitionMetadataDto {
     Id: string;
     Name: string;
@@ -17,7 +21,7 @@ interface queryDefinitionWithStatusDto extends queryDefinitionDto {
 }
 
 interface queryDefinitionStatusDto {
-    Status: queryStatus;
+    Status: QueryStatus;
     DocumentLoadProgress: progressDto;
 }
 
@@ -26,7 +30,7 @@ interface progressDto {
     CurrentItem: number;
 }
 
-enum queryStatus {
+enum QueryStatus {
     ReadyToRun = 0,
     LoadingSelectResult = 1,
     LoadingDocuments = 2,
@@ -51,5 +55,34 @@ interface pagedDocumentMetadataDto {
 // todo: when i get rid of Content delete this Dto
 interface documentDto {
     Content : any;
+}
+
+interface indexDefinitionDto {
+    Name: string;
+    RavenMap: string;
+    RavenAnalyzers: any;
+    PropertyNameMap: any;
+}
+
+interface propertiesToIndexDto {
+    PropertyPaths: string[];
+}
+
+interface indexDefinitionsDto {
+    DefinitionId: string;
+    Indexes : indexDefinitionMetadataDto[];
+}
+
+interface indexDefinitionMetadataDto {
+    Name: string;
+    IndexedFields: string[];
+}
+
+interface sparqlDto {
+    SparqlSelectQuery: string;
+}
+
+interface indexablePropertiesDto {
+    Properties: string[];
 }
 // ReSharper restore InconsistentNaming

@@ -1,7 +1,7 @@
 ﻿import progress = require("models/progress");
 
 class queryDefinitionStatus {
-    status = ko.observable<queryStatus>();
+    status = ko.observable<QueryStatus>();
     documentLoadProgress = ko.observable<progress>();
 
     statusText: KnockoutComputed<string>;
@@ -14,13 +14,13 @@ class queryDefinitionStatus {
             var s = this.status();
 
             switch (s) {
-                case queryStatus.ReadyToRun:
+                case QueryStatus.ReadyToRun:
                     return "Ready to be run";
-                case queryStatus.LoadingSelectResult:
+                case QueryStatus.LoadingSelectResult:
                     return "Loading select results";
-                case queryStatus.LoadingDocuments:
+                case QueryStatus.LoadingDocuments:
                     return "Loading documents: " + this.documentLoadProgress().currentItem() + "/" + this.documentLoadProgress().totalCount();
-                case queryStatus.Loaded:
+                case QueryStatus.Loaded:
                     return "Documents loaded";
                 default:
                     return "Unknown";

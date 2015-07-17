@@ -19,6 +19,18 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
         public bool? WrappedInArray { get; set; }
 
         public IIndexableProperty Property { get; set; }
+
+        public IEnumerable<string> GetPropertyPaths()
+        {
+            var asObject = Property as IndexableObjectProperty;
+            if (asObject != null)
+            {
+                return asObject.GetPropertyPaths().Select(s => AbbreviatedName + "." + s);
+            }
+
+            return new[] { AbbreviatedName };
+
+        }
     }
 
     public class IndexableObjectProperty : IIndexableProperty
@@ -78,6 +90,11 @@ namespace DragqnLD.Core.Abstraction.ConstructAnalyzer
                     propertyAsObject.InitializeDictionaries();
                 }
             }
+        }
+
+        public IEnumerable<string> GetPropertyPaths()
+        {
+            return ChildProperties.SelectMany(cp => cp.GetPropertyPaths());
         }
     }
 }

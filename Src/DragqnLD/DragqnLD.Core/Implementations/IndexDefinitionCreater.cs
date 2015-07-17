@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
 using DragqnLD.Core.Abstraction.Data;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Abstraction.Query;
 using Newtonsoft.Json.Serialization;
 using Raven.Abstractions.Indexing;
@@ -33,12 +34,12 @@ namespace DragqnLD.Core.Implementations
     {
 
 
-        public DragqnLDIndexDefiniton CreateIndexDefinitionFor(QueryDefinition ingredientsQd, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexRequirements requirements)
+        public DragqnLDIndexDefiniton CreateIndexDefinitionFor(QueryDefinition queryDefinition, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexRequirements requirements)
         {
             var mapBuilder = new StringBuilder();
             mapBuilder.AppendLine("from doc in docs");
             mapBuilder.Append(@"where doc[""@metadata""][""Raven-Entity-Name""] == ");
-            mapBuilder.Append('"' + ingredientsQd.Id + '"');
+            mapBuilder.Append('"' + queryDefinition.Id + '"');
             mapBuilder.AppendLine();
             mapBuilder.AppendLine("select new { ");
             var createdPropNames = new List<string>();
@@ -65,7 +66,7 @@ namespace DragqnLD.Core.Implementations
             
             DragqnLDIndexDefiniton indexDefinition = new DragqnLDIndexDefiniton()
             {
-                Name = CreateNameFor(ingredientsQd, createdPropNames),
+                Name = CreateNameFor(queryDefinition, createdPropNames),
                 Requirements = requirements,
                 PropertyNameMap = createdPropNamesMap,
                 RavenMap = ravenIndexDefinition.Map,

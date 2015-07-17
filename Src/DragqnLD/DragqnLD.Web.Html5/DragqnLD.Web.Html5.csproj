@@ -1035,9 +1035,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\commands\getDocumentCommand.ts" />
+    <TypeScriptCompile Include="App\commands\getIndexesCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryContextCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDefinitionWithStatusCommand.ts" />
     <TypeScriptCompile Include="App\commands\getQueryDocumentsCommand.ts" />
+    <TypeScriptCompile Include="App\commands\getQueryIndexablePropertiesCommand.ts" />
     <TypeScriptCompile Include="App\commands\processQueryCommand.ts" />
     <TypeScriptCompile Include="App\commands\saveQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
@@ -1054,7 +1056,12 @@
     <TypeScriptCompile Include="App\common\pagedResultSet.ts" />
     <TypeScriptCompile Include="App\models\documentMetadata.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
+    <TypeScriptCompile Include="App\models\indexableProperties.ts" />
+    <TypeScriptCompile Include="App\models\indexDefinition.ts" />
+    <TypeScriptCompile Include="App\models\indexDefinitions.ts" />
+    <TypeScriptCompile Include="App\models\indexDefinitionMetadata.ts" />
     <TypeScriptCompile Include="App\models\progress.ts" />
+    <TypeScriptCompile Include="App\models\propertiesToIndex.ts" />
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />
     <TypeScriptCompile Include="App\models\queryDefinitionStatus.ts" />
     <TypeScriptCompile Include="App\models\queryDefinitionWithStatus.ts" />

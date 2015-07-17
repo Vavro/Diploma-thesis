@@ -1,4 +1,6 @@
-﻿import constants = require("common/constants");
+﻿/// <reference path="../models/dto.ts" />
+
+import constants = require("common/constants");
 import appUrl = require("common/appUrl");
 
 /// Commands encapsulate a read or write operation to the server and common AJAX related functionality.

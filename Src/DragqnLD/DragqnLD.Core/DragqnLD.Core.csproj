@@ -82,6 +82,10 @@
     <Compile Include="Abstraction\IDataFormatter.cs" />
     <Compile Include="Abstraction\IDocumentPropertyEscaper.cs" />
     <Compile Include="Abstraction\IIndexDefinitionCreatercs.cs" />
+    <Compile Include="Abstraction\Indexes\PropertyToIndex.cs" />
+    <Compile Include="Abstraction\Indexes\DragqnLDIndexDefinitions.cs" />
+    <Compile Include="Abstraction\Indexes\DragqnLDIndexDefiniton.cs" />
+    <Compile Include="Abstraction\Indexes\DragqnLDIndexRequirements.cs" />
     <Compile Include="Abstraction\IParsedSparqlQuery.cs" />
     <Compile Include="Abstraction\IPropertyUnescapesCache.cs" />
     <Compile Include="Abstraction\ISelectAnalyzer.cs" />

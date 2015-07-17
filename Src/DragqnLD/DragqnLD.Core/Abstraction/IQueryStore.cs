@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using JsonLD.Core;
@@ -97,6 +98,6 @@ namespace DragqnLD.Core.Abstraction
         /// <returns></returns>
         Task<string> StoreIndex(string definitionId, DragqnLDIndexDefiniton indexDefinition);
 
-        Task<QueryIndexDefinitions> GetIndexes(string definitionId);
+        Task<DragqnLDIndexDefinitions> GetIndexes(string definitionId);
     }
 }

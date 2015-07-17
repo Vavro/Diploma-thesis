@@ -1,4 +1,6 @@
-﻿import constants = require("common/constants");
+﻿/// <reference path="../models/dto.ts" />
+
+import constants = require("common/constants");
 
 class viewModelBase {
     public c = new constants();

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DragqnLD.Core.Abstraction;
 using DragqnLD.Core.Abstraction.ConstructAnalyzer;
+using DragqnLD.Core.Abstraction.Indexes;
 using DragqnLD.Core.Abstraction.Query;
 using DragqnLD.Core.Implementations;
 using Raven.Json.Linq;

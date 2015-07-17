@@ -1,4 +1,6 @@
-﻿import router = require("plugins/router");
+﻿/// <reference path="../models/dto.ts" />
+
+import router = require("plugins/router");
 import viewModelBase = require("viewmodels/viewModelBase");
 
 import queryDefinitionWithStatus = require("models/queryDefinitionWithStatus");
@@ -8,12 +10,19 @@ import getQueryContextCommand = require("commands/getQueryContextCommand");
 import processQueryCommand = require("commands/processQueryCommand");
 
 import documentMetadata = require("models/documentMetadata");
+import indexDefinitionMetadata = require("models/indexDefinitionMetadata");
+import indexDefinitions = require("models/indexDefinitions");
+
+import getIndexesCommand = require("commands/getIndexesCommand");
+import getQueryIndexablePropertiesCommand = require("commands/getQueryIndexablePropertiesCommand");
+import indexableProperties = require("models/indexableProperties");
 
 
 enum Tabs {
     Documents,
     Context,
-    Indexes
+    Indexes,
+    IndexableProperties
 }
 
 class viewQueryDefinition extends viewModelBase {
@@ -25,7 +34,8 @@ class viewQueryDefinition extends viewModelBase {
 
     isShowingDocuments: KnockoutComputed<Boolean>;
     isShowingContext : KnockoutComputed<Boolean>;
-    isShowingIndexes : KnockoutComputed<Boolean>;
+    isShowingIndexes: KnockoutComputed<Boolean>;
+    isShowingIndexableProperties: KnockoutComputed<Boolean>;
 
     activeTab = ko.observable(Tabs.Documents);
 
@@ -44,20 +54,32 @@ class viewQueryDefinition extends viewModelBase {
         currentPage: ko.observable(1)
     };
 
-    
+    indexDefinitions = ko.observable<indexDefinitions>();
+    indexList = ko.observableArray<indexDefinitionMetadata>();
+    indexColumnList = ko.observableArray([
+        { field: "id", displayName: "Id", cellTemplate: this.idTemplate }]);
 
+    indexListPagingOptions = {
+        pageSizes: ko.observableArray([10, 20, 50]),
+        pageSize: ko.observable(20),
+        totalServerItems: ko.observable(0),
+        currentPage: ko.observable(1)
+    };
+
+    indexablePropertiesList = ko.observable<string>();
 
     constructor() {
         super();
         this.queryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
         this.canRun = ko.computed((): boolean =>
             this.queryDefinition() ?
-            this.queryDefinition().status().status() === queryStatus.ReadyToRun :
+            this.queryDefinition().status().status() == QueryStatus.ReadyToRun :
                 false);
 
         this.isShowingContext = ko.computed((): boolean => this.activeTab() === Tabs.Context);
         this.isShowingDocuments = ko.computed((): boolean => this.activeTab() === Tabs.Documents);
         this.isShowingIndexes = ko.computed((): boolean => this.activeTab() === Tabs.Indexes);
+        this.isShowingIndexableProperties = ko.computed((): boolean => this.activeTab() === Tabs.IndexableProperties);
 
         this.documentsListPagingOptions.pageSize.subscribe(newValue => {
             this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
@@ -67,7 +89,6 @@ class viewQueryDefinition extends viewModelBase {
             this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
                 this.documentsListPagingOptions.pageSize(), this.queryId());
         });
-
     }
 
     compositionComplete(): void {
@@ -130,7 +151,7 @@ class viewQueryDefinition extends viewModelBase {
                 })
                 .fail((response: any): void => {
                     // todo examine possible response and show it
-                    console.log("Could not get document " + idToLoad + "response: ");
+                    console.log("Could not get document " + idToLoad + " response: ");
                     console.log(response);
                     this.notifyWarning("Could not get document " + idToLoad);
                     canActivateResult.reject(response);
@@ -139,6 +160,8 @@ class viewQueryDefinition extends viewModelBase {
             });
 
         this.getContextAsync(idToLoad);
+        this.getIndexesAsync(idToLoad);
+        this.getIndexablePropertiesAsync(idToLoad);
 
         return canActivateResult;
     }
@@ -159,6 +182,15 @@ class viewQueryDefinition extends viewModelBase {
             });
     }
 
+    private getIndexesAsync(id: string): void {
+        var command = new getIndexesCommand(id);
+        command
+            .execute()
+            .done(result => {
+                this.indexDefinitions(result);
+        });
+    }
+
     private getContextAsync(id: string): void {
         var command = new getQueryContextCommand(id);
         command
@@ -167,7 +199,15 @@ class viewQueryDefinition extends viewModelBase {
                 this.context(this.stringify(result));
         });
     }
-
+    private getIndexablePropertiesAsync(id: string): void {
+        var command = new getQueryIndexablePropertiesCommand(id);
+        command
+            .execute()
+            .done(result => {
+                result.properties
+                this.indexableProperties(result);
+            });
+    }
 
     public activateDocs(): void {
         this.activeTab(Tabs.Documents);
@@ -182,6 +222,12 @@ class viewQueryDefinition extends viewModelBase {
     public activateContext(): void {
         this.activeTab(Tabs.Context);
     }
+
+    public activateIndexableProperties(): void {
+        this.activeTab(Tabs.IndexableProperties);
+    }
+
+    
 }
 
 export = viewQueryDefinition;
