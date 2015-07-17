@@ -57,7 +57,8 @@ class viewQueryDefinition extends viewModelBase {
     indexDefinitions = ko.observable<indexDefinitions>();
     indexList = ko.observableArray<indexDefinitionMetadata>();
     indexColumnList = ko.observableArray([
-        { field: "id", displayName: "Id", cellTemplate: this.idTemplate }]);
+        { field: "name", displayName: "Name" },
+        { field: "indexedFields ", displayName:"Indexed Fields"}]);
 
     indexListPagingOptions = {
         pageSizes: ko.observableArray([10, 20, 50]),
@@ -71,10 +72,14 @@ class viewQueryDefinition extends viewModelBase {
     constructor() {
         super();
         this.queryId = ko.computed((): string => this.queryDefinition() ? this.queryDefinition().id() : "");
-        this.canRun = ko.computed((): boolean =>
-            this.queryDefinition() ?
-            this.queryDefinition().status().status() == QueryStatus.ReadyToRun :
-                false);
+        this.canRun = ko.computed((): boolean => {
+            if (this.queryDefinition()) {
+                var status = this.queryDefinition().status().status();
+                return status === QueryStatus.ReadyToRun;
+            } else {
+                return false;
+            }
+        });
 
         this.isShowingContext = ko.computed((): boolean => this.activeTab() === Tabs.Context);
         this.isShowingDocuments = ko.computed((): boolean => this.activeTab() === Tabs.Documents);
@@ -221,13 +226,16 @@ class viewQueryDefinition extends viewModelBase {
 
     public activateContext(): void {
         this.activeTab(Tabs.Context);
+        $(window).trigger("resize");
     }
 
     public activateIndexableProperties(): void {
         this.activeTab(Tabs.IndexableProperties);
     }
 
-    
+    public addIndex(): void {
+        router.navigate("#editIndex?definitionId="+this.queryId());
+    }    
 }
 
 export = viewQueryDefinition;

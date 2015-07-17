@@ -12,6 +12,25 @@
 
     ravenAnalyzers: any;
     propertyNameMap: any;
+
+    static empty() {
+        return new indexDefinition({
+            Name : "",
+            RavenMap : "",
+            PropertyNameMap : {
+            },
+            RavenAnalyzers : {}
+        });
+    }
+
+    public toDto(): indexDefinitionDto {
+        return {
+            Name : this.name(),
+            PropertyNameMap : this.propertyNameMap,
+            RavenMap : this.ravenMap(),
+            RavenAnalyzers : this.ravenAnalyzers
+        };
+    }
 }
 
 export = indexDefinition;

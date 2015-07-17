@@ -89,8 +89,10 @@
                 </div>
                 <div class="tab-pane" data-bind="css: { active: isShowingIndexes}">
                     <h3>Indexes</h3>
-                    <div>
-                        <div class="pull-left"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button></div>
+                    <div class="col-sm-12">
+                        <div class="btn-group">
+                            <div class="pull-left"><button type="button" class="btn btn-primary" data-bind="click: addIndex"><i class="fa fa-plus"></i> Add</button></div>
+                        </div>
                         <div data-bind="koGrid: {data: indexList,
                                 columnDefs: indexColumnList,
                                 autogenerateColumns: false,

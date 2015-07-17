@@ -1,0 +1,43 @@
+﻿<section>
+    <div class="row">
+        <ul class="breadcrumb">
+            <li>
+                <h3>
+                    <i class="fa fa-file-text-o"></i>
+                    <!-- ReSharper disable once Html.IdNotResolved -->
+                    <a href="#queries" data-bind="click: navigateToQueries">Queries</a>
+                </h3>
+            </li>
+            <li>
+                <span data-bind="text: definitionId"></span>
+            </li>
+            <li>
+                <span>Indexes</span>
+            </li>
+            <li class="active">
+                <span data-bind="visible: !isCreatingNewIndexDefinition(), text: editedIndexDefinitionId"></span>
+                <span data-bind="visible: isCreatingNewIndexDefinition">New Index Definition</span>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <form role="form">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Index Definition</legend>
+                <div>
+                    <!--todo: seznam propert na querydef k zaskrtatni, s pripadnym fulltexted-->
+                    <!--todo: moznost vlozit select sparql dotaz a nechat si poradit index -->
+                    <!--todo: policko pro jmeno, editor pro ravenmap, pole-pole mapovani pro propmap, mapovani prop-analyzer pro analyzery-->
+                </div>
+                <div class="col-sm-12">
+                    <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition, enable: isValid">
+                        <i class="fa fa-save fa-inverse fa-lg"></i>&nbsp;Save
+                    </button>
+                    <button id="btn_cancel" name="btn_cancel" class="btn btn-danger"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+</section>
