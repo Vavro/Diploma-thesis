@@ -66,7 +66,7 @@ class viewQueryDefinition extends viewModelBase {
         currentPage: ko.observable(1)
     };
 
-    indexablePropertiesList = ko.observable<string>();
+    indexableProperties = ko.observable<indexableProperties>();
 
     constructor() {
         super();
@@ -140,28 +140,27 @@ class viewQueryDefinition extends viewModelBase {
         }
 
         this.getDocumentsAsync(this.documentsListPagingOptions.currentPage(),
-            this.documentsListPagingOptions.pageSize(), idToLoad)
-            .always(() : void => {
+                this.documentsListPagingOptions.pageSize(), idToLoad)
+            .always(() => this.getIndexesAsync(idToLoad))
+            .always(() => this.getIndexablePropertiesAsync(idToLoad))
+            .always(() => this.getContextAsync(idToLoad))
+            .always((): void => {
             new getQueryDefinitionWithStatusCommand(idToLoad)
                 .execute()
                 .done((queryDefinition: queryDefinitionWithStatus): void => {
-                    this.queryDefinition(queryDefinition);
-                    canActivateResult.resolve({ can: true });
-                    this.notifySuccess("Query " + idToLoad + " loaded");
-                })
+                this.queryDefinition(queryDefinition);
+                canActivateResult.resolve({ can: true });
+                this.notifySuccess("Query " + idToLoad + " loaded");
+            })
                 .fail((response: any): void => {
-                    // todo examine possible response and show it
-                    console.log("Could not get document " + idToLoad + " response: ");
-                    console.log(response);
-                    this.notifyWarning("Could not get document " + idToLoad);
-                    canActivateResult.reject(response);
-                });
-
+                // todo examine possible response and show it
+                console.log("Could not get document " + idToLoad + " response: ");
+                console.log(response);
+                this.notifyWarning("Could not get document " + idToLoad);
+                canActivateResult.reject(response);
             });
 
-        this.getContextAsync(idToLoad);
-        this.getIndexesAsync(idToLoad);
-        this.getIndexablePropertiesAsync(idToLoad);
+        });
 
         return canActivateResult;
     }
@@ -177,18 +176,20 @@ class viewQueryDefinition extends viewModelBase {
                 });
 
                 this.documentsListPagingOptions.totalServerItems(result.TotalItems);
-                // todo: find out why this "hack" is necessary to have right datagrid size
+
                 $(window).trigger("resize");
             });
     }
 
-    private getIndexesAsync(id: string): void {
+    private getIndexesAsync(id: string): JQueryPromise<indexDefinitions> {
         var command = new getIndexesCommand(id);
-        command
+        return command
             .execute()
             .done(result => {
-                this.indexDefinitions(result);
-        });
+            this.indexDefinitions(result);
+
+                $(window).trigger("resize");
+            });
     }
 
     private getContextAsync(id: string): void {
@@ -204,7 +205,6 @@ class viewQueryDefinition extends viewModelBase {
         command
             .execute()
             .done(result => {
-                result.properties
                 this.indexableProperties(result);
             });
     }

@@ -80,9 +80,9 @@
                 <div class="tab-pane" data-bind="css: {active: isShowingIndexableProperties}">
                     <h3>Indexable Properties</h3>
                     <div>
-                        <ul data-bind="foreach: indexableProperties.properties">
+                        <ul data-bind="foreach: indexableProperties().properties">
                             <li>
-                                <span data-bind="text: $value"></span>
+                                <span data-bind="text: $data"></span>
                             </li>
                         </ul>
                     </div>
