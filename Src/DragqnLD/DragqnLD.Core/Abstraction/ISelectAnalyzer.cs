@@ -14,5 +14,7 @@ namespace DragqnLD.Core.Abstraction
 
         string ConvertSparqlToLuceneWithIndex(string sparql, ConstructQueryAccessibleProperties hierarchy,
             DragqnLDIndexDefiniton indexDefinition);
+
+        DragqnLDIndexRequirements CreateIndexRequirementsFromSparql(string sparql, ConstructQueryAccessibleProperties hierarchy);
     }
 }

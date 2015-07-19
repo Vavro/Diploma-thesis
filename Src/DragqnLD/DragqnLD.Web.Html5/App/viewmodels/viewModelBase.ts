@@ -21,6 +21,11 @@ class viewModelBase {
         var prettifySpacing = 4;
         return JSON.stringify(obj, null, prettifySpacing);
     }
+
+    public triggerResize() : void {
+        window["dragqnLDWindowHeight"](1);
+        $(window).trigger('resize');
+    }
 }
 
 export = viewModelBase;

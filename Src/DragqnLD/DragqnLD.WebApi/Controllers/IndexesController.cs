@@ -133,7 +133,16 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/proposeIndexForSparql")]
         public async Task<HttpResponseMessage> ProposeIndexForSparql([FromBody] SparqlDto sparql)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var definition = await _queryStore.Get(this.DefinitionId);
+            var accessibleProperties = await _queryStore.GetHierarchy(this.DefinitionId);
+            var sparqlString = sparql.SparqlSelectQuery;
+            var requirements = _selectAnalyzer.CreateIndexRequirementsFromSparql(sparqlString, accessibleProperties);
+            var proposedIndex = _indexDefinitionCreater.CreateIndexDefinitionFor(definition, accessibleProperties,
+                requirements);
+
+            var proposedIndexDto = Mapper.Map<IndexDefinitionDto>(proposedIndex);
+
+            return CreateResponseWithObject(proposedIndexDto);
         }
 
         /// <summary>

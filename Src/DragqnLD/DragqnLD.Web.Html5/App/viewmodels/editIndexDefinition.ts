@@ -9,6 +9,7 @@ import checkableProperty = require("models/checkableProperty");
 import saveIndexDefinitionCommand = require("commands/saveIndexDefinitionCommand");
 import getQueryIndexablePropertiesCommand = require("commands/getQueryIndexablePropertiesCommand");
 import proposeIndexDefinitionFromPropertiesCommand = require("commands/proposeIndexDefinitionFromPropertiesCommand");
+import proposeIndexDefinitionFromSparqlCommand = require("commands/proposeIndexDefinitionFromSparqlCommand");
 
 class editIndexDefinition extends viewModelBase {
     definitionId = ko.observable<string>();
@@ -22,7 +23,7 @@ class editIndexDefinition extends viewModelBase {
     isProposingFromProperties = ko.observable<Boolean>(false);
     isProposingFromSparql = ko.observable<Boolean>(false);
 
-    sparqlForPropose = ko.observable<String>("");
+    sparqlForPropose = ko.observable<string>("");
     proposedPropertiesToIndex = ko.observable<propertiesToIndex>();
     accessibleProperties = ko.observableArray<checkableProperty>();
 
@@ -152,6 +153,14 @@ class editIndexDefinition extends viewModelBase {
     }
 
     public proposeFromSparql() {
+        var command = new proposeIndexDefinitionFromSparqlCommand(this.definitionId(), this.sparqlForPropose());
+        command
+            .execute()
+            .done((result => {
+                this.setIndexDefinition(result);
+                this.toggleProposeFromSparql();
+            }));
+
         this.notifySuccess("propose from sparql");
     }
 }

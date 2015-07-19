@@ -59,14 +59,7 @@ class viewQueryDefinition extends viewModelBase {
     indexColumnList = ko.observableArray([
         { field: "name", displayName: "Name" },
         { field: "indexedFields", displayName:"Indexed Fields"}]);
-
-    indexListPagingOptions = {
-        pageSizes: ko.observableArray([10, 20, 50]),
-        pageSize: ko.observable(20),
-        totalServerItems: ko.observable(0),
-        currentPage: ko.observable(1)
-    };
-
+    
     indexableProperties = ko.observable<indexableProperties>();
 
     constructor() {
@@ -99,7 +92,7 @@ class viewQueryDefinition extends viewModelBase {
     compositionComplete(): void {
         console.log("viewQueryDefinition view attached");
 
-        $(window).trigger("resize");
+        this.triggerResize();
     }
 
     navigateToQueries(): void {
@@ -182,7 +175,7 @@ class viewQueryDefinition extends viewModelBase {
 
                 this.documentsListPagingOptions.totalServerItems(result.TotalItems);
 
-                $(window).trigger("resize");
+                this.triggerResize();
             });
     }
 
@@ -192,7 +185,7 @@ class viewQueryDefinition extends viewModelBase {
             .execute()
             .done(result => {
                 this.indexDefinitions(result);
-                $(window).trigger("resize");
+                this.triggerResize();
             });
     }
 
@@ -215,17 +208,17 @@ class viewQueryDefinition extends viewModelBase {
 
     public activateDocs(): void {
         this.activeTab(Tabs.Documents);
-        $(window).trigger("resize");
+        this.triggerResize();
     }
 
     public activateIndexes(): void {
         this.activeTab(Tabs.Indexes);
-        $(window).trigger("resize");
+        this.triggerResize();
     }
 
     public activateContext(): void {
         this.activeTab(Tabs.Context);
-        $(window).trigger("resize");
+        this.triggerResize();
     }
 
     public activateIndexableProperties(): void {

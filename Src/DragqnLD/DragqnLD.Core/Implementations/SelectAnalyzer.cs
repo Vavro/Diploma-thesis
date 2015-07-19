@@ -13,6 +13,7 @@ using Raven.Abstractions.Data;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
+using VDS.RDF.Query.Algebra;
 using VDS.RDF.Query.Expressions.Functions.Sparql.Boolean;
 using VDS.RDF.Query.Patterns;
 using VDS.RDF.Update.Commands;
@@ -76,6 +77,25 @@ namespace DragqnLD.Core.Implementations
                 throw new NotSupportedException("Child graph patterns are not supported");
 
             return parsedSparql;
+        }
+
+        public DragqnLDIndexRequirements CreateIndexRequirementsFromSparql(string sparql, ConstructQueryAccessibleProperties hierarchy)
+        {
+            var parsedSparql = ParseAndCheck(sparql);
+
+            var rootVariable = parsedSparql.Variables.Single(var => var.IsResultVariable);
+
+            var accessedPropertyPaths = CreateAccessedPropertyPaths(hierarchy, parsedSparql, rootVariable);
+
+            CheckAccessedPropertyPaths(accessedPropertyPaths);
+
+            var requirements = new DragqnLDIndexRequirements()
+            {
+                PropertyPaths =
+                    accessedPropertyPaths.Select(
+                        path => new PropertyToIndex() {FulltextSearchable = false, PropertyPath = path.Path}).ToList()
+            };
+            return requirements;
         }
 
         public string ConvertSparqlToLuceneWithIndex(string sparql, ConstructQueryAccessibleProperties hierarchy,

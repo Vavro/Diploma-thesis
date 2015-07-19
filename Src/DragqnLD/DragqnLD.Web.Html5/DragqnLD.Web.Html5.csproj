@@ -1043,6 +1043,7 @@
     <TypeScriptCompile Include="App\commands\getQueryIndexablePropertiesCommand.ts" />
     <TypeScriptCompile Include="App\commands\processQueryCommand.ts" />
     <TypeScriptCompile Include="App\commands\proposeIndexDefinitionFromPropertiesCommand.ts" />
+    <TypeScriptCompile Include="App\commands\proposeIndexDefinitionFromSparqlCommand.ts" />
     <TypeScriptCompile Include="App\commands\saveIndexDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\saveQueryDefinitionCommand.ts" />
     <TypeScriptCompile Include="App\commands\commandBase.ts" />
@@ -1107,6 +1108,9 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
