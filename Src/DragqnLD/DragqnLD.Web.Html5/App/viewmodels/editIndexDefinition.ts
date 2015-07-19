@@ -179,6 +179,10 @@ class editIndexDefinition extends viewModelBase {
 
         this.notifySuccess("propose from sparql");
     }
+
+    public cancel() {
+        router.navigateBack();
+    }
 }
 
 export = editIndexDefinition;

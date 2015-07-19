@@ -77,6 +77,10 @@ class editQueryDefinition extends viewModelBase {
             }); // fail reseno v ramci commands
 
     }
+
+    public cancel(): void {
+        router.navigateBack();
+    }
 }
 
 export = editQueryDefinition;
