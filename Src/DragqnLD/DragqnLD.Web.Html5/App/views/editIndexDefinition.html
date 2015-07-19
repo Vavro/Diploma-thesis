@@ -115,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <label class="col-md-2 control-label" data-bind="visible: indexDefinition().fields().length > 0">Fields</label>
+                    <label class="col-md-2 control-label" data-bind="visible: indexDefinition() && indexDefinition().fields().length > 0">Fields</label>
                     <div class="col-md-10" data-bind="foreach: indexDefinition().fields">
                         <div class="col-lg-6">
                             <div class="panel panel-default">

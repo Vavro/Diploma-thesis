@@ -114,7 +114,13 @@ class editIndexDefinition extends viewModelBase {
     public saveIndexDefinition(): void {
         //todo: on index editation could ask whether you intentionally changed name -> create new index vs update current
 
+        var name = this.indexDefinition().name();
+        
         var indexDef = this.indexDefinition();
+        var definitionId = this.definitionId();
+        if (!ko.utils.stringStartsWith(name, definitionId)) {
+            this.indexDefinition().name(definitionId + "/" + name);
+        }
 
         if (this.errors().length !== 0) {
             this.errors.showAllMessages();
