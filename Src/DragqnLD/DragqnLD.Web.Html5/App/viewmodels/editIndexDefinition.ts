@@ -108,7 +108,7 @@ class editIndexDefinition extends viewModelBase {
         saveCommand
             .execute()
             .done(_ => {
-                var url = "#viewQuery?id=" + this.definitionId;
+                var url = "#viewQuery?id=" + this.definitionId();
                 router.navigate(url);
             }); // fail reseno v ramci commands
 

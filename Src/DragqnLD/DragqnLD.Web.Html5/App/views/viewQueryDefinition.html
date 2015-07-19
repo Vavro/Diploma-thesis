@@ -93,7 +93,7 @@
                         <div class="btn-group">
                             <div class="pull-left"><button type="button" class="btn btn-primary" data-bind="click: addIndex"><i class="fa fa-plus"></i> Add</button></div>
                         </div>
-                        <div data-bind="koGrid: {data: indexList,
+                        <div data-bind="koGrid: {data: indexDefinitions().indexes,
                                 columnDefs: indexColumnList,
                                 autogenerateColumns: false,
                                 multiSelect: false,
