@@ -1056,12 +1056,14 @@
     <TypeScriptCompile Include="App\common\extensions.ts" />
     <TypeScriptCompile Include="App\common\pagedList.ts" />
     <TypeScriptCompile Include="App\common\pagedResultSet.ts" />
+    <TypeScriptCompile Include="App\models\checkableProperty.ts" />
     <TypeScriptCompile Include="App\models\documentMetadata.ts" />
     <TypeScriptCompile Include="App\models\dto.ts" />
     <TypeScriptCompile Include="App\models\indexableProperties.ts" />
     <TypeScriptCompile Include="App\models\indexDefinition.ts" />
     <TypeScriptCompile Include="App\models\indexDefinitions.ts" />
     <TypeScriptCompile Include="App\models\indexDefinitionMetadata.ts" />
+    <TypeScriptCompile Include="App\models\indexedProperty.ts" />
     <TypeScriptCompile Include="App\models\progress.ts" />
     <TypeScriptCompile Include="App\models\propertiesToIndex.ts" />
     <TypeScriptCompile Include="App\models\queryDefinition.ts" />

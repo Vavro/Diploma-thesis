@@ -52,12 +52,12 @@ namespace DragqnLD.Core.Implementations
                 var mapLine = CreateIndexedFieldNameAndAccess(propertyPaths, propertyToIndex);
                 mapBuilder.Append(mapLine.Name + " = " + mapLine.Access);
                 mapBuilder.AppendLine(",");
-                if (propertyToIndex.Fulltext)
+                if (propertyToIndex.FulltextSearchable)
                 {
                     analyzers.Add(mapLine.Name, KnownRavenDBAnalyzers.AnalyzerLuceneStandard);
                 }
                 createdPropNames.Add(mapLine.Name);
-                createdPropNamesMap.Add(propertyToIndex.AbbreviatedName, mapLine.Name);
+                createdPropNamesMap.Add(propertyToIndex.PropertyPath, mapLine.Name);
             }
             mapBuilder.Append(@"_metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}");
 
@@ -111,7 +111,7 @@ namespace DragqnLD.Core.Implementations
 
         public FieldNameAndAccess CreateIndexedFieldNameAndAccess(ConstructQueryAccessibleProperties propertyPaths, PropertyToIndex propertyToIndex)
         {
-            var pathNames = propertyToIndex.AbbreviatedName.Split('.');
+            var pathNames = propertyToIndex.PropertyPath.Split('.');
             IIndexableProperty currentProperty = propertyPaths.RootProperty;
 
             var fieldNameBuilder = new StringBuilder();
@@ -190,7 +190,7 @@ namespace DragqnLD.Core.Implementations
 
                 if (i != pathNames.Length - 1) //has to be the end of the path
                 {
-                    throw new ArgumentException(String.Format("Path is pointing to a non existing property, finished at {0}, whole path {1}", searchedPropName, propertyToIndex.AbbreviatedName));
+                    throw new ArgumentException(String.Format("Path is pointing to a non existing property, finished at {0}, whole path {1}", searchedPropName, propertyToIndex.PropertyPath));
                 }
                 break;                
             }

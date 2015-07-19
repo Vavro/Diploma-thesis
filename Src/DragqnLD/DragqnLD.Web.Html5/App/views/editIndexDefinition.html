@@ -21,17 +21,139 @@
         </ul>
     </div>
     <div class="row">
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" data-bind="click: toggleProposeFromProperties">Propose from accessible properties</button>
+                <button type="button" class="btn btn-primary" data-bind="click: toggleProposeFromSparql">Propose from sparql query</button>
+                <button type="button" class="btn btn-primary" data-bind="click: addProperty"><i class="fa fa-plus"></i> Add Field</button>
+            </div>
+        </div>
+        <div class="panel panel-default" data-bind="visible: isProposingFromProperties">
+
+            <div class="panel-heading">Select accessible properties to propose index</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Property path</th>
+                        <th>Add fulltext</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: accessibleProperties">
+                    <tr>
+                        <td><input class="checkbox" type="checkbox" data-bind="checked: isChecked" /></td>
+                        <td>
+                            <span data-bind="text: propertyPath, style: { fontWeight: isChecked() ? 'bold' : 'normal'}"></span>
+                        </td>
+                        <td><input class="checkbox" type="checkbox" data-bind="checked: canFulltext" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="panel-body">
+
+                <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: proposeFromProperties">
+                    <i class="fa fa-check fa-inverse fa-lg"></i>&nbsp;Propose
+                </button>
+                <button id="btn_cancel" name="btn_cancel" class="btn btn-danger" data-bind="click: toggleProposeFromProperties"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
+            </div>
+        </div>
+        <div class="panel panel-default" data-bind="visible: isProposingFromSparql">
+            <div class="panel-heading">
+                Input a select SPARQL query to propose index
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="sparqlQuery">Sparql query</label>
+                    <div class="col-md-10">
+                        <pre id="sparqlQuery"
+                             class="form-control"
+                             data-bind="aceEditor: {
+                                    code: sparqlForPropose,
+                                    allowResize: true,
+                                    minHeight: 100,
+                                    maxHeight: 400,
+                                    typeName:'query',
+                                    lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'">
+                            </pre>
+                        <span class="help-block">Define the map function for RavenDB</span>
+                    </div>
+                </div>
+
+                <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: proposeFromSparql">
+                    <i class="fa fa-check fa-inverse fa-lg"></i>&nbsp;Propose
+                </button>
+                <button id="btn_cancel" name="btn_cancel" class="btn btn-danger" data-bind="click: toggleProposeFromSparql"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
+            </div>
+        </div>
         <form role="form">
             <fieldset>
                 <!-- Form Name -->
                 <legend>Index Definition</legend>
-                <div>
+                <div class="col-sm-12">
                     <!--todo: seznam propert na querydef k zaskrtatni, s pripadnym fulltexted-->
                     <!--todo: moznost vlozit select sparql dotaz a nechat si poradit index -->
-                    <!--todo: policko pro jmeno, editor pro ravenmap, pole-pole mapovani pro propmap, mapovani prop-analyzer pro analyzery-->
+
                 </div>
+                <div class="form-horizontal">
+                    <div data-bind="with: indexDefinition" class="col-sm-12">
+                        <!--todo: policko pro jmeno, editor pro ravenmap, pole-pole mapovani pro propmap, mapovani prop-analyzer pro analyzery-->
+
+                        <div class="form-group" data-bind="validationElement: name">
+                            <label class="col-md-2 control-label" for="Name">Name</label>
+                            <div class="col-md-10" data-bind="validationElement: name">
+                                <input id="Name" name="Name" type="text" placeholder="Insert Name of Index Definition" class="form-control input-sm" data-bind="value: name, valueUpdate: 'input'">
+                                <span class="help-block">Id of Query Definition</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" data-bind="validationElement: ravenMap">
+                            <label class="col-md-2 control-label" for="RavenMap">Raven Map function</label>
+                            <div class="col-md-10">
+                                <pre id="RavenMap" class="form-control" data-bind="aceEditor: { code: ravenMap, allowResize: true, minHeight: 60, maxHeight: 200, typeName:'query', lang:'ace/mode/csharp'}, valueUpdate: 'afterkeydown'"></pre>
+                                <span class="help-block">Define the map function for RavenDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="col-md-2 control-label" data-bind="visible: indexProperties().length > 0">Fields</label>
+                    <div class="col-md-10" data-bind="foreach: indexProperties">
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="col-md-11">
+                                        <input name="Property Path" type="text"
+                                               placeholder="Insert Name of the original Property path"
+                                               class="form-control input-sm"
+                                               data-bind="value: propertyPath, valueUpdate: 'input', attr: {id: 'PropertyPath' + $index()}">
+                                    </div>
+                                    <div>
+                                        <button type="button" class="close" aria-hidden="true"><i class="fa fa-times" data-bind="click: $root.removeField.bind($root, $index())" aria-hidden="true" title="Remove this field from the index"></i></button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-4 control-label" data-bind="attr:{ for: 'RavenMapName' + $index}">Mapped Name</div>
+                                    <div class="col-md-8">
+                                        <input name="Mapped Name" type="text"
+                                               placeholder="Insert Name of the mapped field"
+                                               class="form-control input-sm"
+                                               data-bind="value: ravenMapName, valueUpdate: 'input', attr: {id: 'RavenMapName' + $index()}">
+                                    </div>
+                                    <div class="col-md-4 control-label" data-bind="attr:{ for: 'Analyzer' + $index}">Analyzer Name</div>
+                                    <div class="col-md-8">
+                                        <input name="Analyzer Name" type="text"
+                                               placeholder="Insert Name of the mapped field"
+                                               class="form-control input-sm"
+                                               data-bind="value: analyzerName, valueUpdate: 'input', attr: {id: 'Analyzer' + $index}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-sm-12">
-                    <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveQueryDefinition, enable: isValid">
+                    <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: saveIndexDefinition, enable: isValid">
                         <i class="fa fa-save fa-inverse fa-lg"></i>&nbsp;Save
                     </button>
                     <button id="btn_cancel" name="btn_cancel" class="btn btn-danger"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>

@@ -43,7 +43,7 @@ namespace DragqnLD.WebApi.App_Start
                     .ConvertUsing(id => new IndexDefinitionMetadataDto()
                     {
                         Name = id.Name,
-                        IndexedFields = id.Requirements.PropertiesToIndex.Select(prop => prop.AbbreviatedName).ToList()
+                        IndexedFields = id.Requirements.PropertiesToIndex.Select(prop => prop.PropertyPath).ToList()
                     });
 
 

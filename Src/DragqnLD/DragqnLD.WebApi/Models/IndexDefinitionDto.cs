@@ -115,7 +115,7 @@ namespace DragqnLD.WebApi.Models
         /// </summary>
         public PropertiesToIndexDto()
         {
-            PropertyPaths = new List<string>();
+            PropertyPaths = new List<PropertyToIndexDto>();
         }
 
         /// <summary>
@@ -124,7 +124,18 @@ namespace DragqnLD.WebApi.Models
         /// <value>
         /// The property paths.
         /// </value>
-        public List<string> PropertyPaths { get; set; }
+        public List<PropertyToIndexDto> PropertyPaths { get; set; }
+    }
+
+    public class PropertyToIndexDto
+    {
+        public PropertyToIndexDto()
+        {
+            
+        }
+
+        public string PropertyPath { get; set; }
+        public bool FulltextSearchable { get; set; }
     }
 
     /// <summary>

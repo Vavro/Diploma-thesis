@@ -37,7 +37,7 @@ namespace DragqnLD.Core.UnitTests
             var ingredientsQd = PrepareIngredientQueryForIndexCreation(out propertyPaths);
 
             var propertiesToIndex = new DragqnLDIndexRequirements();
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "@id"});
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "@id"});
 
             var indexDefiniton = _indexDefinitionCreater.CreateIndexDefinitionFor(ingredientsQd, propertyPaths, propertiesToIndex);
             const string expectedMap = @"from doc in docs
@@ -58,11 +58,11 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             var ingredientsQd = PrepareIngredientQueryForIndexCreation(out propertyPaths);
 
             var propertiesToIndex = new DragqnLDIndexRequirements();
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() {AbbreviatedName = "title"});
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.hasATCConcept.prefLabel" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.hasATCConcept.notation" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMechanismOfAction.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() {PropertyPath = "title"});
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMedicinalProduct.hasATCConcept.prefLabel" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMedicinalProduct.hasATCConcept.notation" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMechanismOfAction.@id" });
 
             var indexDefiniton = _indexDefinitionCreater.CreateIndexDefinitionFor(ingredientsQd, propertyPaths, propertiesToIndex);
             const string expectedMap = @"from doc in docs
@@ -127,7 +127,7 @@ _metadata_Raven_Entity_Name = doc[""@metadata""][""Raven-Entity-Name""]}";
             var ingredientsQd = PrepareIngredientQueryForIndexCreation(out propertyPaths);
 
             var fieldNameAndAccess = _indexDefinitionCreater.CreateIndexedFieldNameAndAccess(propertyPaths,
-                new PropertyToIndex() {AbbreviatedName = "hasMedicinalProduct.hasATCConcept.prefLabel"});
+                new PropertyToIndex() {PropertyPath = "hasMedicinalProduct.hasATCConcept.prefLabel"});
             var createdLine = fieldNameAndAccess.Name + " = " + fieldNameAndAccess.Access;
 
             const string expectedLine = @"hasMedicinalProduct_hasATCConcept_prefLabel = ((IEnumerable<dynamic>)doc.hasMedicinalProduct).DefaultIfEmpty().Select(x0 => 

@@ -65,7 +65,12 @@ interface indexDefinitionDto {
 }
 
 interface propertiesToIndexDto {
-    PropertyPaths: string[];
+    PropertyPaths: propertyToIndexDto[];
+}
+
+interface propertyToIndexDto {
+    PropertyPath: string;
+    FulltextSearchable: boolean;    
 }
 
 interface indexDefinitionsDto {

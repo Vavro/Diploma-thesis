@@ -83,6 +83,10 @@ body {
     color: red;
 }
 
+.btn-toolbar {
+    padding: 5px;
+}
+
 /* Editor */
 .fullScreen .fullScreen-editor {
   height: auto !important;

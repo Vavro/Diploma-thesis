@@ -7,8 +7,8 @@ namespace DragqnLD.Core.Abstraction.Indexes
 {
     public class PropertyToIndex
     {
-        public string AbbreviatedName { get; set; }
-        public bool Fulltext { get; set; }
+        public string PropertyPath { get; set; }
+        public bool FulltextSearchable { get; set; }
     }
 
 }

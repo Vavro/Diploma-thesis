@@ -161,53 +161,53 @@ WHERE
         public static DragqnLDIndexRequirements IngredientsAllPropertiesToIndex()
         {
             var propertiesToIndex = new DragqnLDIndexRequirements();
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "description" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacologicalAction.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacologicalAction.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPharmacologicalAction.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPharmacologicalAction.title" });
             propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
             {
-                AbbreviatedName = "hasPharmacologicalAction.description"
+                PropertyPath = "hasPharmacologicalAction.description"
             });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMechanismOfAction.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMechanismOfAction.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPhysiologicEffect.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPhysiologicEffect.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacokinetics.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPharmacokinetics.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasPregnancyCategory" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayTreat.description" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "mayPrevent.description" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "contraindicatedWith.description" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.@id" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.title" });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { AbbreviatedName = "hasMedicinalProduct.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMechanismOfAction.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMechanismOfAction.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPhysiologicEffect.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPhysiologicEffect.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPharmacokinetics.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPharmacokinetics.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasPregnancyCategory" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayTreat.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayTreat.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayTreat.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayPrevent.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayPrevent.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "mayPrevent.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "contraindicatedWith.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "contraindicatedWith.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "contraindicatedWith.description" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMedicinalProduct.@id" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMedicinalProduct.title" });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex() { PropertyPath = "hasMedicinalProduct.description" });
             propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
             {
-                AbbreviatedName = "hasMedicinalProduct.hasRouteOfAdministration"
-            });
-            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
-            {
-                AbbreviatedName = "hasMedicinalProduct.hasDosageForm"
+                PropertyPath = "hasMedicinalProduct.hasRouteOfAdministration"
             });
             propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
             {
-                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.@id"
+                PropertyPath = "hasMedicinalProduct.hasDosageForm"
             });
             propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
             {
-                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.prefLabel"
+                PropertyPath = "hasMedicinalProduct.hasATCConcept.@id"
             });
             propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
             {
-                AbbreviatedName = "hasMedicinalProduct.hasATCConcept.notation"
+                PropertyPath = "hasMedicinalProduct.hasATCConcept.prefLabel"
+            });
+            propertiesToIndex.PropertiesToIndex.Add(new PropertyToIndex()
+            {
+                PropertyPath = "hasMedicinalProduct.hasATCConcept.notation"
             });
             return propertiesToIndex;
         }
