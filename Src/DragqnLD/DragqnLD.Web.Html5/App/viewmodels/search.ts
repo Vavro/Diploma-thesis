@@ -3,10 +3,18 @@ import getQueriesCommand = require("commands/getQueriesCommand");
 import searchEscapedCommand = require("commands/searchEscapedCommand");
 import documentMetadata = require("models/documentMetadata");
 
+import indexDefinitions = require("models/indexDefinitions");
+import indexDefinitionMetadata = require("models/indexDefinitionMetadata");
+import getIndexesCommand = require("commands/getIndexesCommand");
+
 class search extends viewModelBase {
     public definitions = ko.observableArray<queryDefinitionMetadataDto>();
     public selectedDefinition = ko.observable<string>();
     public definitionsExceptSelected: KnockoutComputed<queryDefinitionMetadataDto[]>;
+
+    public indexes = ko.observableArray<indexDefinitionMetadata>();
+    public selectedIndex = ko.observable<string>();
+    public indexesExceptSelected: KnockoutComputed<indexDefinitionMetadata[]>;
 
     public searchText = ko.observable<string>("");
     public searchResults = ko.observableArray<documentMetadata>();
@@ -33,13 +41,36 @@ class search extends viewModelBase {
             }
             return allDefinitions;
         });
+
+        this.indexesExceptSelected = ko.computed((): indexDefinitionMetadata[] => {
+            var allIndexes = this.indexes();
+            var selectedIndex = this.selectedIndex();
+
+            if (!!selectedIndex) {
+                return allIndexes.filter((indexDefinition: indexDefinitionMetadata): boolean => indexDefinition.name() !== selectedIndex);
+            }
+        });
+
+        this.selectedDefinition.subscribe((newValue) => {
+            //read indexes
+            var command = new getIndexesCommand(newValue);
+            command.execute().done((result) => {
+                this.indexes.removeAll();
+                result.indexes().forEach(id => this.indexes.push(id));
+                this.indexes.push(indexDefinitionMetadata.dynamic());
+
+                var first = this.indexes()[0];
+                this.selectedIndex(first.name());
+                
+            });
+        });
     }
 
     public compositionComplete(): void {
         // todo: move to ancestor?
         console.log("search view attached");
         this.isAttached(true);
-        $(window).trigger("resize");
+        this.triggerResize();
     }
 
     public canActivate(args: any): JQueryDeferred<{}> {
@@ -52,8 +83,8 @@ class search extends viewModelBase {
     }
 
     private init(definitionId?: string): void {
-        var command = new getQueriesCommand();
-        command.execute().done(results => {
+        var queriesCommand = new getQueriesCommand();
+        queriesCommand.execute().done(results => {
             this.definitions(results);
             if (definitionId) {
                 results.forEach((item: queryDefinitionMetadataDto): void => {
@@ -83,6 +114,10 @@ class search extends viewModelBase {
         this.selectedDefinition(definitionId);
 
         // todo: change link of this web page (add/change parameter)
+    }
+
+    public setSelectedIndex(indexName: string): void {
+        this.selectedIndex(indexName);
     }
 }
 
