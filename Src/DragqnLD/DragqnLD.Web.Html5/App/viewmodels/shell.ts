@@ -2,6 +2,7 @@
 
 import dynamicHeightBindingHandler = require("common/dynamicHeightBindingHandler");
 import aceEditorBindingHandler = require("common/aceEditorBindingHandler");
+import autoCompleteBindingHandler = require("common/autoCompleteBindingHandler");
 
 class shell {
     private router = router;
@@ -10,6 +11,7 @@ class shell {
 
         dynamicHeightBindingHandler.install();
         aceEditorBindingHandler.install();
+        autoCompleteBindingHandler.install();
     }
 
     activate() : any {

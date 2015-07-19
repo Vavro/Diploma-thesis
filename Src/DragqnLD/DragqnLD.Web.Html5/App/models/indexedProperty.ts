@@ -6,6 +6,10 @@
     constructor() {
         
     }
+
+    setPropertyPath(propertyPath: string) {
+        this.propertyPath(propertyPath);
+    }
 }
 
 export = indexedProperty;

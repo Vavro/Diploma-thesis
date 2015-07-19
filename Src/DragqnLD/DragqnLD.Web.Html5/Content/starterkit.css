@@ -83,6 +83,11 @@ body {
     color: red;
 }
 
+.dropdown-menu {
+    max-height:400px;
+    overflow-y:auto;    
+}
+
 .btn-toolbar {
     padding: 5px;
 }

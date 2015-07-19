@@ -1050,6 +1050,7 @@
     <TypeScriptCompile Include="App\commands\searchEscapedCommand.ts" />
     <TypeScriptCompile Include="App\common\aceEditorBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\appUrl.ts" />
+    <TypeScriptCompile Include="App\common\autoCompleteBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\constants.ts" />
     <TypeScriptCompile Include="App\common\dynamicHeightBindingHandler.ts" />
     <TypeScriptCompile Include="App\common\extensionInterfaces.ts" />

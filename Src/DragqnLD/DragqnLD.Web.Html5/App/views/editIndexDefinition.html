@@ -125,6 +125,13 @@
                                                placeholder="Insert Name of the original Property path"
                                                class="form-control input-sm"
                                                data-bind="value: propertyPath, valueUpdate: 'input', attr: {id: 'PropertyPath' + $index()}">
+                                        <ul class="dropdown-menu" role="menu" style="display: none;" data-bind="autoComplete: '#' + 'PropertyPath' + $index(),foreach: $root.accessibleProperties">
+                                            <li role="presentation" data-bind="click: $parent.setPropertyPath.bind($parent,propertyPath)">
+                                                <a role="menuitem" tabindex="-1" href="#">
+                                                    <span data-bind=" text:propertyPath"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div>
                                         <button type="button" class="close" aria-hidden="true"><i class="fa fa-times" data-bind="click: $root.removeField.bind($root, $index())" aria-hidden="true" title="Remove this field from the index"></i></button>
