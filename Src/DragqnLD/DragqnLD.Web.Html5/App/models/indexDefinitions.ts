@@ -2,7 +2,7 @@
 
 
 class indexDefinitions {
-    definitionId = ko.observable<String>().extend({ required: true });
+    definitionId = ko.observable<string>().extend({ required: true });
     indexes: KnockoutObservableArray<indexDefinitionMetadata>;
 
     constructor(dto: indexDefinitionsDto) {

@@ -56,8 +56,9 @@ class viewQueryDefinition extends viewModelBase {
 
     indexDefinitions = ko.observable<indexDefinitions>();
     indexList = ko.observableArray<indexDefinitionMetadata>();
+    indexNameTemplate = $("#editIndexNameTemplate").html();
     indexColumnList = ko.observableArray([
-        { field: "name", displayName: "Name" },
+        { field: "name", displayName: "Name", cellTemplate: this.indexNameTemplate },
         { field: "indexedFields", displayName:"Indexed Fields"}]);
     
     indexableProperties = ko.observable<indexableProperties>();

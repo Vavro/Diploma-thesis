@@ -45,6 +45,13 @@
             </a>
         </div>
     </script>
+    <script id="editIndexNameTemplate" type="text/template">
+        <div data-bind="attr: { class: 'kgCellText colt' + $index() }">
+            <a href="#" data-bind="attr: { href : '#editIndex?definitionId=' + $parent.$userViewModel.queryId() + '&indexName=' + $parent.getProperty('name') }">
+                <span data-bind="text: $parent.getProperty('name')"></span>
+            </a>
+        </div>
+    </script>
     <div id="applicationHost">
         <div class="splash">
             <div><img class="logo" src="/Content/images/Logo.svg" /></div>

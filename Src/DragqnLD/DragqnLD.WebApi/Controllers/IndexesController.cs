@@ -63,7 +63,16 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/index/{*indexId}")]
         public async Task<HttpResponseMessage> GetIndex(string indexId)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var indexes = await _queryStore.GetIndexes(this.DefinitionId);
+            DragqnLDIndexDefiniton searchedIndex;
+            var succ = indexes.Indexes.TryGetValue(indexId, out searchedIndex);
+            if (!succ)
+            {
+                return CreateResponse(HttpStatusCode.NotFound);
+            }
+
+            var indexDto = Mapper.Map<IndexDefinitionDto>(searchedIndex);
+            return CreateResponseWithObject(indexDto);
         }
 
         /// <summary>

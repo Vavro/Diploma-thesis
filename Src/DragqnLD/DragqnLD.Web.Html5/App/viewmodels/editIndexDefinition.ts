@@ -10,9 +10,11 @@ import saveIndexDefinitionCommand = require("commands/saveIndexDefinitionCommand
 import getQueryIndexablePropertiesCommand = require("commands/getQueryIndexablePropertiesCommand");
 import proposeIndexDefinitionFromPropertiesCommand = require("commands/proposeIndexDefinitionFromPropertiesCommand");
 import proposeIndexDefinitionFromSparqlCommand = require("commands/proposeIndexDefinitionFromSparqlCommand");
+import getIndexCommand = require("commands/getIndexCommand");
 
 class editIndexDefinition extends viewModelBase {
     definitionId = ko.observable<string>();
+    originalEditedIndexName = ko.observable<string>();
     isCreatingNewIndexDefinition = ko.observable(false);
     indexDefinition = ko.observable<indexDefinition>();
     errors: KnockoutValidationErrors; // needs to init after queryDefinition is set
@@ -46,32 +48,45 @@ class editIndexDefinition extends viewModelBase {
         }
 
         this.definitionId(args.definitionId);
-
-        if (args && args.definitionId) {
-            //new index definition
+        var actions = $.Deferred();
+        var canActivateDeferred = $.Deferred();
+        
+        if (args && args.indexName) {
+            
+            this.originalEditedIndexName(args.indexName);
+            
+            var getIndexCommandInstance = new getIndexCommand(this.definitionId(), this.originalEditedIndexName());
+            actions.then(() => getIndexCommandInstance
+                .execute()
+                .done((result) => {
+                this.isCreatingNewIndexDefinition(false);
+                this.setIndexDefinition(result);
+            }));
         } else {
+            //new index definition
+            //created in activate
         }
 
-        var canActivateDeferred = $.Deferred();
 
         var getPropsCommand = new getQueryIndexablePropertiesCommand(this.definitionId());
-        getPropsCommand
-            .execute()
-            .done(result => this.proposedPropertiesToIndex(new propertiesToIndex(result)))
-            .always(_ => canActivateDeferred.resolve({ can: true }));
-
+        actions.then(() => getPropsCommand
+                .execute()
+                .done(result => this.proposedPropertiesToIndex(new propertiesToIndex(result)))
+            )
+            .done(() => canActivateDeferred.resolve({ can: true }));
+        actions.resolve();
 
         return canActivateDeferred;
     }
 
 
     activate(navigationArgs: any): void {
-        if (navigationArgs && navigationArgs.definitionId && navigationArgs.indexId) {
+        if (navigationArgs && navigationArgs.definitionId && navigationArgs.indexName) {
             // load done in canActivate
         } else if (navigationArgs && navigationArgs.definitionId) {
             this.editNewIndexDefinition();
         } else {
-            //todo: error !!
+            //shouldn't happen
         }
     }
 
