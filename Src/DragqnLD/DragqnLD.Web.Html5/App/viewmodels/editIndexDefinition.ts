@@ -112,6 +112,7 @@ class editIndexDefinition extends viewModelBase {
     }
 
     public saveIndexDefinition(): void {
+        //todo: on index editation could ask whether you intentionally changed name -> create new index vs update current
 
         var indexDef = this.indexDefinition();
 
