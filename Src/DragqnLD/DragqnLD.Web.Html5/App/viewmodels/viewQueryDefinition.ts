@@ -58,7 +58,7 @@ class viewQueryDefinition extends viewModelBase {
     indexList = ko.observableArray<indexDefinitionMetadata>();
     indexColumnList = ko.observableArray([
         { field: "name", displayName: "Name" },
-        { field: "indexedFields ", displayName:"Indexed Fields"}]);
+        { field: "indexedFields", displayName:"Indexed Fields"}]);
 
     indexListPagingOptions = {
         pageSizes: ko.observableArray([10, 20, 50]),
@@ -191,8 +191,7 @@ class viewQueryDefinition extends viewModelBase {
         return command
             .execute()
             .done(result => {
-            this.indexDefinitions(result);
-
+                this.indexDefinitions(result);
                 $(window).trigger("resize");
             });
     }
