@@ -6,9 +6,9 @@ class saveIndexDefinitionCommnad extends commandBase {
         super();
     }
 
-    execute(): JQueryPromise<string> {
+    execute(): JQueryPromise<any> {
         var args = JSON.stringify(this.newIndexDefinition.toDto());
-        var url = "/query/" + this.definitionId + "/index";
+        var url = "/" + this.definitionId + "/index";
         var saveTask = this.post(url, args);
         saveTask.done((response: string): string => {
             this.notifySuccess("Saved " + this.newIndexDefinition.name() + "/n response:" + response);

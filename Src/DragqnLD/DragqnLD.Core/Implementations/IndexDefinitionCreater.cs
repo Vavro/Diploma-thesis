@@ -14,20 +14,9 @@ using VDS.RDF.Query.Algebra;
 
 namespace DragqnLD.Core.Implementations
 {
-    public enum DragqnLDIndexAnalyzer
-    {
-        None
-    }
-
     public static class KnownRavenDBAnalyzers
     {
         public const string AnalyzerLuceneStandard = "Lucene.Net.Analysis.Standard.StandardAnalyzer";
-    }
-
-    public class FieldDefinition
-    {
-        public DragqnLDIndexAnalyzer Analyzer { get; set; }
-        public string FieldAccessString { get; set; }
     }
 
     public class IndexDefinitionCreater : IIndexDefinitionCreater
@@ -47,7 +36,7 @@ namespace DragqnLD.Core.Implementations
 
             var analyzers = new Dictionary<string, string>();
 
-            foreach (var propertyToIndex in requirements.PropertiesToIndex)
+            foreach (var propertyToIndex in requirements.PropertyPaths)
             {
                 var mapLine = CreateIndexedFieldNameAndAccess(propertyPaths, propertyToIndex);
                 mapBuilder.Append(mapLine.Name + " = " + mapLine.Access);

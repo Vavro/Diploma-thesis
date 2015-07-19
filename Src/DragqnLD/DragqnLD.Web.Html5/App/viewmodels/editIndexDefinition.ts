@@ -3,11 +3,12 @@ import viewModelBase = require("viewmodels/viewModelBase");
 
 import indexDefinition = require("models/indexDefinition");
 import indexedProperty = require("models/indexedProperty");
+import propertiesToIndex = require("models/propertiesToIndex");
+import checkableProperty = require("models/checkableProperty");
 
 import saveIndexDefinitionCommand = require("commands/saveIndexDefinitionCommand");
 import getQueryIndexablePropertiesCommand = require("commands/getQueryIndexablePropertiesCommand");
-import propertiesToIndex = require("models/propertiesToIndex");
-import checkableProperty = require("models/checkableProperty");
+import proposeIndexDefinitionFromPropertiesCommand = require("commands/proposeIndexDefinitionFromPropertiesCommand");
 
 class editIndexDefinition extends viewModelBase {
     definitionId = ko.observable<string>();
@@ -17,8 +18,6 @@ class editIndexDefinition extends viewModelBase {
     isValid: KnockoutComputed<boolean>;
     editedIndexDefinitionId: KnockoutComputed<string>;
     indexProperties = ko.observableArray<indexedProperty>();
-
-    
 
     isProposingFromProperties = ko.observable<Boolean>(false);
     isProposingFromSparql = ko.observable<Boolean>(false);
@@ -30,13 +29,14 @@ class editIndexDefinition extends viewModelBase {
     constructor() {
         super();
         this.editedIndexDefinitionId = ko.computed((): string => this.indexDefinition() ? this.indexDefinition().name() : "");
-        
+
         this.proposedPropertiesToIndex.subscribe((newValue: propertiesToIndex): void => {
             this.accessibleProperties.removeAll();
             if (newValue) {
                 newValue.properties().forEach((value) => this.accessibleProperties.push(value));
             }
         });
+
     }
 
     canActivate(args: any): JQueryDeferred<{}> {
@@ -60,7 +60,7 @@ class editIndexDefinition extends viewModelBase {
             .always(_ => canActivateDeferred.resolve({ can: true }));
 
 
-        return canActivateDeferred; 
+        return canActivateDeferred;
     }
 
 
@@ -76,9 +76,18 @@ class editIndexDefinition extends viewModelBase {
 
     private editNewIndexDefinition(): void {
         this.isCreatingNewIndexDefinition(true);
-        this.indexDefinition(indexDefinition.empty());
-        this.errors = ko.validation.group(this.indexDefinition, { deep: true });
-        this.isValid = ko.computed({ owner: this, read: (): boolean => { return this.errors().length === 0; } });
+        this.setIndexDefinition(indexDefinition.empty());
+    }
+
+    private setIndexDefinition(indexDefinition: indexDefinition) {
+        if (!this.indexDefinition()) {
+            this.indexDefinition(indexDefinition);
+            this.errors = ko.validation.group(this.indexDefinition, { deep: true });
+            this.isValid = ko.computed({ owner: this, read: (): boolean => { return this.errors().length === 0; } });
+            return;
+        }
+
+        this.indexDefinition().setFrom(indexDefinition);
     }
 
     public navigateToQueries(): void {
@@ -98,20 +107,24 @@ class editIndexDefinition extends viewModelBase {
         var saveCommand = new saveIndexDefinitionCommand(this.definitionId(), indexDef);
         saveCommand
             .execute()
-            .done(assignedId => {
-            // todo: change target after edit save
-            var url = "#viewQuery?id=" + assignedId;
-            router.navigate(url);
-        }); // fail reseno v ramci commands
+            .done(_ => {
+                var url = "#viewQuery?id=" + this.definitionId;
+                router.navigate(url);
+            }); // fail reseno v ramci commands
 
     }
 
     public removeField(fieldIndex: number) {
-        this.indexProperties.splice(fieldIndex, 1);
+        this.indexDefinition().fields.splice(fieldIndex, 1);
     }
 
     public addProperty() {
-        this.indexProperties.push(new indexedProperty());
+        if (this.errors().length !== 0) {
+            this.errors.showAllMessages();
+            this.notifyWarning("There are errors in the form, please check all values.");
+        }
+
+        this.indexDefinition().fields.push(new indexedProperty());
     }
 
     public toggleProposeFromProperties() {
@@ -129,7 +142,13 @@ class editIndexDefinition extends viewModelBase {
     }
 
     public proposeFromProperties() {
-        this.notifySuccess("propose from props");
+        var command = new proposeIndexDefinitionFromPropertiesCommand(this.definitionId(), this.proposedPropertiesToIndex());
+        command
+            .execute()
+            .done((result) => {
+                this.setIndexDefinition(result);
+                this.toggleProposeFromProperties();
+            });
     }
 
     public proposeFromSparql() {

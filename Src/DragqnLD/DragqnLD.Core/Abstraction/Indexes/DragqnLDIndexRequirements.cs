@@ -4,6 +4,11 @@ namespace DragqnLD.Core.Abstraction.Indexes
 {
     public class DragqnLDIndexRequirements
     {
-        public readonly List<PropertyToIndex> PropertiesToIndex = new List<PropertyToIndex>();
+        public DragqnLDIndexRequirements()
+        {
+            PropertyPaths = new List<PropertyToIndex>();
+        }
+
+        public List<PropertyToIndex> PropertyPaths { get; set; }
     }
 }

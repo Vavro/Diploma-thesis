@@ -915,6 +915,11 @@
             <param name="stream">The stream.</param>
             <returns></returns>
         </member>
+        <member name="F:DragqnLD.WebApi.Constants.Defaults.DefaultRequestEncoding">
+            <summary>
+            if no encoding information in headers of incoming request, this encoding is assumed
+            </summary>
+        </member>
         <member name="T:DragqnLD.WebApi.Constants.Prefixes">
             <summary>
             Prefixes used around code
@@ -954,6 +959,12 @@
             <returns>
             The newly started task.
             </returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.InnerInitialization(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>
+            Inner initialization.
+            </summary>
+            <param name="controllerContext">The controller context.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.CreateResponse(System.Net.HttpStatusCode)">
             <summary>
@@ -1002,6 +1013,14 @@
             <param name="content">The content.</param>
             <param name="mappings">The mappings.</param>
             <returns></returns>
+        </member>
+        <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.InnerRequest">
+            <summary>
+            Gets the inner request.
+            </summary>
+            <value>
+            The inner request.
+            </value>
         </member>
         <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.Store">
             <summary>
@@ -1087,11 +1106,13 @@
             Indexes controller for index manipulation tasks
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.#ctor(DragqnLD.Core.Abstraction.IQueryStore)">
+        <member name="M:DragqnLD.WebApi.Controllers.IndexesController.#ctor(DragqnLD.Core.Abstraction.IQueryStore,DragqnLD.Core.Abstraction.ISelectAnalyzer,DragqnLD.Core.Abstraction.IIndexDefinitionCreater)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.SearchController"/> class.
             </summary>
             <param name="queryStore">The data store.</param>
+            <param name="selectAnalyzer">The select analyzer.</param>
+            <param name="indexDefinitionCreater">The index definition creater.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.IndexesController.GetIndexes">
             <summary>
@@ -1495,6 +1516,32 @@
             </summary>
             <value>
             The property paths.
+            </value>
+        </member>
+        <member name="T:DragqnLD.WebApi.Models.PropertyToIndexDto">
+            <summary>
+            Data transfer object for one property to index data
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Models.PropertyToIndexDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Models.PropertyToIndexDto"/> class.
+            </summary>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.PropertyToIndexDto.PropertyPath">
+            <summary>
+            Gets or sets the property path.
+            </summary>
+            <value>
+            The property path.
+            </value>
+        </member>
+        <member name="P:DragqnLD.WebApi.Models.PropertyToIndexDto.FulltextSearchable">
+            <summary>
+            Gets or sets a value indicating whether [fulltext searchable].
+            </summary>
+            <value>
+              <c>true</c> if [fulltext searchable]; otherwise, <c>false</c>.
             </value>
         </member>
         <member name="T:DragqnLD.WebApi.Models.SparqlDto">

@@ -127,14 +127,33 @@ namespace DragqnLD.WebApi.Models
         public List<PropertyToIndexDto> PropertyPaths { get; set; }
     }
 
+    /// <summary>
+    /// Data transfer object for one property to index data
+    /// </summary>
     public class PropertyToIndexDto
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PropertyToIndexDto"/> class.
+        /// </summary>
         public PropertyToIndexDto()
         {
             
         }
 
+        /// <summary>
+        /// Gets or sets the property path.
+        /// </summary>
+        /// <value>
+        /// The property path.
+        /// </value>
         public string PropertyPath { get; set; }
+        
+        /// <summary>
+        /// Gets or sets a value indicating whether [fulltext searchable].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [fulltext searchable]; otherwise, <c>false</c>.
+        /// </value>
         public bool FulltextSearchable { get; set; }
     }
 

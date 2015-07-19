@@ -221,6 +221,7 @@
     <Compile Include="Connection\PropertyUnescapingJsonTextWriter.cs" />
     <Compile Include="Connection\RavenPropertyUnescapingJsonTextWriter.cs" />
     <Compile Include="Connection\UnescapingJsonContent.cs" />
+    <Compile Include="Constants\Defaults.cs" />
     <Compile Include="Constants\Prefixes.cs" />
     <Compile Include="Constants\RouteNames.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />

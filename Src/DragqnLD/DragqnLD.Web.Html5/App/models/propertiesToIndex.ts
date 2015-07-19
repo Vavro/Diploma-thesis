@@ -18,7 +18,7 @@ class propertiesToIndex {
 
     }
 
-    toDto(): propertiesToIndexDto {
+    public toDto(): propertiesToIndexDto {
         var selectedProps = this.properties().filter((prop: checkableProperty):
                 boolean => prop.isChecked()).
             map((prop: checkableProperty): propertyToIndexDto => { return { PropertyPath: prop.propertyPath(), FulltextSearchable: prop.canFulltext() } });

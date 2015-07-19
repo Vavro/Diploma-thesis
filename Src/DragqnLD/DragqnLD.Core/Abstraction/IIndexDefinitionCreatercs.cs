@@ -10,7 +10,7 @@ using Raven.Abstractions.Indexing;
 
 namespace DragqnLD.Core.Abstraction
 {
-    interface IIndexDefinitionCreater
+    public interface IIndexDefinitionCreater
     {
         DragqnLDIndexDefiniton CreateIndexDefinitionFor(QueryDefinition queryDefinition, ConstructQueryAccessibleProperties propertyPaths, DragqnLDIndexRequirements requirements);
     }

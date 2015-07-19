@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -14,7 +17,9 @@ using DragqnLD.WebApi.Connection;
 using DragqnLD.WebApi.Constants;
 using log4net;
 using Microsoft.Practices.Unity;
+using Raven.Abstractions.Extensions;
 using Raven.Client;
+using Raven.Imports.Newtonsoft.Json;
 using Raven.Json.Linq;
 
 namespace DragqnLD.WebApi.Controllers
@@ -28,6 +33,22 @@ namespace DragqnLD.WebApi.Controllers
         /// The logger
         /// </summary>
         protected static readonly ILog Log = GetCurrentClassLogger();
+
+        private HttpRequestMessage _request;
+
+        /// <summary>
+        /// Gets the inner request.
+        /// </summary>
+        /// <value>
+        /// The inner request.
+        /// </value>
+        public HttpRequestMessage InnerRequest
+        {
+            get
+            {
+                return Request ?? _request;
+            }
+        }
 
         private static ILog GetCurrentClassLogger()
         {
@@ -65,6 +86,7 @@ namespace DragqnLD.WebApi.Controllers
             HttpControllerContext controllerContext,
             CancellationToken cancellationToken)
         {
+            InnerInitialization(controllerContext);
             var values = controllerContext.RequestContext.RouteData.Values;
             if (values.ContainsKey("MS_SubRoutes"))
             {
@@ -101,6 +123,15 @@ namespace DragqnLD.WebApi.Controllers
 
                 return result;
             }
+        }
+
+        /// <summary>
+        /// Inner initialization.
+        /// </summary>
+        /// <param name="controllerContext">The controller context.</param>
+        protected virtual void InnerInitialization(HttpControllerContext controllerContext)
+        {
+            _request = controllerContext.Request;
         }
 
         /// <summary>
@@ -193,6 +224,27 @@ namespace DragqnLD.WebApi.Controllers
         private UnescapingJsonContent UnescapedJsonContent(RavenJObject content, PropertyMapForUnescape mappings)
         {
             return new UnescapingJsonContent(content, mappings);
+        }
+
+        private Encoding GetRequestEncoding()
+        {
+            if (InnerRequest.Content.Headers.ContentType == null || string.IsNullOrWhiteSpace(InnerRequest.Content.Headers.ContentType.CharSet))
+                return Encoding.GetEncoding(Defaults.DefaultRequestEncoding);
+            return Encoding.GetEncoding(InnerRequest.Content.Headers.ContentType.CharSet);
+        }
+
+        protected async Task<T> ReadJsonObjectAsync<T>()
+        {
+            using (var stream = await InnerRequest.Content.ReadAsStreamAsync())
+            using (var streamReader = new StreamReader(stream, GetRequestEncoding()))
+            {
+                using (var jsonReader = new JsonTextReader(streamReader))
+                {
+                    var result = JsonExtensions.CreateDefaultJsonSerializer();
+
+                    return (T)result.Deserialize(jsonReader, typeof(T));
+                }
+            }
         }
     }
 }

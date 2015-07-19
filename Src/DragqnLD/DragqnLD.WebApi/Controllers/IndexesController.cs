@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
@@ -19,14 +20,22 @@ namespace DragqnLD.WebApi.Controllers
     public class IndexesController : BaseApiController
     {
         private readonly IQueryStore _queryStore;
+        private readonly ISelectAnalyzer _selectAnalyzer;
+        private readonly IIndexDefinitionCreater _indexDefinitionCreater;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchController"/> class.
+        /// Initializes a new instance of the <see cref="SearchController" /> class.
         /// </summary>
         /// <param name="queryStore">The data store.</param>
-        public IndexesController(IQueryStore queryStore)
+        /// <param name="selectAnalyzer">The select analyzer.</param>
+        /// <param name="indexDefinitionCreater">The index definition creater.</param>
+        public IndexesController(IQueryStore queryStore, 
+            ISelectAnalyzer selectAnalyzer, 
+            IIndexDefinitionCreater indexDefinitionCreater)
         {
             _queryStore = queryStore;
+            _selectAnalyzer = selectAnalyzer;
+            _indexDefinitionCreater = indexDefinitionCreater;
         }
 
         /// <summary>
@@ -66,7 +75,9 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/index")]
         public async Task<HttpResponseMessage> StoreIndex([FromBody] IndexDefinitionDto indexDefinition)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var id = Mapper.Map<DragqnLDIndexDefiniton>(indexDefinition);
+            var indexId = await _queryStore.StoreIndex(this.DefinitionId, id);
+            return CreateResponse();
         }
 
         /// <summary>
@@ -101,9 +112,16 @@ namespace DragqnLD.WebApi.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("api/query/{definitionId}/proposeIndex")]
-        public async Task<HttpResponseMessage> ProposeIndexForProperties([FromBody] PropertiesToIndexDto propertiesToIndex )
+        public async Task<HttpResponseMessage> ProposeIndexForProperties([FromBody] PropertiesToIndexDto propertiesToIndex)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var definition = await _queryStore.Get(this.DefinitionId);
+            var accessibleProperties = await _queryStore.GetHierarchy(this.DefinitionId);
+            var requirements = Mapper.Map<DragqnLDIndexRequirements>(propertiesToIndex);
+            var proposedIndex = _indexDefinitionCreater.CreateIndexDefinitionFor(definition, accessibleProperties, requirements);
+
+            var proposedIndexDto = Mapper.Map<IndexDefinitionDto>(proposedIndex);
+
+            return CreateResponseWithObject(proposedIndexDto);
         }
 
         /// <summary>

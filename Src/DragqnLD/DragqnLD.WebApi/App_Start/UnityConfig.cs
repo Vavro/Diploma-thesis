@@ -41,6 +41,8 @@ namespace DragqnLD.WebApi
             container.RegisterType<IDataStore, RavenDataStore>(new HierarchicalLifetimeManager());
             container.RegisterType<ISparqlEnpointClient, SparqlEnpointClient>(new HierarchicalLifetimeManager());
             container.RegisterType<IDataLoader, DataLoader>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISelectAnalyzer, SelectAnalyzer>(new HierarchicalLifetimeManager());
+            container.RegisterType<IIndexDefinitionCreater, IndexDefinitionCreater>(new HierarchicalLifetimeManager());
             
             //todo: this is a global formatter now, maybe it will be needed to be determined somewhat dynamically - so create a FormatterFactory or FormatterProvider and provide that instead?
             container.RegisterType<IDataFormatter, ExpandedJsonLDDataFormatter>(new ContainerControlledLifetimeManager()); //can be singleton, doesn't work with instance variables
