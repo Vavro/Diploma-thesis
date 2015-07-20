@@ -107,7 +107,8 @@ class search extends viewModelBase {
 
         // todo: add paging
         var definitionId = this.selectedDefinition();
-        var command = new searchEscapedCommand(definitionId, this.searchText());
+        var indexName = this.selectedIndex();
+        var command = new searchEscapedCommand(definitionId, this.searchText(), indexName);
         command.execute().done(result => {
             this.searchResults.removeAll();
             result.Items.forEach(item => {

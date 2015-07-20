@@ -37,6 +37,7 @@ namespace DragqnLD.WebApi.Controllers
         /// Searchs by the escaped lucene query.
         /// </summary>
         /// <param name="sparqlQuery">The escapted query.</param>
+        /// <param name="indexName">Name of the index.</param>
         /// <returns></returns>
         [HttpGet]
         //todo: better name  - like searchRaw
@@ -48,15 +49,8 @@ namespace DragqnLD.WebApi.Controllers
             string luceneQuery;
             if (indexName != null)
             {
-                var indexes = await _queryStore.GetIndexes(this.DefinitionId);
-
-                DragqnLDIndexDefiniton index;
-                var succ = indexes.Indexes.TryGetValue(indexName, out index);
-                if (!succ)
-                {
-                    throw new ArgumentOutOfRangeException("indexName",
-                        String.Format("index name {0} is not present in query definition {1}", indexName, DefinitionId));
-                }
+                var index = await _queryStore.GetIndex(this.DefinitionId, indexName);
+                
                 luceneQuery = _selectAnalyzer.ConvertSparqlToLuceneWithIndex(sparqlQuery, hierarchy, index);  
             }
             else

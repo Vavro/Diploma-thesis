@@ -111,9 +111,9 @@ namespace DragqnLD.WebApi.Controllers
         /// <returns></returns>
         [HttpDelete]
         [Route("api/query/{definitionId}/index/{*indexId}")]
-        public async Task<HttpResponseMessage> DeleteIndex(string indexId)
+        public Task<HttpResponseMessage> DeleteIndex(string indexId)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            return Task.Factory.StartNew(() => CreateResponse(HttpStatusCode.NotImplemented));
         }
 
         /// <summary>

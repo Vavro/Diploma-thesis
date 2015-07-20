@@ -1268,11 +1268,13 @@
             Controller that provides searching API
             </summary>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.SearchController.#ctor(DragqnLD.Core.Abstraction.IDataStore)">
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.#ctor(DragqnLD.Core.Abstraction.IDataStore,DragqnLD.Core.Abstraction.ISelectAnalyzer,DragqnLD.Core.Abstraction.IQueryStore)">
             <summary>
             Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.SearchController"/> class.
             </summary>
             <param name="dataStore">The data store.</param>
+            <param name="selectAnalyzer">The select analyzer.</param>
+            <param name="queryStore">The query store.</param>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchEscapedLuceneQuery(System.String)">
             <summary>
@@ -1281,37 +1283,11 @@
             <param name="escapedQuery">The escapted query.</param>
             <returns></returns>
         </member>
-        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexByLuceneQuery(System.String)">
-            <summary>
-            Searchs the index by lucene query.
-            </summary>
-            <param name="indexId">The index identifier.</param>
-            <returns></returns>
-        </member>
-        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexByLuceneQuery">
-            <summary>
-            Searchs the dynamic index by lucene query.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexBySparqlQuery(System.String)">
-            <summary>
-            Searchs the index by sparql query.
-            </summary>
-            <param name="indexId">The index identifier.</param>
-            <returns></returns>
-        </member>
-        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexBySparql">
-            <summary>
-            Searchs the dynamic index by sparql.
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexByLuceneQuery(System.String,System.String)">
             <summary>
             Searchs the index by lucene query.
             </summary>
-            <param name="indexId">The index identifier.</param>
+            <param name="indexName">The index identifier.</param>
             <param name="query">The query.</param>
             <returns></returns>
         </member>
@@ -1326,11 +1302,41 @@
             <summary>
             Searchs the index by sparql query.
             </summary>
-            <param name="indexId">The index identifier.</param>
+            <param name="indexName">The index identifier.</param>
             <param name="query">The query.</param>
             <returns></returns>
         </member>
         <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexBySparql(System.String)">
+            <summary>
+            Searchs the dynamic index by sparql.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexByLuceneQueryPost(System.String,System.String)">
+            <summary>
+            Searchs the index by lucene query.
+            </summary>
+            <param name="indexName">The index identifier.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexByLuceneQueryPost(System.String)">
+            <summary>
+            Searchs the dynamic index by lucene query.
+            </summary>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchIndexBySparqlQueryPost(System.String,System.String)">
+            <summary>
+            Searchs the index by sparql query.
+            </summary>
+            <param name="indexName">The index identifier.</param>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.SearchController.SearchDynamicIndexBySparqlPost(System.String)">
             <summary>
             Searchs the dynamic index by sparql.
             </summary>
@@ -1385,6 +1391,7 @@
             Searchs by the escaped lucene query.
             </summary>
             <param name="sparqlQuery">The escapted query.</param>
+            <param name="indexName">Name of the index.</param>
             <returns></returns>
         </member>
         <member name="T:DragqnLD.WebApi.Filters.ValidateModelFilter">

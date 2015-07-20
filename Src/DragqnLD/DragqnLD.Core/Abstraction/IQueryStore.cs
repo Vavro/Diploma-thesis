@@ -99,5 +99,6 @@ namespace DragqnLD.Core.Abstraction
         Task<string> StoreIndex(string definitionId, DragqnLDIndexDefiniton indexDefinition);
 
         Task<DragqnLDIndexDefinitions> GetIndexes(string definitionId);
+        Task<DragqnLDIndexDefiniton> GetIndex(string definitionId, string indexName);
     }
 }

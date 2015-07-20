@@ -208,6 +208,25 @@ namespace DragqnLD.Core.Implementations
             return definitionId + "/Hierarchy";
         }
 
+        public async Task<DragqnLDIndexDefiniton> GetIndex(string definitionId, string indexName)
+        {
+            var definitionIndexesId = GetIndexId(definitionId);
+            using (var session = _store.OpenAsyncSession())
+            {
+                var currentIndexes = await session.LoadAsync<DragqnLDIndexDefinitions>(definitionIndexesId);
+                currentIndexes = currentIndexes ?? new DragqnLDIndexDefinitions() {DefinitionId = definitionId};
+                
+                DragqnLDIndexDefiniton index;
+                var succ = currentIndexes.Indexes.TryGetValue(indexName, out index);
+                if (!succ)
+                {
+                    throw new ArgumentOutOfRangeException("indexName",
+                        String.Format("index name {0} is not present in query definition {1}", indexName, definitionId));
+                }
+                return index;
+            }
+        }
+
         public async Task<DragqnLDIndexDefinitions> GetIndexes(string definitionId)
         {
             var definitionIndexesId = GetIndexId(definitionId);
