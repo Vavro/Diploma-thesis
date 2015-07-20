@@ -3,9 +3,9 @@
 \todoi{add a chapter summary}
 
 \section{Triplestore speed}
-As briefly introduced in \autoref{chap:Introduction} triplestores are effective at processing queries. Their effectiveness originates in the specific indices they use \cite{onlineAllgeroGraphTripleIndices}. But in an application data are usually used in views and these get constructed from multiple subject-predicate-object triples where more than one subject is present.
+As briefly introduced in \autoref{chap:Introduction} triplestores are effective at processing queries. Their effectiveness originates in the specific indices they use \cite{onlineAllgeroGraphTripleIndices}. But in an application data are usually used in views and these get constructed from multiple subject-predicate-object triples, where more than one subject is present.
 \todoi{add example of nested data structure}
-As \cite{onlineDbisQueryOptimizationInRdf} states the main achievable optimization for a graph database data retrieval is through data locality - optimizing database pages so, that data frequently retrieved together is located near each other. But in a general triplestore, that provides data for multiple different views can't really be optimized this way, as the data retrieved for queries can and will overlap but won't be identical in every aspect.
+As \cite{onlineDbisQueryOptimizationInRdf} states the main achievable optimization for a graph database data retrieval is through data locality - optimizing database pages so, that data frequently retrieved together is located near each other. But in a general triplestore, that provides data for multiple different views, data can't really be optimized this way, as the it is retrieved for queries that can and will overlap, but won't be identical in every aspect.
 \todoi{example of anouther nested data structure that needs only part of the previous example}
 
 That leads to the conclusion, that there have to be ways to retrieve the mentioned data views faster for an application.
@@ -15,56 +15,53 @@ That leads to the conclusion, that there have to be ways to retrieve the mention
 The first way to speed up data retrieval that comes to mind is a query-results in-memory cache. Such a cache would store the result of the query along with the query and its parameters. On a subsequent query with the same parameters the cache would only retrieve the cached data and return it. This would skip all the steps needed to be executed by the triplestore - constructing an execution plan, executing the query and retrieving all the necessary database pages containing the requested data. This is a fine idea, but has its drawbacks.
 %% maybe do as a list of items
 \begin{itemize}
-	\item First of it's a tradeoff of space for time. The same data stored in the query store can be retrieved by various queries and form different views. The cache would have to store all these different views separately. As the cache is in memory the amount of data will be constrained by its size. That can be partly alleviated by storing cache contents to disk, but the .
+	\item First of it's a tradeoff of space for time. The same data stored in the query store can be retrieved by various queries and form different views. The cache would have to store all these different views separately. As the cache is in memory the amount of data will be constrained by its size. That can be partly alleviated by storing cache contents to a hard disk drive and compressing similar data.
 	\item Secondly after the data changes the cache would still return old data. So we need a way to invalidate data in the cache, as on its own its detached from the original SPARQL data source and wouldn't know about the changes.
 	\item Thirdly a simple cache doesn't know anything about the data view or the query that produced it and wouldn't provide anything else. If we add some meaning to the data and the query that produced it we could also build a searchable index over it.
 \end{itemize}
-But that's not a mere cache of results anymore.
+But with a searchable index that is not a mere cache of query results anymore.
 
 %% Data = resource -> resource has Id (how to get that id) -> first index B-Trees (already implemented better in Lucene)
-For our needs the data resulted from the SPARQL query can be seen as a resource. To comply with the Linked Data principles the resource has a type and an id. It's type is defined by the query that produced it and it's id is defined by the parameters of the query. This provides us with a means to uniquely identify any cached data. At the same time it gives us the first two indexes we need to build. This defined resource has other beforehand unknown properties, any searchable property will give us another index.
+For our needs the data resulted from the SPARQL query can be seen as a resource. To comply with the Linked Data principles this resource has a type and an id. It's type is defined by the query that produced it and it's id is defined by the parameters of the query. This provides us with a means to uniquely identify any cached data. At the same time it gives us the first two indexes we need to build. This defined resource has other beforehand unknown properties, any searchable property will give us another index.
 
 \section{Resource Querying}
+\label{sec:ResourceQuerying}
 The basic way of getting the resource by its unique identifier was already described in \autoref{sec:StorageRequirements}. The resource has other properties witch could be searched as well. These properties are defined by the query that produced the data. In SPARQL there are two possible ways of creating a view of the data \cite{onlineSparqlQueryLanguageSpec}:
 \begin{itemize}
 	\item Describe Query - Used to extract an RDF graph from the SPARQL endpoint, the contents of which is left to the endpoint to decide based on what the maintainer deems as useful information.
 	\item Construct Query - Used to extract information from the SPARQL endpoint and transform the results into valid RDF.
 \end{itemize}
-A describe query usually returns all the triples where the requested id is the subject or the object. As such it isn't really helpful in applications - as per specification it can return any data deemed useful. On the other side the construct query specifies a transformation of the data. So for different parameters the results of the construct query should have same properties - return a similar graph of triplets. These properties can be extracted from the returned data and added to an index. A triple in RDF data as mentioned in \autoref{chap:Introduction} has three parts subject-predicate-object. For the resources as described in this thesis the predicate part equals to a property on the resource, the object is the value of the property. To be able to search not only by object equality  The basic recognized types in RDF for an object are \cite{onlineRdfConcepts}:
+A describe query usually returns all the triples where the requested id is the subject or the object. As such it isn't really helpful in applications - as per specification it can return any data deemed useful.
+Construct query specifies a transformation of the data. So for different parameters the results of the construct query should have same properties - return a similar graph of triplets. We expect that a graph, that represents a view of a resource and its properties, will contain a one root object and the other objects present in the graph are values of the root objects properties.
+These properties can be extracted from the returned data and added to an index. A triple in RDF data as mentioned in \autoref{chap:Introduction} has three parts subject-predicate-object. For the resources as described in this thesis the predicate part equals to a property on the resource, the object is the value of the property. The basic recognized types in RDF for an object are \cite{onlineRdfConcepts}:
 \begin{itemize}
-	\item Literal - that consist of two or three elements %%http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal
+	\item Literal - that consist of two or three elements: %%http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal
 		\subitem Lexical form string
 		\subitem Datatype IRI - being an IRI identifying a datatype that determines how the lexical form maps to a literal value
-		\subitem Language tag - specified only when the the datatype IRI is langString \footnote{'http://www.w3.org/1999/02/22-rdf-syntax-ns\#langString'}
+		\subitem Language tag - specified only when the the datatype IRI is a langString \footnote{'http://www.w3.org/1999/02/22-rdf-syntax-ns\#langString'}
 	\item IRI
 	\item blank node
 \end{itemize}
 Linked data promotes the use of vocabularies %%this is vague - be more precise
 that further specify the objects type - specify the range of the known datatype IRI set.
-%%here ends the slow typing.. :)
-Among the core datatypes defined by RDF are string, number, date and timespan. For querying the definition of the datatype gives options to query ranges.
-
-\todoi{operators might be better in objectives?}
-The operators the created service should support depending on data type are:
+\todoi{sample of a vocabulary entry}
+Among the core datatypes of literals defined by RDF are string, number, date and timespan. These types enable querying our stored resources not only by their equality, but also gives the option to query by ranges. So the operators the created service should support depending on data type are:
 \begin{itemize}
 	\item String - Equals, Not Equals
 	\item Number, Date, TimeSpan - Equals, Not Equals, Greater than, Less than, Between
 %% didn't i forget some operators?
 \end{itemize}
-\todoi{in operator is an extension - maybe mention later}
-
-Search by the basic operators could be done by a standard B-Tree stored on disk. As B-Trees support effective look up for specific data an even range queries.
-
-\todoi{maybe should be in objectives, requirements - doesn't make much sense to add now}
+\todoi{in operator is an extension - maybe mention later - as multiple OR values are supported even in basic syntax}
 Another useful operation for long texts is fulltext search. %% specify how a fulltext search usually works? - startswith, exact, suggestions etc.
 This type of operation is at the current time not supported in SPARQL, and could be a major extension for usability of the service.
 
-The best way of creating an on disk index of data for the considered operators is by using a B-Tree. 
+Search using basic operators could be implemented using a B-Tree stored on disk. As B-Trees support effective look up for specific data and range queries over the data.
 %%here it sounds too easy - as databases have to also create a query plan - how to execute the query
-B-Trees support efficient lookup of specific values and can be used to do range queries. But fulltext searching is a category of its own. Adding fulltext capabilities to applications is usually a much bigger problem. As in fulltext we usually not only require to find the data that contains the searched terms, but it's expected that the results are returned in the order of relevance.
+Doing fulltext searching over data is a project on its own. Adding fulltext capabilities to applications is usually done using complex tools. In fulltext we usually not only require to find the data that contains the searched terms. Often fulltext searches have to do language specific analysis of the data and search terms. It is expected that the results of a fulltext query are returned in order of relevance.
 
-Fortunately it's not necessary to create support for all of these features, as all of them are provided in document databases. Document databases use a document as their smallest entity. The document in the document database can be the defined resource, and the query syntax of most document databases supports all the defined operators.
+Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity we want to store and retrieve from the designed service.
 
+\todoi{maybe add in introduction section about existing database solutions (graph db, document db, nosql vs sql)- where the term document database is introduced}
 %% maybe use this somewhere?
 %\section{Document databases}
 %Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
@@ -74,16 +71,26 @@ Fortunately it's not necessary to create support for all of these features, as a
 %\end{itemize}
 %Document databases are nowadays considered to be the go to database for quick data retrieval.
 
-\todoi{add document db comparison}
+\todoi{add document db comparison? - why choose raven}
 %\section{Choosing a storage engine}
 %- Document database comparisons
 %\begin{itemize}
 	%\item Document database options
 %\end{itemize}
 
+
+%%\begin{itemize}
+%%	\item How to structure the data (JSON-LD)
+%%		\subitem JSON-LD algorithms
+%%		\subitem As whole document
+%%			\subsubitem Flat
+%%			\subsubitem Expanded
+%%		\subitem Split to multiple documents
+%%			\subsubitem How to split
+\end{itemize}
 %% isn't this more of a design choice than analysis?
 \section{Resource storage options}
-As most of the available document databases use JSON as their storage format, it's desirable to select an JSON RDF serialization. Availible json serializations of RDF are \cite{onlineW3CRdfSyntax}:
+Available JSON serializations of RDF are \cite{onlineW3CRdfSyntax}:
 \begin{itemize}
 	\item JSON-LD
 	\item RDF/JSON
@@ -91,40 +98,34 @@ As most of the available document databases use JSON as their storage format, it
 	\item jsonGRDDL
 	\item JSON+RDF
 \end{itemize}
-\todoi{maybe add some discussion about the formats}
-The most human readable and easiest to consume in programs is JSON-LD, which was designed with these two goals. \todoi{source?}
+\todoi{maybe add some discussion about the formats?}
+As most of the available document databases use JSON as their storage format, it's desirable to select an JSON RDF serialization. And the most human readable and easiest to consume serialization format is JSON-LD, which was designed with these two goals in mind \cite{onlineJsonLdDesignGoals}. \todoi{source?}
 
-\todoi{add json-ld serialization sample and some json-ld format description}
-There is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms. Three of the algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
+\todoi{add json-ld serialization sample and some json-ld format description?}
+There is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms, that algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
 \begin{description}
 	\item[Expansion Algorithm] This algorithm expands a JSON-LD document, such that all context definitions are removed, all terms and compact IRIs are expanded to absolute IRIs, blank node identifiers, or keywords and all JSON-LD values are expressed in arrays in expanded form.
 	\item[Compaction Algorithm] This algorithm compacts a JSON-LD document, such that the given context is applied. This must result in shortening any applicable IRIs to terms or compact IRIs, any applicable keywords to keyword aliases, and any applicable JSON-LD values expressed in expanded form to simple values such as strings or numbers.
 	\item[Flattening Algorithm] This algorithm flattens an expanded JSON-LD document by collecting all properties of a node in a single JSON object and labeling all blank nodes with blank node identifiers. This resulting uniform shape of the document, may drastically simplify the code required to process JSON-LD data in certain applications.
 \end{description}
 \todoi{add samples for what the algorithms do}
-\todoi{flat vs nested data - easier to do nested objects queries, but not a norm}
-For the purposes of storing the returned JSON document in a document database and querying it, the application of the Compaction algorithm should ease up the index definitions. 
-\todoi{now i need to query nested data, wasn't stated before}
-As the service needs to query even embedded nested objects in the resource, it would be best to run some sort of opposite algorithm to the Flattening Algorithm. This algorithm would nest the object that are present in the returned 
-\todoi{here i state that the returned data is a graph - should probably say that construct queries usually return a graph of triplets}
-graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query. 
-\todoi{maybe add a more formal name and replace it, to add more consistency and clearness}
-\todoi{add example of the shape we want}
-\todoi{give more meaning to the unflatten algorithm .. maybe define with a pseudo language}
+
 When requesting data from a SPARQL endpoint that supports returning JSON-LD it's not possible to specify the algorithms the server should run on the returned data, so its up to the client to alter the serialization.
 
+As stated in \autoref{sec:ResourceQuerying} the construct query, which will be used for getting the view of the resource, returns a graph of triplets/objects. This graph could be stored in multiple presentations:
+\item[Flat presentation] As result of the Flattening algorithm. The objects will all be listed in the root @graph property of the JSON-LD data serialization.
+\item[Nested presentation] Where objects of the graph are nested into a root object and so form a hierarchy. This presentation follows a natural understanding of an object with properties that may have other complex objects as theirs values. This is not a normalization that is a result of applying JSON-LD algorithms.
 
+Document databases, that use JSON as their data serialization, usually store data according with the description of the nested presentation. This presentation makes it then easier to use the databases features.
 
+The nested presentation can be achieved by applying some sort of opposite algorithm to the Flattening Algorithm. This algorithm would nest the objects that are present in the returned graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query.
+\todoi{maybe add a more formal name of this algorithm and describe it with a pseudo language, to add more consistency and clearness}
+\todoi{add example of the shape we want}
 
-\begin{itemize}
-	\item How to structure the data (JSON-LD)
-		\subitem JSON-LD algorithms
-		\subitem As whole document
-			\subsubitem Flat
-			\subsubitem Expanded
-		\subitem Split to multiple documents
-			\subsubitem How to split
-\end{itemize}
+Another possibility how to store the resource is to split it into multiple documents. This would enable us to recognize overlapping data in stored resources of the same type or even across multiple resource types. This would be useful to lower the amount of storage needed and might enable us to more closely emulate a graph database. Splitting the resource into multiple documents would break the biggest advantage of storing data about one resource in one place - fast resource access times. As the objectives state that speed of retrieving the data is more important than the query possibilities its better to store the resource as one document.
+
+\todoi{move to design as this is a bit used db specific}
+As document databases use the property names inside the stored JSON, the application of the Compaction algorithm with the right context will shorten the property names.
 
 \todoi{add a section about Web APIs and REST - maybe its a design choice.. }
 
