@@ -11,7 +11,7 @@
     </div>
     <div class="row">
         <form role="form">
-            <div class="col-sm-12">
+            <div class="btn-toolbar">
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span data-bind="text: selectedDefinition"></span><span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" data-bind="foreach: definitionsExceptSelected">
@@ -30,14 +30,44 @@
                     </ul>
                 </div>
                 <div class="btn-group">
+                    <button type="button" class="btn btn-primary" data-bind="click: toggleProposeFromSparql">Propose from sparql query</button>
                     <button type="button" class="btn btn-primary" data-bind="click: search, enabled: canSearch"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="panel panel-default" data-bind="visible: isProposingFromSparql">
+                <div class="panel-heading">
+                    Input a select SPARQL query to propose index
+                </div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="sparqlQuery">Sparql query</label>
+                        <div class="col-md-10">
+                            <pre id="sparqlQuery"
+                                 class="form-control"
+                                 data-bind="aceEditor: {
+                                    code: sparqlForPropose,
+                                    allowResize: true,
+                                    minHeight: 100,
+                                    maxHeight: 400,
+                                    typeName:'query',
+                                    lang:'ace/mode/sparql'}, valueUpdate: 'afterkeydown'">
+                            </pre>
+                            <span class="help-block">Define the map function for RavenDB</span>
+                        </div>
+                    </div>
+
+                    <button id="btn_save" name="btn_save" class="btn btn-primary" data-bind="click: proposeFromSparql">
+                        <i class="fa fa-check fa-inverse fa-lg"></i>&nbsp;Propose
+                    </button>
+                    <button id="btn_cancel" name="btn_cancel" class="btn btn-danger" data-bind="click: toggleProposeFromSparql"><i class="fa fa-times fa-lg"></i>&nbsp;Cancel</button>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
                     <label class="control-label" for="SearchText">Search terms</label>
                     <div>
-                        <pre id="searchText" class="form-control" data-bind="aceEditor: { code: searchText, allowResize: true, minHeight: 120, maxHeight: 600, typeName:'query', lang:'ace/mode/lucene'}, valueUpdate: 'afterkeydown'"></pre>
+                        <pre id="SearchText" class="form-control" data-bind="aceEditor: { code: searchText, allowResize: true, minHeight: 120, maxHeight: 600, typeName:'query', lang:'ace/mode/lucene'}, valueUpdate: 'afterkeydown'"></pre>
                     </div>
                 </div>
             </div>

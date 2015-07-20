@@ -99,7 +99,9 @@ namespace DragqnLD.WebApi.Controllers
         [Route("api/query/{definitionId}/index/{*indexId}")]
         public async Task<HttpResponseMessage> StoreOrUpdateIndex(string indexId, [FromBody] IndexDefinitionDto indexDefinition)
         {
-            return CreateResponse(HttpStatusCode.NotImplemented);
+            var id = Mapper.Map<DragqnLDIndexDefiniton>(indexDefinition);
+            var indexIdret = await _queryStore.StoreIndex(this.DefinitionId, id);
+            return CreateResponse();
         }
 
         /// <summary>

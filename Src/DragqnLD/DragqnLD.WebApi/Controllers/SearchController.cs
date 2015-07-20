@@ -43,7 +43,6 @@ namespace DragqnLD.WebApi.Controllers
                 //todo: add paging
                 var results = await _dataStore.QueryDocumentEscapedLuceneQuery(DefinitionId, escapedQuery);
 
-                //todo: streamline
                 var documentMetadataDtos =
                     results.Select(result => new DocumentMetadataDto() {Id = result.ToString()}).ToList();
                 var pagedDocumentMetadataDto = new PagedDocumentMetadataDto()

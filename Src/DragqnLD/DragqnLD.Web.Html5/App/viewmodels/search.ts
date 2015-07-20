@@ -7,6 +7,8 @@ import indexDefinitions = require("models/indexDefinitions");
 import indexDefinitionMetadata = require("models/indexDefinitionMetadata");
 import getIndexesCommand = require("commands/getIndexesCommand");
 
+import proposeLuceneQueryFromSparqlCommand = require("commands/proposeLuceneQueryFromSparqlCommand");
+
 class search extends viewModelBase {
     public definitions = ko.observableArray<queryDefinitionMetadataDto>();
     public selectedDefinition = ko.observable<string>();
@@ -24,6 +26,10 @@ class search extends viewModelBase {
     public searchResultsColumnList = ko.observableArray([
         { field: "id", displayName: "Id", cellTemplate: this.idTemplate }]);
 
+    isProposingFromProperties = ko.observable<Boolean>(false);
+    isProposingFromSparql = ko.observable<Boolean>(false);
+
+    sparqlForPropose = ko.observable<string>("");
 
     public isAttached = ko.observable(false);
 
@@ -67,7 +73,6 @@ class search extends viewModelBase {
     }
 
     public compositionComplete(): void {
-        // todo: move to ancestor?
         console.log("search view attached");
         this.isAttached(true);
         this.triggerResize();
@@ -99,6 +104,7 @@ class search extends viewModelBase {
     }
 
     public search(): void {
+
         // todo: add paging
         var definitionId = this.selectedDefinition();
         var command = new searchEscapedCommand(definitionId, this.searchText());
@@ -112,12 +118,26 @@ class search extends viewModelBase {
 
     public setSelectedDefinition(definitionId: string): void {
         this.selectedDefinition(definitionId);
-
-        // todo: change link of this web page (add/change parameter)
     }
 
     public setSelectedIndex(indexName: string): void {
         this.selectedIndex(indexName);
+    }
+
+    public toggleProposeFromSparql() {
+        this.isProposingFromSparql(!this.isProposingFromSparql());
+    }
+
+    public proposeFromSparql() {
+        var command = new proposeLuceneQueryFromSparqlCommand(this.selectedDefinition(), this.selectedIndex(), this.sparqlForPropose());
+        command
+            .execute()
+            .done((result => {
+            this.searchText(result);
+            this.toggleProposeFromSparql();
+        }));
+
+        this.notifySuccess("propose from sparql");
     }
 }
 

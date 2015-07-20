@@ -233,6 +233,11 @@ namespace DragqnLD.WebApi.Controllers
             return Encoding.GetEncoding(InnerRequest.Content.Headers.ContentType.CharSet);
         }
 
+        /// <summary>
+        /// Reads the json object asynchronous.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         protected async Task<T> ReadJsonObjectAsync<T>()
         {
             using (var stream = await InnerRequest.Content.ReadAsStreamAsync())

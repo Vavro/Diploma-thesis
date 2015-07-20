@@ -915,6 +915,11 @@
             <param name="stream">The stream.</param>
             <returns></returns>
         </member>
+        <member name="T:DragqnLD.WebApi.Constants.Defaults">
+            <summary>
+            Default values for some processes
+            </summary>
+        </member>
         <member name="F:DragqnLD.WebApi.Constants.Defaults.DefaultRequestEncoding">
             <summary>
             if no encoding information in headers of incoming request, this encoding is assumed
@@ -1012,6 +1017,13 @@
             </summary>
             <param name="content">The content.</param>
             <param name="mappings">The mappings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.BaseApiController.ReadJsonObjectAsync``1">
+            <summary>
+            Reads the json object asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
         <member name="P:DragqnLD.WebApi.Controllers.BaseApiController.InnerRequest">
@@ -1355,6 +1367,25 @@
             Retuns only status of th especified definition.
             </summary>
             <returns>A <see cref="T:DragqnLD.WebApi.Models.QueryDefinitionStatusDto"/></returns>
+        </member>
+        <member name="T:DragqnLD.WebApi.Controllers.TranslatorController">
+            <summary>
+            Translates from sparql to lucene queries
+            </summary>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.TranslatorController.#ctor(DragqnLD.Core.Abstraction.IQueryStore,DragqnLD.Core.Abstraction.ISelectAnalyzer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DragqnLD.WebApi.Controllers.TranslatorController"/> class.
+            </summary>
+            <param name="queryStore">The query store.</param>
+            <param name="selectAnalyzer">The select analyzer.</param>
+        </member>
+        <member name="M:DragqnLD.WebApi.Controllers.TranslatorController.TranslateSparqlToLuceneQuery(System.String,System.String)">
+            <summary>
+            Searchs by the escaped lucene query.
+            </summary>
+            <param name="sparqlQuery">The escapted query.</param>
+            <returns></returns>
         </member>
         <member name="T:DragqnLD.WebApi.Filters.ValidateModelFilter">
             <summary>

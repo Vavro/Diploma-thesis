@@ -5,6 +5,9 @@ using System.Web;
 
 namespace DragqnLD.WebApi.Constants
 {
+    /// <summary>
+    /// Default values for some processes
+    /// </summary>
     public class Defaults
     {
         /// <summary>

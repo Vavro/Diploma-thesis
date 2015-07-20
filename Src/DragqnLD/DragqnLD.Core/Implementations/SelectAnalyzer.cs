@@ -117,6 +117,17 @@ namespace DragqnLD.Core.Implementations
 
         private string CreateLuceneQueryWithIndexFor(List<SelectPropertyPathsBuilder.PathWithValue> accessedPropertyPaths, DragqnLDIndexDefiniton indexDefinition)
         {
+            foreach (var accessedPropertyPath in accessedPropertyPaths)
+            {
+                if (!indexDefinition.PropertyNameMap.ContainsKey(accessedPropertyPath.Path))
+                {
+                    throw new ArgumentOutOfRangeException(
+                        String.Format("property path {0} is not contained in the index {1}", 
+                        accessedPropertyPath.Path, 
+                        indexDefinition.Name));
+                }
+            }
+
             var convertedPaths = accessedPropertyPaths.Select(
                 path => new {Value = path.ExpectedValue, luceneField = indexDefinition.PropertyNameMap[path.Path]});
 

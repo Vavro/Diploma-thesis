@@ -25,6 +25,7 @@ namespace DragqnLD.UnitTests
                 }
                 catch (AutoMapperConfigurationException ex)
                 {
+                    Assert.Contains("Requirements", ex.Errors.SelectMany(tmce => tmce.UnmappedPropertyNames));
                     throw;
                 }
             });
