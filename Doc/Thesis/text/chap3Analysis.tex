@@ -87,7 +87,7 @@ Fulltext search and querying using the defined operators are supported in many d
 %%			\subsubitem Expanded
 %%		\subitem Split to multiple documents
 %%			\subsubitem How to split
-\end{itemize}
+%%\end{itemize}
 %% isn't this more of a design choice than analysis?
 \section{Resource storage options}
 Available JSON serializations of RDF are \cite{onlineW3CRdfSyntax}:
@@ -108,14 +108,15 @@ There is more than one way to serialize RDF into JSON-LD. JSON-LD defines proces
 	\item[Compaction Algorithm] This algorithm compacts a JSON-LD document, such that the given context is applied. This must result in shortening any applicable IRIs to terms or compact IRIs, any applicable keywords to keyword aliases, and any applicable JSON-LD values expressed in expanded form to simple values such as strings or numbers.
 	\item[Flattening Algorithm] This algorithm flattens an expanded JSON-LD document by collecting all properties of a node in a single JSON object and labeling all blank nodes with blank node identifiers. This resulting uniform shape of the document, may drastically simplify the code required to process JSON-LD data in certain applications.
 \end{description}
-\todoi{add samples for what the algorithms do}
+\todoi{add samples for what the algorithms do - but its in the spec link}
 
 When requesting data from a SPARQL endpoint that supports returning JSON-LD it's not possible to specify the algorithms the server should run on the returned data, so its up to the client to alter the serialization.
 
 As stated in \autoref{sec:ResourceQuerying} the construct query, which will be used for getting the view of the resource, returns a graph of triplets/objects. This graph could be stored in multiple presentations:
+\begin{description}
 \item[Flat presentation] As result of the Flattening algorithm. The objects will all be listed in the root @graph property of the JSON-LD data serialization.
 \item[Nested presentation] Where objects of the graph are nested into a root object and so form a hierarchy. This presentation follows a natural understanding of an object with properties that may have other complex objects as theirs values. This is not a normalization that is a result of applying JSON-LD algorithms.
-
+\end{description}
 Document databases, that use JSON as their data serialization, usually store data according with the description of the nested presentation. This presentation makes it then easier to use the databases features.
 
 The nested presentation can be achieved by applying some sort of opposite algorithm to the Flattening Algorithm. This algorithm would nest the objects that are present in the returned graph into a root object. The root object has to be selected by its IRI from the graph, and this identifier has to be one of the supplemented parameters for the construct query.
@@ -127,17 +128,25 @@ Another possibility how to store the resource is to split it into multiple docum
 \todoi{move to design as this is a bit used db specific}
 As document databases use the property names inside the stored JSON, the application of the Compaction algorithm with the right context will shorten the property names.
 
-\todoi{add a section about Web APIs and REST - maybe its a design choice.. }
-
-\section{Optimization - maybe to Conclusion or Implementation}
-\begin{itemize}
-	\item Offload workload to client
-		\subitem Transform of data (required storage implementation details) - i.e. have to rename the properties
-		\subitem Analysis of sent queries (renamed properties of documents force a rename in the query)
-\end{itemize}
+\section{Service accessibility}
+\todoi{add a section about Web APIs and REST }
+The service API - what operations we need
 
 \section{Usability possibilities}
 \begin{itemize}
 	\item How easy it could be to use - analyze steps needed to plug in details caching, querying
 	\item Stored resources update
+	\item SPARQL to lucene possibilities (from OneNote)
+\end{itemize}
+
+\section{Related Work}
+\begin{itemize}
+	\item Linked Data Fragments - creates local copy of parts of data (fragments) for faster querying (more network local) complex queries get split into easier ones and then evaluated by UNION
+\end{itemize}
+
+\section{Optimization - maybe to Conclusion or Implementation}
+\begin{itemize}
+	\item Offload workload to client
+		\subitem Transform of data (required storage implementation details) - i.e. have to rename the properties
+		\subitem Analysis of sent queries (renamed properties of documents force a rename in the query) - sparql to lucene in client
 \end{itemize}
