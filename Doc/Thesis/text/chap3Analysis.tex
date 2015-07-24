@@ -26,7 +26,7 @@ For our needs the data resulted from the SPARQL query can be seen as a resource.
 
 \section{Resource Querying}
 \label{sec:ResourceQuerying}
-The basic way of getting the resource by its unique identifier was already described in \autoref{sec:StorageRequirements}. The resource has other properties witch could be searched as well. These properties are defined by the query that produced the data. In SPARQL there are two possible ways of creating a view of the data \cite{onlineSparqlQueryLanguageSpec}:
+The basic way of getting the resource by, its unique identifier, was already described in \autoref{sec:StorageRequirements}. But these resources have other properties witch could be searched as well. These properties are defined by the query that produced the data. In SPARQL there are two possible ways of creating a view of the data \cite{onlineSparqlQueryLanguageSpec}:
 \begin{itemize}
 	\item Describe Query - Used to extract an RDF graph from the SPARQL endpoint, the contents of which is left to the endpoint to decide based on what the maintainer deems as useful information.
 	\item Construct Query - Used to extract information from the SPARQL endpoint and transform the results into valid RDF.
@@ -59,9 +59,9 @@ Search using basic operators could be implemented using a B-Tree stored on disk.
 %%here it sounds too easy - as databases have to also create a query plan - how to execute the query
 Doing fulltext searching over data is a project on its own. Adding fulltext capabilities to applications is usually done using complex tools. In fulltext we usually not only require to find the data that contains the searched terms. Often fulltext searches have to do language specific analysis of the data and search terms. It is expected that the results of a fulltext query are returned in order of relevance.
 
-Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity we want to store and retrieve from the designed service.
+Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity need want to store and retrieve from the designed service.
 
-\todoi{maybe add in introduction section about existing database solutions (graph db, document db, nosql vs sql)- where the term document database is introduced}
+\todoi{maybe add in introduction section about existing database solutions (graph db, key-value -> document db, nosql vs sql)- where the term document database is introduced}
 %% maybe use this somewhere?
 %\section{Document databases}
 %Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
@@ -72,6 +72,8 @@ Fulltext search and querying using the defined operators are supported in many d
 %Document databases are nowadays considered to be the go to database for quick data retrieval.
 
 \todoi{add document db comparison? - why choose raven}
+%%\section{Document databases}
+%%Currently there are numerous document databases, that could be useful for our purposes, on the market.  
 %\section{Choosing a storage engine}
 %- Document database comparisons
 %\begin{itemize}
@@ -125,10 +127,45 @@ The nested presentation can be achieved by applying some sort of opposite algori
 
 Another possibility how to store the resource is to split it into multiple documents. This would enable us to recognize overlapping data in stored resources of the same type or even across multiple resource types. This would be useful to lower the amount of storage needed and might enable us to more closely emulate a graph database. Splitting the resource into multiple documents would break the biggest advantage of storing data about one resource in one place - fast resource access times. As the objectives state that speed of retrieving the data is more important than the query possibilities its better to store the resource as one document.
 
+%%IDS from select sparql - one variable only - to know the id, multiple variables could be supported, but seem unnecessary
+
 \todoi{move to design as this is a bit used db specific}
 As document databases use the property names inside the stored JSON, the application of the Compaction algorithm with the right context will shorten the property names.
 
-\section{Service accessibility}
+\todoi{section about generating indices for the resource types - property discoverability, property value type discoverabilty}
+
+\section{Service responsibilities and accessibility}
+To sum up the functionality, the service has to be responsible for maintaining multiple types of resources.
+Each resource type is defined by:
+\begin{description}
+	\item[Construct SPARQL query] defines the shape of the resource, 
+	\item[Resource ID range] defined by a SPARQL select query
+\end{description}
+It is obvious that the service has to provide a way to store and delete a new resource type. 
+
+Updating a resource type is a bit more complicated. If we were to allow changing the construct query, we essentially change the shape of the type, and possibly invalidate all of the existing indices. 
+
+The resource id range could be changed for different reasons:
+\begin{itemize}
+	\item The original data source has changed and produces a different result for the same select SPARQL query
+	\item We need to add new resources by their IDs, that the original select query did not provide
+	\item We need to delete some of the stored resources by their IDs
+\end{itemize}
+These changes in the id range could be achieved by multiple means: 
+\begin{itemize}
+	\item Entering a new select SPARQL query to produce a UNION with the original select
+	\item Entering a different select SPARQL query that will replace the original one
+	\item Entering a new select SPARQL query that would define the range of IDs of resources to be deleted
+\end{itemize}
+
+After defining a resource type the service has to process the type, after that is finished, it will have stored the defined resources. Now we need a way to retrieve the stored resources. A resource is defined by its ID and type. So to retrieve a stored resource we need to provide the ID and type as the parameter.
+%% either two parameters or 
+
+
+
+
+%%section about data update - to keep the data in line with the source
+
 \todoi{add a section about Web APIs and REST }
 The service API - what operations we need
 
