@@ -64,7 +64,7 @@ Fulltext search and querying using the defined operators are supported in many d
 \todoi{maybe add in introduction section about existing database solutions (graph db, key-value -> document db, nosql vs sql)- where the term document database is introduced}
 %% maybe use this somewhere?
 %\section{Document databases}
-%Opposite to the graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
+%As kind of the opposite to graph databases are usually considered to be document databases. Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data
 %\begin{itemize}
 	%\item Graph databases provide ways to make complex queries over the whole data
 	%\item Document databases usually provide only ways to query one document (data entity)
@@ -135,6 +135,9 @@ As document databases use the property names inside the stored JSON, the applica
 \todoi{section about generating indices for the resource types - property discoverability, property value type discoverabilty}
 
 \section{Service responsibilities and accessibility}
+To make the service accessible for a wide array of possible clients it should expose its API as a REST web service.
+%%should i add any other accessible web service specs? - eg. SOAP, 
+
 To sum up the functionality, the service has to be responsible for maintaining multiple types of resources.
 Each resource type is defined by:
 \begin{description}
@@ -159,9 +162,7 @@ These changes in the id range could be achieved by multiple means:
 \end{itemize}
 
 After defining a resource type the service has to process the type, after that is finished, it will have stored the defined resources. Now we need a way to retrieve the stored resources. A resource is defined by its ID and type. So to retrieve a stored resource we need to provide the ID and type as the parameter.
-%% either two parameters or 
-
-
+An option is to combine the type and the ID into a new ID in the scope of the created service. But this could not be embedded into the data as its ID as we want to preserve the original dereferencable ID of the original data source.
 
 
 %%section about data update - to keep the data in line with the source

@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=chap3Analysis.tex
 
 [Frame4_View0,0]
-TopLine=174
-Cursor=13921
+TopLine=201
+Cursor=16113
 
 [Frame5]
 Flags=0
