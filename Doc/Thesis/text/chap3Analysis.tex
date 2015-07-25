@@ -59,21 +59,32 @@ Search using basic operators could be implemented using a B-Tree stored on disk.
 %%here it sounds too easy - as databases have to also create a query plan - how to execute the query
 Doing fulltext searching over data is a project on its own. Adding fulltext capabilities to applications is usually done using complex tools. In fulltext we usually not only require to find the data that contains the searched terms. Often fulltext searches have to do language specific analysis of the data and search terms. It is expected that the results of a fulltext query are returned in order of relevance.
 
-Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity need want to store and retrieve from the designed service.
+Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity need want to store and retrieve from the designed service. 
 
-\todoi{maybe add in introduction section about existing database solutions (graph db, key-value -> document db, nosql vs sql)- where the term document database is introduced}
+\todoi{maybe add in introduction section about existing database solutions (graph db, key-value -> document db, nosql vs sql)- not just a document databases section}
 %% maybe use this somewhere?
 \section{Document databases}
-As kind of the opposite to graph databases in the NoSQL world are usually considered to be key-value stores. 
+%%nosql is introduced here
+As kind of the opposite to graph databases in the NoSQL world are usually considered to be key-value stores and from them derived document databases. Both a key-value store and a document database have the primary usage in storing an item with its ID and retrieving these items by their IDs. The main difference between a key-value store and a document database is that document databases try to act upon the stored items metadata. The metadata have to be either provided or are automatically extracted by the database. 
 
- Document databases consider the smallest entity to be the Domain aggregate which is stored as a whole document and always read at once. The biggest difference between these two database structures are the possibilities to query data 
+The biggest difference between a graph database and a document database are the possibilities to query data 
 \begin{itemize}
 	\item Graph databases provide ways to make complex queries over the whole data
-	\item Document databases usually provide only ways to query one document (data entity)
+	\item Document databases usually provide only ways to filter the stored documents
 \end{itemize}
-Document databases are nowadays considered to be the go to database for quick retrieval of structured  data.
+When deciding how to split data into documents for document databases, the most recommended way is to follow guidance for the term aggregate root out of Domain-driven design\cite{onlineDomainDrivenDesign}. An aggregate root is a collection of objects that are bound together by a root object. The aggregate root should also be the transaction boundary for most operations in the domain - it should contain all the information accessed and modified during one transaction. The document in a document database is stored whole and always read whole. For this property document databases are nowadays considered to be the go to database for quick retrieval of structured data.
 
-\todoi{add document db comparison? - why choose raven}
+Another significant feature of document databases and big difference to relational databases is that they do not require the data to be strongly typed during database creation. Document databases expect to extract metadata from the stored documents themselves, instead of having them provided at design time. This makes them more flexible to be used with optional properties in documents and documents where their shape is not known at the systems design time. 
+
+Three of the most popular document databases are\cite{onlineDocumentDBRanking}:
+\begin{itemize}
+	\item MongoDB\cite{onlineMongoDB}
+	\item CouchDB\cite{onlineCouchDB}
+	\item RavenDB\cite{onlineRavenDB}
+\end{itemize}
+All of them use JSON as their document format\footnote{MongoDB uses BSON, which is a binary form optimized JSON}, provide an easy way to data sharding and data replication, have documents stored in collections, create indexes for deep properties, have map-reduce support. They differ in their approach to consistency and concurrency. One feature stands out in RavenDB is dynammic index creation in RavenDB. RavenDB processes all queries only after having an index for the query, which means it creates on-the-fly indices for dynamic queries. As the resources that will get stored by the system are not known beforehand, dynamic index creation could become useful. The only downside of RavenDB is that it is currently Windows and .NET dependant, but its next version should be able to run even on Mono and therefore on Linux systems\cite{onlineRavenDBonLinux}.
+For this reason RavenDB will be used as the document database for the created service.
+
 %%\section{Document databases}
 %%Currently there are numerous document databases, that could be useful for our purposes, on the market.  
 %\section{Choosing a storage engine}
@@ -103,7 +114,7 @@ Available JSON serializations of RDF are \cite{onlineW3CRdfSyntax}:
 	\item JSON+RDF
 \end{itemize}
 \todoi{maybe add some discussion about the formats?}
-As most of the available document databases use JSON as their storage format, it's desirable to select an JSON RDF serialization. And the most human readable and easiest to consume serialization format is JSON-LD, which was designed with these two goals in mind \cite{onlineJsonLdDesignGoals}. \todoi{source?}
+As the selected document database uses JSON as their storage format, it's desirable to select an JSON RDF serialization. And the most human readable and easiest to consume serialization format is JSON-LD, which was designed with these two goals in mind \cite{onlineJsonLdDesignGoals}. \todoi{source?}
 
 \todoi{add json-ld serialization sample and some json-ld format description?}
 There is more than one way to serialize RDF into JSON-LD. JSON-LD defines processing algorithms, that algorithms manipulate the look and size of the serialized data and try to create normalized versions of it \cite{onlineW3CJsonLdAlgorithmsSpec}:
