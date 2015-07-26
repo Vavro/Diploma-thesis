@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=preface.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=2768
+TopLine=18
+Cursor=1446
 
 [Frame1]
 Flags=0
@@ -71,8 +71,8 @@ Class=LaTeXView
 Document=thesis.tex
 
 [Frame3_View0,0]
-TopLine=0
-Cursor=1086
+TopLine=32
+Cursor=1507
 
 [Frame4]
 Flags=0
@@ -89,8 +89,8 @@ Class=LaTeXView
 Document=chap3Analysis.tex
 
 [Frame4_View0,0]
-TopLine=201
-Cursor=16113
+TopLine=221
+Cursor=17096
 
 [Frame5]
 Flags=0
@@ -143,8 +143,8 @@ Class=LaTeXView
 Document=bibliography.tex
 
 [Frame7_View0,0]
-TopLine=0
-Cursor=776
+TopLine=17
+Cursor=1718
 
 [Frame8]
 Flags=0

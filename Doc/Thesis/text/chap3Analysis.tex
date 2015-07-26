@@ -62,7 +62,7 @@ Doing fulltext searching over data is a project on its own. Adding fulltext capa
 Fulltext search and querying using the defined operators are supported in many database solutions. Specifically document databases use a document as their smallest entity. This document in a document database coincides with the defined term of a resource, which is the smallest entity need want to store and retrieve from the designed service. 
 
 \todoi{maybe add in introduction section about existing database solutions (graph db, key-value -> document db, nosql vs sql)- not just a document databases section}
-%% maybe use this somewhere?
+
 \section{Document databases}
 %%nosql is introduced here
 As kind of the opposite to graph databases in the NoSQL world are usually considered to be key-value stores and from them derived document databases. Both a key-value store and a document database have the primary usage in storing an item with its ID and retrieving these items by their IDs. The main difference between a key-value store and a document database is that document databases try to act upon the stored items metadata. The metadata have to be either provided or are automatically extracted by the database. 
@@ -82,7 +82,7 @@ Three of the most popular document databases are\cite{onlineDocumentDBRanking}:
 	\item CouchDB\cite{onlineCouchDB}
 	\item RavenDB\cite{onlineRavenDB}
 \end{itemize}
-All of them use JSON as their document format\footnote{MongoDB uses BSON, which is a binary form optimized JSON}, provide an easy way to data sharding and data replication, have documents stored in collections, create indexes for deep properties, have map-reduce support. They differ in their approach to consistency and concurrency. One feature stands out in RavenDB is dynammic index creation in RavenDB. RavenDB processes all queries only after having an index for the query, which means it creates on-the-fly indices for dynamic queries. As the resources that will get stored by the system are not known beforehand, dynamic index creation could become useful. The only downside of RavenDB is that it is currently Windows and .NET dependant, but its next version should be able to run even on Mono and therefore on Linux systems\cite{onlineRavenDBonLinux}.
+All of them use JSON as their document format\footnote{MongoDB uses BSON, which is a binary-encoded serialization of JSON-like documents. Like JSON}, provide an easy way to data sharding and data replication, have documents stored in collections, create indexes (even fulltext indexes) for deep properties, have map-reduce support. They differ in their approach to consistency and concurrency. One feature stands out in RavenDB is dynammic index creation in RavenDB. RavenDB processes all queries only after having an index for the query, which means it creates on-the-fly indices for dynamic queries. As the resources that will get stored by the system are not known beforehand, dynamic index creation could become useful. The only downside of RavenDB is that it is currently Windows and .NET dependant, but its next version should be able to run even on Mono and therefore on Linux systems\cite{onlineRavenDBonLinux}.
 For this reason RavenDB will be used as the document database for the created service.
 
 %%\section{Document databases}
@@ -146,6 +146,11 @@ Another possibility how to store the resource is to split it into multiple docum
 As document databases use the property names inside the stored JSON, the application of the Compaction algorithm with the right context will shorten the property names.
 
 \todoi{section about generating indices for the resource types - property discoverability, property value type discoverabilty}
+
+\section{Database index creation}
+Although RavenDB provides a way to create indexes according to the sent query, they have their drawbacks. Probably the biggest drawback is that the query has to wait untill indexing is finished to return any results. RavenDB also has several categories of indexes and how it processes them - the created index is considered only temporary, to return the results The created indexes by default
+
+
 
 \section{Service responsibilities and accessibility}
 To make the service accessible for a wide array of possible clients it should expose its API as a REST web service.
