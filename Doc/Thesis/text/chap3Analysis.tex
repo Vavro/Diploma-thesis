@@ -148,7 +148,15 @@ As document databases use the property names inside the stored JSON, the applica
 \todoi{section about generating indices for the resource types - property discoverability, property value type discoverabilty}
 
 \section{Database index creation}
-Although RavenDB provides a way to create indexes according to the sent query, they have their drawbacks. Probably the biggest drawback is that the query has to wait untill indexing is finished to return any results. RavenDB also has several categories of indexes and how it processes them - the created index is considered only temporary, to return the results The created indexes by default
+Although RavenDB provides a way to create indexes according to the sent query, they have their drawbacks. Probably the biggest drawback is that the query has to wait untill indexing is finished to return any results. 
+%%index selection automatic, wont use existing indexes with the same fields indexed - the fields could have different meaning
+%%index wil be by defaul marked as Idle after not being queried for 1 hour, that means it wont be indexed until a query is issued for this index, or the DB is idle for a period of time.
+%%we need to first say it works on top of LUCENE, so each index creates dynamic index creation changed in 3.0 - the index creates one index entry per document now, previously when processing an array in a document it produced one index entry per item in the array -> creates fanout indexes -> slow to query, can not query two items in list with an and (as the query searches for one index entry only and the values are split into multiple index entries) -- sample!
+
+RavenDB also has several categories of indexes and how it processes them - a dynamically created index is considered only temporary, to return the results The created indexes by default
+
+So either the user of the system would have to start with learning RavenDB Map-Reduce index declaration, or we could be able to create them through analyzing issued select queries and propose a Raven index for the user.
+%%now mapping sparql to index creation.
 
 
 
